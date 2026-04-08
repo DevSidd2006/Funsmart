@@ -6,30 +6,33 @@ import Link from 'next/link'
 export function ProgramsOverview() {
   const programs = [
     {
-      title: '10-Day Thinking Workshop',
-      tag: 'TRANSITION_SESSION',
-      desc: 'The ideal entry point for parents to see how their child responds to unscripted complexity.',
+      title: '10-Day Workshop (Ages 8–16)',
+      tag: 'Thinking Reset Workshop',
+      desc: 'Ten days. Ten different themes. Children build, explore, and think — while we observe. The entry point where every FunSmartism journey begins.',
       bullets: [
-        'Unscripted challenge solving',
-        'Facilitator observation logging',
-        'Final cognitive approach report',
+        'Daily thinking challenges & real builds',
+        'No step-by-step instructions first',
+        'Observations across 10 STEM themes',
+        'Detailed parent note on thinking habits',
       ],
-      cta: 'Book Summer Workshop',
+      cta: 'Book Workshop',
       variant: 'surface'
     },
     {
-      title: 'Year-Long Thinking Lab',
-      tag: 'SUSTAINED_GROWTH',
-      desc: 'Our flagship program focused on building deep-rooted cognitive habits over a long-term journey.',
+      title: 'Year-long Program (Ages 8–16)',
+      tag: 'RoboSTEM Thinking Lab — Year-Long',
+      desc: 'Deep projects and monthly thinking challenges where thinking habits become visible over time.',
       bullets: [
-        'Weekly exploration sessions',
-        'Long-term cognitive mapping',
-        'Direct parent-facilitator insights',
+        'Deep projects across 10 STEM themes',
+        'Monthly thinking observations for parents',
+        'Guidance for home + access to edu events',
+        'Priority access to scientist interactions',
       ],
-      cta: 'Explore Subscription',
+      cta: 'Learn More',
       variant: 'indigo'
     }
   ]
+
 
   return (
     <section className="section-spacing bg-accent-surface">

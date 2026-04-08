@@ -3,23 +3,24 @@ import { Eye, Beaker, Lightbulb } from 'lucide-react'
 const steps = [
   {
     icon: Eye,
-    title: 'Stage 1: Parent Orientation',
+    title: 'Step 1 — For parents',
     description:
-      'Experience a live session. See how we observe and receive your first cognitive insight report—complimentary.',
+      'Parent orientation. Come in. Meet the team. See the FunSmartism RoboSTEM Thinking Lab. Ask everything. 30–45 min · Free · No commitment',
   },
   {
     icon: Beaker,
-    title: 'Stage 2: 10-Day Workshop',
+    title: 'Step 2 — For your child',
     description:
-      'A deep dive into challenge-based learning. We map your child\'s approach to complexity and recovery.',
+      '10-Day Thinking Reset Workshop. 10 days. 10 themes. Real materials, real builds, real scientist-style problem-solving — observed. Each day a different world. Most projects go home.',
   },
   {
     icon: Lightbulb,
-    title: 'Stage 3: Year-Long Thinking Lab',
+    title: 'Step 3 — The year-long program',
     description:
-      'Sustained cognitive growth. Children move from solving problems to identifying the right challenges to solve.',
+      'FunSmartism RoboSTEM Thinking Lab — Year-Long. One theme per month. One session per week. Deep projects + thinking observations + parent guidance for home. Priority access to scientist interactions.',
   },
 ]
+
 
 export function HowItWorks() {
   return (

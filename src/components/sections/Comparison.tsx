@@ -4,29 +4,29 @@ import { Button } from '../ui/Button'
 export function Comparison() {
   const points = [
     {
-      label: 'Main Goal',
-      traditional: 'Completing a preset kit/project',
-      funsmartism: 'Understanding the child\'s thinking process',
+      label: 'Learning Process',
+      traditional: 'Follow step-by-step kit instructions',
+      funsmartism: 'Explore without instructions — child decides where to start',
     },
     {
-      label: 'Approach',
-      traditional: 'Step-by-step instructions (Scripted)',
-      funsmartism: 'Unscripted challenges (Discovery)',
+      label: 'Project Nature',
+      traditional: 'Complete a predefined project',
+      funsmartism: 'Work on real challenges with no fixed answer',
     },
     {
-      label: 'Parent Benefit',
-      traditional: 'A physical model to take home',
-      funsmartism: 'Detailed cognitive insight reports',
+      label: 'Measurement',
+      traditional: 'Measure what the child produced',
+      funsmartism: 'Observe how the child tests, retries, and solves',
     },
     {
-      label: 'Focus',
-      traditional: 'Knowledge & Skills',
-      funsmartism: 'Cognitive Habits & Intelligence',
+      label: 'Reporting',
+      traditional: 'Report grades and performance',
+      funsmartism: 'Share thinking habit + how to respond at home',
     },
     {
-      label: 'Environment',
-      traditional: 'Coaching Center',
-      funsmartism: 'Observation Laboratory',
+      label: 'Outcome',
+      traditional: 'Skills as the outcome',
+      funsmartism: 'Thinking maturity as the outcome',
     },
   ]
 
@@ -36,9 +36,14 @@ export function Comparison() {
         <div className="max-w-4xl mx-auto text-center mb-24">
           <div className="text-mono text-accent-teal mb-6 uppercase tracking-widest">[ DIFFERENTIATION ]</div>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 mb-8 leading-tight">
-            Not another activity class. <br />A shift in perspective.
+            Most programs teach projects. <br />
+            We observe scientist-style problem-solving.
           </h2>
+          <p className="text-lg text-neutral-500 max-w-2xl mx-auto">
+            There’s a difference between completing a project and understanding how the child thought through it. FunSmartism is built around the second one.
+          </p>
         </div>
+
 
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-0 border-b border-primary-100/50 pb-8 mb-8 hidden md:grid">

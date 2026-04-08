@@ -9,10 +9,11 @@ import { Menu, X } from 'lucide-react'
 
 const navLinks = [
   { name: 'Home', href: '/' },
-  { name: 'About Us', href: '/about' },
-  { name: 'Activities', href: '/activities' },
+  { name: 'About', href: '/about' },
+  { name: 'Thinking Lab', href: '/thinking-lab' },
+  { name: 'For Parents', href: '/for-parents' },
+  { name: 'Programs', href: '/programs' },
   { name: 'Gallery', href: '/gallery' },
-  { name: 'Blogs', href: '/blogs' },
 ]
 
 export function Navbar() {
@@ -60,7 +61,9 @@ export function Navbar() {
               {link.name}
             </Link>
           ))}
-          <Button size="sm">Schedule a Visit</Button>
+          <Link href="/schedule-visit">
+            <Button size="sm">Schedule a Visit</Button>
+          </Link>
         </div>
 
         {/* Mobile Toggle */}
@@ -93,7 +96,9 @@ export function Navbar() {
               {link.name}
             </Link>
           ))}
-          <Button className="w-full mt-4">Schedule a Visit</Button>
+          <Link href="/schedule-visit">
+            <Button className="w-full mt-4">Schedule a Visit</Button>
+          </Link>
         </div>
       </div>
     </nav>

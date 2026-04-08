@@ -29,10 +29,11 @@ export function Footer() {
             <ul className="space-y-4">
               {[
                 { name: 'Home', href: '/' },
-                { name: 'About Us', href: '/about' },
-                { name: 'Activities', href: '/activities' },
+                { name: 'About', href: '/about' },
+                { name: 'Thinking Lab', href: '/thinking-lab' },
+                { name: 'For Parents', href: '/for-parents' },
+                { name: 'Programs', href: '/programs' },
                 { name: 'Gallery', href: '/gallery' },
-                { name: 'Blogs', href: '/blogs' },
               ].map((link) => (
                 <li key={link.name}>
                   <Link href={link.href} className="text-sm text-neutral-500 hover:text-accent-teal transition-colors">
