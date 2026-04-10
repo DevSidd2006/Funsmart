@@ -45,3 +45,12 @@ export interface FAQItem {
   question: string
   answer: string
 }
+
+export interface GalleryItem {
+  id: number
+  image: string
+  title: string
+  caption: string
+  tag: string
+  span: string
+}

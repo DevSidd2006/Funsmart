@@ -47,8 +47,8 @@ export function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8">
+        {/* Desktop Links — visible only at lg (1024px+) to avoid tablet overlap */}
+        <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -66,19 +66,20 @@ export function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Toggle */}
+        {/* Mobile / Tablet Toggle — visible below lg (1024px) */}
         <button
-          className="md:hidden text-neutral-900"
+          className="lg:hidden text-neutral-900"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle navigation menu"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile / Tablet Menu Drawer */}
       <div
         className={cn(
-          'md:hidden absolute top-full left-0 right-0 bg-white border-b border-neutral-100 p-6 transition-all duration-300 origin-top',
+          'lg:hidden absolute top-full left-0 right-0 bg-white border-b border-neutral-100 p-6 transition-all duration-300 origin-top',
           isOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0'
         )}
       >

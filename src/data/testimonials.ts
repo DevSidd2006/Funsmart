@@ -1,14 +1,20 @@
 import { type Testimonial } from '../lib/types'
 
+/**
+ * CLIENT EDITING GUIDE:
+ * To add a new testimonial, copy a block (everything from { to },) and paste it at the bottom.
+ * Make sure to give it a unique ID number.
+ */
+
 export const testimonials: Testimonial[] = [
   {
     id: '1',
     quote:
       "I realized my son wasn't shy—he just needed real problems. Watching him solve this, I felt proud.",
-    author: 'Rahul M',
+    author: 'Rahul M', // Parent's name
     location: 'Mumbai',
-    child: 'Adarsh',
-    childAge: 10,
+    child: 'Adarsh',   // Child's name
+    childAge: 10,      // Child's age
   },
   {
     id: '2',

@@ -1,5 +1,11 @@
 import { type FAQItem } from '../lib/types'
 
+/**
+ * CLIENT EDITING GUIDE:
+ * To add a new FAQ, copy a block (everything from { to },) and paste it at the bottom.
+ * Ensure the ID is unique (e.g., '5', '6', etc.)
+ */
+
 export const faqs: FAQItem[] = [
   {
     id: '1',

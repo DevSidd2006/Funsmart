@@ -101,6 +101,23 @@ Your website images are located in the **`public/images/`** folder.
 
 ---
 
+## 🗝️ Ownership & Accounts
+
+To ensure you have full control, we will transfer two main accounts to you:
+
+1. **GitHub (The Code Laboratory)**: 
+   - You will receive an invitation to accept ownership of the "FunSmartism" repository. 
+   - This ensures that even if I am unavailable, you own 100% of your website's files.
+2. **Vercel (The Hosting & Domain)**: 
+   - I will help you set up a Vercel dashboard. 
+   - This is where your custom domain (e.g., `funsmart.in`) is managed. 
+   - You will see a "Production Deployment" here—think of this as the "On/Off" switch for your site.
+
+**Action Item for Client:** Please provide the email address you used to sign up for GitHub and Vercel.
+
+---
+
 ## 📞 Support
 
 If you wish to make massive structural changes (like adding 5 new pages or changing the core colors of the site), it is recommended to have a developer assist you. But for day-to-day text editing, adding new testimonials, fixing typos, and changing images, this guide gives you full power over your website!
+
