@@ -184,8 +184,7 @@ NEXT_PUBLIC_SITE_URL=http://localhost:3000
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Tailwind CSS Docs](https://tailwindcss.com/docs)
 - [Lucide Icons](https://lucide.dev)
-- [Design System Docs](./DESIGN_SYSTEM.md)
-- [Homepage Layout Guide](./HOMEPAGE_LAYOUT.md)
+- [Client Handover Guide](./CLIENT_HANDOVER_GUIDE.md)
 
 ## 🐛 Troubleshooting
 
