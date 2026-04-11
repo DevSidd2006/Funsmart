@@ -1,6 +1,6 @@
 import { Card } from '../ui/Card'
 import { Button } from '../ui/Button'
-import { Check } from 'lucide-react'
+import { Check, Atom, Dna, Microscope } from 'lucide-react'
 import Link from 'next/link'
 
 export function ProgramsOverview() {
@@ -35,8 +35,19 @@ export function ProgramsOverview() {
 
 
   return (
-    <section className="section-spacing bg-accent-surface">
-      <div className="container-fluid">
+    <section className="section-spacing bg-accent-surface relative overflow-hidden">
+      {/* Decorative Icons */}
+      <div className="absolute top-[20%] right-[-2%] text-primary-500/5 animate-float hidden lg:block">
+        <Atom size={200} strokeWidth={0.5} />
+      </div>
+      <div className="absolute bottom-[10%] left-[-2%] text-accent-teal/5 animate-float-delayed hidden lg:block">
+        <Dna size={180} strokeWidth={0.5} />
+      </div>
+      <div className="absolute top-[5%] left-[10%] text-primary-500/5 animate-float-slow hidden lg:block">
+        <Microscope size={120} strokeWidth={0.5} />
+      </div>
+
+      <div className="container-fluid relative z-10">
         <div className="max-w-4xl mx-auto text-center mb-16 md:mb-24">
           <div className="text-mono text-accent-teal mb-6 uppercase tracking-widest">[ PROGRAMS ]</div>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 mb-8 leading-tight">

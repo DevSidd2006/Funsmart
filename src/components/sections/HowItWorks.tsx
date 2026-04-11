@@ -1,4 +1,4 @@
-import { Eye, Beaker, Lightbulb } from 'lucide-react'
+import { Eye, Beaker, Lightbulb, FlaskConical, Compass, Brain, Sparkles } from 'lucide-react'
 
 const steps = [
   {
@@ -24,8 +24,22 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section className="section-spacing bg-white relative">
-      <div className="container-fluid">
+    <section className="section-spacing bg-white relative overflow-hidden">
+      {/* Floating Background Icons */}
+      <div className="absolute top-[10%] left-[5%] text-accent-teal/5 animate-float hidden lg:block">
+        <FlaskConical size={140} strokeWidth={0.5} />
+      </div>
+      <div className="absolute bottom-[20%] right-[3%] text-primary-500/5 animate-float-delayed hidden lg:block">
+        <Compass size={180} strokeWidth={0.5} />
+      </div>
+      <div className="absolute top-[20%] right-[10%] text-accent-gold/10 animate-float-slow hidden lg:block">
+        <Sparkles size={100} strokeWidth={0.5} />
+      </div>
+      <div className="absolute bottom-[5%] left-[15%] text-accent-teal/5 animate-float-delayed hidden lg:block">
+        <Brain size={120} strokeWidth={0.5} />
+      </div>
+
+      <div className="container-fluid relative z-10">
         <div className="max-w-4xl mx-auto text-center mb-24">
           <div className="text-mono text-accent-teal mb-4 uppercase tracking-widest">[ METHODOLOGY ]</div>
           <h2 className="text-4xl md:text-6xl font-serif font-bold text-primary-500 leading-tight">

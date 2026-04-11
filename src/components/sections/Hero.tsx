@@ -1,4 +1,5 @@
 import { Button } from '../ui/Button'
+import { Beaker, Atom, Settings, Lightbulb, Cpu, Microscope, Rocket, Binary } from 'lucide-react'
 
 export function Hero() {
   return (
@@ -6,6 +7,14 @@ export function Hero() {
       {/* Subtle Grid Background */}
       <div className="absolute inset-0 lab-grid opacity-[0.05] z-0" />
       
+      {/* Background Floating Elements (Global) */}
+      <div className="absolute top-[15%] left-[5%] text-[#2FB5A3]/10 animate-float-slow hidden lg:block">
+        <Rocket size={120} strokeWidth={0.5} />
+      </div>
+      <div className="absolute bottom-[10%] left-[20%] text-[#2FB5A3]/5 animate-float-delayed hidden lg:block">
+        <Binary size={160} strokeWidth={0.5} />
+      </div>
+
       <div className="container-fluid relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           {/* Left: Text Content */}
@@ -47,6 +56,31 @@ export function Hero() {
           {/* Right: Asymmetrical Image Container */}
           <div className="lg:col-span-5 relative">
             <div className="relative aspect-[4/5] w-full max-w-lg mx-auto">
+              {/* Floating Icons around the image */}
+              <div className="absolute -top-6 -left-6 z-20 bg-white p-3 rounded-xl shadow-xl animate-float text-[#2FB5A3]">
+                <Beaker size={28} />
+              </div>
+              
+              <div className="absolute top-[20%] -right-8 z-20 bg-[#1E2A44] border border-white/10 p-3 rounded-xl shadow-xl animate-float-delayed text-white">
+                <Atom size={28} />
+              </div>
+
+              <div className="absolute -bottom-4 -left-8 z-20 bg-white p-3 rounded-xl shadow-xl animate-float-slow text-[#1E2A44]">
+                <Settings size={28} className="animate-spin-slow" />
+              </div>
+
+              <div className="absolute bottom-[15%] -right-4 z-20 bg-[#2FB5A3] p-3 rounded-xl shadow-xl animate-float text-white">
+                <Lightbulb size={28} />
+              </div>
+
+              <div className="absolute top-[50%] -left-12 z-20 bg-[#1E2A44] border border-white/10 p-3 rounded-xl shadow-xl animate-float-delayed text-[#2FB5A3]">
+                <Cpu size={24} />
+              </div>
+
+              <div className="absolute -top-10 right-10 z-20 bg-white p-2.5 rounded-xl shadow-xl animate-float text-[#1E2A44]">
+                <Microscope size={24} />
+              </div>
+
               {/* Main Image */}
               <div className="absolute inset-0 z-10 rounded-sm overflow-hidden shadow-2xl bg-[#0F172A] border border-white/5 transform lg:translate-x-8 lg:-translate-y-8 transition-transform duration-700 hover:translate-x-4 hover:-translate-y-4">
                 <img 
@@ -55,6 +89,7 @@ export function Hero() {
                   className="w-full h-full object-cover"
                 />
               </div>
+
               {/* Decorative Accent */}
               <div className="absolute -inset-4 border-2 border-white/5 rounded-sm z-0 lg:translate-x-2 lg:-translate-y-2" />
               <div className="absolute -bottom-10 -right-10 w-48 h-48 bg-[#2FB5A3]/10 rounded-full blur-3xl z-0" />
