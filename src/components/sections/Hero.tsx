@@ -1,7 +1,18 @@
 import { Button } from '../ui/Button'
 import { Beaker, Atom, Settings, Lightbulb, Cpu, Microscope, Rocket, Binary } from 'lucide-react'
+import { urlForImage } from '../../sanity/lib/image'
 
-export function Hero() {
+export function Hero({ data }: { data?: any }) {
+  const headline = data?.headline || (
+    <>
+      Many capable children struggle in the wrong environment. <br />
+      <span className="text-white/60 font-light italic">Not because they lack ability,</span> <br />
+      <span className="text-[#2FB5A3]">Because their thinking habits are rarely observed.</span>
+    </>
+  )
+  const subheadline = data?.subheadline || "A RoboSTEM Thinking Lab where children build real things, face real challenges inspired by how scientists solve problems, and parents learn how to support independent thinking."
+  const ctaText = data?.ctaText || "Schedule a visit →"
+
   return (
     <section className="relative w-full min-h-[95vh] flex items-center bg-[#1E2A44] overflow-hidden pt-24 text-white">
       {/* Subtle Grid Background */}
@@ -24,13 +35,11 @@ export function Hero() {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-serif font-bold text-white mb-8 leading-[1.1] text-balanced">
-               Many capable children struggle in the wrong environment. <br />
-               <span className="text-white/60 font-light italic">Not because they lack ability,</span> <br />
-               <span className="text-[#2FB5A3]">Because their thinking habits are rarely observed.</span>
+               {headline}
             </h1>
 
             <p className="text-xl text-white/70 mb-12 leading-relaxed max-w-xl">
-              A RoboSTEM Thinking Lab where children build real things, face real challenges inspired by how scientists solve problems, and parents learn how to support independent thinking.
+              {subheadline}
             </p>
 
             <div className="mb-12">
@@ -44,7 +53,7 @@ export function Hero() {
             <div className="flex flex-col sm:flex-row gap-8 items-start">
               <div className="flex flex-col gap-4">
                 <Button size="lg" className="px-10 py-5 text-lg shadow-xl shadow-[#2FB5A3]/10 bg-[#2FB5A3] hover:bg-[#28A392] text-white border-none">
-                  Schedule a visit →
+                  {ctaText}
                 </Button>
                 <p className="text-xs text-white/50 px-2 font-mono">
                   Free Parent Orientation · 30–45 minutes <br />📍 Bibwewadi, Pune
@@ -84,8 +93,8 @@ export function Hero() {
               {/* Main Image */}
               <div className="absolute inset-0 z-10 rounded-sm overflow-hidden shadow-2xl bg-[#0F172A] border border-white/5 transform lg:translate-x-8 lg:-translate-y-8 transition-transform duration-700 hover:translate-x-4 hover:-translate-y-4">
                 <img 
-                  src="/images/hero-child-discovery.png" 
-                  alt="Child working with an actual object — gears, circuits, something taken apart" 
+                  src={data?.heroImage ? urlForImage(data.heroImage).url() : "/images/hero-child-discovery.png"} 
+                  alt="Child working with an actual object" 
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -100,4 +109,5 @@ export function Hero() {
     </section>
   )
 }
+
 

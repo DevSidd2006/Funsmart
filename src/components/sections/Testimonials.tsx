@@ -1,8 +1,8 @@
 import { Card } from '../ui/Card'
 import { Quote } from 'lucide-react'
 
-export function Testimonials() {
-  const testimonials = [
+export function Testimonials({ data }: { data?: any[] }) {
+  const testimonials = data && data.length > 0 ? data : [
     {
       quote: "FunSmartism changed how I view my son's 'errors'. I now see them as starting points for new logic.",
       author: "Priya S.",
@@ -19,6 +19,7 @@ export function Testimonials() {
       role: "Parent of 8-year old"
     }
   ]
+
 
   return (
     <section className="section-spacing bg-accent-surface">

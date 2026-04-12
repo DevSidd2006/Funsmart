@@ -4,9 +4,9 @@ import { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, Play } from 'lucide-react'
 import { Button } from '../ui/Button'
 
-export function RealMoments() {
+export function RealMoments({ data }: { data?: any[] }) {
   const [current, setCurrent] = useState(0)
-  const moments = [
+  const moments = data && data.length > 0 ? data : [
     {
       id: 1,
       image: '/images/hero-child-discovery.png',
@@ -29,6 +29,7 @@ export function RealMoments() {
       desc: 'Collaborative problem solving where the solution is less important than the path taken to find it.'
     }
   ]
+
 
   const nextSlide = () => setCurrent((prev) => (prev === moments.length - 1 ? 0 : prev + 1))
   const prevSlide = () => setCurrent((prev) => (prev === 0 ? moments.length - 1 : prev - 1))

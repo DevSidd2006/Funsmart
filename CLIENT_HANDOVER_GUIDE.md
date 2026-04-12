@@ -15,65 +15,35 @@ This guide will teach you exactly how to safely change any text, image, or conte
 
 ---
 
-## 📝 How to Change Text / Content
+## 🚀 How to Manage Your Content (The Easy Way)
 
-To edit the text on your website, you will navigate through your GitHub folders. Almost all of your website's content is stored in two main folders:
+Your website is equipped with a professional **Content Management System (Sanity CMS)**. This allows you to update information without ever looking at code.
 
-1. **`src/components/sections/`** (This contains the main visual sections like Hero, About, Comparison, etc.)
-2. **`src/data/`** (This contains structured text like FAQs, Testimonials, and Programs.)
+### 1. Accessing the Dashboard
+Go to: **`your-domain.com/studio`** (or `localhost:3000/studio` during testing).
 
-### Step-by-Step Instructions:
-
-1. Go to your GitHub repository in your web browser.
-2. Click on the **`src`** folder, then click on the **`components`** folder, and then the **`sections`** folder.
-3. Click on the file you want to edit. For example, to change the main headline on the homepage, click on `Hero.tsx`.
-4. In the top right corner of the file box, click the **Pencil Icon ✏️** (Edit this file).
-5. Look closely at the file. You will see code, but if you read carefully, you will spot your main English text. 
-   **Example from `Hero.tsx`**:
-   ```tsx
-   <h1 className="...">
-      Many capable children struggle in the wrong environment.
-   </h1>
-   ```
-6. **Carefully** delete the old text and type your new text. 
-   **🚨 GOLDEN RULES OF EDITING:**
-   - **Do NOT** delete any brackets like `< >` or `{ }`.
-   - **Do NOT** delete any quotation marks like `"` or `'`.
-   - ONLY change the plain English text between the `<tags>` and `</tags>`.
-7. Once you are done typing, scroll to the top right and click the green **"Commit changes..."** button.
-8. A small box will pop up. Write a short note about what you changed (e.g., "Updated Hero Headline") and click the green **"Commit changes"** button again.
-9. **You're done!** Go to your live website, wait 2-3 minutes, and refresh the page.
+### 2. How to Edit
+1.  **Log In**: Use your invited email account.
+2.  **Choose a Section**: On the left, you will see categories like **FAQs, Testimonials, Programs,** and **Gallery**.
+3.  **Edit**: Click on an item, change the text or upload a new image.
+4.  **Publish**: Click the green **"Publish"** button at the bottom right.
+5.  **View Changes**: Refresh your website. The changes are usually live within seconds!
 
 ---
 
-## 🗺️ Where to Find Specific Content
+## 🛠️ Where to Find Specific Settings in the Studio
 
-Here is a map of where all your website content lives. If you want to change something, find it in the list below to know which file to edit.
+*   **Main Headlines**: Go to the **"Homepage Hero"** section.
+*   **Programs & Pricing**: Go to the **"Programs"** section. You can even change the card colors here!
+*   **Customer Reviews**: Go to the **"Parent Testimonials"** section.
+*   **Gallery Photos**: Go to **"Gallery Moments"**. Tip: You can click the "Hotspot" on images to ensure the most important part of the photo is never cropped.
+*   **Contact Info**: Go to **"Site Settings"** to update your email, phone, or social media links.
 
-### Homepage Content (`src/components/sections/`)
-- **Main Top Banner (Hero)**: `Hero.tsx`
-- **What Makes This Different (Comparison Tracker)**: `Comparison.tsx`
-- **How It Works (10 days vs Year-Long)**: `HowItWorks.tsx`
-- **Programs Overview**: `FeaturedActivities.tsx`
-- **Bottom Call to Action**: `FinalCTA.tsx`
-- **Website Footer (Links)**: `Footer.tsx`
+---
 
-### Structured Data (`src/data/`)
-Some data is stored as simple lists. These are incredibly easy to edit!
-- **FAQs (Frequently Asked Questions)**: Edit `src/data/faqs.ts`
-- **Parent Testimonials**: Edit `src/data/testimonials.ts`
-- **Detailed Programs**: Edit `src/data/programs.ts`
+## ⚠️ Technical Backup (GitHub)
+*If for any reason the dashboard is unavailable, you can still edit files manually on GitHub as a backup.*
 
-**Example of editing a Testimonial:**
-When you open `testimonials.ts`, you will see something like this:
-```typescript
-{
-  author: "Mrs. Sharma",
-  role: "Parent of 12-year old",
-  quote: "This lab changed my child's thinking completely."
-}
-```
-Simply change the text inside the quotation marks `""` and save (Commit).
 
 ---
 

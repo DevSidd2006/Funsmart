@@ -2,7 +2,19 @@ import { Button } from '@/components/ui/Button'
 import { Footer } from '@/components/sections/Footer'
 import { Check } from 'lucide-react'
 
-export default function ForParentsPage() {
+import { client } from '@/sanity/lib/client'
+import { faqsQuery } from '@/sanity/lib/queries'
+
+export default async function ForParentsPage() {
+  const sanityFaqs = await client.fetch(faqsQuery)
+  
+  const faqList = sanityFaqs && sanityFaqs.length > 0 ? sanityFaqs.map((f: any) => ({ q: f.question, a: f.answer })) : [
+    { q: 'Will my child perform?', a: 'There is no "performance" at FunSmartism. We are interested in the thinking process, not a final flawless product.' },
+    { q: 'Will you judge my child?', a: 'Never. We are observers, not judges. Every "mistake" is just data on how your child thinks.' },
+    { q: 'What if my child is shy?', a: 'Our lab is designed for individual discovery. They can work at their own pace without social pressure.' },
+    { q: 'What is the commitment?', a: 'Flexible. Start with an orientation, then a workshop. Only commit to the year-long lab if it feels like the right fit.' }
+  ]
+
   return (
     <div className="bg-white">
       {/* Hero Section */}
@@ -52,12 +64,7 @@ export default function ForParentsPage() {
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-16 text-center">Common Parent Conversations</h2>
             <div className="space-y-8">
-              {[
-                { q: 'Will my child perform?', a: 'There is no "performance" at FunSmartism. We are interested in the thinking process, not a final flawless product.' },
-                { q: 'Will you judge my child?', a: 'Never. We are observers, not judges. Every "mistake" is just data on how your child thinks.' },
-                { q: 'What if my child is shy?', a: 'Our lab is designed for individual discovery. They can work at their own pace without social pressure.' },
-                { q: 'What is the commitment?', a: 'Flexible. Start with an orientation, then a workshop. Only commit to the year-long lab if it feels like the right fit.' }
-              ].map((faq, i) => (
+              {faqList.map((faq: any, i: number) => (
                 <div key={i} className="bg-white p-8 rounded-sm shadow-sm border border-neutral-100">
                   <h3 className="text-lg font-bold text-primary-500 mb-2">Q: {faq.q}</h3>
                   <p className="text-neutral-500">A: {faq.a}</p>
@@ -67,6 +74,7 @@ export default function ForParentsPage() {
           </div>
         </div>
       </section>
+
 
       {/* Note Section */}
       <section className="section-spacing text-center">

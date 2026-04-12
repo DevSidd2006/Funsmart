@@ -3,8 +3,8 @@ import { Button } from '../ui/Button'
 import { Check, Atom, Dna, Microscope } from 'lucide-react'
 import Link from 'next/link'
 
-export function ProgramsOverview() {
-  const programs = [
+export function ProgramsOverview({ data }: { data?: any[] }) {
+  const programs = data && data.length > 0 ? data : [
     {
       title: '10-Day Workshop (Ages 8–16)',
       tag: 'Thinking Reset Workshop',
@@ -32,6 +32,7 @@ export function ProgramsOverview() {
       variant: 'indigo'
     }
   ]
+
 
 
   return (
@@ -65,7 +66,7 @@ export function ProgramsOverview() {
             >
               <div>
                 <div className={`text-mono text-[10px] mb-8 uppercase tracking-widest ${prog.variant === 'indigo' ? 'text-accent-teal' : 'text-accent-teal'}`}>
-                  {prog.tag}
+                  {prog.tag} {prog.ageRange && `• ${prog.ageRange}`}
                 </div>
                 <h3 className="text-3xl md:text-4xl font-serif font-bold mb-8 leading-tight">{prog.title}</h3>
                 <p className={`mb-12 leading-relaxed ${prog.variant === 'indigo' ? 'text-primary-100' : 'text-neutral-500'}`}>
@@ -73,7 +74,7 @@ export function ProgramsOverview() {
                 </p>
 
                 <ul className="space-y-6 mb-16">
-                  {prog.bullets.map(b => (
+                  {prog.bullets.map((b: string) => (
                     <li key={b} className="flex gap-4 items-start">
                        <Check size={18} className={prog.variant === 'indigo' ? 'text-accent-teal' : 'text-accent-teal'} />
                        <span className="text-sm font-medium">{b}</span>
