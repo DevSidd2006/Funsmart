@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react'
 import { ChevronLeft, ChevronRight, Play } from 'lucide-react'
 import { Button } from '../ui/Button'
+import { urlForImage } from '../../sanity/lib/image'
+
 
 export function RealMoments({ data }: { data?: any[] }) {
   const [current, setCurrent] = useState(0)
@@ -75,7 +77,7 @@ export function RealMoments({ data }: { data?: any[] }) {
             >
               <div className="w-full md:w-2/3 h-2/3 md:h-full relative overflow-hidden">
                 <img 
-                  src={mom.image} 
+                  src={mom.image?.asset ? urlForImage(mom.image).width(1200).height(800).url() : (typeof mom.image === 'string' ? mom.image : "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070")} 
                   alt={mom.title}
                   className="w-full h-full object-cover transform scale-105 group-hover:scale-110 transition-transform duration-[10s]"
                 />
@@ -89,8 +91,8 @@ export function RealMoments({ data }: { data?: any[] }) {
               </div>
 
               <div className="w-full md:w-1/3 p-10 md:p-16 flex flex-col justify-center bg-white border-l border-neutral-100">
-                <h3 className="text-3xl font-serif font-bold text-primary-500 mb-6 leading-tight">{mom.title}</h3>
-                <p className="text-neutral-500 leading-relaxed mb-10 text-lg">
+                <h3 className="text-3xl font-serif font-bold text-primary-500 mb-6 leading-tight line-clamp-2">{mom.title}</h3>
+                <p className="text-neutral-500 leading-relaxed mb-10 text-lg line-clamp-4">
                   {mom.caption || mom.desc}
                 </p>
 

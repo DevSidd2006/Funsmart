@@ -1,6 +1,13 @@
 import { Eye, Beaker, Lightbulb, FlaskConical, Compass, Brain, Sparkles } from 'lucide-react'
 
-const steps = [
+const iconMap: Record<string, any> = {
+  eye: Eye,
+  beaker: Beaker,
+  lightbulb: Lightbulb,
+  brain: Brain
+}
+
+const defaultSteps = [
   {
     icon: Eye,
     title: 'Step 1 — For parents',
@@ -22,10 +29,18 @@ const steps = [
 ]
 
 
-export function HowItWorks() {
+export function HowItWorks({ data }: { data?: any }) {
+  const title = data?.title || 'The Journey of Discovery'
+  const displaySteps = data?.steps?.length > 0 
+    ? data.steps.map((s: any) => ({
+        ...s,
+        icon: iconMap[s.icon] || Lightbulb
+      }))
+    : defaultSteps
+
   return (
     <section className="section-spacing bg-white relative overflow-hidden">
-      {/* Floating Background Icons */}
+      {/* ... (background icons remain the same) ... */}
       <div className="absolute top-[10%] left-[5%] text-accent-teal/5 animate-float hidden lg:block">
         <FlaskConical size={140} strokeWidth={0.5} />
       </div>
@@ -43,7 +58,7 @@ export function HowItWorks() {
         <div className="max-w-4xl mx-auto text-center mb-24">
           <div className="text-mono text-accent-teal mb-4 uppercase tracking-widest">[ METHODOLOGY ]</div>
           <h2 className="text-4xl md:text-6xl font-serif font-bold text-primary-500 leading-tight">
-            The Journey of <br />Discovery
+            {title}
           </h2>
         </div>
 
@@ -51,7 +66,7 @@ export function HowItWorks() {
           {/* Timeline Connector Desktop */}
           <div className="hidden md:block absolute top-[60px] left-[10%] right-[10%] h-px bg-primary-100 z-0" />
 
-          {steps.map((step, idx) => {
+          {displaySteps.map((step: any, idx: number) => {
             const Icon = step.icon
             return (
               <div key={step.title} className="relative z-10 flex flex-col items-center text-center group">
@@ -77,3 +92,4 @@ export function HowItWorks() {
     </section>
   )
 }
+

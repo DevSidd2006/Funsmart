@@ -93,11 +93,12 @@ export function Hero({ data }: { data?: any }) {
               {/* Main Image */}
               <div className="absolute inset-0 z-10 rounded-sm overflow-hidden shadow-2xl bg-[#0F172A] border border-white/5 transform lg:translate-x-8 lg:-translate-y-8 transition-transform duration-700 hover:translate-x-4 hover:-translate-y-4">
                 <img 
-                  src={data?.heroImage ? urlForImage(data.heroImage).url() : "/images/hero-child-discovery.png"} 
-                  alt="Child working with an actual object" 
-                  className="w-full h-full object-cover"
+                  src={data?.image ? urlForImage(data.image).width(800).height(1000).url() : "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070"} 
+                  alt={data?.headline || "Child discovery"} 
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
+
 
               {/* Decorative Accent */}
               <div className="absolute -inset-4 border-2 border-white/5 rounded-sm z-0 lg:translate-x-2 lg:-translate-y-2" />

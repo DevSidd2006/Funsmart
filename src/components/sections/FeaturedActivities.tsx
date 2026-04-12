@@ -68,10 +68,11 @@ export function ProgramsOverview({ data }: { data?: any[] }) {
                 <div className={`text-mono text-[10px] mb-8 uppercase tracking-widest ${prog.variant === 'indigo' ? 'text-accent-teal' : 'text-accent-teal'}`}>
                   {prog.tag} {prog.ageRange && `• ${prog.ageRange}`}
                 </div>
-                <h3 className="text-3xl md:text-4xl font-serif font-bold mb-8 leading-tight">{prog.title}</h3>
-                <p className={`mb-12 leading-relaxed ${prog.variant === 'indigo' ? 'text-primary-100' : 'text-neutral-500'}`}>
+                <h3 className="text-3xl md:text-4xl font-serif font-bold mb-8 leading-tight line-clamp-2">{prog.title}</h3>
+                <p className={`mb-12 leading-relaxed line-clamp-3 ${prog.variant === 'indigo' ? 'text-primary-100' : 'text-neutral-500'}`}>
                   {prog.description || prog.desc}
                 </p>
+
 
                 <ul className="space-y-6 mb-16">
                   {(prog.features || prog.bullets)?.map((b: string) => (

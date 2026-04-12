@@ -3,10 +3,14 @@ import { Footer } from '@/components/sections/Footer'
 import { Check } from 'lucide-react'
 
 import { client } from '@/sanity/lib/client'
-import { faqsQuery } from '@/sanity/lib/queries'
+import { faqsQuery, settingsQuery } from '@/sanity/lib/queries'
 
 export default async function ForParentsPage() {
-  const sanityFaqs = await client.fetch(faqsQuery)
+  const [sanityFaqs, settings] = await Promise.all([
+    client.fetch(faqsQuery, {}, { cache: 'no-store' }),
+    client.fetch(settingsQuery, {}, { cache: 'no-store' })
+  ])
+
   
   const faqList = sanityFaqs && sanityFaqs.length > 0 ? sanityFaqs.map((f: any) => ({ q: f.question, a: f.answer })) : [
     { q: 'Will my child perform?', a: 'There is no "performance" at FunSmartism. We are interested in the thinking process, not a final flawless product.' },
@@ -89,7 +93,8 @@ export default async function ForParentsPage() {
           </div>
         </div>
       </section>
-      <Footer />
+      <Footer data={settings} />
     </div>
+
   )
 }

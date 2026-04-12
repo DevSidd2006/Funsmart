@@ -4,9 +4,14 @@ import faq from './schemas/faq'
 import testimonial from './schemas/testimonial'
 import program from './schemas/program'
 import galleryItem from './schemas/galleryItem'
-import hero from './schemas/hero'
+import homePage from './schemas/homePage'
+import aboutPage from './schemas/aboutPage'
+import labPage from './schemas/labPage'
 import siteSettings from './schemas/siteSettings'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [hero, program, testimonial, faq, galleryItem, siteSettings],
+  types: [homePage, aboutPage, labPage, program, testimonial, faq, galleryItem, siteSettings],
 }
+
+
+

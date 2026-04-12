@@ -10,12 +10,14 @@ import { FinalCTA } from '../components/sections/FinalCTA'
 import { Footer } from '../components/sections/Footer'
 
 import { client } from '../sanity/lib/client'
-import { heroQuery, faqsQuery, testimonialsQuery, programsQuery, galleryQuery } from '../sanity/lib/queries'
+import { homePageQuery, settingsQuery, faqsQuery, testimonialsQuery, programsQuery, galleryQuery } from '../sanity/lib/queries'
+
 
 export default async function HomePage() {
   // Fetch data with caching disabled for testing
-  const [hero, faqs, testimonials, programs, gallery] = await Promise.all([
-    client.fetch(heroQuery, {}, { cache: 'no-store' }),
+  const [homeData, settings, faqs, testimonials, programs, gallery] = await Promise.all([
+    client.fetch(homePageQuery, {}, { cache: 'no-store' }),
+    client.fetch(settingsQuery, {}, { cache: 'no-store' }),
     client.fetch(faqsQuery, {}, { cache: 'no-store' }),
     client.fetch(testimonialsQuery, {}, { cache: 'no-store' }),
     client.fetch(programsQuery, {}, { cache: 'no-store' }),
@@ -24,20 +26,21 @@ export default async function HomePage() {
 
 
 
+
   return (
     <main className="w-full">
-      <Hero data={hero} />
+      <Hero data={homeData?.hero} />
       <StatsRow />
 
-      <Comparison />
-      <HowItWorks />
+      <Comparison data={homeData?.comparison} />
+      <HowItWorks data={homeData?.methodology} />
       <ProgramsOverview data={programs} />
       <RealMoments data={gallery} />
       <Testimonials data={testimonials} />
       <LatestInsights />
       <FinalCTA />
-      <Footer />
+      <Footer data={settings} />
     </main>
+
   )
 }
-

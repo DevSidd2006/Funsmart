@@ -29,6 +29,17 @@ export default defineType({
       type: 'string',
     }),
     defineField({
+      name: 'address',
+      title: 'Physical Address',
+      type: 'text',
+      rows: 2
+    }),
+    defineField({
+      name: 'openingHours',
+      title: 'Opening Hours',
+      type: 'string',
+    }),
+    defineField({
       name: 'socialLinks',
       title: 'Social Media Links',
       type: 'array',
@@ -36,7 +47,7 @@ export default defineType({
         {
           type: 'object',
           fields: [
-            { name: 'platform', type: 'string', title: 'Platform (e.g. Instagram)' },
+            { name: 'platform', type: 'string', title: 'Platform (e.g. IG)' },
             { name: 'url', type: 'url', title: 'URL' },
           ],
         },
@@ -44,3 +55,4 @@ export default defineType({
     }),
   ],
 })
+
