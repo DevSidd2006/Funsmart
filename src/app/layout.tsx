@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   authors: [{ name: 'FunSmartism' }],
 }
 
-import { Navbar } from '@/components/ui/Navbar'
+import { NavbarWrapper } from '@/components/ui/NavbarWrapper'
 
 export default function RootLayout({
   children,
@@ -50,7 +50,8 @@ export default function RootLayout({
         <meta name="theme-color" content="#1E2A44" />
       </head>
       <body className="antialiased bg-accent-surface text-[#1A1A1A] font-sans selection:bg-[#2FB5A3]/10 selection:text-[#1E2A44]">
-        <Navbar />
+        <NavbarWrapper />
+
         <main className="min-h-screen">
           {children}
         </main>

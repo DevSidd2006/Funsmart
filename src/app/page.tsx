@@ -13,14 +13,15 @@ import { client } from '../sanity/lib/client'
 import { heroQuery, faqsQuery, testimonialsQuery, programsQuery, galleryQuery } from '../sanity/lib/queries'
 
 export default async function HomePage() {
-  // Fetch data in parallel
+  // Fetch data with caching disabled for testing
   const [hero, faqs, testimonials, programs, gallery] = await Promise.all([
-    client.fetch(heroQuery),
-    client.fetch(faqsQuery),
-    client.fetch(testimonialsQuery),
-    client.fetch(programsQuery),
-    client.fetch(galleryQuery),
+    client.fetch(heroQuery, {}, { cache: 'no-store' }),
+    client.fetch(faqsQuery, {}, { cache: 'no-store' }),
+    client.fetch(testimonialsQuery, {}, { cache: 'no-store' }),
+    client.fetch(programsQuery, {}, { cache: 'no-store' }),
+    client.fetch(galleryQuery, {}, { cache: 'no-store' }),
   ])
+
 
 
   return (

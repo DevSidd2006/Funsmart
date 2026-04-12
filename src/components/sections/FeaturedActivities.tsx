@@ -70,17 +70,18 @@ export function ProgramsOverview({ data }: { data?: any[] }) {
                 </div>
                 <h3 className="text-3xl md:text-4xl font-serif font-bold mb-8 leading-tight">{prog.title}</h3>
                 <p className={`mb-12 leading-relaxed ${prog.variant === 'indigo' ? 'text-primary-100' : 'text-neutral-500'}`}>
-                  {prog.desc}
+                  {prog.description || prog.desc}
                 </p>
 
                 <ul className="space-y-6 mb-16">
-                  {prog.bullets.map((b: string) => (
+                  {(prog.features || prog.bullets)?.map((b: string) => (
                     <li key={b} className="flex gap-4 items-start">
                        <Check size={18} className={prog.variant === 'indigo' ? 'text-accent-teal' : 'text-accent-teal'} />
                        <span className="text-sm font-medium">{b}</span>
                     </li>
                   ))}
                 </ul>
+
               </div>
 
               <Button 

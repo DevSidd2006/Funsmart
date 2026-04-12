@@ -68,7 +68,7 @@ export function RealMoments({ data }: { data?: any[] }) {
         <div className="relative overflow-hidden rounded-lg shadow-base bg-accent-surface aspect-[16/10] md:aspect-[21/9]">
           {moments.map((mom, idx) => (
             <div 
-              key={mom.id}
+              key={mom._id || mom.id || idx}
               className={`absolute inset-0 transition-opacity duration-1000 flex flex-col md:flex-row ${
                 idx === current ? 'opacity-100 z-10' : 'opacity-0 z-0'
               }`}
@@ -82,16 +82,18 @@ export function RealMoments({ data }: { data?: any[] }) {
                 <div className="absolute inset-0 bg-primary-900/10" />
                 <div className="absolute bottom-8 left-8">
                    <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-sm text-mono text-[10px] text-primary-500 font-bold border border-primary-100 shadow-sm">
-                     MOMENT_CAP_0{mom.id} // {mom.label}
+                     MOMENT_CAP_0{idx + 1} // {mom.tag || mom.label}
                    </div>
+
                 </div>
               </div>
 
               <div className="w-full md:w-1/3 p-10 md:p-16 flex flex-col justify-center bg-white border-l border-neutral-100">
                 <h3 className="text-3xl font-serif font-bold text-primary-500 mb-6 leading-tight">{mom.title}</h3>
                 <p className="text-neutral-500 leading-relaxed mb-10 text-lg">
-                  {mom.desc}
+                  {mom.caption || mom.desc}
                 </p>
+
                 <div className="mt-auto flex items-center gap-4">
                   {moments.map((_, i) => (
                     <div 
