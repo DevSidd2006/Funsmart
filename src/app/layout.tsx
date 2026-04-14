@@ -21,7 +21,11 @@ const mono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'FunSmartism Intelligence Center | The Thinking Lab',
+  metadataBase: new URL('https://funsmartism.com'),
+  title: {
+    default: 'FunSmartism Intelligence Center | The Thinking Lab',
+    template: '%s | FunSmartism',
+  },
   description:
     "We don't teach. We observe. A premium thinking lab where children aged 8-14 explore unfamiliar problems and parents discover how they think.",
   keywords: [
@@ -32,6 +36,32 @@ export const metadata: Metadata = {
     'Pune',
   ],
   authors: [{ name: 'FunSmartism' }],
+  openGraph: {
+    title: 'FunSmartism Intelligence Center | The Thinking Lab',
+    description: "We don't teach. We observe. A premium thinking lab for young minds aged 8-14.",
+    url: 'https://funsmartism.com',
+    siteName: 'FunSmartism',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'FunSmartism Intelligence Center - The Thinking Lab',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'FunSmartism Intelligence Center | The Thinking Lab',
+    description: "We don't teach. We observe. A premium thinking lab for children.",
+    images: ['/og-image.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 import { NavbarWrapper } from '@/components/ui/NavbarWrapper'
