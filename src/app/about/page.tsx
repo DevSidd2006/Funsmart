@@ -1,7 +1,22 @@
+import { Metadata } from 'next'
 import { Button } from '@/components/ui/Button'
 import { Footer } from '@/components/sections/Footer'
 import { client } from '@/sanity/lib/client'
 import { aboutPageQuery, settingsQuery } from '@/sanity/lib/queries'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fursmartism.vercel.app'
+
+export const metadata: Metadata = {
+  title: 'About Us | FunSmartism',
+  description: 'Discover why we built FunSmartism Intelligence Center. We observe how children think, not just what they score.',
+  keywords: ['about FunSmartism', 'thinking lab', 'child observation', 'Pune education'],
+  openGraph: {
+    title: 'About FunSmartism | The Origin Story',
+    description: 'We noticed it again and again: a child who struggled in a classroom would come alive the moment you put something real in their hands.',
+    url: `${siteUrl}/about`,
+    type: 'article',
+  },
+}
 
 
 const defaultBeliefs = [

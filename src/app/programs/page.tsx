@@ -1,7 +1,21 @@
+import { Metadata } from 'next'
 import { Button } from '@/components/ui/Button'
 import { Footer } from '@/components/sections/Footer'
-import { Card } from '@/components/ui/Card'
 import { Check } from 'lucide-react'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fursmartism.vercel.app'
+
+export const metadata: Metadata = {
+  title: 'Programs | FunSmartism',
+  description: '10-Day Thinking Reset Workshop and Year-Long Thinking Lab for children aged 8-14. Robotics, Coding, STEM and more.',
+  keywords: ['workshop', 'thinking lab', 'children programs', 'Pune', 'STEM', 'robotics', 'coding'],
+  openGraph: {
+    title: 'Programs | FunSmartism Intelligence Center',
+    description: 'Two programs. One philosophy. 10-Day Workshop or Year-Long Lab for young minds.',
+    url: `${siteUrl}/programs`,
+    type: 'website',
+  },
+}
 
 export default function ProgramsPage() {
   const themes = [

@@ -20,8 +20,10 @@ const mono = JetBrains_Mono({
   display: 'swap',
 })
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fursmartism.vercel.app'
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://funsmartism.com'),
+  metadataBase: new URL(siteUrl),
   title: {
     default: 'FunSmartism Intelligence Center | The Thinking Lab',
     template: '%s | FunSmartism',
@@ -39,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'FunSmartism Intelligence Center | The Thinking Lab',
     description: "We don't teach. We observe. A premium thinking lab for young minds aged 8-14.",
-    url: 'https://funsmartism.com',
+    url: siteUrl,
     siteName: 'FunSmartism',
     images: [
       {
