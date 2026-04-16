@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
+import { JoinCommunity } from '@/components/ui/JoinCommunity'
 import { ArrowRight } from 'lucide-react'
 
 const blogPosts = [
@@ -52,7 +53,6 @@ export default function BlogsPage() {
             {/* Sidebar Categories */}
             <div className="lg:col-span-3 space-y-10">
                <div className="space-y-4">
-                 <p className="text-mono text-accent-teal mb-4 uppercase tracking-widest invisible lg:visible">[ CATEGORIES ]</p>
                  <ul className="space-y-4 border-l border-neutral-100 pl-6">
                     {['Child Development', 'Mental Models', 'STEM Future', 'Parent Stories', 'Lab Insights'].map((cat) => (
                       <li key={cat} className="group">
@@ -109,13 +109,28 @@ export default function BlogsPage() {
 
       {/* Pagination Placeholder */}
       <section className="py-24 bg-accent-surface border-t border-neutral-100">
-        <div className="container-fluid flex justify-center items-center gap-8">
-           <span className="text-mono text-primary-500 font-bold border-b-2 border-accent-teal pb-1">01</span>
-           <span className="text-mono text-neutral-400 hover:text-primary-500 transition-colors cursor-pointer pb-1">02</span>
-           <span className="text-mono text-neutral-400 hover:text-primary-500 transition-colors cursor-pointer pb-1">03</span>
-           <span className="text-mono text-accent-teal hover:text-primary-500 transition-colors cursor-pointer text-sm font-bold ml-6 flex items-center gap-2 group">
-              NEXT_PAGE <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-           </span>
+        <div className="container-fluid flex flex-col items-center gap-12">
+           <div className="flex justify-center items-center gap-8">
+              <span className="text-mono text-primary-500 font-bold border-b-2 border-accent-teal pb-1">01</span>
+              <span className="text-mono text-neutral-400 hover:text-primary-500 transition-colors cursor-pointer pb-1">02</span>
+              <span className="text-mono text-neutral-400 hover:text-primary-500 transition-colors cursor-pointer pb-1">03</span>
+              <span className="text-mono text-accent-teal hover:text-primary-500 transition-colors cursor-pointer text-sm font-bold ml-6 flex items-center gap-2 group">
+                 NEXT_PAGE <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+           </div>
+
+           <div className="w-full max-w-4xl bg-primary-500 rounded-2xl p-10 md:p-16 text-white text-center relative overflow-hidden shadow-2xl">
+              <div className="absolute inset-0 lab-grid opacity-[0.05]" />
+              <div className="relative z-10">
+                <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6">Want to stay updated?</h2>
+                <p className="text-lg text-white/70 mb-10 max-w-xl mx-auto">
+                  Join our parent community to get weekly insights and priority access to lab events.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <JoinCommunity variant="solid" className="bg-accent-teal hover:bg-[#28A392] px-12 py-6 text-xl" />
+                </div>
+              </div>
+           </div>
         </div>
       </section>
     </div>

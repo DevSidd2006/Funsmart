@@ -16,7 +16,6 @@ export function FeatureStrip() {
       <div className="container-fluid">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-8">
           <div>
-            <div className="text-mono text-accent-teal uppercase tracking-widest mb-2">[ DISCOVERY STRIP ]</div>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1E2A44] leading-tight">
               Seven learning threads that make every session feel like a mini STEM festival.
             </h2>

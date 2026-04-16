@@ -62,7 +62,6 @@ export function HowItWorks({ data }: { data?: any }) {
 
       <div className="container-fluid relative z-10">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <div className="text-mono text-accent-teal mb-4 uppercase tracking-widest">[ HOW IT WORKS ]</div>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight mb-6">
             {title}
           </h2>
@@ -94,9 +93,6 @@ export function HowItWorks({ data }: { data?: any }) {
                     </span>
                   </div>
 
-                  <div className="text-mono text-accent-teal text-[9px] mb-2 uppercase tracking-widest">
-                    {step.eyebrow || `Step ${idx + 1}`}
-                  </div>
                   <h3 className="text-xl font-serif font-bold text-primary-500 mb-3 leading-snug">
                     {step.title}
                   </h3>

@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
+import { JoinCommunity } from '@/components/ui/JoinCommunity'
 import { Beaker, Cpu, Rocket, BookOpen, Map, HelpCircle } from 'lucide-react'
 
 const activityCategories = [
@@ -37,7 +38,6 @@ export default function ActivitiesPage() {
         <div className="absolute inset-0 lab-grid opacity-[0.03]" />
         <div className="container-fluid relative z-10">
           <div className="max-w-2xl">
-            <div className="text-mono text-accent-gold mb-6 uppercase tracking-widest">[ EXPLORATION_CATEGORIES ]</div>
             <h1 className="text-5xl md:text-7xl font-serif font-bold text-balanced leading-tight">
               The Activities of <br /><span className="text-accent-teal italic font-light italic">Discovery</span>.
             </h1>
@@ -86,7 +86,6 @@ export default function ActivitiesPage() {
       <section className="section-spacing bg-accent-surface border-y border-neutral-100">
         <div className="container-fluid">
           <div className="text-center mb-16">
-            <div className="text-mono text-accent-teal mb-4 uppercase tracking-widest">[ WORKSHOP_TAGS ]</div>
             <h2 className="text-4xl font-serif font-bold text-primary-500 leading-tight">Mastering Logical <br />Complexity</h2>
           </div>
           <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
@@ -106,9 +105,12 @@ export default function ActivitiesPage() {
           <h2 className="text-4xl md:text-6xl font-serif font-bold lg:max-w-2xl leading-tight">
             Find the right <span className="text-accent-teal italic font-light italic">activity</span> for your child's thinking pattern.
           </h2>
-          <Button size="lg" className="bg-accent-teal hover:bg-[#28A392] text-white border-none px-12 py-6 text-xl shadow-xl shadow-black/20">
-            Book an Orientation
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Button size="lg" className="bg-accent-teal hover:bg-[#28A392] text-white border-none px-12 py-6 text-xl shadow-xl shadow-black/20">
+              Book an Orientation
+            </Button>
+            <JoinCommunity variant="solid" className="px-12 py-6 text-xl" />
+          </div>
         </div>
       </section>
     </div>

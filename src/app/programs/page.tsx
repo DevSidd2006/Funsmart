@@ -1,6 +1,7 @@
 import { Metadata } from 'next'
 import { Button } from '@/components/ui/Button'
 import { Footer } from '@/components/sections/Footer'
+import { JoinCommunity } from '@/components/ui/JoinCommunity'
 import { Accordion } from '@/components/ui/Accordion'
 import { Check, Calendar, MapPin, Clock, Zap, Star } from 'lucide-react'
 import Link from 'next/link'
@@ -99,7 +100,6 @@ export default function ProgramsPage() {
         <div className="absolute -top-32 right-0 w-96 h-96 bg-[#2FB5A3]/10 rounded-full blur-3xl z-0" />
         <div className="container-fluid relative z-10">
           <div className="max-w-4xl mx-auto">
-            <div className="text-mono text-[#2FB5A3] mb-6 uppercase tracking-widest">[ PROGRAMS ]</div>
             <h1 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6 leading-tight">
               Two programs, one way of helping children think clearly.
             </h1>
@@ -107,16 +107,12 @@ export default function ProgramsPage() {
               Practical STEM experiences, parent guidance, and thinking observations. Every program is built around how your child approaches a challenge.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/schedule-visit">
+              <Link href="/schedule-visit">
                 <Button size="lg" className="bg-[#2FB5A3] border-none text-white px-10 shadow-lg">
                   Schedule a Visit
                 </Button>
-              </a>
-              <a href="https://wa.me/yourwhatsappnumber" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="secondary" className="border-white/30 text-white hover:bg-white/10 px-10">
-                  Join Community
-                </Button>
-              </a>
+              </Link>
+              <JoinCommunity />
             </div>
           </div>
         </div>
@@ -188,7 +184,6 @@ export default function ProgramsPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-primary-900/40 to-transparent" />
             </div>
             <div className="order-1 lg:order-2">
-              <div className="text-mono text-accent-teal mb-6 uppercase tracking-widest">[ SUSTAINED_GROWTH ]</div>
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 mb-6 leading-tight">
                 Year-Long Thinking Lab
               </h2>
@@ -223,7 +218,6 @@ export default function ProgramsPage() {
       <section className="section-spacing bg-accent-surface">
         <div className="container-fluid">
           <div className="max-w-4xl mx-auto text-center mb-14">
-            <div className="text-mono text-accent-teal mb-5 uppercase tracking-widest">[ EDU EVENTS ]</div>
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight mb-4">
               Beyond the sessions.
             </h2>
@@ -269,7 +263,6 @@ export default function ProgramsPage() {
         <div className="container-fluid">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-14">
-              <div className="text-mono text-accent-teal mb-5 uppercase tracking-widest">[ FAQ ]</div>
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
                 Frequently asked questions.
               </h2>
@@ -295,14 +288,7 @@ export default function ProgramsPage() {
                 Schedule a Visit →
               </Button>
             </Link>
-            <a
-              href="https://wa.me/yourwhatsappnumber"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2.5 px-10 py-4 text-base font-semibold rounded-lg border border-white/25 text-white hover:bg-white/10 transition-all duration-300"
-            >
-              Join Community
-            </a>
+            <JoinCommunity />
           </div>
         </div>
       </section>

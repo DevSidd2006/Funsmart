@@ -58,7 +58,6 @@ export function TestimonialsSlider({ data }: { data?: any[] }) {
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-14">
-            <div className="text-mono text-[#2FB5A3] mb-5 uppercase tracking-widest">[ PARENT_VOICES ]</div>
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-white leading-tight">
               Trusted by thinking parents.
             </h2>

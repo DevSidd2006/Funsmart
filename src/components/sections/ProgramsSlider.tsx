@@ -38,7 +38,6 @@ export function ProgramsSlider() {
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
           <div className="max-w-2xl">
-            <div className="text-mono text-accent-teal mb-4 uppercase tracking-widest">[ YEARLY THEMES ]</div>
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
               10 themes. 10 worlds to explore.
             </h2>

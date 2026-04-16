@@ -5,6 +5,7 @@ import { FounderJourney } from '@/components/sections/FounderJourney'
 import { OurTeam } from '@/components/sections/OurTeam'
 import { RealMoments } from '@/components/sections/RealMoments'
 import { RealSessionMoments } from '@/components/sections/RealSessionMoments'
+import { JoinCommunity } from '@/components/ui/JoinCommunity'
 import { client } from '@/sanity/lib/client'
 import { aboutPageQuery, settingsQuery } from '@/sanity/lib/queries'
 import { CheckCircle, Heart, Users } from 'lucide-react'
@@ -81,7 +82,6 @@ export default async function AboutPage() {
         <div className="absolute inset-0 lab-grid opacity-[0.03]" />
         <div className="container-fluid relative z-10 text-center">
           <div className="max-w-4xl mx-auto">
-            <div className="text-mono text-accent-teal mb-6 uppercase tracking-widest">[ THE_ORIGIN ]</div>
             <h1 className="text-4xl md:text-6xl font-serif font-bold text-primary-500 mb-8 leading-[1.15]">
               {headline}
             </h1>
@@ -101,7 +101,6 @@ export default async function AboutPage() {
       <section className="section-spacing">
         <div className="container-fluid">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <div className="text-mono text-accent-teal mb-6 uppercase tracking-widest">[ OUR_BELIEFS ]</div>
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
               3 Core Beliefs
             </h2>
@@ -135,7 +134,6 @@ export default async function AboutPage() {
       <OurTeam />
       <RealMoments
         data={sessionMoments}
-        label="[ FROM REAL SESSION ]"
         heading="From real session"
         subheading="These boxed moments show the real thinking habits we capture in our lab."
       />
@@ -154,14 +152,7 @@ export default async function AboutPage() {
                   Schedule a Visit →
                 </Button>
               </Link>
-              <a
-                href="https://wa.me/yourwhatsappnumber"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 px-10 py-4 text-base font-semibold rounded-lg border border-white/30 text-white hover:bg-white/10 transition-all duration-300"
-              >
-                Join Community
-              </a>
+              <JoinCommunity />
             </div>
           </div>
         </div>

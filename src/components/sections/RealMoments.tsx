@@ -4,7 +4,7 @@ export function RealMoments({
   data,
   heading = 'Real session moments in box form.',
   subheading = 'These are the moments where children show how they think, not only what they finish.',
-  label = '[ REAL SESSION MOMENTS ]',
+  label = '',
 }: {
   data?: any[]
   heading?: string
@@ -39,7 +39,6 @@ export function RealMoments({
     <section className="section-spacing bg-accent-surface">
       <div className="container-fluid">
         <div className="max-w-4xl mx-auto text-center mb-14">
-          <div className="text-mono text-accent-teal mb-4 uppercase tracking-widest">{label}</div>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
             {heading}
           </h2>

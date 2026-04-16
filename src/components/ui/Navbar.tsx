@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Button } from './Button'
+import { JoinCommunity } from './JoinCommunity'
 import { cn } from '@/lib/cn'
 import { Menu, X } from 'lucide-react'
 
@@ -67,15 +68,7 @@ export function Navbar() {
             <Link href="/schedule-visit">
               <Button size="sm">Schedule a Visit</Button>
             </Link>
-            <a
-              href="https://wa.me/yourwhatsappnumber"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button variant="secondary" size="sm" className="whitespace-nowrap">
-                Join Community
-              </Button>
-            </a>
+            <JoinCommunity className="px-5 py-2 text-sm" />
           </div>
         </div>
 
@@ -110,19 +103,10 @@ export function Navbar() {
               {link.name}
             </Link>
           ))}
-          <Link href="/schedule-visit">
+          <Link href="/schedule-visit" onClick={() => setIsOpen(false)}>
             <Button className="w-full mt-4">Schedule a Visit</Button>
           </Link>
-          <a
-            href="https://wa.me/yourwhatsappnumber"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full mt-3"
-          >
-            <Button variant="secondary" className="w-full">
-              Join Community
-            </Button>
-          </a>
+          <JoinCommunity className="w-full mt-3" />
         </div>
       </div>
     </nav>

@@ -26,7 +26,6 @@ export function TheProblem() {
 
       <div className="container-fluid relative z-10">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <div className="text-mono text-[#2FB5A3] mb-5 uppercase tracking-widest">[ THE_CHALLENGE ]</div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-6 leading-tight">
             Children follow instructions but don’t think independently.
           </h2>
@@ -43,9 +42,6 @@ export function TheProblem() {
                 key={i}
                 className="group relative bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-[#2FB5A3]/30 transition-all duration-500 hover:-translate-y-1"
               >
-                <div className="absolute top-6 right-6 text-mono text-white/20 text-[10px]">
-                  0{i + 1}
-                </div>
                 <div className="w-14 h-14 rounded-2xl bg-[#2FB5A3]/15 flex items-center justify-center mb-6 group-hover:bg-[#2FB5A3]/25 transition-colors duration-300">
                   <Icon size={24} className="text-[#2FB5A3]" />
                 </div>

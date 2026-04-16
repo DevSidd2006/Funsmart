@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/Button'
 import { Footer } from '@/components/sections/Footer'
+import { JoinCommunity } from '@/components/ui/JoinCommunity'
 import { Check } from 'lucide-react'
 
 import { client } from '@/sanity/lib/client'
@@ -26,13 +27,15 @@ export default async function ForParentsPage() {
         <div className="absolute inset-0 lab-grid opacity-[0.05]" />
         <div className="container-fluid relative z-10">
           <div className="max-w-4xl mx-auto">
-            <div className="text-mono text-accent-teal mb-6 uppercase tracking-widest">[ FOR_PARENTS ]</div>
             <h1 className="text-5xl md:text-7xl font-serif font-bold mb-8 leading-[1.1]">
               You will leave knowing something about your child that school has never told you.
             </h1>
-            <Button size="lg" className="mx-auto block sm:inline-block px-10 py-5 bg-accent-teal shadow-lg border-none text-white">
-              Schedule a visit →
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button size="lg" className="px-10 py-5 bg-accent-teal shadow-lg border-none text-white w-full sm:w-auto">
+                Schedule a visit →
+              </Button>
+              <JoinCommunity />
+            </div>
           </div>
         </div>
       </section>
@@ -87,9 +90,12 @@ export default async function ForParentsPage() {
             <p className="text-2xl font-serif italic text-neutral-500 mb-12">
               "We built FunSmartism because we kept seeing capable children misunderstood. Thinking habits shape real life."
             </p>
-            <Button size="lg" className="mx-auto block sm:inline-block px-10 py-5 bg-[#1E2A44] hover:bg-accent-teal transition-colors border-none text-white">
-              Schedule your orientation →
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Button size="lg" className="px-10 py-5 bg-[#1E2A44] hover:bg-accent-teal transition-colors border-none text-white w-full sm:w-auto">
+                Schedule your orientation →
+              </Button>
+              <JoinCommunity variant="solid" className="bg-[#1E2A44] hover:bg-accent-teal" />
+            </div>
           </div>
         </div>
       </section>

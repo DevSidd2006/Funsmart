@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/Button'
 import { Footer } from '@/components/sections/Footer'
+import { JoinCommunity } from '@/components/ui/JoinCommunity'
 import { client } from '@/sanity/lib/client'
 import { labPageQuery, settingsQuery } from '@/sanity/lib/queries'
 import { Eye, Beaker, Lightbulb, AlertOctagon, Shield, Users } from 'lucide-react'
@@ -68,7 +69,6 @@ export default async function ThinkingLabPage() {
         <div className="absolute -top-20 -right-20 w-72 h-72 bg-[#2FB5A3]/10 rounded-full blur-3xl" />
         <div className="container-fluid relative z-10 text-center">
           <div className="max-w-3xl mx-auto">
-            <div className="text-mono text-[#2FB5A3] mb-6 uppercase tracking-widest">[ METHODOLOGY ]</div>
             <h1 className="text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight">
               {heroLine1} <br />
               <span className="text-[#2FB5A3] italic font-light">{heroLine2}</span>
@@ -85,7 +85,6 @@ export default async function ThinkingLabPage() {
         <div className="container-fluid">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-14">
-              <div className="text-mono text-accent-teal mb-5 uppercase tracking-widest">[ THE GAP ]</div>
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 mb-6 leading-tight">
                 {gapHeading}
               </h2>
@@ -127,7 +126,6 @@ export default async function ThinkingLabPage() {
       <section className="section-spacing bg-accent-surface">
         <div className="container-fluid">
           <div className="max-w-4xl mx-auto text-center mb-14">
-            <div className="text-mono text-accent-teal mb-5 uppercase tracking-widest">[ INSIDE A SESSION ]</div>
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500">
               The First 10 Minutes
             </h2>
@@ -173,7 +171,7 @@ export default async function ThinkingLabPage() {
       <section className="section-spacing">
         <div className="container-fluid">
           <div className="max-w-4xl mx-auto text-center mb-14">
-            <div className="text-mono text-accent-teal mb-5 uppercase tracking-widest">[ IMPORTANT ]</div>
+            <div className="text-mono text-accent-teal mb-5 uppercase tracking-widest">IMPORTANT</div>
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500">
               What this is <em>NOT</em>
             </h2>
@@ -211,14 +209,7 @@ export default async function ThinkingLabPage() {
                 Schedule a Visit →
               </Button>
             </Link>
-            <a
-              href="https://wa.me/yourwhatsappnumber"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-10 py-4 text-base font-semibold rounded-lg border border-white/25 text-white hover:bg-white/10 transition-all duration-300"
-            >
-              Join Community
-            </a>
+            <JoinCommunity />
           </div>
         </div>
       </section>

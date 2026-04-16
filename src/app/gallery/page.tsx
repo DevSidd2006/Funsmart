@@ -1,5 +1,6 @@
 import { ZoomIn } from 'lucide-react'
 import { galleryItems } from '@/data/gallery'
+import { JoinCommunity } from '@/components/ui/JoinCommunity'
 
 export default function GalleryPage() {
   return (
@@ -7,14 +8,18 @@ export default function GalleryPage() {
       {/* Header */}
       <section className="mb-20">
         <div className="container-fluid">
-          <div className="max-w-2xl">
-            <div className="text-mono text-accent-teal mb-6 uppercase tracking-widest">[ LAB_MOMENTS ]</div>
-            <h1 className="text-5xl md:text-7xl font-serif font-bold text-[#1E2A44] leading-[1.1] mb-8">
-              A gallery of <span className="text-[#2FB5A3] italic font-light">pure focus</span>.
-            </h1>
-            <p className="text-xl text-neutral-500 leading-relaxed">
-              Explore authentic moments from our Thinking Lab. We capture the process of discovery, the focus of unscripted problem-solving, and the quiet joy of the "Aha!" moment.
-            </p>
+          <div className="flex flex-col md:flex-row justify-between items-end gap-8">
+            <div className="max-w-2xl">
+              <h1 className="text-5xl md:text-7xl font-serif font-bold text-[#1E2A44] leading-[1.1] mb-8">
+                A gallery of <span className="text-[#2FB5A3] italic font-light">pure focus</span>.
+              </h1>
+              <p className="text-xl text-neutral-500 leading-relaxed">
+                Explore authentic moments from our Thinking Lab. We capture the process of discovery, the focus of unscripted problem-solving, and the quiet joy of the "Aha!" moment.
+              </p>
+            </div>
+            <div className="hidden md:block pb-2">
+              <JoinCommunity variant="solid" className="px-8" />
+            </div>
           </div>
         </div>
       </section>
@@ -53,6 +58,11 @@ export default function GalleryPage() {
                   </div>
                </div>
              ))}
+          </div>
+          
+          {/* Bottom CTA for Mobile or extra visibility */}
+          <div className="mt-20 text-center md:hidden">
+            <JoinCommunity variant="solid" className="w-full py-5" />
           </div>
         </div>
       </section>

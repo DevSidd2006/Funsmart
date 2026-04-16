@@ -42,7 +42,6 @@ export function WhatMakesDifferent({ data }: { data?: any }) {
     <section className="section-spacing bg-white">
       <div className="container-fluid">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <div className="text-mono text-accent-teal mb-6 uppercase tracking-widest">[ DIFFERENTIATION ]</div>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 mb-6 leading-tight">
             {title}
           </h2>

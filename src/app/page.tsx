@@ -6,12 +6,9 @@ import { WhatMakesDifferent } from '../components/sections/Comparison'
 import { HowItWorks } from '../components/sections/HowItWorks'
 import { ProgramsSlider } from '../components/sections/ProgramsSlider'
 import { ProgramsOverview } from '../components/sections/FeaturedActivities'
-import { ThinkingReset } from '../components/sections/ThinkingReset'
 import { RealMoments } from '../components/sections/RealMoments'
 import { TestimonialsSlider } from '../components/sections/TestimonialsSlider'
 import { LatestInsights } from '../components/sections/LatestInsights'
-import { CoreBeliefs } from '../components/sections/CoreBeliefs'
-import { FounderJourney } from '../components/sections/FounderJourney'
 import { FinalCTA } from '../components/sections/FinalCTA'
 import { Footer } from '../components/sections/Footer'
 
@@ -55,9 +52,6 @@ export default async function HomePage() {
       {/* Typical STEM Programs — program cards */}
       <ProgramsOverview data={programs} />
 
-      {/* 10-Day Thinking Reset Workshop */}
-      <ThinkingReset />
-
       {/* Edu Events Section */}
       <LatestInsights />
 
@@ -66,12 +60,6 @@ export default async function HomePage() {
 
       {/* Testimonials Slider */}
       <TestimonialsSlider data={testimonials} />
-
-      {/* Our Philosophy / Core Beliefs */}
-      <CoreBeliefs />
-
-      {/* Founder Journey */}
-      <FounderJourney />
 
       {/* Closing CTA: Schedule Visit + Join Community */}
       <FinalCTA />

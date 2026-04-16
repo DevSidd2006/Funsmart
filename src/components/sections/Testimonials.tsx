@@ -25,7 +25,6 @@ export function Testimonials({ data }: { data?: any[] }) {
     <section className="section-spacing bg-accent-surface">
       <div className="container-fluid">
         <div className="max-w-4xl mx-auto text-center mb-16 md:mb-24">
-          <div className="text-mono text-accent-teal mb-6 uppercase tracking-widest">[ PARENT_PERSPECTIVES ]</div>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
             Trusted by thinking parents.
           </h2>

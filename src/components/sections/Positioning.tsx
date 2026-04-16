@@ -7,7 +7,6 @@ export function Positioning() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
           {/* Content */}
           <div>
-            <div className="text-mono text-accent-teal mb-6 uppercase tracking-widest">[ CORE_CONCEPT ]</div>
             <h2 className="text-4xl md:text-6xl font-serif font-bold text-primary-500 mb-8 leading-tight">
               More than a class.<br />A thinking laboratory.
             </h2>
@@ -42,7 +41,6 @@ export function Positioning() {
             </div>
             {/* Overlay Lab Label */}
             <div className="absolute top-8 right-8 bg-white/95 backdrop-blur-sm p-6 rounded-sm shadow-sm border border-primary-50">
-              <p className="text-mono text-[10px] text-accent-teal mb-2 uppercase tracking-widest">LAB_LOCATION</p>
               <p className="font-serif font-bold text-primary-500">Pune Center, IN</p>
             </div>
           </div>

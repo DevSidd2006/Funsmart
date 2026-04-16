@@ -1,5 +1,6 @@
 import { Button } from '../ui/Button'
 import Link from 'next/link'
+import { JoinCommunity } from '../ui/JoinCommunity'
 import { Calendar, MapPin, Sparkles } from 'lucide-react'
 
 export function ThinkingReset() {
@@ -9,7 +10,6 @@ export function ThinkingReset() {
       <div className="container-fluid relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="text-mono text-accent-teal mb-4 uppercase tracking-widest">[ THINKING RESET ]</div>
             <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 leading-tight">
               10-Day Thinking Reset Workshop
             </h2>
@@ -33,18 +33,7 @@ export function ThinkingReset() {
                   Book a Visit
                 </Button>
               </Link>
-              <a
-                href="https://wa.me/yourwhatsappnumber"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-lg border border-white/20 text-white bg-white/10 hover:bg-white/15 transition-all duration-300"
-              >
-                Join Community
-              </a>
-            </div>
-          </div>
-
-          <div className="rounded-[2rem] overflow-hidden border border-white/10 bg-white/5 shadow-2xl">
+                <JoinCommunity />
             <div className="relative h-96 bg-[url('https://images.unsplash.com/photo-1596495577886-d920f21e8bc8?q=80&w=1200')] bg-cover bg-center">
               <div className="absolute inset-0 bg-gradient-to-t from-[#1E2A44]/90 via-[#1E2A44]/30 to-transparent" />
               <div className="absolute bottom-6 left-6 rounded-3xl bg-white/10 border border-white/20 px-5 py-4 backdrop-blur-sm text-white">

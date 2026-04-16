@@ -43,7 +43,6 @@ export function FounderJourney() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 items-start">
             <div>
-              <div className="text-mono text-accent-teal mb-4 uppercase tracking-widest">[ FROM THE FOUNDER ]</div>
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#1E2A44] mb-6 leading-tight">
                 The idea started with one question: why do smart children stop thinking when the answer is not already given?
               </h2>

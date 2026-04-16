@@ -28,7 +28,6 @@ export function OurTeam() {
     <section className="section-spacing bg-white">
       <div className="container-fluid">
         <div className="max-w-4xl mx-auto text-center mb-12">
-          <div className="text-mono text-accent-teal mb-4 uppercase tracking-widest">[ OUR TEAM ]</div>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
             People who pay attention.
           </h2>
