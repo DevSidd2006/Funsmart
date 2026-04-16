@@ -1,46 +1,82 @@
 import { Hero } from '../components/sections/Hero'
+import { FeatureStrip } from '../components/sections/FeatureStrip'
 import { StatsRow } from '../components/sections/StatsRow'
-import { Comparison } from '../components/sections/Comparison'
+import { TheProblem } from '../components/sections/TheProblem'
+import { WhatMakesDifferent } from '../components/sections/Comparison'
 import { HowItWorks } from '../components/sections/HowItWorks'
-import { ProgramsOverview } from '../components/sections/FeaturedActivities' 
+import { ProgramsSlider } from '../components/sections/ProgramsSlider'
+import { ProgramsOverview } from '../components/sections/FeaturedActivities'
+import { ThinkingReset } from '../components/sections/ThinkingReset'
 import { RealMoments } from '../components/sections/RealMoments'
-import { Testimonials } from '../components/sections/Testimonials'
+import { TestimonialsSlider } from '../components/sections/TestimonialsSlider'
 import { LatestInsights } from '../components/sections/LatestInsights'
+import { CoreBeliefs } from '../components/sections/CoreBeliefs'
+import { FounderJourney } from '../components/sections/FounderJourney'
 import { FinalCTA } from '../components/sections/FinalCTA'
 import { Footer } from '../components/sections/Footer'
 
 import { client } from '../sanity/lib/client'
-import { homePageQuery, settingsQuery, faqsQuery, testimonialsQuery, programsQuery, galleryQuery } from '../sanity/lib/queries'
+import { homePageQuery, settingsQuery, testimonialsQuery, programsQuery, galleryQuery } from '../sanity/lib/queries'
 
 
 export default async function HomePage() {
   // Fetch data with caching disabled for testing
-  const [homeData, settings, faqs, testimonials, programs, gallery] = await Promise.all([
+  const [homeData, settings, testimonials, programs, gallery] = await Promise.all([
     client.fetch(homePageQuery, {}, { cache: 'no-store' }),
     client.fetch(settingsQuery, {}, { cache: 'no-store' }),
-    client.fetch(faqsQuery, {}, { cache: 'no-store' }),
     client.fetch(testimonialsQuery, {}, { cache: 'no-store' }),
     client.fetch(programsQuery, {}, { cache: 'no-store' }),
     client.fetch(galleryQuery, {}, { cache: 'no-store' }),
   ])
 
-
-
-
   return (
     <main className="w-full">
+      {/* Hero with two CTAs */}
       <Hero data={homeData?.hero} />
+
+      {/* Feature strip: Robotics · STEM Workshops · Edu Tours */}
+      <FeatureStrip />
+
+      {/* Quick stats */}
       <StatsRow />
 
-      <Comparison data={homeData?.comparison} />
+      {/* The Problem — new section */}
+      <TheProblem />
+
+      {/* How It Works — step cards */}
       <HowItWorks data={homeData?.methodology} />
+
+      {/* What Makes This Different — cards layout (replaces comparison table) */}
+      <WhatMakesDifferent data={homeData?.comparison} />
+
+      {/* Programs Themes Slider */}
+      <ProgramsSlider />
+
+      {/* Typical STEM Programs — program cards */}
       <ProgramsOverview data={programs} />
-      <RealMoments data={gallery} />
-      <Testimonials data={testimonials} />
+
+      {/* 10-Day Thinking Reset Workshop */}
+      <ThinkingReset />
+
+      {/* Edu Events Section */}
       <LatestInsights />
+
+      {/* Real Session Moments gallery/slider */}
+      <RealMoments data={gallery} />
+
+      {/* Testimonials Slider */}
+      <TestimonialsSlider data={testimonials} />
+
+      {/* Our Philosophy / Core Beliefs */}
+      <CoreBeliefs />
+
+      {/* Founder Journey */}
+      <FounderJourney />
+
+      {/* Closing CTA: Schedule Visit + Join Community */}
       <FinalCTA />
+
       <Footer data={settings} />
     </main>
-
   )
 }

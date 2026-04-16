@@ -39,8 +39,8 @@ export function Navbar() {
       <div className="container-fluid flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 bg-primary-500 rounded-sm flex items-center justify-center text-white font-serif font-bold text-xl group-hover:bg-accent-teal transition-colors duration-500">
-            F
+          <div className="w-10 h-10 rounded-2xl bg-accent-teal text-white flex items-center justify-center text-lg">
+            🧠
           </div>
           <span className="font-serif font-bold text-2xl tracking-tight text-primary-500">
             FunSmartism
@@ -48,22 +48,35 @@ export function Navbar() {
         </Link>
 
         {/* Desktop Links — visible only at lg (1024px+) to avoid tablet overlap */}
-        <div className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.href}
-              className={cn(
-                'text-sm font-medium transition-colors hover:text-primary-400',
-                pathname === link.href ? 'text-primary-400' : 'text-neutral-600'
-              )}
-            >
-              {link.name}
+        <div className="hidden lg:flex items-center gap-4">
+          <div className="flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className={cn(
+                  'text-sm font-medium transition-colors hover:text-primary-400',
+                  pathname === link.href ? 'text-primary-400' : 'text-neutral-600'
+                )}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+          <div className="flex items-center gap-3">
+            <Link href="/schedule-visit">
+              <Button size="sm">Schedule a Visit</Button>
             </Link>
-          ))}
-          <Link href="/schedule-visit">
-            <Button size="sm">Schedule a Visit</Button>
-          </Link>
+            <a
+              href="https://wa.me/yourwhatsappnumber"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button variant="secondary" size="sm" className="whitespace-nowrap">
+                Join Community
+              </Button>
+            </a>
+          </div>
         </div>
 
         {/* Mobile / Tablet Toggle — visible below lg (1024px) */}
@@ -100,6 +113,16 @@ export function Navbar() {
           <Link href="/schedule-visit">
             <Button className="w-full mt-4">Schedule a Visit</Button>
           </Link>
+          <a
+            href="https://wa.me/yourwhatsappnumber"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full mt-3"
+          >
+            <Button variant="secondary" className="w-full">
+              Join Community
+            </Button>
+          </a>
         </div>
       </div>
     </nav>

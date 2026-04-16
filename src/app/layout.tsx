@@ -25,7 +25,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fursmartism.vercel.
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'FunSmartism Intelligence Center | The Thinking Lab',
+    default: '🧠 FunSmartism Intelligence Center | The Thinking Lab',
     template: '%s | FunSmartism',
   },
   description:
@@ -35,34 +35,48 @@ export const metadata: Metadata = {
     'child observation',
     'cognitive habits',
     'premium education',
+    'STEM',
+    'robotics',
     'Pune',
   ],
   authors: [{ name: 'FunSmartism' }],
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
+  },
   openGraph: {
     title: 'FunSmartism Intelligence Center | The Thinking Lab',
-    description: "We don't teach. We observe. A premium thinking lab for young minds aged 8-14.",
+    description: "We don't teach. We observe. A premium thinking lab for young minds aged 8-14. Robotics, STEM, and scientist-style thinking in Pune.",
     url: siteUrl,
-    siteName: 'FunSmartism',
+    siteName: 'FunSmartism Intelligence Center',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'FunSmartism Intelligence Center - The Thinking Lab',
+        alt: 'FunSmartism Intelligence Center - The Thinking Lab, Pune',
       },
     ],
-    locale: 'en_US',
+    locale: 'en_IN',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'FunSmartism Intelligence Center | The Thinking Lab',
-    description: "We don't teach. We observe. A premium thinking lab for children.",
+    description: "We don't teach. We observe. A premium STEM thinking lab for children aged 8-16 in Pune.",
     images: ['/og-image.png'],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+    },
   },
 }
 

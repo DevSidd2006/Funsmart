@@ -1,112 +1,88 @@
-'use client'
-
-import { useState, useEffect } from 'react'
-import { ChevronLeft, ChevronRight, Play } from 'lucide-react'
-import { Button } from '../ui/Button'
 import { urlForImage } from '../../sanity/lib/image'
 
-
-export function RealMoments({ data }: { data?: any[] }) {
-  const [current, setCurrent] = useState(0)
+export function RealMoments({
+  data,
+  heading = 'Real session moments in box form.',
+  subheading = 'These are the moments where children show how they think, not only what they finish.',
+  label = '[ REAL SESSION MOMENTS ]',
+}: {
+  data?: any[]
+  heading?: string
+  subheading?: string
+  label?: string
+}) {
   const moments = data && data.length > 0 ? data : [
     {
       id: 1,
       image: '/images/hero-child-discovery.png',
-      label: 'SCIENTIFIC_METHOD',
-      title: 'Precision in Action',
-      desc: 'A child focuses on the mechanical feedback of a gear system, developing patience and logical foresight.'
+      label: 'SCIENTIFIC METHOD',
+      title: 'Precision in action',
+      desc: 'A child learns to watch cause and effect through a mechanical build, not just follow instructions.',
     },
     {
       id: 2,
       image: '/images/lab-observation.png',
-      label: 'FACILITATOR_INSIGHT',
-      title: 'The Art of Observation',
-      desc: 'We don\'t intervene. We watch for the "Aha!" moment where a child independently leapfrogs a problem.'
+      label: 'FACILITATOR INSIGHT',
+      title: 'Observation first',
+      desc: 'The team pays attention to the small decisions that reveal a child’s thinking style.',
     },
     {
       id: 3,
       image: '/images/discovery-moment.png',
-      label: 'COGNITIVE_REVELATION',
-      title: 'The Spark of Curiosity',
-      desc: 'Collaborative problem solving where the solution is less important than the path taken to find it.'
-    }
+      label: 'COGNITIVE GROWTH',
+      title: 'Discovery through doing',
+      desc: 'Every session becomes a real-world problem where the process is the most valuable outcome.',
+    },
   ]
 
-
-  const nextSlide = () => setCurrent((prev) => (prev === moments.length - 1 ? 0 : prev + 1))
-  const prevSlide = () => setCurrent((prev) => (prev === 0 ? moments.length - 1 : prev - 1))
-
-  useEffect(() => {
-    const timer = setInterval(nextSlide, 8000)
-    return () => clearInterval(timer)
-  }, [])
-
   return (
-    <section className="section-spacing bg-white overflow-hidden">
+    <section className="section-spacing bg-accent-surface">
       <div className="container-fluid">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-          <div className="max-w-2xl">
-            <div className="text-mono text-accent-teal mb-6 uppercase tracking-widest">[ LAB_JOURNAL_VISUALS ]</div>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
-              Real moments of <br />unscripted discovery.
-            </h2>
-          </div>
-          <div className="flex gap-4">
-            <button 
-              onClick={prevSlide}
-              className="w-14 h-14 rounded-full border border-primary-100 flex items-center justify-center text-primary-500 hover:bg-primary-500 hover:text-white transition-all shadow-sm"
-            >
-              <ChevronLeft size={24} />
-            </button>
-            <button 
-              onClick={nextSlide}
-              className="w-14 h-14 rounded-full border border-primary-100 flex items-center justify-center text-primary-500 hover:bg-primary-500 hover:text-white transition-all shadow-sm"
-            >
-              <ChevronRight size={24} />
-            </button>
-          </div>
+        <div className="max-w-4xl mx-auto text-center mb-14">
+          <div className="text-mono text-accent-teal mb-4 uppercase tracking-widest">{label}</div>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
+            {heading}
+          </h2>
+          <p className="text-lg text-neutral-500 mt-4 max-w-2xl mx-auto leading-relaxed">
+            {subheading}
+          </p>
         </div>
 
-        <div className="relative overflow-hidden rounded-lg shadow-base bg-accent-surface aspect-[16/10] md:aspect-[21/9]">
-          {moments.map((mom, idx) => (
-            <div 
-              key={mom._id || mom.id || idx}
-              className={`absolute inset-0 transition-opacity duration-1000 flex flex-col md:flex-row ${
-                idx === current ? 'opacity-100 z-10' : 'opacity-0 z-0'
-              }`}
-            >
-              <div className="w-full md:w-2/3 h-2/3 md:h-full relative overflow-hidden">
-                <img 
-                  src={mom.image?.asset ? urlForImage(mom.image).width(1200).height(800).url() : (typeof mom.image === 'string' ? mom.image : "https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070")} 
-                  alt={mom.title}
-                  className="w-full h-full object-cover transform scale-105 group-hover:scale-110 transition-transform duration-[10s]"
-                />
-                <div className="absolute inset-0 bg-primary-900/10" />
-                <div className="absolute bottom-8 left-8">
-                   <div className="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-sm text-mono text-[10px] text-primary-500 font-bold border border-primary-100 shadow-sm">
-                     MOMENT_CAP_0{idx + 1} // {mom.tag || mom.label}
-                   </div>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {moments.map((mom, idx) => {
+            const title = mom.title || mom.caption || `Session ${idx + 1}`
+            const description = mom.desc || mom.caption || 'A moment captured while a child explores a hands-on thinking challenge.'
+            const imageUrl = mom.image?.asset ? urlForImage(mom.image).width(1200).height(900).url() : (typeof mom.image === 'string' ? mom.image : 'https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=2070')
 
+            return (
+              <div
+                key={mom._id || mom.id || idx}
+                className="group overflow-hidden rounded-[2rem] border border-neutral-200 bg-white shadow-[0_35px_75px_-45px_rgba(15,23,42,0.35)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
+              >
+                <div className="relative h-80 overflow-hidden">
+                  <img
+                    src={imageUrl}
+                    alt={title}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary-900/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-5 left-5">
+                    <span className="inline-flex rounded-full bg-white/95 px-4 py-2 text-[11px] uppercase tracking-[0.28em] text-primary-600 font-semibold shadow-sm">
+                      {mom.label}
+                    </span>
+                  </div>
+                </div>
+                <div className="p-8">
+                  <h3 className="text-3xl font-serif font-bold text-primary-600 mb-4 leading-snug">
+                    {title}
+                  </h3>
+                  <p className="text-neutral-600 leading-relaxed text-sm">
+                    {description}
+                  </p>
                 </div>
               </div>
-
-              <div className="w-full md:w-1/3 p-10 md:p-16 flex flex-col justify-center bg-white border-l border-neutral-100">
-                <h3 className="text-3xl font-serif font-bold text-primary-500 mb-6 leading-tight line-clamp-2">{mom.title}</h3>
-                <p className="text-neutral-500 leading-relaxed mb-10 text-lg line-clamp-4">
-                  {mom.caption || mom.desc}
-                </p>
-
-                <div className="mt-auto flex items-center gap-4">
-                  {moments.map((_, i) => (
-                    <div 
-                      key={i}
-                      className={`h-1 transition-all duration-500 ${i === current ? 'w-12 bg-accent-teal' : 'w-4 bg-neutral-200'}`}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>

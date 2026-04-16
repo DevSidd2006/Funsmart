@@ -1,40 +1,70 @@
-import { Button } from '../ui/Button'
-import Link from 'next/link'
+import { Calendar, Globe, Users } from 'lucide-react'
 
-const insights = [
-  { title: 'The Intelligence Gap', date: '02.04.26', image: 'image-blog-1' },
-  { title: 'Space Science in Gurukul', date: '28.03.26', image: 'image-blog-2' },
+const events = [
+  {
+    image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=600',
+    title: 'Annual Science Expo',
+    desc: 'Children present their own research findings to a panel of scientists and industry professionals.',
+    date: 'March 2025',
+    tag: 'Flagship Event',
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600',
+    title: 'Parent Insight Day',
+    desc: 'A live observation session where parents watch their child work through a real challenge.',
+    date: 'Monthly',
+    tag: 'For Parents',
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600',
+    title: 'Scientist Speaks Series',
+    desc: 'Working professionals from ISRO, engineering firms, and biotech visit for Q&A sessions.',
+    date: 'Quarterly',
+    tag: 'Special Access',
+  },
 ]
 
 export function LatestInsights() {
   return (
-    <section className="section-spacing bg-white">
+    <section id="edu-events" className="section-spacing bg-accent-surface">
       <div className="container-fluid">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-          <div className="lg:col-span-4">
-             <div className="text-mono text-primary-400 mb-4">[ LAB_JOURNAL ]</div>
-             <h2 className="text-4xl md:text-5xl font-serif font-bold text-neutral-900 mb-8 leading-tight">Latest <br />Insights</h2>
-             <p className="text-neutral-600 mb-10 leading-relaxed">Thoughts from our Chief Thinking Officer on the future of skill-based child development.</p>
-             <Link href="/blogs">
-               <Button variant="secondary">Go to Blog</Button>
-             </Link>
-          </div>
-          
-          <div className="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-            {insights.map((ins) => (
-               <div key={ins.title} className="group cursor-pointer">
-                  <div className="aspect-square bg-accent-surface rounded-sm mb-6 flex items-center justify-center border border-primary-50 relative overflow-hidden">
-                     <span className="font-mono text-neutral-400 text-xs">{ins.image}</span>
-                     <div className="absolute inset-0 bg-primary-900 transform translate-y-full group-hover:translate-y-0 transition-transform duration-500 opacity-5" />
-                  </div>
-                  <div className="flex justify-between items-center mb-2">
-                     <span className="text-mono text-[10px] text-primary-400 font-bold">{ins.date}</span>
-                     <div className="w-10 h-px bg-primary-100" />
-                  </div>
-                  <h3 className="text-2xl font-serif font-bold text-neutral-900 group-hover:text-primary-500 transition-colors">{ins.title}</h3>
-               </div>
-            ))}
-          </div>
+        <div className="max-w-4xl mx-auto text-center mb-14">
+          <div className="text-mono text-accent-teal mb-4 uppercase tracking-widest">[ EDU EVENTS ]</div>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 mb-4 leading-tight">
+            Edu events with a scientist-friendly edge.
+          </h2>
+          <p className="text-lg text-neutral-500 max-w-2xl mx-auto leading-relaxed">
+            Year-long students and families enjoy real sessions, live discovery events and guided parent conversations that connect curiosity to concrete thinking habits.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {events.map((event) => (
+            <article key={event.title} className="group overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+              <div className="relative h-52 overflow-hidden">
+                <img
+                  src={event.image}
+                  alt={event.title}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-neutral-700">
+                  {event.tag}
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center gap-2 text-xs uppercase tracking-[0.24em] text-accent-teal mb-3">
+                  <Calendar size={14} />
+                  <span>{event.date}</span>
+                </div>
+                <h3 className="text-xl font-serif font-bold text-[#1E2A44] mb-3 leading-snug">
+                  {event.title}
+                </h3>
+                <p className="text-sm text-neutral-500 leading-relaxed">
+                  {event.desc}
+                </p>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

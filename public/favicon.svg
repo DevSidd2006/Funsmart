@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="12" fill="#1E2A44"/>
+  <!-- Brain icon simplified -->
+  <path d="M32 14c-4.5 0-8 2.5-9.5 6-1.5-.5-3-.5-4.5.5C15 22 13 25 13 28c0 2 .5 3.5 1.5 5-1 1-1.5 2.5-1.5 4 0 3.5 2.5 6.5 6 7.5.5 2.5 3 4.5 6 4.5 1 0 2-.3 2.8-.8.8.5 1.8.8 2.7.8 1 0 2-.3 2.8-.8.8.5 1.8.8 2.7.8 3 0 5.5-2 6-4.5 3.5-1 6-4 6-7.5 0-1.5-.5-3-1.5-4 1-1.5 1.5-3 1.5-5 0-3-2-6-5-7.5-1.5-.5-3-.5-4.5.5C40 16.5 36.5 14 32 14z" fill="#2FB5A3" opacity="0.9"/>
+  <!-- Lightbulb element inside -->
+  <circle cx="32" cy="32" r="5" fill="#1E2A44"/>
+  <path d="M32 27v-3M32 40v-3M25 32h-3M42 32h-3" stroke="#2FB5A3" stroke-width="2" stroke-linecap="round"/>
+</svg>
