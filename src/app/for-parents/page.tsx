@@ -237,7 +237,7 @@ export default async function ForParentsPage() {
                 </Button>
               </Link>
               <Link href="/programs" className="w-full sm:w-auto">
-                <Button size="lg" variant="outline" className="text-primary-500 border-primary-500 px-10 py-5 w-full hover:bg-neutral-50 flex items-center justify-center">
+                <Button size="lg" variant="secondary" className="text-primary-500 border-primary-500 px-10 py-5 w-full hover:bg-neutral-50 flex items-center justify-center">
                   See Programs First
                 </Button>
               </Link>
