@@ -21,18 +21,18 @@ const founderNotes = [
 const storyBoxes = [
   {
     step: '01',
-    title: 'The problem we saw',
-    desc: 'Many children looked capable, but they only shined when the environment asked them to think independently.',
+    title: 'The Problem',
+    desc: "We saw parents frustrated, wondering why their child's initial spark for logic had faded into rote memorization. The problem wasn't the children — it was the environment.",
   },
   {
     step: '02',
-    title: 'A new way to observe',
-    desc: 'Instead of teaching a result, we began documenting how children decide, retry and explain their next move.',
+    title: 'The Solution',
+    desc: 'So we built an environment where thinking was the subject, not the by-product. Where the goal was to understand how a child arrived at a result, not just the result itself.',
   },
   {
     step: '03',
-    title: 'A thinking-first lab',
-    desc: 'FunSmartism became the space where the process is the outcome and every team member is a careful observer.',
+    title: 'The Experience',
+    desc: 'The Thinking Lab is where children build, test, and solve real challenges while we observe how they think — helping parents support independent thinking in real life.',
   },
 ]
 
@@ -44,10 +44,13 @@ export function FounderJourney() {
           <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 items-start">
             <div>
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#1E2A44] mb-6 leading-tight">
-                The idea started with one question: why do smart children stop thinking when the answer is not already given?
+                Why we built this.
               </h2>
-              <p className="text-lg text-neutral-600 leading-relaxed">
-                This is the founder story for FunSmartism — a lab built to observe thinking, support discovery, and help parents translate every moment into a new habit.
+              <p className="text-lg text-neutral-600 leading-relaxed mb-4">
+                We noticed it again and again: a child who struggled in a classroom would become active the moment you put something real in their hands. A mechanical puzzle. A circuit board. A question without a single correct answer.
+              </p>
+              <p className="text-lg text-neutral-600 leading-relaxed font-semibold text-accent-teal">
+                See how this becomes real inside the FunSmartism RoboSTEM Thinking Lab →
               </p>
 
               <div className="mt-10 grid gap-4 sm:grid-cols-2">
@@ -72,10 +75,13 @@ export function FounderJourney() {
 
             <div className="rounded-[2rem] overflow-hidden border border-neutral-200 bg-white p-8 shadow-lg">
               <div className="mb-8">
-                <div className="text-mono text-accent-teal mb-3 uppercase tracking-widest">Founder</div>
-                <h3 className="text-3xl font-serif font-bold text-[#1E2A44] mb-3">Dipali Akolkar</h3>
+                <div className="w-full h-64 bg-neutral-100 rounded-2xl mb-6 flex items-center justify-center border-2 border-dashed border-neutral-300">
+                  <span className="text-neutral-400 font-mono text-sm uppercase tracking-widest">Founder Photo Placehoder</span>
+                </div>
+                <div className="text-mono text-accent-teal mb-3 uppercase tracking-widest">From software systems to child thinking systems</div>
+                <h3 className="text-3xl font-serif font-bold text-[#1E2A44] mb-3">Dipali Akolkar, Founder</h3>
                 <p className="text-neutral-500 leading-relaxed mb-6">
-                  Masters in Computer Management, software product experience, and child development training. She built FunSmartism to bring attention, observation and real thinking to every child’s learning journey.
+                  After years in software development and hands-on parenting, Dipali went deeper into child development through formal learning experiences in both Pune and the USA. What stood out was simple: the right environment can completely change how a child observes, persists, and solves. That insight led her to build FunSmartism in Pune.
                 </p>
                 <div className="grid gap-3 sm:grid-cols-2">
                   <span className="rounded-3xl bg-accent-teal/10 px-4 py-3 text-sm text-accent-teal">MCM · Software Dev</span>

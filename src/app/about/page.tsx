@@ -28,18 +28,18 @@ export const metadata: Metadata = {
 const defaultBeliefs = [
   {
     icon: CheckCircle,
-    title: 'Thinking Habits Over Marks',
-    description: "Children often don't struggle because of ability alone. Most struggle because they haven't yet built strong thinking habits for unfamiliar situations.",
+    title: 'Children often don’t struggle because of marks or ability alone.',
+    description: "Most struggle because they haven’t yet built strong thinking habits for unfamiliar situations. That is a very different problem — and it has a very different solution.",
   },
   {
     icon: Heart,
-    title: 'Observation Over Instruction',
-    description: 'Marks show outcomes. They don\'t show scientist-style problem-solving habits. A child can score well and still freeze when the problem is truly new.',
+    title: 'Marks show outcomes. They don\'t show independant problem-solving habits.',
+    description: "A child can score well and still freeze when facing something they haven't seen before. A child can score poorly and still explore, persist, and adapt beautifully. The two things are not the same — and confusing them does real damage.",
   },
   {
     icon: Users,
-    title: 'Parents Deserve More',
-    description: "Parents deserve more than a report card. A number doesn't show how a child thinks. We give you real language to understand your child's mind.",
+    title: 'Parents deserve more than a report card.',
+    description: "Marks tell you what your child scored. It doesn’t show how they approach difficulty, what lights them up, or how they test and retry in action. That insight exists —it just needs the right environment to become visible.",
   },
 ]
 
@@ -70,10 +70,10 @@ export default async function AboutPage() {
   const headline = data?.hero?.headline || (
     <>We started FunSmartism because we kept seeing <br /><span className="text-accent-teal italic font-light">something schools weren't designed to notice.</span></>
   )
-  const description = data?.hero?.description || "Capable children who came alive in scientist-inspired environments — and confused in environments that didn't give them that freedom. FunSmartism Intelligence Center was built to close that gap."
+  const description = data?.hero?.description || "We kept seeing capable children come alive in real-world learning environment that gave them freedom —and shut down in environments that didn’t. Parents could sense it too, but had no language for what they were seeing. FunSmartism was built to close that gap."
   const beliefs = data?.beliefs?.length > 0 ? data.beliefs : defaultBeliefs
-  const philosophyHeading = data?.philosophy?.heading || "Why we built this."
-  const philosophyDetail = data?.philosophy?.detail || "We noticed it again and again: a child who struggled in a classroom would come alive the moment you put something real in their hands. So we built a different kind of environment. One where thinking was the subject, not the by-product."
+  const philosophyHeading = data?.philosophy?.heading || "Marks show outcomes. Scientist-style thinking habits shape futures."
+  const philosophyDetail = data?.philosophy?.detail || "We are not against exams. We are not against results. We are against the idea that results are the whole picture — and that parents should navigate their child's development with only that information in hand."
 
   return (
     <div className="bg-white">
@@ -138,13 +138,71 @@ export default async function AboutPage() {
         subheading="These boxed moments show the real thinking habits we capture in our lab."
       />
 
-      {/* Why We Built This */}
+      {/* Philosophy */}
       <section className="section-spacing bg-primary-500 text-white relative overflow-hidden text-center">
         <div className="container-fluid relative z-10">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8 leading-tight">{philosophyHeading}</h2>
-            <p className="text-xl text-primary-100/70 leading-relaxed mb-12">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-8 leading-tight">{philosophyHeading}</h2>
+            <p className="text-xl text-primary-100/70 leading-relaxed mb-8">
               {philosophyDetail}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Info */}
+      <section className="section-spacing bg-white border-t border-neutral-100">
+        <div className="container-fluid max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-serif font-bold text-primary-500 mb-4">In brief</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+            <div>
+              <h3 className="font-bold text-primary-500 mb-2">What we are</h3>
+              <p className="text-neutral-600 text-sm">FunSmartism Intelligence Center — a Thinking Lab where children explore real systems, build real things, and experience hands-on problem-solving.</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-primary-500 mb-2">Our program</h3>
+              <p className="text-neutral-600 text-sm">FunSmartism RoboSTEM Thinking Lab — 10 themes, available as a 10-day workshop or a year-long program.</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-primary-500 mb-2">Who we're for</h3>
+              <p className="text-neutral-600 text-sm">Children aged 8–16 and their parents. All learning backgrounds.</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-primary-500 mb-2">What we observe</h3>
+              <p className="text-neutral-600 text-sm">Thinking habits — how a child approaches the unfamiliar, handles difficulty, and engages with a challenge.</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-primary-500 mb-2">What parents receive</h3>
+              <p className="text-neutral-600 text-sm">Specific, parent insight notes + clear guidance on how to respond at home. Not grades. Not comparisons. A window into how their child thinks.</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-primary-500 mb-2">Edu events</h3>
+              <p className="text-neutral-600 text-sm">Year-long students get priority access — and real responsibilities. They run the events alongside us for invited scientists school mentors, and experts.</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-primary-500 mb-2">Entry point</h3>
+              <p className="text-neutral-600 text-sm">A free parent orientation. Come in. understand the process. Ask everything.</p>
+            </div>
+            <div>
+              <h3 className="font-bold text-primary-500 mb-2">Contact</h3>
+              <p className="text-neutral-600 text-sm">[ADDRESS]<br/>[PHONE / WHATSAPP] · [EMAIL]</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="section-spacing bg-accent-surface relative overflow-hidden text-center border-t border-neutral-100">
+        <div className="container-fluid relative z-10">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-8 leading-tight text-primary-500">Come and experience real problem-solving in action.</h2>
+            <p className="text-xl text-neutral-600 leading-relaxed mb-6">
+              The orientation is free. The conversation is real. Your questions are welcome.
+            </p>
+            <p className="text-sm font-mono text-accent-teal uppercase tracking-widest mb-10">
+              Free Parent Orientation · 30–45 minutes <br/> 📍 Bibwewadi, Pune · We'll confirm within 2 hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/schedule-visit">
@@ -152,7 +210,6 @@ export default async function AboutPage() {
                   Schedule a Visit →
                 </Button>
               </Link>
-              <JoinCommunity />
             </div>
           </div>
         </div>
