@@ -33,13 +33,15 @@ export function ThinkingReset() {
                   Book a Visit
                 </Button>
               </Link>
-                <JoinCommunity />
-            <div className="relative h-96 bg-[url('https://images.unsplash.com/photo-1596495577886-d920f21e8bc8?q=80&w=1200')] bg-cover bg-center">
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1E2A44]/90 via-[#1E2A44]/30 to-transparent" />
-              <div className="absolute bottom-6 left-6 rounded-3xl bg-white/10 border border-white/20 px-5 py-4 backdrop-blur-sm text-white">
-                <p className="text-sm uppercase tracking-[0.22em] text-accent-teal mb-1">Thinking Reset</p>
-                <h3 className="text-2xl font-serif font-bold">A week of fresh thinking habits</h3>
-              </div>
+              <JoinCommunity />
+            </div>
+          </div>
+
+          <div className="relative h-96 bg-[url('https://images.unsplash.com/photo-1596495577886-d920f21e8bc8?q=80&w=1200')] bg-cover bg-center rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1E2A44]/90 via-[#1E2A44]/30 to-transparent" />
+            <div className="absolute bottom-6 left-6 rounded-2xl bg-white/10 border border-white/20 px-5 py-4 backdrop-blur-sm text-white">
+              <p className="text-sm uppercase tracking-[0.22em] text-accent-teal mb-1">Thinking Reset</p>
+              <h3 className="text-2xl font-serif font-bold">A week of fresh thinking habits</h3>
             </div>
           </div>
         </div>
