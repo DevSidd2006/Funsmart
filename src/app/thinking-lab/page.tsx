@@ -62,7 +62,7 @@ export default async function ThinkingLabPage() {
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-teal/10 border border-accent-teal/20 text-accent-teal text-[11px] font-bold uppercase tracking-widest mb-10">
               Inside the Lab
             </div>
-            <h1 className="text-4xl md:text-7xl lg:text-8xl font-serif font-bold mb-4 leading-[1.05] tracking-tight">
+            <h1 className="text-4xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-4 leading-[1.05] tracking-tight">
               We don't teach. <br />
               <span className="text-accent-teal italic font-light">We observe.</span>
             </h1>

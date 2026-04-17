@@ -75,8 +75,13 @@ export function FounderJourney() {
 
             <div className="rounded-[2rem] overflow-hidden border border-neutral-200 bg-white p-8 shadow-lg">
               <div className="mb-8">
-                <div className="w-full h-64 bg-neutral-100 rounded-2xl mb-6 flex items-center justify-center border-2 border-dashed border-neutral-300">
-                  <span className="text-neutral-400 font-mono text-sm uppercase tracking-widest">Founder Photo Placehoder</span>
+                <div className="w-full h-80 rounded-2xl mb-6 overflow-hidden relative shadow-inner bg-neutral-50 border border-neutral-100">
+                  <img 
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800" 
+                    alt="Dipali Akolkar" 
+                    className="w-full h-full object-cover" 
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary-500/20 to-transparent pointer-events-none" />
                 </div>
                 <div className="text-mono text-accent-teal mb-3 uppercase tracking-widest">From software systems to child thinking systems</div>
                 <h3 className="text-3xl font-serif font-bold text-[#1E2A44] mb-3">Dipali Akolkar, Founder</h3>

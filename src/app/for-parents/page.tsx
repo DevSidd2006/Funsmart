@@ -85,18 +85,21 @@ export default async function ForParentsPage() {
               Not 'my child improved'. The specific, moments revealed when children face scientist-style RoboSTEM challenges.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
             {[
-              { title: 'Whether your child observes first like a scientist — or jumps straight into action.', desc: 'This is one of the clearest thinking patterns we observe. Most parents have never had it described to them about their own child.' },
-              { title: 'How your child handles being stuck?', desc: 'Some go quiet. Some call for help in two minutes. Some double down. Some take a breath and start from a different angle. Every response becomes a clue for better parent support.' },
-              { title: 'Whether your child believes they\'re capable before they\'ve tried.', desc: 'Common in high-performing children — and it surprises parents every time. Capable, but visibly doubtful before starting. Different problem, different support needed.' },
-              { title: 'What kinds of problems genuinely light your child up?', desc: 'Mechanical systems? Logic patterns? Open-ended challenges? These preferences are invisible in results — but enormously useful for a parent who wants to nurture real interest.' },
-              { title: 'Whether your child\'s approach to challenges is different from what their results might reveal.', desc: 'Both are common, and both matter. Sometimes results don’t fully show how a child thinks during real challenges — and that helps parents respond differently.' }
+              { title: 'Observer vs. Doer', desc: 'Whether your child observes first like a scientist — or jumps straight into action. Most parents have never had this pattern described to them.' },
+              { title: 'The Stuck Response', desc: 'How your child handles being stuck. Do they go quiet, call for help, or double down? Every response is a clue for better support.' },
+              { title: 'Intrinsic Confidence', desc: 'Whether your child believes they\'re capable before they\'ve tried. Common in high-performers and often surprises parents.' },
+              { title: 'Genuine Interests', desc: 'What kinds of problems genuinely light your child up? Mechanical systems? Logic patterns? Invisible in exam results.' },
+              { title: 'Process vs. Result', desc: 'Whether your child cares more about making it work, or understanding why it works. Both matter for long-term growth.' },
+              { title: 'Persistence Patterns', desc: 'How many times will your child retry a failed build before changing their hypothesis? A key indicator of resilience.' },
+              { title: 'Collaboration Style', desc: 'Does your child naturally lead, follow, or prefer independent discovery? Insights into their natural social-thinking dynamics.' },
+              { title: 'Frustration Threshold', desc: 'How your child responds to frustration when a build doesn\'t work—and what it reveals about their emotional-thinking habits.' }
             ].map((item, i) => (
-              <div key={i} className="p-10 border border-neutral-100 rounded-sm hover:-translate-y-1 transition-all duration-300 relative overflow-hidden bg-white shadow-sm hover:shadow-lg">
-                <div className="absolute left-0 top-0 h-full w-1.5 bg-accent-teal" />
-                <h3 className="text-xl font-serif font-bold text-primary-500 mb-4">{item.title}</h3>
-                <p className="text-neutral-500 leading-relaxed text-sm">{item.desc}</p>
+              <div key={i} className="p-8 border border-neutral-100 rounded-2xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden bg-white shadow-sm hover:shadow-lg flex flex-col">
+                <div className="absolute left-0 top-0 h-1.5 w-full bg-accent-teal" />
+                <h3 className="text-lg font-serif font-bold text-primary-500 mb-4 leading-tight">{item.title}</h3>
+                <p className="text-neutral-500 leading-relaxed text-sm font-light">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -114,22 +117,22 @@ export default async function ForParentsPage() {
               Understanding helps. Knowing what to do changes home moments. Based on how your child responds in handling unfamiliar challenges, we guide you with simple home responses to try.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
              {[
                { q: 'When your child asks for help immediately', a: 'what to say before explaining' },
                { q: 'When they give up quickly', a: 'how to respond without rescuing' },
                { q: 'When they over focus on being right', a: 'how to redirect toward exploration' },
                { q: 'When they hesitate too long', a: 'how to support without pushing' }
              ].map((item, i) => (
-                <div key={i} className="bg-white p-8 rounded-xl shadow-sm border border-neutral-100 flex gap-4">
-                  <div className="w-10 h-10 shrink-0 bg-accent-teal/10 text-accent-teal rounded-full flex items-center justify-center">
-                    <Check size={18} />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-primary-500 mb-1">{item.q}</h3>
-                    <p className="text-neutral-500 italic text-sm">→ {item.a}</p>
-                  </div>
-                </div>
+                 <div key={i} className="bg-white p-8 rounded-xl shadow-sm border border-neutral-100 flex flex-col gap-4">
+                   <div className="w-10 h-10 shrink-0 bg-accent-teal/10 text-accent-teal rounded-full flex items-center justify-center">
+                     <Check size={18} />
+                   </div>
+                   <div>
+                     <h3 className="text-lg font-bold text-primary-500 mb-2 leading-tight">{item.q}</h3>
+                     <p className="text-neutral-500 italic text-sm">→ {item.a}</p>
+                   </div>
+                 </div>
              ))}
           </div>
         </div>

@@ -10,13 +10,13 @@ export function ThinkingReset() {
       <div className="container-fluid relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 leading-tight">
+            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 leading-tight">
               10-Day Thinking Reset Workshop
             </h2>
             <p className="text-lg text-white/70 mb-8 max-w-2xl leading-relaxed">
               A focused introduction to how children think. Ten days of open-ended STEAM challenges, observation-led coaching, and guided parent insight.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
               {[
                 { icon: Calendar, label: '10 days' },
                 { icon: MapPin, label: 'Bibwewadi, Pune' },

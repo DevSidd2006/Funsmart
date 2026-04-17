@@ -1,19 +1,26 @@
 import Link from 'next/link'
+import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react'
 
 export function Footer({ data }: { data?: any }) {
   const email = data?.contactEmail || 'hello@funsmartism.in'
   const phone = data?.contactPhone || '+91 99999 99999'
-  const address = data?.address || 'Baner - Balewadi Road, Pune, Maharashtra 411045'
+  const address = data?.address || 'Navkar Residency, Swami Vivekanand Road, Next to Bibwewadi Police Station, Bibwewadi, Pune 411037'
   const hours = data?.openingHours || 'Open: Tue - Sun | 10:00 AM - 7:00 PM'
+  
   const socialLinks = data?.socialLinks?.length > 0 
     ? data.socialLinks 
-    : [{ platform: 'FB' }, { platform: 'IG' }, { platform: 'LI' }, { platform: 'YT' }]
+    : [
+        { platform: 'Facebook', url: '#', icon: Facebook, color: 'hover:text-[#1877F2] hover:border-[#1877F2]' },
+        { platform: 'Instagram', url: '#', icon: Instagram, color: 'hover:text-[#E4405F] hover:border-[#E4405F]' },
+        { platform: 'Linkedin', url: '#', icon: Linkedin, color: 'hover:text-[#0A66C2] hover:border-[#0A66C2]' },
+        { platform: 'Youtube', url: '#', icon: Youtube, color: 'hover:text-[#FF0000] hover:border-[#FF0000]' }
+      ]
 
   return (
     <footer className="bg-accent-surface pt-24 pb-12 border-t border-neutral-100">
       <div className="container-fluid">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-20">
-          <div className="md:col-span-5">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
+          <div className="md:col-span-4">
             <Link href="/" className="inline-flex items-center gap-3 group mb-8">
               <div className="w-8 h-8 bg-primary-500 rounded-sm flex items-center justify-center text-white font-serif font-bold group-hover:bg-accent-teal transition-colors duration-500">
                 F
@@ -22,18 +29,28 @@ export function Footer({ data }: { data?: any }) {
                 FunSmartism
               </span>
             </Link>
-            <p className="text-neutral-500 max-w-sm leading-relaxed mb-10">
+            <p className="text-neutral-500 max-w-sm leading-relaxed mb-10 text-sm">
               {data?.description || "A premium laboratory for parents who value intelligence over marks. Helping children aged 8-14 discover their thinking patterns."}
             </p>
             <div className="flex gap-4">
-               {socialLinks.map((social: any) => (
-                 <a key={social.platform} href={social.url || "#"} className="w-10 h-10 rounded-sm border border-neutral-200 flex items-center justify-center text-mono text-[10px] text-neutral-400 hover:border-primary-500 hover:text-primary-500 transition-all">{social.platform}</a>
-               ))}
+               {socialLinks.map((social: any) => {
+                 const Icon = social.icon || Facebook
+                 return (
+                   <a 
+                     key={social.platform} 
+                     href={social.url || "#"} 
+                     className={`w-10 h-10 rounded-sm border border-neutral-200 flex items-center justify-center text-neutral-400 transition-all bg-white shadow-sm ${social.color}`}
+                     aria-label={`Visit our ${social.platform} page`}
+                   >
+                     <Icon size={18} />
+                   </a>
+                 )
+               })}
             </div>
           </div>
           
-          <div className="md:col-span-2 space-y-6">
-            <h4 className="text-sm font-bold uppercase tracking-widest text-primary-500 mb-8">Navigation</h4>
+          <div className="md:col-span-2">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-primary-500 mb-8">Navigation</h4>
             <ul className="space-y-4">
               {[
                 { name: 'Home', href: '/' },
@@ -52,14 +69,30 @@ export function Footer({ data }: { data?: any }) {
             </ul>
           </div>
 
-          <div className="md:col-span-1 border-r border-neutral-100 hidden md:block" />
-
-          <div className="md:col-span-4">
-            <h4 className="text-sm font-bold uppercase tracking-widest text-primary-500 mb-8">The Thinking Lab</h4>
+          <div className="md:col-span-3">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-primary-500 mb-8">The Thinking Lab</h4>
             <div className="space-y-4 text-sm text-neutral-500 leading-relaxed">
-              <p>{address}</p>
+              <p className="font-medium text-primary-900">{address}</p>
               <p>{phone} <br /> {email}</p>
-              <p className="pt-4 text-mono text-accent-teal uppercase tracking-widest text-[10px]">{hours}</p>
+              <div className="pt-4">
+                <p className="text-mono text-accent-teal uppercase tracking-widest text-[10px] font-bold mb-1">Hours</p>
+                <p className="text-xs">{hours}</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="md:col-span-3">
+            <h4 className="text-xs font-bold uppercase tracking-widest text-primary-500 mb-8">Find Us</h4>
+            <div className="rounded-xl overflow-hidden border border-neutral-200 h-48">
+              <iframe 
+                src="https://maps.google.com/maps?q=FunSmartism%20Intelligence%20Center%20Bibwewadi%20Pune&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0 }} 
+                allowFullScreen={false} 
+                loading="lazy"
+                title="FunSmartism Location"
+              />
             </div>
           </div>
         </div>

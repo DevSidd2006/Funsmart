@@ -49,7 +49,7 @@ export function TestimonialsSlider({ data }: { data?: any[] }) {
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-white leading-tight">
               Unexpected Discoveries through handling unfamiliar challenges...
             </h2>
-            <p className="text-white/60 mt-4 text-lg">
+            <p className="text-white/90 mt-4 text-lg">
               parents observing real change in their children.
             </p>
           </div>
@@ -76,7 +76,7 @@ export function TestimonialsSlider({ data }: { data?: any[] }) {
                     </div>
                     <div>
                       <p className="font-serif font-bold text-white">{t.author}</p>
-                      <p className="text-mono text-[10px] text-white/40 mt-0.5 uppercase tracking-widest">
+                      <p className="text-mono text-[10px] text-white/70 mt-0.5 uppercase tracking-widest">
                         {t.location || t.role}
                       </p>
                     </div>
@@ -94,8 +94,8 @@ export function TestimonialsSlider({ data }: { data?: any[] }) {
                 <button
                   key={i}
                   onClick={() => setCurrent(i)}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    i === current ? 'w-8 bg-[#2FB5A3]' : 'w-3 bg-white/20'
+                  className={`relative h-1.5 rounded-full transition-all duration-300 before:content-[''] before:absolute before:-inset-6 before:block ${
+                    i === current ? 'w-8 bg-[#2FB5A3]' : 'w-3 bg-white/30'
                   }`}
                   aria-label={`Go to testimonial ${i + 1}`}
                 />

@@ -30,7 +30,7 @@ export function Testimonials({ data }: { data?: any[] }) {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {testimonials.map((t, i) => (
             <Card key={i} className="p-10 bg-white border-none shadow-sm hover:shadow-md transition-shadow duration-500 relative">
               <Quote className="absolute top-8 right-8 text-accent-teal/10" size={40} />

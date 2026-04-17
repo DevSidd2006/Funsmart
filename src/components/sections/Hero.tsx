@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Button } from '../ui/Button'
 import { Beaker, Atom, Settings, Lightbulb, Cpu, Microscope, Rocket, Binary, Check } from 'lucide-react'
 import { JoinCommunity } from '../ui/JoinCommunity'
@@ -10,6 +11,10 @@ export function Hero({ data }: { data?: any }) {
   const subline = data?.subline || "Hands-on RoboSTEM challenges and scientist interaction sessions help children grow confidence beyond marks, while our live observations help parents support thinking without over-helping."
   const microCopy = data?.microCopy || "Not a tuition class. Not a coaching. Scientist-inspired problem-solving with real parent guidance."
   const ctaText = data?.ctaText || "Schedule a visit →"
+
+  const heroImage = data?.image 
+    ? urlForImage(data.image).width(800).height(1000).url() 
+    : "/images/hero-thinking.png"
 
   return (
     <section id="home" className="relative w-full min-h-screen flex items-center bg-[#1E2A44] overflow-hidden pt-24 pb-16 text-white">
@@ -44,7 +49,7 @@ export function Hero({ data }: { data?: any }) {
               {subline}
             </p>
             
-            <p className="text-sm text-white/50 mb-10 max-w-xl italic border-l-2 border-accent-teal/30 pl-4 py-1">
+            <p className="text-sm text-white/80 mb-10 max-w-xl italic border-l-2 border-accent-teal/30 pl-4 py-1">
               {microCopy}
             </p>
 
@@ -72,13 +77,13 @@ export function Hero({ data }: { data?: any }) {
                 ].map((item) => (
                   <div key={item} className="flex flex-col gap-2">
                     <Check className="text-accent-teal" size={18} />
-                    <span className="text-[12px] font-bold text-white/70 uppercase tracking-wider leading-tight">
+                    <span className="text-[12px] font-bold text-white/80 uppercase tracking-wider leading-tight">
                       {item}
                     </span>
                   </div>
                 ))}
               </div>
-              <div className="flex items-center gap-3 text-xs text-white/40 font-mono bg-white/5 w-fit px-4 py-2 rounded-lg border border-white/5">
+              <div className="flex items-center gap-3 text-xs text-white/60 font-mono bg-white/5 w-fit px-4 py-2 rounded-lg border border-white/5">
                 <span className="w-2 h-2 rounded-full bg-accent-gold" />
                 Free Parent Orientation · 30–45 minutes · 📍 Bibwewadi, Pune
               </div>
@@ -108,9 +113,12 @@ export function Hero({ data }: { data?: any }) {
 
               {/* Main Image with softened frame */}
               <div className="absolute inset-0 z-10 rounded-[40px] overflow-hidden shadow-huge bg-[#0F172A] border border-white/10 transform lg:translate-x-4 lg:-translate-y-4 transition-transform duration-1000 hover:translate-x-0 hover:-translate-y-0">
-                <img 
-                  src={data?.image ? urlForImage(data.image).width(800).height(1000).url() : "/images/hero-thinking.png"} 
+                <Image 
+                  src={heroImage} 
                   alt={data?.headline || "Child discovery"} 
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="w-full h-full object-cover object-center scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1E2A44]/40 to-transparent pointer-events-none" />

@@ -48,9 +48,9 @@ export function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop Links — visible only at lg (1024px+) to avoid tablet overlap */}
-        <div className="hidden lg:flex items-center gap-4">
-          <div className="flex items-center gap-8">
+        {/* Desktop Links — visible only at xl (1280px+) to avoid tablet overlap */}
+        <div className="hidden xl:flex items-center gap-4">
+          <div className="flex items-center gap-4 xl:gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -68,13 +68,13 @@ export function Navbar() {
             <Link href="/schedule-visit">
               <Button size="sm">Schedule a Visit</Button>
             </Link>
-            <JoinCommunity className="px-5 py-2 text-sm" />
+            <JoinCommunity variant="solid" className="px-5 py-2 text-sm" />
           </div>
         </div>
 
-        {/* Mobile / Tablet Toggle — visible below lg (1024px) */}
+        {/* Mobile / Tablet Toggle — visible below xl (1280px) */}
         <button
-          className="lg:hidden text-neutral-900"
+          className="xl:hidden text-neutral-900"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle navigation menu"
         >
@@ -85,7 +85,7 @@ export function Navbar() {
       {/* Mobile / Tablet Menu Drawer */}
       <div
         className={cn(
-          'lg:hidden absolute top-full left-0 right-0 bg-white border-b border-neutral-100 p-6 transition-all duration-300 origin-top',
+          'xl:hidden absolute top-full left-0 right-0 bg-white border-b border-neutral-100 p-6 transition-all duration-300 origin-top',
           isOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0'
         )}
       >
@@ -106,7 +106,7 @@ export function Navbar() {
           <Link href="/schedule-visit" onClick={() => setIsOpen(false)}>
             <Button className="w-full mt-4">Schedule a Visit</Button>
           </Link>
-          <JoinCommunity className="w-full mt-3" />
+          <JoinCommunity variant="solid" className="w-full mt-3" />
         </div>
       </div>
     </nav>

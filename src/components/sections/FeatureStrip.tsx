@@ -1,13 +1,13 @@
 import { Atom, FlaskConical, Globe, Hammer, MapPin, Users, Handshake } from 'lucide-react'
 
 const features = [
-  { icon: Atom, label: 'Robotics' },
-  { icon: FlaskConical, label: 'STEM Workshops' },
-  { icon: MapPin, label: 'Edu Tours' },
-  { icon: Hammer, label: 'Hands-on Builds' },
-  { icon: Users, label: 'Scientist Interaction' },
-  { icon: Handshake, label: 'Parent Guidance' },
-  { icon: Globe, label: 'Real-world Thinking' },
+  { icon: Atom, label: 'Robotics', color: 'text-[#4D96FF] bg-[#4D96FF]/10' },
+  { icon: FlaskConical, label: 'STEM Workshops', color: 'text-[#FF6B6B] bg-[#FF6B6B]/10' },
+  { icon: MapPin, label: 'Edu Tours', color: 'text-[#6BCB77] bg-[#6BCB77]/10' },
+  { icon: Hammer, label: 'Hands-on Builds', color: 'text-[#FFD93D] bg-[#FFD93D]/10' },
+  { icon: Users, label: 'Scientist Interaction', color: 'text-accent-teal bg-accent-teal/10' },
+  { icon: Handshake, label: 'Parent Guidance', color: 'text-primary-500 bg-primary-500/10' },
+  { icon: Globe, label: 'Real-world Thinking', color: 'text-[#9B59B6] bg-[#9B59B6]/10' },
 ]
 
 export function FeatureStrip() {
@@ -27,12 +27,12 @@ export function FeatureStrip() {
 
         <div className="overflow-x-auto scrollbar-hide">
           <div className="flex gap-4 min-w-[min(100%,1400px)]">
-            {features.map(({ icon: Icon, label }, i) => (
+            {features.map(({ icon: Icon, label, color }, i) => (
               <div
                 key={i}
                 className="min-w-[14rem] bg-white rounded-3xl border border-neutral-200/80 p-5 shadow-sm hover:shadow-xl transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 text-accent-teal flex items-center justify-center mb-4">
+                <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-4 ${color}`}>
                   <Icon size={20} />
                 </div>
                 <p className="text-base font-semibold text-[#1E2A44]">{label}</p>

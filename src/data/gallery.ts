@@ -35,7 +35,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: 4,
-    image: '', // Needs photo: e.g., '/images/aeromodeling.jpg'
+    image: '/images/aeromodeling.png',
     title: 'Focus Validation',
     caption: 'Concentrated effort in translating abstract logic into tangible motion.',
     tag: 'AEROMODELING',
@@ -43,7 +43,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: 5,
-    image: '', // Needs photo
+    image: '/images/pattern-recognition.png',
     title: 'Pattern Recognition',
     caption: 'Deciphering complex configurations independently without a manual.',
     tag: 'SPATIAL REASONING',
@@ -51,7 +51,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: 6,
-    image: '', // Needs photo
+    image: '/images/iterative-thinking.png',
     title: 'Iterative Thinking',
     caption: 'Trial, error, reflection, and adjustment. The core of unscripted discovery.',
     tag: 'SCIENTIFIC METHOD',
