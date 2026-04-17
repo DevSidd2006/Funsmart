@@ -4,36 +4,40 @@ import { JoinCommunity } from '../ui/JoinCommunity'
 
 export function FinalCTA() {
   return (
-    <section className="py-24 md:py-36 bg-gradient-to-br from-[#1E2A44] via-[#1a3a4a] to-[#1E2A44] text-white relative overflow-hidden">
-      {/* Decorative accents */}
-      <div className="absolute top-0 right-0 w-64 h-64 bg-[#2FB5A3]/10 rounded-full blur-3xl z-0" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl z-0" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#2FB5A3]/5 rounded-full blur-3xl z-0 pointer-events-none" />
+    <section className="py-24 md:py-32 bg-[#1E2A44] text-white relative overflow-hidden">
+      {/* Premium background effects */}
+      <div className="absolute inset-0 lab-grid opacity-[0.03] z-0" />
+      <div className="absolute -top-1/2 -right-1/4 w-[800px] h-[800px] bg-accent-teal/10 rounded-full blur-[120px] z-0" />
+      <div className="absolute -bottom-1/2 -left-1/4 w-[800px] h-[800px] bg-white/5 rounded-full blur-[120px] z-0" />
       
       <div className="container-fluid relative z-10 text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-6 leading-[1.15] text-balanced">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8 leading-[1.1] text-balanced text-white">
             Marks show outcomes.<br />
-            <span className="text-[#2FB5A3] italic font-light">Thinking habits shape futures.</span>
+            <span className="text-accent-teal italic font-light opacity-90">
+              Thinking habits shape futures.
+            </span>
           </h2>
-          <p className="text-lg text-white/60 mb-12 max-w-xl mx-auto leading-relaxed">
-            Start with a free parent orientation. See the lab. Meet the team. No commitment needed.
+          
+          <p className="text-lg md:text-xl text-[#B7E3DD] mb-12 max-w-2xl mx-auto leading-relaxed">
+            Come experience how scientist-style problem-solving looks in real RoboSTEM action.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             {/* Schedule Visit */}
-            <div className="flex flex-col items-center gap-3">
-              <Link href="/schedule-visit">
+            <div className="flex flex-col items-center gap-4">
+              <Link href="/schedule-visit" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="px-10 py-4 text-base bg-[#2FB5A3] hover:bg-[#28A392] shadow-2xl shadow-[#2FB5A3]/25 border-none text-white w-full sm:w-auto"
+                  className="px-12 py-5 text-base bg-accent-teal hover:bg-[#28A392] shadow-huge shadow-accent-teal/20 border-none text-white w-full"
                 >
-                  Schedule a Visit →
+                  Schedule a visit →
                 </Button>
               </Link>
-              <p className="text-xs text-white/30 font-mono">
+              <div className="flex items-center gap-2 text-[10px] font-mono text-white/40 tracking-widest uppercase">
+                <span className="w-1.5 h-1.5 rounded-full bg-accent-gold" />
                 Free · 30–45 min · We confirm within 2 hours
-              </p>
+              </div>
             </div>
 
             <JoinCommunity />

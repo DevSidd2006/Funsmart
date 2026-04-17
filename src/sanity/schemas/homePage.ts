@@ -19,8 +19,10 @@ export default {
       title: 'Hero Section',
       type: 'object',
       fields: [
-        { name: 'headline', title: 'Headline', type: 'string', description: 'Main tagline on the homepage' },
-        { name: 'subheadline', title: 'Sub-headline', type: 'text', rows: 3 },
+        { name: 'headline', title: 'Primary Headline', type: 'string', description: 'Large confident line' },
+        { name: 'subheadline', title: 'Secondary Headline (Accent)', type: 'string', description: 'Green accented line below primary' },
+        { name: 'subline', title: 'Paragraph Subline', type: 'text', rows: 3, description: 'Main descriptive paragraph' },
+        { name: 'microCopy', title: 'Supporting Micro-copy', type: 'string', description: 'Small italic text (e.g., Not a tuition class)' },
         { name: 'image', title: 'Hero Image', type: 'image', options: { hotspot: true } },
       ]
     },

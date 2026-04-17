@@ -13,33 +13,33 @@ const defaultSteps = [
     icon: Eye,
     step: '01',
     eyebrow: 'For Parents',
-    title: 'Free Parent Orientation',
-    description: 'Come in. Meet the team. See the FunSmartism RoboSTEM Thinking Lab. Ask everything.',
-    bullets: ['30–45 minutes', 'No commitment required', 'On-site at Bibwewadi, Pune'],
+    title: 'Parent orientation.',
+    description: 'Come in. Meet us. See how FunSmartism RoboSTEM Thinking Lab works. Ask everything.',
+    bullets: ['30–45 min', 'Free', 'No commitment'],
     cta: null,
   },
   {
     icon: Beaker,
     step: '02',
     eyebrow: 'For Your Child',
-    title: '10-Day Thinking Reset Workshop',
-    description: 'Ten days. Ten themes. Real materials, real builds, scientist-style problem-solving — observed.',
-    bullets: ['Daily challenges across 10 STEM themes', 'No step-by-step instructions', 'Most projects go home'],
+    title: '10-Day Thinking Reset Workshop.',
+    description: '10 days. 10 themes. Real materials, real builds, real scientist-style problem-solving — observed. Each day a different world.',
+    bullets: ['Most projects go home', 'Foundational problem-solving', 'Unlearn standard rote methods'],
     cta: { href: '/programs#workshop', label: 'Learn about the Workshop' },
   },
   {
     icon: Lightbulb,
     step: '03',
     eyebrow: 'Year-Long Program',
-    title: 'RoboSTEM Thinking Lab',
-    description: 'One theme per month. One session per week. Deep projects, thinking observations, and parent guidance.',
-    bullets: ['Priority access to scientist interactions', 'Monthly thinking reports', 'Home guidance for parents'],
+    title: 'FunSmartism RoboSTEM Thinking Lab — Year-Long.',
+    description: 'One theme per month. One session per week. Deep projects + thinking observations + parent guidance for home.',
+    bullets: ['Priority access to scientist interactions', 'Consistent, immersive tinkering', 'Building sustainable logic'],
     cta: { href: '/programs#year-long', label: 'Explore the Year-Long Lab' },
   },
 ]
 
 export function HowItWorks({ data }: { data?: any }) {
-  const title = data?.title || 'Three steps to a thinking child.'
+  const title = data?.title || 'A structured pathway to transform young minds.'
   const displaySteps = data?.steps?.length > 0 
     ? data.steps.map((s: any) => ({
         ...s,
@@ -61,7 +61,7 @@ export function HowItWorks({ data }: { data?: any }) {
       </div>
 
       <div className="container-fluid relative z-10">
-        <div className="max-w-4xl mx-auto text-center mb-16">
+        <div className="max-w-4xl mx-auto text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight mb-6">
             {title}
           </h2>

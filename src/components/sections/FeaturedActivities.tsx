@@ -6,37 +6,33 @@ import Link from 'next/link'
 export function ProgramsOverview({ data }: { data?: any[] }) {
   const programs = data && data.length > 0 ? data : [
     {
-      title: '10-Day Workshop (Ages 8–16)',
-      tag: 'Thinking Reset Workshop',
-      desc: 'Ten days. Ten different themes. Children build, explore, and think — while we observe. The entry point where every FunSmartism journey begins.',
+      title: '10-Day Thinking Reset Workshop (Ages 8–16)',
+      tag: 'THE ENTRY POINT',
+      desc: 'An intensive introductory workshop designed to shift children away from passive learning. We introduce inquiry-based methods, emphasizing "why" and "how".',
       bullets: [
-        'Daily thinking challenges & real builds',
-        'No step-by-step instructions first',
-        'Observations across 10 STEM themes',
-        'Detailed parent note on thinking habits',
+        'Session observations across 10 themes',
+        'Parent note on challenge approach',
+        'First look at approaching the unknown',
       ],
       cta: 'Book Workshop',
       variant: 'surface'
     },
     {
-      title: 'Year-long Program (Ages 8–16)',
-      tag: 'RoboSTEM Thinking Lab — Year-Long',
-      desc: 'Deep projects and monthly thinking challenges where thinking habits become visible over time.',
+      title: 'FunSmartism RoboSTEM Thinking Lab — Year-Long (Ages 8–16)',
+      tag: 'YEAR-LONG PROGRAM',
+      desc: 'Our flagship program where students tackle long-term projects, engaging in robotics, physical computing, and complex logic puzzles in a real lab setting.',
       bullets: [
-        'Deep projects across 10 STEM themes',
-        'Monthly thinking observations for parents',
-        'Guidance for home + access to edu events',
+        'Monthly thinking observation + guidance',
         'Priority access to scientist interactions',
+        'Public exhibition of student projects',
       ],
       cta: 'Learn More',
       variant: 'indigo'
     }
   ]
 
-
-
   return (
-    <section className="section-spacing bg-accent-surface relative overflow-hidden">
+    <section className="section-spacing bg-white relative overflow-hidden">
       {/* Decorative Icons */}
       <div className="absolute top-[20%] right-[-2%] text-primary-500/5 animate-float hidden lg:block">
         <Atom size={200} strokeWidth={0.5} />
@@ -44,53 +40,55 @@ export function ProgramsOverview({ data }: { data?: any[] }) {
       <div className="absolute bottom-[10%] left-[-2%] text-accent-teal/5 animate-float-delayed hidden lg:block">
         <Dna size={180} strokeWidth={0.5} />
       </div>
-      <div className="absolute top-[5%] left-[10%] text-primary-500/5 animate-float-slow hidden lg:block">
-        <Microscope size={120} strokeWidth={0.5} />
-      </div>
 
       <div className="container-fluid relative z-10">
-        <div className="max-w-4xl mx-auto text-center mb-16 md:mb-24">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 mb-8 leading-tight">
-            Designed for different <br /> stages of discovery.
+        <div className="max-w-4xl mx-auto text-center mb-12 md:mb-16">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 mb-6 leading-tight">
+            Two programs. One philosophy.
           </h2>
+          <p className="text-lg text-neutral-500 max-w-2xl mx-auto">
+            Designed for deep engagement rather than surface-level achievement.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {programs.map((prog) => (
-            <Card 
+            <div 
               key={prog.title} 
-              className={`p-10 md:p-16 border-none shadow-base flex flex-col justify-between transition-transform duration-500 hover:-translate-y-2 ${
-                prog.variant === 'indigo' ? 'bg-primary-500 text-white' : 'bg-white text-primary-500'
+              className={`p-10 md:p-14 rounded-3xl flex flex-col justify-between transition-all duration-500 hover:-translate-y-2 shadow-lg ${
+                prog.variant === 'indigo' ? 'bg-[#1E2A44] text-white' : 'bg-[#F8F9FB] text-[#1E2A44]'
               }`}
             >
               <div>
-                <div className={`text-mono text-[10px] mb-8 uppercase tracking-widest ${prog.variant === 'indigo' ? 'text-accent-teal' : 'text-accent-teal'}`}>
-                  {prog.tag} {prog.ageRange && `• ${prog.ageRange}`}
+                <div className={`text-mono text-[11px] mb-8 uppercase tracking-[0.2em] font-bold ${prog.variant === 'indigo' ? 'text-accent-teal' : 'text-accent-teal'}`}>
+                  {prog.tag}
                 </div>
-                <h3 className="text-3xl md:text-4xl font-serif font-bold mb-8 leading-tight line-clamp-2">{prog.title}</h3>
-                <p className={`mb-12 leading-relaxed line-clamp-3 ${prog.variant === 'indigo' ? 'text-primary-100' : 'text-neutral-500'}`}>
-                  {prog.description || prog.desc}
+                <h3 className={`text-2xl md:text-3xl font-serif font-bold mb-8 leading-tight ${prog.variant === 'indigo' ? 'text-white' : 'text-[#1E2A44]'}`}>
+                  {prog.title}
+                </h3>
+                <p className={`mb-10 leading-relaxed text-base ${prog.variant === 'indigo' ? 'text-white/70' : 'text-neutral-500'}`}>
+                  {prog.desc}
                 </p>
 
-
-                <ul className="space-y-6 mb-16">
-                  {(prog.features || prog.bullets)?.map((b: string) => (
+                <ul className="space-y-4 mb-12">
+                  {prog.bullets?.map((b: string) => (
                     <li key={b} className="flex gap-4 items-start">
-                       <Check size={18} className={prog.variant === 'indigo' ? 'text-accent-teal' : 'text-accent-teal'} />
-                       <span className="text-sm font-medium">{b}</span>
+                       <Check size={18} className="text-accent-teal mt-0.5" />
+                       <span className={`text-sm font-medium ${prog.variant === 'indigo' ? 'text-white/80' : 'text-primary-500'}`}>{b}</span>
                     </li>
                   ))}
                 </ul>
-
               </div>
 
-              <Button 
-                variant={prog.variant === 'indigo' ? 'primary' : 'secondary'} 
-                className={prog.variant === 'indigo' ? 'bg-accent-teal' : ''}
-              >
-                {prog.cta}
-              </Button>
-            </Card>
+              <div className="mt-auto">
+                <Button 
+                  variant={prog.variant === 'indigo' ? 'primary' : 'secondary'} 
+                  className={`w-full sm:w-auto px-8 ${prog.variant === 'indigo' ? 'bg-accent-teal hover:bg-accent-teal/90 border-none' : ''}`}
+                >
+                  {prog.cta}
+                </Button>
+              </div>
+            </div>
           ))}
         </div>
       </div>

@@ -25,7 +25,7 @@ export function TheProblem() {
       <div className="absolute -top-32 right-0 w-96 h-96 bg-[#2FB5A3]/10 rounded-full blur-3xl z-0" />
 
       <div className="container-fluid relative z-10">
-        <div className="max-w-4xl mx-auto text-center mb-16">
+        <div className="max-w-4xl mx-auto text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-6 leading-tight">
             Children follow instructions but don’t think independently.
           </h2>

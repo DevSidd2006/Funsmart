@@ -5,34 +5,22 @@ import { ChevronLeft, ChevronRight, Quote } from 'lucide-react'
 
 const defaultTestimonials = [
   {
-    quote: "FunSmartism changed how I view my son's 'errors'. I now see them as starting points for new logic.",
-    author: "Priya S.",
-    role: "Parent of 10-year-old",
-    initial: "PS",
+    quote: "I came expecting a progress report like school. What I got was a conversation about how my daughter spends 10 minutes examining something before she ever tries to use it. That's not something any school has ever told me.",
+    author: "Priya M.",
+    role: "Parent · 11-year-old · Thinking Reset Workshop · Pune",
+    initial: "PM",
   },
   {
-    quote: "The insight report was a revelation. It decoded behaviors we've seen at home but didn't know how to channel.",
-    author: "Rahul M.",
-    role: "Parent of 12-year-old",
-    initial: "RM",
+    quote: "My son has been 'easily distracted' according to every teacher he's had. The team showed me he isn't distracted — he loses interest when the challenge isn't deep enough. That reframe changed everything.",
+    author: "Arvind M.",
+    role: "Parent · 13-year-old · Thinking Lab Year-Long · Pune",
+    initial: "AM",
   },
   {
-    quote: "My daughter doesn't just build robots; she analyzes why they fail with a calm I've never seen before.",
-    author: "Ananya K.",
-    role: "Parent of 8-year-old",
-    initial: "AK",
-  },
-  {
-    quote: "For the first time someone explained my child's thinking style to me — not his marks. That alone was worth it.",
-    author: "Deepak T.",
-    role: "Parent of 11-year-old",
-    initial: "DT",
-  },
-  {
-    quote: "The 10-day workshop gave us more insight into how our son approaches problems than 3 years of school reports.",
-    author: "Meera V.",
-    role: "Parent of 9-year-old",
-    initial: "MV",
+    quote: "She built a working model on Day 4 and then quietly started dismantling it to see if she could build it differently. Nobody asked her to. That moment told me more than three years of school report cards.",
+    author: "Sunita R.",
+    role: "Parent · 10-year-old · Thinking Reset Workshop · Pune",
+    initial: "SR",
   },
 ]
 
@@ -59,8 +47,11 @@ export function TestimonialsSlider({ data }: { data?: any[] }) {
           {/* Header */}
           <div className="text-center mb-14">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-white leading-tight">
-              Trusted by thinking parents.
+              Unexpected Discoveries through handling unfamiliar challenges...
             </h2>
+            <p className="text-white/60 mt-4 text-lg">
+              parents observing real change in their children.
+            </p>
           </div>
 
           {/* Card */}

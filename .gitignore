@@ -15,3 +15,5 @@ dist/
 .turbo/
 .vercel
 coverage/
+graphify-out/
+revised_copy/

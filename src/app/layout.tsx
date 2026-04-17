@@ -25,18 +25,18 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fursmartism.vercel.
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: '🧠 FunSmartism Intelligence Center | The Thinking Lab',
+    default: 'FunSmartism Intelligence Center | Scientist-Inspired Thinking for Children Aged 8–16',
     template: '%s | FunSmartism',
   },
   description:
-    "We don't teach. We observe. A premium thinking lab where children aged 8-14 explore unfamiliar problems and parents discover how they think.",
+    'Inspired by how scientists solve problems, our RoboSTEM activities help parents understand how their child thinks, retries, and solves challenges.',
   keywords: [
     'thinking lab',
     'child observation',
-    'cognitive habits',
-    'premium education',
-    'STEM',
-    'robotics',
+    'scientist-inspired thinking',
+    'future-ready skills',
+    'RoboSTEM',
+    'robotics for kids',
     'Pune',
   ],
   authors: [{ name: 'FunSmartism' }],
