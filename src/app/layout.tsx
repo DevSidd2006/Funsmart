@@ -81,12 +81,17 @@ export const metadata: Metadata = {
 }
 
 import { NavbarWrapper } from '@/components/ui/NavbarWrapper'
+import { draftMode } from 'next/headers'
+import { VisualEditing } from 'next-sanity/visual-editing'
+import { SanityLive } from '@/sanity/lib/live'
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const { isEnabled: isDraftMode } = await draftMode()
+
   return (
     <html
       lang="en"
@@ -101,6 +106,17 @@ export default function RootLayout({
         <main className="min-h-screen">
           {children}
         </main>
+
+        {isDraftMode && (
+          <a 
+            href="/api/disable-draft" 
+            className="fixed bottom-4 right-4 bg-primary-500 text-white px-4 py-2 rounded-full text-xs font-bold shadow-xl hover:bg-primary-600 transition-colors z-[9999]"
+          >
+            Exit Preview Mode
+          </a>
+        )}
+        <VisualEditing />
+        <SanityLive />
       </body>
     </html>
   )

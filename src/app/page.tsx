@@ -1,68 +1,48 @@
 import { Hero } from '../components/sections/Hero'
-import { FeatureStrip } from '../components/sections/FeatureStrip'
-import { StatsRow } from '../components/sections/StatsRow'
-import { TheProblem } from '../components/sections/TheProblem'
 import { WhatMakesDifferent } from '../components/sections/Comparison'
 import { HowItWorks } from '../components/sections/HowItWorks'
-import { ProgramsSlider } from '../components/sections/ProgramsSlider'
-import { ProgramsOverview } from '../components/sections/FeaturedActivities'
-import { RealMoments } from '../components/sections/RealMoments'
+import { MidPageCTA } from '../components/sections/MidPageCTA'
+import { EduEvents } from '../components/sections/EduEvents'
 import { TestimonialsSlider } from '../components/sections/TestimonialsSlider'
-import { LatestInsights } from '../components/sections/LatestInsights'
 import { FinalCTA } from '../components/sections/FinalCTA'
 import { Footer } from '../components/sections/Footer'
 
-import { client } from '../sanity/lib/client'
-import { homePageQuery, settingsQuery, testimonialsQuery, programsQuery, galleryQuery } from '../sanity/lib/queries'
-
+import { sanityFetch } from '../sanity/lib/live'
+import { homePageQuery, settingsQuery, testimonialsQuery } from '../sanity/lib/queries'
 
 export default async function HomePage() {
-  // Fetch data with caching disabled for testing
-  const [homeData, settings, testimonials, programs, gallery] = await Promise.all([
-    client.fetch(homePageQuery, {}, { cache: 'no-store' }),
-    client.fetch(settingsQuery, {}, { cache: 'no-store' }),
-    client.fetch(testimonialsQuery, {}, { cache: 'no-store' }),
-    client.fetch(programsQuery, {}, { cache: 'no-store' }),
-    client.fetch(galleryQuery, {}, { cache: 'no-store' }),
+  const [
+    { data: homeData },
+    { data: settings },
+    { data: testimonials }
+  ] = await Promise.all([
+    sanityFetch({ query: homePageQuery }),
+    sanityFetch({ query: settingsQuery }),
+    sanityFetch({ query: testimonialsQuery })
   ])
 
   return (
     <main className="w-full">
-      {/* Hero with two CTAs */}
+      {/* Section 01 — HERO */}
       <Hero data={homeData?.hero} />
 
-      {/* Feature strip: Robotics · STEM Workshops · Edu Tours */}
-      <FeatureStrip />
+      {/* Section 02 — WHAT MAKES THIS DIFFERENT */}
+      <WhatMakesDifferent data={homeData?.different} />
 
-      {/* Quick stats */}
-      <StatsRow />
+      {/* Section 03 — YOUR CHILD'S LEARNING JOURNEY */}
+      <HowItWorks data={homeData?.journey} />
 
-      {/* The Problem — new section */}
-      <TheProblem />
+      {/* Section 04 — MID-PAGE CTA */}
+      <MidPageCTA data={homeData?.midPageCTA} />
 
-      {/* How It Works — step cards */}
-      <HowItWorks data={homeData?.methodology} />
+      {/* Section 05 — EDU EVENTS */}
+      <EduEvents data={homeData?.eduEvents} />
 
-      {/* What Makes This Different — cards layout (replaces comparison table) */}
-      <WhatMakesDifferent data={homeData?.comparison} />
-
-      {/* Programs Themes Slider */}
-      <ProgramsSlider />
-
-      {/* Typical STEM Programs — program cards */}
-      <ProgramsOverview data={programs} />
-
-      {/* Edu Events Section */}
-      <LatestInsights />
-
-      {/* Real Session Moments gallery/slider */}
-      <RealMoments data={gallery} />
-
-      {/* Testimonials Slider */}
+      {/* Section 06 — PARENT VOICES */}
       <TestimonialsSlider data={testimonials} />
 
-      {/* Closing CTA: Schedule Visit + Join Community */}
-      <FinalCTA />
+      {/* Section 07 — CLOSING CTA */}
+      <FinalCTA data={homeData?.closingCTA} />
 
       <Footer data={settings} />
     </main>

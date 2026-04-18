@@ -1,12 +1,13 @@
 import { Metadata } from 'next'
 import { Button } from '@/components/ui/Button'
 import { Footer } from '@/components/sections/Footer'
+import { CoreBeliefs } from '@/components/sections/CoreBeliefs'
 import { FounderJourney } from '@/components/sections/FounderJourney'
 import { OurTeam } from '@/components/sections/OurTeam'
 import { RealMoments } from '@/components/sections/RealMoments'
 import { RealSessionMoments } from '@/components/sections/RealSessionMoments'
 import { JoinCommunity } from '@/components/ui/JoinCommunity'
-import { client } from '@/sanity/lib/client'
+import { sanityFetch } from '@/sanity/lib/live'
 import { aboutPageQuery, settingsQuery } from '@/sanity/lib/queries'
 import { CheckCircle, Heart, Users } from 'lucide-react'
 import Link from 'next/link'
@@ -62,9 +63,12 @@ const sessionMoments = [
 ]
 
 export default async function AboutPage() {
-  const [data, settings] = await Promise.all([
-    client.fetch(aboutPageQuery, {}, { cache: 'no-store' }),
-    client.fetch(settingsQuery, {}, { cache: 'no-store' })
+  const [
+    { data },
+    { data: settings }
+  ] = await Promise.all([
+    sanityFetch({ query: aboutPageQuery }),
+    sanityFetch({ query: settingsQuery })
   ])
   
   const headline = data?.hero?.headline || (
@@ -97,37 +101,8 @@ export default async function AboutPage() {
         </div>
       </section>
 
-      {/* 3 Core Beliefs — Card Layout */}
-      <section className="section-spacing">
-        <div className="container-fluid">
-          <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
-              3 Core Beliefs
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {beliefs.map((belief: any, i: number) => {
-              const Icon = belief.icon || CheckCircle
-              return (
-                <div
-                  key={i}
-                  className="group bg-white border border-neutral-100 rounded-xl p-10 shadow-sm hover:shadow-lg hover:-translate-y-1 hover:border-accent-teal/30 transition-all duration-400"
-                >
-                  <div className="w-12 h-12 rounded-lg bg-accent-teal/10 flex items-center justify-center mb-6 group-hover:bg-accent-teal transition-colors duration-300">
-                    <Icon size={22} className="text-accent-teal group-hover:text-white transition-colors duration-300" />
-                  </div>
-                  <h3 className="text-xl font-serif font-bold text-primary-500 mb-4 leading-snug">
-                    {belief.title}
-                  </h3>
-                  <p className="text-neutral-500 leading-relaxed text-sm">
-                    {belief.description || belief.desc}
-                  </p>
-                </div>
-              )
-            })}
-          </div>
-        </div>
-      </section>
+      {/* 3 Core Beliefs */}
+      <CoreBeliefs data={beliefs} />
 
       <FounderJourney />
       <RealSessionMoments />

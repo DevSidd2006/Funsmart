@@ -12,11 +12,13 @@
     "format": "prettier --write \"src/**/*.{ts,tsx,md}\""
   },
   "dependencies": {
+    "@sanity/preview-url-secret": "^4.0.5",
     "@sanity/vision": "^5.21.0",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.38.0",
     "lucide-react": "^0.368.0",
     "next": "^16.2.4",
-    "next-sanity": "^12.2.2",
+    "next-sanity": "^12.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sanity": "^5.14.1",

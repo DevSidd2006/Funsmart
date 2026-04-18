@@ -1,8 +1,12 @@
-import { ZoomIn } from 'lucide-react'
-import { galleryItems } from '@/data/gallery'
+import { sanityFetch } from '@/sanity/lib/live'
+import { galleryQuery } from '@/sanity/lib/queries'
 import { JoinCommunity } from '@/components/ui/JoinCommunity'
+import { urlFor } from '@/sanity/lib/image'
 
-export default function GalleryPage() {
+export default async function GalleryPage() {
+  const { data: items } = await sanityFetch({ query: galleryQuery })
+  const displayItems = items?.length > 0 ? items : []
+
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
       {/* Header */}
@@ -28,11 +32,11 @@ export default function GalleryPage() {
       <section>
         <div className="container-fluid">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
-             {galleryItems.map((item) => (
-               <div key={item.id} className={`relative group overflow-hidden rounded-lg shadow-sm border border-neutral-100 ${item.span}`}>
+             {displayItems.map((item: any) => (
+               <div key={item._id} className={`relative group overflow-hidden rounded-lg shadow-sm border border-neutral-100 ${item.span || 'md:col-span-4'}`}>
                   {item.image ? (
                     <img 
-                       src={item.image} 
+                       src={urlFor(item.image).url()} 
                        alt={item.title} 
                        className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[1.5s] ease-in-out" 
                     />
@@ -48,7 +52,6 @@ export default function GalleryPage() {
                     <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
                       <div className="flex justify-between items-start mb-4">
                          <span className="text-mono text-[#2FB5A3] text-[10px] font-bold tracking-widest uppercase">{item.tag}</span>
-                         <ZoomIn className="text-white/50" size={20} />
                       </div>
                       <h3 className="text-2xl font-serif font-bold text-white mb-3">{item.title}</h3>
                       <p className="text-white/80 text-sm leading-relaxed max-w-sm">

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Button } from '../ui/Button'
-import { Beaker, Atom, Settings, Lightbulb, Cpu, Microscope, Rocket, Binary, Check } from 'lucide-react'
+import { Beaker, Atom, Settings, Lightbulb, Rocket, Binary, Check } from 'lucide-react'
 import { JoinCommunity } from '../ui/JoinCommunity'
 import { urlForImage } from '../../sanity/lib/image'
 import Link from 'next/link'
@@ -9,12 +9,13 @@ export function Hero({ data }: { data?: any }) {
   const headline = data?.headline || "Where children build scientist-inspired future-ready thinking."
   const subheadline = data?.subheadline || "And parents learn when to step in—and when to step back."
   const subline = data?.subline || "Hands-on RoboSTEM challenges and scientist interaction sessions help children grow confidence beyond marks, while our live observations help parents support thinking without over-helping."
-  const microCopy = data?.microCopy || "Not a tuition class. Not a coaching. Scientist-inspired problem-solving with real parent guidance."
+  const microCopyLine1 = "For children aged 8–16 in Pune."
+  const microCopyLine2 = "Not a tuition class. Not a coaching. Scientist-inspired problem-solving with real parent guidance."
   const ctaText = data?.ctaText || "Schedule a visit →"
 
   const heroImage = data?.image 
-    ? urlForImage(data.image).width(800).height(1000).url() 
-    : "/images/hero-thinking.png"
+    ? urlForImage(data.image).width(1200).height(1500).url() 
+    : "/images/hero-scientist.png"
 
   return (
     <section id="home" className="relative w-full min-h-screen flex items-center bg-[#1E2A44] overflow-hidden pt-24 pb-16 text-white">
@@ -33,32 +34,32 @@ export function Hero({ data }: { data?: any }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           {/* Left: Text Content */}
           <div className="lg:col-span-7">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-accent-teal text-[11px] font-bold uppercase tracking-widest mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-accent-teal text-[11px] font-bold uppercase tracking-[0.2em] mb-8">
               <span className="w-1.5 h-1.5 rounded-full bg-accent-teal animate-pulse" />
-              For children aged 8–16 in Pune
+              {microCopyLine1}
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-5xl font-serif font-bold text-white mb-3 leading-[1.1] text-balanced">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-[1.05] text-balanced">
                {headline}
-               <span className="block text-3xl md:text-4xl lg:text-4xl text-accent-teal mt-2 opacity-90 font-medium">
+               <span className="block text-3xl md:text-4xl lg:text-5xl text-accent-teal mt-4 opacity-95 font-medium italic">
                  {subheadline}
                </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-[#B7E3DD] mb-6 max-w-2xl leading-relaxed font-light">
+            <p className="text-lg md:text-2xl text-[#B7E3DD] mb-8 max-w-2xl leading-relaxed font-light opacity-90">
               {subline}
             </p>
             
-            <p className="text-sm text-white/80 mb-10 max-w-xl italic border-l-2 border-accent-teal/30 pl-4 py-1">
-              {microCopy}
+            <p className="text-sm text-white/60 mb-12 max-w-xl italic border-l-2 border-accent-teal/30 pl-6 py-2">
+              {microCopyLine2}
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-5 items-center mb-16">
+            <div className="flex flex-col sm:flex-row gap-6 items-center mb-16">
               <Link href="/schedule-visit" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="px-10 py-5 text-base shadow-2xl shadow-accent-teal/20 bg-accent-teal hover:bg-[#28A392] text-white border-none w-full"
+                  className="px-12 py-6 text-lg shadow-2xl shadow-accent-teal/20 bg-accent-teal hover:bg-[#28A392] text-white border-none w-full rounded-full"
                 >
                   {ctaText}
                 </Button>
@@ -67,66 +68,66 @@ export function Hero({ data }: { data?: any }) {
             </div>
 
             {/* Trust Strip */}
-            <div className="border-t border-white/10 pt-10">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+            <div className="border-t border-white/10 pt-12">
+              <div className="flex flex-wrap items-center gap-y-4 gap-x-8 mb-10">
                 {[
                   'Hands-on Builds',
-                  'Scientist Sessions',
+                  'Scientist Interaction Sessions',
                   'Parent Guidance',
                   'Real-World Thinking'
                 ].map((item) => (
-                  <div key={item} className="flex flex-col gap-2">
-                    <Check className="text-accent-teal" size={18} />
-                    <span className="text-[12px] font-bold text-white/80 uppercase tracking-wider leading-tight">
+                  <div key={item} className="flex items-center gap-2">
+                    <Check className="text-accent-teal" size={16} />
+                    <span className="text-[11px] font-bold text-white/70 uppercase tracking-widest leading-tight">
                       {item}
                     </span>
                   </div>
                 ))}
               </div>
-              <div className="flex items-center gap-3 text-xs text-white/60 font-mono bg-white/5 w-fit px-4 py-2 rounded-lg border border-white/5">
-                <span className="w-2 h-2 rounded-full bg-accent-gold" />
+              <div className="flex items-center gap-4 text-xs text-white/50 font-mono bg-white/5 w-fit px-6 py-3 rounded-full border border-white/5 shadow-inner">
+                <span className="w-2 h-2 rounded-full bg-accent-gold shadow-[0_0_8px_rgba(255,191,0,0.5)]" />
                 Free Parent Orientation · 30–45 minutes · 📍 Bibwewadi, Pune
               </div>
             </div>
           </div>
 
           {/* Right: Asymmetrical Image Container */}
-          <div className="lg:col-span-5 relative hidden md:block">
-            <div className="relative aspect-[4/5] w-full max-w-lg mx-auto">
+          <div className="lg:col-span-5 relative hidden lg:block">
+            <div className="relative aspect-[4/5] w-full max-w-lg ml-auto">
               
               {/* Glassmorphic Floating Icons */}
-              <div className="absolute -top-10 -left-10 z-20 backdrop-blur-md bg-white/10 border border-white/20 p-4 rounded-2xl shadow-2xl animate-float text-accent-teal">
-                <Beaker size={28} />
+              <div className="absolute -top-12 -left-12 z-20 backdrop-blur-xl bg-white/10 border border-white/20 p-5 rounded-3xl shadow-huge animate-float text-accent-teal">
+                <Beaker size={32} />
               </div>
               
-              <div className="absolute top-[20%] -right-12 z-20 backdrop-blur-md bg-[#1E2A44]/60 border border-white/10 p-4 rounded-2xl shadow-2xl animate-float-delayed text-white">
-                <Atom size={28} />
+              <div className="absolute top-[20%] -right-16 z-20 backdrop-blur-xl bg-[#1E2A44]/60 border border-white/10 p-5 rounded-3xl shadow-huge animate-float-delayed text-white">
+                <Atom size={32} />
               </div>
 
-              <div className="absolute -bottom-6 -left-12 z-20 backdrop-blur-md bg-white/10 border border-white/20 p-4 rounded-2xl shadow-2xl animate-float-slow text-white">
-                <Settings size={28} className="animate-spin-slow" />
+              <div className="absolute -bottom-10 -left-16 z-20 backdrop-blur-xl bg-white/10 border border-white/20 p-5 rounded-3xl shadow-huge animate-float-slow text-white">
+                <Settings size={32} className="animate-spin-slow" />
               </div>
 
-              <div className="absolute bottom-[10%] -right-10 z-20 backdrop-blur-md bg-accent-teal/60 border border-white/20 p-4 rounded-2xl shadow-2xl animate-float text-white">
-                <Lightbulb size={28} />
+              <div className="absolute bottom-[10%] -right-12 z-20 backdrop-blur-xl bg-accent-teal/60 border border-white/20 p-5 rounded-3xl shadow-huge animate-float text-white">
+                <Lightbulb size={32} />
               </div>
 
               {/* Main Image with softened frame */}
-              <div className="absolute inset-0 z-10 rounded-[40px] overflow-hidden shadow-huge bg-[#0F172A] border border-white/10 transform lg:translate-x-4 lg:-translate-y-4 transition-transform duration-1000 hover:translate-x-0 hover:-translate-y-0">
+              <div className="absolute inset-0 z-10 rounded-[60px] overflow-hidden shadow-huge bg-[#0F172A] border border-white/10 transform translate-x-4 -translate-y-4 transition-transform duration-1000 hover:translate-x-0 hover:-translate-y-0 group">
                 <Image 
                   src={heroImage} 
-                  alt={data?.headline || "Child discovery"} 
+                  alt={headline} 
                   fill
                   priority
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="w-full h-full object-cover object-center scale-105"
+                  sizes="50vw"
+                  className="w-full h-full object-cover object-center scale-105 transition-transform duration-2000 group-hover:scale-100"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1E2A44]/40 to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1E2A44]/60 via-transparent to-transparent pointer-events-none" />
               </div>
 
               {/* Decorative Accent Ring */}
-              <div className="absolute -inset-8 border border-white/5 rounded-[50px] z-0 pointer-events-none" />
-              <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-accent-teal/10 rounded-full blur-[100px] z-0" />
+              <div className="absolute -inset-12 border border-white/5 rounded-[80px] z-0 pointer-events-none" />
+              <div className="absolute -bottom-32 -right-32 w-80 h-80 bg-accent-teal/20 rounded-full blur-[120px] z-0" />
             </div>
           </div>
         </div>

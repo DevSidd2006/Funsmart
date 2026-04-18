@@ -21,40 +21,33 @@ export default defineType({
       description: 'Small text above title (e.g. "AGE 8-16")',
     }),
     defineField({
-      name: 'duration',
-      title: 'Duration',
+      name: 'tagDetail',
+      title: 'Tag Detail',
       type: 'string',
-      description: 'e.g., 10 Days, Every Weekend',
+      description: 'e.g. "Entry program · 10 consecutive days"',
     }),
     defineField({
-      name: 'ageRange',
-      title: 'Recommended Age',
+      name: 'subline',
+      title: 'Short Subline',
       type: 'string',
-    }),
-    defineField({
-      name: 'price',
-      title: 'Price Info',
-      type: 'string',
-      description: 'Optional price or "Contact for details"',
     }),
     defineField({
       name: 'description',
-      title: 'Full Description',
+      title: 'Description',
       type: 'text',
-      description: 'Detailed explanation of what happens in the program.',
+      rows: 3,
     }),
     defineField({
-      name: 'features',
-      title: 'Key Highlights',
+      name: 'childrenDo',
+      title: 'Children Do (List)',
       type: 'array',
-      description: 'Bullet points of what kids get.',
       of: [{ type: 'string' }],
     }),
     defineField({
-      name: 'cta',
-      title: 'Call to Action Button',
-      type: 'string',
-      initialValue: 'Schedule a Visit',
+      name: 'parentsReceive',
+      title: 'Parents Receive (List)',
+      type: 'array',
+      of: [{ type: 'string' }],
     }),
     defineField({
       name: 'variant',
@@ -62,11 +55,25 @@ export default defineType({
       type: 'string',
       options: {
         list: [
-          { title: 'Normal (White)', value: 'surface' },
-          { title: 'Featured (Dark)', value: 'indigo' },
+          { title: 'Teal (Workshop)', value: 'teal' },
+          { title: 'Indigo (Year-Long)', value: 'indigo' },
         ],
       },
-      initialValue: 'surface',
+      initialValue: 'teal',
+    }),
+    defineField({
+      name: 'themes',
+      title: 'Monthly/Daily Themes',
+      type: 'array',
+      of: [
+        {
+          type: 'object',
+          fields: [
+            { name: 'theme', title: 'Theme Name', type: 'string' },
+            { name: 'desc', title: 'What the child encounters', type: 'text', rows: 2 },
+          ]
+        }
+      ]
     }),
   ],
 })

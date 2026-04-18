@@ -1,6 +1,7 @@
-import { Eye, Sparkles, Handshake } from 'lucide-react'
+import { Eye, Sparkles, Handshake, LucideIcon } from 'lucide-react'
+import * as LucideIcons from 'lucide-react'
 
-const beliefs = [
+const defaultBeliefs = [
   {
     icon: Eye,
     title: 'Curiosity before correctness',
@@ -18,33 +19,31 @@ const beliefs = [
   },
 ]
 
-export function CoreBeliefs() {
+export function CoreBeliefs({ data }: { data?: any[] }) {
+  const beliefs = data && data.length > 0
+    ? data.map((b: any) => ({
+        ...b,
+        icon: (LucideIcons as any)[b.icon] || Sparkles
+      }))
+    : defaultBeliefs
+
   return (
     <section className="section-spacing bg-white">
       <div className="container-fluid">
-        <div className="max-w-4xl mx-auto text-center mb-14">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
-            Three core beliefs that shape every session.
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {beliefs.map((item) => {
-            const Icon = item.icon
-            return (
-              <div key={item.title} className="rounded-3xl border border-neutral-200 p-8 shadow-sm hover:shadow-lg transition-all duration-300 bg-accent-surface">
-                <div className="w-14 h-14 rounded-3xl bg-accent-teal/10 text-accent-teal flex items-center justify-center mb-6">
-                  <Icon size={24} />
-                </div>
-                <h3 className="text-xl font-serif font-bold text-primary-500 mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-neutral-600 leading-relaxed">
-                  {item.desc}
-                </p>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          {beliefs.map((belief: any, i: number) => (
+            <div key={i} className="group">
+              <div className="w-16 h-16 rounded-2xl bg-accent-teal/10 flex items-center justify-center text-accent-teal mb-8 group-hover:bg-accent-teal group-hover:text-white transition-all duration-500">
+                <belief.icon size={32} />
               </div>
-            )
-          })}
+              <h3 className="text-2xl font-serif font-bold text-primary-500 mb-4">
+                {belief.title}
+              </h3>
+              <p className="text-neutral-500 leading-relaxed">
+                {belief.description || belief.desc}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

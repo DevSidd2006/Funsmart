@@ -29,6 +29,7 @@ export default {
           fields: [
             { name: 'title', title: 'Belief Title', type: 'string' },
             { name: 'description', title: 'Belief Content', type: 'text', rows: 3 },
+            { name: 'icon', title: 'Icon Name (Lucide)', type: 'string', description: 'e.g., Eye, Sparkles, Handshake' },
           ]
         }
       ]

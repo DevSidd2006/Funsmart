@@ -3,9 +3,10 @@ import { Button } from '@/components/ui/Button'
 import { Footer } from '@/components/sections/Footer'
 import { JoinCommunity } from '@/components/ui/JoinCommunity'
 import { Accordion } from '@/components/ui/Accordion'
-import { client } from '@/sanity/lib/client'
-import { settingsQuery } from '@/sanity/lib/queries'
+import { sanityFetch } from '@/sanity/lib/live'
+import { settingsQuery, programsQuery } from '@/sanity/lib/queries'
 import { Check, Calendar, ArrowRight, Star, Clock, Laptop, Calculator, Puzzle, Settings, Plane, Rocket, PenTool, Telescope, Cpu, Bot, Users, Presentation } from 'lucide-react'
+import * as LucideIcons from 'lucide-react'
 import Link from 'next/link'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fursmartism.vercel.app'
@@ -69,7 +70,13 @@ const faqs = [
 ]
 
 export default async function ProgramsPage() {
-  const settings = await client.fetch(settingsQuery, {}, { cache: 'no-store' })
+  const [
+    { data: settings },
+    { data: programs }
+  ] = await Promise.all([
+    sanityFetch({ query: settingsQuery }),
+    sanityFetch({ query: programsQuery }),
+  ])
 
   return (
     <div className="bg-white">
@@ -78,7 +85,7 @@ export default async function ProgramsPage() {
         <div className="absolute inset-0 lab-grid opacity-[0.05]" />
         <div className="container-fluid relative z-10 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">
               Two programs. <br />
               <span className="text-accent-teal italic font-light">One way of thinking about children.</span>
             </h1>
@@ -90,6 +97,8 @@ export default async function ProgramsPage() {
               <span className="w-1 h-1 rounded-full bg-[#2FB5A3]" />
               <span>No grades</span>
               <span className="w-1 h-1 rounded-full bg-[#2FB5A3]" />
+              <span>No comparison between children</span>
+              <span className="w-1 h-1 rounded-full bg-[#2FB5A3]" />
               <span>Scientist-Style Thinking</span>
             </div>
           </div>
@@ -97,25 +106,26 @@ export default async function ProgramsPage() {
       </section>
 
       {/* SECTION 02 — PROGRAM NAVIGATOR */}
-      <section className="py-16 bg-neutral-50 top-[74px] z-20 border-b border-neutral-100 shadow-sm hidden md:block">
+      <section className="py-20 bg-neutral-50 border-b border-neutral-100">
         <div className="container-fluid">
-          <div className="grid grid-cols-2 gap-10 max-w-5xl mx-auto">
-            <Link href="#workshop" className="group p-8 rounded-[2rem] bg-white border-2 border-accent-teal/20 hover:border-accent-teal hover:bg-accent-teal transition-all duration-500 flex items-center justify-between shadow-sm hover:shadow-2xl hover:-translate-y-1">
-              <div>
-                <div className="text-[10px] font-bold text-accent-teal group-hover:text-white/80 uppercase mb-2 tracking-widest">Entry Level</div>
-                <div className="text-2xl font-serif font-bold text-primary-500 group-hover:text-white transition-colors">10-Day Thinking Reset</div>
-              </div>
-              <div className="w-12 h-12 rounded-full bg-accent-teal/10 group-hover:bg-white/20 flex items-center justify-center text-accent-teal group-hover:text-white transition-all">
-                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            <Link href="#workshop" className="group relative overflow-hidden p-10 rounded-[2.5rem] bg-white border border-neutral-200 hover:border-accent-teal transition-all duration-500 shadow-sm hover:shadow-huge">
+              <div className="absolute top-0 left-0 w-full h-1 bg-accent-teal" />
+              <div className="text-[10px] font-bold text-accent-teal uppercase mb-3 tracking-widest">Best for first-time families</div>
+              <h3 className="text-2xl font-serif font-bold text-primary-500 mb-2">10-Day Thinking Reset Workshop</h3>
+              <p className="text-neutral-500 text-sm mb-6">10 themes. 10 consecutive days. The entry point.</p>
+              <div className="flex items-center gap-2 text-primary-500 font-bold text-xs">
+                Ages 8–16 <span className="text-accent-teal">|</span> ↓ See details
               </div>
             </Link>
-            <Link href="#year-long" className="group p-8 rounded-[2rem] bg-white border-2 border-primary-500/20 hover:border-primary-500 hover:bg-primary-500 transition-all duration-500 flex items-center justify-between shadow-sm hover:shadow-2xl hover:-translate-y-1">
-              <div>
-                <div className="text-[10px] font-bold text-primary-300 group-hover:text-white/80 uppercase mb-2 tracking-widest">Advanced Depth</div>
-                <div className="text-2xl font-serif font-bold text-primary-500 group-hover:text-white transition-colors">Year-Long Thinking Lab</div>
-              </div>
-              <div className="w-12 h-12 rounded-full bg-primary-500/10 group-hover:bg-white/20 flex items-center justify-center text-primary-500 group-hover:text-white transition-all">
-                <ArrowRight className="group-hover:translate-x-1 transition-transform" />
+            
+            <Link href="#year-long" className="group relative overflow-hidden p-10 rounded-[2.5rem] bg-white border border-neutral-200 hover:border-primary-500 transition-all duration-500 shadow-sm hover:shadow-huge">
+              <div className="absolute top-0 left-0 w-full h-1 bg-primary-500" />
+              <div className="text-[10px] font-bold text-primary-400 uppercase mb-3 tracking-widest">Best for deeper growth</div>
+              <h3 className="text-2xl font-serif font-bold text-primary-500 mb-2">RoboSTEM Thinking Lab — Year-Long</h3>
+              <p className="text-neutral-500 text-sm mb-6">One theme per month. Four sessions per month. A full academic year.</p>
+              <div className="flex items-center gap-2 text-primary-500 font-bold text-xs">
+                Ages 8–16 <span className="text-primary-400">|</span> ↓ See details
               </div>
             </Link>
           </div>
@@ -130,9 +140,8 @@ export default async function ProgramsPage() {
               <div className="bg-accent-teal px-10 py-4 flex flex-wrap items-center justify-between text-white text-[11px] font-bold uppercase tracking-widest gap-4">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-                  Entry Program
+                  Entry Program · 10 consecutive days
                 </div>
-                <div>10 Consecutive Days</div>
                 <div>Ages 8–16</div>
               </div>
               <div className="p-10 md:p-16">
@@ -146,17 +155,17 @@ export default async function ProgramsPage() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
                   <div className="space-y-6">
                     <h4 className="flex items-center gap-2 text-accent-teal font-serif font-bold uppercase tracking-widest text-xs">
-                      <Bot size={18} /> Children do
+                      Children do
                     </h4>
                     <ul className="space-y-5">
                       {[
                         'A brand new theme and challenge every day',
                         'Build, make, test, and take most projects home',
-                        'Explore without detailed instructions first',
-                        'Logical puzzles alongside physical projects'
+                        'No detailed instructions — each child finds their own way before asking for help.',
+                        'Logical puzzles and thinking challenges alongside projects'
                       ].map((item) => (
-                        <li key={item} className="flex gap-4 items-start text-primary-500 font-medium">
-                          <Check className="text-accent-teal mt-0.5" size={18} />
+                        <li key={item} className="flex gap-4 items-start text-primary-500 font-medium leading-snug">
+                          <Check className="text-accent-teal mt-0.5 flex-shrink-0" size={18} />
                           {item}
                         </li>
                       ))}
@@ -164,16 +173,15 @@ export default async function ProgramsPage() {
                   </div>
                   <div className="space-y-6">
                     <h4 className="flex items-center gap-2 text-accent-teal font-serif font-bold uppercase tracking-widest text-xs">
-                      <Users size={18} /> Parents receive
+                      Parents receive
                     </h4>
                     <ul className="space-y-5">
                       {[
-                        'Workshop-end parent note on thinking habits',
-                        'First insight into what support helps at home',
-                        'Observations on child\'s approach to unknowns'
+                        'Workshop-end parent note on how your child approached challenges',
+                        'First insight into what support helps at home'
                       ].map((item) => (
-                        <li key={item} className="flex gap-4 items-start text-primary-500 font-medium">
-                          <Check className="text-accent-teal mt-0.5" size={18} />
+                        <li key={item} className="flex gap-4 items-start text-primary-500 font-medium leading-snug">
+                          <Check className="text-accent-teal mt-0.5 flex-shrink-0" size={18} />
                           {item}
                         </li>
                       ))}
@@ -214,10 +222,10 @@ export default async function ProgramsPage() {
               </table>
             </div>
 
-            {/* Mobile Horizon Swipe Cards */}
-            <div className="md:hidden flex gap-4 overflow-x-auto pb-8 mb-20 scrollbar-hide px-4 -mx-4">
+            {/* Mobile Swipe Cards */}
+            <div className="md:hidden flex gap-4 overflow-x-auto pb-8 mb-20 px-4 -mx-4 snap-x">
               {workshopThemes.map((t, i) => (
-                <div key={i} className="flex-shrink-0 w-[280px] bg-white border border-neutral-100 p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500">
+                <div key={i} className="flex-shrink-0 w-[280px] snap-center bg-white border border-neutral-100 p-8 rounded-3xl shadow-lg">
                   <div className={`w-12 h-12 rounded-2xl flex items-center justify-center mb-6 ${t.color}`}>
                     <t.icon size={24} />
                   </div>
@@ -226,8 +234,8 @@ export default async function ProgramsPage() {
                 </div>
               ))}
             </div>
-            <p className="text-center text-xs text-neutral-300 font-mono italic mb-32">
-              Across all 10 days, we observe how your child approaches the unfamiliar—not just what they produce.
+            <p className="text-center text-xs text-neutral-400 font-mono italic mb-32 max-w-3xl mx-auto leading-loose">
+              Across all 10 days, we observe how your child approaches the unfamiliar—not just what they produce. A thinking-habits parent note is shared at the end.
             </p>
           </div>
         </div>
@@ -237,14 +245,12 @@ export default async function ProgramsPage() {
       <section className="section-spacing bg-[#1E2A44] text-white overflow-hidden" id="year-long">
         <div className="container-fluid">
           <div className="max-w-6xl mx-auto">
-            {/* Card */}
             <div className="bg-[#1E2A44] rounded-[40px] border border-white/10 shadow-2xl overflow-hidden mb-24">
               <div className="bg-primary-900 px-10 py-4 flex flex-wrap items-center justify-between text-white text-[11px] font-bold uppercase tracking-widest gap-4">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-accent-teal animate-pulse" />
-                  Long-term Engagement
+                  Year-Long Program · Once a week
                 </div>
-                <div>Once a Week</div>
                 <div>Ages 8–16</div>
               </div>
               <div className="p-10 md:p-16">
@@ -253,7 +259,7 @@ export default async function ProgramsPage() {
                   <span className="text-accent-teal">Thinking Lab — Year-Long</span>
                 </h2>
                 <p className="text-xl text-[#B7E3DD] mb-12 max-w-3xl leading-relaxed font-light">
-                  One theme each month. Four sessions to go deeper. Real projects, monthly thinking challenges, and regular parent discussions.
+                  One theme each month. Four sessions to go deeper. Real projects, monthly thinking challenges, and regular parent discussions on how your child approached real challenges.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-12">
@@ -265,10 +271,10 @@ export default async function ProgramsPage() {
                       {[
                         'Deep long-term projects across evolving challenges',
                         'Monthly thinking challenge alongside the project',
-                        'Most projects go home after public display',
-                        'Priority access to scientist interactions'
+                        'Most projects go home — some displayed at the center',
+                        'Priority access to edu events: scientists, industry experts'
                       ].map((item) => (
-                        <li key={item} className="flex gap-4 items-start text-white/80 font-medium">
+                        <li key={item} className="flex gap-4 items-start text-white/80 font-medium leading-snug">
                           <Check className="text-accent-teal mt-0.5 flex-shrink-0" size={18} />
                           {item}
                         </li>
@@ -281,11 +287,10 @@ export default async function ProgramsPage() {
                     </h4>
                     <ul className="space-y-5">
                       {[
-                        'Monthly parent note on real challenges',
-                        'Guidance on evolving thinking habits',
-                        'Support on when to step in or step back at home'
+                        'Monthly parent note on how your child approached real challenges',
+                        'Guidance on how thinking habits are evolving and when to step in or step back at home.'
                       ].map((item) => (
-                        <li key={item} className="flex gap-4 items-start text-white/80 font-medium">
+                        <li key={item} className="flex gap-4 items-start text-white/80 font-medium leading-snug">
                           <Check className="text-accent-teal mt-0.5 flex-shrink-0" size={18} />
                           {item}
                         </li>
@@ -302,15 +307,15 @@ export default async function ProgramsPage() {
             {/* Stats Block */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-32 max-w-5xl mx-auto">
               {[
-                { label: 'Themes', val: '10', sub: 'One per month' },
-                { label: 'Sessions', val: '4', sub: 'Per month · Once/week' },
-                { label: 'Parent Note', val: '1', sub: 'Discussed Monthly' },
-                { label: 'Scientific Access', val: 'Priority', sub: 'Real Experts' }
+                { label: 'Themes', val: '10', sub: 'one per month' },
+                { label: 'Sessions', val: '4', sub: 'per month · once a week' },
+                { label: 'Parent Note', val: '1', sub: 'Discussed monthly' },
+                { label: 'Scientist', val: 'Interaction', sub: 'Priority access' }
               ].map((s) => (
                 <div key={s.label} className="bg-white/5 border border-white/10 p-8 rounded-3xl text-center flex flex-col items-center">
-                  <div className="text-4xl font-serif font-bold text-white mb-2">{s.val}</div>
+                  <div className="text-3xl font-serif font-bold text-white mb-2">{s.val}</div>
                   <div className="text-accent-teal text-[10px] font-bold uppercase tracking-widest mb-3">{s.label}</div>
-                  <div className="text-[10px] text-white/30 font-mono">{s.sub}</div>
+                  <div className="text-[10px] text-white/30 font-mono italic">{s.sub}</div>
                 </div>
               ))}
             </div>
@@ -318,9 +323,9 @@ export default async function ProgramsPage() {
             {/* Edu Events Grid */}
             <div className="mb-32">
               <div className="max-w-3xl mb-12">
-                <h3 className="text-3xl font-serif font-bold text-white mb-4">Year-long exclusive: Edu events</h3>
-                <p className="text-lg text-[#B7E3DD] font-light">
-                  Students learn scientist-style questioning by interacting with real scientists—not just listening to them. Year-long students don't just attend; they help run them.
+                <h3 className="text-3xl font-serif font-bold text-white mb-6">Year-long exclusive: Edu events</h3>
+                <p className="text-lg text-[#B7E3DD] font-light leading-relaxed">
+                  Children learn scientist-style questioning by interacting with real scientists—not just listening to them. Year-long students get priority access to FunSmartism edu events — and they don't just attend. They help run them — building real responsibility.
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -336,14 +341,15 @@ export default async function ProgramsPage() {
                     </div>
                     <div>
                       <h4 className="text-lg font-serif font-bold text-white mb-4">{grid.title}</h4>
-                      <p className="text-xs text-white/50 leading-relaxed italic">{grid.desc}</p>
+                      <p className="text-[10px] text-white/40 leading-relaxed italic">{grid.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
-              <div className="mt-12 p-8 rounded-3xl bg-accent-teal/5 border border-accent-teal/10 text-center">
-                <p className="text-sm text-accent-teal font-medium tracking-wide">
-                  ALSO: SOME SELECTED PROJECTS ARE EXHIBITED PUBLICLY. PARENTS, SCIENTISTS, AND THE PUBLIC ATTEND THE SAME EVENT.
+              <div className="mt-12 p-10 rounded-3xl bg-white/5 border border-white/10 text-center">
+                <p className="text-sm text-accent-teal font-medium tracking-wide leading-relaxed">
+                  OVER TIME, CHILDREN DON’T JUST BUILD PROJECTS — THEY LEARN TO DISCUSS, QUESTION, AND EXPLAIN THEM WITH EXPERTS. <br />
+                  <span className="text-white/40 text-[10px] mt-4 block">Also: Some selected projects are exhibited publicly. Parents, scientists, and the public attend the same event.</span>
                 </p>
               </div>
             </div>
@@ -359,48 +365,32 @@ export default async function ProgramsPage() {
             <p className="text-neutral-500">Helping you decide between first insight and deeper habit building.</p>
           </div>
 
-          <div className="max-w-5xl mx-auto rounded-3xl overflow-hidden border border-neutral-100 shadow-huge">
-            {/* Desktop View */}
-            <div className="hidden md:block">
-              <table className="w-full text-left">
-                <thead>
-                  <tr className="bg-[#1E2A44] text-white">
-                    <th className="py-6 px-10 text-xs font-bold uppercase tracking-widest">Comparison</th>
-                    <th className="py-6 px-10 text-xs font-bold uppercase tracking-widest text-accent-teal">10-Day Workshop</th>
-                    <th className="py-6 px-10 text-xs font-bold uppercase tracking-widest text-[#B7E3DD]">Year-Long Program</th>
+          <div className="max-w-5xl mx-auto rounded-3xl overflow-hidden border border-neutral-200 shadow-huge">
+            <table className="w-full text-left">
+              <thead>
+                <tr className="bg-[#1E2A44] text-white">
+                  <th className="py-6 px-10 text-xs font-bold uppercase tracking-widest">Comparison</th>
+                  <th className="py-6 px-10 text-xs font-bold uppercase tracking-widest text-accent-teal">10-Day Workshop</th>
+                  <th className="py-6 px-10 text-xs font-bold uppercase tracking-widest">Year-Long Program</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-neutral-100 italic">
+                {comparisonData.map((row, i) => (
+                  <tr key={i} className="hover:bg-neutral-50 transition-all">
+                    <td className="py-6 px-10 text-sm font-bold text-primary-500">{row.feature}</td>
+                    <td className="py-6 px-10 text-sm text-neutral-500">{row.workshop}</td>
+                    <td className="py-6 px-10 text-sm text-primary-500 font-medium">{row.yearLong}</td>
                   </tr>
-                </thead>
-                <tbody className="divide-y divide-neutral-100">
-                  {comparisonData.map((row, i) => (
-                    <tr key={i} className="hover:bg-neutral-50 transition-all">
-                      <td className="py-5 px-10 text-sm font-bold text-primary-500">{row.feature}</td>
-                      <td className="py-5 px-10 text-sm text-neutral-500">{row.workshop}</td>
-                      <td className="py-5 px-10 text-sm text-primary-500 font-medium">{row.yearLong}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            {/* Mobile View */}
-            <div className="md:hidden divide-y divide-neutral-100 italic">
-              {comparisonData.map((row, i) => (
-                <div key={i} className="p-8">
-                  <div className="text-[10px] font-bold text-primary-300 uppercase mb-4 tracking-widest">{row.feature}</div>
-                  <div className="grid grid-cols-2 gap-6">
-                    <div>
-                      <div className="text-[9px] font-bold text-accent-teal uppercase mb-1">Workshop</div>
-                      <div className="text-xs text-neutral-500 font-light">{row.workshop}</div>
-                    </div>
-                    <div>
-                      <div className="text-[9px] font-bold text-[#1E2A44] uppercase mb-1">Year-Long</div>
-                      <div className="text-xs text-primary-500 font-bold">{row.yearLong}</div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+                ))}
+                <tr className="bg-neutral-50 font-bold">
+                  <td className="py-6 px-10 text-sm text-primary-500 uppercase tracking-widest">Best for</td>
+                  <td className="py-6 px-10 text-sm text-accent-teal">First insight</td>
+                  <td className="py-6 px-10 text-sm text-primary-500">Deeper habit-building</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <p className="mt-16 text-center text-neutral-400 font-serif text-lg">
+          <p className="mt-16 text-center text-neutral-400 font-serif text-lg italic">
             Not sure how to start? Tell us your child's age when you visit — we'll guide you.
           </p>
         </div>
@@ -411,7 +401,7 @@ export default async function ProgramsPage() {
         <div className="container-fluid">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500  leading-tight">
+              <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
                 Frequently asked questions.
               </h2>
             </div>
@@ -423,33 +413,35 @@ export default async function ProgramsPage() {
       {/* SECTION 07 — CLOSING CTA */}
       <section className="section-spacing text-center bg-[#1E2A44] text-white relative overflow-hidden py-32">
         <div className="absolute inset-0 lab-grid opacity-[0.03]" />
-        <div className="absolute -bottom-1/2 -left-1/4 w-[800px] h-[800px] bg-accent-teal/10 rounded-full blur-[120px]" />
-
+        
         <div className="container-fluid relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8 leading-[1.15] text-balanced">
+            <h2 className="text-4xl md:text-7xl font-serif font-bold text-white mb-8 leading-tight">
               Every program begins with a <br />
-              <span className="text-accent-teal italic font-light">parent orientation.</span>
+              <span className="text-accent-teal italic font-light opacity-90">parent orientation.</span>
             </h2>
-            <p className="text-xl md:text-2xl text-[#B7E3DD] mb-12 max-w-2xl mx-auto leading-relaxed font-light">
+            <p className="text-xl md:text-2xl text-[#B7E3DD] mb-16 max-w-2xl mx-auto leading-relaxed font-light italic">
               Come in. See how scientist-inspired RoboSTEM problem-solving works in real life. Ask your questions. No commitment.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <div className="flex flex-col items-center gap-4">
-                <Link href="/schedule-visit" className="w-full sm:w-auto">
-                  <Button size="lg" className="bg-accent-teal border-none text-white px-12 py-5 shadow-huge shadow-accent-teal/20 w-full font-bold">
-                    Plan a Visit
-                  </Button>
-                </Link>
-                <p className="text-xs text-white/30 font-mono tracking-widest uppercase">
-                  Free Orientation · 30–45 mins · Bibwewadi
-                </p>
-              </div>
-              <Link href="/schedule-visit">
-                <Button variant="secondary" className="border-white/20 text-white hover:bg-white/10 px-8 py-5">
+              <Link href="/schedule-visit" className="w-full sm:w-auto">
+                <Button size="lg" className="bg-accent-teal border-none text-white px-16 py-6 text-lg shadow-huge shadow-accent-teal/30 w-full rounded-full font-bold">
+                  Plan a Visit
+                </Button>
+              </Link>
+              <Link href="/schedule-visit" className="w-full sm:w-auto">
+                <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10 px-16 py-6 text-lg w-full rounded-full">
                   Need Help Choosing?
                 </Button>
+              </Link>
+            </div>
+            <div className="mt-12 space-y-2">
+              <p className="text-xs text-white/30 font-mono tracking-[0.3em] uppercase font-bold">
+                Free Parent Orientation · 30–45 minutes · 📍 Bibwewadi, Pune
+              </p>
+              <Link href="/programs" className="block text-sm text-accent-teal/60 hover:text-accent-teal transition-colors font-medium">
+                Want to see the programs first? See programs →
               </Link>
             </div>
           </div>

@@ -32,92 +32,89 @@ export function TestimonialsSlider({ data }: { data?: any[] }) {
   const next = () => setCurrent((c) => (c === testimonials.length - 1 ? 0 : c + 1))
 
   useEffect(() => {
-    const t = setInterval(next, 6000)
+    const t = setInterval(next, 8000)
     return () => clearInterval(t)
-  }, [])
+  }, [testimonials.length])
 
   return (
-    <section className="section-spacing bg-[#1E2A44] text-white relative overflow-hidden">
-      {/* Decorative blobs */}
-      <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#2FB5A3]/10 rounded-full blur-3xl z-0" />
-      <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-white/5 rounded-full blur-3xl z-0" />
-
+    <section className="section-spacing bg-white relative overflow-hidden">
       <div className="container-fluid relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-14">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white leading-tight">
-              Unexpected Discoveries through handling unfamiliar challenges...
+          <div className="text-center mb-16">
+            <p className="text-accent-teal font-bold uppercase tracking-[0.2em] text-xs mb-4">Section 06 — Parent Voices</p>
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
+              Unexpected Discoveries through handling unfamiliar challenges..
             </h2>
-            <p className="text-white/90 mt-4 text-lg">
-              parents observing real change in their children.
+            <p className="text-neutral-500 mt-4 text-lg">
+              parents observing <span className="underline decoration-accent-teal decoration-2 underline-offset-4">real</span> change in their children.
             </p>
           </div>
 
-          {/* Card */}
-          <div className="relative bg-white/8 border border-white/10 rounded-2xl p-10 md:p-14 shadow-2xl min-h-[280px] flex flex-col justify-between">
-            <Quote className="absolute top-8 right-8 text-[#2FB5A3]/20" size={50} />
-
-            {/* Testimonial content */}
-            <div className="relative z-10">
-              {testimonials.map((t: any, i: number) => (
-                <div
-                  key={i}
-                  className={`transition-all duration-500 ${
-                    i === current ? 'opacity-100 translate-y-0' : 'opacity-0 absolute inset-0 pointer-events-none translate-y-2'
-                  }`}
-                >
-                  <p className="text-xl md:text-2xl text-white/90 font-light leading-relaxed italic mb-10">
-                    "{t.quote}"
-                  </p>
-                  <div className="flex items-center gap-4">
-                    <div className="w-11 h-11 rounded-full bg-[#2FB5A3] flex items-center justify-center text-white font-bold text-sm font-mono flex-shrink-0">
-                      {t.initial || (t.author?.slice(0, 2).toUpperCase())}
-                    </div>
-                    <div>
-                      <p className="font-serif font-bold text-white">{t.author}</p>
-                      <p className="text-mono text-[10px] text-white/70 mt-0.5 uppercase tracking-widest">
-                        {t.location || t.role}
-                      </p>
+          {/* Testimonial Cards Slider */}
+          <div className="relative min-h-[400px]">
+            {testimonials.map((t: any, i: number) => (
+              <div
+                key={i}
+                className={`transition-all duration-700 absolute inset-0 ${
+                  i === current ? 'opacity-100 scale-100 z-10' : 'opacity-0 scale-95 z-0 pointer-events-none'
+                }`}
+              >
+                <div className="bg-[#EAE6D8]/40 border border-[#EAE6D8] rounded-[40px] p-10 md:p-16 shadow-xl relative h-full flex flex-col justify-center">
+                  <Quote className="absolute top-10 right-10 text-accent-teal/10" size={80} />
+                  
+                  <div className="relative z-10 border-l-4 border-accent-teal pl-8">
+                    <p className="text-xl md:text-2xl lg:text-3xl text-primary-500 font-light leading-relaxed italic mb-10">
+                      "{t.quote}"
+                    </p>
+                    
+                    <div className="flex items-center gap-5">
+                      <div className="w-14 h-14 rounded-full bg-accent-teal flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                        {t.initial || (t.author?.slice(0, 1))}
+                      </div>
+                      <div>
+                        <p className="text-xl font-serif font-bold text-primary-500">{t.author}</p>
+                        <p className="text-xs font-bold text-neutral-400 uppercase tracking-widest mt-1">
+                          {t.role || t.location}
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
 
           {/* Controls */}
-          <div className="flex items-center justify-between mt-8">
-            {/* Dots */}
-            <div className="flex gap-2">
+          <div className="flex items-center justify-center gap-12 mt-12">
+            <button
+              onClick={prev}
+              className="w-14 h-14 rounded-full border border-neutral-200 flex items-center justify-center text-primary-500 hover:bg-primary-500 hover:text-white transition-all duration-300"
+              aria-label="Previous testimonial"
+            >
+              <ChevronLeft size={24} />
+            </button>
+            
+            <div className="flex gap-3">
               {testimonials.map((_: any, i: number) => (
                 <button
                   key={i}
                   onClick={() => setCurrent(i)}
-                  className={`relative h-1.5 rounded-full transition-all duration-300 before:content-[''] before:absolute before:-inset-6 before:block ${
-                    i === current ? 'w-8 bg-[#2FB5A3]' : 'w-3 bg-white/30'
+                  className={`h-2 rounded-full transition-all duration-500 ${
+                    i === current ? 'w-12 bg-accent-teal' : 'w-2 bg-neutral-200'
                   }`}
                   aria-label={`Go to testimonial ${i + 1}`}
                 />
               ))}
             </div>
-            {/* Arrows */}
-            <div className="flex gap-3">
-              <button
-                onClick={prev}
-                className="w-11 h-11 rounded-full border border-white/15 flex items-center justify-center text-white/70 hover:bg-white/10 transition-all"
-                aria-label="Previous testimonial"
-              >
-                <ChevronLeft size={18} />
-              </button>
-              <button
-                onClick={next}
-                className="w-11 h-11 rounded-full border border-white/15 flex items-center justify-center text-white/70 hover:bg-white/10 transition-all"
-                aria-label="Next testimonial"
-              >
-                <ChevronRight size={18} />
-              </button>
-            </div>
+
+            <button
+              onClick={next}
+              className="w-14 h-14 rounded-full border border-neutral-200 flex items-center justify-center text-primary-500 hover:bg-primary-500 hover:text-white transition-all duration-300"
+              aria-label="Next testimonial"
+            >
+              <ChevronRight size={24} />
+            </button>
           </div>
         </div>
       </div>
