@@ -30,6 +30,10 @@ export function Button({
       'text-neutral-500 hover:bg-neutral-100/50 hover:text-primary-500',
       'active:scale-[0.98]'
     ),
+    outline: cn(
+      'border border-white/20 text-white hover:bg-white/10',
+      'active:scale-[0.98]'
+    ),
   }
 
   const sizeStyles = {

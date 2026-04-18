@@ -9,6 +9,7 @@ import aboutPage from './schemas/aboutPage'
 import labPage from './schemas/labPage'
 import programsPage from './schemas/programsPage'
 import blogPost from './schemas/blogPost'
+import siteSettings from './schemas/siteSettings'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [homePage, aboutPage, labPage, programsPage, program, testimonial, faq, galleryItem, blogPost, siteSettings],

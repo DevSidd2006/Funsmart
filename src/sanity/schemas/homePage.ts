@@ -106,7 +106,7 @@ export default {
           title: 'Photo Grid (4 images)',
           type: 'array',
           of: [{ type: 'image', options: { hotspot: true } }],
-          validation: Rule => Rule.max(4)
+          validation: (Rule: any) => Rule.max(4)
         },
         { name: 'whyItMatters', title: 'Why it matters text', type: 'string' }
       ]
