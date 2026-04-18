@@ -320,8 +320,8 @@ export default async function ThinkingLabPage() {
             <div className="flex flex-col items-center gap-8">
               <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
                 <Link href="/schedule-visit" className="w-full sm:w-auto">
-                  <Button size="lg" className="bg-accent-teal border-none text-white px-12 py-6 text-lg shadow-huge shadow-accent-teal/30 w-full rounded-full">
-                    Schedule a Thinking Lab Visit
+                  <Button size="lg" className="bg-accent-teal border-none text-white px-12 py-6 text-lg shadow-huge shadow-accent-teal/30 w-full rounded-full font-bold">
+                    Schedule a visit →
                   </Button>
                 </Link>
                 <Link href="/programs" className="w-full sm:w-auto">

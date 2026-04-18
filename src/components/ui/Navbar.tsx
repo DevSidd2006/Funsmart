@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { Button } from './Button'
 import { JoinCommunity } from './JoinCommunity'
@@ -49,19 +50,17 @@ export function Navbar() {
         )}
       >
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 group">
-          <div className="relative">
-            <div className="w-11 h-11 rounded-2xl bg-accent-teal text-white flex items-center justify-center text-xl shadow-lg shadow-accent-teal/30 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
-              🧠
-            </div>
-            <div className="absolute inset-0 w-11 h-11 rounded-2xl bg-accent-teal animate-ping opacity-20" />
-          </div>
-          <span className={cn(
-            "font-serif font-bold text-2xl tracking-tight transition-colors duration-500",
-            useLightText ? "text-white" : "text-primary-500"
+        <Link href="/" className="flex items-center group py-1">
+          <div className={cn(
+            "p-1.5 rounded-2xl transition-all duration-500",
+            useLightText ? "bg-white shadow-xl shadow-black/10" : "bg-transparent"
           )}>
-            FunSmartism
-          </span>
+            <img 
+              src="/images/logo.png" 
+              alt="FunSmartism Logo" 
+              className="h-12 md:h-14 w-auto object-contain transition-all duration-500 group-hover:scale-105"
+            />
+          </div>
         </Link>
 
         {/* Desktop Links */}

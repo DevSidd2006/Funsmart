@@ -136,12 +136,12 @@ export default async function AboutPage() {
             <div className="border border-neutral-200 bg-white rounded-2xl p-6 mt-6 flex flex-col md:flex-row md:justify-between md:items-center gap-4 shadow-sm">
               <div>
                 <span className="text-xs font-mono text-accent-teal font-bold uppercase tracking-widest block mb-2">Location</span>
-                <p className="text-[#1E2A44] font-medium">[ADDRESS]</p>
+                <p className="text-[#1E2A44] font-medium text-sm leading-relaxed">Navkar Residency, Swami Vivekanand Road, Next to Bibwewadi Police Station, Bibwewadi, Pune 411037</p>
               </div>
               <div className="h-px md:h-12 w-full md:w-px bg-neutral-100"></div>
               <div>
                 <span className="text-xs font-mono text-accent-teal font-bold uppercase tracking-widest block mb-2">Contact</span>
-                <p className="text-[#1E2A44] font-medium">[PHONE / WHATSAPP] <span className="mx-2 text-neutral-300">·</span> [EMAIL]</p>
+                <p className="text-[#1E2A44] font-medium text-sm">hello@funsmartism.in <span className="mx-2 text-neutral-300">·</span> +91 99999 99999</p>
               </div>
             </div>
           </div>

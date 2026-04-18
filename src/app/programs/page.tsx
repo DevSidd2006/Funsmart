@@ -18,16 +18,16 @@ export const metadata: Metadata = {
 }
 
 const workshopThemes = [
-  { theme: 'Math Magic & Logic', icon: Calculator, desc: 'Sudoku, number patterns, logic puzzles. No single correct path — multiple valid solutions.', color: 'text-[#4D96FF] bg-[#4D96FF]/10' },
-  { theme: "Rubik's Cube", icon: Puzzle, desc: 'A 3D puzzle that rewards systems thinking over trial and error. More than a toy.', color: 'text-[#FF6B6B] bg-[#FF6B6B]/10' },
-  { theme: 'Design Thinking & Innovation', icon: PenTool, desc: 'A real problem. Open brief. Children design, prototype, and explain their idea.', color: 'text-[#6BCB77] bg-[#6BCB77]/10' },
+  { theme: 'Math Magic & Logic', icon: Calculator, desc: 'Sudoku, patterns, puzzles that have no single path to the answer. Logic as play.', color: 'text-[#4D96FF] bg-[#4D96FF]/10' },
+  { theme: "Rubik's Cube", icon: Puzzle, desc: 'A 3D puzzle that rewards system thinking over trial and error. More than a toy.', color: 'text-[#FF6B6B] bg-[#FF6B6B]/10' },
+  { theme: 'Design Thinking & Innovation', icon: PenTool, desc: 'A real problem. Open brief. Children design, prototype, and defend their idea.', color: 'text-[#6BCB77] bg-[#6BCB77]/10' },
   { theme: 'STEM — How Stuff Works', icon: Settings, desc: 'Real objects taken apart and examined. Why does this work? What breaks it?', color: 'text-[#FFD93D] bg-[#FFD93D]/10' },
-  { theme: 'Aeromodeling & Space', icon: Plane, desc: 'Build and test model aeroplanes and rockets. Gravity is the examiner.', color: 'text-accent-teal bg-accent-teal/10' },
+  { theme: 'Aeromodelling & Space', icon: Plane, desc: 'Aeroplanes and rockets — children build and test models. Gravity is the examiner.', color: 'text-accent-teal bg-accent-teal/10' },
   { theme: 'Tech Toys', icon: Cpu, desc: "Electronics and mechanical systems opened up. What's inside? How does it move?", color: 'text-primary-500 bg-primary-500/10' },
-  { theme: 'Sci-fi Story Writing', icon: PenTool, desc: 'Stories grounded in real science. Imagination + logic working together.', color: 'text-[#9B59B6] bg-[#9B59B6]/10' },
-  { theme: 'Daytime Astronomy & Sky Watching', icon: Telescope, desc: 'Observation journals, scale of space, light and time. Big questions, no telescope needed.', color: 'text-[#3498DB] bg-[#3498DB]/10' },
-  { theme: 'Digital Skills', icon: Laptop, desc: 'Logic of computing — not just using screens but understanding them.', color: 'text-[#E67E22] bg-[#E67E22]/10' },
-  { theme: 'Robotics', icon: Bot, desc: 'Build something that moves. using real testing and debugging.', color: 'text-[#27AE60] bg-[#27AE60]/10' },
+  { theme: 'Sci-fi Story Writing', icon: PenTool, desc: 'Imagination meets logic. Children write stories grounded in real science concepts.', color: 'text-[#9B59B6] bg-[#9B59B6]/10' },
+  { theme: 'Daytime Astronomy', icon: Telescope, desc: 'The sky as a thinking surface. Observation, scale, time, and big questions.', color: 'text-[#3498DB] bg-[#3498DB]/10' },
+  { theme: 'Digital Skills', icon: Laptop, desc: 'Practical computing thinking — not just using a screen but understanding one.', color: 'text-[#E67E22] bg-[#E67E22]/10' },
+  { theme: 'Robotics', icon: Bot, desc: "Build something that moves. Understand why it does — and why it sometimes doesn't.", color: 'text-[#27AE60] bg-[#27AE60]/10' },
 ]
 
 const comparisonData = [

@@ -21,13 +21,12 @@ export function Footer({ data }: { data?: any }) {
       <div className="container-fluid">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
           <div className="md:col-span-4">
-            <Link href="/" className="flex items-center gap-3 group mb-8">
-              <div className="w-10 h-10 rounded-2xl bg-primary-500 text-white flex items-center justify-center text-lg transition-all duration-500 group-hover:bg-accent-teal shadow-lg shadow-primary-500/10">
-                🧠
-              </div>
-              <span className="font-serif font-bold text-2xl tracking-tight text-primary-500">
-                FunSmartism
-              </span>
+            <Link href="/" className="flex items-center group mb-8">
+              <img 
+                src="/images/logo.png" 
+                alt="FunSmartism Logo" 
+                className="h-24 w-auto object-contain transition-all duration-500 group-hover:scale-105"
+              />
             </Link>
             <p className="text-neutral-500 max-w-sm leading-relaxed mb-10 text-sm">
               {data?.description || "A premium laboratory for parents who value intelligence over marks. Helping children aged 8-14 discover their thinking patterns."}
