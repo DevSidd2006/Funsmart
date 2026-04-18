@@ -427,7 +427,7 @@ export default async function ProgramsPage() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link href="/schedule-visit" className="w-full sm:w-auto">
                 <Button size="lg" className="bg-accent-teal border-none text-white px-16 py-6 text-lg shadow-huge shadow-accent-teal/30 w-full rounded-full font-bold">
-                  Plan a Visit
+                  Schedule a visit →
                 </Button>
               </Link>
               <Link href="/schedule-visit" className="w-full sm:w-auto">

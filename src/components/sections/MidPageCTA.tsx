@@ -4,7 +4,7 @@ import Link from 'next/link'
 export function MidPageCTA({ data }: { data?: any }) {
   const headline = data?.headline || "Wait, is this right for my child?"
   const subheadline = data?.subheadline || "The best way to know is to see them in action."
-  const buttonText = data?.buttonText || "Book a Free Parent Orientation →"
+  const buttonText = data?.buttonText || "Schedule a visit →"
 
   return (
     <section className="py-20 bg-accent-surface border-y border-neutral-100">
