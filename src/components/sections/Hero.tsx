@@ -54,41 +54,6 @@ export function Hero({ data }: { data?: any }) {
               {microCopyLine2}
             </p>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-6 items-center mb-16">
-              <Link href="/schedule-visit" className="w-full sm:w-auto">
-                <Button
-                  size="lg"
-                  className="px-12 py-6 text-lg shadow-2xl shadow-accent-teal/20 bg-accent-teal hover:bg-[#28A392] text-white border-none w-full rounded-full"
-                >
-                  {ctaText}
-                </Button>
-              </Link>
-              <JoinCommunity />
-            </div>
-
-            {/* Trust Strip */}
-            <div className="border-t border-white/10 pt-12">
-              <div className="flex flex-wrap items-center gap-y-4 gap-x-8 mb-10">
-                {[
-                  'Hands-on Builds',
-                  'Scientist Interaction Sessions',
-                  'Parent Guidance',
-                  'Real-World Thinking'
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-2">
-                    <Check className="text-accent-teal" size={16} />
-                    <span className="text-[11px] font-bold text-white/70 uppercase tracking-widest leading-tight">
-                      {item}
-                    </span>
-                  </div>
-                ))}
-              </div>
-              <div className="flex items-center gap-4 text-xs text-white/50 font-mono bg-white/5 w-fit px-6 py-3 rounded-full border border-white/5 shadow-inner">
-                <span className="w-2 h-2 rounded-full bg-accent-gold shadow-[0_0_8px_rgba(255,191,0,0.5)]" />
-                Free Parent Orientation · 30–45 minutes · 📍 Bibwewadi, Pune
-              </div>
-            </div>
           </div>
 
           {/* Right: Asymmetrical Image Container */}

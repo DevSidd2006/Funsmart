@@ -1,33 +1,22 @@
+import { sanityFetch } from '@/sanity/lib/live'
+import { blogPostsQuery, settingsQuery } from '@/sanity/lib/queries'
+import { Footer } from '@/components/sections/Footer'
+import { urlForImage } from '@/sanity/lib/image'
 import { Button } from '@/components/ui/Button'
-import { Card } from '@/components/ui/Card'
 import { JoinCommunity } from '@/components/ui/JoinCommunity'
 import { ArrowRight } from 'lucide-react'
+import Link from 'next/link'
 
-const blogPosts = [
-  {
-    title: 'Mental Models: How to future-proof your child\'s thinking',
-    category: 'MENTAL_MODELS',
-    date: 'April 02, 2026',
-    desc: 'Why the traditional syllabus is failing and how the "Habits of the Mind" are the true currency of the 21st century.',
-    image: 'image-mental-models'
-  },
-  {
-    title: 'From Marks to Making a Mark: The Shift in Child Development',
-    category: 'PHILOSOPHY',
-    date: 'March 28, 2026',
-    desc: 'Understanding the gap between cognitive recall and critical problem-solving in primary school students.',
-    image: 'image-marks-vs-skills'
-  },
-  {
-    title: 'The "Founder Mindset" in Children: More than just STEM',
-    category: 'LEADERSHIP',
-    date: 'March 15, 2026',
-    desc: 'How interacting with industry experts and scientists at FunSmartism sparks a foundational leadership trait.',
-    image: 'image-leadership'
-  }
-]
+export default async function BlogsPage() {
+  const [
+    { data: posts },
+    { data: settings }
+  ] = await Promise.all([
+    sanityFetch({ query: blogPostsQuery }),
+    sanityFetch({ query: settingsQuery })
+  ])
 
-export default function BlogsPage() {
+  const displayPosts = posts?.length > 0 ? posts : []
   return (
     <div className="bg-white">
       {/* Blog Hero */}
@@ -76,29 +65,41 @@ export default function BlogsPage() {
 
             {/* Articles List */}
             <div className="lg:col-span-9 space-y-24">
-              {blogPosts.map((post, i) => (
-                <article key={i} className="group cursor-pointer">
-                  <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
-                     <div className="md:col-span-5 rounded-lg overflow-hidden relative aspect-[4/3] bg-neutral-100 flex items-center justify-center shadow-base group-hover:shadow-md transition-shadow">
-                        <img src="/images/lab-observation.png" alt="Blog" className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[1.5s] grayscale-[20%]" />
-                        <div className="absolute inset-0 bg-primary-500/0 group-hover:bg-primary-500/5 transition-colors duration-500" />
-                     </div>
-                     <div className="md:col-span-7 flex flex-col justify-center">
-                        <div className="flex items-center gap-4 mb-6">
-                           <span className="text-mono text-[10px] bg-accent-surface text-accent-teal uppercase tracking-widest px-3 py-1 rounded-sm border border-neutral-100">{post.category}</span>
-                           <span className="text-mono text-[10px] text-neutral-400 tracking-widest">{post.date}</span>
-                        </div>
-                        <h2 className="text-3xl font-serif font-bold text-primary-500 group-hover:text-primary-600 transition-colors mb-4 leading-tight">
-                           {post.title}
-                        </h2>
-                        <p className="text-lg text-neutral-500 leading-relaxed mb-8 max-w-xl">
-                           {post.desc}
-                        </p>
-                        <div className="flex items-center gap-3 text-accent-teal font-semibold group-hover:gap-5 transition-all duration-300">
-                           Read Full Article <ArrowRight size={18} />
-                        </div>
-                     </div>
-                  </div>
+              {displayPosts.map((post: any, i: number) => (
+                <article key={post._id || i} className="group cursor-pointer">
+                  <Link href={`/blogs/${post.slug?.current || '#'}`} className="block">
+                    <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
+                       <div className="md:col-span-5 rounded-lg overflow-hidden relative aspect-[4/3] bg-neutral-100 flex items-center justify-center shadow-base group-hover:shadow-md transition-shadow">
+                          {post.mainImage ? (
+                            <img 
+                              src={urlForImage(post.mainImage).width(800).height(600).url()} 
+                              alt={post.title} 
+                              className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[1.5s] grayscale-[20%]" 
+                            />
+                          ) : (
+                            <img src="/images/lab-observation.png" alt="Blog" className="w-full h-full object-cover grayscale-[20%]" />
+                          )}
+                          <div className="absolute inset-0 bg-primary-500/0 group-hover:bg-primary-500/5 transition-colors duration-500" />
+                       </div>
+                       <div className="md:col-span-7 flex flex-col justify-center">
+                          <div className="flex items-center gap-4 mb-6">
+                             <span className="text-mono text-[10px] bg-accent-surface text-accent-teal uppercase tracking-widest px-3 py-1 rounded-sm border border-neutral-100">{post.category || 'ARTICLE'}</span>
+                             <span className="text-mono text-[10px] text-neutral-400 tracking-widest">
+                               {post.publishedAt ? new Date(post.publishedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : 'Recent'}
+                             </span>
+                          </div>
+                          <h2 className="text-3xl font-serif font-bold text-primary-500 group-hover:text-primary-600 transition-colors mb-4 leading-tight">
+                             {post.title}
+                          </h2>
+                          <p className="text-lg text-neutral-500 leading-relaxed mb-8 max-w-xl">
+                             {post.excerpt}
+                          </p>
+                          <div className="flex items-center gap-3 text-accent-teal font-semibold group-hover:gap-5 transition-all duration-300">
+                             Read Full Article <ArrowRight size={18} />
+                          </div>
+                       </div>
+                    </div>
+                  </Link>
                 </article>
               ))}
             </div>
@@ -133,6 +134,8 @@ export default function BlogsPage() {
            </div>
         </div>
       </section>
+      
+      <Footer data={settings} />
     </div>
   )
 }

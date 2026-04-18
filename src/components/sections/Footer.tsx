@@ -21,9 +21,9 @@ export function Footer({ data }: { data?: any }) {
       <div className="container-fluid">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
           <div className="md:col-span-4">
-            <Link href="/" className="inline-flex items-center gap-3 group mb-8">
-              <div className="w-8 h-8 bg-primary-500 rounded-sm flex items-center justify-center text-white font-serif font-bold group-hover:bg-accent-teal transition-colors duration-500">
-                F
+            <Link href="/" className="flex items-center gap-3 group mb-8">
+              <div className="w-10 h-10 rounded-2xl bg-primary-500 text-white flex items-center justify-center text-lg transition-all duration-500 group-hover:bg-accent-teal shadow-lg shadow-primary-500/10">
+                🧠
               </div>
               <span className="font-serif font-bold text-2xl tracking-tight text-primary-500">
                 FunSmartism

@@ -13,4 +13,5 @@ export const programsQuery = groq`*[_type == "program"] | order(title asc) {
   "themes": themes[]
 }`
 export const testimonialsQuery = groq`*[_type == "testimonial"]`
-export const galleryQuery = groq`*[_type == "galleryItem"]`
+export const galleryQuery = groq`*[_type == "galleryItem"] | order(_createdAt desc)`
+export const blogPostsQuery = groq`*[_type == "blogPost"] | order(publishedAt desc)`
