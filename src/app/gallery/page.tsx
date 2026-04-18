@@ -1,7 +1,7 @@
 import { sanityFetch } from '@/sanity/lib/live'
 import { galleryQuery } from '@/sanity/lib/queries'
 import { JoinCommunity } from '@/components/ui/JoinCommunity'
-import { urlFor } from '@/sanity/lib/image'
+import { urlForImage } from '@/sanity/lib/image'
 
 export default async function GalleryPage() {
   const { data: items } = await sanityFetch({ query: galleryQuery })
@@ -36,7 +36,7 @@ export default async function GalleryPage() {
                <div key={item._id} className={`relative group overflow-hidden rounded-lg shadow-sm border border-neutral-100 ${item.span || 'md:col-span-4'}`}>
                   {item.image ? (
                     <img 
-                       src={urlFor(item.image).url()} 
+                       src={urlForImage(item.image).url()} 
                        alt={item.title} 
                        className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[1.5s] ease-in-out" 
                     />

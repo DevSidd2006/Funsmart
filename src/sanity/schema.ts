@@ -8,10 +8,10 @@ import homePage from './schemas/homePage'
 import aboutPage from './schemas/aboutPage'
 import labPage from './schemas/labPage'
 import programsPage from './schemas/programsPage'
-import siteSettings from './schemas/siteSettings'
+import blogPost from './schemas/blogPost'
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [homePage, aboutPage, labPage, programsPage, program, testimonial, faq, galleryItem, siteSettings],
+  types: [homePage, aboutPage, labPage, programsPage, program, testimonial, faq, galleryItem, blogPost, siteSettings],
 }
 
 

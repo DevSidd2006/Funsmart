@@ -5,11 +5,11 @@ import { Testimonials } from '@/components/sections/Testimonials'
 import { Check } from 'lucide-react'
 import Link from 'next/link'
 
-import { client } from '@/sanity/lib/client'
+import { sanityFetch } from '@/sanity/lib/live'
 import { settingsQuery } from '@/sanity/lib/queries'
 
 export default async function ForParentsPage() {
-  const settings = await client.fetch(settingsQuery, {}, { cache: 'no-store' })
+  const { data: settings } = await sanityFetch({ query: settingsQuery })
 
   const parentVoices = [
     {

@@ -25,9 +25,9 @@ const workshopThemes = [
   { theme: 'Aeromodeling & Space', icon: Plane, desc: 'Build and test model aeroplanes and rockets. Gravity is the examiner.', color: 'text-accent-teal bg-accent-teal/10' },
   { theme: 'Tech Toys', icon: Cpu, desc: "Electronics and mechanical systems opened up. What's inside? How does it move?", color: 'text-primary-500 bg-primary-500/10' },
   { theme: 'Sci-fi Story Writing', icon: PenTool, desc: 'Stories grounded in real science. Imagination + logic working together.', color: 'text-[#9B59B6] bg-[#9B59B6]/10' },
-  { theme: 'Daytime Astronomy', icon: Telescope, desc: 'Observation journals, scale of space, light and time. No telescope needed.', color: 'text-[#3498DB] bg-[#3498DB]/10' },
+  { theme: 'Daytime Astronomy & Sky Watching', icon: Telescope, desc: 'Observation journals, scale of space, light and time. Big questions, no telescope needed.', color: 'text-[#3498DB] bg-[#3498DB]/10' },
   { theme: 'Digital Skills', icon: Laptop, desc: 'Logic of computing — not just using screens but understanding them.', color: 'text-[#E67E22] bg-[#E67E22]/10' },
-  { theme: 'Robotics', icon: Bot, desc: 'Build something that moves. Using real testing and debugging.', color: 'text-[#27AE60] bg-[#27AE60]/10' },
+  { theme: 'Robotics', icon: Bot, desc: 'Build something that moves. using real testing and debugging.', color: 'text-[#27AE60] bg-[#27AE60]/10' },
 ]
 
 const comparisonData = [

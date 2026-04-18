@@ -45,7 +45,7 @@ export function WhatMakesDifferent({ data }: { data?: any }) {
 
           {/* Right: Contrast Table */}
           <div className="bg-[#1E2A44] rounded-[40px] p-8 md:p-12 shadow-huge text-white">
-            <h4 className="text-2xl font-serif font-bold mb-8 border-b border-white/10 pb-6 tracking-wide">
+            <h4 className="text-2xl font-serif font-bold text-white mb-8 border-b border-white/10 pb-6 tracking-wide">
               What FunSmartism does
             </h4>
             
