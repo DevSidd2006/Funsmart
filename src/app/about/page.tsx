@@ -1,11 +1,10 @@
 import { Metadata } from 'next'
 import { Button } from '@/components/ui/Button'
-import { Footer } from '@/components/sections/Footer'
 import { FounderJourney } from '@/components/sections/FounderJourney'
 import { OurTeam } from '@/components/sections/OurTeam'
 import { RealSessionMoments } from '@/components/sections/RealSessionMoments'
 import { sanityFetch } from '@/sanity/lib/live'
-import { aboutPageQuery, settingsQuery } from '@/sanity/lib/queries'
+import { aboutPageQuery } from '@/sanity/lib/queries'
 import { ChevronDown } from 'lucide-react'
 import Link from 'next/link'
 
@@ -14,7 +13,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fursmartism.vercel.
 export const metadata: Metadata = {
   title: 'About Us | FunSmartism',
   description: 'Discover why we built FunSmartism Intelligence Center. We observe how children think, not just what they score.',
-  keywords: ['about FunSmartism', 'thinking lab', 'child observation', 'Pune education'],
+  keywords: ['about FunSmartism', 'thinking lab', 'child observation'],
   openGraph: {
     title: 'About FunSmartism | The Origin Story',
     description: "We noticed it again and again: a child who struggled in a classroom would come alive the moment you put something real in their hands.",
@@ -40,9 +39,9 @@ const beliefsData = [
 
 export default async function AboutPage() {
   const [
-    { data: settings }
+    { data: aboutData }
   ] = await Promise.all([
-    sanityFetch({ query: settingsQuery })
+    sanityFetch({ query: aboutPageQuery })
   ])
   
   const faqs = [
@@ -58,13 +57,18 @@ export default async function AboutPage() {
   return (
     <div className="bg-white">
       {/* Hero */}
-      <section className="section-spacing bg-[#F8FBFF] relative min-h-[60vh] flex items-center">
+      <section className="pt-40 pb-24 bg-accent-surface relative min-h-[70vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 lab-grid opacity-[0.03]" />
         <div className="container-fluid relative z-10 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[#1E2A44] mb-8 leading-[1.15]">
-              We started FunSmartism because we kept seeing <br className="hidden md:block" />something schools weren't designed to notice.
+          <div className="max-w-5xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/5 border border-primary-500/10 text-primary-500 text-[11px] font-bold uppercase tracking-widest mb-10">
+              Our Origin Story
+            </div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-primary-500 mb-8 leading-[1.1] tracking-tight">
+              We started FunSmartism because we kept seeing <br className="hidden md:block" />
+              <span className="text-accent-teal italic font-light">something schools weren't designed to notice.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-neutral-600 font-light leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-neutral-600 font-light leading-relaxed max-w-4xl mx-auto">
               We kept seeing capable children come alive in real-world learning environment that gave them freedom—and shut down in environments that didn’t. Parents could sense it too, but had no language for what they were seeing. FunSmartism was built to close that gap.
             </p>
           </div>
@@ -149,30 +153,34 @@ export default async function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="section-spacing bg-white text-center border-t border-neutral-100 py-32">
-        <div className="container-fluid max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 leading-tight text-[#1E2A44]">
-            Come and experience real problem-solving in action.
-          </h2>
-          <p className="text-xl text-neutral-600 leading-relaxed mb-10 font-light">
-            The orientation is free. The conversation is real. Your questions are welcome.
-          </p>
-          
-          <Link href="/schedule-visit">
-            <Button size="lg" className="bg-accent-teal border-none text-white px-10 shadow-xl mb-10">
-              Schedule a Visit →
-            </Button>
-          </Link>
+      <section className="section-spacing text-center bg-primary-500 text-white relative overflow-hidden py-32">
+        <div className="absolute inset-0 lab-grid opacity-[0.05]" />
+        <div className="container-fluid relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-8 leading-tight tracking-tight">
+              Come and experience real <span className="text-accent-teal italic font-light">problem-solving</span> in action.
+            </h2>
+            <p className="text-xl md:text-2xl text-[#B7E3DD] mb-16 font-light italic">
+              The orientation is free. The conversation is real. Your questions are welcome.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Link href="/schedule-visit" className="w-full sm:w-auto">
+                <Button size="lg" className="bg-accent-teal border-none text-white px-16 py-6 text-xl shadow-huge shadow-accent-teal/30 w-full rounded-full font-bold">
+                  Schedule a Visit →
+                </Button>
+              </Link>
+            </div>
 
-          <p className="text-sm font-mono text-accent-teal uppercase tracking-widest leading-relaxed font-bold">
-            Free Parent Orientation <span className="text-neutral-300 mx-2">·</span> 30–45 minutes <br className="md:hidden" /> 
-            <span className="hidden md:inline text-neutral-300 mx-2">·</span>
-            📍 Bibwewadi, Pune <span className="text-neutral-300 mx-2">·</span> We'll confirm within 2 hours.
-          </p>
+            <div className="mt-12 space-y-2">
+              <p className="text-xs text-white/30 font-mono tracking-[0.3em] uppercase font-bold">
+                Free Parent Orientation · 30–45 minutes
+              </p>
+            </div>
+          </div>
         </div>
       </section>
       
-      <Footer data={settings} />
     </div>
   )
 }

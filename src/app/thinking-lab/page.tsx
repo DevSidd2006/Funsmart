@@ -1,10 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
-import { Footer } from '@/components/sections/Footer'
 import { JoinCommunity } from '@/components/ui/JoinCommunity'
 import { sanityFetch } from '@/sanity/lib/live'
-import { labPageQuery, settingsQuery } from '@/sanity/lib/queries'
+import { labPageQuery } from '@/sanity/lib/queries'
 import { urlForImage } from '@/sanity/lib/image'
 import { 
   Eye, Beaker, Lightbulb, Check, ChevronRight, FlaskConical, 
@@ -15,11 +14,9 @@ import { VignetteAccordion } from '@/components/ui/VignetteAccordion'
 
 export default async function ThinkingLabPage() {
   const [
-    { data: labData },
-    { data: settings }
+    { data: labData }
   ] = await Promise.all([
-    sanityFetch({ query: labPageQuery }),
-    sanityFetch({ query: settingsQuery })
+    sanityFetch({ query: labPageQuery })
   ])
 
   const vignettes = [
@@ -333,7 +330,7 @@ export default async function ThinkingLabPage() {
               
               <div className="space-y-4">
                 <p className="text-xs text-white/30 font-mono tracking-[0.3em] uppercase font-bold">
-                   Free Parent Orientation · 30–45 minutes · 📍 Bibwewadi, Pune
+                   Free Parent Orientation · 30–45 minutes
                 </p>
                 <p className="text-[10px] text-white/20 uppercase tracking-widest">
                    Also available for school innovation visits and STEM partner sessions
@@ -347,7 +344,6 @@ export default async function ThinkingLabPage() {
         </div>
       </section>
 
-      <Footer data={settings} />
     </div>
   )
 }

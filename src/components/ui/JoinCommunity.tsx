@@ -9,7 +9,7 @@ export function JoinCommunity({ className, variant = 'outline' }: JoinCommunityP
   const baseStyles = "inline-flex items-center justify-center gap-2.5 px-10 py-4 text-base font-semibold rounded-lg transition-all duration-300 w-full sm:w-auto"
   
   const variants = {
-    outline: "border border-white/20 text-white hover:bg-white/10 hover:border-white/40 shadow-sm",
+    outline: "border border-white/40 text-white hover:bg-white/10 hover:border-white/60 shadow-sm",
     solid: "bg-[#2FB5A3] hover:bg-[#28A392] text-white shadow-lg shadow-[#2FB5A3]/20 border-none"
   }
 

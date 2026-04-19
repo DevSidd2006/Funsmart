@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react'
 
@@ -22,14 +23,16 @@ export function Footer({ data }: { data?: any }) {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
           <div className="md:col-span-4">
             <Link href="/" className="flex items-center group mb-8">
-              <img 
-                src="/images/logo.png" 
-                alt="FunSmartism Logo" 
-                className="h-24 w-auto object-contain transition-all duration-500 group-hover:scale-105"
-              />
+            <Image 
+              src="/images/logo.png" 
+              alt="FunSmartism Logo" 
+              width={200}
+              height={100}
+              className="h-24 w-auto object-contain transition-all duration-500 group-hover:scale-105"
+            />
             </Link>
-            <p className="text-neutral-500 max-w-sm leading-relaxed mb-10 text-sm">
-              {data?.description || "A premium laboratory for parents who value intelligence over marks. Helping children aged 8-14 discover their thinking patterns."}
+            <p className="text-neutral-600 max-w-sm leading-relaxed mb-10 text-sm">
+              {data?.description || "A premium laboratory for parents who value intelligence over marks. Helping children discover their unique thinking patterns."}
             </p>
             <div className="flex gap-4">
                {socialLinks.map((social: any) => {
@@ -60,7 +63,7 @@ export function Footer({ data }: { data?: any }) {
                 { name: 'Gallery', href: '/gallery' },
               ].map((link) => (
                 <li key={link.name}>
-                  <Link href={link.href} className="text-sm text-neutral-500 hover:text-accent-teal transition-colors">
+                  <Link href={link.href} className="text-sm text-neutral-600 hover:text-accent-teal transition-colors">
                     {link.name}
                   </Link>
                 </li>
@@ -70,7 +73,7 @@ export function Footer({ data }: { data?: any }) {
 
           <div className="md:col-span-3">
             <h4 className="text-xs font-bold uppercase tracking-widest text-primary-500 mb-8">The Thinking Lab</h4>
-            <div className="space-y-4 text-sm text-neutral-500 leading-relaxed">
+            <div className="space-y-4 text-sm text-neutral-600 leading-relaxed">
               <p className="font-medium text-primary-900">{address}</p>
               <p>{phone} <br /> {email}</p>
               <div className="pt-4">
@@ -97,10 +100,10 @@ export function Footer({ data }: { data?: any }) {
         </div>
 
         <div className="pt-12 border-t border-neutral-100 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-xs text-neutral-400 font-mono tracking-tighter">© 2026 {data?.title || 'FUNSMARTISM'}_INTELLIGENCE_CENTER</p>
+          <p className="text-xs text-neutral-500 font-mono tracking-tighter">© 2026 {data?.title || 'FUNSMARTISM'}_INTELLIGENCE_CENTER</p>
           <div className="flex gap-8">
-            <a href="#" className="text-xs text-neutral-400 hover:text-primary-500 uppercase tracking-widest transition-colors">Privacy</a>
-            <a href="#" className="text-xs text-neutral-400 hover:text-primary-500 uppercase tracking-widest transition-colors">Terms</a>
+            <a href="#" className="text-xs text-neutral-500 hover:text-primary-500 uppercase tracking-widest transition-colors">Privacy</a>
+            <a href="#" className="text-xs text-neutral-500 hover:text-primary-500 uppercase tracking-widest transition-colors">Terms</a>
           </div>
         </div>
       </div>

@@ -18,7 +18,7 @@ export default defineType({
       name: 'tag',
       title: 'Tag Line',
       type: 'string',
-      description: 'Small text above title (e.g. "AGE 8-16")',
+      description: 'Small text above title (e.g. "THE PROGRAM")',
     }),
     defineField({
       name: 'tagDetail',

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { urlForImage } from '@/sanity/lib/image'
@@ -13,7 +14,7 @@ export function LabGallery({ items }: { items: any[] }) {
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight mb-6">
               Real moments from <br /><span className="text-accent-teal italic font-light">our lab.</span>
             </h2>
-            <p className="text-lg text-neutral-500 leading-relaxed">
+            <p className="text-lg text-neutral-600 leading-relaxed">
               Every session reveals a different way of approaching the unknown. Here is a glimpse into the process of discovery from our Thinking Lab.
             </p>
           </div>
@@ -34,10 +35,11 @@ export function LabGallery({ items }: { items: any[] }) {
               }`}
             >
               {item.image ? (
-                <img 
+                <Image 
                   src={urlForImage(item.image).width(800).height(800).url()} 
                   alt={item.title} 
-                  className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[1.5s]" 
+                  fill
+                  className="object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[1.5s]" 
                 />
               ) : (
                 <div className="w-full h-full bg-neutral-50 flex items-center justify-center text-neutral-300 italic">No Image</div>

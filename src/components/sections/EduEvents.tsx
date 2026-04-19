@@ -32,7 +32,7 @@ export function EduEvents({ data }: { data?: any }) {
           <h3 className="text-3xl md:text-4xl font-serif font-bold text-accent-teal mb-8">
             {subheading}
           </h3>
-          <p className="text-lg text-neutral-500 max-w-2xl leading-relaxed">
+          <p className="text-lg text-neutral-600 max-w-2xl leading-relaxed">
             {description}
           </p>
         </div>
@@ -73,7 +73,7 @@ export function EduEvents({ data }: { data?: any }) {
         </div>
         
         <div className="mt-12 text-center">
-          <p className="text-neutral-500 italic">Not a one-time talk — repeated exposure to real experts over time.</p>
+          <p className="text-neutral-600 italic">Not a one-time talk — repeated exposure to real experts over time.</p>
         </div>
       </div>
     </section>

@@ -31,8 +31,8 @@ export function MidPageCTA({ data }: { data?: any }) {
                   {buttonText}
                 </Button>
               </Link>
-              <p className="text-xs font-mono text-white/40 uppercase tracking-[0.2em]">
-                Free · 30–45 mins · Bibwewadi, Pune
+              <p className="text-xs font-mono text-white/70 uppercase tracking-[0.2em]">
+                Free · 30–45 mins
               </p>
             </div>
           </div>

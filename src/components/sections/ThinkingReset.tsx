@@ -19,7 +19,7 @@ export function ThinkingReset() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
               {[
                 { icon: Calendar, label: '10 days' },
-                { icon: MapPin, label: 'Bibwewadi, Pune' },
+                { icon: MapPin, label: 'Intelligence Center' },
                 { icon: Sparkles, label: 'Scientist-inspired tasks' },
               ].map(({ icon: Icon, label }) => (
                 <div key={label} className="rounded-3xl border border-white/10 bg-white/10 p-4 text-sm text-white/90">

@@ -1,6 +1,5 @@
 import React from 'react'
 import { Button } from '@/components/ui/Button'
-import { Footer } from '@/components/sections/Footer'
 import { TestimonialsClient } from './TestimonialsClient'
 import { 
   Check, 
@@ -14,32 +13,28 @@ import {
   Brain
 } from 'lucide-react'
 import Link from 'next/link'
-import { sanityFetch } from '@/sanity/lib/live'
-import { settingsQuery } from '@/sanity/lib/queries'
-
 export default async function ForParentsPage() {
-  const { data: settings } = await sanityFetch({ query: settingsQuery })
 
   const parentVoices = [
     {
       quote: "I came prepared for my daughter to either do brilliantly or shut down. She did neither. She worked methodically — more so than I'd ever seen at home. When something didn't work, she paused, looked at it, and tried differently. The team told me this 'pause before pivot' approach is less common than I'd think. I've been sitting with that for weeks.",
       author: "Deepa S.",
-      role: "Parent · 11-year-old · Thinking Reset Workshop"
+      role: "Parent · Thinking Reset Workshop"
     },
     {
       quote: "My son has been 'easily distracted' his whole school life. FunSmartism told me he isn't distracted — he loses interest when the challenge isn't deep enough. That reframe alone was worth everything. We're still figuring out what to do with it, but at least we're asking the right question now.",
       author: "Arvind M.",
-      role: "Parent · 14-year-old · RoboSTEM Thinking Lab Year-Long"
+      role: "Parent · RoboSTEM Thinking Lab Year-Long"
     },
     {
       quote: "My daughter is top three in her class. I thought — what will they tell me that school hasn't? They told me she's extraordinary at solving the problem in front of her, but doesn't yet know how to generate her own problem. She waits to be asked. That's a different limitation than I expected, and marks will never show it.",
       author: "Sunita R.",
-      role: "Parent · 13-year-old · Thinking Reset Workshop"
+      role: "Parent · Thinking Reset Workshop"
     },
     {
       quote: "My son refused to try anything he wasn't already sure he'd be good at. School had made him terrified of being wrong publicly. The facilitator told me: he worked alone for 40 minutes and was genuinely absorbed. Nobody was watching. Nobody could tell him he was wrong. That was the first time in two years I'd heard 'absorbed'. I cried in the car on the way home.",
       author: "Nandita K.",
-      role: "Parent · 10-year-old · Thinking Reset Workshop"
+      role: "Parent · Thinking Reset Workshop"
     }
   ]
 
@@ -62,18 +57,23 @@ export default async function ForParentsPage() {
   return (
     <div className="bg-[#FAF9F6] text-[#1E2A44] font-sans">
       {/* SECTION 01 — HERO */}
-      <section className="pt-32 pb-24 md:pt-40 md:pb-32 bg-[#F8FAFC]">
-        <div className="container-fluid max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="max-w-2xl">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[#1E2A44] mb-6 leading-[1.15]">
-                You will leave knowing something about your child that school has never told you.
+      <section className="pt-40 pb-24 bg-accent-surface relative overflow-hidden flex items-center min-h-[70vh]">
+        <div className="absolute inset-0 lab-grid opacity-[0.03]" />
+        <div className="container-fluid relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/5 border border-primary-500/10 text-primary-500 text-[11px] font-bold uppercase tracking-widest mb-10">
+                The Parent Perspective
+              </div>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-primary-500 mb-8 leading-[1.1] tracking-tight">
+                You will leave knowing something about your child <br className="hidden md:block" />
+                <span className="text-accent-teal italic font-light">that school has never told you.</span>
               </h1>
-              <p className="text-lg md:text-xl text-neutral-600 mb-10 leading-relaxed font-light">
+              <p className="text-xl md:text-2xl text-neutral-600 mb-10 leading-relaxed font-light">
                 What parents discover through hands-on RoboSTEM challenges, expert interaction sessions, and real observation-based guidance.
               </p>
               <Link href="/schedule-visit" className="inline-block">
-                <Button size="lg" className="px-8 py-4 bg-accent-teal shadow-md hover:shadow-lg border-none text-white transition-all text-lg font-semibold rounded-full">
+                <Button size="lg" className="px-12 py-6 bg-accent-teal shadow-xl shadow-accent-teal/20 border-none text-white transition-all text-xl font-bold rounded-full">
                   Schedule a visit →
                 </Button>
               </Link>
@@ -199,7 +199,7 @@ export default async function ForParentsPage() {
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#1E2A44] mb-4">
               The questions most parents <br className="hidden md:block" /> rarely ask out loud.
             </h2>
-            <p className="text-lg text-neutral-500 font-light max-w-2xl mx-auto">
+            <p className="text-lg text-neutral-600 font-light max-w-2xl mx-auto">
               We'd rather answer them directly.
             </p>
           </div>
@@ -250,7 +250,7 @@ export default async function ForParentsPage() {
       {/* AS FEATURED IN (Mini Logo Strip) */}
       <section className="py-12 bg-white border-y border-neutral-100">
         <div className="container-fluid max-w-5xl mx-auto px-4 text-center">
-          <p className="text-xs font-mono text-neutral-400 uppercase tracking-[0.2em] mb-8 font-bold">As Featured In</p>
+          <p className="text-xs font-mono text-neutral-500 uppercase tracking-[0.2em] mb-8 font-bold">As Featured In</p>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
             {/* Replace with actual newspaper logos */}
             <div className="h-8 md:h-10 w-32 bg-neutral-200 rounded animate-pulse"></div>
@@ -336,13 +336,11 @@ export default async function ForParentsPage() {
 
           <p className="text-xs font-mono text-neutral-400 uppercase tracking-widest font-bold">
             Free Parent Orientation <span className="mx-2 text-white/30">·</span> 30–45 minutes <br className="md:hidden" />
-            <span className="hidden md:inline mx-2 text-white/30">·</span> 📍 Bibwewadi, Pune <br className="md:hidden" />
             <span className="hidden md:inline mx-2 text-white/30">·</span> We'll WhatsApp you a confirmation.
           </p>
         </div>
       </section>
 
-      <Footer data={settings} />
     </div>
   )
 }

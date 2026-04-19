@@ -4,8 +4,8 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fursmartism.vercel.
 
 export const metadata: Metadata = {
   title: 'The Thinking Lab | FunSmartism',
-  description: "We don't teach. We observe. See how our methodology works to build thinking habits in children aged 8-14.",
-  keywords: ['thinking lab', 'methodology', 'child observation', 'cognitive habits', 'Pune'],
+  description: "We don't teach. We observe. See how our methodology works to build thinking habits in children.",
+  keywords: ['thinking lab', 'methodology', 'child observation', 'cognitive habits'],
   openGraph: {
     title: 'The Thinking Lab Methodology | FunSmartism',
     description: 'Schools measure knowledge, not thinking. We observe how children interact with unfamiliar complexity.',

@@ -5,7 +5,7 @@ import { urlForImage } from '../../sanity/lib/image'
 export function WhatMakesDifferent({ data }: { data?: any }) {
   const heading = data?.heading || "A Different Kind of Learning"
   const subheading = data?.subheading || "Will your child's true potential go unnoticed?"
-  const description = data?.description || "There’s a difference between completing a project and understanding how the child thought through it. A thinking lab for children aged 8–16 in Pune."
+  const description = data?.description || "There’s a difference between completing a project and understanding how the child thought through it. A premium thinking lab for curious minds."
   
   const comparisonImage = data?.image 
     ? urlForImage(data.image).width(1200).height(800).url() 
@@ -27,7 +27,7 @@ export function WhatMakesDifferent({ data }: { data?: any }) {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-500 mb-6 leading-tight">
             {heading}
           </h2>
-          <p className="text-lg text-neutral-500 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
             {description}
           </p>
         </div>

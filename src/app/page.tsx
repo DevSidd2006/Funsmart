@@ -7,20 +7,17 @@ import { MidPageCTA } from '../components/sections/MidPageCTA'
 import { EduEvents } from '../components/sections/EduEvents'
 import { TestimonialsSlider } from '../components/sections/TestimonialsSlider'
 import { FinalCTA } from '../components/sections/FinalCTA'
-import { Footer } from '../components/sections/Footer'
 
 import { sanityFetch } from '../sanity/lib/live'
-import { homePageQuery, settingsQuery, testimonialsQuery, galleryQuery } from '../sanity/lib/queries'
+import { homePageQuery, testimonialsQuery, galleryQuery } from '../sanity/lib/queries'
 
 export default async function HomePage() {
   const [
     { data: homeData },
-    { data: settings },
     { data: testimonials },
     { data: galleryItems }
   ] = await Promise.all([
     sanityFetch({ query: homePageQuery }),
-    sanityFetch({ query: settingsQuery }),
     sanityFetch({ query: testimonialsQuery }),
     sanityFetch({ query: galleryQuery })
   ])
@@ -52,8 +49,6 @@ export default async function HomePage() {
 
       {/* Section 07 — CLOSING CTA */}
       <FinalCTA data={homeData?.closingCTA} />
-
-      <Footer data={settings} />
     </main>
   )
 }

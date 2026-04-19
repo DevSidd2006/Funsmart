@@ -35,7 +35,7 @@ export function FinalCTA({ data }: { data?: any }) {
                 Schedule a visit →
               </Button>
             </Link>
-            <div className="flex items-center gap-2 text-xs font-mono text-white/50 tracking-[0.2em] uppercase">
+            <div className="flex items-center gap-2 text-xs font-mono text-white/70 tracking-[0.2em] uppercase">
               Free · 30–45 minutes · We confirm within 2 hours
             </div>
           </div>

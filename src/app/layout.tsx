@@ -25,7 +25,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fursmartism.vercel.
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'FunSmartism Intelligence Center | Scientist-Inspired Thinking for Children Aged 8–16',
+    default: 'FunSmartism Intelligence Center | Scientist-Inspired Thinking Lab',
     template: '%s | FunSmartism',
   },
   description:
@@ -37,7 +37,6 @@ export const metadata: Metadata = {
     'future-ready skills',
     'RoboSTEM',
     'robotics for kids',
-    'Pune',
   ],
   authors: [{ name: 'FunSmartism' }],
   icons: {
@@ -49,7 +48,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'FunSmartism Intelligence Center | The Thinking Lab',
-    description: "We don't teach. We observe. A premium thinking lab for young minds aged 8-14. Robotics, STEM, and scientist-style thinking in Pune.",
+    description: "We don't teach. We observe. A premium thinking lab for curious young minds. Robotics, STEM, and scientist-style thinking.",
     url: siteUrl,
     siteName: 'FunSmartism Intelligence Center',
     images: [
@@ -57,7 +56,7 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'FunSmartism Intelligence Center - The Thinking Lab, Pune',
+        alt: 'FunSmartism Intelligence Center - The Thinking Lab',
       },
     ],
     locale: 'en_IN',
@@ -66,7 +65,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'FunSmartism Intelligence Center | The Thinking Lab',
-    description: "We don't teach. We observe. A premium STEM thinking lab for children aged 8-16 in Pune.",
+    description: "We don't teach. We observe. A premium STEM thinking lab for young minds.",
     images: ['/og-image.png'],
   },
   robots: {
@@ -81,9 +80,11 @@ export const metadata: Metadata = {
 }
 
 import { NavbarWrapper } from '@/components/ui/NavbarWrapper'
+import { Footer } from '@/components/sections/Footer'
 import { draftMode } from 'next/headers'
 import { VisualEditing } from 'next-sanity/visual-editing'
-import { SanityLive } from '@/sanity/lib/live'
+import { SanityLive, sanityFetch } from '@/sanity/lib/live'
+import { settingsQuery } from '@/sanity/lib/queries'
 
 export default async function RootLayout({
   children,
@@ -91,6 +92,7 @@ export default async function RootLayout({
   children: React.ReactNode
 }) {
   const { isEnabled: isDraftMode } = await draftMode()
+  const { data: settings } = await sanityFetch({ query: settingsQuery })
 
   return (
     <html
@@ -106,6 +108,8 @@ export default async function RootLayout({
         <main className="min-h-screen">
           {children}
         </main>
+
+        <Footer data={settings} />
 
         {isDraftMode && (
           <a 

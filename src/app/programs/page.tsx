@@ -1,10 +1,9 @@
 import { Metadata } from 'next'
 import { Button } from '@/components/ui/Button'
-import { Footer } from '@/components/sections/Footer'
 import { JoinCommunity } from '@/components/ui/JoinCommunity'
 import { Accordion } from '@/components/ui/Accordion'
 import { sanityFetch } from '@/sanity/lib/live'
-import { settingsQuery, programsQuery } from '@/sanity/lib/queries'
+import { programsQuery } from '@/sanity/lib/queries'
 import { Check, Calendar, ArrowRight, Star, Clock, Laptop, Calculator, Puzzle, Settings, Plane, Rocket, PenTool, Telescope, Cpu, Bot, Users, Presentation } from 'lucide-react'
 import * as LucideIcons from 'lucide-react'
 import Link from 'next/link'
@@ -13,8 +12,8 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fursmartism.vercel.
 
 export const metadata: Metadata = {
   title: 'Programs | FunSmartism',
-  description: 'Two programs. One way of thinking about children. 10-Day Reset Workshop and Year-Long Thinking Lab for ages 8-16.',
-  keywords: ['workshop', 'thinking lab', 'children programs', 'Pune', 'STEM', 'robotics', 'coding'],
+  description: 'Two programs. One way of thinking about children. 10-Day Reset Workshop and Year-Long Thinking Lab.',
+  keywords: ['workshop', 'thinking lab', 'children programs', 'STEM', 'robotics', 'coding'],
 }
 
 const workshopThemes = [
@@ -71,10 +70,8 @@ const faqs = [
 
 export default async function ProgramsPage() {
   const [
-    { data: settings },
     { data: programs }
   ] = await Promise.all([
-    sanityFetch({ query: settingsQuery }),
     sanityFetch({ query: programsQuery }),
   ])
 
@@ -438,7 +435,7 @@ export default async function ProgramsPage() {
             </div>
             <div className="mt-12 space-y-2">
               <p className="text-xs text-white/30 font-mono tracking-[0.3em] uppercase font-bold">
-                Free Parent Orientation · 30–45 minutes · 📍 Bibwewadi, Pune
+                Free Parent Orientation · 30–45 minutes
               </p>
               <Link href="/programs" className="block text-sm text-accent-teal/60 hover:text-accent-teal transition-colors font-medium">
                 Want to see the programs first? See programs →
@@ -448,7 +445,6 @@ export default async function ProgramsPage() {
         </div>
       </section>
 
-      <Footer data={settings} />
     </div>
   )
 }

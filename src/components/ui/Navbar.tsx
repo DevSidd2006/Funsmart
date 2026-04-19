@@ -31,7 +31,7 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const isDarkHeroPage = pathname === '/' || pathname === '/thinking-lab' || pathname === '/programs' || pathname === '/for-parents'
+  const isDarkHeroPage = pathname === '/' || pathname === '/thinking-lab' || pathname === '/programs' || pathname === '/activities'
   const useLightText = isDarkHeroPage && !scrolled && !isOpen
 
   return (
@@ -43,7 +43,7 @@ export function Navbar() {
     >
       <div 
         className={cn(
-          "container-fluid max-w-7xl mx-auto flex items-center justify-between transition-all duration-700 rounded-[2rem]",
+          "container-fluid max-w-screen-2xl mx-auto flex items-center justify-between transition-all duration-700 rounded-[2rem]",
           scrolled 
             ? "bg-white/80 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-white/20 px-8 py-3" 
             : "bg-transparent py-0"
@@ -52,12 +52,15 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center group py-1">
           <div className={cn(
-            "p-1.5 rounded-2xl transition-all duration-500",
+            "p-3 rounded-2xl transition-all duration-500 mr-8",
             useLightText ? "bg-white shadow-xl shadow-black/10" : "bg-transparent"
           )}>
-            <img 
+            <Image 
               src="/images/logo.png" 
               alt="FunSmartism Logo" 
+              width={200}
+              height={80}
+              priority
               className="h-12 md:h-14 w-auto object-contain transition-all duration-500 group-hover:scale-105"
             />
           </div>
@@ -74,7 +77,7 @@ export function Navbar() {
                   'relative text-[11px] font-bold uppercase tracking-[0.2em] transition-all duration-300 group whitespace-nowrap',
                   pathname === link.href 
                     ? (useLightText ? 'text-accent-teal' : 'text-primary-500') 
-                    : (useLightText ? 'text-white/70 hover:text-white' : 'text-neutral-500 hover:text-primary-500')
+                    : (useLightText ? 'text-white/90 hover:text-white' : 'text-neutral-700 hover:text-primary-500')
                 )}
               >
                 {link.name}

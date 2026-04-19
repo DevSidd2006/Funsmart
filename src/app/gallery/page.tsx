@@ -10,19 +10,24 @@ export default async function GalleryPage() {
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
       {/* Header */}
-      <section className="mb-20">
-        <div className="container-fluid">
-          <div className="flex flex-col md:flex-row justify-between items-end gap-8">
-            <div className="max-w-2xl">
-              <h1 className="text-5xl md:text-7xl font-serif font-bold text-[#1E2A44] leading-[1.1] mb-8">
-                A gallery of <span className="text-[#2FB5A3] italic font-light">pure focus</span>.
+      <section className="pt-40 pb-24 bg-accent-surface border-b border-neutral-100 relative overflow-hidden mb-20">
+        <div className="absolute inset-0 lab-grid opacity-[0.03]" />
+        <div className="container-fluid relative z-10">
+          <div className="flex flex-col lg:flex-row justify-between items-end gap-12">
+            <div className="max-w-3xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/5 border border-primary-500/10 text-primary-500 text-[11px] font-bold uppercase tracking-widest mb-10">
+                Visual Discovery
+              </div>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-primary-500 leading-[1.05] tracking-tight mb-8">
+                A gallery of <br />
+                <span className="text-accent-teal italic font-light">pure focus.</span>
               </h1>
-              <p className="text-xl text-neutral-500 leading-relaxed">
+              <p className="text-xl md:text-2xl text-neutral-500 leading-relaxed font-light">
                 Explore authentic moments from our Thinking Lab. We capture the process of discovery, the focus of unscripted problem-solving, and the quiet joy of the "Aha!" moment.
               </p>
             </div>
-            <div className="hidden md:block pb-2">
-              <JoinCommunity variant="solid" className="px-8" />
+            <div className="hidden lg:block pb-2">
+              <JoinCommunity variant="solid" className="px-12 py-6 text-xl" />
             </div>
           </div>
         </div>

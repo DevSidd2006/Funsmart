@@ -2,7 +2,6 @@
 
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/Button'
-import { Footer } from '@/components/sections/Footer'
 import Link from 'next/link'
 
 export default function ScheduleVisitPage() {
@@ -40,25 +39,31 @@ export default function ScheduleVisitPage() {
     <div className="bg-[#FAF9F6] text-[#1E2A44] font-sans">
       
       {/* SECTION 01 — HERO */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-[#F8FAFC]">
-        <div className="container-fluid max-w-3xl mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-[#1E2A44] mb-6 leading-tight">
-            Start with a <br className="hidden md:block" />
-            <span className="italic font-light text-accent-teal">conversation.</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-neutral-600 mb-10 leading-relaxed font-light max-w-2xl mx-auto">
-            Schedule a visit — meet us, understand the process, understand how FunSmartism works. No commitment until you're ready.
-          </p>
-          
-          <a href="#schedule-form" className="inline-block mb-6">
-            <Button size="lg" className="px-10 py-5 bg-[#1E2A44] hover:bg-accent-teal border-none text-white text-lg rounded-full font-semibold shadow-lg transition-colors">
-              Schedule a visit →
-            </Button>
-          </a>
-          
-          <div className="text-xs md:text-sm font-mono text-neutral-500 uppercase tracking-widest font-bold">
-            Free Parent Orientation <span className="mx-2 text-neutral-300">·</span> 30–45 minutes <br className="md:hidden"/>
-            <span className="hidden md:inline mx-2 text-neutral-300">·</span> No Commitment <span className="mx-2 text-neutral-300">·</span> 📍 Bibwewadi, Pune
+      <section className="pt-40 pb-24 bg-accent-surface relative overflow-hidden flex items-center min-h-[60vh]">
+        <div className="absolute inset-0 lab-grid opacity-[0.03]" />
+        <div className="container-fluid relative z-10 text-center">
+          <div className="max-w-4xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/5 border border-primary-500/10 text-primary-500 text-[11px] font-bold uppercase tracking-widest mb-10">
+              Get Started
+            </div>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-primary-500 mb-8 leading-[1.05] tracking-tight">
+              Start with a <br />
+              <span className="italic font-light text-accent-teal">conversation.</span>
+            </h1>
+            <p className="text-xl md:text-2xl text-neutral-600 mb-10 leading-relaxed font-light max-w-3xl mx-auto">
+              Schedule a visit — meet us, understand the process, understand how FunSmartism works. No commitment until you're ready.
+            </p>
+            
+            <a href="#schedule-form" className="inline-block mb-10">
+              <Button size="lg" className="px-12 py-6 bg-primary-500 hover:bg-accent-teal border-none text-white text-xl rounded-full font-bold shadow-xl shadow-primary-500/10 transition-colors">
+                Schedule a visit →
+              </Button>
+            </a>
+            
+            <div className="text-xs md:text-sm font-mono text-neutral-600 uppercase tracking-[0.3em] font-bold">
+              Free Parent Orientation <span className="mx-2 text-neutral-300">·</span> 30–45 minutes <br className="md:hidden"/>
+              <span className="hidden md:inline mx-2 text-neutral-300">·</span> No Commitment
+            </div>
           </div>
         </div>
       </section>
@@ -142,8 +147,7 @@ export default function ScheduleVisitPage() {
                     <h2 className="text-3xl font-serif font-bold text-[#1E2A44] mb-3">Schedule a visit.</h2>
                     <p className="text-xs font-mono text-accent-teal uppercase tracking-widest font-bold">
                       Free Parent Orientation <br className="sm:hidden" />
-                      <span className="hidden sm:inline mx-2 text-neutral-300">·</span> 30–45 minutes <br className="sm:hidden" />
-                      <span className="hidden sm:inline mx-2 text-neutral-300">·</span> 📍 Bibwewadi, Pune
+                      <span className="hidden sm:inline mx-2 text-neutral-300">·</span> 30–45 minutes
                     </p>
                   </div>
 
@@ -161,8 +165,8 @@ export default function ScheduleVisitPage() {
                       <div className="space-y-1.5">
                         <label className="text-[11px] font-bold text-neutral-400 uppercase tracking-widest ml-1">Child's Age <span className="text-[#1E2A44]">*</span></label>
                         <select required className="w-full p-4 bg-neutral-50 border border-neutral-200 rounded-xl outline-none focus:ring-2 focus:ring-accent-teal/50 transition-all font-medium text-[#1E2A44] appearance-none" style={{ backgroundImage: "url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%231E2A44%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E')", backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1rem top 50%', backgroundSize: '0.65rem auto' }}>
-                          <option value="">Age (8–16)</option>
-                          {[8,9,10,11,12,13,14,15,16].map(a => <option key={a} value={a}>{a}</option>)}
+                          <option value="">Select Age</option>
+                          {[6,7,8,9,10,11,12,13,14,15,16,17,18].map(a => <option key={a} value={a}>{a}</option>)}
                         </select>
                       </div>
                     </div>
@@ -339,12 +343,11 @@ export default function ScheduleVisitPage() {
             </Button>
           </a>
           <p className="text-xs font-mono text-neutral-400 uppercase tracking-widest font-bold">
-            Free Parent Orientation <span className="mx-2 text-white/30">·</span> 30–45 minutes <span className="mx-2 text-white/30">·</span> 📍 Bibwewadi, Pune.
+            Free Parent Orientation <span className="mx-2 text-white/30">·</span> 30–45 minutes
           </p>
         </div>
       </section>
 
-      <Footer />
     </div>
   )
 }

@@ -21,7 +21,7 @@ export default {
         { name: 'headline', title: 'Primary Headline', type: 'string', description: 'e.g., Where children build scientist-inspired future-ready thinking.' },
         { name: 'subheadline', title: 'Secondary Headline (Accent)', type: 'string', description: 'Green accented line (e.g., And parents learn when to step in—and when to step back.)' },
         { name: 'subline', title: 'Paragraph Subline', type: 'text', rows: 3, description: 'Hands-on RoboSTEM challenges...' },
-        { name: 'microCopy', title: 'Supporting Micro-copy', type: 'string', description: 'Small italic text (e.g., For children aged 8–16 in Pune.)' },
+        { name: 'microCopy', title: 'Supporting Micro-copy', type: 'string', description: 'Small italic text (e.g., Intelligence Center)' },
         { name: 'image', title: 'Hero Image', type: 'image', options: { hotspot: true } },
       ]
     },

@@ -9,7 +9,7 @@ export function Hero({ data }: { data?: any }) {
   const headline = data?.headline || "Where children build scientist-inspired future-ready thinking."
   const subheadline = data?.subheadline || "And parents learn when to step in—and when to step back."
   const subline = data?.subline || "Hands-on RoboSTEM challenges and scientist interaction sessions help children grow confidence beyond marks, while our live observations help parents support thinking without over-helping."
-  const microCopyLine1 = "For children aged 8–16 in Pune."
+  const microCopyLine1 = "Intelligence Center"
   const microCopyLine2 = "Not a tuition class. Not a coaching. Scientist-inspired problem-solving with real parent guidance."
   const ctaText = data?.ctaText || "Schedule a visit →"
 
@@ -18,7 +18,7 @@ export function Hero({ data }: { data?: any }) {
     : "/images/hero-scientist.png"
 
   return (
-    <section id="home" className="relative w-full min-h-screen flex items-center bg-[#1E2A44] overflow-hidden pt-24 pb-16 text-white">
+    <section id="home" className="relative w-full min-h-screen flex items-center bg-[#1E2A44] overflow-hidden pt-52 pb-32 text-white">
       {/* Subtle Grid Background */}
       <div className="absolute inset-0 lab-grid opacity-[0.05] z-0" />
       
@@ -34,10 +34,7 @@ export function Hero({ data }: { data?: any }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           {/* Left: Text Content */}
           <div className="lg:col-span-7">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-accent-teal text-[11px] font-bold uppercase tracking-[0.2em] mb-8">
-              <span className="w-1.5 h-1.5 rounded-full bg-accent-teal animate-pulse" />
-              {microCopyLine1}
-            </div>
+            {/* Micro Copy replaced with headline directly or space */}
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-[1.05] text-balanced">
                {headline}
@@ -53,6 +50,7 @@ export function Hero({ data }: { data?: any }) {
             <p className="text-sm text-white/60 mb-12 max-w-xl italic border-l-2 border-accent-teal/30 pl-6 py-2">
               {microCopyLine2}
             </p>
+            
 
           </div>
 

@@ -37,16 +37,16 @@ export function TrustStrip() {
                   <div className="w-6 h-6 rounded-full bg-accent-teal/10 flex items-center justify-center group-hover:bg-accent-teal transition-all duration-300">
                     <Check className="text-accent-teal group-hover:text-white transition-colors" size={14} />
                   </div>
-                  <span className="text-[11px] md:text-xs font-bold text-white/80 uppercase tracking-[0.2em] leading-tight">
+                  <span className="text-[11px] md:text-xs font-bold text-white/90 uppercase tracking-[0.2em] leading-tight">
                     {item}
                   </span>
                 </div>
               ))}
             </div>
             
-            <div className="flex items-center gap-4 text-[11px] md:text-sm text-white/50 font-mono bg-white/5 w-fit px-8 py-4 rounded-full border border-white/5 shadow-inner">
+            <div className="flex items-center gap-4 text-[11px] md:text-sm text-white/70 font-mono bg-white/5 w-fit px-8 py-4 rounded-full border border-white/5 shadow-inner">
               <span className="w-2.5 h-2.5 rounded-full bg-accent-teal shadow-[0_0_10px_rgba(47,181,163,0.6)] animate-pulse" />
-              Free Parent Orientation · 30–45 minutes 📍 Bibwewadi, Pune
+              Free Parent Orientation · 30–45 minutes
             </div>
           </div>
         </div>

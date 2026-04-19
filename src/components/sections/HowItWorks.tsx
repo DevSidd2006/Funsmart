@@ -61,7 +61,7 @@ export function HowItWorks({ data }: { data?: any }) {
                   <h3 className="text-xl md:text-2xl font-serif font-bold text-primary-500 mb-4 leading-snug">
                     {step.title}
                   </h3>
-                  <p className="text-neutral-500 text-base leading-relaxed mb-8 flex-grow">
+                  <p className="text-neutral-600 text-base leading-relaxed mb-8 flex-grow">
                     {step.description}
                   </p>
                 </div>

@@ -1,7 +1,16 @@
+import { Metadata } from 'next'
+import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { Card } from '@/components/ui/Card'
 import { JoinCommunity } from '@/components/ui/JoinCommunity'
-import { Beaker, Cpu, Rocket, BookOpen, Map, HelpCircle } from 'lucide-react'
+import { Beaker, Cpu, Rocket, Map } from 'lucide-react'
+import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'Activities | FunSmartism',
+  description: 'Unscripted RoboSTEM activities designed to reveal how your child thinks. Coding, Robotics, Space Science, and more.',
+  keywords: ['STEM activities', 'robotics', 'coding for kids', 'space science', 'thinking modules'],
+}
 
 const activityCategories = [
   {
@@ -34,15 +43,19 @@ export default function ActivitiesPage() {
   return (
     <div className="bg-white">
       {/* Header */}
-      <section className="py-24 bg-primary-500 text-white relative">
-        <div className="absolute inset-0 lab-grid opacity-[0.03]" />
+      <section className="pt-32 pb-24 bg-primary-500 text-white relative overflow-hidden min-h-[60vh] flex items-center">
+        <div className="absolute inset-0 lab-grid opacity-[0.05]" />
         <div className="container-fluid relative z-10">
-          <div className="max-w-2xl">
-            <h1 className="text-5xl md:text-7xl font-serif font-bold text-balanced leading-tight">
-              The Activities of <br /><span className="text-accent-teal italic font-light italic">Discovery</span>.
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-teal/10 border border-accent-teal/20 text-accent-teal text-[11px] font-bold uppercase tracking-widest mb-10">
+              The Programs
+            </div>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-balanced leading-[1.05] tracking-tight">
+              The Activities of <br />
+              <span className="text-accent-teal italic font-light">Discovery.</span>
             </h1>
-            <p className="text-xl text-primary-100/70 mt-8 leading-relaxed max-w-xl">
-              We don't teach subjects. We provide environments for discovery. Explore our range of unscripted programs designed for children aged 8-14.
+            <p className="text-xl md:text-2xl text-[#B7E3DD] mt-8 leading-relaxed max-w-2xl font-light">
+              We don't teach subjects. We provide environments for discovery. Explore our range of unscripted programs designed for curious minds.
             </p>
           </div>
         </div>
@@ -70,8 +83,13 @@ export default function ActivitiesPage() {
                     <p className="text-neutral-500 mb-10 leading-relaxed max-w-md text-lg">
                       {cat.desc}
                     </p>
-                    <div className="relative aspect-video rounded-lg overflow-hidden bg-white border border-neutral-100 flex items-center justify-center shadow-sm group-hover:shadow-md transition-shadow">
-                       <img src={cat.image} alt={cat.title} className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[2s]" />
+                    <div className="relative aspect-video rounded-lg overflow-hidden bg-white border border-neutral-100 shadow-sm group-hover:shadow-md transition-shadow">
+                       <Image 
+                         src={cat.image} 
+                         alt={cat.title} 
+                         fill
+                         className="object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[2s]" 
+                       />
                        <div className="absolute inset-0 bg-primary-500/0 group-hover:bg-primary-500/10 transition-colors duration-500" />
                     </div>
                   </div>
@@ -99,17 +117,31 @@ export default function ActivitiesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-primary-500 text-white relative overflow-hidden">
+      <section className="section-spacing text-center bg-primary-500 text-white relative overflow-hidden py-32">
         <div className="absolute inset-0 lab-grid opacity-[0.05]" />
-        <div className="container-fluid flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10">
-          <h2 className="text-4xl md:text-6xl font-serif font-bold lg:max-w-2xl leading-tight">
-            Find the right <span className="text-accent-teal italic font-light italic">activity</span> for your child's thinking pattern.
-          </h2>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" className="bg-accent-teal hover:bg-[#28A392] text-white border-none px-12 py-6 text-xl shadow-xl shadow-black/20">
-              Book an Orientation
-            </Button>
-            <JoinCommunity variant="solid" className="px-12 py-6 text-xl" />
+        <div className="container-fluid relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-8 leading-tight tracking-tight">
+              Find the right <span className="text-accent-teal italic font-light">activity</span> for your child's thinking pattern.
+            </h2>
+            <p className="text-xl md:text-2xl text-[#B7E3DD] mb-16 font-light italic">
+              Experience scientist-inspired RoboSTEM discovery first-hand.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <Link href="/schedule-visit" className="w-full sm:w-auto">
+                <Button size="lg" className="bg-accent-teal border-none text-white px-16 py-6 text-xl shadow-huge shadow-accent-teal/30 w-full rounded-full font-bold">
+                  Book an Orientation
+                </Button>
+              </Link>
+              <div className="w-full sm:w-auto">
+                <JoinCommunity variant="solid" className="px-16 py-6 text-xl w-full rounded-full" />
+              </div>
+            </div>
+            <div className="mt-12">
+              <p className="text-xs text-white/30 font-mono tracking-[0.3em] uppercase font-bold">
+                Free Parent Orientation
+              </p>
+            </div>
           </div>
         </div>
       </section>

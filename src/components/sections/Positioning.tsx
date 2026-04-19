@@ -11,7 +11,7 @@ export function Positioning() {
               More than a class.<br />A thinking laboratory.
             </h2>
 
-            <p className="text-xl text-neutral-500 leading-relaxed mb-12">
+            <p className="text-xl text-neutral-600 leading-relaxed mb-12">
               Traditional schools measure what children know. At FunSmartism, we observe how they think. This single shift in perspective changes how you understand your child's potential.
             </p>
 
@@ -27,7 +27,7 @@ export function Positioning() {
                   </div>
                   <div>
                     <h3 className="text-lg font-serif font-bold text-primary-500 mb-1">{item.title}</h3>
-                    <p className="text-sm text-neutral-500">{item.desc}</p>
+                    <p className="text-sm text-neutral-600">{item.desc}</p>
                   </div>
                 </li>
               ))}
@@ -41,7 +41,7 @@ export function Positioning() {
             </div>
             {/* Overlay Lab Label */}
             <div className="absolute top-8 right-8 bg-white/95 backdrop-blur-sm p-6 rounded-sm shadow-sm border border-primary-50">
-              <p className="font-serif font-bold text-primary-500">Pune Center, IN</p>
+              <p className="font-serif font-bold text-primary-500">Intelligence Center</p>
             </div>
           </div>
         </div>

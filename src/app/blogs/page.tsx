@@ -1,6 +1,5 @@
 import { sanityFetch } from '@/sanity/lib/live'
-import { blogPostsQuery, settingsQuery } from '@/sanity/lib/queries'
-import { Footer } from '@/components/sections/Footer'
+import { blogPostsQuery } from '@/sanity/lib/queries'
 import { urlForImage } from '@/sanity/lib/image'
 import { Button } from '@/components/ui/Button'
 import { JoinCommunity } from '@/components/ui/JoinCommunity'
@@ -9,25 +8,27 @@ import Link from 'next/link'
 
 export default async function BlogsPage() {
   const [
-    { data: posts },
-    { data: settings }
+    { data: posts }
   ] = await Promise.all([
-    sanityFetch({ query: blogPostsQuery }),
-    sanityFetch({ query: settingsQuery })
+    sanityFetch({ query: blogPostsQuery })
   ])
 
   const displayPosts = posts?.length > 0 ? posts : []
   return (
     <div className="bg-white">
       {/* Blog Hero */}
-      <section className="py-24 bg-accent-surface border-b border-neutral-100 relative">
+      <section className="pt-40 pb-24 bg-accent-surface border-b border-neutral-100 relative overflow-hidden">
         <div className="absolute inset-0 lab-grid opacity-[0.03]" />
         <div className="container-fluid relative z-10">
-          <div className="max-w-xl">
-            <h1 className="text-5xl md:text-7xl font-serif font-bold text-primary-500 mb-8 leading-[1.1]">
-              Thinking in <br/><span className="text-accent-teal italic font-light">Insights</span>.
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/5 border border-primary-500/10 text-primary-500 text-[11px] font-bold uppercase tracking-widest mb-10">
+              The Observer Blog
+            </div>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-primary-500 mb-8 leading-[1.05] tracking-tight">
+              Thinking in <br/>
+              <span className="text-accent-teal italic font-light">Insights.</span>
             </h1>
-            <p className="text-xl text-neutral-500 leading-relaxed max-w-lg mb-12">
+            <p className="text-xl md:text-2xl text-neutral-500 leading-relaxed max-w-2xl font-light">
               Deep dives into child development, mental models, and the future of educational patterns for curious parents.
             </p>
           </div>
@@ -135,7 +136,6 @@ export default async function BlogsPage() {
         </div>
       </section>
       
-      <Footer data={settings} />
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export function FounderJourney() {
   return (
@@ -14,24 +15,25 @@ export function FounderJourney() {
             <div>
               <div className="rounded-[2rem] overflow-hidden border border-neutral-200 bg-white p-6 shadow-lg mb-6">
                 <div className="w-full aspect-[4/5] rounded-2xl mb-6 overflow-hidden relative shadow-inner bg-neutral-50 border border-neutral-100">
-                  <img 
+                  <Image 
                     src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800" 
                     alt="Dipali Akolkar in FunSmartism Lab" 
-                    className="w-full h-full object-cover" 
+                    fill
+                    className="object-cover" 
                   />
                 </div>
                 <div className="text-mono text-accent-teal mb-3 text-sm uppercase tracking-widest font-bold">From software systems to child thinking systems</div>
                 <h3 className="text-2xl font-serif font-bold text-[#1E2A44] mb-2">Dipali Akolkar</h3>
-                <p className="text-neutral-500 text-sm mb-4">Founder — FunSmartism Intelligence Center</p>
+                <p className="text-neutral-600 text-sm mb-4">Founder — FunSmartism Intelligence Center</p>
                 <div className="w-12 h-1 bg-accent-teal/30 rounded-full mb-4"></div>
                 <p className="text-neutral-600 leading-relaxed text-sm">
-                  After years in software development and hands-on parenting, Dipali went deeper into child development through formal learning experiences in both Pune and the USA.
+                  After years in software development and hands-on parenting, Dipali went deeper into child development through formal learning experiences both globally and in the USA.
                 </p>
                 <p className="text-neutral-600 leading-relaxed text-sm mt-3">
                   What stood out was simple: the right environment can completely change how a child observes, persists, and solves.
                 </p>
                 <p className="text-neutral-600 leading-relaxed text-sm mt-3">
-                  That insight led her to build FunSmartism in Pune — a scientist-inspired RoboSTEM environment where real problem-solving becomes visible and parents learn how to support independent thinking in everyday life.
+                  That insight led her to build FunSmartism — a scientist-inspired RoboSTEM environment where real problem-solving becomes visible and parents learn how to support independent thinking in everyday life.
                 </p>
               </div>
             </div>
