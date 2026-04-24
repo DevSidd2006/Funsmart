@@ -64,7 +64,7 @@ export default async function ForParentsPage() {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/5 border border-primary-500/10 text-primary-500 text-[10px] font-bold uppercase tracking-widest mb-10">
                 The Parent Perspective
               </div>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-primary-500 mb-8 leading-[1.05] tracking-tight text-balanced">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-500 mb-8 leading-[1.05] tracking-tight text-balanced">
                 You will leave knowing something about your child <br />
                 <span className="text-accent-teal italic font-light opacity-90">that school has never told you.</span>
               </h1>

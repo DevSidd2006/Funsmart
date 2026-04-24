@@ -86,7 +86,7 @@ export default function ProgramsPage() {
         <div className="absolute inset-0 lab-grid opacity-[0.05]" />
         <div className="container-fluid relative z-10 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-7xl font-serif font-bold text-white mb-8 leading-tight tracking-tight">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-8 leading-tight tracking-tight">
               Two programs. <br />
               <span className="text-accent-teal italic font-light opacity-90">One way of thinking about children.</span>
             </h1>

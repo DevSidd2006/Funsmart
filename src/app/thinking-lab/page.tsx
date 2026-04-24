@@ -84,7 +84,7 @@ export default function ThinkingLabPage() {
         
         <div className="container-fluid relative z-10">
           <div className="max-w-5xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-primary-500 mb-8 leading-[1.06]">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-500 mb-8 leading-[1.06]">
               We don't teach. <br />
               <span className="text-accent-teal italic font-light">We observe.</span>
             </h1>
