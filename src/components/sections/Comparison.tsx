@@ -1,21 +1,18 @@
 import { Check } from 'lucide-react'
 import Image from 'next/image'
-import { urlForImage } from '../../sanity/lib/image'
 
 export function WhatMakesDifferent({ data }: { data?: any }) {
-  const heading = data?.heading || "A Different Kind of Learning"
-  const subheading = data?.subheading || "Will your child's true potential go unnoticed?"
-  const description = data?.description || "There’s a difference between completing a project and understanding how the child thought through it. A premium thinking lab for curious minds."
+  const heading = data?.heading || "Will your child's true potential go unnoticed?"
+  const subheading = data?.subheading || "A Different Kind of Learning"
+  const description = data?.description || "There's a difference between completing a project and understanding how the child thought through it. A thinking lab for children aged 8-16 in Pune."
   
-  const comparisonImage = data?.image 
-    ? urlForImage(data.image).width(1200).height(800).url() 
-    : "/images/stem-vs-lab.png"
+  const comparisonImage = "/images/stem-vs-lab.png"
 
   const rows = data?.comparisonRows || [
     { text: 'Explore without instructions — child decides where to start' },
     { text: 'Work on real challenges with no fixed answer' },
-    { text: 'Observe how the child tests, retries, and solves' },
-    { text: 'Share thinking habits + how to respond to them at home' },
+    { text: 'Observe how the child tests, retries, and solves.' },
+    { text: 'Share thinking habit + how to respond to them at home.' },
     { text: 'Thinking maturity as the outcome' },
   ]
 
@@ -67,3 +64,4 @@ export function WhatMakesDifferent({ data }: { data?: any }) {
     </section>
   )
 }
+

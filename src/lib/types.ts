@@ -38,6 +38,8 @@ export interface Testimonial {
   location: string
   child?: string
   childAge?: number
+  program?: string
+  role?: string
 }
 
 export interface FAQItem {

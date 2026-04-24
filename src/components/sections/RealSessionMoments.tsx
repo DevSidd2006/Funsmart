@@ -23,6 +23,7 @@ const moments = [
 
 export function RealSessionMoments() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [expandedDesktop, setExpandedDesktop] = useState<number | null>(null)
 
   const toggleAccordion = (index: number) => {
     setOpenIndex(openIndex === index ? null : index)
@@ -42,7 +43,7 @@ export function RealSessionMoments() {
 
         {/* Desktop View: Cards */}
         <div className="hidden md:grid md:grid-cols-3 gap-6">
-          {moments.map((moment) => (
+          {moments.map((moment, index) => (
             <div
               key={moment.title}
               className="relative overflow-hidden rounded-[20px] bg-neutral-50 border border-neutral-200 p-8 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
@@ -55,9 +56,21 @@ export function RealSessionMoments() {
                 <h3 className="text-xl font-serif font-bold text-[#16213B] mb-4">
                   {moment.title}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed text-sm">
-                  {moment.text}
-                </p>
+                <div className="relative">
+                  <p className={`text-neutral-600 leading-relaxed text-sm ${expandedDesktop === index ? '' : 'max-h-36 overflow-hidden'}`}>
+                    {moment.text}
+                  </p>
+                  {expandedDesktop !== index && (
+                    <div className="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-neutral-50 to-transparent" />
+                  )}
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setExpandedDesktop(expandedDesktop === index ? null : index)}
+                  className="mt-4 text-sm font-semibold text-accent-teal hover:text-accent-teal/80 transition-colors"
+                >
+                  {expandedDesktop === index ? 'Show less' : 'Read full moment'}
+                </button>
               </div>
             </div>
           ))}

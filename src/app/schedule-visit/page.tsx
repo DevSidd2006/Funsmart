@@ -61,8 +61,8 @@ export default function ScheduleVisitPage() {
             </a>
             
             <div className="text-xs md:text-sm font-mono text-neutral-600 uppercase tracking-[0.3em] font-bold">
-              Free Parent Orientation <span className="mx-2 text-neutral-300">·</span> 30–45 minutes <br className="md:hidden"/>
-              <span className="hidden md:inline mx-2 text-neutral-300">·</span> No Commitment
+              Free Parent Orientation <span className="mx-2 text-neutral-300">·</span> 30–45 minutes <span className="mx-2 text-neutral-300">·</span> No Commitment<br/>
+              <span className="text-accent-teal">📍 Bibwewadi, Pune</span>
             </div>
           </div>
         </div>
@@ -97,7 +97,7 @@ export default function ScheduleVisitPage() {
                     <p className="text-xs font-mono font-bold text-neutral-400 uppercase tracking-widest mb-2">Step 2 — Your child</p>
                     <h3 className="text-xl font-bold text-[#1E2A44] mb-3">10-Day Thinking Reset Workshop.</h3>
                     <p className="text-neutral-600 leading-relaxed text-sm mb-3 font-light">
-                      10 days. 10 themes. Real challenges, real materials, real thinking. Each day is different. All-inclusive.
+                      10 days. 10 themes. Real challenges, real materials, real thinking.
                     </p>
                   </div>
                   
@@ -106,7 +106,7 @@ export default function ScheduleVisitPage() {
                     <p className="text-xs font-mono font-bold text-neutral-400 uppercase tracking-widest mb-2">Step 3 — The long game</p>
                     <h3 className="text-xl font-bold text-[#1E2A44] mb-3">Year-Long Intelligence Program.</h3>
                     <p className="text-neutral-600 leading-relaxed text-sm mb-3 font-light">
-                      One theme per month. One session per week. Deep projects, observed thinking, parent insights. Natural next step — no separate application.
+                      One theme per month. One session per week. Deep projects, observed thinking, parent insights.
                     </p>
                   </div>
                 </div>
@@ -147,7 +147,7 @@ export default function ScheduleVisitPage() {
                     <h2 className="text-3xl font-serif font-bold text-[#1E2A44] mb-3">Schedule a visit.</h2>
                     <p className="text-xs font-mono text-accent-teal uppercase tracking-widest font-bold">
                       Free Parent Orientation <br className="sm:hidden" />
-                      <span className="hidden sm:inline mx-2 text-neutral-300">·</span> 30–45 minutes
+                      <span className="hidden sm:inline mx-2 text-neutral-300">·</span> 30–45 minutes <span className="mx-2 text-neutral-300">·</span> 📍 Bibwewadi, Pune
                     </p>
                   </div>
 
@@ -166,7 +166,7 @@ export default function ScheduleVisitPage() {
                         <label className="text-[11px] font-bold text-neutral-400 uppercase tracking-widest ml-1">Child's Age <span className="text-[#1E2A44]">*</span></label>
                         <select required className="w-full p-4 bg-neutral-50 border border-neutral-200 rounded-xl outline-none focus:ring-2 focus:ring-accent-teal/50 transition-all font-medium text-[#1E2A44] appearance-none" style={{ backgroundImage: "url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%231E2A44%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E')", backgroundRepeat: 'no-repeat', backgroundPosition: 'right 1rem top 50%', backgroundSize: '0.65rem auto' }}>
                           <option value="">Select Age</option>
-                          {[6,7,8,9,10,11,12,13,14,15,16,17,18].map(a => <option key={a} value={a}>{a}</option>)}
+                          {[8,9,10,11,12,13,14,15,16].map(a => <option key={a} value={a}>{a}</option>)}
                         </select>
                       </div>
                     </div>

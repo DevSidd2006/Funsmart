@@ -2,23 +2,18 @@ import Image from 'next/image'
 import { Button } from '../ui/Button'
 import { Beaker, Atom, Settings, Lightbulb, Rocket, Binary, Check } from 'lucide-react'
 import { JoinCommunity } from '../ui/JoinCommunity'
-import { urlForImage } from '../../sanity/lib/image'
 import Link from 'next/link'
 
 export function Hero({ data }: { data?: any }) {
   const headline = data?.headline || "Where children build scientist-inspired future-ready thinking."
   const subheadline = data?.subheadline || "And parents learn when to step in—and when to step back."
   const subline = data?.subline || "Hands-on RoboSTEM challenges and scientist interaction sessions help children grow confidence beyond marks, while our live observations help parents support thinking without over-helping."
-  const microCopyLine1 = "Intelligence Center"
-  const microCopyLine2 = "Not a tuition class. Not a coaching. Scientist-inspired problem-solving with real parent guidance."
-  const ctaText = data?.ctaText || "Schedule a visit →"
+  const microCopy = "For children aged 8–16 in Pune. Not a tuition class. Not a coaching. Scientist-inspired problem-solving with real parent guidance."
 
-  const heroImage = data?.image 
-    ? urlForImage(data.image).width(1200).height(1500).url() 
-    : "/images/hero-scientist.png"
+  const heroImage = "/images/hero-scientist.png"
 
   return (
-    <section id="home" className="relative w-full min-h-screen flex items-center bg-[#1E2A44] overflow-hidden pt-52 pb-32 text-white">
+    <section id="home" className="relative w-full min-h-screen flex items-center bg-[#1E2A44] overflow-hidden pt-52 pb-20 md:pb-24 text-white">
       {/* Subtle Grid Background */}
       <div className="absolute inset-0 lab-grid opacity-[0.05] z-0" />
       
@@ -34,30 +29,39 @@ export function Hero({ data }: { data?: any }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           {/* Left: Text Content */}
           <div className="lg:col-span-7">
-            {/* Micro Copy replaced with headline directly or space */}
-            
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-[1.05] text-balanced">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-serif font-bold text-white mb-6 leading-[1.05] text-balanced">
                {headline}
-               <span className="block text-3xl md:text-4xl lg:text-5xl text-accent-teal mt-4 opacity-95 font-medium italic">
+              <span className="block text-xl md:text-2xl lg:text-3xl text-accent-teal mt-4 opacity-95 font-medium italic">
                  {subheadline}
                </span>
             </h1>
 
-            <p className="text-lg md:text-2xl text-[#B7E3DD] mb-8 max-w-2xl leading-relaxed font-light opacity-90">
+            <p className="text-lg md:text-xl text-[#B7E3DD] mb-10 max-w-2xl leading-relaxed font-light opacity-90">
               {subline}
             </p>
             
-            <p className="text-sm text-white/60 mb-12 max-w-xl italic border-l-2 border-accent-teal/30 pl-6 py-2">
-              {microCopyLine2}
+            <p className="text-sm md:text-base text-white/60 mb-12 max-w-xl italic border-l-2 border-accent-teal/30 pl-6 py-2">
+              {microCopy}
             </p>
             
+            <div className="flex flex-col sm:flex-row gap-6 items-center">
+              <Link href="/schedule-visit" className="w-full sm:w-auto">
+                <Button
+                  size="lg"
+                  className="px-12 py-6 text-lg shadow-2xl shadow-accent-teal/20 bg-accent-teal hover:bg-[#28A392] text-white border-none w-full rounded-full font-bold"
+                >
+                  Schedule a visit →
+                </Button>
+              </Link>
+              <JoinCommunity />
+            </div>
+
 
           </div>
 
           {/* Right: Asymmetrical Image Container */}
           <div className="lg:col-span-5 relative hidden lg:block">
             <div className="relative aspect-[4/5] w-full max-w-lg ml-auto">
-              
               {/* Glassmorphic Floating Icons */}
               <div className="absolute -top-12 -left-12 z-20 backdrop-blur-xl bg-white/10 border border-white/20 p-5 rounded-3xl shadow-huge animate-float text-accent-teal">
                 <Beaker size={32} />
@@ -98,3 +102,4 @@ export function Hero({ data }: { data?: any }) {
     </section>
   )
 }
+

@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { urlForImage } from '../../sanity/lib/image'
 
 export function RealMoments({
   data,
@@ -12,7 +11,7 @@ export function RealMoments({
   subheading?: string
   label?: string
 }) {
-  const moments = data && data.length > 0 ? data : [
+  const defaultMoments = [
     {
       id: 1,
       image: '/images/hero-child-discovery.png',
@@ -25,7 +24,7 @@ export function RealMoments({
       image: '/images/lab-observation.png',
       label: 'FACILITATOR INSIGHT',
       title: 'Observation first',
-      desc: 'The team pays attention to the small decisions that reveal a child’s thinking style.',
+      desc: 'The team pays attention to the small decisions that reveal a childs thinking style.',
     },
     {
       id: 3,
@@ -35,6 +34,8 @@ export function RealMoments({
       desc: 'Every session becomes a real-world problem where the process is the most valuable outcome.',
     },
   ]
+
+  const moments = data && data.length > 0 ? data : defaultMoments
 
   return (
     <section className="section-spacing bg-accent-surface">
@@ -52,9 +53,7 @@ export function RealMoments({
           {moments.map((mom, idx) => {
             const title = mom.title || mom.caption || `Session ${idx + 1}`
             const description = mom.desc || mom.caption || 'A moment captured while a child explores a hands-on thinking challenge.'
-            const imageUrl = mom.image?.asset 
-              ? urlForImage(mom.image).width(800).height(600).url() 
-              : (typeof mom.image === 'string' ? mom.image : 'https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=800')
+            const imageUrl = typeof mom.image === 'string' ? mom.image : (mom.imageUrl || 'https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=800')
 
             return (
               <div

@@ -25,7 +25,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fursmartism.vercel.
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'FunSmartism Intelligence Center | Scientist-Inspired Thinking Lab',
+    default: 'FunSmartism Intelligence Center',
     template: '%s | FunSmartism',
   },
   description:
@@ -37,6 +37,7 @@ export const metadata: Metadata = {
     'future-ready skills',
     'RoboSTEM',
     'robotics for kids',
+    'Pune',
   ],
   authors: [{ name: 'FunSmartism' }],
   icons: {
@@ -47,8 +48,8 @@ export const metadata: Metadata = {
     apple: '/favicon.svg',
   },
   openGraph: {
-    title: 'FunSmartism Intelligence Center | The Thinking Lab',
-    description: "We don't teach. We observe. A premium thinking lab for curious young minds. Robotics, STEM, and scientist-style thinking.",
+    title: 'FunSmartism Intelligence Center',
+    description: "Inspired by how scientists solve problems, our RoboSTEM activities help parents understand how their child thinks, retries, and solves challenges.",
     url: siteUrl,
     siteName: 'FunSmartism Intelligence Center',
     images: [
@@ -56,7 +57,7 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'FunSmartism Intelligence Center - The Thinking Lab',
+        alt: 'FunSmartism Intelligence Center',
       },
     ],
     locale: 'en_IN',
@@ -64,8 +65,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FunSmartism Intelligence Center | The Thinking Lab',
-    description: "We don't teach. We observe. A premium STEM thinking lab for young minds.",
+    title: 'FunSmartism Intelligence Center',
+    description: "Inspired by how scientists solve problems, our RoboSTEM activities help parents understand how their child thinks, retries, and solves challenges.",
     images: ['/og-image.png'],
   },
   robots: {
@@ -79,21 +80,15 @@ export const metadata: Metadata = {
   },
 }
 
+
 import { NavbarWrapper } from '@/components/ui/NavbarWrapper'
 import { Footer } from '@/components/sections/Footer'
-import { draftMode } from 'next/headers'
-import { VisualEditing } from 'next-sanity/visual-editing'
-import { SanityLive, sanityFetch } from '@/sanity/lib/live'
-import { settingsQuery } from '@/sanity/lib/queries'
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  const { isEnabled: isDraftMode } = await draftMode()
-  const { data: settings } = await sanityFetch({ query: settingsQuery })
-
   return (
     <html
       lang="en"
@@ -109,18 +104,7 @@ export default async function RootLayout({
           {children}
         </main>
 
-        <Footer data={settings} />
-
-        {isDraftMode && (
-          <a 
-            href="/api/disable-draft" 
-            className="fixed bottom-4 right-4 bg-primary-500 text-white px-4 py-2 rounded-full text-xs font-bold shadow-xl hover:bg-primary-600 transition-colors z-[9999]"
-          >
-            Exit Preview Mode
-          </a>
-        )}
-        <VisualEditing />
-        <SanityLive />
+        <Footer />
       </body>
     </html>
   )

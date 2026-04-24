@@ -3,8 +3,6 @@ import { Button } from '@/components/ui/Button'
 import { FounderJourney } from '@/components/sections/FounderJourney'
 import { OurTeam } from '@/components/sections/OurTeam'
 import { RealSessionMoments } from '@/components/sections/RealSessionMoments'
-import { sanityFetch } from '@/sanity/lib/live'
-import { aboutPageQuery } from '@/sanity/lib/queries'
 import { ChevronDown } from 'lucide-react'
 import Link from 'next/link'
 
@@ -37,13 +35,7 @@ const beliefsData = [
   },
 ]
 
-export default async function AboutPage() {
-  const [
-    { data: aboutData }
-  ] = await Promise.all([
-    sanityFetch({ query: aboutPageQuery })
-  ])
-  
+export default function AboutPage() {
   const faqs = [
     { label: "What we are", answer: "FunSmartism Intelligence Center — a Thinking Lab where children explore real systems, build real things, and experience hands-on problem-solving." },
     { label: "Our program", answer: "FunSmartism RoboSTEM Thinking Lab — 10 themes, available as a 10-day workshop or a year-long program." },
@@ -64,9 +56,9 @@ export default async function AboutPage() {
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/5 border border-primary-500/10 text-primary-500 text-[11px] font-bold uppercase tracking-widest mb-10">
               Our Origin Story
             </div>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-primary-500 mb-8 leading-[1.1] tracking-tight">
+            <h1 className="text-3xl md:text-6xl lg:text-7xl font-serif font-bold text-primary-500 mb-8 leading-[1.1] tracking-tight">
               We started FunSmartism because we kept seeing <br className="hidden md:block" />
-              <span className="text-accent-teal italic font-light">something schools weren't designed to notice.</span>
+              <span className="block text-2xl md:text-6xl lg:text-7xl text-accent-teal italic font-light">something schools weren't designed to notice.</span>
             </h1>
             <p className="text-xl md:text-2xl text-neutral-600 font-light leading-relaxed max-w-4xl mx-auto">
               We kept seeing capable children come alive in real-world learning environment that gave them freedom—and shut down in environments that didn’t. Parents could sense it too, but had no language for what they were seeing. FunSmartism was built to close that gap.
@@ -145,7 +137,7 @@ export default async function AboutPage() {
               <div className="h-px md:h-12 w-full md:w-px bg-neutral-100"></div>
               <div>
                 <span className="text-xs font-mono text-accent-teal font-bold uppercase tracking-widest block mb-2">Contact</span>
-                <p className="text-[#1E2A44] font-medium text-sm">hello@funsmartism.in <span className="mx-2 text-neutral-300">·</span> +91 99999 99999</p>
+                <p className="text-[#1E2A44] font-medium text-sm">+91 99999 99999 <span className="mx-2 text-neutral-300">·</span> hello@funsmartism.in</p>
               </div>
             </div>
           </div>
@@ -174,7 +166,10 @@ export default async function AboutPage() {
 
             <div className="mt-12 space-y-2">
               <p className="text-xs text-white/30 font-mono tracking-[0.3em] uppercase font-bold">
-                Free Parent Orientation · 30–45 minutes
+                Free Parent Orientation · 30–45 minutes 📍 Bibwewadi, Pune
+              </p>
+              <p className="text-xs text-white/40 font-medium">
+                We'll confirm within 2 hours.
               </p>
             </div>
           </div>

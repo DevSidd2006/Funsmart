@@ -10,37 +10,28 @@ export const testimonials: Testimonial[] = [
   {
     id: '1',
     quote:
-      "I realized my son wasn't shy—he just needed real problems. Watching him solve this, I felt proud.",
-    author: 'Rahul M', // Parent's name
-    location: 'Mumbai',
-    child: 'Adarsh',   // Child's name
-    childAge: 10,      // Child's age
+      "I came expecting a progress report like school. What I got was a conversation about how my daughter spends 10 minutes examining something before she ever tries to use it. That's not something any school has ever told me.",
+    author: 'Priya M.',
+    location: 'Pune',
+    childAge: 11,
+    program: 'Thinking Reset Workshop',
   },
   {
     id: '2',
     quote:
-      "She doesn't give up as quickly now. The confidence is coming from inside.",
-    author: 'Anjali P',
-    location: 'Bangalore',
-    child: 'Sejal',
-    childAge: 9,
+      "My son has been 'easily distracted' according to every teacher he's had. The team showed me he isn't distracted - he loses interest when the challenge isn't deep enough. That reframe changed everything.",
+    author: 'Arvind M.',
+    location: 'Pune',
+    childAge: 13,
+    program: 'FunSmartism RoboSTEM Thinking Lab Year-Long',
   },
   {
     id: '3',
     quote:
-      'The feedback was so detailed. I finally understand why we clash over homework.',
-    author: 'Vikram K',
+      'She built a working model on Day 4 and then quietly started dismantling it to see if she could build it differently. Nobody asked her to. That moment told me more than three years of school report cards.',
+    author: 'Sunita R.',
     location: 'Pune',
-    child: 'Diya',
-    childAge: 12,
-  },
-  {
-    id: '4',
-    quote:
-      "He actually wants to work on problems now. That's the real win.",
-    author: 'Priya R',
-    location: 'Delhi',
-    child: 'Vikram',
-    childAge: 11,
+    childAge: 10,
+    program: 'Thinking Reset Workshop',
   },
 ]

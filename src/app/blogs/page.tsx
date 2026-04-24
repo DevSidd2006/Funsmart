@@ -1,19 +1,11 @@
-import { sanityFetch } from '@/sanity/lib/live'
-import { blogPostsQuery } from '@/sanity/lib/queries'
-import { urlForImage } from '@/sanity/lib/image'
 import { Button } from '@/components/ui/Button'
 import { JoinCommunity } from '@/components/ui/JoinCommunity'
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
+import { blogPosts } from '@/data/blogPosts'
 
-export default async function BlogsPage() {
-  const [
-    { data: posts }
-  ] = await Promise.all([
-    sanityFetch({ query: blogPostsQuery })
-  ])
-
-  const displayPosts = posts?.length > 0 ? posts : []
+export default function BlogsPage() {
+  const displayPosts = blogPosts
   return (
     <div className="bg-white">
       {/* Blog Hero */}
@@ -67,13 +59,13 @@ export default async function BlogsPage() {
             {/* Articles List */}
             <div className="lg:col-span-9 space-y-24">
               {displayPosts.map((post: any, i: number) => (
-                <article key={post._id || i} className="group cursor-pointer">
+                <article key={post.id || i} className="group cursor-pointer">
                   <Link href={`/blogs/${post.slug?.current || '#'}`} className="block">
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
                        <div className="md:col-span-5 rounded-lg overflow-hidden relative aspect-[4/3] bg-neutral-100 flex items-center justify-center shadow-base group-hover:shadow-md transition-shadow">
                           {post.mainImage ? (
                             <img 
-                              src={urlForImage(post.mainImage).width(800).height(600).url()} 
+                              src={post.mainImage} 
                               alt={post.title} 
                               className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[1.5s] grayscale-[20%]" 
                             />

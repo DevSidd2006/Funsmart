@@ -2,7 +2,6 @@ import React from 'react'
 import { Button } from '@/components/ui/Button'
 import { TestimonialsClient } from './TestimonialsClient'
 import { 
-  Check, 
   Search, 
   RefreshCcw, 
   Sparkles, 
@@ -19,22 +18,22 @@ export default async function ForParentsPage() {
     {
       quote: "I came prepared for my daughter to either do brilliantly or shut down. She did neither. She worked methodically — more so than I'd ever seen at home. When something didn't work, she paused, looked at it, and tried differently. The team told me this 'pause before pivot' approach is less common than I'd think. I've been sitting with that for weeks.",
       author: "Deepa S.",
-      role: "Parent · Thinking Reset Workshop"
+      role: "Parent · 11-year-old · Thinking Reset Workshop"
     },
     {
       quote: "My son has been 'easily distracted' his whole school life. FunSmartism told me he isn't distracted — he loses interest when the challenge isn't deep enough. That reframe alone was worth everything. We're still figuring out what to do with it, but at least we're asking the right question now.",
       author: "Arvind M.",
-      role: "Parent · RoboSTEM Thinking Lab Year-Long"
+      role: "Parent · 14-year-old · RoboSTEM Thinking Lab Year-Long"
     },
     {
       quote: "My daughter is top three in her class. I thought — what will they tell me that school hasn't? They told me she's extraordinary at solving the problem in front of her, but doesn't yet know how to generate her own problem. She waits to be asked. That's a different limitation than I expected, and marks will never show it.",
       author: "Sunita R.",
-      role: "Parent · Thinking Reset Workshop"
+      role: "Parent · 13-year-old · Thinking Reset Workshop"
     },
     {
       quote: "My son refused to try anything he wasn't already sure he'd be good at. School had made him terrified of being wrong publicly. The facilitator told me: he worked alone for 40 minutes and was genuinely absorbed. Nobody was watching. Nobody could tell him he was wrong. That was the first time in two years I'd heard 'absorbed'. I cried in the car on the way home.",
       author: "Nandita K.",
-      role: "Parent · Thinking Reset Workshop"
+      role: "Parent · 10-year-old · Thinking Reset Workshop"
     }
   ]
 
@@ -65,7 +64,7 @@ export default async function ForParentsPage() {
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/5 border border-primary-500/10 text-primary-500 text-[11px] font-bold uppercase tracking-widest mb-10">
                 The Parent Perspective
               </div>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-primary-500 mb-8 leading-[1.1] tracking-tight">
+              <h1 className="text-xl md:text-3xl font-serif font-bold text-primary-500 mb-8 leading-[1.1] tracking-tight">
                 You will leave knowing something about your child <br className="hidden md:block" />
                 <span className="text-accent-teal italic font-light">that school has never told you.</span>
               </h1>
@@ -213,7 +212,7 @@ export default async function ForParentsPage() {
                     <Icon size={24} />
                   </div>
                   <div>
-                    <h3 className="text-lg font-serif font-bold text-[#1E2A44] mb-3">"{faq.q}"</h3>
+                    <h3 className="text-lg font-serif font-bold text-[#1E2A44] mb-3">Parent thinks: "{faq.q}"</h3>
                     <p className="text-neutral-600 leading-relaxed text-sm font-light">{faq.a}</p>
                   </div>
                 </div>
@@ -226,8 +225,8 @@ export default async function ForParentsPage() {
       {/* SECTION 04 — WHY THIS MATTERS */}
       <section className="py-32 bg-[#1E2A44] text-white">
         <div className="container-fluid max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white leading-tight mb-12">
-            Think beyond the exam score. What truly matters is your child’s ability to figure things out through testing and retrying, <span className="text-accent-teal">persist, adapt, and stay curious when the answer isn’t obvious.</span>
+<h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white leading-tight mb-12">
+            Think beyond the exam score. What truly matters is your child's ability to figure things out through testing and retrying, <span className="text-accent-teal">persist, adapt, and stay curious when the answer isn't obvious.</span>
           </h2>
           
           <div className="w-16 h-px bg-white/20 mx-auto mb-10"></div>
@@ -250,12 +249,14 @@ export default async function ForParentsPage() {
       {/* AS FEATURED IN (Mini Logo Strip) */}
       <section className="py-12 bg-white border-y border-neutral-100">
         <div className="container-fluid max-w-5xl mx-auto px-4 text-center">
-          <p className="text-xs font-mono text-neutral-500 uppercase tracking-[0.2em] mb-8 font-bold">As Featured In</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-            {/* Replace with actual newspaper logos */}
-            <div className="h-8 md:h-10 w-32 bg-neutral-200 rounded animate-pulse"></div>
-            <div className="h-8 md:h-10 w-32 bg-neutral-200 rounded animate-pulse"></div>
-            <div className="h-8 md:h-10 w-32 bg-neutral-200 rounded animate-pulse"></div>
+          <p className="text-xs font-mono text-neutral-500 uppercase tracking-[0.2em] mb-4 font-bold">As Featured In</p>
+          <p className="text-sm text-neutral-500 mb-8">Featured in leading newspapers for innovation-led child learning.</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {['The Times of India', 'Sakal', 'Pudhari', 'The Indian Express'].map((paper) => (
+              <div key={paper} className="h-10 md:h-12 rounded-lg border border-neutral-200 bg-neutral-50 text-[11px] font-semibold text-neutral-500 flex items-center justify-center px-2">
+                {paper}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -264,7 +265,7 @@ export default async function ForParentsPage() {
       <section className="py-24 bg-[#FAF9F6]">
         <div className="container-fluid max-w-3xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1E2A44] mb-12 text-center">
-            Experience FAQ
+            Parent FAQ
           </h2>
           <div className="space-y-4">
             {parentFaq.map((faq, i) => (
@@ -335,8 +336,10 @@ export default async function ForParentsPage() {
           </div>
 
           <p className="text-xs font-mono text-neutral-400 uppercase tracking-widest font-bold">
-            Free Parent Orientation <span className="mx-2 text-white/30">·</span> 30–45 minutes <br className="md:hidden" />
-            <span className="hidden md:inline mx-2 text-white/30">·</span> We'll WhatsApp you a confirmation.
+            Free Parent Orientation <span className="mx-2 text-white/30">·</span> 30–45 minutes <span className="mx-2 text-white/30">·</span> 📍 Bibwewadi, Pune
+          </p>
+          <p className="text-xs font-mono text-neutral-400 uppercase tracking-widest font-bold mt-3">
+            We'll WhatsApp you a confirmation.
           </p>
         </div>
       </section>

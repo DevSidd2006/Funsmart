@@ -11,7 +11,7 @@ interface Vignette {
 }
 
 export function VignetteAccordion({ items }: { items: Vignette[] }) {
-  const [openIndex, setOpenIndex] = useState<number | null>(0)
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
     <div className="w-full">
@@ -29,9 +29,9 @@ export function VignetteAccordion({ items }: { items: Vignette[] }) {
                <h3 className="text-2xl font-serif font-bold text-primary-500 mb-8 group-hover:text-accent-teal transition-colors leading-tight">
                  {item.title}
                </h3>
-               <div className="relative">
+              <div className="relative">
                   <Quote className="absolute -top-4 -left-4 text-accent-teal/10 w-12 h-12" />
-                  <p className="text-neutral-500 leading-relaxed italic text-sm relative z-10">
+                <p className="text-neutral-500 leading-relaxed italic text-sm relative z-10 line-clamp-6">
                     "{item.content}"
                   </p>
                </div>

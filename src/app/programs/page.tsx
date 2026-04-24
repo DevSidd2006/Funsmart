@@ -2,9 +2,8 @@ import { Metadata } from 'next'
 import { Button } from '@/components/ui/Button'
 import { JoinCommunity } from '@/components/ui/JoinCommunity'
 import { Accordion } from '@/components/ui/Accordion'
-import { sanityFetch } from '@/sanity/lib/live'
-import { programsQuery } from '@/sanity/lib/queries'
 import { Check, Calendar, ArrowRight, Star, Clock, Laptop, Calculator, Puzzle, Settings, Plane, Rocket, PenTool, Telescope, Cpu, Bot, Users, Presentation } from 'lucide-react'
+import Image from 'next/image'
 import * as LucideIcons from 'lucide-react'
 import Link from 'next/link'
 
@@ -15,6 +14,15 @@ export const metadata: Metadata = {
   description: 'Two programs. One way of thinking about children. 10-Day Reset Workshop and Year-Long Thinking Lab.',
   keywords: ['workshop', 'thinking lab', 'children programs', 'STEM', 'robotics', 'coding'],
 }
+
+const projectImages = [
+  { src: '/images/hero-child-discovery.png', label: 'Robotics' },
+  { src: '/images/iterative-thinking.png', label: 'Circuit building' },
+  { src: '/images/aeromodeling.png', label: 'Aeromodelling' },
+  { src: '/images/lab-observation.png', label: 'Mechanical' },
+  { src: '/images/discovery-moment.png', label: 'Tech toys' },
+  { src: '/images/pattern-recognition.png', label: 'Robotics' },
+]
 
 const workshopThemes = [
   { theme: 'Math Magic & Logic', icon: Calculator, desc: 'Sudoku, patterns, puzzles that have no single path to the answer. Logic as play.', color: 'text-[#4D96FF] bg-[#4D96FF]/10' },
@@ -44,7 +52,7 @@ const faqs = [
   {
     id: 'faq-1',
     question: 'Do I need to complete the workshop before joining the year-long program?',
-    answer: 'Strongly recommended. The 10-day workshop gives the best starting point, and we’ll guide you during orientation based on your child’s stage.',
+    answer: 'Strongly recommended. The 10-day workshop gives the best starting point, and we will guide you during orientation based on your childs stage.',
   },
   {
     id: 'faq-2',
@@ -64,17 +72,11 @@ const faqs = [
   {
     id: 'faq-5',
     question: 'Can I watch my child during a session?',
-    answer: 'You’re welcome to stay in the building after informing us, but we ask parents to remain out of sight so the child’s natural approach stays unchanged.',
+    answer: 'You are welcome to stay in the building after informing us, but we ask parents to remain out of sight so the childs natural approach stays unchanged.',
   },
 ]
 
-export default async function ProgramsPage() {
-  const [
-    { data: programs }
-  ] = await Promise.all([
-    sanityFetch({ query: programsQuery }),
-  ])
-
+export default function ProgramsPage() {
   return (
     <div className="bg-white">
       {/* SECTION 01 — HERO */}
@@ -231,9 +233,25 @@ export default async function ProgramsPage() {
                 </div>
               ))}
             </div>
-            <p className="text-center text-xs text-neutral-400 font-mono italic mb-32 max-w-3xl mx-auto leading-loose">
+            <p className="text-center text-xs text-neutral-400 font-mono italic mb-12 max-w-3xl mx-auto leading-loose">
               Across all 10 days, we observe how your child approaches the unfamiliar—not just what they produce. A thinking-habits parent note is shared at the end.
             </p>
+
+            {/* Project Photo Grid */}
+            <div className="mb-16">
+              <h3 className="text-2xl font-serif font-bold text-primary-500 mb-8 text-center">A glimpse of what children build</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                {projectImages.map((img, i) => (
+                  <div key={i} className="aspect-square relative rounded-2xl overflow-hidden shadow-lg group hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+                    <Image src={img.src} alt={img.label} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary-500/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                    <div className="absolute bottom-3 left-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                      <span className="text-xs font-bold text-white bg-white/20 backdrop-blur-sm px-3 py-1 rounded-full">{img.label}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -435,7 +453,7 @@ export default async function ProgramsPage() {
             </div>
             <div className="mt-12 space-y-2">
               <p className="text-xs text-white/30 font-mono tracking-[0.3em] uppercase font-bold">
-                Free Parent Orientation · 30–45 minutes
+                Free Parent Orientation · 30–45 minutes 📍 Bibwewadi, Pune
               </p>
               <Link href="/programs" className="block text-sm text-accent-teal/60 hover:text-accent-teal transition-colors font-medium">
                 Want to see the programs first? See programs →

@@ -13,15 +13,15 @@
   },
   "dependencies": {
     "@sanity/preview-url-secret": "^4.0.5",
-    "@sanity/vision": "^5.21.0",
+    "@sanity/vision": "^3.89.0",
     "clsx": "^2.1.1",
     "framer-motion": "^12.38.0",
     "lucide-react": "^0.368.0",
     "next": "^16.2.4",
-    "next-sanity": "^12.3.0",
+    "next-sanity": "^11.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sanity": "^5.14.1",
+    "sanity": "^3.70.0",
     "styled-components": "^6.4.0",
     "tailwind-merge": "^2.6.1"
   },

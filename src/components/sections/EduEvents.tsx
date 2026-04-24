@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { urlForImage } from '../../sanity/lib/image'
 import { Grid, Settings, Users, MessageSquare } from 'lucide-react'
 
 export function EduEvents({ data }: { data?: any }) {
@@ -15,7 +14,7 @@ export function EduEvents({ data }: { data?: any }) {
     { label: 'Interact with Experts', icon: MessageSquare },
   ]
 
-  const gridImages = data?.gridImages?.map((img: any) => urlForImage(img).width(600).height(600).url()) || [
+  const gridImages = [
     '/images/edu-event-1.png',
     '/images/edu-event-2.png',
     '/images/edu-event-3.png',

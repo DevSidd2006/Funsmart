@@ -24,6 +24,29 @@ const defaultTestimonials = [
   },
 ]
 
+function getInitials(name?: string) {
+  if (!name) return 'P'
+  const parts = name
+    .split(' ')
+    .map((part) => part.replace(/[^A-Za-z]/g, ''))
+    .filter(Boolean)
+
+  if (parts.length === 0) return 'P'
+  if (parts.length === 1) return parts[0].slice(0, 1).toUpperCase()
+  return `${parts[0].slice(0, 1)}${parts[1].slice(0, 1)}`.toUpperCase()
+}
+
+function getMetaLine(testimonial: any) {
+  if (testimonial.role) return testimonial.role
+
+  const bits = ['Parent']
+  if (testimonial.childAge) bits.push(`${testimonial.childAge}-year-old`)
+  if (testimonial.program) bits.push(testimonial.program)
+  if (testimonial.location) bits.push(testimonial.location)
+
+  return bits.join(' · ')
+}
+
 export function TestimonialsSlider({ data }: { data?: any[] }) {
   const testimonials = data && data.length > 0 ? data : defaultTestimonials
   const [current, setCurrent] = useState(0)
@@ -47,7 +70,7 @@ export function TestimonialsSlider({ data }: { data?: any[] }) {
               Unexpected Discoveries through handling unfamiliar challenges..
             </h2>
             <p className="text-neutral-500 mt-4 text-lg">
-              parents observing <span className="underline decoration-accent-teal decoration-2 underline-offset-4">real</span> change in their children.
+              Parents observing <span className="underline decoration-accent-teal decoration-2 underline-offset-4">real</span> change in their children.
             </p>
           </div>
 
@@ -70,12 +93,12 @@ export function TestimonialsSlider({ data }: { data?: any[] }) {
                     
                     <div className="flex items-center gap-5">
                       <div className="w-14 h-14 rounded-full bg-accent-teal flex items-center justify-center text-white font-bold text-lg shadow-lg">
-                        {t.initial || (t.author?.slice(0, 1))}
+                        {t.initial || getInitials(t.author)}
                       </div>
                       <div>
                         <p className="text-xl font-serif font-bold text-primary-500">{t.author}</p>
-                        <p className="text-xs font-bold text-neutral-400 uppercase tracking-widest mt-1">
-                          {t.role || t.location}
+                        <p className="text-xs font-bold text-neutral-400 tracking-wide mt-1">
+                          {getMetaLine(t)}
                         </p>
                       </div>
                     </div>

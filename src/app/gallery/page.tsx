@@ -1,11 +1,8 @@
-import { sanityFetch } from '@/sanity/lib/live'
-import { galleryQuery } from '@/sanity/lib/queries'
 import { JoinCommunity } from '@/components/ui/JoinCommunity'
-import { urlForImage } from '@/sanity/lib/image'
+import { galleryItems } from '@/data/gallery'
 
-export default async function GalleryPage() {
-  const { data: items } = await sanityFetch({ query: galleryQuery })
-  const displayItems = items?.length > 0 ? items : []
+export default function GalleryPage() {
+  const displayItems = galleryItems
 
   return (
     <div className="bg-white min-h-screen pt-32 pb-24">
@@ -38,10 +35,10 @@ export default async function GalleryPage() {
         <div className="container-fluid">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
              {displayItems.map((item: any) => (
-               <div key={item._id} className={`relative group overflow-hidden rounded-lg shadow-sm border border-neutral-100 ${item.span || 'md:col-span-4'}`}>
+               <div key={item.id} className={`relative group overflow-hidden rounded-lg shadow-sm border border-neutral-100 ${item.span || 'md:col-span-4'}`}>
                   {item.image ? (
                     <img 
-                       src={urlForImage(item.image).url()} 
+                       src={item.image} 
                        alt={item.title} 
                        className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[1.5s] ease-in-out" 
                     />

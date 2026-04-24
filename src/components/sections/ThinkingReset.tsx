@@ -14,7 +14,7 @@ export function ThinkingReset() {
               10-Day Thinking Reset Workshop
             </h2>
             <p className="text-lg text-white/70 mb-8 max-w-2xl leading-relaxed">
-              A focused introduction to how children think. Ten days of open-ended STEAM challenges, observation-led coaching, and guided parent insight.
+              10 days. 10 themes. 10 different challenges. Children build, test, and solve with real materials while we observe their natural problem-solving. Includes a detailed observation note for parents.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
               {[

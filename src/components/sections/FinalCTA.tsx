@@ -30,7 +30,7 @@ export function FinalCTA({ data }: { data?: any }) {
             <Link href="/schedule-visit" className="w-full sm:w-auto">
               <Button
                 size="lg"
-                className="px-16 py-6 text-lg bg-accent-teal hover:bg-[#28A392] shadow-huge shadow-accent-teal/20 border-none text-white w-full rounded-full"
+                className="px-16 py-6 text-lg bg-accent-teal hover:bg-[#28A392] shadow-huge shadow-accent-teal/20 border-none text-white w-full rounded-full font-bold"
               >
                 Schedule a visit →
               </Button>
@@ -39,6 +39,7 @@ export function FinalCTA({ data }: { data?: any }) {
               Free · 30–45 minutes · We confirm within 2 hours
             </div>
           </div>
+
         </div>
       </div>
     </section>

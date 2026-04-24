@@ -33,11 +33,17 @@ export function OurTeam() {
     <section className="section-spacing bg-white">
       <div className="container-fluid">
         <div className="max-w-4xl mx-auto text-center mb-16">
+          <p className="text-xs font-mono text-accent-teal font-bold uppercase tracking-widest mb-4">
+            The people who help shape the experience
+          </p>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#1E2A44] leading-tight">
             The mentors behind the learning experience
           </h2>
           <p className="text-lg text-neutral-600 max-w-3xl mx-auto mt-6 leading-relaxed font-light">
             FunSmartism is founder-led, strengthened by experienced mentors, collaborators, and practitioner friends who contribute to workshops, challenge design, and real-world learning experiences.
+          </p>
+          <p className="text-sm text-neutral-500 max-w-3xl mx-auto mt-4 leading-relaxed font-medium">
+            Brief bios focus on what each person notices about children — not qualifications. We are obsessed with cognitive development.
           </p>
         </div>
 

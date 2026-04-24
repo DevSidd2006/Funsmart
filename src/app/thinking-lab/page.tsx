@@ -1,24 +1,15 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/Button'
-import { JoinCommunity } from '@/components/ui/JoinCommunity'
-import { sanityFetch } from '@/sanity/lib/live'
-import { labPageQuery } from '@/sanity/lib/queries'
-import { urlForImage } from '@/sanity/lib/image'
 import { 
-  Eye, Beaker, Lightbulb, Check, ChevronRight, FlaskConical, 
-  Binary, Sparkles, Quote, Search, MessageSquare, History, 
-  RotateCcw, HelpCircle, ArrowRightLeft 
+  Eye,
+  Search,
+  RotateCcw,
+  ChevronRight,
 } from 'lucide-react'
 import { VignetteAccordion } from '@/components/ui/VignetteAccordion'
 
-export default async function ThinkingLabPage() {
-  const [
-    { data: labData }
-  ] = await Promise.all([
-    sanityFetch({ query: labPageQuery })
-  ])
-
+export default function ThinkingLabPage() {
   const vignettes = [
     {
       age: "A 9-year-old with a gear assembly",
@@ -54,7 +45,7 @@ export default async function ThinkingLabPage() {
       time: "Minute 7–10", 
       icon: RotateCcw,
       title: "Adaptation", 
-      desc: "The moment of friction. The first idea usually doesn't work. This is where thinking habits begin to appear. Some children try a variation. Some pause and re-examine the system. Some look for help. Nothing is rushed Nothing is ranked. We simply watch how each child responds." 
+      desc: "The moment of friction. The first idea usually doesn't work. This is where thinking habits begin to appear. Some children try a variation. Some pause and re-examine the system. Some look for help. Nothing is rushed. Nothing is ranked. We simply watch how each child responds." 
     }
   ]
 
@@ -76,45 +67,39 @@ export default async function ThinkingLabPage() {
       answer: "Once the challenge was solved, your child immediately began modifying the solution — unprompted. That's scientist-like curiosity— something marks rarely capture."
     },
     {
-      question: "How do they approach an unknown object?",
-      answer: "Instead of asking 'how does this work', they began testing the edges. That exploratory habit is exactly how researchers face new problems."
+      question: "Every visit includes private parent guidance notes.",
+      answer: "Each note is specific, practical, and rooted in observed behaviour during unfamiliar problem-solving moments."
     },
     {
       question: "Scientist interaction beyond the lab",
-      answer: "Selected sessions include interaction with scientists from ISRO, DRDO, IISER — helping children connect real problem-solving habits with real scientific journeys."
+      answer: "Selected FunSmartism RoboSTEM Thinking Lab sessions include interaction sessions with scientists from ISRO, DRDO, IISER, and leading research ecosystems — helping children connect real problem-solving habits with real scientific journeys."
     }
   ]
 
   return (
     <div className="bg-white">
       {/* SECTION 01 — HERO */}
-      <section className="pt-32 pb-20 bg-[#1E2A44] text-white relative overflow-hidden flex items-center min-h-[85vh]">
-        <div className="absolute inset-0 lab-grid opacity-[0.05]" />
+      <section className="pt-36 pb-24 bg-accent-surface text-[#1E2A44] relative overflow-hidden">
+        <div className="absolute inset-0 lab-grid opacity-[0.03]" />
         
         <div className="container-fluid relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
-            <div className="lg:col-span-7">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-teal/10 border border-accent-teal/20 text-accent-teal text-[11px] font-bold uppercase tracking-widest mb-10">
-                Inside the Lab
-              </div>
-              <h1 className="text-4xl md:text-7xl lg:text-8xl font-serif font-bold text-white mb-8 leading-[1.05] tracking-tight">
-                We don't teach. <br />
-                <span className="text-accent-teal italic font-light opacity-90">We observe.</span>
-              </h1>
-              <p className="text-xl md:text-2xl text-[#B7E3DD] max-w-2xl leading-relaxed font-light mt-4">
-                The Thinking Lab is a concept-heavy space where visuals are minimal but meaningful. We focus on the silent moments of thinking.
+          <div className="max-w-5xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-primary-500 mb-8 leading-[1.06]">
+              We don't teach. <br />
+              <span className="text-accent-teal italic font-light">We observe.</span>
+            </h1>
+            <p className="text-lg md:text-2xl text-neutral-600 max-w-4xl mx-auto leading-relaxed font-light">
+              The FunSmartism RoboSTEM Thinking Lab makes scientist-inspired problem-solving visible through hands-on projects, real-world challenges, and live parent insight observations.
+            </p>
+
+            <div className="mt-16 max-w-4xl mx-auto">
+              <p className="text-3xl md:text-5xl font-serif font-bold text-primary-500 leading-tight mb-8">
+                Schools show what children know. <br className="hidden md:block" />
+                The Thinking Lab reveals how they think when the path is unclear.
               </p>
-            </div>
-            <div className="lg:col-span-5 hidden lg:block">
-              <div className="relative aspect-square rounded-[60px] overflow-hidden shadow-huge border border-white/10 group">
-                <Image 
-                  src="/images/lab/hero-child.png" 
-                  alt="Child studying mechanical assembly" 
-                  fill 
-                  className="object-cover transition-transform duration-1000 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1E2A44]/40 to-transparent" />
-              </div>
+              <p className="text-xl md:text-2xl text-neutral-500 leading-relaxed font-light max-w-2xl mx-auto">
+                Independant problem-solving appears most clearly in unfamiliar situations.
+              </p>
             </div>
           </div>
         </div>
@@ -135,17 +120,13 @@ export default async function ThinkingLabPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl mx-auto">
             {firstTenMinutes.map((step, i) => (
-              <div key={i} className="relative p-10 rounded-[32px] bg-neutral-50 border-l-[6px] border-accent-teal shadow-sm group hover:bg-white hover:shadow-huge transition-all duration-500 flex flex-col h-full">
+              <div key={i} className="relative p-8 rounded-[32px] bg-neutral-50 border-l-[6px] border-accent-teal shadow-sm transition-all duration-500 flex flex-col h-full">
                 <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-8 group-hover:bg-accent-teal group-hover:text-white transition-colors duration-300">
                   <step.icon size={28} />
                 </div>
                 <div className="text-accent-teal font-mono text-[10px] font-bold uppercase tracking-widest mb-3">{step.time}</div>
                 <h3 className="text-2xl font-serif font-bold text-primary-500 mb-6">{step.title}</h3>
                 <p className="text-sm text-neutral-500 leading-relaxed font-medium whitespace-pre-line">{step.desc}</p>
-                <div className="mt-auto pt-8 opacity-0 group-hover:opacity-100 transition-opacity">
-                   <div className="h-px bg-neutral-100 w-full mb-4" />
-                   <p className="text-[10px] text-primary-300 uppercase tracking-widest font-bold italic">Independent problem-solving exploration</p>
-                </div>
               </div>
             ))}
           </div>
@@ -156,8 +137,8 @@ export default async function ThinkingLabPage() {
 
           <div className="mt-40">
             <div className="text-center mb-20">
-               <h3 className="text-4xl font-serif font-bold text-primary-500 mb-4">Inside the Moments</h3>
-               <p className="text-neutral-500">Real observed moments that demonstrate thinking style.</p>
+              <h3 className="text-4xl font-serif font-bold text-primary-500 mb-4">Inside the moments</h3>
+              <p className="text-neutral-500">Tap to read each full moment.</p>
             </div>
             <VignetteAccordion items={vignettes} />
           </div>
@@ -170,7 +151,7 @@ export default async function ThinkingLabPage() {
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 mb-6 leading-tight">
               We're not ranking. <br />
-              <span className="text-accent-teal">We're watching how they are figuring things out.</span>
+              <span className="text-accent-teal">We're watching how they are figuring things out through testing and retrying.</span>
             </h2>
             <p className="text-lg text-neutral-500 leading-relaxed max-w-2xl mx-auto">
               Facilitators observe specific patterns — not to judge, but to understand.
@@ -262,38 +243,48 @@ export default async function ThinkingLabPage() {
           </div>
 
           {/* Elevated Scientist Interaction Strip (Trust Multiplier) */}
-          <div className="max-w-5xl mx-auto p-12 rounded-[50px] bg-[#1E2A44] text-white relative overflow-hidden shadow-huge border border-white/5">
+          <div className="max-w-6xl mx-auto p-8 md:p-12 rounded-[50px] bg-[#1E2A44] text-white relative overflow-hidden shadow-huge border border-white/5">
              <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-accent-teal/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
              <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-                <div className="md:col-span-8">
+               <div className="md:col-span-7">
                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-accent-teal text-[10px] font-bold uppercase tracking-widest mb-6">
-                      Trust Multiplier
+                      Scientist interaction touchpoints
                    </div>
-                   <h3 className="text-3xl font-serif font-bold text-white mb-6 leading-tight">Children experience how real experts approach problems.</h3>
+                   <h3 className="text-3xl font-serif font-bold text-white mb-6 leading-tight">Children experience how real experts approach problems — not as theory, but through interaction.</h3>
                    <div className="flex flex-wrap gap-8 items-center border-t border-white/10 pt-8 mt-8">
-                      {['ISRO', 'DRDO', 'IISER'].map((name) => (
+                      {['ISRO', 'DRDO', 'IISER', 'Research ecosystems'].map((name) => (
                          <div key={name} className="flex flex-col">
                            <span className="text-2xl font-serif font-black tracking-tighter text-white/90 leading-none">{name}</span>
-                           <span className="text-[8px] font-bold text-accent-teal/60 uppercase tracking-widest mt-1">Research ecosystem</span>
+                           <span className="text-[8px] font-bold text-accent-teal/60 uppercase tracking-widest mt-1">Interaction layer</span>
                          </div>
                       ))}
                    </div>
                 </div>
-                <div className="md:col-span-4">
-                   <div className="relative aspect-[4/5] rounded-[32px] overflow-hidden shadow-2xl border border-white/10 group">
-                      <Image 
-                        src="/images/lab/vignette-gear.png" 
-                        alt="Interaction with experts" 
-                        fill 
-                        className="object-cover grayscale group-hover:grayscale-0 transition-all duration-700" 
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#1E2A44]/60 to-transparent" />
-                      <div className="absolute bottom-6 left-6 right-6 text-xs text-white/80 font-medium">
-                        "Experience how experts face unknown challenges first-hand."
-                      </div>
-                   </div>
-                </div>
+               <div className="md:col-span-5">
+                  <div className="relative aspect-[4/3] rounded-[28px] overflow-hidden border border-white/10">
+                    <Image
+                      src="/images/lab/hero-child.png"
+                      alt="Child interacting with a real challenge in the FunSmartism RoboSTEM Thinking Lab"
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#1E2A44]/55 to-transparent" />
+                  </div>
+               </div>
              </div>
+          </div>
+
+          <div className="max-w-6xl mx-auto mt-8 rounded-2xl border border-neutral-200 bg-white p-6 md:p-8">
+            <p className="text-center text-xs md:text-sm font-mono uppercase tracking-[0.2em] text-neutral-500 mb-5">
+              Featured in leading newspapers for innovation-led child learning
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {['The Times of India', 'Sakal', 'Pudhari', 'The Indian Express'].map((press) => (
+                <div key={press} className="h-14 rounded-xl border border-neutral-200 bg-neutral-50 flex items-center justify-center text-[11px] font-semibold text-neutral-500 px-2 text-center">
+                  {press}
+                </div>
+              ))}
+            </div>
           </div>
           
           <p className="text-center mt-12 text-primary-500 font-serif font-bold text-lg opacity-80">
@@ -318,7 +309,7 @@ export default async function ThinkingLabPage() {
               <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
                 <Link href="/schedule-visit" className="w-full sm:w-auto">
                   <Button size="lg" className="bg-accent-teal border-none text-white px-12 py-6 text-lg shadow-huge shadow-accent-teal/30 w-full rounded-full font-bold">
-                    Schedule a visit →
+                    Schedule a Thinking Lab Visit
                   </Button>
                 </Link>
                 <Link href="/programs" className="w-full sm:w-auto">
@@ -330,7 +321,7 @@ export default async function ThinkingLabPage() {
               
               <div className="space-y-4">
                 <p className="text-xs text-white/30 font-mono tracking-[0.3em] uppercase font-bold">
-                   Free Parent Orientation · 30–45 minutes
+                   Free Parent Orientation · 30–45 minutes 📍 Bibwewadi, Pune
                 </p>
                 <p className="text-[10px] text-white/20 uppercase tracking-widest">
                    Also available for school innovation visits and STEM partner sessions

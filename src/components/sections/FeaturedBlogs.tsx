@@ -1,6 +1,5 @@
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
-import { urlForImage } from '@/sanity/lib/image'
 
 export function FeaturedBlogs({ posts }: { posts: any[] }) {
   const displayPosts = posts?.slice(0, 3) || []
@@ -31,7 +30,7 @@ export function FeaturedBlogs({ posts }: { posts: any[] }) {
                 <div className="relative aspect-[16/10] overflow-hidden">
                   {post.mainImage ? (
                     <img 
-                      src={urlForImage(post.mainImage).width(800).height(500).url()} 
+                      src={post.mainImage} 
                       alt={post.title} 
                       className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-1000 grayscale-[20%] group-hover:grayscale-0" 
                     />

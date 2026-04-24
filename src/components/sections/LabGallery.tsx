@@ -1,7 +1,14 @@
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
-import { urlForImage } from '@/sanity/lib/image'
+
+function getGalleryImageSrc(image: unknown): string {
+  if (typeof image === 'string') {
+    return image
+  }
+
+  return '/images/lab-observation.png'
+}
 
 export function LabGallery({ items }: { items: any[] }) {
   const displayItems = items?.slice(0, 6) || []
@@ -36,7 +43,7 @@ export function LabGallery({ items }: { items: any[] }) {
             >
               {item.image ? (
                 <Image 
-                  src={urlForImage(item.image).width(800).height(800).url()} 
+                  src={getGalleryImageSrc(item.image)} 
                   alt={item.title} 
                   fill
                   className="object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[1.5s]" 

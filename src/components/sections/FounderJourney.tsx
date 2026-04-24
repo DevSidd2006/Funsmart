@@ -27,13 +27,13 @@ export function FounderJourney() {
                 <p className="text-neutral-600 text-sm mb-4">Founder — FunSmartism Intelligence Center</p>
                 <div className="w-12 h-1 bg-accent-teal/30 rounded-full mb-4"></div>
                 <p className="text-neutral-600 leading-relaxed text-sm">
-                  After years in software development and hands-on parenting, Dipali went deeper into child development through formal learning experiences both globally and in the USA.
+                  After years in software development and hands-on parenting, Dipali went deeper into child development through formal learning experiences in both Pune and the USA.
                 </p>
                 <p className="text-neutral-600 leading-relaxed text-sm mt-3">
                   What stood out was simple: the right environment can completely change how a child observes, persists, and solves.
                 </p>
                 <p className="text-neutral-600 leading-relaxed text-sm mt-3">
-                  That insight led her to build FunSmartism — a scientist-inspired RoboSTEM environment where real problem-solving becomes visible and parents learn how to support independent thinking in everyday life.
+                  That insight led her to build FunSmartism in Pune — a scientist-inspired RoboSTEM environment where real problem-solving becomes visible and parents learn how to support independent thinking in everyday life.
                 </p>
               </div>
             </div>
@@ -50,14 +50,11 @@ export function FounderJourney() {
                 <p className="text-xl text-neutral-700 leading-relaxed mb-8">
                   So we built a different kind of environment. One where thinking was the subject, not the by-product. Where the goal was not to produce a result, but to understand how a child arrived at one — or didn't.
                 </p>
-                <p className="text-xl text-neutral-700 leading-relaxed mb-8">
-                  That environment is FunSmartism Intelligence Center.
-                </p>
                 <p className="text-xl text-neutral-700 leading-relaxed mb-12">
-                  The Thinking Lab is where children build, test, and solve real challenges while we observe how they think and solve during real challenges along the way— and helping parents understand how to respond to them in real life.
+                  The Thinking Lab is where children build, test, and solve real challenges while we observe how they think during unfamiliar moments — and help parents understand how to respond in real life.
                 </p>
                 
-                <a href="#schedule" className="inline-flex items-center text-accent-teal font-semibold text-lg hover:text-accent-teal/80 transition-colors">
+                <a href="/thinking-lab" className="inline-flex items-center text-accent-teal font-semibold text-lg hover:text-accent-teal/80 transition-colors">
                   See how this becomes real inside the FunSmartism RoboSTEM Thinking Lab 
                   <span className="ml-2">→</span>
                 </a>
