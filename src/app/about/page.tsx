@@ -149,7 +149,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 lab-grid opacity-[0.05]" />
         <div className="container-fluid relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-8 leading-tight tracking-tight">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-8 leading-tight tracking-tight">
               Come and experience real <span className="text-accent-teal italic font-light">problem-solving</span> in action.
             </h2>
             <p className="text-xl md:text-2xl text-[#B7E3DD] mb-16 font-light italic">

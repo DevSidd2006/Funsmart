@@ -56,38 +56,44 @@ export default async function ForParentsPage() {
   return (
     <div className="bg-[#FAF9F6] text-[#1E2A44] font-sans">
       {/* SECTION 01 — HERO */}
-      <section className="pt-40 pb-24 bg-accent-surface relative overflow-hidden flex items-center min-h-[70vh]">
+      <section className="pt-40 pb-24 bg-accent-surface relative overflow-hidden flex items-center min-h-[75vh]">
         <div className="absolute inset-0 lab-grid opacity-[0.03]" />
         <div className="container-fluid relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/5 border border-primary-500/10 text-primary-500 text-[11px] font-bold uppercase tracking-widest mb-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
+            <div className="lg:col-span-7">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/5 border border-primary-500/10 text-primary-500 text-[10px] font-bold uppercase tracking-widest mb-10">
                 The Parent Perspective
               </div>
-              <h1 className="text-xl md:text-3xl font-serif font-bold text-primary-500 mb-8 leading-[1.1] tracking-tight">
-                You will leave knowing something about your child <br className="hidden md:block" />
-                <span className="text-accent-teal italic font-light">that school has never told you.</span>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-primary-500 mb-8 leading-[1.05] tracking-tight text-balanced">
+                You will leave knowing something about your child <br />
+                <span className="text-accent-teal italic font-light opacity-90">that school has never told you.</span>
               </h1>
-              <p className="text-xl md:text-2xl text-neutral-600 mb-10 leading-relaxed font-light">
+              <p className="text-xl md:text-2xl text-neutral-600 mb-12 leading-relaxed font-light max-w-2xl">
                 What parents discover through hands-on RoboSTEM challenges, expert interaction sessions, and real observation-based guidance.
               </p>
-              <Link href="/schedule-visit" className="inline-block">
-                <Button size="lg" className="px-12 py-6 bg-accent-teal shadow-xl shadow-accent-teal/20 border-none text-white transition-all text-xl font-bold rounded-full">
-                  Schedule a visit →
-                </Button>
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-6 items-center">
+                <Link href="/schedule-visit" className="w-full sm:w-auto">
+                  <Button size="lg" className="px-12 py-6 bg-accent-teal shadow-huge shadow-accent-teal/20 border-none text-white transition-all text-xl font-bold rounded-full w-full">
+                    Schedule a visit →
+                  </Button>
+                </Link>
+                <span className="text-[10px] font-mono font-bold text-neutral-400 uppercase tracking-widest hidden sm:block">
+                  Free Parent Orientation <br /> 30–45 minutes
+                </span>
+              </div>
             </div>
             
-            <div className="relative rounded-[2rem] overflow-hidden shadow-2xl w-full aspect-[4/3] bg-neutral-100">
-              {/* Photo: Parent and child walking into center / parent observing */}
-              <img 
-                src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=1200" 
-                alt="Parent observing child engaging in a real-world building project" 
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1E2A44]/60 to-transparent"></div>
-              <div className="absolute bottom-6 left-6 right-6 text-white">
-                <p className="italic font-serif text-lg opacity-90">"The environment changes everything."</p>
+            <div className="lg:col-span-5">
+              <div className="relative rounded-[3rem] overflow-hidden shadow-huge w-full aspect-[4/5] bg-neutral-100 group">
+                <img 
+                  src="https://images.unsplash.com/photo-1543269664-76bc3997d9ea?q=80&w=1200" 
+                  alt="Parent and child in a discovery moment" 
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/60 via-transparent to-transparent"></div>
+                <div className="absolute bottom-10 left-10 right-10 text-white">
+                  <p className="italic font-serif text-xl opacity-95 leading-relaxed">"The environment changes everything. When the pressure to perform disappears, the true child appears."</p>
+                </div>
               </div>
             </div>
           </div>

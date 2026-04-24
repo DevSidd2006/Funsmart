@@ -24,13 +24,13 @@ export default function HomePage() {
       {/* Section 03 — YOUR CHILD'S LEARNING JOURNEY */}
       <HowItWorks />
 
-      {/* Section 05 — EDU EVENTS */}
+      {/* Section 04 — EDU EVENTS */}
       <EduEvents />
 
-      {/* Section 06 — PARENT VOICES */}
+      {/* Section 05 — PARENT VOICES */}
       <TestimonialsSlider data={testimonials} />
 
-      {/* Section 07 — CLOSING CTA */}
+      {/* Section 06 — CLOSING CTA */}
       <FinalCTA />
 
       {/* Lab Gallery Section */}
@@ -38,3 +38,5 @@ export default function HomePage() {
     </main>
   )
 }
+
+
