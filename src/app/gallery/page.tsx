@@ -12,9 +12,6 @@ export default function GalleryPage() {
         <div className="container-fluid relative z-10">
           <div className="flex flex-col lg:flex-row justify-between items-end gap-12">
             <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/5 border border-primary-500/10 text-primary-500 text-[11px] font-bold uppercase tracking-widest mb-10">
-                Visual Discovery
-              </div>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-primary-500 leading-[1.05] tracking-tight mb-8">
                 A gallery of <br />
                 <span className="text-accent-teal italic font-light">pure focus.</span>

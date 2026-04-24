@@ -22,16 +22,15 @@ export function EduEvents({ data }: { data?: any }) {
   ]
 
   return (
-    <section className="py-32 bg-[#1E2A44] text-white overflow-hidden relative">
-      <div className="absolute inset-0 lab-grid opacity-[0.03] pointer-events-none" />
-      <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-teal/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
+    <section className="py-32 bg-[#151F32] text-white overflow-hidden relative border-y border-accent-teal/20 shadow-[inset_0_0_100px_rgba(0,0,0,0.5)]">
+      <div className="absolute inset-0 lab-grid opacity-[0.04] pointer-events-none mix-blend-overlay" />
+      {/* Animated glowing orbs for depth */}
+      <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent-teal/10 rounded-full blur-[120px] -translate-y-1/3 translate-x-1/3 animate-[pulse_6s_ease-in-out_infinite]" />
+      <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-600/30 rounded-full blur-[150px] translate-y-1/3 -translate-x-1/4" />
       
       <div className="container-fluid relative z-10">
         <div className="max-w-4xl mb-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-teal/20 border border-accent-teal/30 text-accent-teal text-[10px] font-bold uppercase tracking-widest mb-10">
-             Exclusive: Year-long students only
-          </div>
-          <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-6 leading-[1.1] tracking-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-[1.1] tracking-tight">
             Year-long students don't <br /> just attend events. <br />
             <span className="text-accent-teal italic font-light opacity-90">They run them.</span>
           </h2>
@@ -41,13 +40,14 @@ export function EduEvents({ data }: { data?: any }) {
         </div>
 
         {/* Roles Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-24 relative z-10">
           {features.map((feature: any, i: number) => (
-            <div key={i} className="flex flex-col items-center justify-center p-10 bg-white/5 border border-white/10 rounded-[2.5rem] text-center group hover:bg-white/10 hover:border-accent-teal transition-all duration-500 shadow-2xl">
-              <div className="w-14 h-14 rounded-2xl bg-accent-teal/20 flex items-center justify-center text-accent-teal mb-6 group-hover:bg-accent-teal group-hover:text-white transition-all duration-500">
+            <div key={i} className="flex flex-col items-center justify-center p-10 bg-white/[0.02] backdrop-blur-md border border-white/10 rounded-[2.5rem] text-center group hover:bg-white/[0.08] hover:border-accent-teal/40 hover:-translate-y-3 transition-all duration-500 shadow-2xl hover:shadow-[0_20px_40px_rgba(47,181,163,0.15)] relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              <div className="w-16 h-16 rounded-2xl bg-accent-teal/10 border border-accent-teal/20 flex items-center justify-center text-accent-teal mb-6 group-hover:bg-accent-teal group-hover:text-white group-hover:scale-110 transition-all duration-500 relative z-10 shadow-[0_0_20px_rgba(47,181,163,0.1)]">
                 {feature.icon ? <feature.icon size={28} /> : <Grid size={28} />}
               </div>
-              <span className="text-sm font-bold text-white tracking-widest uppercase">{feature.label || feature}</span>
+              <span className="text-sm font-bold text-white/90 tracking-widest uppercase relative z-10 group-hover:text-white transition-colors">{feature.label || feature}</span>
             </div>
           ))}
         </div>

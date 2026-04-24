@@ -33,9 +33,6 @@ export function OurTeam() {
     <section className="section-spacing bg-white">
       <div className="container-fluid">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <p className="text-xs font-mono text-accent-teal font-bold uppercase tracking-widest mb-4">
-            The people who help shape the experience
-          </p>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#1E2A44] leading-tight">
             The mentors behind the learning experience
           </h2>
@@ -51,8 +48,8 @@ export function OurTeam() {
         <div className="flex overflow-x-auto pb-8 md:pb-0 md:grid md:grid-cols-4 gap-6 snap-x snap-mandatory hide-scrollbar">
           {teamMembers.map((item) => {
             return (
-              <div 
-                key={item.title} 
+              <div
+                key={item.title}
                 className="group flex flex-col items-center text-center min-w-[280px] md:min-w-0 snap-center rounded-[2rem] border border-neutral-100 p-8 shadow-sm hover:shadow-xl transition-all duration-300 bg-neutral-50"
               >
                 <div className="w-32 h-32 rounded-full overflow-hidden mb-6 shadow-inner bg-[#1E2A44] flex items-center justify-center text-white text-4xl font-serif font-bold">

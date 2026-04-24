@@ -65,7 +65,6 @@ export function TestimonialsSlider({ data }: { data?: any[] }) {
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <p className="text-accent-teal font-bold uppercase tracking-[0.2em] text-xs mb-4">Section 06 — Parent Voices</p>
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
               Unexpected Discoveries through handling unfamiliar challenges..
             </h2>

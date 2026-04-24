@@ -13,9 +13,6 @@ export default function BlogsPage() {
         <div className="absolute inset-0 lab-grid opacity-[0.03]" />
         <div className="container-fluid relative z-10">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/5 border border-primary-500/10 text-primary-500 text-[11px] font-bold uppercase tracking-widest mb-10">
-              The Observer Blog
-            </div>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-primary-500 mb-8 leading-[1.05] tracking-tight">
               Thinking in <br/>
               <span className="text-accent-teal italic font-light">Insights.</span>

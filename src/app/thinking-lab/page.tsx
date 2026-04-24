@@ -106,7 +106,7 @@ export default function ThinkingLabPage() {
       </section>
 
       {/* SECTION 02 — What a session actually looks like */}
-      <section className="section-spacing bg-white">
+      <section className="pt-24 md:pt-32 pb-8 bg-white">
         <div className="container-fluid">
           <div className="max-w-4xl mb-20">
              <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 mb-6 leading-tight">
@@ -135,8 +135,8 @@ export default function ThinkingLabPage() {
             "Every session unfolds differently, but the first few minutes almost always help parents understand how a child approaches something unfamiliar."
           </div>
 
-          <div className="mt-40">
-            <div className="text-center mb-20">
+          <div className="mt-20">
+            <div className="text-center mb-16">
               <h3 className="text-4xl font-serif font-bold text-primary-500 mb-4">Inside the moments</h3>
               <p className="text-neutral-500">Tap to read each full moment.</p>
             </div>
@@ -146,7 +146,7 @@ export default function ThinkingLabPage() {
       </section>
 
       {/* SECTION 04 — HOW WE OBSERVE (Trust Anchor) */}
-      <section className="section-spacing bg-white">
+      <section className="pt-12 pb-24 md:pb-32 bg-white">
         <div className="container-fluid">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 mb-6 leading-tight">
@@ -247,9 +247,6 @@ export default function ThinkingLabPage() {
              <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-accent-teal/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
              <div className="relative z-10 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
                <div className="md:col-span-7">
-                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-accent-teal text-[10px] font-bold uppercase tracking-widest mb-6">
-                      Scientist interaction touchpoints
-                   </div>
                    <h3 className="text-3xl font-serif font-bold text-white mb-6 leading-tight">Children experience how real experts approach problems — not as theory, but through interaction.</h3>
                    <div className="flex flex-wrap gap-8 items-center border-t border-white/10 pt-8 mt-8">
                       {['ISRO', 'DRDO', 'IISER', 'Research ecosystems'].map((name) => (

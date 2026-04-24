@@ -6,18 +6,18 @@ import { Plus, Minus } from 'lucide-react'
 const moments = [
   {
     shortTitle: "Observe before act",
-    title: "A young learner and a gear system she'd never seen before.",
-    text: "She didn't touch it for the first eight minutes. Just looked. Tilted her head. Looked from a different angle. When she finally reached out, her first move was to turn the largest gear — testing the system before committing to it. Her parent had described her as 'slow to start things'. We described it as a real problem-solving way of first observing the system. Same child. Different lens.",
+    title: "A 10-year-old and a gear system she'd never seen before.",
+    text: "She didn't touch it for the first eight minutes. Just looked. Tilted her head. Looked from a different angle. When she finally reached out, her first move was to turn the largest gear — testing the system before committing to it. Her parent had described her as 'slow to start things'. We described it as a real problem solving way of first observing the system. Same child. Different lens.",
   },
   {
     shortTitle: "Retry after failure",
-    title: "A student who failed four times and kept going.",
-    text: "His fourth attempt didn't work either. He sat back, stared at the ceiling for about thirty seconds, then picked up the materials and tried something genuinely different. Not a variation — a different approach entirely. That shift is harder than it sounds. Most adults default to trying the same thing faster. He did it without being asked.",
+    title: "A 12-year-old who failed four times and kept going.",
+    text: "His fourth attempt didn't work either. He sat back, stared at the ceiling for about thirty seconds, then picked up the materials and tried something genuinely different. Not a variation — a different approach entirely. That shift is harder than it sounds. Most adults default to trying the same thing faster. He did it at twelve, without being asked.",
   },
   {
     shortTitle: "Confident scientist interaction",
-    title: "A student who explained her project to a scientist during one of our innovation events.",
-    text: "She'd spent a month building a working model during the year-long program. At the event, a researcher asked her how it worked. She answered — clearly, confidently, technically. And then asked the researcher a question back. Her mother said she'd never heard her daughter speak to an adult that way. We weren't surprised. We'd been watching her think for weeks.",
+    title: "A 14-year-old who explained her project to a scientist during one of our school and edu innovation events.",
+    text: "She'd spent a month building a working model during the year-long program. At the event, a researcher asked her how it worked. She answered — clearly, confidently, technically. And then asked the researcher a question back. Her mother said she'd never heard her daughter speak to an adult that way. We weren't surprised. We'd been watching her think for eight weeks.",
   },
 ]
 
@@ -79,11 +79,11 @@ export function RealSessionMoments() {
         {/* Mobile View: Accordion */}
         <div className="md:hidden space-y-4">
           {moments.map((moment, index) => (
-            <div 
-              key={moment.title} 
+            <div
+              key={moment.title}
               className="border border-neutral-200 rounded-2xl bg-neutral-50 overflow-hidden"
             >
-              <button 
+              <button
                 onClick={() => toggleAccordion(index)}
                 className="w-full flex items-center justify-between p-6 text-left"
               >
@@ -101,11 +101,10 @@ export function RealSessionMoments() {
                   )}
                 </div>
               </button>
-              
-              <div 
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${
-                  openIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-                }`}
+
+              <div
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                  }`}
               >
                 <div className="p-6 pt-0 border-t border-neutral-100 mt-2">
                   <h3 className="text-lg font-serif font-bold text-[#16213B] mb-3 mt-4">

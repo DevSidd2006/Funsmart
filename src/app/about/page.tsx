@@ -53,12 +53,9 @@ export default function AboutPage() {
         <div className="absolute inset-0 lab-grid opacity-[0.03]" />
         <div className="container-fluid relative z-10 text-center">
           <div className="max-w-5xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/5 border border-primary-500/10 text-primary-500 text-[11px] font-bold uppercase tracking-widest mb-10">
-              Our Origin Story
-            </div>
-            <h1 className="text-3xl md:text-6xl lg:text-7xl font-serif font-bold text-primary-500 mb-8 leading-[1.1] tracking-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-serif font-bold text-primary-500 mb-8 leading-[1.1] tracking-tight">
               We started FunSmartism because we kept seeing <br className="hidden md:block" />
-              <span className="block text-2xl md:text-6xl lg:text-7xl text-accent-teal italic font-light">something schools weren't designed to notice.</span>
+              <span className="block text-3xl md:text-5xl lg:text-[3.5rem] text-accent-teal italic font-light">something schools weren't designed to notice.</span>
             </h1>
             <p className="text-xl md:text-2xl text-neutral-600 font-light leading-relaxed max-w-4xl mx-auto">
               We kept seeing capable children come alive in real-world learning environment that gave them freedom—and shut down in environments that didn’t. Parents could sense it too, but had no language for what they were seeing. FunSmartism was built to close that gap.
@@ -69,19 +66,19 @@ export default function AboutPage() {
 
       {/* The Belief */}
       <section className="py-24 bg-white relative z-20">
-        <div className="container-fluid max-w-5xl mx-auto">
+        <div className="container-fluid max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-center text-[#1E2A44] mb-16">
             Three things we believe.
           </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
             {beliefsData.map((belief) => (
-              <div key={belief.title} className="relative overflow-hidden rounded-[20px] bg-neutral-50 border border-neutral-100 p-8 shadow-sm">
-                <div className="absolute left-0 top-0 h-full w-1.5 rounded-r-xl bg-[#1E2A44]" />
-                <h3 className="text-xl font-serif font-bold text-[#1E2A44] mb-4 pr-2">
+              <div key={belief.title} className="relative overflow-hidden rounded-[20px] bg-neutral-50 border border-neutral-100 p-10 shadow-sm transition-shadow hover:shadow-md">
+                <div className="absolute left-0 top-0 h-full w-2 rounded-r-xl bg-[#1E2A44]" />
+                <h3 className="text-2xl font-serif font-bold text-[#1E2A44] mb-5 pr-2">
                   {belief.title}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed text-sm">
+                <p className="text-neutral-600 leading-relaxed text-base">
                   {belief.description}
                 </p>
               </div>
@@ -91,13 +88,13 @@ export default function AboutPage() {
       </section>
 
       <FounderJourney />
-      
+
       <RealSessionMoments />
-      
+
       {/* Philosophy */}
       <section className="py-32 bg-[#1E2A44] text-white text-center">
         <div className="container-fluid max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl lg:text-5xl font-serif font-bold text-white mb-10 leading-tight">
+          <h2 className="text-4xl font-serif font-bold text-white mb-10 leading-tight">
             Marks show outcomes. <br className="hidden md:block" />
             <span className="text-accent-teal">Scientist-style thinking habits shape futures.</span>
           </h2>
@@ -113,7 +110,7 @@ export default function AboutPage() {
       <section className="section-spacing bg-neutral-50 border-t border-neutral-200">
         <div className="container-fluid max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1E2A44] mb-4">In brief</h2>
+            <h2 className="text-4xl font-serif font-bold text-[#1E2A44] mb-4">In brief</h2>
           </div>
 
           <div className="space-y-4">
@@ -128,7 +125,7 @@ export default function AboutPage() {
                 </div>
               </details>
             ))}
-            
+
             <div className="border border-neutral-200 bg-white rounded-2xl p-6 mt-6 flex flex-col md:flex-row md:justify-between md:items-center gap-4 shadow-sm">
               <div>
                 <span className="text-xs font-mono text-accent-teal font-bold uppercase tracking-widest block mb-2">Location</span>
@@ -149,13 +146,13 @@ export default function AboutPage() {
         <div className="absolute inset-0 lab-grid opacity-[0.05]" />
         <div className="container-fluid relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-8 leading-tight tracking-tight">
+            <h2 className="text-4xl font-serif font-bold text-white mb-8 leading-tight tracking-tight">
               Come and experience real <span className="text-accent-teal italic font-light">problem-solving</span> in action.
             </h2>
             <p className="text-xl md:text-2xl text-[#B7E3DD] mb-16 font-light italic">
               The orientation is free. The conversation is real. Your questions are welcome.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link href="/schedule-visit" className="w-full sm:w-auto">
                 <Button size="lg" className="bg-accent-teal border-none text-white px-16 py-6 text-xl shadow-huge shadow-accent-teal/30 w-full rounded-full font-bold">
@@ -175,7 +172,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-      
+
     </div>
   )
 }

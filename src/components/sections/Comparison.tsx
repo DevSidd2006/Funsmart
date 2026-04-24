@@ -20,7 +20,6 @@ export function WhatMakesDifferent({ data }: { data?: any }) {
     <section className="section-spacing bg-white">
       <div className="container-fluid">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <p className="text-accent-teal font-bold uppercase tracking-[0.2em] text-sm mb-4">{subheading}</p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-500 mb-6 leading-tight">
             {heading}
           </h2>

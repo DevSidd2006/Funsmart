@@ -220,7 +220,7 @@ export default function ProgramsPage() {
             </div>
 
             {/* Themes Table Section */}
-            <div className="mb-40">
+            <div className="mb-20">
               <div className="text-center mb-20">
                 <h3 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-6">The 10 themes</h3>
                 <p className="text-xl text-neutral-500 font-light italic max-w-3xl mx-auto leading-relaxed">
@@ -267,12 +267,6 @@ export default function ProgramsPage() {
                     <p className="text-neutral-500 leading-relaxed font-light italic">{t.desc}</p>
                   </div>
                 ))}
-              </div>
-              
-              <div className="mt-20 text-center">
-                <p className="text-xs font-mono text-accent-teal uppercase tracking-[0.4em] max-w-4xl mx-auto leading-loose font-bold">
-                  A thinking-habits parent note is shared at the end of the 10 days.
-                </p>
               </div>
             </div>
 

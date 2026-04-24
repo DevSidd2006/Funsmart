@@ -61,9 +61,6 @@ export default async function ForParentsPage() {
         <div className="container-fluid relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
             <div className="lg:col-span-7">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-500/5 border border-primary-500/10 text-primary-500 text-[10px] font-bold uppercase tracking-widest mb-10">
-                The Parent Perspective
-              </div>
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-500 mb-8 leading-[1.05] tracking-tight text-balanced">
                 You will leave knowing something about your child <br />
                 <span className="text-accent-teal italic font-light opacity-90">that school has never told you.</span>
@@ -71,16 +68,6 @@ export default async function ForParentsPage() {
               <p className="text-xl md:text-2xl text-neutral-600 mb-12 leading-relaxed font-light max-w-2xl">
                 What parents discover through hands-on RoboSTEM challenges, expert interaction sessions, and real observation-based guidance.
               </p>
-              <div className="flex flex-col sm:flex-row gap-6 items-center">
-                <Link href="/schedule-visit" className="w-full sm:w-auto">
-                  <Button size="lg" className="px-12 py-6 bg-accent-teal shadow-huge shadow-accent-teal/20 border-none text-white transition-all text-xl font-bold rounded-full w-full">
-                    Schedule a visit →
-                  </Button>
-                </Link>
-                <span className="text-[10px] font-mono font-bold text-neutral-400 uppercase tracking-widest hidden sm:block">
-                  Free Parent Orientation <br /> 30–45 minutes
-                </span>
-              </div>
             </div>
             
             <div className="lg:col-span-5">
@@ -112,8 +99,8 @@ export default async function ForParentsPage() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="relative bg-neutral-50 rounded-2xl p-8 border border-neutral-100 shadow-sm overflow-hidden flex flex-col h-full group hover:-translate-y-1 transition-transform">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6">
+            <div className="relative bg-neutral-50 rounded-2xl p-8 border border-neutral-100 shadow-sm overflow-hidden flex flex-col h-full group hover:-translate-y-1 transition-transform md:col-span-1 lg:col-span-2">
               <div className="absolute left-0 top-0 h-full w-1.5 bg-accent-teal" />
               <div className="w-12 h-12 rounded-full bg-accent-teal/10 text-accent-teal flex items-center justify-center mb-6">
                 <Search size={24} />
@@ -122,7 +109,7 @@ export default async function ForParentsPage() {
               <p className="text-neutral-600 text-sm leading-relaxed mt-auto font-light">This is one of the clearest thinking patterns we observe. Most parents have never had it described to them about their own child.</p>
             </div>
             
-            <div className="relative bg-neutral-50 rounded-2xl p-8 border border-neutral-100 shadow-sm overflow-hidden flex flex-col h-full group hover:-translate-y-1 transition-transform">
+            <div className="relative bg-neutral-50 rounded-2xl p-8 border border-neutral-100 shadow-sm overflow-hidden flex flex-col h-full group hover:-translate-y-1 transition-transform md:col-span-1 lg:col-span-2">
               <div className="absolute left-0 top-0 h-full w-1.5 bg-accent-teal" />
               <div className="w-12 h-12 rounded-full bg-accent-teal/10 text-accent-teal flex items-center justify-center mb-6">
                 <RefreshCcw size={24} />
@@ -131,7 +118,7 @@ export default async function ForParentsPage() {
               <p className="text-neutral-600 text-sm leading-relaxed mt-auto font-light">Some go quiet. Some call for help in two minutes. Some double down. Some take a breath and start from a different angle. Every response becomes a clue for better parent support.</p>
             </div>
             
-            <div className="relative bg-neutral-50 rounded-2xl p-8 border border-neutral-100 shadow-sm overflow-hidden flex flex-col h-full group hover:-translate-y-1 transition-transform">
+            <div className="relative bg-neutral-50 rounded-2xl p-8 border border-neutral-100 shadow-sm overflow-hidden flex flex-col h-full group hover:-translate-y-1 transition-transform md:col-span-1 lg:col-span-2">
               <div className="absolute left-0 top-0 h-full w-1.5 bg-accent-teal" />
               <div className="w-12 h-12 rounded-full bg-accent-teal/10 text-accent-teal flex items-center justify-center mb-6">
                 <Sparkles size={24} />
@@ -140,7 +127,7 @@ export default async function ForParentsPage() {
               <p className="text-neutral-600 text-sm leading-relaxed mt-auto font-light">Common in high-performing children — and it surprises parents every time. Capable, but visibly doubtful before starting. Different problem, different support needed.</p>
             </div>
             
-            <div className="relative bg-neutral-50 rounded-2xl p-8 border border-neutral-100 shadow-sm overflow-hidden flex flex-col h-full group hover:-translate-y-1 transition-transform lg:col-span-1">
+            <div className="relative bg-neutral-50 rounded-2xl p-8 border border-neutral-100 shadow-sm overflow-hidden flex flex-col h-full group hover:-translate-y-1 transition-transform md:col-span-1 lg:col-span-3">
               <div className="absolute left-0 top-0 h-full w-1.5 bg-accent-teal" />
               <div className="w-12 h-12 rounded-full bg-accent-teal/10 text-accent-teal flex items-center justify-center mb-6">
                 <Lightbulb size={24} />
@@ -149,7 +136,7 @@ export default async function ForParentsPage() {
               <p className="text-neutral-600 text-sm leading-relaxed mt-auto font-light">Mechanical systems? Logic patterns? Open-ended challenges? These preferences are invisible in results — but enormously useful for a parent who wants to nurture real interest.</p>
             </div>
             
-            <div className="relative bg-neutral-50 rounded-2xl p-8 border border-neutral-100 shadow-sm overflow-hidden flex flex-col h-full group hover:-translate-y-1 transition-transform lg:col-span-2">
+            <div className="relative bg-neutral-50 rounded-2xl p-8 border border-neutral-100 shadow-sm overflow-hidden flex flex-col h-full group hover:-translate-y-1 transition-transform md:col-span-2 lg:col-span-3">
               <div className="absolute left-0 top-0 h-full w-1.5 bg-accent-teal" />
               <div className="w-12 h-12 rounded-full bg-accent-teal/10 text-accent-teal flex items-center justify-center mb-6">
                 <Sprout size={24} />

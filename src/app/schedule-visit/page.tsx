@@ -356,8 +356,7 @@ export default function ScheduleVisitPage() {
 
           <div className="mt-20 p-12 rounded-[2.5rem] bg-white border border-neutral-100 text-center shadow-lg">
             <p className="text-xl text-neutral-600 leading-relaxed font-light italic max-w-4xl mx-auto">
-              Throughout all 10 days, we observe how your child thinks. Not what they produce — how they approach, persist, adapt, and engage. <br className="hidden md:block" />
-              <span className="text-primary-500 font-bold not-italic mt-4 block">Insights shared with parents at the end of the workshop.</span>
+              <span className="font-bold not-italic text-primary-500">Throughout all 10 days:</span> We observe how your child thinks. Not what they produce — how they approach, persist, adapt, and engage. <span className="text-primary-500 not-italic">Insights shared with parents at the end of the workshop.</span>
             </p>
           </div>
         </div>
@@ -388,8 +387,8 @@ export default function ScheduleVisitPage() {
             <p className="text-3xl text-primary-500 font-serif font-bold">
               You can explore this during your visit.
             </p>
-            <p className="text-[11px] font-mono text-neutral-400 uppercase tracking-[0.4em] font-bold">
-              Every month: Parents receive observation notes on their child's thinking habits.
+            <p className="text-[11px] font-mono text-neutral-400 uppercase tracking-[0.4em]">
+              <span className="font-bold text-primary-500">Every month:</span> Parents receive observation notes on their child's thinking habits.
             </p>
           </div>
         </div>

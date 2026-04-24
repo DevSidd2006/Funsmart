@@ -28,9 +28,6 @@ export function LatestInsights() {
     <section id="edu-events" className="section-spacing bg-white">
       <div className="container-fluid">
         <div className="max-w-4xl mx-auto text-center mb-14">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-teal/10 text-accent-teal text-xs font-bold uppercase tracking-widest mb-6">
-            Year-long students only
-          </div>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 mb-4 leading-tight">
             Year-long students don't just attend events. <span className="text-accent-teal">They run them.</span>
           </h2>
