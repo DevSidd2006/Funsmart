@@ -60,7 +60,7 @@ export function ProgramsOverview({ data }: { data?: any[] }) {
               }`}
             >
               <div>
-                <div className={`text-mono text-[11px] mb-8 uppercase tracking-[0.2em] font-bold ${prog.variant === 'indigo' ? 'text-accent-teal' : 'text-accent-teal'}`}>
+                <div className={`text-mono text-[12px] mb-8 uppercase tracking-[0.2em] font-bold ${prog.variant === 'indigo' ? 'text-accent-teal' : 'text-accent-teal'}`}>
                   {prog.tag}
                 </div>
                 <h3 className={`text-2xl md:text-3xl font-serif font-bold mb-8 leading-tight ${prog.variant === 'indigo' ? 'text-white' : 'text-[#1E2A44]'}`}>

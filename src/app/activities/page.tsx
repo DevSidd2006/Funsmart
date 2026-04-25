@@ -47,7 +47,7 @@ export default function ActivitiesPage() {
         <div className="absolute inset-0 lab-grid opacity-[0.05]" />
         <div className="container-fluid relative z-10">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-teal/10 border border-accent-teal/20 text-accent-teal text-[11px] font-bold uppercase tracking-widest mb-10">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-teal/10 border border-accent-teal/20 text-accent-teal text-[12px] font-bold uppercase tracking-widest mb-10">
               The Programs
             </div>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-balanced leading-[1.05] tracking-tight">
@@ -88,6 +88,7 @@ export default function ActivitiesPage() {
                          src={cat.image} 
                          alt={cat.title} 
                          fill
+                         sizes="(max-width: 768px) 100vw, 50vw"
                          className="object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[2s]" 
                        />
                        <div className="absolute inset-0 bg-primary-500/0 group-hover:bg-primary-500/10 transition-colors duration-500" />

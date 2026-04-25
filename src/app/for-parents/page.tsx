@@ -1,6 +1,7 @@
 import React from 'react'
 import { Button } from '@/components/ui/Button'
 import { TestimonialsClient } from './TestimonialsClient'
+import Image from 'next/image'
 import { 
   Search, 
   RefreshCcw, 
@@ -72,9 +73,11 @@ export default async function ForParentsPage() {
             
             <div className="lg:col-span-5">
               <div className="relative rounded-[3rem] overflow-hidden shadow-huge w-full aspect-[4/5] bg-neutral-100 group">
-                <img 
+                <Image 
                   src="https://images.unsplash.com/photo-1543269664-76bc3997d9ea?q=80&w=1200" 
                   alt="Parent and child in a discovery moment" 
+                  fill
+                  sizes="(max-width: 768px) 100vw, 40vw"
                   className="absolute inset-0 w-full h-full object-cover transition-transform duration-[3s] group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-900/60 via-transparent to-transparent"></div>
@@ -246,7 +249,7 @@ export default async function ForParentsPage() {
           <p className="text-sm text-neutral-500 mb-8">Featured in leading newspapers for innovation-led child learning.</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {['The Times of India', 'Sakal', 'Pudhari', 'The Indian Express'].map((paper) => (
-              <div key={paper} className="h-10 md:h-12 rounded-lg border border-neutral-200 bg-neutral-50 text-[11px] font-semibold text-neutral-500 flex items-center justify-center px-2">
+              <div key={paper} className="h-10 md:h-12 rounded-lg border border-neutral-200 bg-neutral-50 text-[12px] font-semibold text-neutral-500 flex items-center justify-center px-2">
                 {paper}
               </div>
             ))}

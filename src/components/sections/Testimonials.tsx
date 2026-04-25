@@ -39,7 +39,7 @@ export function Testimonials({ data }: { data?: any[] }) {
               </p>
               <div>
                 <p className="font-serif font-bold text-primary-500">{t.author}</p>
-                <p className="text-mono text-[10px] text-neutral-400 mt-1 uppercase tracking-widest">{t.location || t.role}</p>
+                <p className="text-mono text-[11px] text-neutral-400 mt-1 uppercase tracking-widest">{t.location || t.role}</p>
               </div>
 
             </Card>

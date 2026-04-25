@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Button } from '@/components/ui/Button'
 import { JoinCommunity } from '@/components/ui/JoinCommunity'
 import { ArrowRight } from 'lucide-react'
@@ -61,20 +62,28 @@ export default function BlogsPage() {
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
                        <div className="md:col-span-5 rounded-lg overflow-hidden relative aspect-[4/3] bg-neutral-100 flex items-center justify-center shadow-base group-hover:shadow-md transition-shadow">
                           {post.mainImage ? (
-                            <img 
+                            <Image 
                               src={post.mainImage} 
                               alt={post.title} 
+                              fill
+                              sizes="(max-width: 768px) 100vw, 33vw"
                               className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[1.5s] grayscale-[20%]" 
                             />
                           ) : (
-                            <img src="/images/lab-observation.png" alt="Blog" className="w-full h-full object-cover grayscale-[20%]" />
+                            <Image 
+                              src="/images/lab-observation.png" 
+                              alt="Blog placeholder" 
+                              fill
+                              sizes="(max-width: 768px) 100vw, 33vw"
+                              className="w-full h-full object-cover grayscale-[20%]" 
+                            />
                           )}
                           <div className="absolute inset-0 bg-primary-500/0 group-hover:bg-primary-500/5 transition-colors duration-500" />
                        </div>
                        <div className="md:col-span-7 flex flex-col justify-center">
                           <div className="flex items-center gap-4 mb-6">
-                             <span className="text-mono text-[10px] bg-accent-surface text-accent-teal uppercase tracking-widest px-3 py-1 rounded-sm border border-neutral-100">{post.category || 'ARTICLE'}</span>
-                             <span className="text-mono text-[10px] text-neutral-400 tracking-widest">
+                             <span className="text-mono text-[11px] bg-accent-surface text-accent-teal uppercase tracking-widest px-3 py-1 rounded-sm border border-neutral-100">{post.category || 'ARTICLE'}</span>
+                             <span className="text-mono text-[11px] text-neutral-400 tracking-widest">
                                {post.publishedAt ? new Date(post.publishedAt).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' }) : 'Recent'}
                              </span>
                           </div>

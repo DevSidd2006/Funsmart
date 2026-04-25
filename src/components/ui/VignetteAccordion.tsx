@@ -23,7 +23,7 @@ export function VignetteAccordion({ items }: { items: Vignette[] }) {
             className="p-10 rounded-[32px] bg-white border border-neutral-100 shadow-sm hover:shadow-huge transition-all duration-500 group flex flex-col h-full"
           >
             <div className="flex-grow">
-               <span className="text-accent-teal font-mono text-[10px] uppercase tracking-widest font-bold mb-4 block">
+               <span className="text-accent-teal font-mono text-[11px] uppercase tracking-widest font-bold mb-4 block">
                  {item.age}
                </span>
                <h3 className="text-2xl font-serif font-bold text-primary-500 mb-8 group-hover:text-accent-teal transition-colors leading-tight">
@@ -37,7 +37,7 @@ export function VignetteAccordion({ items }: { items: Vignette[] }) {
                </div>
             </div>
             <div className="mt-8 pt-6 border-t border-neutral-50">
-               <span className="text-[10px] font-bold text-primary-300 uppercase tracking-widest">Observed thinking moment</span>
+               <span className="text-[11px] font-bold text-primary-300 uppercase tracking-widest">Observed thinking moment</span>
             </div>
           </div>
         ))}

@@ -106,7 +106,7 @@ export default function ProgramsPage() {
               </Link>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-6 text-[10px] md:text-xs font-mono text-white/30 uppercase tracking-[0.2em] font-bold border-t border-white/5 pt-12">
+            <div className="flex flex-wrap items-center justify-center gap-6 text-[12px] md:text-xs font-mono text-white/30 uppercase tracking-[0.2em] font-bold border-t border-white/5 pt-12">
               <span>Ages 8–16</span>
               <span className="w-1 h-1 rounded-full bg-accent-teal" />
               <span>No grades</span>
@@ -125,7 +125,7 @@ export default function ProgramsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <Link href="#workshop" className="group relative overflow-hidden p-10 rounded-[2.5rem] bg-white border border-neutral-200 hover:border-accent-teal transition-all duration-500 shadow-sm hover:shadow-huge">
               <div className="absolute top-0 left-0 w-full h-2 bg-accent-teal" />
-              <div className="inline-flex px-3 py-1 bg-accent-teal/10 text-accent-teal rounded-full text-[10px] font-bold uppercase tracking-widest mb-6">
+              <div className="inline-flex px-3 py-1 bg-accent-teal/10 text-accent-teal rounded-full text-[12px] font-bold uppercase tracking-widest mb-6">
                 Best for first-time families
               </div>
               <h3 className="text-2xl font-serif font-bold text-primary-500 mb-2">10-Day Thinking Reset Workshop</h3>
@@ -139,7 +139,7 @@ export default function ProgramsPage() {
             
             <Link href="#year-long" className="group relative overflow-hidden p-10 rounded-[2.5rem] bg-white border border-neutral-200 hover:border-primary-500 transition-all duration-500 shadow-sm hover:shadow-huge">
               <div className="absolute top-0 left-0 w-full h-2 bg-primary-500" />
-              <div className="inline-flex px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6">
+              <div className="inline-flex px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full text-[12px] font-bold uppercase tracking-widest mb-6">
                 Best for deeper growth
               </div>
               <h3 className="text-2xl font-serif font-bold text-primary-500 mb-2">FunSmartism RoboSTEM Thinking Lab — Year-Long</h3>
@@ -159,7 +159,7 @@ export default function ProgramsPage() {
         <div className="container-fluid">
           <div className="max-w-6xl mx-auto">
             <div className="bg-white rounded-[40px] border border-neutral-100 shadow-huge overflow-hidden mb-32 relative">
-              <div className="bg-accent-teal px-10 py-5 flex flex-wrap items-center justify-between text-white text-[11px] font-bold uppercase tracking-widest gap-4">
+              <div className="bg-accent-teal px-10 py-5 flex flex-wrap items-center justify-between text-white text-[12px] font-bold uppercase tracking-widest gap-4">
                 <div className="flex items-center gap-3">
                   <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
                   Entry Program · 10 consecutive days
@@ -211,7 +211,7 @@ export default function ProgramsPage() {
                         </li>
                       ))}
                     </ul>
-                    <div className="pt-6 border-t border-neutral-200 text-[11px] font-mono text-neutral-400 italic">
+                    <div className="pt-6 border-t border-neutral-200 text-[12px] font-mono text-neutral-400 italic">
                       → No preparation needed. No prior experience required. Just curiosity.
                     </div>
                   </div>
@@ -286,7 +286,7 @@ export default function ProgramsPage() {
                   <div key={i} className="aspect-square relative rounded-[2rem] overflow-hidden shadow-xl group">
                     <Image src={img.src} alt={img.label} fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary-500/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
-                      <span className="text-[10px] font-bold text-white uppercase tracking-[0.2em]">{img.label}</span>
+                      <span className="text-[12px] font-bold text-white uppercase tracking-[0.2em]">{img.label}</span>
                     </div>
                   </div>
                 ))}
@@ -302,7 +302,7 @@ export default function ProgramsPage() {
         <div className="container-fluid relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="bg-white/5 backdrop-blur-md rounded-[40px] border border-white/10 shadow-2xl overflow-hidden mb-32">
-              <div className="bg-primary-900 px-10 py-5 flex flex-wrap items-center justify-between text-white text-[11px] font-bold uppercase tracking-widest gap-4">
+              <div className="bg-primary-900 px-10 py-5 flex flex-wrap items-center justify-between text-white text-[12px] font-bold uppercase tracking-widest gap-4">
                 <div className="flex items-center gap-3">
                   <span className="w-2 h-2 rounded-full bg-accent-teal animate-pulse" />
                   Year-Long Program · Once a week
@@ -354,7 +354,7 @@ export default function ProgramsPage() {
                         </li>
                       ))}
                     </ul>
-                    <div className="pt-6 border-t border-white/10 text-[11px] font-mono text-white/30 italic">
+                    <div className="pt-6 border-t border-white/10 text-[12px] font-mono text-white/30 italic">
                       → The natural next step after the workshop.
                     </div>
                   </div>
@@ -375,8 +375,8 @@ export default function ProgramsPage() {
                     <s.icon size={28} />
                   </div>
                   <div className="text-xl font-serif font-bold text-white mb-2">{s.label}</div>
-                  <div className="text-accent-teal text-[10px] font-bold uppercase tracking-widest mb-3">{s.val}</div>
-                  <div className="text-[10px] text-white/40 font-mono italic">{s.sub}</div>
+                  <div className="text-accent-teal text-[12px] font-bold uppercase tracking-widest mb-3">{s.val}</div>
+                  <div className="text-[12px] text-white/40 font-mono italic">{s.sub}</div>
                 </div>
               ))}
             </div>
@@ -401,7 +401,7 @@ export default function ProgramsPage() {
                       <tr key={i} className="group hover:bg-white/5 transition-all">
                         <td className="py-10 px-12">
                           <div className="flex items-center gap-6">
-                            <div className="w-10 h-10 rounded-xl bg-accent-teal/10 flex items-center justify-center text-accent-teal opacity-50 text-[10px] font-mono font-bold">
+                            <div className="w-10 h-10 rounded-xl bg-accent-teal/10 flex items-center justify-center text-accent-teal opacity-50 text-[12px] font-mono font-bold">
                               {String(i + 1).padStart(2, '0')}
                             </div>
                             <span className="text-white font-bold font-serif text-xl">{t.theme}</span>
@@ -421,7 +421,7 @@ export default function ProgramsPage() {
                 <div className="absolute top-0 right-0 w-full h-full lab-grid opacity-10 pointer-events-none" />
                 <div className="relative z-10">
                   <div className="max-w-4xl mb-20">
-                    <span className="inline-block px-5 py-2 bg-white/20 text-white rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-8">Major Differentiator</span>
+                    <span className="inline-block px-5 py-2 bg-white/20 text-white rounded-full text-[12px] font-bold uppercase tracking-[0.2em] mb-8">Major Differentiator</span>
                     <h3 className="text-4xl md:text-7xl font-serif font-bold text-white mb-10 leading-[1.05]">Year-long exclusive: <br />Edu events</h3>
                     <p className="text-2xl text-white/90 font-light leading-relaxed italic">
                       Children learn scientist-style questioning by interacting with real scientists—not just listening to them. <br className="hidden md:block" />
@@ -454,7 +454,7 @@ export default function ProgramsPage() {
                       they learn to discuss, question, and explain them with experts.
                     </p>
                     <div className="h-px w-24 bg-white/20 mx-auto mb-6" />
-                    <p className="text-white/70 font-mono text-[10px] uppercase tracking-[0.4em] font-bold">
+                    <p className="text-white/70 font-mono text-[12px] uppercase tracking-[0.4em] font-bold">
                       Some selected projects are exhibited publicly for parents & scientists.
                     </p>
                   </div>
@@ -525,22 +525,22 @@ export default function ProgramsPage() {
         
         <div className="container-fluid relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-8xl font-serif font-bold text-white mb-10 leading-tight tracking-tight">
+            <h2 className="text-3xl md:text-6xl font-serif font-bold text-white mb-10 leading-tight tracking-tight">
               Every program begins with a <br className="hidden md:block" />
               <span className="text-accent-teal italic font-light opacity-90">parent orientation.</span>
             </h2>
-            <p className="text-2xl md:text-3xl text-[#B7E3DD] mb-20 max-w-2xl mx-auto leading-relaxed font-light italic">
+            <p className="text-lg md:text-xl text-[#B7E3DD] mb-20 max-w-2xl mx-auto leading-relaxed font-light italic">
               Come in. See how scientist-inspired RoboSTEM problem-solving works in real life. Ask your questions. No commitment.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
               <Link href="/schedule-visit" className="w-full sm:w-auto">
-                <Button size="lg" className="bg-accent-teal border-none text-white px-20 py-8 text-2xl shadow-huge shadow-accent-teal/30 w-full rounded-full font-bold hover:scale-105 transition-transform">
+                <Button size="lg" className="bg-accent-teal border-none text-white px-16 py-6 text-lg shadow-huge shadow-accent-teal/30 w-full rounded-full font-bold hover:scale-105 transition-transform">
                   Schedule a visit →
                 </Button>
               </Link>
               <Link href="/schedule-visit" className="w-full sm:w-auto">
-                <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10 px-20 py-8 text-2xl w-full rounded-full font-medium">
+                <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10 px-16 py-6 text-lg w-full rounded-full font-medium">
                   Need Help Choosing?
                 </Button>
               </Link>

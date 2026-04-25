@@ -56,7 +56,7 @@ export function LabGallery({ items }: { items: any[] }) {
               
               {/* Premium Caption Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-primary-900/90 via-primary-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-10 transform translate-y-4 group-hover:translate-y-0">
-                 <span className="text-[10px] font-mono font-bold text-accent-teal tracking-[0.3em] mb-3 uppercase">
+                 <span className="text-[11px] font-mono font-bold text-accent-teal tracking-[0.3em] mb-3 uppercase">
                    {item.tag || 'LAB_MOMENT'}
                  </span>
                  <h3 className="text-2xl font-serif font-bold text-white leading-tight mb-3">

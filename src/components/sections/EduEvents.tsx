@@ -71,7 +71,7 @@ export function EduEvents({ data }: { data?: any }) {
         <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-12 rounded-[3rem] max-w-5xl mx-auto shadow-2xl relative overflow-hidden group">
           <div className="absolute top-0 left-0 w-2 h-full bg-accent-teal" />
           <div className="text-center relative z-10">
-            <span className="font-bold text-accent-teal uppercase tracking-[0.4em] text-[10px] block mb-6">Why it matters</span>
+            <span className="font-bold text-accent-teal uppercase tracking-[0.4em] text-[12px] block mb-6">Why it matters</span>
             <p className="text-2xl md:text-3xl text-white leading-tight font-serif italic">
               "{whyItMatters}"
             </p>
@@ -79,7 +79,7 @@ export function EduEvents({ data }: { data?: any }) {
         </div>
         
         <div className="mt-16 text-center">
-          <p className="text-white/40 font-mono text-[11px] uppercase tracking-[0.3em] font-bold">
+          <p className="text-white/40 font-mono text-[12px] uppercase tracking-[0.3em] font-bold">
             Not a one-time talk — repeated exposure to real experts over time.
           </p>
         </div>

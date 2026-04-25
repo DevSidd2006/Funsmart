@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { JoinCommunity } from '@/components/ui/JoinCommunity'
 import { galleryItems } from '@/data/gallery'
 
@@ -31,12 +32,14 @@ export default function GalleryPage() {
       <section>
         <div className="container-fluid">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
-             {displayItems.map((item: any) => (
-               <div key={item.id} className={`relative group overflow-hidden rounded-lg shadow-sm border border-neutral-100 ${item.span || 'md:col-span-4'}`}>
+              {displayItems.map((item: any) => (
+                <div key={item.id} className={`relative group overflow-hidden rounded-lg shadow-sm border border-neutral-100 ${item.span || 'md:col-span-4'}`}>
                   {item.image ? (
-                    <img 
+                    <Image 
                        src={item.image} 
                        alt={item.title} 
+                       fill
+                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                        className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[1.5s] ease-in-out" 
                     />
                   ) : (
@@ -50,7 +53,7 @@ export default function GalleryPage() {
                   <div className="absolute inset-0 bg-[#1E2A44]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
                     <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
                       <div className="flex justify-between items-start mb-4">
-                         <span className="text-mono text-[#2FB5A3] text-[10px] font-bold tracking-widest uppercase">{item.tag}</span>
+                         <span className="text-mono text-[#2FB5A3] text-[12px] font-bold tracking-widest uppercase">{item.tag}</span>
                       </div>
                       <h3 className="text-2xl font-serif font-bold text-white mb-3">{item.title}</h3>
                       <p className="text-white/80 text-sm leading-relaxed max-w-sm">
@@ -58,8 +61,8 @@ export default function GalleryPage() {
                       </p>
                     </div>
                   </div>
-               </div>
-             ))}
+                </div>
+              ))}
           </div>
           
           {/* Bottom CTA for Mobile or extra visibility */}

@@ -8,9 +8,9 @@ import { motion } from 'framer-motion';
 
 export function FounderJourney() {
   return (
-    <section className="py-24 bg-accent-surface relative overflow-hidden" id="founder-journey">
+    <section className="relative overflow-hidden bg-accent-surface py-20 md:py-24 lg:py-28" id="founder-journey">
       {/* Background Decorative Elements */}
-      <div className="absolute top-0 right-0 w-1/2 h-full opacity-[0.03] pointer-events-none -z-0 select-none">
+      <div className="pointer-events-none absolute right-0 top-0 h-full w-[55%] select-none opacity-[0.03]">
         <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full rotate-12 translate-x-1/4">
           <path d="M250 50C139.5 50 50 139.5 50 250s89.5 200 200 200 200-89.5 200-200S360.5 50 250 50zm0 360c-88.4 0-160-71.6-160-160s71.6-160 160-160 160 71.6 160 160-71.6 160-160 160z" fill="currentColor" />
           <path d="M250 150c-55.2 0-100 44.8-100 100s44.8 100 100 100 100-44.8 100-100-44.8-100-100-100zm0 160c-33.1 0-60-26.9-60-60s26.9-60 60-60 60 26.9 60 60-26.9 60-60 60z" fill="currentColor" />
@@ -18,9 +18,9 @@ export function FounderJourney() {
       </div>
 
       <div className="container-fluid relative z-10">
-        <div className="max-w-6xl mx-auto">
+        <div className="mx-auto max-w-7xl">
           {/* Main Layout Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-[0.75fr_1.25fr] gap-12 lg:gap-20">
+          <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] lg:gap-14 xl:gap-20">
 
             {/* Left Column: Personal Origin */}
             <motion.div
@@ -28,12 +28,12 @@ export function FounderJourney() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative h-full flex flex-col"
+              className="relative flex flex-col"
             >
               {/* Founder Image Frame */}
-              <div className="relative mb-10">
-                <div className="absolute -inset-4 bg-white/50 border border-white/80 rounded-[3rem] -z-10 rotate-2 shadow-sm" />
-                <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white group">
+              <div className="relative mb-8 md:mb-10">
+                <div className="absolute -inset-3 -z-10 rotate-[1.5deg] rounded-[2.75rem] border border-white/90 bg-white/60 shadow-sm" />
+                <div className="group relative aspect-[4/5] overflow-hidden rounded-[2.35rem] border-2 border-white shadow-2xl">
                   <Image
                     src="/images/dipali-founder.png"
                     alt="Dipali Akolkar — Founder of FunSmartism"
@@ -45,22 +45,22 @@ export function FounderJourney() {
                 </div>
 
                 {/* Float Badge */}
-                <div className="absolute -bottom-6 -right-6 bg-[#1E2A44] text-white px-8 py-6 rounded-2xl shadow-xl hidden md:block">
-                  <span className="text-xl font-serif font-bold italic opacity-90">"Thinking over Rote"</span>
+                <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 rounded-2xl bg-[#1E2A44] px-6 py-4 text-white shadow-xl md:left-auto md:right-5 md:translate-x-0 md:px-8 md:py-5">
+                  <span className="font-serif text-lg font-bold italic opacity-90 md:text-xl">"Thinking over Rote"</span>
                 </div>
               </div>
 
               {/* Bio Details */}
-              <div className="pl-4 border-l-2 border-accent-teal/20 mt-auto">
-                <h3 className="text-3xl font-serif font-bold text-primary-500 mb-1">Dipali Akolkar</h3>
-                <p className="text-neutral-500 font-medium mb-6 uppercase tracking-wider text-xs">Founder — FunSmartism Intelligence Center</p>
+              <div className="mt-8 rounded-[1.75rem] border border-white/90 bg-white/75 p-6 shadow-sm backdrop-blur-sm md:p-7">
+                <h3 className="mb-1 text-3xl font-serif font-bold text-primary-500">Dipali Akolkar</h3>
+                <p className="mb-5 text-xs font-medium uppercase tracking-wider text-neutral-500">Founder — FunSmartism Intelligence Center</p>
 
-                <div className="space-y-5 text-neutral-600 leading-relaxed text-lg italic">
+                <div className="space-y-4 text-base leading-relaxed text-neutral-600 md:text-[17px]">
                   <p>
                     After years in software development and hands-on parenting, Dipali went deeper into child development through formal learning experiences in both <strong>Pune and the USA</strong>.
                   </p>
                   <p>
-                    <span className="text-primary-500 not-italic">What stood out was simple:</span> the right environment can completely change how a child observes, persists, and solves.
+                    <span className="font-semibold text-primary-500">What stood out was simple:</span> the right environment can completely change how a child observes, persists, and solves.
                   </p>
                   <p>
                     That insight led her to build FunSmartism in Pune — a scientist-inspired RoboSTEM environment where real problem-solving becomes visible.
@@ -75,37 +75,38 @@ export function FounderJourney() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
+              className="lg:pt-4"
             >
-              <div className="mb-10">
-                <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
+              <div className="mb-8 md:mb-10">
+                <h2 className="text-4xl font-serif font-bold leading-tight text-primary-500 md:text-5xl">
                   Why we built this.
                 </h2>
                 <div className="w-16 h-1 bg-accent-gold mt-6 rounded-full" />
               </div>
 
-              <div className="space-y-8">
-                <div className="relative">
-                  <Quote className="absolute -left-12 -top-4 w-10 h-10 text-accent-teal/10 rotate-180" />
-                  <p className="text-xl text-neutral-700 leading-relaxed font-medium">
+              <div className="space-y-7 md:space-y-8">
+                <div className="relative rounded-[1.9rem] border border-white/90 bg-white/70 px-6 py-6 shadow-sm md:px-8 md:py-7">
+                  <Quote className="absolute left-6 top-5 h-10 w-10 -rotate-180 text-accent-teal/15" />
+                  <p className="pt-6 text-lg font-medium leading-relaxed text-neutral-700 md:text-xl">
                     We noticed it again and again: a child who struggled in a classroom would become active the moment you put something real in their hands. A mechanical puzzle. A circuit board. A question without a single correct answer.
                   </p>
                 </div>
 
-                <p className="text-lg text-neutral-600 leading-relaxed">
+                <p className="text-base leading-relaxed text-neutral-600 md:text-lg">
                   We saw parents frustrated, wondering why their child's initial spark for logic and science had faded into rote memorization. We realized the problem wasn't the children or the subjects—it was the environment.
                 </p>
 
-                <p className="text-lg text-neutral-600 leading-relaxed">
+                <p className="text-base leading-relaxed text-neutral-600 md:text-lg">
                   So we built a different kind of environment. One where thinking was the subject, not the by-product. Where the goal was not to produce a result, but to understand how a child arrived at one — or didn't.
                 </p>
 
-                <div className="bg-white p-8 rounded-[2.5rem] border border-neutral-100 shadow-lg relative overflow-hidden group">
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-accent-teal/5 rounded-full -mr-16 -mt-16 transition-transform group-hover:scale-150 duration-700" />
+                <div className="group relative overflow-hidden rounded-[2.1rem] border border-neutral-100 bg-white p-7 shadow-lg md:p-8">
+                  <div className="absolute -mr-16 -mt-16 right-0 top-0 h-32 w-32 rounded-full bg-accent-teal/5 transition-transform duration-700 group-hover:scale-150" />
                   <div className="relative z-10">
-                    <p className="text-neutral-700 font-serif font-bold text-xl mb-6">
+                    <p className="mb-5 text-xl font-serif font-bold text-neutral-700">
                       The Thinking Lab is where children build, test, and solve real challenges while we observe how they think...
                     </p>
-                    <p className="text-neutral-500 text-base mb-8">
+                    <p className="mb-7 text-base text-neutral-500 md:mb-8">
                       Helping parents understand how to respond to them in real life during real challenges along the way.
                     </p>
 

@@ -70,7 +70,7 @@ export function RealMoments({
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary-900/60 via-transparent to-transparent" />
                   <div className="absolute bottom-5 left-5">
-                    <span className="inline-flex rounded-full bg-white/95 px-4 py-2 text-[11px] uppercase tracking-[0.28em] text-primary-600 font-semibold shadow-sm">
+                    <span className="inline-flex rounded-full bg-white/95 px-4 py-2 text-[12px] uppercase tracking-[0.28em] text-primary-600 font-bold shadow-sm">
                       {mom.label}
                     </span>
                   </div>

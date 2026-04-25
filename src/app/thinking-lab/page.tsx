@@ -124,7 +124,7 @@ export default function ThinkingLabPage() {
                 <div className="w-14 h-14 rounded-2xl bg-white shadow-sm flex items-center justify-center mb-8 group-hover:bg-accent-teal group-hover:text-white transition-colors duration-300">
                   <step.icon size={28} />
                 </div>
-                <div className="text-accent-teal font-mono text-[10px] font-bold uppercase tracking-widest mb-3">{step.time}</div>
+                <div className="text-accent-teal font-mono text-[12px] font-bold uppercase tracking-widest mb-3">{step.time}</div>
                 <h3 className="text-2xl font-serif font-bold text-primary-500 mb-6">{step.title}</h3>
                 <p className="text-sm text-neutral-500 leading-relaxed font-medium whitespace-pre-line">{step.desc}</p>
               </div>
@@ -188,9 +188,9 @@ export default function ThinkingLabPage() {
             <div className="md:hidden divide-y divide-neutral-100 bg-white">
               {observationRows.map((row, i) => (
                 <div key={i} className="p-8">
-                  <div className="text-[10px] font-bold text-accent-teal uppercase tracking-widest mb-3 opacity-60">What we notice</div>
+                  <div className="text-[12px] font-bold text-accent-teal uppercase tracking-widest mb-3 opacity-60">What we notice</div>
                   <h5 className="text-xl font-serif font-bold text-primary-500 mb-6">{row.notice}</h5>
-                  <div className="text-[10px] font-bold text-primary-400 uppercase tracking-widest mb-3 opacity-60">What it helps parents understand</div>
+                  <div className="text-[12px] font-bold text-primary-400 uppercase tracking-widest mb-3 opacity-60">What it helps parents understand</div>
                   <div className="text-neutral-500 text-sm leading-relaxed italic border-l-2 border-accent-teal/20 pl-4 py-1">
                     {row.reveal}
                   </div>
@@ -205,7 +205,7 @@ export default function ThinkingLabPage() {
       </section>
 
       {/* SECTION 05 — WHAT THIS IS NOT */}
-      <section className="section-spacing bg-white border-y border-neutral-100">
+      <section className="py-10 md:py-16 bg-white border-y border-neutral-100">
         <div className="container-fluid text-center">
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col md:flex-row justify-center gap-6 mb-16">
@@ -224,7 +224,7 @@ export default function ThinkingLabPage() {
       </section>
 
       {/* SECTION 06 — WHAT PARENTS RECEIVE */}
-      <section className="section-spacing bg-[#F5F5F5]">
+      <section className="py-16 md:py-24 bg-[#F5F5F5]">
         <div className="container-fluid">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 mb-6">Not a score. Not a rank. <br /> Something more useful.</h2>
@@ -277,7 +277,7 @@ export default function ThinkingLabPage() {
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               {['The Times of India', 'Sakal', 'Pudhari', 'The Indian Express'].map((press) => (
-                <div key={press} className="h-14 rounded-xl border border-neutral-200 bg-neutral-50 flex items-center justify-center text-[11px] font-semibold text-neutral-500 px-2 text-center">
+                <div key={press} className="h-14 rounded-xl border border-neutral-200 bg-neutral-50 flex items-center justify-center text-[12px] font-semibold text-neutral-500 px-2 text-center">
                   {press}
                 </div>
               ))}
@@ -296,21 +296,21 @@ export default function ThinkingLabPage() {
         
         <div className="container-fluid relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-7xl font-serif font-bold text-white mb-8 leading-tight">
+            <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8 leading-tight">
                See your child’s real <br />
                <span className="text-accent-teal italic font-light opacity-90">problem-solving approach in action</span>
             </h2>
-            <p className="text-xl md:text-2xl text-[#B7E3DD] mb-16 font-light opacity-80 italic">To experience it in real RESET sessions</p>
+            <p className="text-lg md:text-xl text-[#B7E3DD] mb-16 font-light opacity-80 italic">To experience it in real RESET sessions</p>
             
             <div className="flex flex-col items-center gap-8">
               <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
                 <Link href="/schedule-visit" className="w-full sm:w-auto">
-                  <Button size="lg" className="bg-accent-teal border-none text-white px-12 py-6 text-lg shadow-huge shadow-accent-teal/30 w-full rounded-full font-bold">
+                  <Button size="lg" className="bg-accent-teal border-none text-white px-10 py-5 text-base shadow-huge shadow-accent-teal/30 w-full rounded-full font-bold">
                     Schedule a Thinking Lab Visit
                   </Button>
                 </Link>
                 <Link href="/programs" className="w-full sm:w-auto">
-                  <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10 px-12 py-6 text-lg w-full rounded-full">
+                  <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10 px-10 py-5 text-base w-full rounded-full">
                     See Programs First
                   </Button>
                 </Link>
@@ -320,7 +320,7 @@ export default function ThinkingLabPage() {
                 <p className="text-xs text-white/30 font-mono tracking-[0.3em] uppercase font-bold">
                    Free Parent Orientation · 30–45 minutes 📍 Bibwewadi, Pune
                 </p>
-                <p className="text-[10px] text-white/20 uppercase tracking-widest">
+                <p className="text-[12px] text-white/20 uppercase tracking-widest">
                    Also available for school innovation visits and STEM partner sessions
                 </p>
                 <Link href="/programs" className="block text-sm text-accent-teal hover:underline decoration-accent-teal/30 underline-offset-8 mt-6 font-medium tracking-wide">

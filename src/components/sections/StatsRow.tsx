@@ -20,7 +20,7 @@ export function StatsRow({ data }: { data?: any }) {
                 value={stat.number} 
                 className={`text-3xl md:text-5xl font-serif font-bold mb-2 block ${stat.color}`} 
               />
-              <p className="text-mono text-neutral-400 group-hover:text-primary-500 transition-colors uppercase tracking-widest text-[10px] font-bold">
+              <p className="text-mono text-neutral-400 group-hover:text-primary-500 transition-colors uppercase tracking-widest text-[11px] font-bold">
                 {stat.label}
               </p>
             </div>

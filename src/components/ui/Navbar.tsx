@@ -53,7 +53,7 @@ export function Navbar() {
         <Link href="/" className="flex items-center group py-1">
           <div className={cn(
             "p-3 rounded-2xl transition-all duration-500 mr-8",
-            useLightText ? "bg-white shadow-xl shadow-black/10" : "bg-transparent"
+            useLightText ? "bg-white/95 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.12)]" : "bg-transparent"
           )}>
             <Image 
               src="/images/logo.png" 
@@ -61,6 +61,7 @@ export function Navbar() {
               width={200}
               height={80}
               priority
+              sizes="(max-width: 768px) 150px, 200px"
               className="h-12 md:h-14 w-auto object-contain transition-all duration-500 group-hover:scale-105"
             />
           </div>
@@ -74,7 +75,7 @@ export function Navbar() {
                 key={link.name}
                 href={link.href}
                 className={cn(
-                  'relative text-[11px] font-bold uppercase tracking-[0.2em] transition-all duration-300 group whitespace-nowrap',
+                  'relative text-[13px] font-bold uppercase tracking-[0.2em] transition-all duration-300 group whitespace-nowrap',
                   pathname === link.href 
                     ? (useLightText ? 'text-accent-teal' : 'text-primary-500') 
                     : (useLightText ? 'text-white/90 hover:text-white' : 'text-neutral-700 hover:text-primary-500')

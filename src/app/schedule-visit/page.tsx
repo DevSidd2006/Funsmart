@@ -91,7 +91,7 @@ export default function ScheduleVisitPage() {
                 <div className="space-y-6">
                   {/* Step 1 */}
                   <div className="p-8 rounded-3xl bg-[#FAF9F6] border-t-4 border-primary-500 shadow-sm border border-neutral-100 transition-all hover:shadow-lg">
-                    <p className="text-[10px] font-mono font-bold text-neutral-400 uppercase tracking-widest mb-3">Step 1 — You</p>
+                    <p className="text-[12px] font-mono font-bold text-neutral-400 uppercase tracking-widest mb-3">Step 1 — You</p>
                     <h3 className="text-2xl font-serif font-bold text-primary-500 mb-4">Parent orientation.</h3>
                     <p className="text-neutral-600 leading-relaxed font-light italic mb-6">
                       Come in. Meet us. Understand the process. Ask every question you have.
@@ -104,7 +104,7 @@ export default function ScheduleVisitPage() {
 
                   {/* Step 2 */}
                   <div className="p-8 rounded-3xl bg-[#FAF9F6] border-t-4 border-accent-teal shadow-sm border border-neutral-100 transition-all hover:shadow-lg">
-                    <p className="text-[10px] font-mono font-bold text-neutral-400 uppercase tracking-widest mb-3">Step 2 — Your child</p>
+                    <p className="text-[12px] font-mono font-bold text-neutral-400 uppercase tracking-widest mb-3">Step 2 — Your child</p>
                     <h3 className="text-2xl font-serif font-bold text-primary-500 mb-4">10-Day Thinking Reset Workshop.</h3>
                     <p className="text-neutral-600 leading-relaxed font-light italic">
                       10 days. 10 themes. Real challenges, real materials, real thinking. Each day is different. All-inclusive.
@@ -113,7 +113,7 @@ export default function ScheduleVisitPage() {
 
                   {/* Step 3 */}
                   <div className="p-8 rounded-3xl bg-[#FAF9F6] border-t-4 border-amber-500 shadow-sm border border-neutral-100 transition-all hover:shadow-lg">
-                    <p className="text-[10px] font-mono font-bold text-neutral-400 uppercase tracking-widest mb-3">Step 3 — The long game</p>
+                    <p className="text-[12px] font-mono font-bold text-neutral-400 uppercase tracking-widest mb-3">Step 3 — The long game</p>
                     <h3 className="text-2xl font-serif font-bold text-primary-500 mb-4">Year-Long Intelligence Program.</h3>
                     <p className="text-neutral-600 leading-relaxed font-light italic">
                       One theme per month. One session per week. Deep projects, observed thinking, parent insights. Natural next step — no separate application.
@@ -160,7 +160,7 @@ export default function ScheduleVisitPage() {
                         <p className="text-xs font-mono text-accent-teal uppercase tracking-widest font-bold">
                           Free Parent Orientation · 30–45 minutes
                         </p>
-                        <div className="flex items-center gap-1.5 text-[10px] text-neutral-400 font-bold uppercase tracking-widest">
+                        <div className="flex items-center gap-1.5 text-[12px] text-neutral-400 font-bold uppercase tracking-widest">
                           <MapPin size={10} />
                           Bibwewadi, Pune
                         </div>
@@ -170,7 +170,7 @@ export default function ScheduleVisitPage() {
                     <form className="space-y-6" onSubmit={handleFormSubmit}>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                          <label className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest ml-1">Parent Name <span className="text-accent-teal">*</span></label>
+                          <label className="text-[12px] font-bold text-neutral-400 uppercase tracking-widest ml-1">Parent Name <span className="text-accent-teal">*</span></label>
                           <input 
                             required 
                             type="text" 
@@ -179,7 +179,7 @@ export default function ScheduleVisitPage() {
                           />
                         </div>
                         <div className="space-y-2">
-                          <label className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest ml-1">Child's First Name <span className="text-accent-teal">*</span></label>
+                          <label className="text-[12px] font-bold text-neutral-400 uppercase tracking-widest ml-1">Child's First Name <span className="text-accent-teal">*</span></label>
                           <input 
                             required 
                             type="text" 
@@ -191,7 +191,7 @@ export default function ScheduleVisitPage() {
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                          <label className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest ml-1">Child's Age <span className="text-accent-teal">*</span></label>
+                          <label className="text-[12px] font-bold text-neutral-400 uppercase tracking-widest ml-1">Child's Age <span className="text-accent-teal">*</span></label>
                           <select 
                             required 
                             className="w-full p-4 bg-[#FAF9F6] border border-neutral-100 rounded-2xl outline-none focus:ring-2 focus:ring-accent-teal/30 transition-all font-medium text-primary-500 appearance-none bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik02IDlsNiA2IDYtNiIvPjwvc3ZnPg==')] bg-[length:20px] bg-[right_1rem_center] bg-no-repeat"
@@ -201,7 +201,7 @@ export default function ScheduleVisitPage() {
                           </select>
                         </div>
                         <div className="space-y-2">
-                          <label className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest ml-1">WhatsApp Number <span className="text-accent-teal">*</span></label>
+                          <label className="text-[12px] font-bold text-neutral-400 uppercase tracking-widest ml-1">WhatsApp Number <span className="text-accent-teal">*</span></label>
                           <input 
                             required 
                             type="tel" 
@@ -213,7 +213,7 @@ export default function ScheduleVisitPage() {
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div className="space-y-2">
-                          <label className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest ml-1">Preferred Date <span className="text-accent-teal">*</span></label>
+                          <label className="text-[12px] font-bold text-neutral-400 uppercase tracking-widest ml-1">Preferred Date <span className="text-accent-teal">*</span></label>
                           <input 
                             required 
                             type="date" 
@@ -223,7 +223,7 @@ export default function ScheduleVisitPage() {
                           />
                         </div>
                         <div className="space-y-2">
-                          <label className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest ml-1">Preferred Time <span className="text-accent-teal">*</span></label>
+                          <label className="text-[12px] font-bold text-neutral-400 uppercase tracking-widest ml-1">Preferred Time <span className="text-accent-teal">*</span></label>
                           <select 
                             required 
                             className="w-full p-4 bg-[#FAF9F6] border border-neutral-100 rounded-2xl outline-none focus:ring-2 focus:ring-accent-teal/30 transition-all font-medium text-primary-500 appearance-none bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik02IDlsNiA2IDYtNiIvPjwvc3ZnPg==')] bg-[length:20px] bg-[right_1rem_center] bg-no-repeat"
@@ -237,7 +237,7 @@ export default function ScheduleVisitPage() {
                       </div>
 
                       <div className="space-y-2">
-                        <label className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest ml-1">Anything else? (Optional)</label>
+                        <label className="text-[12px] font-bold text-neutral-400 uppercase tracking-widest ml-1">Anything else? (Optional)</label>
                         <textarea 
                           rows={2} 
                           className="w-full p-4 bg-[#FAF9F6] border border-neutral-100 rounded-2xl outline-none focus:ring-2 focus:ring-accent-teal/30 transition-all font-medium text-primary-500 resize-none" 
@@ -251,9 +251,9 @@ export default function ScheduleVisitPage() {
                         </Button>
                         
                         <div className="space-y-2 text-center">
-                          <p className="text-[11px] font-bold text-neutral-400 uppercase tracking-[0.1em]">No fee for the orientation session.</p>
-                          <p className="text-[11px] font-bold text-neutral-400 uppercase tracking-[0.1em]">No commitment until you enroll.</p>
-                          <p className="text-[11px] font-bold text-accent-teal uppercase tracking-[0.1em]">We'll WhatsApp you a confirmation within 2 hours.</p>
+                          <p className="text-[12px] font-bold text-neutral-400 uppercase tracking-[0.1em]">No fee for the orientation session.</p>
+                          <p className="text-[12px] font-bold text-neutral-400 uppercase tracking-[0.1em]">No commitment until you enroll.</p>
+                          <p className="text-[12px] font-bold text-accent-teal uppercase tracking-[0.1em]">We'll WhatsApp you a confirmation within 2 hours.</p>
                         </div>
                       </div>
                     </form>
@@ -308,15 +308,15 @@ export default function ScheduleVisitPage() {
 
           <div className="bg-white rounded-[3rem] border border-neutral-100 shadow-huge overflow-hidden">
             <div className="bg-primary-500 px-10 py-6 text-center">
-              <span className="text-[10px] font-mono font-bold text-white/50 uppercase tracking-[0.4em]">A glimpse of the 10-day experience</span>
+              <span className="text-[12px] font-mono font-bold text-white/50 uppercase tracking-[0.4em]">A glimpse of the 10-day experience</span>
             </div>
             
             <div className="overflow-hidden transition-all duration-700" style={{ maxHeight: showAllThemes ? '2000px' : '450px' }}>
               <table className="w-full text-left border-collapse">
                 <thead>
                   <tr className="bg-neutral-50/50">
-                    <th className="py-8 px-12 text-[10px] font-bold text-neutral-400 uppercase tracking-widest w-1/3">Theme</th>
-                    <th className="py-8 px-12 text-[10px] font-bold text-neutral-400 uppercase tracking-widest">What the child encounters</th>
+                    <th className="py-8 px-12 text-[12px] font-bold text-neutral-400 uppercase tracking-widest w-1/3">Theme</th>
+                    <th className="py-8 px-12 text-[12px] font-bold text-neutral-400 uppercase tracking-widest">What the child encounters</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-neutral-100">
@@ -324,7 +324,7 @@ export default function ScheduleVisitPage() {
                     <tr key={i} className="group hover:bg-[#FAF9F6] transition-all">
                       <td className="py-8 px-12">
                         <div className="flex items-center gap-4">
-                          <div className="text-[10px] font-mono font-bold text-accent-teal opacity-50">DAY {String(i + 1).padStart(2, '0')}</div>
+                          <div className="text-[12px] font-mono font-bold text-accent-teal opacity-50">DAY {String(i + 1).padStart(2, '0')}</div>
                           <span className="font-bold font-serif text-lg text-primary-500">{row.theme}</span>
                         </div>
                       </td>
@@ -374,7 +374,7 @@ export default function ScheduleVisitPage() {
             ].map((s, i) => (
               <div key={i} className="bg-[#FAF9F6] p-10 rounded-[2rem] text-center border border-neutral-100 shadow-sm group hover:bg-primary-500 transition-all">
                 <h4 className="font-bold text-primary-500 text-2xl mb-4 group-hover:text-white transition-all">{s.label}</h4>
-                <p className="text-[10px] text-accent-teal uppercase tracking-[0.2em] font-bold group-hover:text-accent-teal/80 transition-all">{s.val}</p>
+                <p className="text-[12px] text-accent-teal uppercase tracking-[0.2em] font-bold group-hover:text-accent-teal/80 transition-all">{s.val}</p>
               </div>
             ))}
           </div>
@@ -387,7 +387,7 @@ export default function ScheduleVisitPage() {
             <p className="text-3xl text-primary-500 font-serif font-bold">
               You can explore this during your visit.
             </p>
-            <p className="text-[11px] font-mono text-neutral-400 uppercase tracking-[0.4em]">
+            <p className="text-[12px] font-mono text-neutral-400 uppercase tracking-[0.4em]">
               <span className="font-bold text-primary-500">Every month:</span> Parents receive observation notes on their child's thinking habits.
             </p>
           </div>
@@ -407,7 +407,7 @@ export default function ScheduleVisitPage() {
             </Button>
           </a>
           <div className="mt-12 space-y-3">
-            <p className="text-[10px] font-mono text-white/40 uppercase tracking-[0.5em] font-bold">
+            <p className="text-[12px] font-mono text-white/40 uppercase tracking-[0.5em] font-bold">
               Free Parent Orientation · 30–45 minutes
             </p>
             <p className="text-xs text-accent-teal font-bold uppercase tracking-widest">

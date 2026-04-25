@@ -28,6 +28,7 @@ export function Footer({ data }: { data?: any }) {
               alt="FunSmartism Logo" 
               width={200}
               height={100}
+              sizes="(max-width: 768px) 150px, 200px"
               className="h-24 w-auto object-contain transition-all duration-500 group-hover:scale-105"
             />
             </Link>
@@ -77,8 +78,8 @@ export function Footer({ data }: { data?: any }) {
               <p className="font-medium text-primary-900">{address}</p>
               <p>{phone} <br /> {email}</p>
               <div className="pt-4">
-                <p className="text-mono text-accent-teal uppercase tracking-widest text-[10px] font-bold mb-1">Hours</p>
-                <p className="text-xs">{hours}</p>
+                <p className="text-mono text-accent-teal uppercase tracking-widest text-[12px] font-bold mb-1">Hours</p>
+                <p className="text-sm">{hours}</p>
               </div>
             </div>
           </div>
@@ -100,7 +101,7 @@ export function Footer({ data }: { data?: any }) {
         </div>
 
         <div className="pt-12 border-t border-neutral-100 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-xs text-neutral-500 font-mono tracking-tighter">© 2026 {data?.title || 'FUNSMARTISM'}_INTELLIGENCE_CENTER</p>
+          <p className="text-sm text-neutral-500 font-mono tracking-tighter">© 2026 {data?.title || 'FUNSMARTISM'}_INTELLIGENCE_CENTER</p>
           <div className="flex gap-8">
             <a href="#" className="text-xs text-neutral-500 hover:text-primary-500 uppercase tracking-widest transition-colors">Privacy</a>
             <a href="#" className="text-xs text-neutral-500 hover:text-primary-500 uppercase tracking-widest transition-colors">Terms</a>
