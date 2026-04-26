@@ -20,10 +20,10 @@ export function WhatMakesDifferent({ data }: { data?: any }) {
     <section className="section-spacing bg-white">
       <div className="container-fluid">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-500 mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary-500 mb-6 leading-tight">
             {heading}
           </h2>
-          <p className="text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-neutral-600 max-w-2xl mx-auto leading-relaxed">
             {description}
           </p>
         </div>
@@ -41,7 +41,7 @@ export function WhatMakesDifferent({ data }: { data?: any }) {
 
           {/* Right: Contrast Table */}
           <div className="bg-[#1E2A44] rounded-[40px] p-8 md:p-12 shadow-huge text-white">
-            <h4 className="text-2xl font-serif font-bold text-white mb-8 border-b border-white/10 pb-6 tracking-wide">
+            <h4 className="text-xl md:text-2xl font-serif font-bold text-white mb-8 border-b border-white/10 pb-6 tracking-wide">
               What FunSmartism does
             </h4>
             
@@ -51,7 +51,7 @@ export function WhatMakesDifferent({ data }: { data?: any }) {
                   <div className="mt-1 w-6 h-6 rounded-full bg-accent-teal/20 flex items-center justify-center flex-shrink-0 group-hover:bg-accent-teal transition-colors duration-300">
                     <Check className="text-accent-teal group-hover:text-white transition-colors duration-300" size={14} />
                   </div>
-                  <span className="text-lg md:text-xl font-medium text-[#B7E3DD] leading-snug">
+                  <span className="text-base md:text-lg font-medium text-[#B7E3DD] leading-snug">
                     {row.text}
                   </span>
                 </li>

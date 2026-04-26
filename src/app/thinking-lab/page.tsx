@@ -84,20 +84,20 @@ export default function ThinkingLabPage() {
         
         <div className="container-fluid relative z-10">
           <div className="max-w-5xl mx-auto text-center">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-500 mb-8 leading-[1.06]">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-500 mb-8 leading-tight">
               We don't teach. <br />
               <span className="text-accent-teal italic font-light">We observe.</span>
             </h1>
-            <p className="text-lg md:text-2xl text-neutral-600 max-w-4xl mx-auto leading-relaxed font-light">
+            <p className="text-lg md:text-xl text-neutral-600 max-w-4xl mx-auto leading-relaxed font-light">
               The FunSmartism RoboSTEM Thinking Lab makes scientist-inspired problem-solving visible through hands-on projects, real-world challenges, and live parent insight observations.
             </p>
 
             <div className="mt-16 max-w-4xl mx-auto">
-              <p className="text-3xl md:text-5xl font-serif font-bold text-primary-500 leading-tight mb-8">
+              <p className="text-2xl md:text-4xl font-serif font-bold text-primary-500 leading-tight mb-8">
                 Schools show what children know. <br className="hidden md:block" />
                 The Thinking Lab reveals how they think when the path is unclear.
               </p>
-              <p className="text-xl md:text-2xl text-neutral-500 leading-relaxed font-light max-w-2xl mx-auto">
+              <p className="text-lg md:text-xl text-neutral-500 leading-relaxed font-light max-w-2xl mx-auto">
                 Independant problem-solving appears most clearly in unfamiliar situations.
               </p>
             </div>
@@ -305,12 +305,12 @@ export default function ThinkingLabPage() {
             <div className="flex flex-col items-center gap-8">
               <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
                 <Link href="/schedule-visit" className="w-full sm:w-auto">
-                  <Button size="lg" className="bg-accent-teal border-none text-white px-10 py-5 text-base shadow-huge shadow-accent-teal/30 w-full rounded-full font-bold">
+                  <Button size="lg" className="bg-accent-teal border-none text-white px-10 py-5 shadow-huge shadow-accent-teal/30 w-full rounded-full font-bold">
                     Schedule a Thinking Lab Visit
                   </Button>
                 </Link>
                 <Link href="/programs" className="w-full sm:w-auto">
-                  <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10 px-10 py-5 text-base w-full rounded-full">
+                  <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10 px-10 py-5 w-full rounded-full">
                     See Programs First
                   </Button>
                 </Link>

@@ -47,15 +47,15 @@ export default function ScheduleVisitPage() {
       <section className="pt-40 pb-20 text-center">
         <div className="container-fluid">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-7xl font-serif font-bold text-primary-500 mb-8 leading-tight tracking-tight">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-500 mb-8 leading-tight tracking-tight">
               Start with a conversation.
             </h1>
-            <p className="text-xl md:text-2xl text-neutral-600 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
+            <p className="text-lg md:text-xl text-neutral-600 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
               Schedule a visit — meet us, understand the process, understand how FunSmartism works. No commitment until you're ready.
             </p>
             
             <a href="#schedule-form">
-              <Button size="lg" className="bg-accent-teal hover:bg-primary-500 border-none text-white px-12 py-6 text-xl rounded-full font-bold shadow-huge shadow-accent-teal/20 transition-all hover:scale-105">
+              <Button size="lg" className="bg-accent-teal hover:bg-primary-500 border-none text-white px-12 py-6 rounded-full font-bold shadow-huge shadow-accent-teal/20 transition-all hover:scale-105">
                 Schedule a visit →
               </Button>
             </a>
@@ -246,7 +246,7 @@ export default function ScheduleVisitPage() {
                       </div>
 
                       <div className="pt-4 space-y-6">
-                        <Button type="submit" size="lg" className="w-full bg-accent-teal hover:bg-primary-500 border-none text-white py-6 text-xl shadow-huge shadow-accent-teal/20 transition-all font-bold rounded-2xl">
+                        <Button type="submit" size="lg" className="w-full bg-accent-teal hover:bg-primary-500 border-none text-white py-6 shadow-huge shadow-accent-teal/20 transition-all font-bold rounded-2xl">
                           Confirm my orientation →
                         </Button>
                         
@@ -283,8 +283,8 @@ export default function ScheduleVisitPage() {
       <section className="py-32 bg-[#FAF9F6]">
         <div className="container-fluid max-w-6xl mx-auto">
           <div className="text-center mb-20">
-            <h2 className="text-4xl md:text-7xl font-serif font-bold text-primary-500 mb-6">10 days. 10 worlds.</h2>
-            <p className="text-2xl text-neutral-600 font-light italic max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-500 mb-6">10 days. 10 worlds.</h2>
+            <p className="text-lg md:text-xl text-neutral-600 font-light italic max-w-3xl mx-auto">
               Each day, your child steps into a completely different challenge.
             </p>
           </div>
@@ -402,7 +402,7 @@ export default function ScheduleVisitPage() {
             The best way to know if this fits your child is to visit once.
           </p>
           <a href="#schedule-form">
-            <Button size="lg" className="bg-accent-teal hover:bg-white hover:text-accent-teal border-none text-white text-xl font-bold px-16 py-6 rounded-full shadow-huge transition-all hover:scale-105">
+            <Button size="lg" className="bg-accent-teal hover:bg-white hover:text-accent-teal border-none text-white font-bold px-16 py-6 rounded-full shadow-huge transition-all hover:scale-105">
               Schedule a visit →
             </Button>
           </a>

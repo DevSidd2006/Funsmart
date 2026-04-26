@@ -78,7 +78,7 @@ export function HowItWorks({ data }: { data?: any }) {
                     <div className="text-xs font-bold uppercase tracking-widest text-primary-400 mb-4">
                       {step.stepNumber}
                     </div>
-                    <h3 className="text-xl md:text-2xl font-serif font-bold text-primary-500 mb-4 leading-snug">
+                    <h3 className="text-lg md:text-xl font-serif font-bold text-primary-500 mb-4 leading-snug">
                       {step.title}
                     </h3>
                     <p className="text-neutral-600 text-base leading-relaxed mb-6">
@@ -119,7 +119,7 @@ export function HowItWorks({ data }: { data?: any }) {
             <div className="relative z-10 border-t lg:border-t-0 lg:border-l border-white/10 pt-8 lg:pt-0 lg:pl-12">
               <p className="text-white/80 mb-6 text-lg">Not sure which path fits your child? Schedule a visit once and we’ll guide you</p>
               <Link href="/schedule-visit">
-                <Button className="bg-accent-teal hover:bg-[#28A392] text-white rounded-full px-8 py-4 font-bold w-full sm:w-auto">
+                <Button size="lg" className="bg-accent-teal hover:bg-[#28A392] text-white rounded-full font-bold w-full sm:w-auto">
                   Schedule a visit →
                 </Button>
               </Link>

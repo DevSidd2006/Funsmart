@@ -29,7 +29,7 @@ export function ThinkingReset() {
             </div>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/schedule-visit">
-                <Button size="lg" className="bg-accent-teal border-none text-white shadow-2xl shadow-accent-teal/20">
+                <Button size="lg" className="bg-accent-teal border-none text-white shadow-2xl shadow-accent-teal/20 rounded-full font-bold">
                   Book a Visit
                 </Button>
               </Link>

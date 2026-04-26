@@ -65,10 +65,10 @@ export function TestimonialsSlider({ data }: { data?: any[] }) {
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 leading-tight">
               Unexpected Discoveries through handling unfamiliar challenges..
             </h2>
-            <p className="text-neutral-500 mt-4 text-lg">
+            <p className="text-neutral-500 mt-4 text-base md:text-lg">
               Parents observing <span className="underline decoration-accent-teal decoration-2 underline-offset-4">real</span> change in their children.
             </p>
           </div>
@@ -86,7 +86,7 @@ export function TestimonialsSlider({ data }: { data?: any[] }) {
                   <Quote className="absolute top-10 right-10 text-accent-teal/10" size={80} />
                   
                   <div className="relative z-10 border-l-4 border-accent-teal pl-8">
-                    <p className="text-xl md:text-2xl lg:text-3xl text-primary-500 font-light leading-relaxed italic mb-10">
+                    <p className="text-lg md:text-xl lg:text-2xl text-primary-500 font-light leading-relaxed italic mb-10">
                       "{t.quote}"
                     </p>
                     

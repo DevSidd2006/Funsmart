@@ -15,14 +15,14 @@ export function FinalCTA({ data }: { data?: any }) {
       
       <div className="container-fluid relative z-10 text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-7xl font-serif font-bold mb-4 leading-tight text-white">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold mb-4 leading-tight text-white">
             {headline}
           </h2>
-          <h3 className="text-3xl md:text-5xl font-serif font-bold text-accent-teal mb-12 opacity-90">
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-accent-teal mb-10 opacity-95 italic">
             {subheadline}
           </h3>
           
-          <p className="text-lg md:text-xl text-[#B7E3DD] mb-12 max-w-2xl mx-auto leading-relaxed italic opacity-80">
+          <p className="text-base md:text-lg text-[#B7E3DD] mb-12 max-w-2xl mx-auto leading-relaxed italic opacity-80">
             {description}
           </p>
 
@@ -30,7 +30,7 @@ export function FinalCTA({ data }: { data?: any }) {
             <Link href="/schedule-visit" className="w-full sm:w-auto">
               <Button
                 size="lg"
-                className="px-16 py-6 text-lg bg-accent-teal hover:bg-[#28A392] shadow-huge shadow-accent-teal/20 border-none text-white w-full rounded-full font-bold"
+                className="px-16 py-6 bg-accent-teal hover:bg-[#28A392] shadow-huge shadow-accent-teal/20 border-none text-white w-full rounded-full font-bold"
               >
                 Schedule a visit →
               </Button>

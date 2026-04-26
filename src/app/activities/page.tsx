@@ -50,11 +50,11 @@ export default function ActivitiesPage() {
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-teal/10 border border-accent-teal/20 text-accent-teal text-[12px] font-bold uppercase tracking-widest mb-10">
               The Programs
             </div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-balanced leading-[1.05] tracking-tight">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-balanced leading-tight tracking-tight">
               The Activities of <br />
               <span className="text-accent-teal italic font-light">Discovery.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-[#B7E3DD] mt-8 leading-relaxed max-w-2xl font-light">
+            <p className="text-lg md:text-xl text-[#B7E3DD] mt-8 leading-relaxed max-w-2xl font-light">
               We don't teach subjects. We provide environments for discovery. Explore our range of unscripted programs designed for curious minds.
             </p>
           </div>
@@ -122,20 +122,20 @@ export default function ActivitiesPage() {
         <div className="absolute inset-0 lab-grid opacity-[0.05]" />
         <div className="container-fluid relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white mb-8 leading-tight tracking-tight">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-8 leading-tight tracking-tight text-balanced">
               Find the right <span className="text-accent-teal italic font-light">activity</span> for your child's thinking pattern.
             </h2>
-            <p className="text-xl md:text-2xl text-[#B7E3DD] mb-16 font-light italic">
+            <p className="text-lg md:text-xl text-[#B7E3DD] mb-12 font-light italic">
               Experience scientist-inspired RoboSTEM discovery first-hand.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link href="/schedule-visit" className="w-full sm:w-auto">
-                <Button size="lg" className="bg-accent-teal border-none text-white px-16 py-6 text-xl shadow-huge shadow-accent-teal/30 w-full rounded-full font-bold">
+                <Button size="lg" className="bg-accent-teal border-none text-white px-16 py-6 shadow-huge shadow-accent-teal/30 w-full rounded-full font-bold">
                   Book an Orientation
                 </Button>
               </Link>
               <div className="w-full sm:w-auto">
-                <JoinCommunity variant="solid" className="px-16 py-6 text-xl w-full rounded-full" />
+                <JoinCommunity variant="solid" className="px-16 py-6 w-full rounded-full" />
               </div>
             </div>
             <div className="mt-12">

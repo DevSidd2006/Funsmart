@@ -13,11 +13,11 @@ export default function GalleryPage() {
         <div className="container-fluid relative z-10">
           <div className="flex flex-col lg:flex-row justify-between items-end gap-12">
             <div className="max-w-3xl">
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-primary-500 leading-[1.05] tracking-tight mb-8">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-500 leading-tight tracking-tight mb-8">
                 A gallery of <br />
                 <span className="text-accent-teal italic font-light">pure focus.</span>
               </h1>
-              <p className="text-xl md:text-2xl text-neutral-500 leading-relaxed font-light">
+              <p className="text-lg md:text-xl text-neutral-500 leading-relaxed font-light">
                 Explore authentic moments from our Thinking Lab. We capture the process of discovery, the focus of unscripted problem-solving, and the quiet joy of the "Aha!" moment.
               </p>
             </div>

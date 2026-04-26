@@ -53,11 +53,11 @@ export default function AboutPage() {
         <div className="absolute inset-0 lab-grid opacity-[0.03]" />
         <div className="container-fluid relative z-10 text-center">
           <div className="max-w-5xl mx-auto">
-            <h1 className="text-4xl md:text-5xl lg:text-[3.5rem] font-serif font-bold text-primary-500 mb-8 leading-[1.1] tracking-tight">
+            <h1 className="text-3xl md:text-5xl lg:text-[3.25rem] font-serif font-bold text-primary-500 mb-8 leading-tight tracking-tight">
               We started FunSmartism because we kept seeing <br className="hidden md:block" />
-              <span className="block text-3xl md:text-5xl lg:text-[3.5rem] text-accent-teal italic font-light">something schools weren't designed to notice.</span>
+              <span className="block text-2xl md:text-4xl lg:text-[3.25rem] text-accent-teal italic font-light">something schools weren't designed to notice.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-neutral-600 font-light leading-relaxed max-w-4xl mx-auto">
+            <p className="text-lg md:text-xl text-neutral-600 font-light leading-relaxed max-w-4xl mx-auto">
               We kept seeing capable children come alive in real-world learning environment that gave them freedom—and shut down in environments that didn’t. Parents could sense it too, but had no language for what they were seeing. FunSmartism was built to close that gap.
             </p>
           </div>
@@ -94,7 +94,7 @@ export default function AboutPage() {
       {/* Philosophy */}
       <section className="py-32 bg-[#1E2A44] text-white text-center">
         <div className="container-fluid max-w-4xl mx-auto">
-          <h2 className="text-4xl font-serif font-bold text-white mb-10 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-8 leading-tight">
             Marks show outcomes. <br className="hidden md:block" />
             <span className="text-accent-teal">Scientist-style thinking habits shape futures.</span>
           </h2>
@@ -155,7 +155,7 @@ export default function AboutPage() {
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link href="/schedule-visit" className="w-full sm:w-auto">
-                <Button size="lg" className="bg-accent-teal border-none text-white px-16 py-6 text-xl shadow-huge shadow-accent-teal/30 w-full rounded-full font-bold">
+                <Button size="lg" className="bg-accent-teal border-none text-white px-16 py-6 shadow-huge shadow-accent-teal/30 w-full rounded-full font-bold">
                   Schedule a Visit →
                 </Button>
               </Link>

@@ -31,7 +31,7 @@ export function Hero({ data }: { data?: any }) {
           <div className="lg:col-span-7">
             <h1 className="text-3xl md:text-4xl lg:text-6xl font-serif font-bold text-white mb-6 leading-[1.05] text-balanced">
                {headline}
-              <span className="block text-xl md:text-2xl lg:text-3xl text-accent-teal mt-4 opacity-95 font-medium italic">
+              <span className="block text-xl md:text-xl lg:text-2xl text-accent-teal mt-4 opacity-95 font-medium italic">
                  {subheadline}
                </span>
             </h1>
@@ -48,7 +48,7 @@ export function Hero({ data }: { data?: any }) {
               <Link href="/schedule-visit" className="w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="px-12 py-6 text-lg shadow-2xl shadow-accent-teal/20 bg-accent-teal hover:bg-[#28A392] text-white border-none w-full rounded-full font-bold"
+                  className="px-12 py-6 shadow-2xl shadow-accent-teal/20 bg-accent-teal hover:bg-[#28A392] text-white border-none w-full rounded-full font-bold"
                 >
                   Schedule a visit →
                 </Button>

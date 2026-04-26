@@ -82,7 +82,7 @@ export default function ProgramsPage() {
   return (
     <div className="bg-white">
       {/* SECTION 01 — HERO */}
-      <section className="pt-40 pb-32 bg-[#1E2A44] text-white relative overflow-hidden">
+      <section className="pt-44 md:pt-52 pb-24 md:pb-32 bg-[#1E2A44] text-white relative overflow-hidden">
         <div className="absolute inset-0 lab-grid opacity-[0.05]" />
         <div className="container-fluid relative z-10 text-center">
           <div className="max-w-4xl mx-auto">
@@ -90,7 +90,7 @@ export default function ProgramsPage() {
               Two programs. <br />
               <span className="text-accent-teal italic font-light opacity-90">One way of thinking about children.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-[#B7E3DD] mb-12 max-w-2xl mx-auto leading-relaxed font-light italic">
+            <p className="text-lg md:text-xl text-[#B7E3DD] mb-12 max-w-2xl mx-auto leading-relaxed font-light italic px-4">
               Both programs use real materials, scientist-inspired challenges, and live observation of how your child thinks. The difference is depth, pace, and continuity.
             </p>
 
@@ -155,7 +155,7 @@ export default function ProgramsPage() {
       </section>
 
       {/* SECTION 03 — 10-DAY WORKSHOP */}
-      <section className="py-32" id="workshop">
+      <section className="py-32 scroll-mt-24" id="workshop">
         <div className="container-fluid">
           <div className="max-w-6xl mx-auto">
             <div className="bg-white rounded-[40px] border border-neutral-100 shadow-huge overflow-hidden mb-32 relative">
@@ -167,11 +167,11 @@ export default function ProgramsPage() {
                 <div>Ages 8–16</div>
               </div>
               <div className="p-10 md:p-20">
-                <h2 className="text-4xl md:text-6xl font-serif font-bold text-primary-500 mb-10 leading-tight">
+                <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-8 leading-tight">
                   10-Day Thinking <br className="hidden md:block" />
                   Reset Workshop
                 </h2>
-                <p className="text-2xl text-neutral-500 mb-16 max-w-3xl leading-relaxed font-light">
+                <p className="text-lg md:text-xl text-neutral-500 mb-12 max-w-3xl leading-relaxed font-light">
                   Ten days. Ten completely different themes. Every day, a new world — and a new way to observe how your child thinks.
                 </p>
 
@@ -221,9 +221,9 @@ export default function ProgramsPage() {
 
             {/* Themes Table Section */}
             <div className="mb-20">
-              <div className="text-center mb-20">
-                <h3 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-6">The 10 themes</h3>
-                <p className="text-xl text-neutral-500 font-light italic max-w-3xl mx-auto leading-relaxed">
+              <div className="text-center mb-16">
+                <h3 className="text-2xl md:text-4xl font-serif font-bold text-primary-500 mb-4">The 10 themes</h3>
+                <p className="text-lg text-neutral-500 font-light italic max-w-3xl mx-auto leading-relaxed">
                   Every day, a new world. We observe how your child approaches the unfamiliar—not just what they produce.
                 </p>
               </div>
@@ -257,14 +257,14 @@ export default function ProgramsPage() {
               </div>
 
               {/* Mobile Swipe Cards */}
-              <div className="md:hidden flex gap-6 overflow-x-auto pb-12 px-6 -mx-6 snap-x hide-scrollbar">
+              <div className="md:hidden flex gap-4 overflow-x-auto pb-12 px-6 -mx-6 snap-x hide-scrollbar">
                 {workshopThemes.map((t, i) => (
-                  <div key={i} className="flex-shrink-0 w-[320px] snap-center bg-white border border-neutral-100 p-12 rounded-[3rem] shadow-2xl">
-                    <div className="w-14 h-14 rounded-2xl bg-accent-teal/10 flex items-center justify-center text-accent-teal mb-10">
-                      <Milestone size={28} />
+                  <div key={i} className="flex-shrink-0 w-[280px] snap-center bg-white border border-neutral-100 p-8 rounded-[2.5rem] shadow-xl">
+                    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center text-accent-teal mb-8">
+                      <Milestone size={24} />
                     </div>
-                    <h4 className="text-2xl font-serif font-bold text-primary-500 mb-6">{t.theme}</h4>
-                    <p className="text-neutral-500 leading-relaxed font-light italic">{t.desc}</p>
+                    <h4 className="text-xl font-serif font-bold text-primary-500 mb-4">{t.theme}</h4>
+                    <p className="text-neutral-500 text-sm leading-relaxed font-light italic">{t.desc}</p>
                   </div>
                 ))}
               </div>
@@ -297,7 +297,7 @@ export default function ProgramsPage() {
       </section>
 
       {/* SECTION 04 — YEAR-LONG PROGRAM */}
-      <section className="py-32 bg-[#1E2A44] text-white relative overflow-hidden" id="year-long">
+      <section className="py-32 bg-[#1E2A44] text-white relative overflow-hidden scroll-mt-24" id="year-long">
         <div className="absolute inset-0 lab-grid opacity-[0.03]" />
         <div className="container-fluid relative z-10">
           <div className="max-w-6xl mx-auto">
@@ -310,11 +310,11 @@ export default function ProgramsPage() {
                 <div>Ages 8–16</div>
               </div>
               <div className="p-10 md:p-24">
-                <h2 className="text-4xl md:text-7xl font-serif font-bold text-white mb-10 leading-[1.05]">
+                <h2 className="text-3xl md:text-6xl font-serif font-bold text-white mb-8 leading-[1.1]">
                   FunSmartism RoboSTEM <br className="hidden md:block" />
-                  <span className="text-accent-teal italic font-light opacity-90 text-3xl md:text-6xl">Thinking Lab — Year-Long</span>
+                  <span className="text-accent-teal italic font-light opacity-90 text-2xl md:text-5xl">Thinking Lab — Year-Long</span>
                 </h2>
-                <p className="text-2xl text-[#B7E3DD] mb-16 max-w-3xl leading-relaxed font-light italic">
+                <p className="text-lg md:text-xl text-[#B7E3DD] mb-12 max-w-3xl leading-relaxed font-light italic">
                   One theme each month. Four sessions to go deeper. Real projects, monthly thinking challenges, and regular parent discussions.
                 </p>
 
@@ -388,7 +388,8 @@ export default function ProgramsPage() {
                 <p className="text-2xl text-[#B7E3DD] font-light italic max-w-2xl mx-auto leading-relaxed">A monthly journey into thinking depth.</p>
               </div>
 
-              <div className="overflow-hidden rounded-[3rem] border border-white/10 bg-white/5 backdrop-blur-xl relative shadow-huge">
+              {/* Desktop Table View */}
+              <div className="hidden md:block overflow-hidden rounded-[3rem] border border-white/10 bg-white/5 backdrop-blur-xl relative shadow-huge">
                 <table className="w-full text-left relative z-10 border-collapse">
                   <thead>
                     <tr className="bg-primary-900/40 text-white border-b border-white/10">
@@ -413,6 +414,21 @@ export default function ProgramsPage() {
                   </tbody>
                 </table>
               </div>
+
+              {/* Mobile Card View for Year-Long Structure */}
+              <div className="md:hidden space-y-4 px-4">
+                {yearLongMonthlyMap.map((t, i) => (
+                  <div key={i} className="bg-white/5 border border-white/10 p-6 rounded-[2rem] backdrop-blur-md">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-10 h-10 rounded-xl bg-accent-teal/10 flex items-center justify-center text-accent-teal text-[10px] font-mono font-bold">
+                        {String(i + 1).padStart(2, '0')}
+                      </div>
+                      <h4 className="text-white font-bold font-serif text-lg">{t.theme}</h4>
+                    </div>
+                    <p className="text-[#B7E3DD] leading-relaxed font-light italic text-sm">{t.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Edu Events Differentiation Section */}
@@ -422,10 +438,10 @@ export default function ProgramsPage() {
                 <div className="relative z-10">
                   <div className="max-w-4xl mb-20">
                     <span className="inline-block px-5 py-2 bg-white/20 text-white rounded-full text-[12px] font-bold uppercase tracking-[0.2em] mb-8">Major Differentiator</span>
-                    <h3 className="text-4xl md:text-7xl font-serif font-bold text-white mb-10 leading-[1.05]">Year-long exclusive: <br />Edu events</h3>
-                    <p className="text-2xl text-white/90 font-light leading-relaxed italic">
+                    <h3 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-8 leading-tight">Year-long exclusive: <br />Edu events</h3>
+                    <p className="text-lg md:text-xl text-white/90 font-light leading-relaxed italic">
                       Children learn scientist-style questioning by interacting with real scientists—not just listening to them. <br className="hidden md:block" />
-                      <span className="text-white font-bold not-italic mt-6 block">They help run them — building real responsibility.</span>
+                      <span className="text-white font-bold not-italic mt-4 block">They help run them — building real responsibility.</span>
                     </p>
                   </div>
                   
@@ -449,7 +465,7 @@ export default function ProgramsPage() {
                   </div>
 
                   <div className="text-center">
-                    <p className="text-2xl font-serif font-bold text-white mb-6 italic leading-relaxed">
+                    <p className="text-xl font-serif font-bold text-white mb-6 italic leading-relaxed">
                       Over time, children don’t just build projects — <br className="hidden md:block" />
                       they learn to discuss, question, and explain them with experts.
                     </p>
@@ -469,11 +485,11 @@ export default function ProgramsPage() {
       <section className="py-32 bg-white relative overflow-hidden">
         <div className="container-fluid">
           <div className="max-w-4xl mx-auto text-center mb-24">
-            <h2 className="text-4xl md:text-7xl font-serif font-bold text-primary-500 mb-8 tracking-tight">Quick Comparison</h2>
-            <p className="text-2xl text-neutral-500 font-light italic leading-relaxed">Helping you decide between first insight and deeper habit building.</p>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-500 mb-6 tracking-tight">Quick Comparison</h2>
+            <p className="text-lg md:text-xl text-neutral-500 font-light italic leading-relaxed">Helping you decide between first insight and deeper habit building.</p>
           </div>
 
-          <div className="max-w-5xl mx-auto rounded-[3rem] overflow-hidden border border-neutral-100 shadow-huge relative">
+          <div className="max-w-5xl mx-auto rounded-[3rem] overflow-hidden border border-neutral-100 shadow-huge relative hidden md:block">
             <table className="w-full text-left bg-white relative z-10 border-collapse">
               <thead>
                 <tr className="bg-[#1E2A44] text-white">
@@ -497,6 +513,42 @@ export default function ProgramsPage() {
                 </tr>
               </tbody>
             </table>
+          </div>
+
+          {/* Mobile Comparison View */}
+          <div className="md:hidden space-y-6 px-4">
+            {comparisonData.map((row, i) => (
+              <div key={i} className="bg-white border border-neutral-100 rounded-[2.5rem] p-8 shadow-sm">
+                <h4 className="text-accent-teal text-xs font-bold uppercase tracking-widest mb-6 flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-accent-teal" />
+                  {row.feature}
+                </h4>
+                <div className="space-y-6">
+                  <div>
+                    <span className="text-[10px] text-neutral-400 font-bold uppercase tracking-widest block mb-2">10-Day Workshop</span>
+                    <p className="text-neutral-600 text-sm font-light italic leading-relaxed">{row.workshop}</p>
+                  </div>
+                  <div className="pt-6 border-t border-neutral-50">
+                    <span className="text-[10px] text-primary-400 font-bold uppercase tracking-widest block mb-2">Year-Long Program</span>
+                    <p className="text-primary-500 text-sm font-medium italic leading-relaxed">{row.yearLong}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+            <div className="bg-primary-500 rounded-[2.5rem] p-10 text-white shadow-2xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent-teal opacity-10 rounded-full -mr-16 -mt-16" />
+              <h4 className="text-white/40 text-[10px] font-bold uppercase tracking-widest mb-8">Overall Verdict</h4>
+              <div className="grid grid-cols-1 gap-8 text-center">
+                <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
+                  <span className="text-[10px] text-white/30 uppercase block mb-2 tracking-[0.2em]">Workshop Best For</span>
+                  <p className="text-2xl font-serif italic text-accent-teal font-bold">First insight</p>
+                </div>
+                <div className="p-6 bg-white/5 rounded-2xl border border-white/10">
+                  <span className="text-[10px] text-white/30 uppercase block mb-2 tracking-[0.2em]">Year-Long Best For</span>
+                  <p className="text-2xl font-serif italic text-white font-bold">Deeper habit-building</p>
+                </div>
+              </div>
+            </div>
           </div>
           <p className="mt-20 text-center text-neutral-400 font-serif text-2xl italic max-w-4xl mx-auto leading-relaxed">
             Not sure how to start? Tell us your child's age when you visit — we'll guide you.
@@ -535,12 +587,12 @@ export default function ProgramsPage() {
 
             <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
               <Link href="/schedule-visit" className="w-full sm:w-auto">
-                <Button size="lg" className="bg-accent-teal border-none text-white px-16 py-6 text-lg shadow-huge shadow-accent-teal/30 w-full rounded-full font-bold hover:scale-105 transition-transform">
+                <Button size="lg" className="bg-accent-teal border-none text-white px-16 py-6 shadow-huge shadow-accent-teal/30 w-full rounded-full font-bold hover:scale-105 transition-transform">
                   Schedule a visit →
                 </Button>
               </Link>
               <Link href="/schedule-visit" className="w-full sm:w-auto">
-                <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10 px-16 py-6 text-lg w-full rounded-full font-medium">
+                <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10 px-16 py-6 w-full rounded-full font-medium">
                   Need Help Choosing?
                 </Button>
               </Link>

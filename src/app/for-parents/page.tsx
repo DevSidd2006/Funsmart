@@ -62,11 +62,11 @@ export default async function ForParentsPage() {
         <div className="container-fluid relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
             <div className="lg:col-span-7">
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-500 mb-8 leading-[1.05] tracking-tight text-balanced">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-500 mb-8 leading-tight tracking-tight text-balanced">
                 You will leave knowing something about your child <br />
                 <span className="text-accent-teal italic font-light opacity-90">that school has never told you.</span>
               </h1>
-              <p className="text-xl md:text-2xl text-neutral-600 mb-12 leading-relaxed font-light max-w-2xl">
+              <p className="text-lg md:text-xl text-neutral-600 mb-12 leading-relaxed font-light max-w-2xl">
                 What parents discover through hands-on RoboSTEM challenges, expert interaction sessions, and real observation-based guidance.
               </p>
             </div>
@@ -221,7 +221,7 @@ export default async function ForParentsPage() {
       {/* SECTION 04 — WHY THIS MATTERS */}
       <section className="py-32 bg-[#1E2A44] text-white">
         <div className="container-fluid max-w-4xl mx-auto px-4 text-center">
-<h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white leading-tight mb-12">
+<h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-white leading-tight mb-10">
             Think beyond the exam score. What truly matters is your child's ability to figure things out through testing and retrying, <span className="text-accent-teal">persist, adapt, and stay curious when the answer isn't obvious.</span>
           </h2>
           

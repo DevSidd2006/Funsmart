@@ -26,7 +26,7 @@ export function MidPageCTA({ data }: { data?: any }) {
               <Link href="/schedule-visit">
                 <Button 
                   size="lg" 
-                  className="px-12 py-6 text-lg bg-accent-teal hover:bg-[#28A392] text-white border-none rounded-full shadow-2xl shadow-accent-teal/20"
+                  className="px-12 py-6 bg-accent-teal hover:bg-[#28A392] text-white border-none rounded-full shadow-2xl shadow-accent-teal/20"
                 >
                   {buttonText}
                 </Button>

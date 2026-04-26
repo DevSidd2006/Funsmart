@@ -34,7 +34,7 @@ export function EduEvents({ data }: { data?: any }) {
             Year-long students don't <br /> just attend events. <br />
             <span className="text-accent-teal italic font-light opacity-90">They run them.</span>
           </h2>
-          <p className="text-xl md:text-2xl text-[#B7E3DD] max-w-2xl leading-relaxed font-light italic">
+          <p className="text-lg md:text-xl text-[#B7E3DD] max-w-2xl leading-relaxed font-light italic">
             {description}
           </p>
         </div>
@@ -72,7 +72,7 @@ export function EduEvents({ data }: { data?: any }) {
           <div className="absolute top-0 left-0 w-2 h-full bg-accent-teal" />
           <div className="text-center relative z-10">
             <span className="font-bold text-accent-teal uppercase tracking-[0.4em] text-[12px] block mb-6">Why it matters</span>
-            <p className="text-2xl md:text-3xl text-white leading-tight font-serif italic">
+            <p className="text-xl md:text-2xl text-white leading-tight font-serif italic">
               "{whyItMatters}"
             </p>
           </div>

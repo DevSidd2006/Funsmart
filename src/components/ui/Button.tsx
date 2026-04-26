@@ -39,7 +39,7 @@ export function Button({
   const sizeStyles = {
     sm: 'px-5 py-2.5 text-sm min-h-[44px]',
     md: 'px-8 py-4 text-base min-h-[48px]',
-    lg: 'px-10 py-5 text-lg w-full md:w-auto min-h-[56px]',
+    lg: 'px-10 py-5 text-xl w-full md:w-auto min-h-[56px]',
   }
 
   return (
