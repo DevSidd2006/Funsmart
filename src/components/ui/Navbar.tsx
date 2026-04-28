@@ -12,8 +12,6 @@ import { Menu, X } from 'lucide-react'
 const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { name: 'Thinking Lab', href: '/thinking-lab' },
-  { name: 'For Parents', href: '/for-parents' },
   { name: 'Programs', href: '/programs' },
   { name: 'Gallery', href: '/gallery' },
 ]
@@ -31,7 +29,7 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const isDarkHeroPage = pathname === '/' || pathname === '/thinking-lab' || pathname === '/programs' || pathname === '/activities'
+  const isDarkHeroPage = pathname === '/' || pathname === '/programs'
   const useLightText = isDarkHeroPage && !scrolled && !isOpen
 
   return (
@@ -75,7 +73,7 @@ export function Navbar() {
                 key={link.name}
                 href={link.href}
                 className={cn(
-                  'relative text-[13px] font-bold uppercase tracking-[0.2em] transition-all duration-300 group whitespace-nowrap',
+                  'relative text-[15px] font-bold uppercase tracking-[0.2em] transition-all duration-300 group whitespace-nowrap',
                   pathname === link.href 
                     ? (useLightText ? 'text-accent-teal' : 'text-primary-500') 
                     : (useLightText ? 'text-white/90 hover:text-white' : 'text-neutral-700 hover:text-primary-500')
@@ -94,7 +92,7 @@ export function Navbar() {
           <div className="flex items-center gap-4 border-l border-neutral-200/20 pl-8">
             <Link href="/schedule-visit">
               <Button 
-                size="sm" 
+                size="md" 
                 className={cn(
                   "px-8 rounded-full font-bold transition-all duration-500 shadow-lg",
                   useLightText 

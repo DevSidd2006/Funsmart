@@ -1,74 +1,134 @@
 import Image from 'next/image'
-import { JoinCommunity } from '@/components/ui/JoinCommunity'
-import { galleryItems } from '@/data/gallery'
+import Link from 'next/link'
+import { Button } from '@/components/ui/Button'
+import { CheckCircle } from 'lucide-react'
+
+const categories = [
+  {
+    title: "Robotics & Electronics",
+    desc: "Children building robots, testing sensors, experimenting with circuits, and exploring electronics hands-on."
+  },
+  {
+    title: "STEM Challenges & Problem Solving",
+    desc: "Moments from hands-on challenges where students test ideas, retry solutions, redesign structures, and solve unfamiliar problems."
+  },
+  {
+    title: "Reverse Engineering & How Stuff Works",
+    desc: "Children opening appliances, understanding mechanisms, exploring systems, and learning how real-world objects function."
+  },
+  {
+    title: "Rockets, Aeroplanes & Space Science",
+    desc: "Hands-on activities connected to flight, space science, astronomy, rockets, and model-building explorations."
+  },
+  {
+    title: "Design Thinking & Innovation Activities",
+    desc: "Creative building, redesign tasks, brainstorming activities, and innovation-focused workshops."
+  },
+  {
+    title: "Edu-Events & Scientist Interactions",
+    desc: "Sessions, exhibitions, showcases, and interactions with scientists, innovators, engineers, and experts from real-world fields."
+  },
+  {
+    title: "Student Projects & Take-Home Creations",
+    desc: "Projects designed, built, tested, and taken home by students across different STEM themes."
+  }
+]
+
+const invisibleMoments = [
+  "the child who retries independently",
+  "the student who starts asking deeper questions",
+  "the team discussing multiple approaches",
+  "the quiet child confidently presenting a project",
+  "the excitement after solving something unfamiliar"
+]
 
 export default function GalleryPage() {
-  const displayItems = galleryItems
-
   return (
-    <div className="bg-white min-h-screen pt-32 pb-24">
-      {/* Header */}
-      <section className="pt-40 pb-24 bg-accent-surface border-b border-neutral-100 relative overflow-hidden mb-20">
-        <div className="absolute inset-0 lab-grid opacity-[0.03]" />
-        <div className="container-fluid relative z-10">
-          <div className="flex flex-col lg:flex-row justify-between items-end gap-12">
-            <div className="max-w-3xl">
-              <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-500 leading-tight tracking-tight mb-8">
-                A gallery of <br />
-                <span className="text-accent-teal italic font-light">pure focus.</span>
-              </h1>
-              <p className="text-lg md:text-xl text-neutral-500 leading-relaxed font-light">
-                Explore authentic moments from our Thinking Lab. We capture the process of discovery, the focus of unscripted problem-solving, and the quiet joy of the "Aha!" moment.
-              </p>
+    <div className="bg-white min-h-screen">
+      {/* Hero & Intro */}
+      <section className="pt-40 pb-20 bg-[#1E2A44] text-white relative overflow-hidden text-center">
+        <div className="absolute inset-0 lab-grid opacity-[0.04]" />
+        <div className="container-fluid max-w-5xl mx-auto relative z-10">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif font-bold mb-8 leading-tight">
+            Real Projects. Real Challenges. <span className="text-accent-teal">Real Learning Moments.</span>
+          </h1>
+          <p className="text-xl md:text-2xl text-[#B7E3DD] leading-relaxed max-w-4xl mx-auto font-medium mb-12">
+            A glimpse into the hands-on RoboSTEM environment inside FunSmartism — where children build, experiment, solve, discuss, redesign, and explore through real-world learning experiences.
+          </p>
+
+          <div className="bg-white/5 border border-white/10 rounded-3xl p-8 max-w-4xl mx-auto text-left shadow-lg">
+            <p className="text-lg text-white/90 leading-relaxed mb-4">
+              Every project, challenge, workshop, exhibition, and discussion inside FunSmartism is designed to encourage active participation instead of passive learning.
+            </p>
+            <p className="text-lg text-white/80 leading-relaxed">
+              This gallery captures moments from workshops, STEM challenges, take-home creations, edu-events, scientist interactions, exhibitions, and year-long learning sessions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Categories */}
+      <section className="py-24 bg-neutral-50 relative">
+        <div className="container-fluid max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {categories.map((cat, i) => (
+              <div key={i} className="bg-white border border-neutral-200 rounded-[24px] overflow-hidden shadow-sm hover:shadow-xl transition-shadow group flex flex-col">
+                <div className="aspect-video bg-neutral-200 relative flex items-center justify-center">
+                  <span className="text-neutral-400 font-mono text-sm tracking-widest uppercase">Photos</span>
+                  {/* Overlay for image in real life */}
+                  <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors" />
+                </div>
+                <div className="p-8 flex-1 flex flex-col">
+                  <h3 className="text-xl font-bold font-serif text-[#16213B] mb-3">{cat.title}</h3>
+                  <p className="text-neutral-600 leading-relaxed text-sm">{cat.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Observation Strip */}
+      <section className="py-16 bg-[#2FB5A3] text-white">
+        <div className="container-fluid max-w-6xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="md:w-1/3">
+              <h2 className="text-3xl font-serif font-bold leading-tight">
+                What These Photos Usually Don’t Fully Capture
+              </h2>
             </div>
-            <div className="hidden lg:block pb-2">
-              <JoinCommunity variant="solid" className="px-12 py-6 text-xl" />
+            <div className="md:w-2/3">
+              <p className="text-xl font-medium mb-6">The most important moments are often invisible in pictures:</p>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 mb-6">
+                {invisibleMoments.map((moment, i) => (
+                  <li key={i} className="flex gap-3 items-start">
+                    <CheckCircle className="text-white mt-1 flex-shrink-0" size={18} />
+                    <span className="text-white/90 font-medium leading-snug">{moment}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="text-xl italic font-serif font-bold text-[#1E2A44] bg-white/20 inline-block px-6 py-2 rounded-full">
+                That experience becomes visible only inside the environment itself.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Masonry-style Grid */}
-      <section>
-        <div className="container-fluid">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
-              {displayItems.map((item: any) => (
-                <div key={item.id} className={`relative group overflow-hidden rounded-lg shadow-sm border border-neutral-100 ${item.span || 'md:col-span-4'}`}>
-                  {item.image ? (
-                    <Image 
-                       src={item.image} 
-                       alt={item.title} 
-                       fill
-                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                       className="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-[1.5s] ease-in-out" 
-                    />
-                  ) : (
-                    <div className="w-full h-full flex flex-col items-center justify-center border-dashed border-2 border-neutral-200">
-                      <span className="text-mono text-neutral-300 text-xs mb-2">IMAGE_PLACEHOLDER</span>
-                      <span className="text-sm text-neutral-400 font-medium">{item.title}</span>
-                    </div>
-                  )}
-                  
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-[#1E2A44]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-                    <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
-                      <div className="flex justify-between items-start mb-4">
-                         <span className="text-mono text-[#2FB5A3] text-[12px] font-bold tracking-widest uppercase">{item.tag}</span>
-                      </div>
-                      <h3 className="text-2xl font-serif font-bold text-white mb-3">{item.title}</h3>
-                      <p className="text-white/80 text-sm leading-relaxed max-w-sm">
-                        {item.caption}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-          </div>
-          
-          {/* Bottom CTA for Mobile or extra visibility */}
-          <div className="mt-20 text-center md:hidden">
-            <JoinCommunity variant="solid" className="w-full py-5" />
-          </div>
+      {/* Final CTA */}
+      <section className="py-24 bg-white text-center border-t border-neutral-100">
+        <div className="container-fluid max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-6 leading-tight">
+            Want To Experience It Beyond Photos?
+          </h2>
+          <p className="text-lg md:text-xl text-neutral-600 leading-relaxed mb-12 max-w-2xl mx-auto">
+            The gallery shows the activities. A visit helps parents experience the learning environment, session culture, and student participation much more clearly.
+          </p>
+          <Link href="/schedule-visit">
+            <Button size="lg" className="bg-accent-teal hover:bg-[#28A392] text-white border-none px-12 py-6 rounded-full font-bold shadow-xl shadow-accent-teal/20">
+              Schedule A Visit
+            </Button>
+          </Link>
         </div>
       </section>
     </div>

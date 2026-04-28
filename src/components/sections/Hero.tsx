@@ -5,10 +5,10 @@ import { JoinCommunity } from '../ui/JoinCommunity'
 import Link from 'next/link'
 
 export function Hero({ data }: { data?: any }) {
-  const headline = data?.headline || "Where children build scientist-inspired future-ready thinking."
-  const subheadline = data?.subheadline || "And parents learn when to step in—and when to step back."
-  const subline = data?.subline || "Hands-on RoboSTEM challenges and scientist interaction sessions help children grow confidence beyond marks, while our live observations help parents support thinking without over-helping."
-  const microCopy = "For children aged 8–16 in Pune. Not a tuition class. Not a coaching. Scientist-inspired problem-solving with real parent guidance."
+  const headline = data?.headline || "Beyond Rote Learning. Beyond Marks."
+  const subheadline = data?.subheadline || ""
+  const subline = data?.subline || "A hands-on RoboSTEM thinking lab where children build projects, solve unfamiliar challenges, interact with scientists and innovators, and learn through real-world experimentation."
+  const microCopy = "For children aged 8–15 in Pune. Not a tuition class. Not a coaching."
 
   const heroImage = "/images/hero-scientist.png"
 

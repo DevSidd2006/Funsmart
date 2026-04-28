@@ -1,47 +1,37 @@
-import { Button } from '../ui/Button'
-import Link from 'next/link'
-import { JoinCommunity } from '../ui/JoinCommunity'
-import { Calendar, MapPin, Sparkles } from 'lucide-react'
+import { Check } from 'lucide-react'
+
+const targets = [
+  "enjoy building and exploring",
+  "are curious beyond textbooks",
+  "need more active learning environments",
+  "want exposure to multiple STEM domains"
+]
 
 export function ThinkingReset() {
   return (
-    <section id="workshop" className="section-spacing bg-gradient-to-br from-[#1E2A44] via-[#16334A] to-[#1F3C5A] text-white overflow-hidden relative">
-      <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_top,_rgba(47,181,163,0.35),_transparent_30%)]" />
-      <div className="container-fluid relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 leading-tight">
-              10-Day Thinking Reset Workshop
-            </h2>
-            <p className="text-lg text-white/70 mb-8 max-w-2xl leading-relaxed">
-              10 days. 10 themes. 10 different challenges. Children build, test, and solve with real materials while we observe their natural problem-solving. Includes a detailed observation note for parents.
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-              {[
-                { icon: Calendar, label: '10 days' },
-                { icon: MapPin, label: 'Intelligence Center' },
-                { icon: Sparkles, label: 'Scientist-inspired tasks' },
-              ].map(({ icon: Icon, label }) => (
-                <div key={label} className="rounded-3xl border border-white/10 bg-white/10 p-4 text-sm text-white/90">
-                  <div className="font-semibold mb-1">{label}</div>
+    <section className="section-spacing bg-white border-t border-neutral-100">
+      <div className="container-fluid max-w-5xl mx-auto">
+        <div className="bg-neutral-50 rounded-[40px] p-8 md:p-16 border border-neutral-200 text-center relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-accent-teal/5 to-transparent pointer-events-none" />
+          
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-6 leading-tight relative z-10">
+            10-Day Thinking RESET Workshop
+          </h2>
+          <p className="text-lg md:text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed mb-12 relative z-10 italic">
+            A fast-paced hands-on RoboSTEM experience where children explore different themes each day through projects, challenges, experimentation, and creative problem-solving.
+          </p>
+
+          <div className="bg-white rounded-3xl p-8 max-w-4xl mx-auto shadow-sm border border-neutral-100 text-left relative z-10">
+            <h3 className="text-xl font-bold text-primary-500 mb-6 text-center">
+              Designed Especially For Children Who:
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {targets.map((target, i) => (
+                <div key={i} className="flex items-center gap-4 bg-neutral-50 p-4 rounded-xl">
+                  <Check className="text-accent-teal" size={16} />
+                  <span className="text-neutral-700 font-medium">{target}</span>
                 </div>
               ))}
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/schedule-visit">
-                <Button size="lg" className="bg-accent-teal border-none text-white shadow-2xl shadow-accent-teal/20 rounded-full font-bold">
-                  Book a Visit
-                </Button>
-              </Link>
-              <JoinCommunity />
-            </div>
-          </div>
-
-          <div className="relative h-96 bg-[url('https://images.unsplash.com/photo-1596495577886-d920f21e8bc8?q=80&w=1200')] bg-cover bg-center rounded-3xl overflow-hidden shadow-2xl border border-white/10">
-            <div className="absolute inset-0 bg-gradient-to-t from-[#1E2A44]/90 via-[#1E2A44]/30 to-transparent" />
-            <div className="absolute bottom-6 left-6 rounded-2xl bg-white/10 border border-white/20 px-5 py-4 backdrop-blur-sm text-white">
-              <p className="text-sm uppercase tracking-[0.22em] text-accent-teal mb-1">Thinking Reset</p>
-              <h3 className="text-2xl font-serif font-bold">A week of fresh thinking habits</h3>
             </div>
           </div>
         </div>

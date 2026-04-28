@@ -1,21 +1,22 @@
-import { AlertTriangle, BookX, UserX } from 'lucide-react'
+import { AlertCircle, CheckCircle } from 'lucide-react'
 
-const problems = [
-  {
-    icon: BookX,
-    title: 'Schools measure outcomes, not thinking',
-    body: 'A child can score well and still freeze when facing an unfamiliar problem. Marks reveal what was memorised — not how the child thinks.',
-  },
-  {
-    icon: AlertTriangle,
-    title: 'Capable children go unnoticed',
-    body: 'Many children who seem distracted, slow, or "average" are simply in the wrong environment. Their thinking habits are rarely observed or understood.',
-  },
-  {
-    icon: UserX,
-    title: 'Parents have no language for what they see',
-    body: 'You know something is different about how your child processes the world — but schools only hand you a number. That gap deserves better.',
-  },
+const parentConcerns = [
+  "“My child studies only for exams.”",
+  "“He keeps asking what to do next.”",
+  "“She memorises but struggles to apply.”",
+  "“Everything has become screen-based.”",
+  "“School never really shows how things work.”",
+  "“My child likes building things but has no proper environment.”"
+]
+
+const needs = [
+  "build things with their own hands",
+  "test ideas independently",
+  "solve unfamiliar problems",
+  "retry after mistakes",
+  "explore how real systems work",
+  "ask deeper questions",
+  "think beyond step-by-step instructions"
 ]
 
 export function TheProblem() {
@@ -24,36 +25,53 @@ export function TheProblem() {
       <div className="absolute inset-0 lab-grid opacity-[0.04] z-0" />
       <div className="absolute -top-32 right-0 w-96 h-96 bg-[#2FB5A3]/10 rounded-full blur-3xl z-0" />
 
-      <div className="container-fluid relative z-10">
-        <div className="max-w-4xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-6 leading-tight">
-            Children follow instructions but don’t think independently.
+      <div className="container-fluid relative z-10 w-full max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-6 leading-tight max-w-4xl mx-auto">
+            Most children are trained to memorise answers. But real life requires much more.
           </h2>
-          <p className="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">
-            Parents tell us the same story again and again: the child can complete a worksheet, but freezes with a new problem. FunSmartism helps bridge that gap with a thinking-first experience.
+          <p className="text-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
+            Schools and tuition classes often focus on syllabus completion, exams, and fixed answers.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
-          {problems.map((p, i) => {
-            const Icon = p.icon
-            return (
-              <div
-                key={i}
-                className="group relative bg-white/5 border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-[#2FB5A3]/30 transition-all duration-500 hover:-translate-y-1"
-              >
-                <div className="w-14 h-14 rounded-2xl bg-[#2FB5A3]/15 flex items-center justify-center mb-6 group-hover:bg-[#2FB5A3]/25 transition-colors duration-300">
-                  <Icon size={24} className="text-[#2FB5A3]" />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+          {/* Left: What children need */}
+          <div>
+            <h3 className="text-xl md:text-2xl font-bold mb-6 text-[#2FB5A3]">But children also need environments where they can:</h3>
+            <ul className="space-y-4">
+              {needs.map((need, i) => (
+                <li key={i} className="flex items-start gap-4">
+                  <div className="mt-1 min-w-6 flex-shrink-0">
+                    <CheckCircle className="text-[#2FB5A3]" size={20} />
+                  </div>
+                  <span className="text-lg text-white/90">{need}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-8 text-xl font-medium text-white/90 italic border-l-4 border-[#2FB5A3] pl-6 py-2">
+              That is why FunSmartism exists.
+            </p>
+          </div>
+
+          {/* Right: Parent Relatability Cards */}
+          <div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {parentConcerns.map((concern, i) => (
+                <div key={i} className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 transition-colors">
+                  <p className="text-white/80 italic text-sm md:text-base">{concern}</p>
                 </div>
-                <h3 className="text-xl md:text-2xl font-serif font-bold text-white mb-3 leading-snug">
-                  {p.title}
-                </h3>
-                <p className="text-white/70 leading-relaxed text-sm md:text-base">
-                  {p.body}
-                </p>
-              </div>
-            )
-          })}
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-20 text-center">
+          <div className="inline-block bg-[#2FB5A3]/10 border border-[#2FB5A3]/30 rounded-full px-8 py-4">
+            <h3 className="text-lg md:text-xl font-serif font-bold text-[#2FB5A3]">
+              FunSmartism creates environments where children actively use thinking instead of only consuming information.
+            </h3>
+          </div>
         </div>
       </div>
     </section>

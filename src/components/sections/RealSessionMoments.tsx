@@ -5,19 +5,19 @@ import { Plus, Minus } from 'lucide-react'
 
 const moments = [
   {
-    shortTitle: "Observe before act",
-    title: "A 10-year-old and a gear system she'd never seen before.",
-    text: "She didn't touch it for the first eight minutes. Just looked. Tilted her head. Looked from a different angle. When she finally reached out, her first move was to turn the largest gear — testing the system before committing to it. Her parent had described her as 'slow to start things'. We described it as a real problem solving way of first observing the system. Same child. Different lens.",
+    shortTitle: "Observe Before Acting",
+    title: "A 10-year-old was given a gear system she had never seen before.",
+    text: "For several minutes, she did not touch anything. She observed quietly. Tilted the structure. Looked from different angles. Watched how the gears connected before making a move. When she finally interacted with it, her first action was to slowly test the largest gear before changing anything else. Her parent had earlier described her as “slow to start.” Inside the session, we saw something different: careful observation before action.",
   },
   {
-    shortTitle: "Retry after failure",
-    title: "A 12-year-old who failed four times and kept going.",
-    text: "His fourth attempt didn't work either. He sat back, stared at the ceiling for about thirty seconds, then picked up the materials and tried something genuinely different. Not a variation — a different approach entirely. That shift is harder than it sounds. Most adults default to trying the same thing faster. He did it at twelve, without being asked.",
+    shortTitle: "Retry After Failure",
+    title: "A 12-year-old working on a STEM structure failed multiple times while testing his design.",
+    text: "The fourth attempt failed too. He paused quietly for a while, looked at the materials again, and then started building in a completely different way. Not a small adjustment. A genuinely different approach. Nobody instructed him to do that.",
   },
   {
-    shortTitle: "Confident scientist interaction",
-    title: "A 14-year-old who explained her project to a scientist during one of our school and edu innovation events.",
-    text: "She'd spent a month building a working model during the year-long program. At the event, a researcher asked her how it worked. She answered — clearly, confidently, technically. And then asked the researcher a question back. Her mother said she'd never heard her daughter speak to an adult that way. We weren't surprised. We'd been watching her think for eight weeks.",
+    shortTitle: "Confident Expert Interaction",
+    title: "During one of FunSmartism’s edu-events, a 14-year-old student presented her working model to a visiting researcher.",
+    text: "She explained how the system worked, why certain design decisions were made, and what problems she faced during testing. Then she asked the researcher a question back. Her mother later said: “I’ve never seen her speak to an adult with this much confidence before.”",
   },
 ]
 
@@ -31,24 +31,24 @@ export function RealSessionMoments() {
 
   return (
     <section className="relative bg-white py-[80px]">
-      <div className="container-fluid">
-        <div className="max-w-3xl mx-auto text-center mb-14">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#1E2A44] leading-tight mb-4">
-            Three moments from real sessions.
+      <div className="container-fluid max-w-5xl mx-auto">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#1E2A44] leading-tight mb-6">
+            Three Moments From Real Sessions
           </h2>
-          <p className="text-lg text-neutral-600 font-light">
-            These are the kinds of things that happen every week — and that parents never hear about from schools.
+          <p className="text-lg text-neutral-600 font-medium max-w-3xl mx-auto">
+            These are the kinds of moments that happen regularly inside workshops, STEM challenges, and year-long sessions — moments that often reveal sides of children parents rarely get to see in traditional learning environments.
           </p>
         </div>
 
         {/* Desktop View: Cards */}
-        <div className="hidden md:grid md:grid-cols-3 gap-6">
+        <div className="hidden md:grid md:grid-cols-3 gap-8">
           {moments.map((moment, index) => (
             <div
               key={moment.title}
-              className="relative overflow-hidden rounded-[20px] bg-neutral-50 border border-neutral-200 p-8 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className="relative overflow-hidden rounded-[24px] bg-neutral-50 border border-neutral-200 p-8 shadow-sm transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
             >
-              <div className="absolute left-0 top-0 h-full w-1.5 rounded-r-xl bg-accent-teal" />
+              <div className="absolute left-0 top-0 h-full w-2 bg-accent-teal" />
               <div className="relative">
                 <span className="text-xs font-mono text-accent-teal uppercase tracking-widest font-bold mb-4 block">
                   {moment.shortTitle}
@@ -67,7 +67,7 @@ export function RealSessionMoments() {
                 <button
                   type="button"
                   onClick={() => setExpandedDesktop(expandedDesktop === index ? null : index)}
-                  className="mt-4 text-sm font-semibold text-accent-teal hover:text-accent-teal/80 transition-colors"
+                  className="mt-6 text-sm font-bold text-accent-teal uppercase tracking-wider hover:text-[#28A392] transition-colors"
                 >
                   {expandedDesktop === index ? 'Show less' : 'Read full moment'}
                 </button>
@@ -87,9 +87,9 @@ export function RealSessionMoments() {
                 onClick={() => toggleAccordion(index)}
                 className="w-full flex items-center justify-between p-6 text-left"
               >
-                <div className="flex items-center">
-                  <div className="w-1 h-8 bg-accent-teal rounded-full mr-4"></div>
-                  <span className="font-serif font-bold text-[#1E2A44]">
+                <div className="flex items-center gap-4">
+                  <div className="w-1.5 h-8 bg-accent-teal rounded-full" />
+                  <span className="font-serif font-bold text-[#1E2A44] text-lg">
                     {moment.shortTitle}
                   </span>
                 </div>
@@ -103,11 +103,10 @@ export function RealSessionMoments() {
               </button>
 
               <div
-                className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-                  }`}
+                className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}
               >
                 <div className="p-6 pt-0 border-t border-neutral-100 mt-2">
-                  <h3 className="text-lg font-serif font-bold text-[#16213B] mb-3 mt-4">
+                  <h3 className="text-lg font-serif font-bold text-[#16213B] mb-4 mt-4">
                     {moment.title}
                   </h3>
                   <p className="text-neutral-600 leading-relaxed text-sm">

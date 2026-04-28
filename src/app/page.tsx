@@ -1,42 +1,33 @@
 import { Hero } from '../components/sections/Hero'
-import { TrustStrip } from '../components/sections/TrustStrip'
-import { WhatMakesDifferent } from '../components/sections/Comparison'
-import { HowItWorks } from '../components/sections/HowItWorks'
-import { LabGallery } from '../components/sections/LabGallery'
+import { TheProblem } from '../components/sections/TheProblem'
+import { WhatHappens } from '../components/sections/WhatHappens'
+import { HowSessionsWork } from '../components/sections/HowSessionsWork'
+import { ObservationUSP } from '../components/sections/ObservationUSP'
 import { EduEvents } from '../components/sections/EduEvents'
+import { YearLongThemes } from '../components/sections/YearLongThemes'
+import { Outcomes } from '../components/sections/Outcomes'
+import { OneDaySTEM } from '../components/sections/OneDaySTEM'
+import { ThinkingReset } from '../components/sections/ThinkingReset'
 import { TestimonialsSlider } from '../components/sections/TestimonialsSlider'
 import { FinalCTA } from '../components/sections/FinalCTA'
 
 import { testimonials } from '../data/testimonials'
-import { galleryItems } from '../data/gallery'
 
 export default function HomePage() {
   return (
     <main className="w-full">
-      {/* Section 01 — HERO */}
       <Hero />
-
-      <TrustStrip />
-
-      {/* Section 02 — WHAT MAKES THIS DIFFERENT */}
-      <WhatMakesDifferent />
-
-      {/* Section 03 — YOUR CHILD'S LEARNING JOURNEY */}
-      <HowItWorks />
-
-      {/* Section 04 — EDU EVENTS */}
+      <TheProblem />
+      <WhatHappens />
+      <HowSessionsWork />
+      <ObservationUSP />
       <EduEvents />
-
-      {/* Section 05 — PARENT VOICES */}
+      <YearLongThemes />
+      <Outcomes />
+      <OneDaySTEM />
+      <ThinkingReset />
       <TestimonialsSlider data={testimonials} />
-
-      {/* Section 06 — CLOSING CTA */}
       <FinalCTA />
-
-      {/* Lab Gallery Section */}
-      <LabGallery items={galleryItems} />
     </main>
   )
 }
-
-
