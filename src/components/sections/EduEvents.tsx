@@ -1,24 +1,15 @@
 import Image from 'next/image'
 import { Grid, Settings, Users, MessageSquare } from 'lucide-react'
 
-export function EduEvents({ data }: { data?: any }) {
-  const heading = data?.heading || "Year-long students don't just attend events."
-  const subheading = data?.subheading || "They run them."
-  const description = data?.description || "Priority access to real edu events — scientists, industry experts, researchers. And children aren't just in the audience."
-  const whyItMatters = data?.whyItMatters || "Real responsibility. Real audiences. Real experience — ahead of when most children encounter any of it in life"
+export function EduEvents() {
+  const people = ['Scientists', 'Researchers', 'Innovators', 'Engineers', 'Startup Founders', 'Industry Experts']
+  const orgs = ['ISRO', 'DRDO', 'Indian Institute of Tropical Meteorology', 'IMD', 'IISER', 'and other innovation ecosystems']
 
-  const features = data?.features || [
-    { label: 'Set up the event', icon: Settings },
-    { label: 'Run a stall or exhibit', icon: Grid },
-    { label: 'Guide visitors', icon: Users },
-    { label: 'Interact with Experts', icon: MessageSquare },
-  ]
-
-  const gridImages = [
-    '/images/edu-event-1.png',
-    '/images/edu-event-2.png',
-    '/images/edu-event-3.png',
-    '/images/edu-event-4.png',
+  const opportunities = [
+    { label: 'Interact directly with experts', icon: MessageSquare },
+    { label: 'Ask questions during Edu-events', icon: MessageSquare },
+    { label: 'Showcase projects', icon: Grid },
+    { label: 'Participate in event management', icon: Users },
   ]
 
   return (
@@ -29,60 +20,64 @@ export function EduEvents({ data }: { data?: any }) {
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-600/30 rounded-full blur-[150px] translate-y-1/3 -translate-x-1/4" />
       
       <div className="container-fluid relative z-10">
-        <div className="max-w-4xl mb-20">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-6 leading-[1.1] tracking-tight">
-            Year-long students don't <br /> just attend events. <br />
-            <span className="text-accent-teal italic font-light opacity-90">They run them.</span>
+        <div className="max-w-5xl mb-20">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-8 leading-[1.1] tracking-tight">
+            Children Don’t Just Learn Concepts. <br />
+            <span className="text-accent-teal italic font-light opacity-90">They Interact with actual experts, people Building The Future.</span>
           </h2>
-          <p className="text-lg md:text-xl text-[#B7E3DD] max-w-2xl leading-relaxed font-light italic">
-            {description}
+          <p className="text-lg md:text-xl text-[#B7E3DD] max-w-2xl leading-relaxed font-light mb-12">
+            Throughout the academic year, FunSmartism hosts special edu-events where students interact with:
           </p>
-        </div>
 
-        {/* Roles Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-24 relative z-10">
-          {features.map((feature: any, i: number) => (
-            <div key={i} className="flex flex-col items-center justify-center p-10 bg-white/[0.02] backdrop-blur-md border border-white/10 rounded-[2.5rem] text-center group hover:bg-white/[0.08] hover:border-accent-teal/40 hover:-translate-y-3 transition-all duration-500 shadow-2xl hover:shadow-[0_20px_40px_rgba(47,181,163,0.15)] relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-              <div className="w-16 h-16 rounded-2xl bg-accent-teal/10 border border-accent-teal/20 flex items-center justify-center text-accent-teal mb-6 group-hover:bg-accent-teal group-hover:text-white group-hover:scale-110 transition-all duration-500 relative z-10 shadow-[0_0_20px_rgba(47,181,163,0.1)]">
-                {feature.icon ? <feature.icon size={28} /> : <Grid size={28} />}
+          <div className="flex flex-wrap gap-4 mb-16">
+            {people.map((person, i) => (
+              <span key={i} className="px-6 py-3 bg-white/5 border border-white/10 rounded-full text-white/90 text-sm font-medium tracking-wide">
+                {person}
+              </span>
+            ))}
+          </div>
+
+          <p className="text-lg text-[#B7E3DD] leading-relaxed font-light mb-6">
+            Guests may include experts associated with organisations such as:
+          </p>
+
+          <div className="flex flex-wrap gap-x-6 gap-y-3 mb-24 max-w-3xl">
+            {orgs.map((org, i) => (
+              <div key={i} className="flex items-center gap-3">
+                <div className="w-1.5 h-1.5 rounded-full bg-accent-teal opacity-60" />
+                <span className="text-white/80 font-medium italic">{org}</span>
               </div>
-              <span className="text-sm font-bold text-white/90 tracking-widest uppercase relative z-10 group-hover:text-white transition-colors">{feature.label || feature}</span>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        {/* Photo Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-          {gridImages.map((src: string, i: number) => (
-            <div key={i} className="aspect-[4/3] relative rounded-[2.5rem] overflow-hidden shadow-huge border border-white/10 group">
-              <Image 
-                src={src} 
-                alt={`Edu Event ${i + 1}`} 
-                fill 
-                className="object-cover transition-transform duration-1000 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary-900/80 via-transparent to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
-            </div>
-          ))}
-        </div>
-
-        {/* Why It Matters */}
-        <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-12 rounded-[3rem] max-w-5xl mx-auto shadow-2xl relative overflow-hidden group">
+        <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-10 md:p-14 rounded-[3rem] max-w-5xl shadow-2xl relative overflow-hidden group">
           <div className="absolute top-0 left-0 w-2 h-full bg-accent-teal" />
-          <div className="text-center relative z-10">
-            <span className="font-bold text-accent-teal uppercase tracking-[0.4em] text-[12px] block mb-6">Why it matters</span>
-            <p className="text-xl md:text-2xl text-white leading-tight font-serif italic">
-              "{whyItMatters}"
+          
+          <h3 className="text-2xl font-serif font-bold text-white mb-10 text-center">
+            Year-long students receive priority opportunities to:
+          </h3>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
+            {opportunities.map((opp, i) => (
+              <div key={i} className="flex flex-col items-center text-center p-8 bg-white/[0.02] border border-white/10 rounded-3xl hover:bg-white/[0.08] hover:border-accent-teal/40 transition-all duration-500 shadow-lg group/card">
+                <div className="w-14 h-14 rounded-2xl bg-accent-teal/10 border border-accent-teal/20 flex items-center justify-center text-accent-teal mb-5 group-hover/card:bg-accent-teal group-hover/card:text-white transition-all duration-500">
+                  <opp.icon size={24} />
+                </div>
+                <span className="text-sm font-bold text-white/90 leading-relaxed group-hover/card:text-white transition-colors">
+                  {opp.label}
+                </span>
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-12 text-center pt-8 border-t border-white/10">
+            <p className="text-xl text-accent-teal italic font-light">
+              Experience real-world innovation culture beyond textbooks
             </p>
           </div>
         </div>
-        
-        <div className="mt-16 text-center">
-          <p className="text-white/40 font-mono text-[12px] uppercase tracking-[0.3em] font-bold">
-            Not a one-time talk — repeated exposure to real experts over time.
-          </p>
-        </div>
+
       </div>
     </section>
   )

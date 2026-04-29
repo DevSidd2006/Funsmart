@@ -1,11 +1,16 @@
 import { Hero } from '../components/sections/Hero'
-import { TrustStrip } from '../components/sections/TrustStrip'
-import { WhatMakesDifferent } from '../components/sections/Comparison'
-import { HowItWorks } from '../components/sections/HowItWorks'
-import { LabGallery } from '../components/sections/LabGallery'
+import { TheRealProblem } from '../components/sections/TheRealProblem'
+import { WhatStudentsDo } from '../components/sections/WhatStudentsDo'
 import { EduEvents } from '../components/sections/EduEvents'
+import { SessionStructure } from '../components/sections/SessionStructure'
+import { ObservationUSP } from '../components/sections/ObservationUSP'
+import { ProgramsSlider } from '../components/sections/ProgramsSlider'
+import { Outcomes } from '../components/sections/Outcomes'
+import { OneDayChallenge } from '../components/sections/OneDayChallenge'
+import { ThinkingReset } from '../components/sections/ThinkingReset'
 import { TestimonialsSlider } from '../components/sections/TestimonialsSlider'
 import { FinalCTA } from '../components/sections/FinalCTA'
+import { LabGallery } from '../components/sections/LabGallery'
 
 import { testimonials } from '../data/testimonials'
 import { galleryItems } from '../data/gallery'
@@ -16,21 +21,37 @@ export default function HomePage() {
       {/* Section 01 — HERO */}
       <Hero />
 
-      <TrustStrip />
+      {/* Section 02 — THE REAL PROBLEM */}
+      <TheRealProblem />
 
-      {/* Section 02 — WHAT MAKES THIS DIFFERENT */}
-      <WhatMakesDifferent />
+      {/* Section 03 — WHAT STUDENTS DO */}
+      <WhatStudentsDo />
 
-      {/* Section 03 — YOUR CHILD'S LEARNING JOURNEY */}
-      <HowItWorks />
-
-      {/* Section 04 — EDU EVENTS */}
+      {/* Section 04 — SCIENTIST & EXPERT ECOSYSTEM */}
       <EduEvents />
 
-      {/* Section 05 — PARENT VOICES */}
+      {/* Section 05 — HOW SESSIONS WORK */}
+      <SessionStructure />
+
+      {/* Section 06 — OBSERVATION USP */}
+      <ObservationUSP />
+
+      {/* Section 07 — YEAR-LONG THEMES */}
+      <ProgramsSlider />
+
+      {/* Section 08 — OUTCOMES */}
+      <Outcomes />
+
+      {/* Section 09 — 1-DAY STEM CHALLENGE */}
+      <OneDayChallenge />
+
+      {/* Section 10 — THINKING RESET WORKSHOP */}
+      <ThinkingReset />
+
+      {/* Section 11 — PARENT VOICES */}
       <TestimonialsSlider data={testimonials} />
 
-      {/* Section 06 — CLOSING CTA */}
+      {/* Section 12 — CLOSING CTA */}
       <FinalCTA />
 
       {/* Lab Gallery Section */}

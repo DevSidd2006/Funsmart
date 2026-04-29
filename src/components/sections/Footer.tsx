@@ -33,7 +33,7 @@ export function Footer({ data }: { data?: any }) {
             />
             </Link>
             <p className="text-neutral-600 max-w-sm leading-relaxed mb-10 text-sm">
-              {data?.description || "A premium laboratory for parents who value intelligence over marks. Helping children discover their unique thinking patterns."}
+              {data?.description || "A hands-on RoboSTEM thinking lab helping children build independent problem-solving beyond rote learning."}
             </p>
             <div className="flex gap-4">
                {socialLinks.map((social: any) => {

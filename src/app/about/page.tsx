@@ -10,42 +10,22 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fursmartism.vercel.
 
 export const metadata: Metadata = {
   title: 'About Us | FunSmartism',
-  description: 'Discover why we built FunSmartism Intelligence Center. We observe how children think, not just what they score.',
-  keywords: ['about FunSmartism', 'thinking lab', 'child observation'],
-  openGraph: {
-    title: 'About FunSmartism | The Origin Story',
-    description: "We noticed it again and again: a child who struggled in a classroom would come alive the moment you put something real in their hands.",
-    url: `${siteUrl}/about`,
-    type: 'article',
-  },
+  description: 'We started FunSmartism because we kept seeing something schools weren’t designed to notice.',
 }
 
 const beliefsData = [
   {
-    title: 'Children often don’t struggle because of marks or ability alone.',
-    description: 'Most struggle because they haven’t yet built strong thinking habits for unfamiliar situations. That is a very different problem — and it has a very different solution.',
+    title: 'Many children do not lack ability. They often lack enough opportunities to solve unfamiliar challenges independently.',
   },
   {
-    title: "Marks show outcomes. They don't show independant problem-solving habits.",
-    description: "A child can score well and still freeze when facing something they haven't seen before. A child can score poorly and still explore, persist, and adapt beautifully. The two things are not the same — and confusing them does real damage.",
+    title: "Marks show outcomes. They do not always show how a child approaches difficulty, uncertainty, or real-world problem-solving.",
   },
   {
-    title: 'Parents deserve more than a report card.',
-    description: "Marks tell you what your child scored. It doesn’t show how they approach difficulty, what lights them up, or how they test and retry in action. That insight exists—it just needs the right environment to become visible.",
+    title: 'Parents deserve more than a report card alone can provide.',
   },
 ]
 
 export default function AboutPage() {
-  const faqs = [
-    { label: "What we are", answer: "FunSmartism Intelligence Center — a Thinking Lab where children explore real systems, build real things, and experience hands-on problem-solving." },
-    { label: "Our program", answer: "FunSmartism RoboSTEM Thinking Lab — 10 themes, available as a 10-day workshop or a year-long program." },
-    { label: "Who we're for", answer: "Children aged 8–16 and their parents. All learning backgrounds." },
-    { label: "What we observe", answer: "Thinking habits — how a child approaches the unfamiliar, handles difficulty, and engages with a challenge." },
-    { label: "What parents receive", answer: "Specific, parent insight notes + clear guidance on how to respond at home. Not grades. Not comparisons. A window into how their child thinks." },
-    { label: "Edu events", answer: "Year-long students get priority access — and real responsibilities. They run the events alongside us for invited scientists, school mentors, and experts." },
-    { label: "Entry point", answer: "A free parent orientation. Come in. understand the process. Ask everything." },
-  ]
-
   return (
     <div className="bg-white">
       {/* Hero */}
@@ -54,11 +34,12 @@ export default function AboutPage() {
         <div className="container-fluid relative z-10 text-center">
           <div className="max-w-5xl mx-auto">
             <h1 className="text-3xl md:text-5xl lg:text-[3.25rem] font-serif font-bold text-primary-500 mb-8 leading-tight tracking-tight">
-              We started FunSmartism because we kept seeing <br className="hidden md:block" />
-              <span className="block text-2xl md:text-4xl lg:text-[3.25rem] text-accent-teal italic font-light">something schools weren't designed to notice.</span>
+              We Started FunSmartism Because We Kept Seeing <br className="hidden md:block" />
+              <span className="block text-2xl md:text-4xl lg:text-[3.25rem] text-accent-teal italic font-light">Something Schools Weren’t Designed To Notice.</span>
             </h1>
             <p className="text-lg md:text-xl text-neutral-600 font-light leading-relaxed max-w-4xl mx-auto">
-              We kept seeing capable children come alive in real-world learning environment that gave them freedom—and shut down in environments that didn’t. Parents could sense it too, but had no language for what they were seeing. FunSmartism was built to close that gap.
+              Children often behave very differently when they are given real opportunities to build, explore, experiment, and solve unfamiliar challenges actively. <br />
+              <span className="font-medium text-primary-500">FunSmartism was created to provide more of those environments.</span>
             </p>
           </div>
         </div>
@@ -68,26 +49,66 @@ export default function AboutPage() {
       <section className="py-24 bg-white relative z-20">
         <div className="container-fluid max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-center text-[#1E2A44] mb-16">
-            Three things we believe.
+            Three Things We Believe.
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
-            {beliefsData.map((belief) => (
-              <div key={belief.title} className="relative overflow-hidden rounded-[20px] bg-neutral-50 border border-neutral-100 p-10 shadow-sm transition-shadow hover:shadow-md">
-                <div className="absolute left-0 top-0 h-full w-2 rounded-r-xl bg-[#1E2A44]" />
-                <h3 className="text-2xl font-serif font-bold text-[#1E2A44] mb-5 pr-2">
+            {beliefsData.map((belief, i) => (
+              <div key={i} className="relative overflow-hidden rounded-[20px] bg-neutral-50 border border-neutral-100 p-10 shadow-sm transition-shadow hover:shadow-md text-center">
+                <div className="absolute left-0 top-0 w-full h-1 bg-accent-teal" />
+                <h3 className="text-xl font-serif font-bold text-[#1E2A44] leading-relaxed">
                   {belief.title}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed text-base">
-                  {belief.description}
-                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <FounderJourney />
+      {/* Why We Built This */}
+      <section className="py-24 bg-[#FAF9F6] relative">
+        <div className="container-fluid max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-12">
+            Why We Built This Environment
+          </h2>
+          
+          <div className="space-y-8 text-lg md:text-xl text-neutral-600 leading-relaxed font-light">
+            <p>
+              Again and again, we noticed children becoming deeply engaged the moment learning became hands-on, exploratory, and real.
+            </p>
+            
+            <div className="flex flex-wrap justify-center gap-4 py-8">
+              {['A robot to test.', 'A puzzle to solve.', 'A structure to redesign.', 'A question without one fixed answer.'].map((item, i) => (
+                <span key={i} className="bg-white px-6 py-3 rounded-full border border-neutral-100 shadow-sm text-primary-500 font-medium text-sm">
+                  {item}
+                </span>
+              ))}
+            </div>
+
+            <p>
+              Children who rarely showed participation in standard classroom settings often became highly active inside these environments.
+            </p>
+            <p className="text-primary-500 font-medium italic">
+              Parents noticed the difference too. Many would say:
+            </p>
+            <p className="text-3xl md:text-4xl font-serif font-bold text-accent-teal italic">
+              “I haven’t seen my child this engaged in a long time.”
+            </p>
+            
+            <div className="pt-12 space-y-4">
+              <p>That repeated pattern became the foundation of FunSmartism.</p>
+              <div className="flex flex-col md:flex-row justify-center gap-4 text-sm font-bold uppercase tracking-widest text-neutral-400">
+                <span>Not as a tuition class</span>
+                <span className="hidden md:block opacity-30">·</span>
+                <span>Not as a robotics coaching center</span>
+              </div>
+              <p className="text-primary-500 font-bold text-2xl font-serif">
+                But as a hands-on RoboSTEM thinking lab where children actively participate in learning through experimentation, projects, challenges, and real-world exploration.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <RealSessionMoments />
 
@@ -96,83 +117,33 @@ export default function AboutPage() {
         <div className="container-fluid max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-8 leading-tight">
             Marks show outcomes. <br className="hidden md:block" />
-            <span className="text-accent-teal">Scientist-style thinking habits shape futures.</span>
+            <span className="text-accent-teal">Real-world learning experiences shape confidence, curiosity, and independent problem-solving.</span>
           </h2>
-          <p className="text-xl text-neutral-300 leading-relaxed font-light">
-            We are not against exams. We are not against results. We are against the idea that results are the whole picture — and that parents should navigate their child's development with only that information in hand.
+          <p className="text-xl text-neutral-300 leading-relaxed font-light max-w-2xl mx-auto">
+            We are not against exams, academics, or results. We simply believe children also need environments where they can actively participate in learning instead of only following instructions.
           </p>
         </div>
       </section>
 
       <OurTeam />
 
-      {/* Quick Info / FAQ */}
-      <section className="section-spacing bg-neutral-50 border-t border-neutral-200">
+      {/* Final CTA */}
+      <section className="py-32 bg-white text-center">
         <div className="container-fluid max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-serif font-bold text-[#1E2A44] mb-4">In brief</h2>
-          </div>
-
-          <div className="space-y-4">
-            {faqs.map((faq) => (
-              <details key={faq.label} className="group border border-neutral-200 bg-white rounded-2xl [&_summary::-webkit-details-marker]:hidden">
-                <summary className="flex items-center justify-between cursor-pointer p-6 font-bold text-[#1E2A44] hover:text-accent-teal transition-colors">
-                  {faq.label}
-                  <ChevronDown className="w-5 h-5 text-neutral-400 group-open:rotate-180 transition-transform duration-300" />
-                </summary>
-                <div className="px-6 pb-6 pt-0 text-neutral-600 leading-relaxed text-sm opacity-90">
-                  {faq.answer}
-                </div>
-              </details>
-            ))}
-
-            <div className="border border-neutral-200 bg-white rounded-2xl p-6 mt-6 flex flex-col md:flex-row md:justify-between md:items-center gap-4 shadow-sm">
-              <div>
-                <span className="text-xs font-mono text-accent-teal font-bold uppercase tracking-widest block mb-2">Location</span>
-                <p className="text-[#1E2A44] font-medium text-sm leading-relaxed">Navkar Residency, Swami Vivekanand Road, Next to Bibwewadi Police Station, Bibwewadi, Pune 411037</p>
-              </div>
-              <div className="h-px md:h-12 w-full md:w-px bg-neutral-100"></div>
-              <div>
-                <span className="text-xs font-mono text-accent-teal font-bold uppercase tracking-widest block mb-2">Contact</span>
-                <p className="text-[#1E2A44] font-medium text-sm">+91 99999 99999 <span className="mx-2 text-neutral-300">·</span> hello@funsmartism.in</p>
-              </div>
-            </div>
-          </div>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-8 leading-tight">
+            See The Environment <span className="text-accent-teal italic font-light">yourself</span>
+          </h2>
+          <p className="text-xl text-neutral-600 mb-12 font-light leading-relaxed">
+            The best way to understand FunSmartism is to experience a real session, workshop, or STEM challenge environment directly.
+          </p>
+          <Link href="/schedule-visit">
+            <Button size="lg" className="bg-accent-teal border-none text-white px-16 py-6 shadow-huge shadow-accent-teal/30 rounded-full font-bold">
+              Schedule A Visit →
+            </Button>
+          </Link>
         </div>
       </section>
-
-      {/* CTA */}
-      <section className="section-spacing text-center bg-primary-500 text-white relative overflow-hidden py-32">
-        <div className="absolute inset-0 lab-grid opacity-[0.05]" />
-        <div className="container-fluid relative z-10">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-serif font-bold text-white mb-8 leading-tight tracking-tight">
-              Come and experience real <span className="text-accent-teal italic font-light">problem-solving</span> in action.
-            </h2>
-            <p className="text-xl md:text-2xl text-[#B7E3DD] mb-16 font-light italic">
-              The orientation is free. The conversation is real. Your questions are welcome.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <Link href="/schedule-visit" className="w-full sm:w-auto">
-                <Button size="lg" className="bg-accent-teal border-none text-white px-16 py-6 shadow-huge shadow-accent-teal/30 w-full rounded-full font-bold">
-                  Schedule a Visit →
-                </Button>
-              </Link>
-            </div>
-
-            <div className="mt-12 space-y-2">
-              <p className="text-xs text-white/30 font-mono tracking-[0.3em] uppercase font-bold">
-                Free Parent Orientation · 30–45 minutes 📍 Bibwewadi, Pune
-              </p>
-              <p className="text-xs text-white/40 font-medium">
-                We'll confirm within 2 hours.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
     </div>
   )
 }
+
