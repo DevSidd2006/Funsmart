@@ -12,8 +12,6 @@ import { Menu, X } from 'lucide-react'
 const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { name: 'Thinking Lab', href: '/thinking-lab' },
-  { name: 'For Parents', href: '/for-parents' },
   { name: 'Programs', href: '/programs' },
   { name: 'Gallery', href: '/gallery' },
 ]
@@ -31,7 +29,7 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const isDarkHeroPage = pathname === '/' || pathname === '/thinking-lab' || pathname === '/programs' || pathname === '/activities'
+  const isDarkHeroPage = pathname === '/' || pathname === '/programs' || pathname === '/activities'
   const useLightText = isDarkHeroPage && !scrolled && !isOpen
 
   return (

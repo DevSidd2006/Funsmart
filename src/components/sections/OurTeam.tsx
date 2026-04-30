@@ -25,19 +25,19 @@ export function OurTeam() {
               initials: 'VR',
               title: 'Vilas Rabde',
               role: 'Electronics Engineer · 37 years at Philips · Ham Radio operator',
-              desc: 'A frequent collaborative mentor who brings deep engineering exposure into electronics and instrumentation workshops.',
+              desc: 'A frequent collaborative mentor who Brings deep engineering exposure into electronics and instrumentation workshops.',
             },
             {
               initials: 'MB',
               title: 'Milind Bhagwat',
-              role: 'Mechanical Engineer · 45+ years experience',
-              desc: 'Supports advanced engineering projects, practical design exploration sessions, and real-world problem-solving.',
+              role: 'Mechanical Engineer · 45+ years across CNC, telecom, biometrics, and smart systems',
+              desc: 'Supports advanced engineering, projects and practical design exploration sessions. and real-world problem-solving',
             },
             {
               initials: 'SG',
               title: 'Shrirang Gokhale',
               role: 'Mechanical Engineer · Product Designer · Entrepreneur mentor',
-              desc: 'Helps shape challenge design through creative problem-solving guidance and workshop ideation.',
+              desc: 'Helps shape challenge design through creative problem-solving guidance. and workshop ideation',
             },
           ].map((item) => (
             <div

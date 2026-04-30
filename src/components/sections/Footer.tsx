@@ -58,8 +58,6 @@ export function Footer({ data }: { data?: any }) {
               {[
                 { name: 'Home', href: '/' },
                 { name: 'About', href: '/about' },
-                { name: 'Thinking Lab', href: '/thinking-lab' },
-                { name: 'For Parents', href: '/for-parents' },
                 { name: 'Programs', href: '/programs' },
                 { name: 'Gallery', href: '/gallery' },
               ].map((link) => (

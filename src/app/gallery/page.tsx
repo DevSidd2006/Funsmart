@@ -14,7 +14,7 @@ export default function GalleryPage() {
         <div className="absolute inset-0 lab-grid opacity-[0.03]" />
         <div className="container-fluid relative z-10 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-500 leading-tight tracking-tight mb-8">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary-500 leading-tight tracking-tight mb-8">
               Real Projects. <br />
               <span className="text-accent-teal italic font-light">Real Challenges. Real Learning Moments.</span>
             </h1>

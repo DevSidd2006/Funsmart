@@ -23,11 +23,11 @@ export function ObservationUSP() {
           </div>
 
           <div className="text-center max-w-3xl mx-auto mb-12 relative z-10">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary-500 leading-tight mb-8">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-primary-500 leading-tight mb-8">
               While Children Build and Solve, We Also Observe How They Approach Challenges.
             </h2>
             <p className="text-lg md:text-xl text-neutral-600 leading-relaxed font-light">
-              During activities and challenges, facilitators naturally observe patterns that often come up at home too, but get unnoticed by parents.
+              During activities and challenges, facilitators naturally observe patterns that often come up at home too, but get unnoticed by parents
             </p>
           </div>
 

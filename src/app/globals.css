@@ -89,7 +89,7 @@
 
 /* Custom Selection */
 ::selection {
-  @apply bg-[#2FB5A3]/10 text-[#1E2A44];
+  @apply bg-[#2FB5A3]/30;
 }
 
 /* Smooth scrolling */

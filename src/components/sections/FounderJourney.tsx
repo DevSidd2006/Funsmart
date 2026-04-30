@@ -109,7 +109,7 @@ export function FounderJourney() {
                     </p>
 
                     <Link
-                      href="/thinking-lab"
+                      href="/programs"
                       className="inline-flex items-center gap-3 text-accent-teal font-bold text-lg group/link"
                     >
                       <span>Inside the Thinking Lab</span>

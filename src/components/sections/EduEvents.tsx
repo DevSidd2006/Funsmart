@@ -21,7 +21,7 @@ export function EduEvents() {
       
       <div className="container-fluid relative z-10">
         <div className="max-w-5xl mb-20">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-8 leading-[1.1] tracking-tight">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-8 leading-[1.1] tracking-tight">
             Children Don’t Just Learn Concepts. <br />
             <span className="text-accent-teal italic font-light opacity-90">They Interact with actual experts, people Building The Future.</span>
           </h2>

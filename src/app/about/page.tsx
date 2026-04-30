@@ -21,7 +21,7 @@ const beliefsData = [
     title: "Marks show outcomes. They do not always show how a child approaches difficulty, uncertainty, or real-world problem-solving.",
   },
   {
-    title: 'Parents deserve more than a report card alone can provide.',
+    title: 'Parents deserve more visibility than a report card alone can provide.',
   },
 ]
 

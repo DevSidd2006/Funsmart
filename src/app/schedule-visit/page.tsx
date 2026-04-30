@@ -43,16 +43,16 @@ export default function ScheduleVisitPage() {
   return (
     <div className="bg-[#FAF9F6] min-h-screen">
       {/* SECTION 01 — HERO */}
-      <section className="pt-40 pb-12 text-center bg-accent-surface relative overflow-hidden">
+      <section className="pt-40 pb-12 text-center bg-[#1E2A44] !text-white relative overflow-hidden">
         <div className="absolute inset-0 lab-grid opacity-[0.03]" />
         <div className="container-fluid relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-primary-500 mb-8 leading-tight tracking-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold !text-white mb-8 leading-tight tracking-tight">
               See The Environment In Person
             </h1>
-            <p className="text-lg md:text-xl text-neutral-600 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
+            <p className="text-lg md:text-xl !text-white/80 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
               The best way to understand FunSmartism is to experience the learning environment directly. 
-              Meet us, explore current RoboSTEM themes, interact with the team, and understand how children learn through hands-on challenges, experimentation, and real-world exploration.
+              Visit the lab, explore current RoboSTEM themes, interact with the team, and understand how children learn through hands-on challenges, experimentation, and real-world exploration.
             </p>
             
             <a href="#schedule-form">
@@ -74,7 +74,8 @@ export default function ScheduleVisitPage() {
               </h2>
               <div className="space-y-6 text-lg text-neutral-600 leading-relaxed font-light">
                 <p>
-                  Photos and websites can explain the activities. But the real difference becomes visible when parents experience the environment themselves.
+                  Photos and websites can explain the activities.
+                  But the real difference becomes visible when parents experience the environment themselves
                 </p>
                 <div className="bg-neutral-50 p-8 rounded-3xl border border-neutral-100">
                   <p className="font-medium text-primary-500 mb-4 uppercase tracking-widest text-xs opacity-70">They see:</p>

@@ -50,7 +50,7 @@ export default function HomePage() {
       <ThinkingReset />
 
       {/* Section 11 — PARENT VOICES */}
-      <TestimonialsSlider data={testimonials} />
+      <TestimonialsSlider data={testimonials.filter((t) => ['5', '6', '7'].includes(t.id))} />
 
       {/* Section 12 — CLOSING CTA */}
       <FinalCTA />

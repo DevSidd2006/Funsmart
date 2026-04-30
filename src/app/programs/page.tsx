@@ -14,10 +14,10 @@ export default function ProgramsPage() {
       title: 'Year-Long RoboSTEM Lab',
       tagline: 'A hands-on exploratory ecosystem where children build, test, and redesign across the academic year.',
       ageGroups: ['Age 8–15'],
-      duration: 'Academic Year (10 Months)',
-      sessions: '4 sessions every month (3 Offline + 1 Online STEM Challenge)',
-      structure: '3-hour sessions conducted on weekends.',
-      activities: 'Hands-on RoboSTEM themes, take-home projects, real-world challenges, and teamwork.',
+      duration: '10-month academic year program',
+      sessions: '3 offline + 1 online session every month',
+      structure: 'weekend batches, 3-hour sessions',
+      activities: 'Hands-on RoboSTEM themes, take-home projects, real-world challenges, teamwork + independent exploration, scientist and expert interactions, and project showcases.',
       parentInvolvement: 'Regular observation-based discussions and project showcases.',
       usp: 'Priority opportunities to interact with scientists and industry experts.',
       bgColor: 'bg-white',
@@ -61,10 +61,10 @@ export default function ProgramsPage() {
         <div className="absolute inset-0 lab-grid opacity-[0.05]" />
         <div className="container-fluid relative z-10 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-8">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold !text-white mb-8">
               Hands-on RoboSTEM Programs
             </h1>
-            <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed font-light">
+            <p className="text-lg md:text-xl !text-white/70 max-w-2xl mx-auto leading-relaxed font-light">
               Understand the batch structures, age groups, session formats, and real-world activities that happen inside our Thinking Lab.
             </p>
           </div>
@@ -154,12 +154,12 @@ export default function ProgramsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="p-10 border border-white/10 rounded-3xl bg-white/5 text-left">
               <h3 className="text-2xl font-serif font-bold text-accent-teal mb-4">Immediate Exposure</h3>
-              <p className="text-white/70 leading-relaxed mb-8 font-light">Choose the 1-Day Challenge or 10-Day Workshop if you want your child to experience the environment, explore different STEM domains, and see immediate engagement patterns.</p>
+              <p className="!text-white/70 leading-relaxed mb-8 font-light">Choose the 1-Day Challenge or 10-Day Workshop if you want your child to experience the environment, explore different STEM domains, and see immediate engagement patterns.</p>
               <div className="w-12 h-px bg-white/20" />
             </div>
             <div className="p-10 border border-white/10 rounded-3xl bg-white/5 text-left">
               <h3 className="text-2xl font-serif font-bold text-white mb-4">Sustainable Growth</h3>
-              <p className="text-white/70 leading-relaxed mb-8 font-light">Choose the Year-Long program to build sustainable independent problem-solving, work on complex projects, and interact regularly with scientists and experts.</p>
+              <p className="!text-white/70 leading-relaxed mb-8 font-light">Choose the Year-Long program to build sustainable independent problem-solving, work on complex projects, and interact regularly with scientists and experts.</p>
               <div className="w-12 h-px bg-white/20" />
             </div>
           </div>

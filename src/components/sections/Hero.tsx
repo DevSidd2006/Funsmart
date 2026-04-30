@@ -27,7 +27,7 @@ export function Hero({ data }: { data?: any }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           {/* Left: Text Content */}
           <div className="lg:col-span-7">
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-serif font-bold text-white mb-8 leading-[1.05] text-balanced">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-8 leading-[1.05] text-balanced">
                {headline}
             </h1>
 
@@ -46,7 +46,7 @@ export function Hero({ data }: { data?: any }) {
                   </Button>
                 </Link>
                 <p className="text-sm text-white/60 leading-relaxed pl-2 border-l-2 border-accent-teal/30">
-                  Meet us, understand the learning approach, explore current themes, and discover which program fits your child best.
+                  Visit the lab, understand the learning approach, explore current themes, and discover which program fits your child best.
                 </p>
               </div>
 
