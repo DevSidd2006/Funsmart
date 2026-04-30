@@ -15,7 +15,7 @@ export function WhatStudentsDo() {
   ]
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-16 bg-white relative overflow-hidden">
       <div className="container-fluid max-w-6xl mx-auto">
         <div className="text-center mb-20 max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-8 leading-tight">

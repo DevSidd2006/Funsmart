@@ -12,13 +12,14 @@ export function Outcomes() {
   ]
 
   return (
-    <section className="py-24 bg-accent-surface overflow-hidden">
+    <section className="py-16 bg-accent-surface overflow-hidden">
       <div className="container-fluid max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-6">
             What Parents Often Notice Over Time
           </h2>
-          <div className="w-24 h-1 bg-accent-teal mx-auto opacity-30" />
+          <p className="text-xl text-neutral-600 font-light mt-4 italic">Parents often notice children becoming:</p>
+          <div className="w-24 h-1 bg-accent-teal mx-auto opacity-30 mt-8" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 max-w-4xl mx-auto">
@@ -34,11 +35,6 @@ export function Outcomes() {
           ))}
         </div>
         
-        <div className="mt-16 text-center">
-          <p className="text-sm text-neutral-400 font-mono uppercase tracking-[0.2em] font-bold">
-            Real growth happens through repeated exposure to challenges.
-          </p>
-        </div>
       </div>
     </section>
   )

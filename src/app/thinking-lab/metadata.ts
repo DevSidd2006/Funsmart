@@ -4,17 +4,17 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fursmartism.vercel.
 
 export const metadata: Metadata = {
   title: 'What is the FunSmartism RoboSTEM Thinking Lab? | FunSmartism',
-  description: "We don't teach. We observe. The FunSmartism RoboSTEM Thinking Lab makes scientist-inspired problem-solving visible through real challenges, parent insight observations, and interaction sessions.",
+  description: "We don't teach. We observe. The FunSmartism RoboSTEM Thinking Lab makes real-world problem-solving visible through real challenges, parent insight observations, and interaction sessions.",
   keywords: [
     'thinking lab for kids in Pune',
     'STEM thinking lab Pune',
-    'scientist-inspired learning for children',
+    'hands-on learning for children',
     'child problem solving workshop Pune',
     'hands-on robotics thinking lab',
     'how children think during problem solving',
     'RoboSTEM Thinking Lab',
     'scientist interaction sessions',
-    'problem-solving habits',
+    'problem-solving skills',
     'parent insight observations',
     'Pune',
   ],

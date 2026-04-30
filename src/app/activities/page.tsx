@@ -108,7 +108,7 @@ export default function ActivitiesPage() {
             <h2 className="text-4xl font-serif font-bold text-primary-500 leading-tight">Mastering Logical <br />Complexity</h2>
           </div>
           <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
-            {['Robotics & Engineering', 'Space Science & Astronomy', 'Algorithmic Coding', 'Rubik\'s Logic', 'Cognitive Sudoku', 'Memory Mastery', 'Aeromodeling', 'STEM Research'].map((tag) => (
+            {['Robotics & Engineering', 'Space Science & Astronomy', 'Algorithmic Coding', 'Rubik\'s Logic', 'Logical Sudoku', 'Memory Mastery', 'Aeromodeling', 'STEM Research'].map((tag) => (
               <span key={tag} className="px-8 py-4 rounded-sm bg-white border border-neutral-100 text-primary-500 font-bold hover:border-accent-teal hover:text-accent-teal transition-all cursor-default shadow-sm hover:shadow-md text-sm">
                 {tag}
               </span>
@@ -126,7 +126,7 @@ export default function ActivitiesPage() {
               Find the right <span className="text-accent-teal italic font-light">activity</span> for your child's thinking pattern.
             </h2>
             <p className="text-lg md:text-xl text-[#B7E3DD] mb-12 font-light italic">
-              Experience scientist-inspired RoboSTEM discovery first-hand.
+              Experience hands-on RoboSTEM discovery first-hand.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link href="/schedule-visit" className="w-full sm:w-auto">

@@ -57,7 +57,7 @@ export default async function ForParentsPage() {
   return (
     <div className="bg-[#FAF9F6] text-[#1E2A44] font-sans">
       {/* SECTION 01 — HERO */}
-      <section className="pt-40 pb-24 bg-accent-surface relative overflow-hidden flex items-center min-h-[75vh]">
+      <section className="pt-40 pb-16 bg-accent-surface relative overflow-hidden flex items-center min-h-[75vh]">
         <div className="absolute inset-0 lab-grid opacity-[0.03]" />
         <div className="container-fluid relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
@@ -91,14 +91,14 @@ export default async function ForParentsPage() {
       </section>
 
       {/* SECTION 02 — WHAT PARENTS DISCOVER */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="container-fluid max-w-6xl mx-auto px-4">
           <div className="max-w-3xl mb-16">
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#1E2A44] leading-tight mb-4">
               What parents actually find out.
             </h2>
             <p className="text-lg text-neutral-600 leading-relaxed font-light">
-              Not 'my child improved'. The specific moments revealed when children face scientist-style RoboSTEM challenges.
+              Not 'my child improved'. The specific moments revealed when children face real-world RoboSTEM challenges.
             </p>
           </div>
           
@@ -152,7 +152,7 @@ export default async function ForParentsPage() {
       </section>
 
       {/* SECTION 03 — WHAT YOU CAN DO WITH THIS */}
-      <section className="py-24 bg-[#FAF9F6]">
+      <section className="py-16 bg-[#FAF9F6]">
         <div className="container-fluid max-w-6xl mx-auto px-4">
           <div className="max-w-3xl mb-16 text-center mx-auto">
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#1E2A44] leading-tight mb-6">
@@ -188,7 +188,7 @@ export default async function ForParentsPage() {
       </section>
 
       {/* SECTION 03.5 — WHAT PARENTS WORRY ABOUT */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="container-fluid max-w-4xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#1E2A44] mb-4">
@@ -219,7 +219,7 @@ export default async function ForParentsPage() {
       </section>
 
       {/* SECTION 04 — WHY THIS MATTERS */}
-      <section className="py-32 bg-[#1E2A44] text-white">
+      <section className="py-20 bg-[#1E2A44] text-white">
         <div className="container-fluid max-w-4xl mx-auto px-4 text-center">
 <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-white leading-tight mb-10">
             Think beyond the exam score. What truly matters is your child's ability to figure things out through testing and retrying, <span className="text-accent-teal">persist, adapt, and stay curious when the answer isn't obvious.</span>
@@ -228,7 +228,7 @@ export default async function ForParentsPage() {
           <div className="w-16 h-px bg-white/20 mx-auto mb-10"></div>
           
           <blockquote className="text-2xl md:text-3xl font-serif font-light italic text-white mb-10 leading-snug">
-            "Thinking habits don't appear in exam results. <br className="hidden md:block" />They appear in how a person navigates life."
+            "Problem-solving skills don't appear in exam results. <br className="hidden md:block" />They appear in how a person navigates life."
           </blockquote>
           
           <p className="text-lg text-neutral-300 font-light max-w-2xl mx-auto leading-relaxed">
@@ -238,7 +238,7 @@ export default async function ForParentsPage() {
       </section>
 
       {/* SECTION 05 — PARENT VOICES */}
-      <section className="py-24 bg-[#FAF9F6]">
+      <section className="py-16 bg-[#FAF9F6]">
         <TestimonialsClient testimonials={parentVoices} />
       </section>
 
@@ -258,7 +258,7 @@ export default async function ForParentsPage() {
       </section>
 
       {/* SECTION 06 — PARENT FAQ */}
-      <section className="py-24 bg-[#FAF9F6]">
+      <section className="py-16 bg-[#FAF9F6]">
         <div className="container-fluid max-w-3xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1E2A44] mb-12 text-center">
             Parent FAQ
@@ -280,7 +280,7 @@ export default async function ForParentsPage() {
       </section>
 
       {/* SECTION 07 — A NOTE FROM FUNSMARTISM */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="container-fluid max-w-3xl mx-auto px-4">
           <div className="bg-[#F8FAFC] p-10 md:p-16 rounded-[2.5rem] border border-neutral-100 relative">
             <h2 className="text-sm font-mono font-bold text-accent-teal mb-8 uppercase tracking-widest block">
@@ -308,7 +308,7 @@ export default async function ForParentsPage() {
       </section>
 
       {/* SECTION 08 — CLOSING CTA */}
-      <section className="py-32 bg-[#1E2A44] text-center text-white">
+      <section className="py-20 bg-[#1E2A44] text-center text-white">
         <div className="container-fluid max-w-3xl mx-auto px-4">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6 leading-tight">
             Schedule a RoboSTEM visit for your child — and clarity for yourself as a parent.

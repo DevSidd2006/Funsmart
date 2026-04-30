@@ -29,7 +29,7 @@ export function RealMoments({
     {
       id: 3,
       image: '/images/discovery-moment.png',
-      label: 'COGNITIVE GROWTH',
+      label: 'PROCESS OF DISCOVERY',
       title: 'Discovery through doing',
       desc: 'Every session becomes a real-world problem where the process is the most valuable outcome.',
     },

@@ -11,7 +11,7 @@ export function OneDayChallenge() {
   ]
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
+    <section className="py-16 bg-white relative overflow-hidden">
       <div className="container-fluid max-w-6xl mx-auto">
         <div className="bg-primary-500 rounded-[3rem] p-10 md:p-16 lg:p-20 text-white relative overflow-hidden shadow-huge">
           <div className="absolute inset-0 lab-grid opacity-[0.05]" />
@@ -24,7 +24,7 @@ export function OneDayChallenge() {
                 One-Day Gateway
               </div>
               
-              <h2 className="text-3xl md:text-5xl font-serif font-bold mb-8 leading-tight">
+              <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8 leading-tight">
                 Experience FunSmartism <br />
                 <span className="text-accent-teal italic font-light">Before Joining Long-Term</span>
               </h2>

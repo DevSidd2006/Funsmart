@@ -7,10 +7,11 @@ import { ObservationUSP } from '../components/sections/ObservationUSP'
 import { ProgramsSlider } from '../components/sections/ProgramsSlider'
 import { Outcomes } from '../components/sections/Outcomes'
 import { OneDayChallenge } from '../components/sections/OneDayChallenge'
-import { ThinkingReset } from '../components/sections/ThinkingReset'
+
 import { TestimonialsSlider } from '../components/sections/TestimonialsSlider'
 import { FinalCTA } from '../components/sections/FinalCTA'
 import { LabGallery } from '../components/sections/LabGallery'
+import { ThinkingReset } from '../components/sections/ThinkingReset'
 
 import { testimonials } from '../data/testimonials'
 import { galleryItems } from '../data/gallery'
@@ -45,7 +46,7 @@ export default function HomePage() {
       {/* Section 09 — 1-DAY STEM CHALLENGE */}
       <OneDayChallenge />
 
-      {/* Section 10 — THINKING RESET WORKSHOP */}
+      {/* Section 10 — 10-DAY THINKING RESET WORKSHOP */}
       <ThinkingReset />
 
       {/* Section 11 — PARENT VOICES */}

@@ -30,7 +30,7 @@ export function RealSessionMoments() {
   }
 
   return (
-    <section className="relative bg-white py-[80px]">
+    <section className="relative bg-white py-[60px]">
       <div className="container-fluid">
         <div className="max-w-4xl mx-auto text-center mb-14">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#1E2A44] leading-tight mb-6">

@@ -11,66 +11,71 @@ export default function ProgramsPage() {
   const programs = [
     {
       id: 'year-long',
-      title: 'FunSmartism RoboSTEM Thinking Lab — Year-Long',
-      tagline: 'Building sustainable logic habits through repeated exposure.',
-      ageGroups: ['Age 8–10', 'Age 10–12', 'Age 12–14'],
+      title: 'Year-Long RoboSTEM Lab',
+      tagline: 'A hands-on exploratory ecosystem where children build, test, and redesign across the academic year.',
+      ageGroups: ['Age 8–15'],
       duration: 'Academic Year (10 Months)',
       sessions: '4 sessions every month (3 Offline + 1 Online STEM Challenge)',
-      themes: '10 themes explored in depth (one per month).',
-      activities: 'Hands-on building, RoboSTEM projects, experiments, challenges, testing, and discussions.',
-      usp: 'Priority access to all special Edu-events with scientists and experts.',
+      structure: '3-hour sessions conducted on weekends.',
+      activities: 'Hands-on RoboSTEM themes, take-home projects, real-world challenges, and teamwork.',
+      parentInvolvement: 'Regular observation-based discussions and project showcases.',
+      usp: 'Priority opportunities to interact with scientists and industry experts.',
       bgColor: 'bg-white',
       borderColor: 'border-neutral-100',
     },
     {
       id: 'workshop',
       title: '10-Day Thinking RESET Workshop',
-      tagline: 'A fast-paced hands-on RoboSTEM experience.',
-      ageGroups: ['Age 8–10', 'Age 10–12', 'Age 12–14'],
-      duration: '10 Consecutive Days',
+      tagline: 'A fast-paced hands-on RoboSTEM experience exploring different themes each day.',
+      ageGroups: ['Age 8–15'],
+      duration: '10 Consecutive Days (Holidays/Vacation)',
       sessions: '10 Daily sessions (2–3 hours each)',
-      themes: '10 different themes explored through daily projects.',
-      activities: 'Rapid prototyping, daily challenges, theme-based builds, and experimentation.',
-      usp: 'Includes a detailed observation note for parents at the end of 10 days.',
+      structure: 'Intensive daily projects and experimentation.',
+      activities: 'Rapid prototyping, daily challenges, theme-based builds, and creative problem-solving.',
+      parentInvolvement: 'Insights on child’s independent problem-solving approach shared at the end.',
+      usp: 'Ideal for children who want exposure to multiple STEM domains quickly.',
       bgColor: 'bg-[#FAF9F6]',
       borderColor: 'border-neutral-200',
     },
     {
       id: 'challenge',
-      title: '1-Day Parent Observation STEM Challenge',
-      tagline: 'A rare window into your child’s thinking habits.',
-      ageGroups: ['Age 8–10', 'Age 10–12', 'Age 12–14'],
+      title: '1-Day STEM Challenge',
+      tagline: 'A hands-on entry gateway to experience the FunSmartism environment.',
+      ageGroups: ['Age 8–15'],
       duration: 'Single Session',
       sessions: '1 session (2–3 hours)',
-      themes: 'Specific unfamiliar STEM challenges.',
-      activities: 'Children solve problems while parents observe their natural approach.',
-      usp: 'Ideal first step before joining long-term programs.',
+      structure: 'Parent-observed STEM challenge.',
+      activities: 'Children solve unfamiliar problems while parents observe their natural response to difficulty.',
+      parentInvolvement: 'Direct observation of child’s persistence and independent thinking.',
+      usp: 'The first moment parents realise "This is the environment my child actually needs."',
       bgColor: 'bg-white',
       borderColor: 'border-neutral-100',
     }
   ]
 
+
   return (
     <div className="bg-white">
       {/* Hero */}
-      <section className="pt-40 pb-24 bg-[#1E2A44] text-white relative overflow-hidden">
+      <section className="pt-40 pb-12 bg-[#1E2A44] text-white relative overflow-hidden">
         <div className="absolute inset-0 lab-grid opacity-[0.05]" />
         <div className="container-fluid relative z-10 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold mb-8">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-8">
               Hands-on RoboSTEM Programs
             </h1>
-            <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
-              Operational details, age groups, and session structures for our lab environments.
+            <p className="text-lg md:text-xl text-white/70 max-w-2xl mx-auto leading-relaxed font-light">
+              Understand the batch structures, age groups, session formats, and real-world activities that happen inside our Thinking Lab.
             </p>
           </div>
         </div>
       </section>
 
+
       {/* Program Cards */}
-      <section className="py-24">
+      <section className="py-12">
         <div className="container-fluid max-w-6xl mx-auto">
-          <div className="space-y-16">
+          <div className="space-y-10">
             {programs.map((prog) => (
               <div 
                 key={prog.id} 
@@ -100,8 +105,9 @@ export default function ProgramsPage() {
                     <div className="space-y-6 mb-10">
                       {[
                         { label: 'Sessions', val: prog.sessions, icon: Clock },
-                        { label: 'Themes', val: prog.themes, icon: Milestone },
+                        { label: 'Structure', val: prog.structure, icon: Milestone },
                         { label: 'Activities', val: prog.activities, icon: Wrench },
+                        { label: 'Parent Engagement', val: prog.parentInvolvement, icon: Users },
                       ].map((item, i) => {
                         const Icon = item.icon
                         return (
@@ -111,12 +117,13 @@ export default function ProgramsPage() {
                             </div>
                             <div>
                               <h5 className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest mb-1">{item.label}</h5>
-                              <p className="text-neutral-700 leading-relaxed">{item.val}</p>
+                              <p className="text-neutral-700 leading-relaxed text-sm">{item.val}</p>
                             </div>
                           </div>
                         )
                       })}
                     </div>
+
                   </div>
 
                   <div className="lg:col-span-5 flex flex-col justify-center">
@@ -141,26 +148,26 @@ export default function ProgramsPage() {
       </section>
 
       {/* Comparison Section (Simplified) */}
-      <section className="py-24 bg-[#1E2A44] text-white">
+      <section className="py-12 bg-[#1E2A44] text-white">
         <div className="container-fluid max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold mb-16">Which path fits?</h2>
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-16">Which path fits?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="p-10 border border-white/10 rounded-3xl bg-white/5">
-              <h3 className="text-2xl font-serif font-bold text-accent-teal mb-4">First Insight</h3>
-              <p className="text-white/70 leading-relaxed mb-8">Choose the 1-Day Challenge or 10-Day Workshop to see immediate thinking patterns.</p>
-              <div className="w-12 h-px bg-white/20 mx-auto" />
+            <div className="p-10 border border-white/10 rounded-3xl bg-white/5 text-left">
+              <h3 className="text-2xl font-serif font-bold text-accent-teal mb-4">Immediate Exposure</h3>
+              <p className="text-white/70 leading-relaxed mb-8 font-light">Choose the 1-Day Challenge or 10-Day Workshop if you want your child to experience the environment, explore different STEM domains, and see immediate engagement patterns.</p>
+              <div className="w-12 h-px bg-white/20" />
             </div>
-            <div className="p-10 border border-white/10 rounded-3xl bg-white/5">
-              <h3 className="text-2xl font-serif font-bold text-white mb-4">Long-term Growth</h3>
-              <p className="text-white/70 leading-relaxed mb-8">Choose the Year-Long program to build sustainable independent problem-solving habits.</p>
-              <div className="w-12 h-px bg-white/20 mx-auto" />
+            <div className="p-10 border border-white/10 rounded-3xl bg-white/5 text-left">
+              <h3 className="text-2xl font-serif font-bold text-white mb-4">Sustainable Growth</h3>
+              <p className="text-white/70 leading-relaxed mb-8 font-light">Choose the Year-Long program to build sustainable independent problem-solving, work on complex projects, and interact regularly with scientists and experts.</p>
+              <div className="w-12 h-px bg-white/20" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="py-32 bg-white text-center">
+      <section className="py-12 bg-white text-center">
         <div className="container-fluid max-w-3xl mx-auto">
           <h2 className="text-3xl font-serif font-bold text-primary-500 mb-8">Not sure?</h2>
           <p className="text-xl text-neutral-600 mb-12 font-light">Tell us your child’s age and interest during a visit—we’ll guide you.</p>

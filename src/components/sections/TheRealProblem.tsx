@@ -11,7 +11,7 @@ export function TheRealProblem() {
   ]
 
   return (
-    <section className="py-24 bg-neutral-50 relative overflow-hidden">
+    <section className="py-16 bg-neutral-50 relative overflow-hidden">
       <div className="container-fluid max-w-6xl mx-auto">
         
         {/* Main Heading & Intro */}

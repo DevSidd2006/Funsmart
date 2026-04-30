@@ -31,8 +31,9 @@ export default function ThinkingLabPage() {
   const observationPoints = [
     {
       notice: 'The Initial Approach',
-      insight: 'Does the child observe the system first, or jump into building immediately? Both reveal different cognitive styles.',
+      insight: 'Does the child observe the system first, or jump into building immediately? Both reveal different problem-solving styles.',
     },
+
     {
       notice: 'Response to Friction',
       insight: 'When a design fails, does the child retry, pause to rethink, or look for an external solution? This is where resilience is built.',
@@ -65,7 +66,7 @@ export default function ThinkingLabPage() {
       </section>
 
       {/* Operational Format */}
-      <section className="py-24 border-b border-neutral-100">
+      <section className="py-16 border-b border-neutral-100">
         <div className="container-fluid max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {labFormat.map((item, i) => (
@@ -82,11 +83,11 @@ export default function ThinkingLabPage() {
       </section>
 
       {/* The Activity Layer */}
-      <section className="py-24 bg-[#1E2A44] text-white">
+      <section className="py-16 bg-[#1E2A44] text-white">
         <div className="container-fluid max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-3xl md:text-5xl font-serif font-bold mb-8">What Children Build & Solve</h2>
+              <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8">What Children Build & Solve</h2>
               <p className="text-lg text-[#B7E3DD] mb-10 font-light italic leading-relaxed">
                 We use high-quality STEM materials, mechanical systems, and robotics components. But the goal isn’t the final model—it’s the thinking that happens during the build.
               </p>
@@ -119,7 +120,7 @@ export default function ThinkingLabPage() {
       </section>
 
       {/* Observation Layer */}
-      <section className="py-24">
+      <section className="py-16">
         <div className="container-fluid max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-6">Parent Guidance via Observation</h2>
@@ -148,10 +149,10 @@ export default function ThinkingLabPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-32 bg-[#FAF9F6] text-center border-t border-neutral-100">
+      <section className="py-20 bg-[#FAF9F6] text-center border-t border-neutral-100">
         <div className="container-fluid max-w-3xl mx-auto">
           <h2 className="text-3xl font-serif font-bold text-primary-500 mb-8">Experience the Lab Format</h2>
-          <p className="text-xl text-neutral-600 mb-12 font-light">Join a Parent Orientation to see how we observe thinking habits in real-time.</p>
+          <p className="text-xl text-neutral-600 mb-12 font-light">Join a Parent Orientation to see how we observe the problem-solving process in real-time.</p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Link href="/schedule-visit">
               <Button size="lg" className="bg-accent-teal border-none text-white px-12 py-6 rounded-full font-bold shadow-lg shadow-accent-teal/20">

@@ -10,7 +10,7 @@ export function ObservationUSP() {
   ]
 
   return (
-    <section className="py-24 bg-white relative">
+    <section className="py-16 bg-white relative">
       <div className="container-fluid max-w-5xl mx-auto">
         <div className="bg-[#FAF9F6] border border-neutral-100 rounded-[3rem] p-10 md:p-16 lg:p-20 shadow-sm relative overflow-hidden">
           

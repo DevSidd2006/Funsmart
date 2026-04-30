@@ -20,7 +20,7 @@ export function SessionStructure() {
   ]
 
   return (
-    <section className="py-24 bg-accent-surface overflow-hidden">
+    <section className="py-16 bg-accent-surface overflow-hidden">
       <div className="container-fluid max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           

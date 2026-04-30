@@ -8,7 +8,7 @@ import { motion } from 'framer-motion';
 
 export function FounderJourney() {
   return (
-    <section className="relative overflow-hidden bg-accent-surface py-20 md:py-24 lg:py-28" id="founder-journey">
+    <section className="relative overflow-hidden bg-accent-surface py-12 md:py-16 lg:py-20" id="founder-journey">
       {/* Background Decorative Elements */}
       <div className="pointer-events-none absolute right-0 top-0 h-full w-[55%] select-none opacity-[0.03]">
         <svg viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full rotate-12 translate-x-1/4">
@@ -62,9 +62,7 @@ export function FounderJourney() {
                   <p>
                     <span className="font-semibold text-primary-500">What stood out was simple:</span> the right environment can completely change how a child observes, persists, and solves.
                   </p>
-                  <p>
-                    That insight led her to build FunSmartism in Pune — a scientist-inspired RoboSTEM environment where real problem-solving becomes visible.
-                  </p>
+                    That insight led her to build FunSmartism in Pune — a hands-on RoboSTEM environment where real problem-solving skills become visible.
                 </div>
               </div>
             </motion.div>

@@ -13,7 +13,7 @@ export function EduEvents() {
   ]
 
   return (
-    <section className="py-32 bg-[#151F32] text-white overflow-hidden relative border-y border-accent-teal/20 shadow-[inset_0_0_100px_rgba(0,0,0,0.5)]">
+    <section className="py-20 bg-[#151F32] text-white overflow-hidden relative border-y border-accent-teal/20 shadow-[inset_0_0_100px_rgba(0,0,0,0.5)]">
       <div className="absolute inset-0 lab-grid opacity-[0.04] pointer-events-none mix-blend-overlay" />
       {/* Animated glowing orbs for depth */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent-teal/10 rounded-full blur-[120px] -translate-y-1/3 translate-x-1/3 animate-[pulse_6s_ease-in-out_infinite]" />

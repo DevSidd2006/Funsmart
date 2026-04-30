@@ -5,22 +5,28 @@ import { ChevronLeft, ChevronRight, Quote } from 'lucide-react'
 
 const defaultTestimonials = [
   {
-    quote: "I came expecting a progress report like school. What I got was a conversation about how my daughter spends 10 minutes examining something before she ever tries to use it. That's not something any school has ever told me.",
+    quote: "At first he kept asking for help every few minutes. Slowly he started retrying on his own.",
     author: "Priya M.",
     role: "Parent · Thinking Reset Workshop",
     initial: "PM",
   },
   {
-    quote: "My son has been 'easily distracted' according to every teacher he's had. The team showed me he isn't distracted — he loses interest when the challenge isn't deep enough. That reframe changed everything.",
+    quote: "She came home and started opening old toys just to understand how they worked.",
     author: "Arvind M.",
     role: "Parent · Thinking Lab Year-Long",
     initial: "AM",
   },
   {
-    quote: "She built a working model on Day 4 and then quietly started dismantling it to see if she could build it differently. Nobody asked her to. That moment told me more than three years of school report cards.",
+    quote: "I realised I was giving instructions too quickly before letting her think.",
     author: "Sunita R.",
     role: "Parent · Thinking Reset Workshop",
     initial: "SR",
+  },
+  {
+    quote: "He now tries multiple ideas before saying ‘I can’t do it.’",
+    author: "Rahul S.",
+    role: "Parent · STEM Challenge",
+    initial: "RS",
   },
 ]
 

@@ -46,7 +46,7 @@ export default function AboutPage() {
       </section>
 
       {/* The Belief */}
-      <section className="py-24 bg-white relative z-20">
+      <section className="py-16 bg-white relative z-20">
         <div className="container-fluid max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-center text-[#1E2A44] mb-16">
             Three Things We Believe.
@@ -66,7 +66,7 @@ export default function AboutPage() {
       </section>
 
       {/* Why We Built This */}
-      <section className="py-24 bg-[#FAF9F6] relative">
+      <section className="py-16 bg-[#FAF9F6] relative">
         <div className="container-fluid max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-12">
             Why We Built This Environment
@@ -113,7 +113,7 @@ export default function AboutPage() {
       <RealSessionMoments />
 
       {/* Philosophy */}
-      <section className="py-32 bg-[#1E2A44] text-white text-center">
+      <section className="py-20 bg-[#1E2A44] text-white text-center">
         <div className="container-fluid max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-8 leading-tight">
             Marks show outcomes. <br className="hidden md:block" />
@@ -128,7 +128,7 @@ export default function AboutPage() {
       <OurTeam />
 
       {/* Final CTA */}
-      <section className="py-32 bg-white text-center">
+      <section className="py-20 bg-white text-center">
         <div className="container-fluid max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-8 leading-tight">
             See The Environment <span className="text-accent-teal italic font-light">yourself</span>

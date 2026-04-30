@@ -13,7 +13,7 @@ export function ThinkingReset() {
   ]
 
   return (
-    <section id="workshop" className="py-24 bg-white overflow-hidden relative">
+    <section id="workshop" className="py-16 bg-white overflow-hidden relative">
       <div className="container-fluid">
         <div className="bg-[#FAF9F6] rounded-[3rem] border border-neutral-100 overflow-hidden shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
@@ -51,17 +51,18 @@ export function ThinkingReset() {
                     Schedule a Visit
                   </Button>
                 </Link>
-                <JoinCommunity />
+                <JoinCommunity variant="solid" />
               </div>
             </div>
 
-            <div className="relative min-h-[400px] lg:min-h-full">
+            <div className="relative min-h-[400px] lg:min-h-full bg-neutral-100">
               <Image 
-                src="https://images.unsplash.com/photo-1596495577886-d920f21e8bc8?q=80&w=1200"
-                alt="Thinking Reset Workshop"
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200"
+                alt="Children participating in a STEM workshop"
                 fill
-                className="object-cover"
+                className="object-cover transition-opacity duration-500"
               />
+
               <div className="absolute inset-0 bg-gradient-to-r from-[#FAF9F6] via-transparent to-transparent hidden lg:block" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#FAF9F6] via-transparent to-transparent lg:hidden" />
             </div>

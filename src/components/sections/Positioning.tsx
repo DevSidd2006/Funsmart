@@ -17,7 +17,7 @@ export function Positioning() {
 
             <ul className="space-y-8">
               {[
-                { title: 'Observe, don\'t rank', desc: 'We focus on cognitive processes, not right or wrong answers.' },
+                { title: 'Observe, don\'t rank', desc: 'We focus on the thinking process, not right or wrong answers.' },
                 { title: 'Real problems, no scripts', desc: 'Kids face unfamiliar challenges that reveal their natural habits.' },
                 { title: 'Insights parents need', desc: 'Receive detailed observation reports that decoded your child\'s approach.' },
               ].map((item) => (

@@ -29,16 +29,17 @@ export const metadata: Metadata = {
     template: '%s | FunSmartism',
   },
   description:
-    'Inspired by how scientists solve problems, our RoboSTEM activities help parents understand how their child thinks, retries, and solves challenges.',
+    'A hands-on RoboSTEM thinking lab where children build projects, solve unfamiliar challenges, and learn through real-world experimentation.',
   keywords: [
     'thinking lab',
     'child observation',
-    'scientist-inspired thinking',
-    'future-ready skills',
     'RoboSTEM',
     'robotics for kids',
+    'hands-on learning',
+    'experimentation',
     'Pune',
   ],
+
   authors: [{ name: 'FunSmartism' }],
   icons: {
     icon: [
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'FunSmartism Intelligence Center',
-    description: "Inspired by how scientists solve problems, our RoboSTEM activities help parents understand how their child thinks, retries, and solves challenges.",
+    description: "A hands-on RoboSTEM thinking lab where children build projects, solve unfamiliar challenges, and learn through real-world experimentation.",
     url: siteUrl,
     siteName: 'FunSmartism Intelligence Center',
     images: [
@@ -66,7 +67,8 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'FunSmartism Intelligence Center',
-    description: "Inspired by how scientists solve problems, our RoboSTEM activities help parents understand how their child thinks, retries, and solves challenges.",
+    description: "A hands-on RoboSTEM thinking lab where children build projects, solve unfamiliar challenges, and learn through real-world experimentation.",
+
     images: ['/og-image.png'],
   },
   robots: {

@@ -19,8 +19,9 @@ export default function BlogsPage() {
               <span className="text-accent-teal italic font-light">Insights.</span>
             </h1>
             <p className="text-xl md:text-2xl text-neutral-500 leading-relaxed max-w-2xl font-light">
-              Deep dives into child development, mental models, and the future of educational patterns for curious parents.
+              Deep dives into child development, thinking habits, and the future of educational patterns for curious parents.
             </p>
+
           </div>
         </div>
       </section>
@@ -34,11 +35,12 @@ export default function BlogsPage() {
             <div className="lg:col-span-3 space-y-10">
                <div className="space-y-4">
                  <ul className="space-y-4 border-l border-neutral-100 pl-6">
-                    {['Child Development', 'Mental Models', 'STEM Future', 'Parent Stories', 'Lab Insights'].map((cat) => (
+                    {['Child Development', 'Thinking Habits', 'STEM Future', 'Parent Stories', 'Lab Insights'].map((cat) => (
                       <li key={cat} className="group">
                         <a href="#" className="font-medium text-neutral-500 hover:text-accent-teal transition-colors uppercase text-xs tracking-widest">{cat}</a>
                       </li>
                     ))}
+
                  </ul>
                </div>
                
