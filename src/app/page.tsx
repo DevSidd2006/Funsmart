@@ -50,13 +50,14 @@ export default function HomePage() {
       <ThinkingReset />
 
       {/* Section 11 — PARENT VOICES */}
-      <TestimonialsSlider data={testimonials.filter((t) => ['5', '6', '7'].includes(t.id))} />
+      <TestimonialsSlider data={testimonials} />
 
       {/* Section 12 — CLOSING CTA */}
-      <FinalCTA />
+      <FinalCTA data={{
+        subheadline: "Real-world learning experiences shape confidence, curiosity, and independent problem-solving — not rote learning."
+      }} />
 
-      {/* Lab Gallery Section */}
-      <LabGallery items={galleryItems} />
+
     </main>
   )
 }

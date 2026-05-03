@@ -7,17 +7,17 @@ const moments = [
   {
     shortTitle: "Observe Before Acting",
     title: "A 10-year-old was given a gear system she had never seen before.",
-    text: "For several minutes, she did not touch anything. She observed quietly. Tilted the structure. Looked from different angles. Watched how the gears connected before making a move. When she finally interacted with it, her first action was to slowly test the largest gear before changing anything else. Her parent had earlier described her as “slow to start.” Inside the session, we saw something different: careful observation before action.",
+    text: "While others immediately started turning parts randomly, she spent several minutes quietly observing how the pieces connected. Only after understanding the structure did she begin testing it. Her parent had earlier described her as “slow to start.” Inside the session, we saw something different: careful observation before action.",
   },
   {
     shortTitle: "Retry After Failure",
     title: "A 12-year-old working on a STEM structure failed multiple times while testing his design.",
-    text: "The fourth attempt failed too. He paused quietly for a while, looked at the materials again, and then started building in a completely different way. Not a small adjustment. A genuinely different approach. Nobody instructed him to do that.",
+    text: "After another failed attempt, he paused for a while, looked at the materials again, and then started rebuilding using a completely different approach. Nobody asked him to restart. He decided to test a new idea on his own.",
   },
   {
-    shortTitle: "Confident Expert Interaction",
-    title: "During one of FunSmartism’s edu-events, a 14-year-old student presented her working model to a visiting researcher.",
-    text: "She explained how the system worked, why certain design decisions were made, and what problems she faced during testing. Then she asked the researcher a question back. Her mother later said: “I’ve never seen her speak to an adult with this much confidence before.”",
+    shortTitle: "Asking Better Questions",
+    title: "During a scientist interaction session, one student quietly listened for almost the entire discussion.",
+    text: "Near the end, she raised her hand and asked a question connecting the session topic to something she had previously built during a workshop. Her parent later mentioned: “Usually she hesitates to speak in front of new people.” Moments like these often appear gradually — through repeated opportunities to build, discuss, explore, and participate actively.",
   },
 ]
 
@@ -34,10 +34,10 @@ export function RealSessionMoments() {
       <div className="container-fluid">
         <div className="max-w-4xl mx-auto text-center mb-14">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#1E2A44] leading-tight mb-6">
-            Three Moments from Real Sessions
+            Moments from Real Sessions
           </h2>
           <p className="text-lg md:text-xl text-neutral-600 font-light italic max-w-2xl mx-auto">
-            These are the kinds of moments that happen regularly inside workshops, STEM challenges, and year-long sessions — moments that often reveal sides of children parents rarely get to see in traditional learning environments.
+            These are the kinds of moments that happen regularly inside workshops, STEM challenges, and year-long sessions — moments that often reveal sides of children parents rarely get to see during traditional learning routines.
           </p>
         </div>
 

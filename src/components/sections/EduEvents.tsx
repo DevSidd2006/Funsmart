@@ -1,9 +1,10 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { Grid, Settings, Users, MessageSquare } from 'lucide-react'
 
 export function EduEvents() {
   const people = ['Scientists', 'Researchers', 'Innovators', 'Engineers', 'Startup Founders', 'Industry Experts']
-  const orgs = ['ISRO', 'DRDO', 'Indian Institute of Tropical Meteorology', 'IMD', 'IISER', 'and other innovation ecosystems']
+  const orgs = ['ISRO', 'DRDO', 'NIV', 'IMD', 'IISER', 'and other innovation ecosystems']
 
   const opportunities = [
     { label: 'Interact directly with experts', icon: MessageSquare },
@@ -37,17 +38,35 @@ export function EduEvents() {
             ))}
           </div>
 
-          <p className="text-lg text-[#B7E3DD] leading-relaxed font-light mb-6">
-            Guests may include experts associated with organisations such as:
-          </p>
+          <div className="flex flex-col md:flex-row gap-12 items-start mb-24">
+            <div className="flex-1">
+              <p className="text-lg text-[#B7E3DD] leading-relaxed font-light mb-6">
+                Guests may include experts associated with organisations such as:
+              </p>
 
-          <div className="flex flex-wrap gap-x-6 gap-y-3 mb-24 max-w-3xl">
-            {orgs.map((org, i) => (
-              <div key={i} className="flex items-center gap-3">
-                <div className="w-1.5 h-1.5 rounded-full bg-accent-teal opacity-60" />
-                <span className="text-white/80 font-medium italic">{org}</span>
+              <div className="flex flex-wrap gap-x-6 gap-y-3">
+                {orgs.map((org, i) => (
+                  <div key={i} className="flex items-center gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-accent-teal opacity-60" />
+                    <span className="text-white/80 font-medium italic">{org}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            
+            <div className="w-full md:w-80 relative aspect-[4/3] rounded-3xl overflow-hidden group shadow-2xl border border-white/10">
+              <Image 
+                src="/images/iterative-thinking.png" 
+                alt="Scientist interaction at FunSmartism" 
+                fill 
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <Link href="/gallery" className="absolute inset-0 bg-primary-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                <span className="bg-white/90 px-4 py-2 rounded-full text-[10px] font-bold text-primary-500 uppercase tracking-widest">
+                  View More Moments →
+                </span>
+              </Link>
+            </div>
           </div>
         </div>
 

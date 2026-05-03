@@ -27,7 +27,7 @@ export function SessionStructure() {
           {/* Text Content */}
           <div className="lg:col-span-5">
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 leading-tight mb-8">
-              Structured Like a Lab. <br />
+              Structured Like a Workshop. <br />
               <span className="text-accent-teal italic font-light">Not a Tuition Class.</span>
             </h2>
             <p className="text-lg text-neutral-600 leading-relaxed mb-6 font-medium">

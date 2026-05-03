@@ -100,7 +100,7 @@ export default function AboutPage() {
               <div className="flex flex-col md:flex-row justify-center gap-4 text-sm font-bold uppercase tracking-widest text-neutral-400">
                 <span>Not as a tuition class</span>
                 <span className="hidden md:block opacity-30">·</span>
-                <span>Not as a robotics coaching center</span>
+                <span>Not just common Robotics class</span>
               </div>
               <p className="text-primary-500 font-bold text-2xl font-serif">
                 But as a hands-on RoboSTEM thinking lab where children actively participate in learning through experimentation, projects, challenges, and real-world exploration.
