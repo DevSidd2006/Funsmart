@@ -1,137 +1,131 @@
-import Image from 'next/image'
+import { Eye, Beaker, Lightbulb, FlaskConical, Compass, Brain, Sparkles, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
-import { ArrowRight, Clock, Users, Brain, Milestone } from 'lucide-react'
-import { Button } from '../ui/Button'
+
+const iconMap: Record<string, any> = {
+  eye: Eye,
+  beaker: Beaker,
+  lightbulb: Lightbulb,
+  brain: Brain
+}
+
+const defaultSteps = [
+  {
+    icon: Eye,
+    step: '01',
+    eyebrow: 'For Parents',
+    title: 'Free Parent Orientation',
+    description: 'Come in. Meet the team. See the FunSmartism RoboSTEM Thinking Lab. Ask everything.',
+    bullets: ['30–45 minutes', 'No commitment required', 'On-site at Bibwewadi, Pune'],
+    cta: null,
+  },
+  {
+    icon: Beaker,
+    step: '02',
+    eyebrow: 'For Your Child',
+    title: '10-Day Thinking Reset Workshop',
+    description: 'Ten days. Ten themes. Real materials, real builds, scientist-style problem-solving — observed.',
+    bullets: ['Daily challenges across 10 STEM themes', 'No step-by-step instructions', 'Most projects go home'],
+    cta: { href: '/programs#workshop', label: 'Learn about the Workshop' },
+  },
+  {
+    icon: Lightbulb,
+    step: '03',
+    eyebrow: 'Year-Long Program',
+    title: 'RoboSTEM Thinking Lab',
+    description: 'One theme per month. One session per week. Deep projects, thinking observations, and parent guidance.',
+    bullets: ['Priority access to scientist interactions', 'Monthly thinking reports', 'Home guidance for parents'],
+    cta: { href: '/programs#year-long', label: 'Explore the Year-Long Lab' },
+  },
+]
 
 export function HowItWorks({ data }: { data?: any }) {
-  const title = data?.title || "The FunSmartism Journey"
-  const intro = data?.intro || "A 3-step pathway to unlearn rote methods and build sustainable logic."
-  
-  const steps = [
-    {
-      stepNumber: 'Step 1 — For parents',
-      title: 'Parent orientation.',
-      description: 'Come in. Meet us. See how FunSmartism RoboSTEM Thinking Lab works. Ask everything.',
-      details: '30–45 min · Free · No commitment',
-      icon: <Users className="w-6 h-6" />,
-      color: "bg-blue-50 text-blue-600",
-      image: null
-    },
-    {
-      stepNumber: 'Step 2 — For your child',
-      title: '10-Day Thinking Reset Workshop.',
-      description: '10 days. 10 themes. 10 different challenges. Real materials. Children build, test, and solve while we observe real problem-solving. Observation note for parents included.',
-      subtext: 'Children engage in foundational problem-solving tasks to unlearn standard rote methods.',
-      icon: <Brain className="w-6 h-6" />,
-      color: "bg-teal-50 text-teal-600",
-      image: null
-    },
-    {
-      stepNumber: 'Step 3 — The year-long program',
-      title: 'FunSmartism RoboSTEM Thinking Lab — Year-Long.',
-      description: 'One theme per month. Weekly sessions. Real projects, thinking observations, scientist interactions, and monthly parent guidance for home.',
-      subtext: 'Building sustainable logic. Where thinking habits become visible over time.',
-      icon: <Milestone className="w-6 h-6" />,
-      color: "bg-amber-50 text-amber-600",
-      image: null
-    }
-  ]
+  const title = data?.title || 'Three steps to a thinking child.'
+  const displaySteps = data?.steps?.length > 0 
+    ? data.steps.map((s: any) => ({
+        ...s,
+        icon: iconMap[s.icon] || Lightbulb
+      }))
+    : defaultSteps
 
   return (
-    <section className="py-24 bg-accent-surface overflow-hidden" id="journey">
-      <div className="container-fluid">
-        <div className="max-w-4xl mx-auto text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight mb-4">
+    <section className="section-spacing bg-accent-surface relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute top-[10%] left-[5%] text-accent-teal/5 animate-float hidden lg:block">
+        <FlaskConical size={120} strokeWidth={0.5} />
+      </div>
+      <div className="absolute bottom-[20%] right-[3%] text-primary-500/5 animate-float-delayed hidden lg:block">
+        <Compass size={160} strokeWidth={0.5} />
+      </div>
+      <div className="absolute top-[20%] right-[10%] text-accent-gold/10 animate-float-slow hidden lg:block">
+        <Sparkles size={90} strokeWidth={0.5} />
+      </div>
+
+      <div className="container-fluid relative z-10">
+        <div className="max-w-4xl mx-auto text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight mb-6">
             {title}
           </h2>
-          <p className="text-lg text-neutral-600">{intro}</p>
+          <p className="text-lg text-neutral-500 max-w-2xl mx-auto">
+            Every child's journey follows the same path — from a parent's first visit to a year of deep discovery.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto relative">
-          {/* Desktop connecting line */}
-          <div className="hidden md:block absolute top-[120px] left-[15%] right-[15%] h-0.5 bg-neutral-200 -z-0" />
-          
-          {steps.map((step: any, idx: number) => {
-            return (
-              <div key={idx} className="flex flex-col relative z-10 group">
-                {/* Step Marker */}
-                <div className="flex justify-center mb-8">
-                  <div className={`w-16 h-16 rounded-2xl ${step.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-500 bg-white`}>
-                    {step.icon}
-                  </div>
-                </div>
+        {/* Steps */}
+        <div className="relative">
+          {/* Connector line on desktop */}
+          <div className="hidden lg:block absolute top-10 left-[16.66%] right-[16.66%] h-px bg-gradient-to-r from-transparent via-accent-teal/30 to-transparent z-0" />
 
-                {/* Card */}
-                <div className="bg-white rounded-[32px] overflow-hidden shadow-huge border border-neutral-100 flex flex-col flex-grow transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2">
-                  {step.image && (
-                    <div className="relative aspect-[16/9] overflow-hidden">
-                      <Image 
-                        src={step.image} 
-                        alt={step.title} 
-                        fill 
-                        className="object-cover transition-transform duration-1000 group-hover:scale-110"
-                      />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+            {displaySteps.map((step: any, idx: number) => {
+              const Icon = step.icon
+              return (
+                <div
+                  key={step.title || idx}
+                  className="relative z-10 bg-white rounded-xl border border-neutral-100 p-8 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-400 group flex flex-col"
+                >
+                  {/* Step number badge */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-14 h-14 rounded-full bg-accent-teal/10 flex items-center justify-center group-hover:bg-accent-teal transition-all duration-400">
+                      <Icon size={24} className="text-accent-teal group-hover:text-white transition-colors duration-400" />
                     </div>
+                    <span className="text-5xl font-serif font-bold text-primary-100 select-none">
+                      {step.step || `0${idx + 1}`}
+                    </span>
+                  </div>
+
+                  <h3 className="text-xl font-serif font-bold text-primary-500 mb-3 leading-snug">
+                    {step.title}
+                  </h3>
+                  <p className="text-neutral-500 text-sm leading-relaxed mb-5">
+                    {step.description}
+                  </p>
+
+                  {step.bullets && (
+                    <ul className="space-y-2 mb-6 flex-grow">
+                      {step.bullets.map((b: string, bi: number) => (
+                        <li key={bi} className="flex items-start gap-2 text-sm text-neutral-600">
+                          <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent-teal flex-shrink-0" />
+                          {b}
+                        </li>
+                      ))}
+                    </ul>
                   )}
-                  
-                  <div className="p-8 flex-grow flex flex-col">
-                    <div className="text-xs font-bold uppercase tracking-widest text-primary-400 mb-4">
-                      {step.stepNumber}
-                    </div>
-                    <h3 className="text-lg md:text-xl font-serif font-bold text-primary-500 mb-4 leading-snug">
-                      {step.title}
-                    </h3>
-                    <p className="text-neutral-600 text-base leading-relaxed mb-6">
-                      {step.description}
-                    </p>
-                    
-                    {step.details && (
-                      <div className="flex items-center gap-2 text-sm font-semibold text-primary-500 bg-primary-50 px-3 py-2 rounded-lg self-start mb-6">
-                        <Clock className="w-4 h-4" />
-                        {step.details}
-                      </div>
-                    )}
 
-                    {step.subtext && (
-                      <p className="text-sm italic text-neutral-500 mt-auto pt-4 border-t border-neutral-100">
-                        {step.subtext}
-                      </p>
-                    )}
-                  </div>
+                  {step.cta && (
+                    <Link
+                      href={step.cta.href}
+                      className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-accent-teal hover:gap-3 transition-all duration-300"
+                    >
+                      {step.cta.label}
+                      <ArrowRight size={15} />
+                    </Link>
+                  )}
                 </div>
-              </div>
-            )
-          })}
-        </div>
-
-        {/* CTA Strip */}
-        <div className="mt-24 max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center bg-[#1E2A44] rounded-[40px] p-8 md:p-12 shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-accent-teal/10 rounded-full blur-3xl -mr-32 -mt-32" />
-            <div className="relative z-10">
-              <p className="text-white font-bold text-xl mb-6">Want to explore the full structure first?</p>
-              <Link href="/programs">
-                <span className="inline-flex items-center gap-2 text-accent-teal font-bold hover:gap-4 transition-all duration-300 text-lg cursor-pointer">
-                  See all program details <ArrowRight size={20} />
-                </span>
-              </Link>
-            </div>
-            <div className="relative z-10 border-t lg:border-t-0 lg:border-l border-white/10 pt-8 lg:pt-0 lg:pl-12">
-              <p className="text-white/80 mb-6 text-lg">Not sure which path fits your child? Schedule a visit once and we’ll guide you</p>
-              <Link href="/schedule-visit">
-                <Button size="lg" className="bg-accent-teal hover:bg-[#28A392] text-white rounded-full font-bold w-full sm:w-auto">
-                  Schedule a visit →
-                </Button>
-              </Link>
-              <p className="text-white/40 text-xs mt-4 font-mono uppercase tracking-widest">
-                Free · 30–45 minutes · WhatsApp confirmation within 2 hours
-              </p>
-            </div>
+              )
+            })}
           </div>
         </div>
       </div>
     </section>
   )
 }
-
-

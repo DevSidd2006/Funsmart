@@ -22,7 +22,7 @@ export function LabGallery({ items }: { items: any[] }) {
               Real moments from <br /><span className="text-accent-teal italic font-light">our lab.</span>
             </h2>
             <p className="text-lg text-neutral-600 leading-relaxed">
-              Every session reveals a different way of approaching the unknown. Here is a glimpse into the process of discovery from our Thinking Lab.
+              Every session reveals how children build, test, and solve unfamiliar challenges. Here is a glimpse into the process of discovery inside our RoboSTEM Thinking Lab.
             </p>
           </div>
           <Link href="/gallery" className="group flex items-center gap-3 text-accent-teal font-bold uppercase text-xs tracking-widest hover:gap-5 transition-all">
@@ -67,16 +67,17 @@ export function LabGallery({ items }: { items: any[] }) {
                  </p>
               </div>
 
-              {/* Subtle persistent label for the 'Spark' image (i===2) as seen in user request */}
+              {/* Subtle persistent label for the 'Spark' image (i===2) */}
               {i === 2 && (
                 <div className="absolute bottom-8 left-8 z-10 group-hover:opacity-0 transition-opacity duration-300">
-                  <div className="text-[8px] font-mono font-bold text-accent-teal/60 tracking-[0.4em] uppercase mb-1">COGNITIVE REVELATION</div>
+                  <div className="text-[8px] font-mono font-bold text-accent-teal/60 tracking-[0.4em] uppercase mb-1">TEAM CHALLENGE</div>
                   <div className="text-sm font-serif font-bold text-white/80">The Spark of Curiosity</div>
                 </div>
               )}
             </div>
           ))}
         </div>
+
       </div>
     </section>
   )

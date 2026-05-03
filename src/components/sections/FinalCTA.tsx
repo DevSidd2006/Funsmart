@@ -3,8 +3,8 @@ import Link from 'next/link'
 
 export function FinalCTA({ data }: { data?: any }) {
   const headline = data?.headline || "Marks show outcomes."
-  const subheadline = data?.subheadline || "Thinking habits shape futures."
-  const description = data?.description || "Come experience how independent problem-solving looks in real RoboSTEM action."
+  const subheadline = data?.subheadline || "Real-world learning experiences shape confidence, curiosity, and independent problem-solving."
+  const description = data?.description || "Experience how children build, test, and solve unfamiliar challenges in person."
 
   return (
     <section className="py-24 md:py-32 bg-[#1E2A44] text-white relative overflow-hidden">

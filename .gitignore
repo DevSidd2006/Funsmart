@@ -17,3 +17,4 @@ dist/
 coverage/
 graphify-out/
 revised_copy/
+.claude/

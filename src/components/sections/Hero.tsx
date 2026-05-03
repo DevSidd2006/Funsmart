@@ -5,10 +5,8 @@ import { JoinCommunity } from '../ui/JoinCommunity'
 import Link from 'next/link'
 
 export function Hero({ data }: { data?: any }) {
-  const headline = data?.headline || "Where children build scientist-inspired future-ready thinking."
-  const subheadline = data?.subheadline || "And parents learn when to step in—and when to step back."
-  const subline = data?.subline || "Hands-on RoboSTEM challenges and scientist interaction sessions help children grow confidence beyond marks, while our live observations help parents support thinking without over-helping."
-  const microCopy = "For children aged 8–16 in Pune. Not a tuition class. Not a coaching. Scientist-inspired problem-solving with real parent guidance."
+  const headline = "Beyond Rote Learning. Beyond Marks."
+  const subline = "A hands-on RoboSTEM thinking lab where children build projects, solve unfamiliar challenges, interact with scientists and innovators, and learn through real-world experimentation."
 
   const heroImage = "/images/hero-scientist.png"
 
@@ -29,34 +27,36 @@ export function Hero({ data }: { data?: any }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           {/* Left: Text Content */}
           <div className="lg:col-span-7">
-            <h1 className="text-3xl md:text-4xl lg:text-6xl font-serif font-bold text-white mb-6 leading-[1.05] text-balanced">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-8 leading-[1.05] text-balanced">
                {headline}
-              <span className="block text-xl md:text-xl lg:text-2xl text-accent-teal mt-4 opacity-95 font-medium italic">
-                 {subheadline}
-               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-[#B7E3DD] mb-10 max-w-2xl leading-relaxed font-light opacity-90">
+            <p className="text-lg md:text-2xl text-[#B7E3DD] mb-12 max-w-2xl leading-relaxed font-light opacity-90">
               {subline}
             </p>
             
-            <p className="text-sm md:text-base text-white/60 mb-12 max-w-xl italic border-l-2 border-accent-teal/30 pl-6 py-2">
-              {microCopy}
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-6 items-center">
-              <Link href="/schedule-visit" className="w-full sm:w-auto">
-                <Button
-                  size="lg"
-                  className="px-12 py-6 shadow-2xl shadow-accent-teal/20 bg-accent-teal hover:bg-[#28A392] text-white border-none w-full rounded-full font-bold"
-                >
-                  Schedule a visit →
-                </Button>
-              </Link>
-              <JoinCommunity />
+            <div className="flex flex-col gap-6 w-full max-w-xl">
+              <div className="flex flex-col gap-3">
+                <Link href="/schedule-visit" className="w-full">
+                  <Button
+                    size="lg"
+                    className="px-12 py-6 shadow-2xl shadow-accent-teal/20 bg-accent-teal hover:bg-[#28A392] text-white border-none w-full rounded-xl font-bold text-lg"
+                  >
+                    Schedule a Visit →
+                  </Button>
+                </Link>
+                <p className="text-sm text-white/60 leading-relaxed pl-2 border-l-2 border-accent-teal/30">
+                  Visit the lab, understand the learning approach, explore current themes, and discover which program fits your child best.
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-3 mt-4">
+                <JoinCommunity />
+                <p className="text-sm text-white/60 leading-relaxed pl-2 border-l-2 border-white/20">
+                  Get updates about STEM challenges, workshops, edu-events, and upcoming sessions before deciding long-term.
+                </p>
+              </div>
             </div>
-
-
           </div>
 
           {/* Right: Asymmetrical Image Container */}
