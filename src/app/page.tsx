@@ -7,11 +7,10 @@ import { ObservationUSP } from '../components/sections/ObservationUSP'
 import { ProgramsSlider } from '../components/sections/ProgramsSlider'
 import { Outcomes } from '../components/sections/Outcomes'
 import { OneDayChallenge } from '../components/sections/OneDayChallenge'
-
 import { TestimonialsSlider } from '../components/sections/TestimonialsSlider'
 import { FinalCTA } from '../components/sections/FinalCTA'
-import { LabGallery } from '../components/sections/LabGallery'
 import { ThinkingReset } from '../components/sections/ThinkingReset'
+import { GalleryTeaser } from '../components/sections/GalleryTeaser'
 
 import { testimonials } from '../data/testimonials'
 import { galleryItems } from '../data/gallery'
@@ -50,16 +49,13 @@ export default function HomePage() {
       <ThinkingReset />
 
       {/* Section 11 — PARENT VOICES */}
-      <TestimonialsSlider data={testimonials} />
+      <TestimonialsSlider data={testimonials.filter((t) => ['5', '6', '7'].includes(t.id))} />
 
       {/* Section 12 — CLOSING CTA */}
-      <FinalCTA data={{
-        subheadline: "Real-world learning experiences shape confidence, curiosity, and independent problem-solving — not rote learning."
-      }} />
+      <FinalCTA />
 
-
+      {/* Section 13 — GALLERY TEASER */}
+      <GalleryTeaser items={galleryItems} />
     </main>
   )
 }
-
-

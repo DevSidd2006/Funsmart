@@ -5,6 +5,8 @@ import { OurTeam } from '@/components/sections/OurTeam'
 import { RealSessionMoments } from '@/components/sections/RealSessionMoments'
 import { ChevronDown } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
+import { galleryItems } from '@/data/gallery'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fursmartism.vercel.app'
 
@@ -117,7 +119,7 @@ export default function AboutPage() {
         <div className="container-fluid max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-8 leading-tight">
             Marks show outcomes. <br className="hidden md:block" />
-            <span className="text-accent-teal">Real-world learning experiences shape confidence, curiosity, and independent problem-solving.</span>
+            <span className="text-accent-teal">Real-world learning experiences shape confidence, curiosity, and independent problem-solving — not rote learning.</span>
           </h2>
           <p className="text-xl text-neutral-300 leading-relaxed font-light max-w-2xl mx-auto">
             We are not against exams, academics, or results. We simply believe children also need environments where they can actively participate in learning instead of only following instructions.
@@ -125,7 +127,38 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <OurTeam />
+      {/* Gallery Thumbnails Teaser */}
+      <section className="py-20 bg-[#FAF9F6]">
+        <div className="container-fluid">
+          <div className="flex flex-col md:flex-row items-end justify-between gap-6 mb-10">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 leading-tight">
+              Real moments from <span className="text-accent-teal italic font-light">our lab.</span>
+            </h2>
+            <Link href="/gallery" className="group inline-flex items-center gap-2 text-accent-teal font-bold uppercase text-xs tracking-widest hover:gap-4 transition-all whitespace-nowrap">
+              View Full Gallery →
+            </Link>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+            {galleryItems.slice(0, 8).map((item, i) => (
+              <Link
+                key={item.id}
+                href="/gallery"
+                className="group relative aspect-square rounded-2xl overflow-hidden border border-neutral-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              >
+                <Image
+                  src={item.image as string}
+                  alt={item.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary-900/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                  <span className="text-white text-xs font-serif font-bold leading-snug">{item.title}</span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Final CTA */}
       <section className="py-20 bg-white text-center">

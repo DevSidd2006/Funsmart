@@ -14,6 +14,7 @@ const navLinks = [
   { name: 'About', href: '/about' },
   { name: 'Programs', href: '/programs' },
   { name: 'Gallery', href: '/gallery' },
+  { name: 'Schedule a Visit', href: '/schedule-visit' },
 ]
 
 export function Navbar() {
@@ -90,19 +91,7 @@ export function Navbar() {
           </div>
           
           <div className="flex items-center gap-4 border-l border-neutral-200/20 pl-8">
-            <Link href="/schedule-visit">
-              <Button 
-                size="sm" 
-                className={cn(
-                  "px-8 rounded-full font-bold transition-all duration-500 shadow-lg",
-                  useLightText 
-                    ? "bg-white text-primary-500 hover:bg-accent-teal hover:text-white shadow-white/10" 
-                    : "bg-accent-teal text-white hover:bg-primary-500 shadow-accent-teal/20"
-                )}
-              >
-                Schedule a Visit
-              </Button>
-            </Link>
+            <JoinCommunity variant="solid" />
           </div>
         </div>
 
@@ -141,11 +130,6 @@ export function Navbar() {
             </Link>
           ))}
           <div className="h-px bg-neutral-100 my-2" />
-          <Link href="/schedule-visit" onClick={() => setIsOpen(false)}>
-            <Button className="w-full py-6 rounded-2xl bg-accent-teal text-white text-lg">
-              Schedule a Visit →
-            </Button>
-          </Link>
           <JoinCommunity variant="solid" className="w-full py-5 rounded-2xl text-base" />
         </div>
       </div>

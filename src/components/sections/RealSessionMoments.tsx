@@ -7,7 +7,7 @@ const moments = [
   {
     shortTitle: "Observe Before Acting",
     title: "A 10-year-old was given a gear system she had never seen before.",
-    text: "While others immediately started turning parts randomly, she spent several minutes quietly observing how the pieces connected. Only after understanding the structure did she begin testing it. Her parent had earlier described her as “slow to start.” Inside the session, we saw something different: careful observation before action.",
+    text: "While others immediately started turning parts randomly, she spent several minutes quietly observing how the pieces connected. Only after understanding the structure did she begin testing it. Her parent had earlier described her as \"slow to start.\" Inside the session, we saw something different: careful observation before action.",
   },
   {
     shortTitle: "Retry After Failure",
@@ -17,7 +17,7 @@ const moments = [
   {
     shortTitle: "Asking Better Questions",
     title: "During a scientist interaction session, one student quietly listened for almost the entire discussion.",
-    text: "Near the end, she raised her hand and asked a question connecting the session topic to something she had previously built during a workshop. Her parent later mentioned: “Usually she hesitates to speak in front of new people.” Moments like these often appear gradually — through repeated opportunities to build, discuss, explore, and participate actively.",
+    text: "Near the end, she raised her hand and asked a question connecting the session topic to something she had previously built during a workshop. Her parent later mentioned: \"Usually she hesitates to speak in front of new people.\" Moments like these often appear gradually — through repeated opportunities to build, discuss, explore, and participate actively.",
   },
 ]
 

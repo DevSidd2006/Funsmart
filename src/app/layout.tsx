@@ -99,7 +99,7 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#1E2A44" />
       </head>
-      <body className="antialiased bg-accent-surface text-[#1A1A1A] font-sans selection:bg-[#2FB5A3]/10 selection:text-[#1E2A44]">
+      <body suppressHydrationWarning className="antialiased bg-accent-surface text-[#1A1A1A] font-sans selection:bg-[#2FB5A3]/10 selection:text-[#1E2A44]">
         <NavbarWrapper />
 
         <main className="min-h-screen">
