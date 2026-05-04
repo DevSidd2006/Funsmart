@@ -54,5 +54,5 @@ export interface GalleryItem {
   title: string
   caption: string
   tag: string
-  span: string
+  span?: string
 }
