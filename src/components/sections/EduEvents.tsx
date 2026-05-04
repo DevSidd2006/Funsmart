@@ -21,7 +21,7 @@ export function EduEvents() {
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-600/30 rounded-full blur-[150px] translate-y-1/3 -translate-x-1/4" />
       
       <div className="container-fluid relative z-10">
-        <div className="max-w-5xl mb-20">
+        <div className="max-w-7xl mx-auto mb-20 text-center flex flex-col items-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-8 leading-[1.1] tracking-tight">
             Children Don’t Just Learn Concepts. <br />
             <span className="text-accent-teal italic font-light opacity-90">They Interact with actual experts, people Building The Future.</span>
@@ -30,7 +30,7 @@ export function EduEvents() {
             Throughout the academic year, FunSmartism hosts special edu-events where students interact with:
           </p>
 
-          <div className="flex flex-wrap gap-4 mb-16">
+          <div className="flex flex-wrap justify-center gap-4 mb-16">
             {people.map((person, i) => (
               <span key={i} className="px-6 py-3 bg-white/5 border border-white/10 rounded-full text-white/90 text-sm font-medium tracking-wide">
                 {person}
@@ -38,13 +38,12 @@ export function EduEvents() {
             ))}
           </div>
 
-          <div className="flex flex-col md:flex-row gap-12 items-start mb-24">
-            <div className="flex-1">
-              <p className="text-lg text-[#B7E3DD] leading-relaxed font-light mb-6">
+          <div className="flex flex-col items-center mb-24 w-full">
+            <div className="max-w-2xl mb-12">
+              <p className="text-lg text-[#B7E3DD] leading-relaxed font-light mb-8">
                 Guests may include experts associated with organisations such as:
               </p>
-
-              <div className="flex flex-wrap gap-x-6 gap-y-3">
+              <div className="flex flex-wrap justify-center gap-x-6 gap-y-3">
                 {orgs.map((org, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-accent-teal opacity-60" />
@@ -54,23 +53,34 @@ export function EduEvents() {
               </div>
             </div>
             
-            <div className="w-full md:w-80 relative aspect-[4/3] rounded-3xl overflow-hidden group shadow-2xl border border-white/10">
-              <Image 
-                src="/images/iterative-thinking.png" 
-                alt="Scientist interaction at FunSmartism" 
-                fill 
-                className="object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <Link href="/gallery" className="absolute inset-0 bg-primary-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                <span className="bg-white/90 px-4 py-2 rounded-full text-[10px] font-bold text-primary-500 uppercase tracking-widest">
-                  View More Moments →
-                </span>
-              </Link>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 w-full max-w-7xl">
+              {[
+                { name: 'Dr. R. Mashelkar', img: '/images/gallery/scientist-raghunath-mashelkar.jpg' },
+                { name: 'Dr. Anil Kakodkar', img: '/images/gallery/scientist-anil-kakodkar.jpg', offset: true },
+                { name: 'Prof. Jayant Narlikar', img: '/images/gallery/scientist-jayant-naralikar.jpg' },
+                { name: 'Expert Interaction', img: '/images/gallery/scientist-interaction.jpg', offset: true },
+              ].map((expert, i) => (
+                <div 
+                  key={i} 
+                  className={`relative aspect-[3/4] rounded-2xl overflow-hidden group shadow-2xl border border-white/10 transition-all duration-700 hover:z-20 hover:scale-105 ${expert.offset ? 'md:mt-12 lg:mt-16' : ''}`}
+                >
+                  <Image 
+                    src={expert.img} 
+                    alt={expert.name} 
+                    fill 
+                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 via-black/40 to-transparent">
+                    <p className="text-xs font-bold text-white uppercase tracking-widest">{expert.name}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
 
-        <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-10 md:p-14 rounded-[3rem] max-w-5xl shadow-2xl relative overflow-hidden group">
+        <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-10 md:p-14 rounded-[3rem] max-w-7xl mx-auto shadow-2xl relative overflow-hidden group">
           <div className="absolute top-0 left-0 w-2 h-full bg-accent-teal" />
           
           <h3 className="text-2xl font-serif font-bold text-white mb-10 text-center">

@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     siteName: 'FunSmartism Intelligence Center',
     images: [
       {
-        url: '/og-image.png',
+        url: '/og-image-real.jpg',
         width: 1200,
         height: 630,
         alt: 'FunSmartism Intelligence Center',
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
     title: 'FunSmartism Intelligence Center',
     description: "A hands-on RoboSTEM thinking lab where children build projects, solve unfamiliar challenges, and learn through real-world experimentation.",
 
-    images: ['/og-image.png'],
+    images: ['/og-image-real.jpg'],
   },
   robots: {
     index: true,

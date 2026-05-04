@@ -1,4 +1,5 @@
 import { Check } from 'lucide-react'
+import Image from 'next/image'
 
 export function Positioning() {
   return (
@@ -36,8 +37,13 @@ export function Positioning() {
 
           {/* Visualization */}
           <div className="relative">
-            <div className="rounded-lg overflow-hidden shadow-base bg-accent-surface aspect-square flex items-center justify-center border border-neutral-100">
-               <span className="font-mono text-neutral-300 text-xs text-center px-4 leading-tight uppercase tracking-tighter">image_positioning_lab</span>
+            <div className="rounded-lg overflow-hidden shadow-base bg-accent-surface aspect-square relative border border-neutral-100">
+               <Image 
+                 src="/images/lab-real-1.jpg" 
+                 alt="FunSmartism Thinking Laboratory" 
+                 fill 
+                 className="object-cover" 
+               />
             </div>
             {/* Overlay Lab Label */}
             <div className="absolute top-8 right-8 bg-white/95 backdrop-blur-sm p-6 rounded-sm shadow-sm border border-primary-50">

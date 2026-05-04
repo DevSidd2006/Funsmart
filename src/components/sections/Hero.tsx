@@ -8,7 +8,7 @@ export function Hero({ data }: { data?: any }) {
   const headline = "Beyond Rote Learning. Beyond Marks."
   const subline = "A hands-on RoboSTEM thinking lab where children build projects, solve unfamiliar challenges, interact with scientists and innovators, and learn through real-world experimentation."
 
-  const heroImage = "/images/hero-scientist.png"
+  const heroImage = "/images/hero-real.jpg"
 
   return (
     <section id="home" className="relative w-full min-h-screen flex items-center bg-[#1E2A44] overflow-hidden pt-52 pb-20 md:pb-24 text-white">
@@ -87,7 +87,7 @@ export function Hero({ data }: { data?: any }) {
                   fill
                   priority
                   sizes="50vw"
-                  className="w-full h-full object-cover object-center scale-105 transition-transform duration-2000 group-hover:scale-100"
+                  className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1E2A44]/60 via-transparent to-transparent pointer-events-none" />
               </div>

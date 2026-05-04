@@ -57,7 +57,7 @@ export function ThinkingReset() {
 
             <div className="relative min-h-[400px] lg:min-h-full bg-neutral-100">
               <Image 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200"
+                src="/images/challenge-real.jpg"
                 alt="Children participating in a STEM workshop"
                 fill
                 className="object-cover transition-opacity duration-500"

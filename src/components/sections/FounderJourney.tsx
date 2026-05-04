@@ -1,4 +1,5 @@
 import { Award, Sparkles, BookOpen, Globe } from 'lucide-react'
+import Image from 'next/image'
 
 const founderNotes = [
   {
@@ -70,22 +71,43 @@ export function FounderJourney() {
               </div>
             </div>
 
-            <div className="rounded-[2rem] overflow-hidden border border-neutral-200 bg-white p-8 shadow-lg">
-              <div className="mb-8">
-                <div className="text-mono text-accent-teal mb-3 uppercase tracking-widest">Founder</div>
-                <h3 className="text-3xl font-serif font-bold text-[#1E2A44] mb-3">Dipali Akolkar</h3>
-                <p className="text-neutral-500 leading-relaxed mb-6">
-                  Masters in Computer Management, software product experience, and child development training. She built FunSmartism to bring attention, observation and real thinking to every child’s learning journey.
-                </p>
-                <div className="grid gap-3 sm:grid-cols-2">
-                  <span className="rounded-3xl bg-accent-teal/10 px-4 py-3 text-sm text-accent-teal">MCM · Software Dev</span>
-                  <span className="rounded-3xl bg-accent-teal/10 px-4 py-3 text-sm text-accent-teal">Child Development</span>
+            <div className="relative group">
+              <div className="rounded-[3rem] overflow-hidden border border-neutral-100 bg-white p-10 md:p-14 shadow-2xl relative">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-accent-teal/5 rounded-full blur-3xl" />
+                <div className="absolute bottom-0 left-0 w-40 h-40 bg-primary-500/5 rounded-full blur-3xl" />
+
+                <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden mb-10 shadow-xl border border-neutral-100">
+                  <Image 
+                    src="/images/dipali-real.jpg" 
+                    alt="Dipali Akolkar - Founder of FunSmartism"
+                    fill
+                    className="object-cover transition-transform duration-1000 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
                 </div>
-              </div>
-              <div className="rounded-3xl bg-accent-surface p-6">
-                <p className="text-neutral-600 leading-relaxed text-sm">
-                  "FunSmartism was born because we saw too many children solving the way they were told, instead of thinking for themselves. Our lab is designed to change that."
-                </p>
+                
+                <div className="relative z-10">
+                  <div className="inline-flex items-center gap-2 text-mono text-accent-teal mb-4 uppercase tracking-[0.2em] text-xs font-bold">
+                    <div className="w-8 h-px bg-accent-teal/30" />
+                    Our Founder
+                  </div>
+                  <h3 className="text-4xl font-serif font-bold text-[#1E2A44] mb-4">Dipali Akolkar</h3>
+                  <p className="text-neutral-500 leading-relaxed mb-8 text-base font-light">
+                    Masters in Computer Management with deep software product experience. She transitioned into child development to bring precision, observation, and authentic thinking to the learning journey.
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-3 mb-10">
+                    <span className="rounded-full bg-accent-teal/10 px-5 py-2 text-[10px] font-bold text-accent-teal uppercase tracking-widest border border-accent-teal/5">MCM · Software Dev</span>
+                    <span className="rounded-full bg-accent-teal/10 px-5 py-2 text-[10px] font-bold text-accent-teal uppercase tracking-widest border border-accent-teal/5">Child Development Expert</span>
+                  </div>
+
+                  <div className="relative p-8 bg-[#FAF9F6] rounded-3xl border border-neutral-100 italic">
+                    <div className="absolute -top-4 -left-2 text-6xl text-accent-teal/20 font-serif leading-none">“</div>
+                    <p className="text-[#1E2A44] leading-relaxed text-sm font-medium relative z-10">
+                      FunSmartism was born because we saw too many children solving the way they were told, instead of thinking for themselves. Our lab is designed to change that.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

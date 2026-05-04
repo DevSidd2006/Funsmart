@@ -56,7 +56,7 @@ export function WhatStudentsDo() {
 
           <div className="lg:col-span-5 relative aspect-square rounded-[2rem] overflow-hidden group">
             <Image 
-              src="/images/hero-child-discovery.png" 
+              src="/images/discovery-real.jpg" 
               alt="Hands-on learning at FunSmartism" 
               fill 
               className="object-cover transition-transform duration-700 group-hover:scale-110"
