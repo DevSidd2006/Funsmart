@@ -1,11 +1,8 @@
-import { Metadata } from 'next'
 import { Button } from '@/components/ui/Button'
 import { Accordion } from '@/components/ui/Accordion'
 import { Check, ArrowRight, Calculator, Puzzle, Settings, Plane, Cpu, PenTool, Telescope, Laptop, Bot, Presentation, Milestone, Clock, Users, Brain, Anchor, Target, Rocket, Wrench } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://funsmartism.in'
 
 export default function ProgramsPage() {
   const programs = [
@@ -70,7 +67,6 @@ export default function ProgramsPage() {
           </div>
         </div>
       </section>
-
 
       {/* Program Cards */}
       <section className="py-12">
@@ -167,15 +163,39 @@ export default function ProgramsPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-12 bg-white text-center">
-        <div className="container-fluid max-w-3xl mx-auto">
+      <section className="pt-12 pb-24 bg-white text-center">
+        <div className="container-fluid max-w-4xl mx-auto">
           <h2 className="text-3xl font-serif font-bold text-primary-500 mb-8">Not sure?</h2>
           <p className="text-xl text-neutral-600 mb-12 font-light">Tell us your child’s age and interest during a visit—we’ll guide you.</p>
-          <Link href="/schedule-visit">
+          <Link href="/schedule-visit" className="inline-block mb-24">
             <Button size="lg" className="bg-accent-teal border-none text-white px-16 py-6 shadow-huge shadow-accent-teal/30 rounded-full font-bold">
               Schedule A Visit
             </Button>
           </Link>
+
+          {/* 9:16 Mobile Image Grid / 4:3 Desktop Grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
+            {[
+              { src: '/images/hero-1.jpg', alt: 'RoboSTEM Lab Activity 1' },
+              { src: '/images/hero-2.jpg', alt: 'RoboSTEM Lab Activity 2' },
+              { src: '/images/hero-3.jpg', alt: 'RoboSTEM Lab Activity 3' },
+              { src: '/images/programs-footer.jpg', alt: 'Students showcasing work' },
+            ].map((img, i) => (
+              <div 
+                key={i} 
+                className="relative aspect-[9/16] lg:aspect-[4/3] rounded-3xl overflow-hidden shadow-md group"
+              >
+                <Image 
+                  src={img.src} 
+                  alt={img.alt} 
+                  fill 
+                  className="object-cover scale-110 transition-transform duration-700 group-hover:scale-125"
+                  sizes="(max-width: 768px) 50vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </div>

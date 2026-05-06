@@ -50,20 +50,22 @@ export default function GalleryPage() {
       </section>
 
       {/* SECTION 2 — TABS */}
-      <section className="py-8 bg-white border-b border-neutral-100 sticky top-[80px] z-30 backdrop-blur-md bg-white/80">
-        <div className="container-fluid max-w-4xl mx-auto flex justify-center gap-4">
-          <button 
-            onClick={() => setActiveTab('lab')}
-            className={`px-8 py-3 rounded-full text-sm font-bold tracking-widest uppercase transition-all duration-300 ${activeTab === 'lab' ? 'bg-primary-500 text-white shadow-xl scale-105' : 'bg-neutral-100 text-neutral-400 hover:bg-neutral-200'}`}
-          >
-            Lab Moments
-          </button>
-          <button 
-            onClick={() => setActiveTab('news')}
-            className={`px-8 py-3 rounded-full text-sm font-bold tracking-widest uppercase transition-all duration-300 ${activeTab === 'news' ? 'bg-primary-500 text-white shadow-xl scale-105' : 'bg-neutral-100 text-neutral-400 hover:bg-neutral-200'}`}
-          >
-            News Room
-          </button>
+      <section className="py-4 md:py-8 bg-white/90 border-b border-neutral-100 sticky top-[60px] md:top-[80px] z-30 backdrop-blur-md backdrop-saturate-150">
+        <div className="container-fluid max-w-md mx-auto px-4">
+          <div className="flex bg-neutral-100 p-1.5 rounded-full w-full border border-neutral-200/50 shadow-inner">
+            <button 
+              onClick={() => setActiveTab('lab')}
+              className={`flex-1 px-2 py-3 md:py-3.5 rounded-full text-[11px] md:text-sm font-bold tracking-widest uppercase transition-all duration-300 ${activeTab === 'lab' ? 'bg-primary-500 text-white shadow-md' : 'text-neutral-500 hover:text-primary-500'}`}
+            >
+              Lab Moments
+            </button>
+            <button 
+              onClick={() => setActiveTab('news')}
+              className={`flex-1 px-2 py-3 md:py-3.5 rounded-full text-[11px] md:text-sm font-bold tracking-widest uppercase transition-all duration-300 ${activeTab === 'news' ? 'bg-primary-500 text-white shadow-md' : 'text-neutral-500 hover:text-primary-500'}`}
+            >
+              News Room
+            </button>
+          </div>
         </div>
       </section>
 

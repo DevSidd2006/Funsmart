@@ -53,26 +53,38 @@ export function EduEvents() {
               </div>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8 w-full max-w-7xl">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6 lg:gap-8 w-full max-w-[1400px] justify-center mx-auto">
               {[
                 { name: 'Dr. R. Mashelkar', img: '/images/gallery/scientist-raghunath-mashelkar.jpg' },
-                { name: 'Dr. Anil Kakodkar', img: '/images/gallery/scientist-anil-kakodkar.jpg', offset: true },
-                { name: 'Prof. Jayant Narlikar', img: '/images/gallery/scientist-jayant-naralikar.jpg' },
-                { name: 'Expert Interaction', img: '/images/gallery/scientist-interaction.jpg', offset: true },
+                { name: 'Dr. Anil Kakodkar', img: '/images/gallery/scientist-anil-kakodkar.jpg' },
+                { name: 'Prof. Jayant Narlikar', img: '/images/scientists/jayant-narlikar.jpg' },
+                { name: 'S. Somanath (ISRO)', img: '/images/scientists/somnath.jpg' },
+                { name: 'Arvind Gupta', img: '/images/scientists/arvind-gupta.jpg' },
+                { name: 'A.K. Sinha', img: '/images/scientists/ak-sinha.jpg' },
+                { name: 'Kashinath Deodhar', img: '/images/scientists/kashinath-deodhar.jpg' },
+                { name: 'Pramod Khandekar', img: '/images/scientists/pramod-khandekar.jpg' },
+                { name: 'Shirish Deshmukh', img: '/images/scientists/shirish-deshmukh.jpg' },
+                { name: 'Dr. Mukund Muharir', img: '/images/scientists/dr-mukund-muharir.jpg' },
+                { name: 'Shrirang Gokhale', img: '/images/scientists/shrirang-gokhale.jpg' },
+                { name: 'Bal Patil', img: '/images/scientists/bal-patil.jpg' },
+                { name: 'Jayesh Rathore', img: '/images/scientists/jayesh-rathore.jpg' },
+                { name: 'Uday Deshpande', img: '/images/scientists/uday-deshpande.jpg' },
+                { name: 'Expert Interaction', img: '/images/gallery/scientist-interaction.jpg' },
               ].map((expert, i) => (
                 <div 
                   key={i} 
-                  className={`relative aspect-[3/4] rounded-2xl overflow-hidden group shadow-2xl border border-white/10 transition-all duration-700 hover:z-20 hover:scale-105 ${expert.offset ? 'md:mt-12 lg:mt-16' : ''}`}
+                  className="relative aspect-[3/4] rounded-2xl overflow-hidden group shadow-2xl border border-white/10 transition-all duration-700 hover:z-20 hover:scale-110"
                 >
                   <Image 
                     src={expert.img} 
                     alt={expert.name} 
                     fill 
                     sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="object-cover scale-110 transition-transform duration-700 group-hover:scale-125"
                   />
-                  <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 via-black/40 to-transparent">
-                    <p className="text-xs font-bold text-white uppercase tracking-widest">{expert.name}</p>
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/95 via-black/40 to-transparent">
+                    <p className="text-[10px] md:text-xs font-bold text-white uppercase tracking-[0.15em] drop-shadow-md">{expert.name}</p>
                   </div>
                 </div>
               ))}

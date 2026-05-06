@@ -34,14 +34,6 @@ export const galleryItems: GalleryItem[] = [
     span: 'lg:col-span-1 lg:row-span-1 md:col-span-1',
   },
   {
-    id: 4,
-    image: '/images/gallery/chandrayan-workshop-news.jpg',
-    title: 'Chandrayan 3 Workshop',
-    caption: 'News coverage of our Chandrayan 3 model making workshop where students built their own lunar missions.',
-    tag: 'NEWS & MEDIA',
-    span: 'lg:col-span-1 lg:row-span-1 md:col-span-1',
-  },
-  {
     id: 5,
     image: '/images/gallery/stem-bridge-challenge.jpg',
     title: 'Bridge Engineering Challenge',
@@ -66,14 +58,6 @@ export const galleryItems: GalleryItem[] = [
     span: 'lg:col-span-2 lg:row-span-1 md:col-span-1',
   },
   {
-    id: 8,
-    image: '/images/gallery/dipali-news.jpg',
-    title: 'Founder in News',
-    caption: 'Dipali Akolkar featured in Navrashtra news, discussing the importance of hands-on RoboSTEM thinking labs.',
-    tag: 'MEDIA',
-    span: 'lg:col-span-1 lg:row-span-1 md:col-span-1',
-  },
-  {
     id: 9,
     image: '/images/gallery/scientist-jayant-naralikar.jpg',
     title: 'With Prof. Jayant Narlikar',
@@ -88,6 +72,14 @@ export const galleryItems: GalleryItem[] = [
     caption: 'Founder Dipali Akolkar with a guest scientist during an interactive STEM session.',
     tag: 'EDU-EVENTS',
     span: 'lg:col-span-1 lg:row-span-1 md:col-span-1',
+  },
+  {
+    id: 11,
+    image: '/images/gallery/workshop-mass.jpg',
+    title: 'Large Group Challenge',
+    caption: 'Dozens of students proudly showcasing their finished projects at the conclusion of a major hands-on workshop.',
+    tag: 'WORKSHOP',
+    span: 'lg:col-span-2 lg:row-span-1 md:col-span-2',
   }
 ]
 
@@ -114,13 +106,6 @@ export const newsItems: GalleryItem[] = [
     tag: 'NEWS',
   },
   {
-    id: 104,
-    image: '/images/news/deccan-business.png',
-    title: 'Deccan Business',
-    caption: 'Business and education highlights in Deccan Business journal.',
-    tag: 'PRESS',
-  },
-  {
     id: 105,
     image: '/images/news/hindustan-saga.png',
     title: 'Hindustan Saga',
@@ -140,6 +125,20 @@ export const newsItems: GalleryItem[] = [
     title: 'Lokmat News',
     caption: 'Coverage in Lokmat newspaper regarding FunSmartism activities.',
     tag: 'NEWS',
+  },
+  {
+    id: 108,
+    image: '/images/gallery/chandrayan-workshop-news.jpg',
+    title: 'Chandrayan 3 Workshop',
+    caption: 'News coverage of our Chandrayan 3 model making workshop where students built their own lunar missions.',
+    tag: 'MEDIA COVERAGE',
+  },
+  {
+    id: 109,
+    image: '/images/gallery/dipali-news.jpg',
+    title: 'Founder in News',
+    caption: 'Dipali Akolkar featured in Navrashtra news, discussing the importance of hands-on RoboSTEM thinking labs.',
+    tag: 'MEDIA COVERAGE',
   }
 ]
 

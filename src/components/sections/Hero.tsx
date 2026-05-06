@@ -1,3 +1,6 @@
+'use client'
+
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Button } from '../ui/Button'
 import { Beaker, Atom, Settings, Lightbulb, Rocket, Binary, Check } from 'lucide-react'
@@ -8,7 +11,20 @@ export function Hero({ data }: { data?: any }) {
   const headline = "Beyond Rote Learning. Beyond Marks."
   const subline = "A hands-on RoboSTEM thinking lab where children build projects, solve unfamiliar challenges, interact with scientists and innovators, and learn through real-world experimentation."
 
-  const heroImage = "/images/hero-real.jpg"
+  const images = [
+    "/images/hero-1.jpg",
+    "/images/hero-2.jpg",
+    "/images/hero-3.jpg",
+  ]
+
+  const [currentImage, setCurrentImage] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % images.length)
+    }, 2000)
+    return () => clearInterval(timer)
+  }, [images.length])
 
   return (
     <section id="home" className="relative w-full min-h-screen flex items-center bg-[#1E2A44] overflow-hidden pt-52 pb-20 md:pb-24 text-white">
@@ -81,14 +97,19 @@ export function Hero({ data }: { data?: any }) {
 
               {/* Main Image with softened frame */}
               <div className="absolute inset-0 z-10 rounded-[60px] overflow-hidden shadow-huge bg-[#0F172A] border border-white/10 transform translate-x-4 -translate-y-4 transition-transform duration-1000 hover:translate-x-0 hover:-translate-y-0 group">
-                <Image 
-                  src={heroImage} 
-                  alt={headline} 
-                  fill
-                  priority
-                  sizes="50vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+                {images.map((img, idx) => (
+                  <Image 
+                    key={idx}
+                    src={img} 
+                    alt={headline} 
+                    fill
+                    priority={idx === 0}
+                    sizes="50vw"
+                    className={`object-cover transition-all duration-1000 group-hover:scale-110 ${
+                      idx === currentImage ? 'opacity-100 scale-100' : 'opacity-0 scale-110'
+                    }`}
+                  />
+                ))}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1E2A44]/60 via-transparent to-transparent pointer-events-none" />
               </div>
 
