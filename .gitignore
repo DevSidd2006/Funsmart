@@ -1,5 +1,6 @@
 node_modules/
 .next/
+build/
 .env.local
 .env.*.local
 npm-debug.log
@@ -18,3 +19,6 @@ coverage/
 graphify-out/
 revised_copy/
 .claude/
+Website Photos/
+added/
+build/
