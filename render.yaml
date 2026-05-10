@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: funsmartism
+    env: node
+    buildCommand: npm run render-build
+    startCommand: npm start
+    envVars:
+      - key: NODE_VERSION
+        value: 20.x
+      - key: NEXT_PUBLIC_SITE_URL
+        sync: false
+        description: "The full URL of your deployed site (e.g., https://funsmartism.onrender.com)"

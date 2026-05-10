@@ -12,6 +12,18 @@ Use these links to quickly manage your website:
 *   **[💬 Manage Testimonials](./src/data/testimonials.ts)**: Add new feedback from parents.
 *   **[❓ Manage FAQs](./src/data/faqs.ts)**: Change the questions and answers in your "Parent Concerns" section.
 
+## 🚀 Deployment
+
+This website is ready to be deployed on **Render**.
+
+### Deploying to Render
+1.  Connect your GitHub repository to [Render](https://render.com/).
+2.  Select **Web Service**.
+3.  Render will automatically detect the `render.yaml` file and configure:
+    - **Build Command:** `npm run render-build`
+    - **Start Command:** `npm start`
+4.  Add the environment variable `NEXT_PUBLIC_SITE_URL` with your final `.onrender.com` URL.
+
 ---
 
 ## 🚀 How to Make Quick Changes
