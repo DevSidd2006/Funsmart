@@ -4,6 +4,7 @@ services:
     env: node
     buildCommand: npm run render-build
     startCommand: npm start
+    publishPath: ./build
     envVars:
       - key: NODE_VERSION
         value: 20.x
