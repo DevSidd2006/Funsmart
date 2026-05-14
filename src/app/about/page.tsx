@@ -132,7 +132,7 @@ export default function AboutPage() {
         <div className="container-fluid">
           <div className="flex flex-col md:flex-row items-end justify-between gap-6 mb-10">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 leading-tight">
-              Real moments from <span className="text-accent-teal italic font-light">our lab.</span>
+              Real moments from <span className="text-accent-teal italic font-light">FunSmartism.</span>
             </h2>
             <Link href="/gallery" className="group inline-flex items-center gap-2 text-accent-teal font-bold uppercase text-xs tracking-widest hover:gap-4 transition-all whitespace-nowrap">
               View Full Gallery →

@@ -13,7 +13,7 @@ const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Programs', href: '/programs' },
-  { name: 'Gallery', href: '/gallery' },
+  { name: 'Gallery & Newsroom', href: '/gallery' },
   { name: 'Schedule a Visit', href: '/schedule-visit' },
 ]
 
@@ -36,22 +36,22 @@ export function Navbar() {
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-in-out px-4 md:px-8',
-        scrolled ? 'py-4' : 'py-8'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-700 ease-in-out',
+        scrolled ? 'py-2' : 'py-4'
       )}
     >
       <div 
         className={cn(
-          "container-fluid max-w-screen-2xl mx-auto flex items-center justify-between transition-all duration-700 rounded-[2rem]",
+          "container-fluid w-full flex items-center justify-between transition-all duration-700",
           scrolled 
-            ? "bg-white/80 backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,0.08)] border border-white/20 px-8 py-3" 
-            : "bg-transparent py-0"
+            ? "bg-white/90 backdrop-blur-xl shadow-md border-b border-neutral-100 px-8 py-2 rounded-b-[2rem]" 
+            : "bg-transparent py-4 px-8"
         )}
       >
         {/* Logo */}
         <Link href="/" className="flex items-center group py-1">
           <div className={cn(
-            "p-3 rounded-2xl transition-all duration-500 mr-8",
+            "p-2 rounded-2xl transition-all duration-500 mr-4",
             useLightText ? "bg-white/95 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.12)]" : "bg-transparent"
           )}>
             <Image 
@@ -61,14 +61,14 @@ export function Navbar() {
               height={80}
               priority
               sizes="(max-width: 768px) 150px, 200px"
-              className="h-12 md:h-14 w-auto object-contain transition-all duration-500 group-hover:scale-105"
+              className="h-10 md:h-12 w-auto object-contain transition-all duration-500 group-hover:scale-105"
             />
           </div>
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden xl:flex items-center gap-10">
-          <div className="flex items-center gap-8">
+        <div className="hidden xl:flex items-center gap-6">
+          <div className="flex items-center gap-4">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -90,7 +90,7 @@ export function Navbar() {
             ))}
           </div>
           
-          <div className="flex items-center gap-4 border-l border-neutral-200/20 pl-8">
+          <div className="flex items-center gap-4 border-l border-neutral-200/20 pl-4">
             <JoinCommunity variant="solid" />
           </div>
         </div>

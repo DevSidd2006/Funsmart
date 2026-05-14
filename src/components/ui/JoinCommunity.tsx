@@ -6,7 +6,7 @@ interface JoinCommunityProps {
 }
 
 export function JoinCommunity({ className, variant = 'outline' }: JoinCommunityProps) {
-  const baseStyles = "inline-flex items-center justify-center gap-2 px-6 py-2.5 text-sm font-bold rounded-full transition-all duration-300"
+  const baseStyles = "inline-flex items-center justify-center gap-2 px-4 py-1.5 text-xs font-bold rounded-full transition-all duration-300"
   
   const variants = {
     outline: "border border-white/40 text-white hover:bg-white/10 hover:border-white/60 shadow-sm",

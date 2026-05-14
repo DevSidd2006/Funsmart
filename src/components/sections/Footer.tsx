@@ -67,7 +67,7 @@ export function Footer({ data }: { data?: any }) {
                 { name: 'Home', href: '/' },
                 { name: 'About', href: '/about' },
                 { name: 'Programs', href: '/programs' },
-                { name: 'Gallery', href: '/gallery' },
+                { name: 'Gallery & Newsroom', href: '/gallery' },
                 { name: 'Schedule a Visit', href: '/schedule-visit' },
               ].map((link) => (
                 <li key={link.name}>

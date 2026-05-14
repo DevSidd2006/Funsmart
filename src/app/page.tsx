@@ -42,11 +42,11 @@ export default function HomePage() {
       {/* Section 08 — OUTCOMES */}
       <Outcomes />
 
-      {/* Section 09 — 1-DAY STEM CHALLENGE */}
-      <OneDayChallenge />
-
-      {/* Section 10 — 10-DAY THINKING RESET WORKSHOP */}
+      {/* Section 09 — 10-DAY THINKING RESET WORKSHOP */}
       <ThinkingReset />
+
+      {/* Section 10 — 1-DAY STEM CHALLENGE */}
+      <OneDayChallenge />
 
       {/* Section 11 — PARENT VOICES */}
       <TestimonialsSlider data={testimonials.filter((t) => ['5', '6', '7'].includes(t.id))} />

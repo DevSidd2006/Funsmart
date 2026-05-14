@@ -19,7 +19,7 @@ export function LabGallery({ items }: { items: any[] }) {
         <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
           <div className="max-w-2xl">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight mb-6">
-              Real moments from <br /><span className="text-accent-teal italic font-light">our lab.</span>
+              Real moments from <br /><span className="text-accent-teal italic font-light">FunSmartism.</span>
             </h2>
             <p className="text-lg text-neutral-600 leading-relaxed">
               Every session reveals how children build, test, and solve unfamiliar challenges. Here is a glimpse into the process of discovery inside our RoboSTEM Thinking Lab.

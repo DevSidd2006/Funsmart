@@ -44,7 +44,7 @@ export function Hero({ data }: { data?: any }) {
           {/* Left: Text Content */}
           <div className="lg:col-span-7">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-8 leading-[1.05] text-balanced">
-               {headline}
+               Beyond <span className="whitespace-nowrap">Rote Learning.</span> Beyond Marks.
             </h1>
 
             <p className="text-lg md:text-2xl text-[#B7E3DD] mb-12 max-w-2xl leading-relaxed font-light opacity-90">

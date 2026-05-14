@@ -298,8 +298,11 @@ export default function ScheduleVisitPage() {
             <p>
               They leave seeing their child participate, question, experiment, retry, and engage differently than they expected.
             </p>
-            <p className="italic">
-              That difference is difficult to explain through advertisements alone. It becomes visible inside the environment.
+            <p className="font-bold">
+              That difference is difficult to explain through advertisements alone.
+            </p>
+            <p className="font-bold text-primary-500">
+              It becomes visible inside the environment.
             </p>
           </div>
           <a href="#schedule-form">

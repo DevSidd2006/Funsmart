@@ -44,7 +44,7 @@ export function TheRealProblem() {
                  </li>
                ))}
              </ul>
-             <p className="text-xl font-serif font-bold text-primary-500 mt-8 italic border-t border-neutral-100 pt-6">
+             <p className="text-xl font-serif font-bold text-primary-500 mt-8 italic border-t border-neutral-100 pt-6 text-center">
                That is why FunSmartism exists.
              </p>
           </div>

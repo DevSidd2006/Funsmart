@@ -18,7 +18,7 @@ export function GalleryTeaser({ items }: { items: any[] }) {
           <div className="max-w-xl">
             <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight mb-3">
               Real moments from{' '}
-              <span className="text-accent-teal italic font-light">our lab.</span>
+              <span className="text-accent-teal italic font-light">FunSmartism.</span>
             </h2>
             <p className="text-neutral-500 leading-relaxed">
               A glimpse into how children build, test, and explore inside the RoboSTEM Thinking Lab.
@@ -62,7 +62,7 @@ export function GalleryTeaser({ items }: { items: any[] }) {
             href="/gallery"
             className="inline-flex items-center gap-3 bg-accent-surface border border-neutral-100 text-primary-500 font-bold text-sm px-8 py-4 rounded-full hover:border-accent-teal/40 hover:shadow-md transition-all duration-300"
           >
-            See all moments from the lab
+            See all moments from FunSmartism
             <ArrowRight size={16} className="text-accent-teal" />
           </Link>
         </div>
