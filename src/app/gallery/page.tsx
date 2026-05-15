@@ -74,7 +74,7 @@ export default function GalleryPage() {
         <div className="container-fluid max-w-7xl mx-auto px-6 md:px-12">
           <motion.div
             layout
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 auto-rows-[340px]"
+            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ${activeTab === 'news' ? 'auto-rows-[480px]' : 'auto-rows-[340px]'}`}
           >
             <AnimatePresence mode="popLayout">
               {displayItems.map((item: any) => (
@@ -93,7 +93,7 @@ export default function GalleryPage() {
                       alt={item.title}
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className={`w-full h-full transform scale-100 group-hover:scale-105 transition-transform duration-[1.5s] ease-in-out ${activeTab === 'news' ? 'object-contain bg-white p-2 md:p-4 shadow-inner' : 'object-cover'}`}
+                      className={`w-full h-full transform transition-transform duration-[1.5s] ease-in-out group-hover:scale-[1.02] ${activeTab === 'news' ? 'object-contain p-4 md:p-8 bg-white' : 'object-cover scale-100 group-hover:scale-105'}`}
                     />
                   ) : (
                     <div className="w-full h-full bg-neutral-50 flex flex-col items-center justify-center border-dashed border-2 border-neutral-200">
