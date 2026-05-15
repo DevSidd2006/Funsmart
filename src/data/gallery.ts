@@ -18,14 +18,6 @@ export const galleryItems: GalleryItem[] = [
     span: 'lg:col-span-2 lg:row-span-2 md:col-span-2 md:row-span-2',
   },
   {
-    id: 2,
-    image: '/images/gallery/scientist-isro.jpg',
-    title: 'Interaction with ISRO Scientist',
-    caption: 'Students interacting with Arun Kumar Sinha, Senior Scientist at ISRO, learning about space science.',
-    tag: 'EDU-EVENTS',
-    span: 'lg:col-span-1 lg:row-span-1 md:col-span-1',
-  },
-  {
     id: 3,
     image: '/images/gallery/robotics-review.jpg',
     title: 'Robotics Design Review',
@@ -42,14 +34,6 @@ export const galleryItems: GalleryItem[] = [
     span: 'lg:col-span-1 lg:row-span-1 md:col-span-1',
   },
   {
-    id: 6,
-    image: '/images/gallery/scientist-anil-kakodkar.jpg',
-    title: 'With Dr. Anil Kakodkar',
-    caption: 'A moment with Dr. Anil Kakodkar, Former Chairman of the Atomic Energy Commission of India.',
-    tag: 'EDU-EVENTS',
-    span: 'lg:col-span-2 lg:row-span-1 md:col-span-1',
-  },
-  {
     id: 7,
     image: '/images/gallery/student-project-1.jpg',
     title: 'Hands-on Learning Moments',
@@ -58,28 +42,20 @@ export const galleryItems: GalleryItem[] = [
     span: 'lg:col-span-2 lg:row-span-1 md:col-span-1',
   },
   {
-    id: 9,
-    image: '/images/gallery/scientist-jayant-naralikar.jpg',
-    title: 'With Prof. Jayant Narlikar',
-    caption: 'A proud moment with world-renowned astrophysicist Prof. Jayant Narlikar.',
-    tag: 'EDU-EVENTS',
-    span: 'lg:col-span-1 lg:row-span-1 md:col-span-1',
-  },
-  {
-    id: 10,
-    image: '/images/gallery/scientist-interaction.jpg',
-    title: 'Expert Session',
-    caption: 'Founder Dipali Akolkar with a guest scientist during an interactive STEM session.',
-    tag: 'EDU-EVENTS',
-    span: 'lg:col-span-1 lg:row-span-1 md:col-span-1',
-  },
-  {
     id: 11,
     image: '/images/gallery/workshop-mass.jpg',
     title: 'Large Group Challenge',
     caption: 'Dozens of students proudly showcasing their finished projects at the conclusion of a major hands-on workshop.',
     tag: 'WORKSHOP',
     span: 'lg:col-span-2 lg:row-span-1 md:col-span-2',
+  },
+  {
+    id: 12,
+    image: '/images/gallery/student-project-2.jpg',
+    title: 'Innovative Prototype',
+    caption: 'A close-up look at a student-designed prototype during our advanced robotics challenge.',
+    tag: 'STUDENT PROJECTS',
+    span: 'lg:col-span-1 lg:row-span-1 md:col-span-1',
   }
 ]
 
@@ -139,6 +115,13 @@ export const newsItems: GalleryItem[] = [
     title: 'Founder in News',
     caption: 'Dipali Akolkar featured in Navrashtra news, discussing the importance of hands-on RoboSTEM thinking labs.',
     tag: 'MEDIA COVERAGE',
+  },
+  {
+    id: 110,
+    image: '/images/news/deccan-business.png',
+    title: 'Deccan Business Feature',
+    caption: 'Coverage of FunSmartism’s growth and impact in the Deccan Business news outlet.',
+    tag: 'NEWS',
   }
 ]
 
