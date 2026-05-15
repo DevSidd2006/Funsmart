@@ -16,11 +16,11 @@ export default function GalleryPage() {
   return (
     <div className="bg-white min-h-screen">
       {/* SECTION 1 — HERO */}
-      <section className="pt-48 pb-16 bg-accent-surface relative overflow-hidden">
-        <motion.div
+      <section className="pt-52 pb-24 bg-[#1E2A44] relative overflow-hidden text-white">
+        <motion.div 
           initial={{ opacity: 0 }}
-          animate={{ opacity: 0.03 }}
-          className="absolute inset-0 lab-grid"
+          animate={{ opacity: 0.05 }}
+          className="absolute inset-0 lab-grid" 
         />
         <div className="container-fluid relative z-10 text-center">
           <div className="max-w-4xl mx-auto">
@@ -28,18 +28,19 @@ export default function GalleryPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary-500 leading-tight tracking-tight mb-8"
+              className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight tracking-tight mb-8"
             >
               {activeTab === 'lab' ? 'Real Projects. Real Challenges. ' : 'In The Press. '}
-              <span className="text-accent-teal italic font-light whitespace-nowrap">
-                {activeTab === 'lab' ? 'Real Learning Moment.' : 'Spreading the vision of RoboSTEM Thinking.'}
+              <br />
+              <span className="text-accent-teal italic font-light whitespace-normal md:whitespace-nowrap">
+                {activeTab === 'lab' ? 'Real Learning Moments.' : 'Spreading the Vision of RoboSTEM.'}
               </span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-lg md:text-xl text-neutral-500 leading-relaxed font-light max-w-3xl mx-auto"
+              className="text-lg md:text-xl text-[#B7E3DD] leading-relaxed font-light max-w-3xl mx-auto opacity-90"
             >
               {activeTab === 'lab'
                 ? 'A glimpse into the hands-on RoboSTEM environment inside FunSmartism — where children build, experiment, solve, and explore.'
@@ -50,7 +51,7 @@ export default function GalleryPage() {
       </section>
 
       {/* SECTION 2 — TABS */}
-      <section className="py-4 md:py-8 bg-white/90 border-b border-neutral-100 sticky top-[60px] md:top-[80px] z-30 backdrop-blur-md backdrop-saturate-150">
+      <section className="py-4 md:py-8 bg-white/90 border-b border-neutral-100 z-40 backdrop-blur-md backdrop-saturate-150 shadow-sm">
         <div className="container-fluid max-w-md mx-auto px-4">
           <div className="flex bg-neutral-100 p-1.5 rounded-full w-full border border-neutral-200/50 shadow-inner">
             <button
@@ -85,7 +86,7 @@ export default function GalleryPage() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.5 }}
-                  className={`relative group overflow-hidden rounded-3xl shadow-sm border border-neutral-100 transition-all duration-500 hover:shadow-2xl ${item.span || (activeTab === 'news' ? 'lg:col-span-1' : 'lg:col-span-4')}`}
+                  className={`relative group overflow-hidden rounded-3xl shadow-sm border border-neutral-100 transition-all duration-500 hover:shadow-2xl ${item.span || (activeTab === 'news' ? 'lg:col-span-1 md:col-span-2' : 'lg:col-span-1 md:col-span-2')}`}
                 >
                   {item.image ? (
                     <Image

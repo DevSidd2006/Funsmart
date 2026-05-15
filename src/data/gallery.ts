@@ -98,8 +98,8 @@ export const newsItems: GalleryItem[] = [
   {
     id: 107,
     image: '/images/news/lokmat-news.png',
-    title: 'Lokmat News',
-    caption: 'Coverage in Lokmat newspaper regarding FunSmartism activities.',
+    title: 'Lokmat Coverage',
+    caption: 'Featured in Lokmat for our commitment to child observation and specialized RoboSTEM methodology.',
     tag: 'NEWS',
   },
   {
@@ -124,4 +124,5 @@ export const newsItems: GalleryItem[] = [
     tag: 'NEWS',
   }
 ]
+
 

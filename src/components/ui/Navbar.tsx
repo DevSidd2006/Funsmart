@@ -30,7 +30,7 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const isDarkHeroPage = pathname === '/' || pathname === '/programs' || pathname === '/activities'
+  const isDarkHeroPage = pathname === '/' || pathname === '/programs' || pathname === '/activities' || pathname === '/gallery' || pathname === '/about' || pathname === '/schedule-visit'
   const useLightText = isDarkHeroPage && !scrolled && !isOpen
 
   return (
@@ -51,46 +51,45 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center group py-1">
           <div className={cn(
-            "p-2 rounded-2xl transition-all duration-500 mr-4",
-            useLightText ? "bg-white/95 backdrop-blur-md shadow-[0_8px_32px_rgba(0,0,0,0.12)]" : "bg-transparent"
+            "p-1.5 rounded-xl transition-all duration-500 mr-4",
+            useLightText ? "bg-white shadow-[0_8px_32px_rgba(0,0,0,0.12)]" : "bg-transparent"
           )}>
             <Image 
               src="/images/logo.png" 
               alt="FunSmartism Logo" 
-              width={200}
-              height={80}
+              width={160}
+              height={64}
               priority
-              sizes="(max-width: 768px) 150px, 200px"
-              className="h-10 md:h-12 w-auto object-contain transition-all duration-500 group-hover:scale-105"
+              className="h-9 md:h-11 w-auto object-contain transition-all duration-500 group-hover:scale-105"
             />
           </div>
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden xl:flex items-center gap-6">
-          <div className="flex items-center gap-4">
+        <div className="hidden xl:flex items-center gap-2">
+          <div className="flex items-center gap-1">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
                 className={cn(
-                  'relative text-[13px] font-bold uppercase tracking-[0.2em] transition-all duration-300 group whitespace-nowrap',
+                  'relative text-[11px] font-bold uppercase tracking-[0.12em] px-2.5 py-1 transition-all duration-300 group whitespace-nowrap',
                   pathname === link.href 
                     ? (useLightText ? 'text-accent-teal' : 'text-primary-500') 
-                    : (useLightText ? 'text-white/90 hover:text-white' : 'text-neutral-700 hover:text-primary-500')
+                    : (useLightText ? 'text-white/80 hover:text-white' : 'text-neutral-700 hover:text-primary-500')
                 )}
               >
                 {link.name}
                 <span className={cn(
-                  "absolute -bottom-1 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full",
+                  "absolute -bottom-1 left-2.5 right-2.5 h-0.5 transition-all duration-300",
                   useLightText ? "bg-accent-teal" : "bg-primary-500",
-                  pathname === link.href && "w-full"
+                  pathname === link.href ? "opacity-100" : "opacity-0 group-hover:opacity-100"
                 )} />
               </Link>
             ))}
           </div>
           
-          <div className="flex items-center gap-4 border-l border-neutral-200/20 pl-4">
+          <div className="flex items-center gap-4 border-l border-neutral-200/20 pl-2">
             <JoinCommunity variant="solid" />
           </div>
         </div>
