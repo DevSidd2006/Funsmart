@@ -57,24 +57,24 @@ export function EduEvents() {
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 w-full max-w-[1400px] justify-center mx-auto px-4">
               {[
                 { name: 'Dr. R. Mashelkar', img: '/images/gallery/scientist-raghunath-mashelkar.jpg', pos: 'object-[center_10%]' },
-                { name: 'Dr. Anil Kakodkar', img: '/images/gallery/scientist-anil-kakodkar.png', pos: 'object-[center_20%]' },
-                { name: 'Prof. Jayant Narlikar', img: '/images/gallery/scientist-jayant-naralikar.jpg', pos: 'object-[right_center]' },
-                { name: 'S. Somanath (ISRO)', img: '/images/scientists/somnath.jpg', pos: 'object-[right_center]' },
-                { name: 'Arvind Gupta', img: '/images/scientists/arvind-gupta.jpg', pos: 'object-[center_top]' },
+                { name: 'Dr. Anil Kakodkar', img: '/images/gallery/scientist-anil-kakodkar.png', pos: 'object-[75%_20%]' },
+                { name: 'Prof. Jayant Narlikar', img: '/images/gallery/scientist-jayant-naralikar.jpg', pos: 'object-[70%_center]' },
+                { name: 'S. Somanath (ISRO)', img: '/images/scientists/somnath.jpg', pos: 'object-[85%_center]' },
+                { name: 'Arvind Gupta', img: '/images/scientists/arvind-gupta.jpg', pos: 'object-[35%_center]' },
                 { name: 'A.K. Sinha', img: '/images/scientists/ak-sinha.jpg', pos: 'object-center' },
                 { name: 'Kashinath Deodhar', img: '/images/scientists/kashinath-deodhar.jpg', pos: 'object-center' },
                 { name: 'Pramod Khandekar', img: '/images/scientists/pramod-khandekar.jpg', pos: 'object-center' },
                 { name: 'Shirish Deshmukh', img: '/images/scientists/shirish-deshmukh.jpg', pos: 'object-center' },
                 { name: 'Dr. Mukund Muharir', img: '/images/scientists/dr-mukund-muharir.jpg', pos: 'object-center' },
                 { name: 'Shrirang Gokhale', img: '/images/scientists/shrirang-gokhale.jpg', pos: 'object-center' },
-                { name: 'Bal Patil', img: '/images/scientists/bal-patil.jpg', pos: 'object-center' },
+                { name: 'Bal Patil', img: '/images/scientists/bal-patil.jpg', pos: 'object-[center_20%]' },
                 { name: 'Jayesh Rathore', img: '/images/scientists/jayesh-rathore.jpg', pos: 'object-center' },
                 { name: 'Uday Deshpande', img: '/images/scientists/uday-deshpande.jpg', pos: 'object-center' },
                 { name: 'Expert Interaction', img: '/images/gallery/scientist-interaction.jpg', pos: 'object-center' },
               ].map((expert, i) => (
                 <div 
                   key={i} 
-                  className="relative aspect-square rounded-[2rem] overflow-hidden group bg-white/5 border border-white/10 transition-all duration-500 hover:border-accent-teal/50 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
+                  className="relative aspect-[4/3] rounded-[2rem] overflow-hidden group bg-white/5 border border-white/10 transition-all duration-500 hover:border-accent-teal/50 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
                 >
                   <div className="absolute inset-0 transition-all duration-700">
                     <Image 
