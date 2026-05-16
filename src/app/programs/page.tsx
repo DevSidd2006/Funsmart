@@ -1,8 +1,11 @@
+'use client'
+
 import { Button } from '@/components/ui/Button'
 import { Accordion } from '@/components/ui/Accordion'
 import { Check, ArrowRight, Calculator, Puzzle, Settings, Plane, Cpu, PenTool, Telescope, Laptop, Bot, Presentation, Milestone, Clock, Users, Brain, Anchor, Target, Rocket, Wrench } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { SectionReveal } from '@/components/ui/SectionReveal'
 
 export default function ProgramsPage() {
   const programs = [
@@ -57,14 +60,14 @@ export default function ProgramsPage() {
       <section className="pt-40 pb-12 bg-[#1E2A44] text-white relative overflow-hidden">
         <div className="absolute inset-0 lab-grid opacity-[0.05]" />
         <div className="container-fluid relative z-10 text-center">
-          <div className="max-w-4xl mx-auto">
+          <SectionReveal className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold !text-white mb-8">
               Hands-on RoboSTEM Programs
             </h1>
             <p className="text-lg md:text-xl !text-white/70 max-w-2xl mx-auto leading-relaxed font-light">
               Understand the batch structures, age groups, session formats, and real-world activities that happen inside our Thinking Lab.
             </p>
-          </div>
+          </SectionReveal>
         </div>
       </section>
 
@@ -73,12 +76,11 @@ export default function ProgramsPage() {
         <div className="container-fluid max-w-6xl mx-auto">
           <div className="space-y-10">
             {programs.map((prog) => (
-              <div 
+              <SectionReveal 
                 key={prog.id} 
-                id={prog.id}
                 className={`${prog.bgColor} border ${prog.borderColor} rounded-[3rem] p-10 md:p-16 lg:p-20 shadow-sm relative overflow-hidden scroll-mt-24`}
               >
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <div id={prog.id} className="grid grid-cols-1 lg:grid-cols-12 gap-12">
                   <div className="lg:col-span-7">
                     <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-4">{prog.title}</h2>
                     <p className="text-xl text-accent-teal italic font-light mb-10">{prog.tagline}</p>
@@ -137,7 +139,7 @@ export default function ProgramsPage() {
                     </Link>
                   </div>
                 </div>
-              </div>
+              </SectionReveal>
             ))}
           </div>
         </div>
@@ -145,7 +147,7 @@ export default function ProgramsPage() {
 
       {/* Comparison Section (Simplified) */}
       <section className="py-12 bg-[#1E2A44] text-white">
-        <div className="container-fluid max-w-5xl mx-auto text-center">
+        <SectionReveal className="container-fluid max-w-5xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-16">Which path fits?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="p-10 border border-white/10 rounded-3xl bg-white/5 text-left">
@@ -159,12 +161,12 @@ export default function ProgramsPage() {
               <div className="w-12 h-px bg-white/20" />
             </div>
           </div>
-        </div>
+        </SectionReveal>
       </section>
 
       {/* Final CTA */}
       <section className="pt-12 pb-24 bg-white text-center">
-        <div className="container-fluid max-w-4xl mx-auto">
+        <SectionReveal className="container-fluid max-w-4xl mx-auto">
           <h2 className="text-3xl font-serif font-bold text-primary-500 mb-8">Not sure?</h2>
           <p className="text-xl text-neutral-600 mb-12 font-light">Tell us your child’s age and interest during a visit—we’ll guide you.</p>
           <Link href="/schedule-visit" className="inline-block mb-24">
@@ -196,7 +198,7 @@ export default function ProgramsPage() {
               </div>
             ))}
           </div>
-        </div>
+        </SectionReveal>
       </section>
     </div>
   )

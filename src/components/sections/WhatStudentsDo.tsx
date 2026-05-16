@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Bot, Wrench, Rocket, Blocks, MonitorOff, BrainCircuit, Telescope, PenTool } from 'lucide-react'
+import { SectionReveal } from '../ui/SectionReveal'
 
 export function WhatStudentsDo() {
   const activities = [
@@ -18,7 +19,7 @@ export function WhatStudentsDo() {
 
   return (
     <section className="py-16 bg-white relative overflow-hidden">
-      <div className="container-fluid max-w-6xl mx-auto">
+      <SectionReveal className="container-fluid max-w-6xl mx-auto">
         <div className="text-center mb-20 max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-8 leading-tight">
             What Happens Inside FunSmartism?
@@ -73,7 +74,7 @@ export function WhatStudentsDo() {
               All projects made are take-home creations.
            </div>
         </div>
-      </div>
+      </SectionReveal>
     </section>
   )
 }

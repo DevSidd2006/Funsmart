@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import { Plus, Minus } from 'lucide-react'
+import { SectionReveal } from '../ui/SectionReveal'
 
 const moments = [
   {
@@ -31,7 +32,7 @@ export function RealSessionMoments() {
 
   return (
     <section className="relative bg-white py-[60px]">
-      <div className="container-fluid">
+      <SectionReveal className="container-fluid">
         <div className="max-w-4xl mx-auto text-center mb-14">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#1E2A44] leading-tight mb-6">
             Moments from Real Sessions
@@ -118,7 +119,7 @@ export function RealSessionMoments() {
             </div>
           ))}
         </div>
-      </div>
+      </SectionReveal>
     </section>
   )
 }

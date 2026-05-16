@@ -3,6 +3,7 @@ import { Button } from '../ui/Button'
 import Link from 'next/link'
 import { JoinCommunity } from '../ui/JoinCommunity'
 import { Calendar, MapPin } from 'lucide-react'
+import { SectionReveal } from '../ui/SectionReveal'
 
 export function ThinkingReset() {
   const designedFor = [
@@ -14,7 +15,7 @@ export function ThinkingReset() {
 
   return (
     <section id="workshop" className="py-16 bg-white overflow-hidden relative">
-      <div className="container-fluid">
+      <SectionReveal className="container-fluid">
         <div className="bg-[#FAF9F6] rounded-[3rem] border border-neutral-100 overflow-hidden shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 items-stretch">
 
@@ -41,11 +42,11 @@ export function ThinkingReset() {
                 </ul>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center w-full max-w-2xl">
-                <Link href="/schedule-visit" className="w-full sm:w-80">
+              <div className="flex flex-col sm:flex-row gap-3 items-center w-full max-w-md">
+                <Link href="/schedule-visit" className="w-full sm:flex-1">
                   <Button
                     size="lg"
-                    className="bg-accent-teal border-none text-white shadow-xl shadow-accent-teal/20 rounded-full font-bold w-full min-h-[64px]"
+                    className="bg-accent-teal border-none text-white shadow-lg shadow-accent-teal/20 rounded-full font-bold px-4 py-3 text-sm md:text-base min-h-[56px] w-full"
                   >
                     Schedule a Visit
                   </Button>
@@ -53,7 +54,7 @@ export function ThinkingReset() {
                 <JoinCommunity
                   variant="solid"
                   size="lg"
-                  className="w-full sm:w-80 min-h-[64px]"
+                  className="rounded-full font-bold px-4 py-3 text-sm md:text-base min-h-[56px] w-full sm:flex-1"
                 />
               </div>
             </div>
@@ -72,7 +73,7 @@ export function ThinkingReset() {
 
           </div>
         </div>
-      </div>
+      </SectionReveal>
     </section>
   )
 }

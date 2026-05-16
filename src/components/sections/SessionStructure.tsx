@@ -1,4 +1,5 @@
 import { Calendar, Monitor, Users } from 'lucide-react'
+import { SectionReveal } from '../ui/SectionReveal'
 
 export function SessionStructure() {
   const cards = [
@@ -21,7 +22,7 @@ export function SessionStructure() {
 
   return (
     <section className="py-16 bg-accent-surface overflow-hidden">
-      <div className="container-fluid max-w-6xl mx-auto">
+      <SectionReveal className="container-fluid max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           
           {/* Text Content */}
@@ -75,12 +76,14 @@ export function SessionStructure() {
 
         {/* Centered Quote */}
         <div className="mt-12 flex justify-center">
-          <div className="px-8 py-4 bg-white border-2 border-accent-teal shadow-sm rounded-2xl italic text-primary-500 font-medium text-center whitespace-nowrap">
-            Children are guided— but not spoon-fed fixed answers.
+          <div className="px-10 py-6 bg-white border border-neutral-100 shadow-sm rounded-3xl italic text-primary-500 font-medium text-center relative overflow-hidden flex items-center gap-4">
+             <div className="absolute left-0 top-0 w-2 h-full bg-accent-teal" />
+             <p className="text-lg md:text-xl whitespace-nowrap">
+               Children are <span className="bg-[#FF00FF] text-white px-2 py-0.5 rounded-md not-italic font-bold mx-1">guided</span>— but not spoon-fed fixed answers.
+             </p>
           </div>
         </div>
-
-      </div>
+      </SectionReveal>
     </section>
   )
 }

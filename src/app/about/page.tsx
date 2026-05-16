@@ -1,19 +1,18 @@
+'use client'
+
 import { Metadata } from 'next'
 import { Button } from '@/components/ui/Button'
 import { FounderJourney } from '@/components/sections/FounderJourney'
 import { OurTeam } from '@/components/sections/OurTeam'
 import { RealSessionMoments } from '@/components/sections/RealSessionMoments'
+import { InspirationSection } from '@/components/sections/InspirationSection'
 import { ChevronDown } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { galleryItems } from '@/data/gallery'
+import { SectionReveal } from '@/components/ui/SectionReveal'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fursmartism.vercel.app'
-
-export const metadata: Metadata = {
-  title: 'About Us | FunSmartism',
-  description: 'We started FunSmartism because we kept seeing something schools weren’t designed to notice.',
-}
 
 const beliefsData = [
   {
@@ -34,7 +33,7 @@ export default function AboutPage() {
       <section className="pt-40 pb-24 bg-accent-surface relative min-h-[70vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 lab-grid opacity-[0.03]" />
         <div className="container-fluid relative z-10 text-center">
-          <div className="max-w-5xl mx-auto">
+          <SectionReveal className="max-w-5xl mx-auto">
             <h1 className="text-3xl md:text-5xl lg:text-[3.25rem] font-serif font-bold text-primary-500 mb-8 leading-tight tracking-tight">
               We Started FunSmartism Because We Kept Seeing <br className="hidden md:block" />
               Something Schools Weren’t Designed <br className="hidden md:block" />
@@ -44,13 +43,13 @@ export default function AboutPage() {
               Children often behave very differently when they are given real opportunities to build, explore, experiment, and solve unfamiliar challenges actively. <br />
               <span className="font-medium text-primary-500">FunSmartism was created to provide more of those environments.</span>
             </p>
-          </div>
+          </SectionReveal>
         </div>
       </section>
 
       {/* The Belief */}
       <section className="py-16 bg-white relative z-20">
-        <div className="container-fluid max-w-6xl mx-auto">
+        <SectionReveal className="container-fluid max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-center text-[#1E2A44] mb-16">
             Three Things We Believe.
           </h2>
@@ -65,12 +64,12 @@ export default function AboutPage() {
               </div>
             ))}
           </div>
-        </div>
+        </SectionReveal>
       </section>
 
       {/* Why We Built This — VERTICAL FLOW REDESIGN */}
       <section className="py-24 bg-[#FAF9F6] relative overflow-hidden">
-        <div className="container-fluid max-w-4xl mx-auto relative z-10">
+        <SectionReveal className="container-fluid max-w-4xl mx-auto relative z-10">
           
           {/* 1. Heading */}
           <div className="text-center mb-16">
@@ -141,14 +140,20 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </div>
+        </SectionReveal>
       </section>
+
+      <FounderJourney />
+
+      <OurTeam />
 
       <RealSessionMoments />
 
+      <InspirationSection />
+
       {/* Philosophy */}
       <section className="py-20 bg-[#1E2A44] text-white text-center">
-        <div className="container-fluid max-w-4xl mx-auto">
+        <SectionReveal className="container-fluid max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-8 leading-tight">
             Marks show outcomes. <br className="hidden md:block" />
             <span className="text-accent-teal">Real-world learning experiences shape confidence, curiosity, and independent problem-solving — not rote learning.</span>
@@ -156,12 +161,12 @@ export default function AboutPage() {
           <p className="text-xl text-neutral-300 leading-relaxed font-light max-w-2xl mx-auto">
             We are not against exams, academics, or results. We simply believe children also need environments where they can actively participate in learning instead of only following instructions.
           </p>
-        </div>
+        </SectionReveal>
       </section>
 
       {/* Gallery Thumbnails Teaser */}
       <section className="py-20 bg-[#FAF9F6]">
-        <div className="container-fluid">
+        <SectionReveal className="container-fluid">
           <div className="flex flex-col md:flex-row items-end justify-between gap-6 mb-10">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 leading-tight">
               Real moments from <span className="text-accent-teal italic font-light">FunSmartism.</span>
@@ -189,12 +194,12 @@ export default function AboutPage() {
               </Link>
             ))}
           </div>
-        </div>
+        </SectionReveal>
       </section>
 
       {/* Final CTA */}
       <section className="py-20 bg-white text-center">
-        <div className="container-fluid max-w-4xl mx-auto">
+        <SectionReveal className="container-fluid max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-8 leading-tight">
             See The Environment <span className="text-accent-teal italic font-light">yourself</span>
           </h2>
@@ -206,9 +211,8 @@ export default function AboutPage() {
               Schedule A Visit →
             </Button>
           </Link>
-        </div>
+        </SectionReveal>
       </section>
     </div>
   )
 }
-

@@ -30,7 +30,7 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const isDarkHeroPage = pathname === '/' || pathname === '/programs' || pathname === '/activities' || pathname === '/gallery' || pathname === '/about' || pathname === '/schedule-visit'
+  const isDarkHeroPage = pathname === '/' || pathname === '/programs' || pathname === '/gallery' || pathname === '/schedule-visit'
   const useLightText = isDarkHeroPage && !scrolled && !isOpen
 
   return (

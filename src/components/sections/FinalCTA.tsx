@@ -1,5 +1,6 @@
 import { Button } from '../ui/Button'
 import Link from 'next/link'
+import { SectionReveal } from '../ui/SectionReveal'
 
 export function FinalCTA({ data }: { data?: any }) {
   const headline = data?.headline || "Marks show outcomes."
@@ -13,7 +14,7 @@ export function FinalCTA({ data }: { data?: any }) {
       <div className="absolute -top-1/2 -right-1/4 w-[800px] h-[800px] bg-accent-teal/10 rounded-full blur-[120px] z-0" />
       <div className="absolute -bottom-1/2 -left-1/4 w-[800px] h-[800px] bg-white/5 rounded-full blur-[120px] z-0" />
       
-      <div className="container-fluid relative z-10 text-center">
+      <SectionReveal className="container-fluid relative z-10 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold mb-4 leading-tight text-white">
             {headline}
@@ -41,7 +42,7 @@ export function FinalCTA({ data }: { data?: any }) {
           </div>
 
         </div>
-      </div>
+      </SectionReveal>
     </section>
   )
 }

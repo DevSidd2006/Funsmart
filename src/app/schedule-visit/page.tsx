@@ -6,6 +6,7 @@ import { Accordion } from '@/components/ui/Accordion'
 import { Check, Calendar, Clock, MapPin, MessageSquare, ArrowRight, Bot, Target, Rocket, Users, Milestone, ChevronDown, ChevronUp } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { SectionReveal } from '@/components/ui/SectionReveal'
 
 export default function ScheduleVisitPage() {
   const [isSubmitted, setIsSubmitted] = useState(false)
@@ -46,7 +47,7 @@ export default function ScheduleVisitPage() {
       <section className="pt-40 pb-12 text-center bg-[#1E2A44] !text-white relative overflow-hidden">
         <div className="absolute inset-0 lab-grid opacity-[0.03]" />
         <div className="container-fluid relative z-10">
-          <div className="max-w-4xl mx-auto">
+          <SectionReveal className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold !text-white mb-8 leading-tight tracking-tight">
               See The Environment In Person
             </h1>
@@ -60,13 +61,13 @@ export default function ScheduleVisitPage() {
                 Schedule A Visit →
               </Button>
             </a>
-          </div>
+          </SectionReveal>
         </div>
       </section>
 
       {/* SECTION 02 — WHY PARENTS VISIT */}
       <section className="py-16 bg-white">
-        <div className="container-fluid max-w-6xl mx-auto">
+        <SectionReveal className="container-fluid max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8 leading-tight">
@@ -109,14 +110,14 @@ export default function ScheduleVisitPage() {
                />
             </div>
           </div>
-        </div>
+        </SectionReveal>
       </section>
 
       {/* Main Content Layout */}
       {/* SECTION 03 — WHAT YOU CAN EXPECT */}
 
       <section className="py-16 bg-neutral-50">
-        <div className="container-fluid max-w-6xl mx-auto">
+        <SectionReveal className="container-fluid max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-16 text-center">
             What You Can Expect During Your Visit
           </h2>
@@ -133,12 +134,12 @@ export default function ScheduleVisitPage() {
               </div>
             ))}
           </div>
-        </div>
+        </SectionReveal>
       </section>
 
       {/* SECTION 04 — WHO VISITS */}
       <section className="py-16 bg-white">
-        <div className="container-fluid max-w-4xl mx-auto">
+        <SectionReveal className="container-fluid max-w-4xl mx-auto">
           <div className="bg-[#1E2A44] rounded-[3rem] p-10 md:p-16 text-white relative overflow-hidden">
             <div className="absolute inset-0 lab-grid opacity-10" />
             <h2 className="text-2xl md:text-4xl font-serif font-bold text-white mb-12 relative z-10 text-center">
@@ -163,7 +164,7 @@ export default function ScheduleVisitPage() {
               ))}
             </div>
           </div>
-        </div>
+        </SectionReveal>
       </section>
 
       {/* SECTION 05 & 06 — FORM & INFO */}
@@ -173,7 +174,7 @@ export default function ScheduleVisitPage() {
             
             {/* Form Column */}
             <div className="lg:col-span-7">
-              <div className="bg-white p-10 md:p-14 rounded-[3rem] border border-neutral-100 shadow-huge">
+              <SectionReveal className="bg-white p-10 md:p-14 rounded-[3rem] border border-neutral-100 shadow-huge">
                 {!isSubmitted ? (
                   <>
                     <h2 className="text-3xl font-serif font-bold text-primary-500 mb-4">Schedule A Visit</h2>
@@ -239,46 +240,48 @@ export default function ScheduleVisitPage() {
                     <p className="text-neutral-600 font-light">We'll get back to you within 24 hours to confirm your visit details.</p>
                   </div>
                 )}
-              </div>
+              </SectionReveal>
             </div>
 
             {/* Info Column */}
             <div className="lg:col-span-5 space-y-8">
-              <h2 className="text-3xl font-serif font-bold text-primary-500">Visit Information</h2>
-              <div className="space-y-4">
-                {[
-                  { label: 'Location', val: 'Bibwewadi, Pune (Exact location shared after confirmation)', icon: MapPin },
-                  { label: 'Session Format', val: 'Weekend-based sessions across the academic year.', icon: Calendar },
-                  { label: 'Age Group', val: 'Typically for children aged 8–15 years.', icon: Users },
-                ].map((item, i) => (
-                  <div key={i} className="bg-white p-6 rounded-3xl border border-neutral-100 shadow-sm flex gap-5 items-center">
-                    <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center text-accent-teal flex-shrink-0">
-                      <item.icon size={20} />
+              <SectionReveal>
+                <h2 className="text-3xl font-serif font-bold text-primary-500 mb-8">Visit Information</h2>
+                <div className="space-y-4">
+                  {[
+                    { label: 'Location', val: 'Bibwewadi, Pune (Exact location shared after confirmation)', icon: MapPin },
+                    { label: 'Session Format', val: 'Weekend-based sessions across the academic year.', icon: Calendar },
+                    { label: 'Age Group', val: 'Typically for children aged 8–15 years.', icon: Users },
+                  ].map((item, i) => (
+                    <div key={i} className="bg-white p-6 rounded-3xl border border-neutral-100 shadow-sm flex gap-5 items-center">
+                      <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 flex items-center justify-center text-accent-teal flex-shrink-0">
+                        <item.icon size={20} />
+                      </div>
+                      <div>
+                        <p className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest mb-1">{item.label}</p>
+                        <p className="text-primary-500 font-medium">{item.val}</p>
+                      </div>
                     </div>
-                    <div>
-                      <p className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest mb-1">{item.label}</p>
-                      <p className="text-primary-500 font-medium">{item.val}</p>
-                    </div>
-                  </div>
-                ))}
+                  ))}
 
-                <div className="bg-[#1E2A44] p-8 rounded-[2.5rem] text-white">
-                  <h4 className="text-sm font-bold uppercase tracking-widest text-accent-teal mb-6">Programs Include</h4>
-                  <ul className="space-y-4">
-                    {[
-                      'Year-long RoboSTEM Lab',
-                      '10-Day Thinking RESET',
-                      '1-day STEM Challenge',
-                      'Edu-events & Exhibitions'
-                    ].map((item, i) => (
-                      <li key={i} className="flex gap-3 items-center text-sm font-light text-white/80">
-                        <div className="w-1 h-1 rounded-full bg-accent-teal" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="bg-[#1E2A44] p-8 rounded-[2.5rem] text-white">
+                    <h4 className="text-sm font-bold uppercase tracking-widest text-accent-teal mb-6">Programs Include</h4>
+                    <ul className="space-y-4">
+                      {[
+                        'Year-long RoboSTEM Lab',
+                        '10-Day Thinking RESET',
+                        '1-day STEM Challenge',
+                        'Edu-events & Exhibitions'
+                      ].map((item, i) => (
+                        <li key={i} className="flex gap-3 items-center text-sm font-light text-white/80">
+                          <div className="w-1 h-1 rounded-full bg-accent-teal" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-              </div>
+              </SectionReveal>
             </div>
 
           </div>
@@ -287,7 +290,7 @@ export default function ScheduleVisitPage() {
 
       {/* SECTION 07 — FINAL CTA */}
       <section className="py-20 bg-white text-center">
-        <div className="container-fluid max-w-4xl mx-auto">
+        <SectionReveal className="container-fluid max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-8 leading-tight">
             Sometimes One Visit Changes Everything.
           </h2>
@@ -304,11 +307,11 @@ export default function ScheduleVisitPage() {
             </p>
           </div>
           <a href="#schedule-form">
-            <Button size="lg" className="bg-accent-teal hover:bg-primary-500 border-none text-white px-16 py-6 shadow-huge shadow-accent-teal/30 rounded-full font-bold">
+            <Button size="lg" className="bg-accent-teal hover:bg-primary-500 border-none text-white px-16 py-6 shadow-huge shadow-accent-teal/20 rounded-full font-bold">
               Schedule Your Visit →
             </Button>
           </a>
-        </div>
+        </SectionReveal>
       </section>
     </div>
   )

@@ -1,6 +1,7 @@
 import { Calendar, Eye, Users, ArrowRight } from 'lucide-react'
 import { Button } from '../ui/Button'
 import Link from 'next/link'
+import { SectionReveal } from '../ui/SectionReveal'
 
 export function OneDayChallenge() {
   const observations = [
@@ -12,7 +13,7 @@ export function OneDayChallenge() {
 
   return (
     <section className="py-16 bg-white relative overflow-hidden">
-      <div className="container-fluid max-w-6xl mx-auto">
+      <SectionReveal className="container-fluid max-w-6xl mx-auto">
         <div className="bg-primary-500 rounded-[3rem] overflow-hidden shadow-huge relative">
           <div className="absolute inset-0 lab-grid opacity-[0.05]" />
           <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-accent-teal/10 rounded-full blur-[100px]" />
@@ -80,7 +81,7 @@ export function OneDayChallenge() {
             </div>
           </div>
         </div>
-      </div>
+      </SectionReveal>
     </section>
   )
 }

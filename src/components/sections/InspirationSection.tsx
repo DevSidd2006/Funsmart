@@ -1,5 +1,8 @@
+'use client'
+
 import Image from 'next/image'
 import { cn } from '@/lib/cn'
+import { motion } from 'framer-motion'
 
 const experts = [
   {
@@ -103,6 +106,28 @@ const experts = [
 ]
 
 export function InspirationSection() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  }
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: 'easeOut' as const,
+      },
+    },
+  }
+
   return (
     <section className="py-20 bg-[#151F32] text-white overflow-hidden relative border-y border-accent-teal/20">
       {/* Background depth effects */}
@@ -113,7 +138,13 @@ export function InspirationSection() {
       <div className="container-fluid max-w-7xl mx-auto relative z-10">
 
         {/* Header */}
-        <div className="text-center mb-16 max-w-3xl mx-auto">
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16 max-w-3xl mx-auto"
+        >
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-white leading-tight mb-6">
             Experts & Mentors Who{' '}
             <span className="text-accent-teal italic font-light">Inspired FunSmartism</span>
@@ -123,13 +154,20 @@ export function InspirationSection() {
             of India's most accomplished scientists, educators, and innovators. These interactions
             continue to shape how we think about curiosity, building, and teaching children to think.
           </p>
-        </div>
+        </motion.div>
 
         {/* Expert Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 mb-16">
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
+          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 mb-16"
+        >
           {experts.map((expert, i) => (
-            <div
+            <motion.div
               key={i}
+              variants={itemVariants}
               className="group relative rounded-[1.5rem] overflow-hidden bg-white/5 border border-white/10 hover:border-accent-teal/50 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
             >
               {/* Photo */}
@@ -159,11 +197,14 @@ export function InspirationSection() {
                   &ldquo;{expert.note}&rdquo;
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
 
           {/* Extra interaction card */}
-          <div className="group relative rounded-[1.5rem] overflow-hidden bg-white/5 border border-white/10 hover:border-accent-teal/50 transition-all duration-500">
+          <motion.div 
+            variants={itemVariants}
+            className="group relative rounded-[1.5rem] overflow-hidden bg-white/5 border border-white/10 hover:border-accent-teal/50 transition-all duration-500"
+          >
             <div className="relative aspect-[4/3]">
               <Image
                 src="/images/gallery/scientist-interaction.jpg"
@@ -179,11 +220,17 @@ export function InspirationSection() {
                 </p>
               </div>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Footer note */}
-        <div className="bg-white/[0.04] border border-white/10 rounded-[2rem] p-8 md:p-10 max-w-4xl mx-auto text-center relative overflow-hidden">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="bg-white/[0.04] border border-white/10 rounded-[2rem] p-8 md:p-10 max-w-4xl mx-auto text-center relative overflow-hidden"
+        >
           <div className="absolute top-0 left-0 w-1.5 h-full bg-accent-teal rounded-l-[2rem]" />
           <p className="text-base md:text-lg text-white/75 leading-relaxed font-light mb-4">
             FunSmartism values learning from people who have pushed the boundaries of science,
@@ -194,7 +241,7 @@ export function InspirationSection() {
             We continue to seek interactions with exceptional scientists, educators, and innovators,
             and may collaborate with similar personalities in the future.
           </p>
-        </div>
+        </motion.div>
 
       </div>
     </section>

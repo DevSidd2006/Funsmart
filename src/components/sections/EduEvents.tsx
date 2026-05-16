@@ -1,4 +1,5 @@
 import { Grid, Users, MessageSquare } from 'lucide-react'
+import { SectionReveal } from '../ui/SectionReveal'
 
 export function EduEvents() {
   const people = ['Scientists', 'Researchers', 'Innovators', 'Engineers', 'Startup Founders', 'Industry Experts']
@@ -16,7 +17,7 @@ export function EduEvents() {
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent-teal/10 rounded-full blur-[120px] -translate-y-1/3 translate-x-1/3 animate-[pulse_6s_ease-in-out_infinite]" />
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-600/30 rounded-full blur-[150px] translate-y-1/3 -translate-x-1/4" />
 
-      <div className="container-fluid relative z-10">
+      <SectionReveal className="container-fluid relative z-10">
         <div className="max-w-7xl mx-auto mb-16 text-center flex flex-col items-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-8 leading-[1.1] tracking-tight">
             Children Don't Just Learn Concepts. <br />
@@ -61,8 +62,7 @@ export function EduEvents() {
             </p>
           </div>
         </div>
-
-      </div>
+      </SectionReveal>
     </section>
   )
 }

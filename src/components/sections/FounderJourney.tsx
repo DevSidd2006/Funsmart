@@ -1,5 +1,6 @@
 import { Award, Sparkles, BookOpen, Globe } from 'lucide-react'
 import Image from 'next/image'
+import { SectionReveal } from '../ui/SectionReveal'
 
 const founderNotes = [
   {
@@ -40,7 +41,7 @@ const storyBoxes = [
 export function FounderJourney() {
   return (
     <section className="section-spacing bg-[#F8FBFF]">
-      <div className="container-fluid">
+      <SectionReveal className="container-fluid">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 items-start">
             <div>
@@ -126,7 +127,7 @@ export function FounderJourney() {
             ))}
           </div>
         </div>
-      </div>
+      </SectionReveal>
     </section>
   )
 }

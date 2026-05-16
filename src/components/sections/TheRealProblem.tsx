@@ -1,4 +1,5 @@
 import { AlertTriangle, BookX, UserX, MonitorOff, Wrench, Search } from 'lucide-react'
+import { SectionReveal } from '../ui/SectionReveal'
 
 export function TheRealProblem() {
   const painPoints = [
@@ -12,7 +13,7 @@ export function TheRealProblem() {
 
   return (
     <section className="py-16 bg-neutral-50 relative overflow-hidden">
-      <div className="container-fluid max-w-6xl mx-auto">
+      <SectionReveal className="container-fluid max-w-6xl mx-auto">
         
         {/* Main Heading & Intro */}
         <div className="max-w-4xl mb-20 text-center mx-auto">
@@ -68,19 +69,16 @@ export function TheRealProblem() {
 
           <div className="bg-primary-500 rounded-[2rem] p-10 md:p-12 text-center text-white relative overflow-hidden">
              <div className="absolute inset-0 lab-grid opacity-10" />
-             <p className="text-lg md:text-xl font-light italic relative z-10 text-white/80 mb-2">
-               Sometimes parents accidently over help and child stops thinking.
-             </p>
-             <p className="text-lg md:text-xl font-light italic relative z-10 text-white/80 mb-4">
-               Parents don’t know when to step in and when to step back.
+             <p className="text-lg md:text-xl font-light italic relative z-10 text-white/80 mb-8 leading-relaxed max-w-4xl mx-auto">
+               Sometimes parents accidentally over-help and the child stops thinking. <br className="hidden md:block" />
+               Parents don’t know when to <span className="bg-[#FF00FF] text-white px-1.5 py-0.5 rounded-md mx-0.5 not-italic font-semibold">step</span> in and when to <span className="bg-[#FF00FF] text-white px-1.5 py-0.5 rounded-md mx-0.5 not-italic font-semibold">step</span> back.
              </p>
              <h3 className="text-2xl md:text-3xl font-serif font-bold relative z-10 leading-tight text-white">
                FunSmartism creates environments where children actively use thinking instead of only consuming information.
              </h3>
           </div>
         </div>
-        
-      </div>
+      </SectionReveal>
     </section>
   )
 }

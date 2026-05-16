@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
+import { SectionReveal } from '../ui/SectionReveal'
 
 function getImageSrc(image: unknown): string {
   if (typeof image === 'string') return image
@@ -12,7 +13,7 @@ export function GalleryTeaser({ items }: { items: any[] }) {
 
   return (
     <section className="section-spacing bg-white">
-      <div className="container-fluid">
+      <SectionReveal className="container-fluid">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
           <div className="max-w-xl">
@@ -66,7 +67,7 @@ export function GalleryTeaser({ items }: { items: any[] }) {
             <ArrowRight size={16} className="text-accent-teal" />
           </Link>
         </div>
-      </div>
+      </SectionReveal>
     </section>
   )
 }

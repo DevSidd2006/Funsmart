@@ -58,7 +58,7 @@ export default function GalleryPage() {
               onClick={() => setActiveTab('lab')}
               className={`flex-1 px-2 py-3 md:py-3.5 rounded-full text-[11px] md:text-sm font-bold tracking-widest uppercase transition-all duration-300 ${activeTab === 'lab' ? 'bg-primary-500 text-white shadow-md' : 'text-neutral-500 hover:text-primary-500'}`}
             >
-              Lab Moments
+              Real Moments
             </button>
             <button
               onClick={() => setActiveTab('news')}

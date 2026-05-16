@@ -1,4 +1,5 @@
 import { CheckCircle2 } from 'lucide-react'
+import { SectionReveal } from '../ui/SectionReveal'
 
 export function Outcomes() {
   const outcomes = [
@@ -13,7 +14,7 @@ export function Outcomes() {
 
   return (
     <section className="py-16 bg-accent-surface overflow-hidden">
-      <div className="container-fluid max-w-5xl mx-auto">
+      <SectionReveal className="container-fluid max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-6">
             What Parents Often Notice Over Time
@@ -38,7 +39,7 @@ export function Outcomes() {
             </div>
           ))}
         </div>
-      </div>
+      </SectionReveal>
     </section>
   )
 }

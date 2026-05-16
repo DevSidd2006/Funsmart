@@ -1,4 +1,5 @@
 import { Atom, Cpu, Dna, FlaskConical, Microscope, Brain, Rocket, BookOpen, Puzzle, Zap } from 'lucide-react'
+import { SectionReveal } from '../ui/SectionReveal'
 
 const domains = [
   { icon: Rocket,       title: 'Robotics & Engineering' },
@@ -16,7 +17,7 @@ const domains = [
 export function ProgramsSlider() {
   return (
     <section className="section-spacing bg-white overflow-hidden">
-      <div className="container-fluid">
+      <SectionReveal className="container-fluid">
         {/* Header */}
         <div className="max-w-2xl mb-12">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
@@ -43,7 +44,7 @@ export function ProgramsSlider() {
             )
           })}
         </div>
-      </div>
+      </SectionReveal>
     </section>
   )
 }

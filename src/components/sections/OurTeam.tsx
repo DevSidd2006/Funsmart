@@ -1,4 +1,5 @@
 import { Eye, Users, Sparkles, Handshake } from 'lucide-react'
+import { SectionReveal } from '../ui/SectionReveal'
 
 const teamMembers = [
   {
@@ -26,7 +27,7 @@ const teamMembers = [
 export function OurTeam() {
   return (
     <section className="section-spacing bg-white">
-      <div className="container-fluid">
+      <SectionReveal className="container-fluid">
         <div className="max-w-4xl mx-auto text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
             People who pay attention.
@@ -54,7 +55,7 @@ export function OurTeam() {
             )
           })}
         </div>
-      </div>
+      </SectionReveal>
     </section>
   )
 }
