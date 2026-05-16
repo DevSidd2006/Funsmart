@@ -30,9 +30,9 @@ export default function GalleryPage() {
               transition={{ duration: 0.8 }}
               className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight tracking-tight mb-8"
             >
-              {activeTab === 'lab' ? 'Real Projects. Real Challenges. ' : 'In The Press. '}
+              {activeTab === 'lab' ? 'Real Projects. Real Challenges.' : 'In The Press.'}
               <br />
-              <span className="text-accent-teal italic font-light whitespace-normal md:whitespace-nowrap">
+              <span className="text-accent-teal italic font-light">
                 {activeTab === 'lab' ? 'Real Learning Moments.' : 'Spreading the Vision of RoboSTEM.'}
               </span>
             </motion.h1>
@@ -86,7 +86,7 @@ export default function GalleryPage() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.5 }}
-                  className={`relative group overflow-hidden rounded-3xl shadow-sm border border-neutral-100 transition-all duration-500 hover:shadow-2xl ${item.span || (activeTab === 'news' ? 'lg:col-span-1 md:col-span-2' : 'lg:col-span-1 md:col-span-2')}`}
+                  className={`relative group overflow-hidden rounded-3xl shadow-sm border border-neutral-100 transition-all duration-500 hover:shadow-2xl ${item.span || 'col-span-1'}`}
                 >
                   {item.image ? (
                     <Image

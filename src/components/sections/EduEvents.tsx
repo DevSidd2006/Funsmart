@@ -1,11 +1,7 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { Grid, Settings, Users, MessageSquare } from 'lucide-react'
-import { cn } from '@/lib/cn'
+import { Grid, Users, MessageSquare } from 'lucide-react'
 
 export function EduEvents() {
   const people = ['Scientists', 'Researchers', 'Innovators', 'Engineers', 'Startup Founders', 'Industry Experts']
-  const orgs = ['ISRO', 'DRDO', 'NIV', 'IMD', 'IISER', 'and other innovation ecosystems']
 
   const opportunities = [
     { label: 'Interact directly with experts', icon: MessageSquare },
@@ -17,17 +13,16 @@ export function EduEvents() {
   return (
     <section className="py-20 bg-[#151F32] text-white overflow-hidden relative border-y border-accent-teal/20 shadow-[inset_0_0_100px_rgba(0,0,0,0.5)]">
       <div className="absolute inset-0 lab-grid opacity-[0.04] pointer-events-none mix-blend-overlay" />
-      {/* Animated glowing orbs for depth */}
       <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent-teal/10 rounded-full blur-[120px] -translate-y-1/3 translate-x-1/3 animate-[pulse_6s_ease-in-out_infinite]" />
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-primary-600/30 rounded-full blur-[150px] translate-y-1/3 -translate-x-1/4" />
-      
+
       <div className="container-fluid relative z-10">
-        <div className="max-w-7xl mx-auto mb-20 text-center flex flex-col items-center">
+        <div className="max-w-7xl mx-auto mb-16 text-center flex flex-col items-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-8 leading-[1.1] tracking-tight">
-            Children Don’t Just Learn Concepts. <br />
-            <span className="text-accent-teal italic font-light opacity-90">They Interact with actual experts, people Building The Future.</span>
+            Children Don't Just Learn Concepts. <br />
+            <span className="text-accent-teal italic font-light opacity-90">They Interact with Actual Experts Building The Future.</span>
           </h2>
-          <p className="text-lg md:text-xl text-[#B7E3DD] max-w-2xl leading-relaxed font-light mb-12">
+          <p className="text-lg md:text-xl text-[#B7E3DD] max-w-2xl leading-relaxed font-light mb-10">
             Throughout the academic year, FunSmartism hosts special edu-events where students interact with:
           </p>
 
@@ -38,73 +33,15 @@ export function EduEvents() {
               </span>
             ))}
           </div>
-
-          <div className="flex flex-col items-center mb-24 w-full">
-            <div className="max-w-2xl mb-12">
-              <p className="text-lg text-[#B7E3DD] leading-relaxed font-light mb-8">
-                Guests may include experts associated with organisations such as:
-              </p>
-              <div className="flex flex-wrap justify-center gap-x-6 gap-y-3">
-                {orgs.map((org, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent-teal opacity-60" />
-                    <span className="text-white/80 font-medium italic">{org}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 w-full max-w-[1400px] justify-center mx-auto px-4">
-              {[
-                { name: 'Dr. R. Mashelkar', img: '/images/gallery/scientist-raghunath-mashelkar.jpg', pos: 'object-[center_10%]' },
-                { name: 'Dr. Anil Kakodkar', img: '/images/gallery/scientist-anil-kakodkar.png', pos: 'object-[75%_20%]' },
-                { name: 'Prof. Jayant Narlikar', img: '/images/gallery/scientist-jayant-naralikar.jpg', pos: 'object-[70%_center]' },
-                { name: 'S. Somanath (ISRO)', img: '/images/scientists/somnath.jpg', pos: 'object-[85%_center]' },
-                { name: 'Arvind Gupta', img: '/images/scientists/arvind-gupta.jpg', pos: 'object-[35%_center]' },
-                { name: 'A.K. Sinha', img: '/images/scientists/ak-sinha.jpg', pos: 'object-center' },
-                { name: 'Kashinath Deodhar', img: '/images/scientists/kashinath-deodhar.jpg', pos: 'object-center' },
-                { name: 'Pramod Khandekar', img: '/images/scientists/pramod-khandekar.jpg', pos: 'object-center' },
-                { name: 'Shirish Deshmukh', img: '/images/scientists/shirish-deshmukh.jpg', pos: 'object-center' },
-                { name: 'Dr. Mukund Muharir', img: '/images/scientists/dr-mukund-muharir.jpg', pos: 'object-center' },
-                { name: 'Shrirang Gokhale', img: '/images/scientists/shrirang-gokhale.jpg', pos: 'object-center' },
-                { name: 'Bal Patil', img: '/images/scientists/bal-patil.jpg', pos: 'object-[center_20%]' },
-                { name: 'Jayesh Rathore', img: '/images/scientists/jayesh-rathore.jpg', pos: 'object-center' },
-                { name: 'Uday Deshpande', img: '/images/scientists/uday-deshpande.jpg', pos: 'object-center' },
-                { name: 'Expert Interaction', img: '/images/gallery/scientist-interaction.jpg', pos: 'object-center' },
-              ].map((expert, i) => (
-                <div 
-                  key={i} 
-                  className="relative aspect-[4/3] rounded-[2rem] overflow-hidden group bg-white/5 border border-white/10 transition-all duration-500 hover:border-accent-teal/50 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)]"
-                >
-                  <div className="absolute inset-0 transition-all duration-700">
-                    <Image 
-                      src={expert.img} 
-                      alt={expert.name} 
-                      fill 
-                      sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
-                      className={cn("object-cover transition-all duration-700 group-hover:scale-110", expert.pos)}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                  </div>
-                  
-                  <div className="absolute bottom-0 left-0 right-0 p-5 transform translate-y-1 group-hover:translate-y-0 transition-transform duration-500">
-                    <p className="text-[11px] md:text-xs font-bold text-white uppercase tracking-[0.2em] leading-tight text-center drop-shadow-lg">
-                      {expert.name}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
         </div>
 
-        <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-10 md:p-14 rounded-[3rem] max-w-7xl mx-auto shadow-2xl relative overflow-hidden group">
+        <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-10 md:p-14 rounded-[3rem] max-w-7xl mx-auto shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 left-0 w-2 h-full bg-accent-teal" />
-          
+
           <h3 className="text-2xl font-serif font-bold text-white mb-10 text-center">
             Year-long students receive priority opportunities to:
           </h3>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
             {opportunities.map((opp, i) => (
               <div key={i} className="flex flex-col items-center text-center p-8 bg-white/[0.02] border border-white/10 rounded-3xl hover:bg-white/[0.08] hover:border-accent-teal/40 transition-all duration-500 shadow-lg group/card">
@@ -117,7 +54,7 @@ export function EduEvents() {
               </div>
             ))}
           </div>
-          
+
           <div className="mt-12 text-center pt-8 border-t border-white/10">
             <p className="text-xl text-accent-teal italic font-light">
               Experience real-world innovation culture beyond textbooks

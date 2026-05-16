@@ -8,54 +8,107 @@ import { type GalleryItem } from '../lib/types'
  * 3. 'span' controls the size. Most use 'md:col-span-4' for a square.
  */
 
-export const galleryItems: GalleryItem[] = [
+export const teaserItems: GalleryItem[] = [
   {
     id: 1,
     image: '/images/gallery/stem-challenge-bibwewadi.jpg',
-    title: 'STEM Challenge Bibwewadi',
-    caption: 'Children engaging in hands-on STEM challenges, building structures and testing their designs.',
-    tag: 'STEM CHALLENGES',
-    span: 'lg:col-span-2 lg:row-span-2 md:col-span-2 md:row-span-2',
+    title: 'STEM Challenges',
+    caption: 'Children engaging in hands-on building and testing.',
+    tag: 'STEM',
+  },
+  {
+    id: 2,
+    image: '/images/gallery/robotics-review.jpg',
+    title: 'Robotics Workshop',
+    caption: 'Deep dive into robotics and programming.',
+    tag: 'ROBOTICS',
   },
   {
     id: 3,
-    image: '/images/gallery/robotics-review.jpg',
-    title: 'Robotics Design Review',
-    caption: 'Children discussing their robot designs and troubleshooting code during a robotics workshop.',
-    tag: 'ROBOTICS',
-    span: 'lg:col-span-1 lg:row-span-1 md:col-span-1',
+    image: '/images/gallery/stem-bridge-challenge.jpg',
+    title: 'Engineering Lab',
+    caption: 'Testing structural integrity and designs.',
+    tag: 'ENGINEERING',
+  },
+  {
+    id: 4,
+    image: '/images/gallery/student-project-1.jpg',
+    title: 'Student Projects',
+    caption: 'Creative solutions to complex problems.',
+    tag: 'PROJECTS',
   },
   {
     id: 5,
-    image: '/images/gallery/stem-bridge-challenge.jpg',
-    title: 'Bridge Engineering Challenge',
-    caption: 'A moment from our bridge building challenge where students learn about structural integrity.',
-    tag: 'ENGINEERING',
-    span: 'lg:col-span-1 lg:row-span-1 md:col-span-1',
-  },
-  {
-    id: 7,
-    image: '/images/gallery/student-project-1.jpg',
-    title: 'Hands-on Learning Moments',
-    caption: 'Every project is an opportunity for children to solve unfamiliar problems independently.',
-    tag: 'STUDENT PROJECTS',
-    span: 'lg:col-span-2 lg:row-span-1 md:col-span-1',
-  },
-  {
-    id: 11,
     image: '/images/gallery/workshop-mass.jpg',
-    title: 'Large Group Challenge',
-    caption: 'Dozens of students proudly showcasing their finished projects at the conclusion of a major hands-on workshop.',
+    title: 'Mass Workshops',
+    caption: 'Collaborative learning in large groups.',
     tag: 'WORKSHOP',
-    span: 'lg:col-span-2 lg:row-span-1 md:col-span-2',
   },
   {
-    id: 12,
+    id: 6,
     image: '/images/gallery/student-project-2.jpg',
     title: 'Innovative Prototype',
-    caption: 'A close-up look at a student-designed prototype during our advanced robotics challenge.',
-    tag: 'STUDENT PROJECTS',
-    span: 'lg:col-span-1 lg:row-span-1 md:col-span-1',
+    caption: 'Fine-tuning the details of a robot prototype.',
+    tag: 'INNOVATION',
+  }
+]
+
+export const galleryItems: GalleryItem[] = [
+  {
+    id: 31,
+    image: '/images/gallery/teaser-1.jpg',
+    title: 'Collaborative Building',
+    caption: 'Students working together on a structural engineering challenge.',
+    tag: 'TEAMWORK',
+  },
+  {
+    id: 32,
+    image: '/images/gallery/teaser-2.jpg',
+    title: 'Robotic Control',
+    caption: 'Fine-tuning the movements of a custom-built robotic arm.',
+    tag: 'ROBOTICS',
+  },
+  {
+    id: 33,
+    image: '/images/gallery/teaser-3.jpg',
+    title: 'Logic Exploration',
+    caption: 'Solving complex patterns using physical blocks and logical reasoning.',
+    tag: 'LOGIC',
+  },
+  {
+    id: 34,
+    image: '/images/gallery/teaser-4.jpg',
+    title: 'Mechanism Design',
+    caption: 'Exploring gears and pulleys to understand mechanical advantage.',
+    tag: 'MECHANICS',
+  },
+  {
+    id: 35,
+    image: '/images/gallery/teaser-5.jpg',
+    title: 'Advanced Prototypes',
+    caption: 'A student showcasing their innovative solution to a STEM problem.',
+    tag: 'INNOVATION',
+  },
+  {
+    id: 36,
+    image: '/images/gallery/teaser-6.jpg',
+    title: 'Hands-on Science',
+    caption: 'Direct experimentation leading to a moment of discovery.',
+    tag: 'EXPERIMENTATION',
+  },
+  {
+    id: 37,
+    image: '/images/gallery/teaser-7.jpg',
+    title: 'Creative Problem Solving',
+    caption: 'Designing and testing a unique bridge structure.',
+    tag: 'ENGINEERING',
+  },
+  {
+    id: 38,
+    image: '/images/gallery/teaser-8.jpg',
+    title: 'Group Workshop',
+    caption: 'The energy and excitement of a collaborative workshop session.',
+    tag: 'WORKSHOP',
   }
 ]
 

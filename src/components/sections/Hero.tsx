@@ -30,7 +30,7 @@ export function Hero({ data }: { data?: any }) {
     <section id="home" className="relative w-full min-h-screen flex items-center bg-[#1E2A44] overflow-hidden pt-52 pb-20 md:pb-24 text-white">
       {/* Subtle Grid Background */}
       <div className="absolute inset-0 lab-grid opacity-[0.05] z-0" />
-      
+
       {/* Background Floating Elements */}
       <div className="absolute top-[15%] left-[5%] text-[#2FB5A3]/10 animate-float-slow hidden lg:block">
         <Rocket size={100} strokeWidth={0.5} />
@@ -44,13 +44,13 @@ export function Hero({ data }: { data?: any }) {
           {/* Left: Text Content */}
           <div className="lg:col-span-7">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-8 leading-[1.05] text-balanced">
-               Beyond <span className="whitespace-nowrap">Rote Learning.</span> Beyond Marks.
+              Beyond <span className="whitespace-nowrap">Rote Learning.</span> Beyond Marks.
             </h1>
 
             <p className="text-lg md:text-2xl text-[#B7E3DD] mb-12 max-w-2xl leading-relaxed font-light opacity-90">
               {subline}
             </p>
-            
+
             <div className="flex flex-col gap-6 w-full max-w-xl">
               <div className="flex flex-col gap-3">
                 <Link href="/schedule-visit" className="w-full">
@@ -67,7 +67,7 @@ export function Hero({ data }: { data?: any }) {
               </div>
 
               <div className="flex flex-col gap-3 mt-4">
-                <JoinCommunity />
+                <JoinCommunity size="lg" />
                 <p className="text-sm text-white/60 leading-relaxed pl-2 border-l-2 border-white/20">
                   Get updates about STEM challenges, workshops, edu-events, and upcoming sessions before deciding long-term.
                 </p>
@@ -82,7 +82,7 @@ export function Hero({ data }: { data?: any }) {
               <div className="absolute -top-12 -left-12 z-20 backdrop-blur-xl bg-white/10 border border-white/20 p-5 rounded-3xl shadow-huge animate-float text-accent-teal">
                 <Beaker size={32} />
               </div>
-              
+
               <div className="absolute top-[20%] -right-16 z-20 backdrop-blur-xl bg-[#1E2A44]/60 border border-white/10 p-5 rounded-3xl shadow-huge animate-float-delayed text-white">
                 <Atom size={32} />
               </div>
@@ -98,16 +98,15 @@ export function Hero({ data }: { data?: any }) {
               {/* Main Image with softened frame */}
               <div className="absolute inset-0 z-10 rounded-[60px] overflow-hidden shadow-huge bg-[#0F172A] border border-white/10 transform translate-x-4 -translate-y-4 transition-transform duration-1000 hover:translate-x-0 hover:-translate-y-0 group">
                 {images.map((img, idx) => (
-                  <Image 
+                  <Image
                     key={idx}
-                    src={img} 
-                    alt={headline} 
+                    src={img}
+                    alt={headline}
                     fill
                     priority={idx === 0}
                     sizes="50vw"
-                    className={`object-cover transition-all duration-1000 group-hover:scale-110 ${
-                      idx === currentImage ? 'opacity-100 scale-100' : 'opacity-0 scale-110'
-                    }`}
+                    className={`object-cover transition-all duration-1000 group-hover:scale-110 ${idx === currentImage ? 'opacity-100 scale-100' : 'opacity-0 scale-110'
+                      }`}
                   />
                 ))}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1E2A44]/60 via-transparent to-transparent pointer-events-none" />

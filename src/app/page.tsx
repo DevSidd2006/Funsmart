@@ -2,6 +2,7 @@ import { Hero } from '../components/sections/Hero'
 import { TheRealProblem } from '../components/sections/TheRealProblem'
 import { WhatStudentsDo } from '../components/sections/WhatStudentsDo'
 import { EduEvents } from '../components/sections/EduEvents'
+import { InspirationSection } from '../components/sections/InspirationSection'
 import { SessionStructure } from '../components/sections/SessionStructure'
 import { ObservationUSP } from '../components/sections/ObservationUSP'
 import { ProgramsSlider } from '../components/sections/ProgramsSlider'
@@ -13,7 +14,7 @@ import { ThinkingReset } from '../components/sections/ThinkingReset'
 import { GalleryTeaser } from '../components/sections/GalleryTeaser'
 
 import { testimonials } from '../data/testimonials'
-import { galleryItems } from '../data/gallery'
+import { teaserItems, galleryItems } from '../data/gallery'
 
 export default function HomePage() {
   return (
@@ -29,6 +30,9 @@ export default function HomePage() {
 
       {/* Section 04 — SCIENTIST & EXPERT ECOSYSTEM */}
       <EduEvents />
+
+      {/* Section 04b — INSPIRATION & MENTORSHIP */}
+      <InspirationSection />
 
       {/* Section 05 — HOW SESSIONS WORK */}
       <SessionStructure />
@@ -55,7 +59,7 @@ export default function HomePage() {
       <FinalCTA />
 
       {/* Section 13 — GALLERY TEASER */}
-      <GalleryTeaser items={galleryItems} />
+      <GalleryTeaser items={teaserItems} />
     </main>
   )
 }

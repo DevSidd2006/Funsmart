@@ -68,8 +68,11 @@ export function TheRealProblem() {
 
           <div className="bg-primary-500 rounded-[2rem] p-10 md:p-12 text-center text-white relative overflow-hidden">
              <div className="absolute inset-0 lab-grid opacity-10" />
-             <p className="text-lg md:text-xl font-light italic mb-4 relative z-10 text-white/80">
-               Sometimes parents accidently over help and child stops thinking. Parents don’t know when to step in and when to step back.
+             <p className="text-lg md:text-xl font-light italic relative z-10 text-white/80 mb-2">
+               Sometimes parents accidently over help and child stops thinking.
+             </p>
+             <p className="text-lg md:text-xl font-light italic relative z-10 text-white/80 mb-4">
+               Parents don’t know when to step in and when to step back.
              </p>
              <h3 className="text-2xl md:text-3xl font-serif font-bold relative z-10 leading-tight text-white">
                FunSmartism creates environments where children actively use thinking instead of only consuming information.

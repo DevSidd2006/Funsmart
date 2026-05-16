@@ -48,9 +48,7 @@ export function SessionStructure() {
                 </li>
               ))}
             </ul>
-            <div className="p-5 bg-white border-l-4 border-accent-teal shadow-sm rounded-r-2xl italic text-primary-500 font-medium">
-              Children are guided— but not spoon-fed fixed answers.
-            </div>
+
           </div>
 
           {/* Cards */}
@@ -74,6 +72,14 @@ export function SessionStructure() {
           </div>
           
         </div>
+
+        {/* Centered Quote */}
+        <div className="mt-12 flex justify-center">
+          <div className="px-8 py-4 bg-white border-2 border-accent-teal shadow-sm rounded-2xl italic text-primary-500 font-medium text-center whitespace-nowrap">
+            Children are guided— but not spoon-fed fixed answers.
+          </div>
+        </div>
+
       </div>
     </section>
   )

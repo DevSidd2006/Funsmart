@@ -37,7 +37,8 @@ export default function AboutPage() {
           <div className="max-w-5xl mx-auto">
             <h1 className="text-3xl md:text-5xl lg:text-[3.25rem] font-serif font-bold text-primary-500 mb-8 leading-tight tracking-tight">
               We Started FunSmartism Because We Kept Seeing <br className="hidden md:block" />
-              <span className="block text-2xl md:text-4xl lg:text-[3.25rem] text-accent-teal italic font-light">Something Schools Weren’t Designed To Notice.</span>
+              Something Schools Weren’t Designed <br className="hidden md:block" />
+              To Notice.
             </h1>
             <p className="text-lg md:text-xl text-neutral-600 font-light leading-relaxed max-w-4xl mx-auto">
               Children often behave very differently when they are given real opportunities to build, explore, experiment, and solve unfamiliar challenges actively. <br />
@@ -67,46 +68,77 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Why We Built This */}
-      <section className="py-16 bg-[#FAF9F6] relative">
-        <div className="container-fluid max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-12">
-            Why We Built This Environment
-          </h2>
+      {/* Why We Built This — VERTICAL FLOW REDESIGN */}
+      <section className="py-24 bg-[#FAF9F6] relative overflow-hidden">
+        <div className="container-fluid max-w-4xl mx-auto relative z-10">
           
-          <div className="space-y-8 text-lg md:text-xl text-neutral-600 leading-relaxed font-light">
-            <p>
-              Again and again, we noticed children becoming deeply engaged the moment learning became hands-on, exploratory, and real.
-            </p>
-            
-            <div className="flex flex-wrap justify-center gap-4 py-8">
-              {['A robot to test.', 'A puzzle to solve.', 'A structure to redesign.', 'A question without one fixed answer.'].map((item, i) => (
-                <span key={i} className="bg-white px-6 py-3 rounded-full border border-neutral-100 shadow-sm text-primary-500 font-medium text-sm">
-                  {item}
-                </span>
+          {/* 1. Heading */}
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
+              Why We Built This <br />
+              <span className="text-accent-teal italic font-light">Environment.</span>
+            </h2>
+          </div>
+          
+          <div className="space-y-12">
+            {/* 2. Opening Paragraph */}
+            <div className="bg-white p-8 md:p-12 rounded-[32px] border border-neutral-100 shadow-sm text-center">
+              <p className="text-xl md:text-2xl text-neutral-600 leading-relaxed font-light">
+                Again and again, we noticed children becoming deeply engaged the moment learning became <span className="text-primary-500 font-medium">hands-on, exploratory, and real.</span>
+              </p>
+            </div>
+
+            {/* 3. Items Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                'A robot to test.',
+                'A puzzle to solve.',
+                'A structure to redesign.',
+                'A question without one fixed answer.'
+              ].map((item, i) => (
+                <div key={i} className="bg-white px-8 py-6 rounded-2xl border border-neutral-100 shadow-sm flex items-center gap-4 transition-transform hover:-translate-y-1">
+                  <div className="w-2 h-2 rounded-full bg-accent-teal" />
+                  <span className="text-primary-500 font-bold font-serif">{item}</span>
+                </div>
               ))}
             </div>
 
-            <p>
-              Children who rarely showed participation in standard classroom settings often became highly active inside these environments.
-            </p>
-            <p className="text-primary-500 font-medium italic">
-              Parents noticed the difference too. Many would say:
-            </p>
-            <p className="text-3xl md:text-4xl font-serif font-bold text-accent-teal italic">
-              “I haven’t seen my child this engaged in a long time.”
-            </p>
-            
-            <div className="pt-12 space-y-4">
-              <p>That repeated pattern became the foundation of FunSmartism.</p>
-              <div className="flex flex-col md:flex-row justify-center gap-4 text-sm font-bold uppercase tracking-widest text-neutral-400">
-                <span>Not as a tuition class</span>
-                <span className="hidden md:block opacity-30">·</span>
-                <span>Not just common Robotics class</span>
+            {/* 4 & 5. Observation & Parent Voice */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+              <div className="space-y-6">
+                <p className="text-lg text-neutral-600 leading-relaxed font-light">
+                  Children who rarely showed participation in standard classroom settings often became highly active inside these environments.
+                </p>
+                <p className="text-primary-500 font-medium italic">
+                  Parents noticed the difference too. Many would say:
+                </p>
               </div>
-              <p className="text-primary-500 font-bold text-2xl font-serif">
-                But as a hands-on RoboSTEM thinking lab where children actively participate in learning through experimentation, projects, challenges, and real-world exploration.
-              </p>
+              <div className="bg-accent-teal/10 p-10 rounded-[32px] border border-accent-teal/20 text-center relative">
+                <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent-teal text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">
+                  Parent Voice
+                </span>
+                <p className="text-3xl md:text-4xl font-serif font-bold text-accent-teal italic leading-tight">
+                  “I haven’t seen my child this engaged in a long time.”
+                </p>
+              </div>
+            </div>
+
+            {/* 7, 8 & 9. The Foundation & The Lab */}
+            <div className="space-y-8 pt-8">
+              <div className="text-center space-y-4">
+                <p className="text-lg text-neutral-500 font-light">That repeated pattern became the foundation of FunSmartism.</p>
+                <div className="flex flex-wrap justify-center gap-4 text-xs font-bold uppercase tracking-widest text-neutral-400">
+                  <span className="bg-neutral-100 px-4 py-2 rounded-full">Not as a tuition class</span>
+                  <span className="bg-neutral-100 px-4 py-2 rounded-full">Not just common Robotics class</span>
+                </div>
+              </div>
+
+              <div className="bg-primary-500 p-10 md:p-14 rounded-[40px] text-white shadow-huge shadow-primary-500/20 text-center relative overflow-hidden group">
+                <div className="absolute inset-0 lab-grid opacity-10 group-hover:opacity-20 transition-opacity" />
+                <p className="text-2xl md:text-3xl font-serif font-bold leading-tight relative z-10">
+                  But as a hands-on RoboSTEM thinking lab where children actively participate in learning through experimentation, projects, challenges, and real-world exploration.
+                </p>
+              </div>
             </div>
           </div>
         </div>
