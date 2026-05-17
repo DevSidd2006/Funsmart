@@ -102,8 +102,8 @@ export default function ScheduleVisitPage() {
             </div>
             <div className="relative aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl border border-neutral-200">
                <Image 
-                 src="/images/lab-real-3.jpg" 
-                 alt="FunSmartism Lab Environment" 
+                 src="/images/visit-group.jpg" 
+                 alt="FunSmartism children showing their creative paintings and drawings in a group" 
                  fill 
                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                  className="object-cover"

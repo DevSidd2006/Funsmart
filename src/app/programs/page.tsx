@@ -166,39 +166,45 @@ export default function ProgramsPage() {
 
       {/* Final CTA */}
       <section className="pt-12 pb-24 bg-white text-center">
-        <SectionReveal className="container-fluid max-w-4xl mx-auto">
-          <h2 className="text-3xl font-serif font-bold text-primary-500 mb-8">Not sure?</h2>
-          <p className="text-xl text-neutral-600 mb-12 font-light">Tell us your child’s age and interest during a visit—we’ll guide you.</p>
-          <Link href="/schedule-visit" className="inline-block mb-24">
-            <Button size="lg" className="bg-accent-teal border-none text-white px-16 py-6 shadow-huge shadow-accent-teal/30 rounded-full font-bold">
-              Schedule A Visit
-            </Button>
-          </Link>
+        <div className="container-fluid max-w-[1400px] mx-auto px-4 md:px-8">
+          <SectionReveal className="max-w-2xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-6">Not sure?</h2>
+            <p className="text-xl text-neutral-600 mb-10 font-light">Tell us your child’s age and interest during a visit—we’ll guide you.</p>
+            <Link href="/schedule-visit">
+              <Button size="lg" className="bg-accent-teal border-none text-white px-16 py-6 shadow-huge shadow-accent-teal/30 rounded-full font-bold">
+                Schedule A Visit
+              </Button>
+            </Link>
+          </SectionReveal>
 
-          {/* 9:16 Mobile Image Grid / 4:3 Desktop Grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
-            {[
-              { src: '/images/hero-1.jpg', alt: 'RoboSTEM Lab Activity 1' },
-              { src: '/images/hero-2.jpg', alt: 'RoboSTEM Lab Activity 2' },
-              { src: '/images/hero-3.jpg', alt: 'RoboSTEM Lab Activity 3' },
-              { src: '/images/programs-footer.jpg', alt: 'Students showcasing work' },
-            ].map((img, i) => (
-              <div 
-                key={i} 
-                className="relative aspect-[9/16] lg:aspect-[4/3] rounded-3xl overflow-hidden shadow-md group"
-              >
-                <Image 
-                  src={img.src} 
-                  alt={img.alt} 
-                  fill 
-                  className="object-cover scale-110 transition-transform duration-700 group-hover:scale-125"
-                  sizes="(max-width: 768px) 50vw, 25vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
-            ))}
-          </div>
-        </SectionReveal>
+          {/* Large Responsive 4:3 Image Grid */}
+          <SectionReveal>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 mb-12">
+              {[
+                { src: '/images/hero-1.jpg', alt: 'RoboSTEM Lab Activity 1' },
+                { src: '/images/hero-2.jpg', alt: 'RoboSTEM Lab Activity 2', position: 'object-top' },
+                { src: '/images/hero-3.jpg', alt: 'RoboSTEM Lab Activity 3' },
+                { src: '/images/programs-footer.jpg', alt: 'Students showcasing work' },
+                { src: '/images/2.jpg', alt: 'RoboSTEM Lab Activity 5', position: 'object-top' },
+                { src: '/images/11.jpg', alt: 'RoboSTEM Lab Activity 6' },
+              ].map((img, i) => (
+                <div 
+                  key={i} 
+                  className="relative aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-xl group border border-neutral-100"
+                >
+                  <Image 
+                    src={img.src} 
+                    alt={img.alt} 
+                    fill 
+                    className={`object-cover scale-100 transition-transform duration-700 group-hover:scale-105 ${img.position || 'object-center'}`}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                </div>
+              ))}
+            </div>
+          </SectionReveal>
+        </div>
       </section>
     </div>
   )

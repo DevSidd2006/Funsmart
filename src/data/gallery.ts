@@ -105,7 +105,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: 38,
-    image: '/images/gallery/teaser-8.jpg',
+    image: '/images/11.jpg',
     title: 'Group Workshop',
     caption: 'The energy and excitement of a collaborative workshop session.',
     tag: 'WORKSHOP',

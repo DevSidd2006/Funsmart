@@ -75,55 +75,69 @@ export default function GalleryPage() {
         <div className="container-fluid max-w-7xl mx-auto px-6 md:px-12">
           <motion.div
             layout
-            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ${activeTab === 'news' ? 'auto-rows-[480px]' : 'auto-rows-[340px]'}`}
+            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 ${activeTab === 'news' ? 'auto-rows-[480px]' : 'auto-rows-[340px]'}`}
           >
             <AnimatePresence mode="popLayout">
-              {displayItems.map((item: any) => (
-                <motion.div
-                  layout
-                  key={item.id}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.5 }}
-                  className={`relative group overflow-hidden rounded-3xl shadow-sm border border-neutral-100 transition-all duration-500 hover:shadow-2xl ${item.span || 'col-span-1'}`}
-                >
-                  {item.image ? (
-                    <Image
-                      src={item.image}
-                      alt={item.title}
-                      fill
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      className={`w-full h-full transform transition-transform duration-[1.5s] ease-in-out group-hover:scale-[1.02] ${activeTab === 'news' ? 'object-contain p-4 md:p-8 bg-white' : 'object-cover scale-100 group-hover:scale-105'}`}
-                    />
-                  ) : (
-                    <div className="w-full h-full bg-neutral-50 flex flex-col items-center justify-center border-dashed border-2 border-neutral-200">
-                      <span className="text-mono text-neutral-300 text-xs mb-2 uppercase tracking-widest">Image Content</span>
-                      <span className="text-sm text-neutral-400 font-medium text-center px-4">{item.title}</span>
-                    </div>
-                  )}
+              {displayItems.map((item: any, idx: number) => {
+                const isLastRow = idx >= Math.floor((displayItems.length - 1) / 3) * 3
 
-                  {/* Subtle Border for News Room */}
-                  {activeTab === 'news' && (
-                    <div className="absolute inset-0 border border-neutral-100 pointer-events-none rounded-3xl" />
-                  )}
-
-                  {/* Hover Overlay - Only show for Lab Moments */}
-                  {activeTab === 'lab' && (
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary-900/95 via-primary-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col justify-end p-10">
-                      <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-700 delay-75">
-                        <div className="flex justify-between items-start mb-4">
-                          <span className="text-mono text-accent-teal text-[11px] font-bold tracking-[0.2em] uppercase">{item.tag}</span>
-                        </div>
-                        <h3 className="text-2xl font-serif font-bold text-white mb-4 leading-tight">{item.title}</h3>
-                        <p className="text-white/80 text-[15px] leading-relaxed max-w-sm font-light">
-                          {item.caption}
-                        </p>
+                return (
+                  <motion.div
+                    layout
+                    key={item.id}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0.9 }}
+                    transition={{ duration: 0.5 }}
+                    className={`relative group overflow-hidden rounded-3xl shadow-sm border border-neutral-100 transition-all duration-500 hover:shadow-2xl ${
+                      activeTab === 'lab' && isLastRow
+                        ? 'col-span-1 md:col-span-1 lg:col-span-3'
+                        : 'col-span-1 md:col-span-1 lg:col-span-2'
+                    }`}
+                  >
+                    {item.image ? (
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className={`w-full h-full transform transition-transform duration-[1.5s] ease-in-out group-hover:scale-[1.02] ${
+                          activeTab === 'news'
+                            ? isLastRow
+                              ? 'object-cover scale-100 group-hover:scale-105 bg-white'
+                              : 'object-contain p-4 md:p-8 bg-white'
+                            : 'object-cover scale-100 group-hover:scale-105'
+                        }`}
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-neutral-50 flex flex-col items-center justify-center border-dashed border-2 border-neutral-200">
+                        <span className="text-mono text-neutral-300 text-xs mb-2 uppercase tracking-widest">Image Content</span>
+                        <span className="text-sm text-neutral-400 font-medium text-center px-4">{item.title}</span>
                       </div>
-                    </div>
-                  )}
-                </motion.div>
-              ))}
+                    )}
+
+                    {/* Subtle Border for News Room */}
+                    {activeTab === 'news' && (
+                      <div className="absolute inset-0 border border-neutral-100 pointer-events-none rounded-3xl" />
+                    )}
+
+                    {/* Hover Overlay - Only show for Lab Moments */}
+                    {activeTab === 'lab' && (
+                      <div className="absolute inset-0 bg-gradient-to-t from-primary-900/95 via-primary-900/40 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700 flex flex-col justify-end p-10">
+                        <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-700 delay-75">
+                          <div className="flex justify-between items-start mb-4">
+                            <span className="text-mono text-accent-teal text-[11px] font-bold tracking-[0.2em] uppercase">{item.tag}</span>
+                          </div>
+                          <h3 className="text-2xl font-serif font-bold text-white mb-4 leading-tight">{item.title}</h3>
+                          <p className="text-white/80 text-[15px] leading-relaxed max-w-sm font-light">
+                            {item.caption}
+                          </p>
+                        </div>
+                      </div>
+                    )}
+                  </motion.div>
+                )
+              })}
             </AnimatePresence>
           </motion.div>
         </div>

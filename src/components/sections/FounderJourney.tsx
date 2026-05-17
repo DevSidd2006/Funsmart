@@ -40,32 +40,35 @@ const storyBoxes = [
 
 export function FounderJourney() {
   return (
-    <section className="section-spacing bg-[#F8FBFF]">
+    <section className="pt-24 pb-12 md:pt-32 md:pb-16 bg-[#F8FBFF] overflow-hidden scroll-mt-24 md:scroll-mt-32">
       <SectionReveal className="container-fluid">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 items-start">
+        <div className="max-w-7xl mx-auto">
+          {/* TOP SECTION — STORY + FOUNDER CARD */}
+          <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-20 items-center mb-20">
             <div>
-              <h2 className="text-4xl md:text-5xl font-serif font-bold text-[#1E2A44] mb-6 leading-tight">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[#1E2A44] mb-8 leading-[1.1]">
                 The idea started with one question: why do smart children stop thinking when the answer is not already given?
               </h2>
-              <p className="text-lg text-neutral-600 leading-relaxed">
+              <p className="text-xl text-neutral-600 leading-relaxed font-light mb-12">
                 This is the founder story for FunSmartism — a lab built to observe thinking, support discovery, and help parents translate every moment into a new habit.
               </p>
 
-              <div className="mt-10 grid gap-4 sm:grid-cols-2">
+              <div className="space-y-6">
                 {founderNotes.map((note) => {
                   const Icon = note.icon
                   return (
-                    <div key={note.title} className="rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm hover:shadow-xl transition-all duration-300">
-                      <div className="w-12 h-12 rounded-2xl bg-accent-teal/10 text-accent-teal flex items-center justify-center mb-4">
-                        <Icon size={20} />
+                    <div key={note.title} className="flex gap-6 p-6 rounded-3xl bg-white border border-neutral-100 shadow-sm hover:shadow-md transition-all duration-300">
+                      <div className="flex-shrink-0 w-14 h-14 rounded-2xl bg-accent-teal/10 text-accent-teal flex items-center justify-center">
+                        <Icon size={24} />
                       </div>
-                      <h3 className="text-xl font-serif font-bold text-[#1E2A44] mb-3 leading-snug">
-                        {note.title}
-                      </h3>
-                      <p className="text-neutral-500 leading-relaxed text-sm">
-                        {note.desc}
-                      </p>
+                      <div>
+                        <h3 className="text-xl font-serif font-bold text-[#1E2A44] mb-2 leading-snug">
+                          {note.title}
+                        </h3>
+                        <p className="text-neutral-500 leading-relaxed text-sm">
+                          {note.desc}
+                        </p>
+                      </div>
                     </div>
                   )
                 })}
@@ -73,11 +76,12 @@ export function FounderJourney() {
             </div>
 
             <div className="relative group">
-              <div className="rounded-[3rem] overflow-hidden border border-neutral-100 bg-white p-10 md:p-14 shadow-2xl relative">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-accent-teal/5 rounded-full blur-3xl" />
-                <div className="absolute bottom-0 left-0 w-40 h-40 bg-primary-500/5 rounded-full blur-3xl" />
-
-                <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden mb-10 shadow-xl border border-neutral-100">
+              {/* Decorative elements behind card */}
+              <div className="absolute -top-10 -right-10 w-64 h-64 bg-accent-teal/5 rounded-full blur-3xl animate-pulse" />
+              <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-primary-500/5 rounded-full blur-3xl" />
+              
+              <div className="rounded-[3.5rem] overflow-hidden border border-neutral-100 bg-white p-10 md:p-14 shadow-huge relative z-10">
+                <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden mb-10 shadow-2xl border border-neutral-100">
                   <Image 
                     src="/images/dipali-real.jpg" 
                     alt="Dipali Akolkar - Founder of FunSmartism"
@@ -88,22 +92,22 @@ export function FounderJourney() {
                 </div>
                 
                 <div className="relative z-10">
-                  <div className="inline-flex items-center gap-2 text-mono text-accent-teal mb-4 uppercase tracking-[0.2em] text-xs font-bold">
-                    <div className="w-8 h-px bg-accent-teal/30" />
+                  <div className="inline-flex items-center gap-3 text-mono text-accent-teal mb-4 uppercase tracking-[0.2em] text-xs font-bold">
+                    <div className="w-10 h-px bg-accent-teal/30" />
                     Our Founder
                   </div>
                   <h3 className="text-4xl font-serif font-bold text-[#1E2A44] mb-4">Dipali Akolkar</h3>
-                  <p className="text-neutral-500 leading-relaxed mb-8 text-base font-light">
+                  <p className="text-neutral-600 leading-relaxed mb-8 text-base font-light">
                     Masters in Computer Management with deep software product experience. She transitioned into child development to bring precision, observation, and authentic thinking to the learning journey.
                   </p>
                   
                   <div className="flex flex-wrap gap-3 mb-10">
-                    <span className="rounded-full bg-accent-teal/10 px-5 py-2 text-[10px] font-bold text-accent-teal uppercase tracking-widest border border-accent-teal/5">MCM · Software Dev</span>
-                    <span className="rounded-full bg-accent-teal/10 px-5 py-2 text-[10px] font-bold text-accent-teal uppercase tracking-widest border border-accent-teal/5">Child Development Expert</span>
+                    <span className="rounded-full bg-accent-teal/5 px-5 py-2 text-[10px] font-bold text-accent-teal uppercase tracking-widest border border-accent-teal/10">MCM · Software Dev</span>
+                    <span className="rounded-full bg-accent-teal/5 px-5 py-2 text-[10px] font-bold text-accent-teal uppercase tracking-widest border border-accent-teal/10">Child Development Expert</span>
                   </div>
 
-                  <div className="relative p-8 bg-[#FAF9F6] rounded-3xl border border-neutral-100 italic">
-                    <div className="absolute -top-4 -left-2 text-6xl text-accent-teal/20 font-serif leading-none">“</div>
+                  <div className="relative p-8 bg-[#FAF9F6] rounded-[2rem] border border-neutral-100 italic">
+                    <div className="absolute -top-4 left-6 text-6xl text-accent-teal/20 font-serif leading-none">“</div>
                     <p className="text-[#1E2A44] leading-relaxed text-sm font-medium relative z-10">
                       FunSmartism was born because we saw too many children solving the way they were told, instead of thinking for themselves. Our lab is designed to change that.
                     </p>
@@ -113,14 +117,15 @@ export function FounderJourney() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+          {/* BOTTOM SECTION — THREE PILLARS */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {storyBoxes.map((box) => (
-              <div key={box.title} className="group rounded-3xl border border-neutral-200 bg-white p-8 shadow-sm hover:shadow-xl transition-all duration-300">
-                <div className="text-mono text-accent-teal mb-4 text-sm uppercase tracking-[0.24em]">{box.step}</div>
-                <h3 className="text-2xl font-serif font-bold text-[#1E2A44] mb-4 leading-snug">
+              <div key={box.title} className="group h-full flex flex-col rounded-[2.5rem] border border-neutral-200 bg-white p-10 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
+                <div className="text-mono text-accent-teal mb-6 text-base font-bold uppercase tracking-[0.3em]">{box.step}</div>
+                <h3 className="text-2xl font-serif font-bold text-[#1E2A44] mb-4 leading-tight">
                   {box.title}
                 </h3>
-                <p className="text-neutral-500 leading-relaxed text-sm">
+                <p className="text-neutral-500 leading-relaxed text-base font-light">
                   {box.desc}
                 </p>
               </div>

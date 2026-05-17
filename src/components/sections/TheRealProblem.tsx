@@ -71,7 +71,7 @@ export function TheRealProblem() {
              <div className="absolute inset-0 lab-grid opacity-10" />
              <p className="text-lg md:text-xl font-light italic relative z-10 text-white/80 mb-8 leading-relaxed max-w-4xl mx-auto">
                Sometimes parents accidentally over-help and the child stops thinking. <br className="hidden md:block" />
-               Parents don’t know when to <span className="bg-[#FF00FF] text-white px-1.5 py-0.5 rounded-md mx-0.5 not-italic font-semibold">step</span> in and when to <span className="bg-[#FF00FF] text-white px-1.5 py-0.5 rounded-md mx-0.5 not-italic font-semibold">step</span> back.
+               Parents don’t know when to <span className="text-white font-semibold not-italic">step</span> in and when to <span className="text-white font-semibold not-italic">step</span> back.
              </p>
              <h3 className="text-2xl md:text-3xl font-serif font-bold relative z-10 leading-tight text-white">
                FunSmartism creates environments where children actively use thinking instead of only consuming information.
