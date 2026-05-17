@@ -2,6 +2,49 @@ import type { Metadata } from 'next'
 import { Sora, Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://funsmartism.in'
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'FunSmartism Intelligence Center',
+  description: 'A hands-on RoboSTEM thinking lab where children build projects, solve unfamiliar challenges, and learn through real-world experimentation.',
+  url: siteUrl,
+  telephone: '+91 99999 99999',
+  email: 'hello@funsmartism.in',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Navkar Residency, Next to Bibwewadi Police Station',
+    addressLocality: 'Bibwewadi',
+    addressRegion: 'Maharashtra',
+    postalCode: '411037',
+    addressCountry: 'IN',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: '18.4758',
+    longitude: '73.8631',
+  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      opens: '10:00',
+      closes: '19:00',
+    },
+  ],
+  priceRange: '₹₹₹',
+  areaServed: {
+    '@type': 'City',
+    name: 'Pune',
+  },
+  sameAs: [
+    'https://www.facebook.com/FunSmartismIntelligenceCenter',
+    'https://www.instagram.com/funsmartism.intelligence',
+    'https://www.youtube.com/@FunSmartism_IntelligenceCenter',
+  ],
+}
+
 const sora = Sora({
   subsets: ['latin'],
   variable: '--font-sora',
@@ -20,8 +63,6 @@ const mono = JetBrains_Mono({
   display: 'swap',
 })
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fursmartism.vercel.app'
-
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
@@ -29,7 +70,7 @@ export const metadata: Metadata = {
     template: '%s | FunSmartism',
   },
   description:
-    'A hands-on RoboSTEM thinking lab where children build projects, solve unfamiliar challenges, and learn through real-world experimentation.',
+    'A hands-on RoboSTEM thinking lab where children build projects, solve unfamiliar challenges, and learn through real-world experimentation in Pune.',
   keywords: [
     'thinking lab',
     'child observation',
@@ -38,15 +79,23 @@ export const metadata: Metadata = {
     'hands-on learning',
     'experimentation',
     'Pune',
+    'stem education pune',
+    'children learning center',
+    'problem solving for kids',
   ],
-
   authors: [{ name: 'FunSmartism' }],
+  alternates: {
+    canonical: siteUrl,
+    languages: {
+      'en-IN': siteUrl,
+    },
+  },
   icons: {
     icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/images/logo.png', type: 'image/png' },
     ],
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
+    shortcut: '/images/logo.png',
+    apple: '/images/logo.png',
   },
   openGraph: {
     title: 'FunSmartism Intelligence Center',
@@ -60,6 +109,12 @@ export const metadata: Metadata = {
         height: 630,
         alt: 'FunSmartism Intelligence Center',
       },
+      {
+        url: '/og-image-real.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'FunSmartism - Hands-on Learning for Kids',
+      },
     ],
     locale: 'en_IN',
     type: 'website',
@@ -68,7 +123,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'FunSmartism Intelligence Center',
     description: "A hands-on RoboSTEM thinking lab where children build projects, solve unfamiliar challenges, and learn through real-world experimentation.",
-
     images: ['/og-image-real.jpg'],
   },
   robots: {
@@ -78,6 +132,7 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       'max-image-preview': 'large',
+      'max-video-preview': -1,
     },
   },
 }
@@ -98,6 +153,10 @@ export default function RootLayout({
     >
       <head>
         <meta name="theme-color" content="#1E2A44" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body suppressHydrationWarning className="antialiased bg-accent-surface text-[#1A1A1A] font-sans selection:bg-[#2FB5A3]/10 selection:text-[#1E2A44]">
         <NavbarWrapper />

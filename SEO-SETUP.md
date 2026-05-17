@@ -51,7 +51,7 @@ Then redeploy to Vercel.
 
 ### 1. Google Search Console
 - URL: https://search.google.com/search-console
-- Add property: `fursmartism.vercel.app` (now) or `funsmartism.in` (at cutover)
+- Add property: `funsmartism.in`
 - Verify via DNS or HTML tag
 - Submit sitemap: `/sitemap.xml`
 
@@ -93,11 +93,11 @@ In GSC URL Inspection tool, request indexing for:
 
 ```bash
 # Test sitemap
-curl https://fursmartism.vercel.app/sitemap.xml
+curl https://funsmartism.in/sitemap.xml
 
 # Test robots.txt
-curl https://fursmartism.vercel.app/robots.txt
+curl https://funsmartism.in/robots.txt
 
 # Check metadata
-curl -s https://fursmartism.vercel.app/ | grep -i "og:"
+curl -s https://funsmartism.in/ | grep -i "og:"
 ```

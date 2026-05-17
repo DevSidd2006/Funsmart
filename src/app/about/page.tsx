@@ -12,7 +12,7 @@ import Image from 'next/image'
 import { galleryItems } from '@/data/gallery'
 import { SectionReveal } from '@/components/ui/SectionReveal'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://fursmartism.vercel.app'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://funsmartism.in'
 
 const beliefsData = [
   {
