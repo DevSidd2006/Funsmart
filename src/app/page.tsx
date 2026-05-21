@@ -1,16 +1,18 @@
+import dynamic from 'next/dynamic'
 import { Hero } from '../components/sections/Hero'
 import { TheRealProblem } from '../components/sections/TheRealProblem'
 import { WhatStudentsDo } from '../components/sections/WhatStudentsDo'
 import { EduEvents } from '../components/sections/EduEvents'
 import { SessionStructure } from '../components/sections/SessionStructure'
 import { ObservationUSP } from '../components/sections/ObservationUSP'
-import { ProgramsSlider } from '../components/sections/ProgramsSlider'
-import { Outcomes } from '../components/sections/Outcomes'
-import { OneDayChallenge } from '../components/sections/OneDayChallenge'
-import { TestimonialsSlider } from '../components/sections/TestimonialsSlider'
-import { FinalCTA } from '../components/sections/FinalCTA'
-import { ThinkingReset } from '../components/sections/ThinkingReset'
-import { GalleryTeaser } from '../components/sections/GalleryTeaser'
+
+const ProgramsSlider = dynamic(() => import('../components/sections/ProgramsSlider').then((mod) => mod.ProgramsSlider))
+const Outcomes = dynamic(() => import('../components/sections/Outcomes').then((mod) => mod.Outcomes))
+const ThinkingReset = dynamic(() => import('../components/sections/ThinkingReset').then((mod) => mod.ThinkingReset))
+const OneDayChallenge = dynamic(() => import('../components/sections/OneDayChallenge').then((mod) => mod.OneDayChallenge))
+const TestimonialsSlider = dynamic(() => import('../components/sections/TestimonialsSlider').then((mod) => mod.TestimonialsSlider))
+const FinalCTA = dynamic(() => import('../components/sections/FinalCTA').then((mod) => mod.FinalCTA))
+const GalleryTeaser = dynamic(() => import('../components/sections/GalleryTeaser').then((mod) => mod.GalleryTeaser))
 
 import { testimonials } from '../data/testimonials'
 import { teaserItems, galleryItems } from '../data/gallery'

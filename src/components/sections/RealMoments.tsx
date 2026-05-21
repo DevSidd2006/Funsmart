@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export function RealMoments({
   data,
   heading = 'Real session moments in box form.',
@@ -57,9 +59,11 @@ export function RealMoments({
                 className="group overflow-hidden rounded-[2rem] border border-neutral-200 bg-white shadow-[0_35px_75px_-45px_rgba(15,23,42,0.35)] transition-transform duration-300 hover:-translate-y-1 hover:shadow-2xl"
               >
                 <div className="relative h-80 overflow-hidden">
-                  <img
+                  <Image
                     src={imageUrl}
                     alt={title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary-900/60 via-transparent to-transparent" />

@@ -134,7 +134,7 @@ export default function ProgramsPage() {
                     
                     <Link href="/schedule-visit">
                       <Button size="lg" className="w-full bg-accent-teal hover:bg-[#28A392] text-white rounded-full font-bold py-8">
-                        Schedule Orientation Visit →
+                        Schedule a Visit
                       </Button>
                     </Link>
                   </div>
@@ -172,7 +172,7 @@ export default function ProgramsPage() {
             <p className="text-xl text-neutral-600 mb-10 font-light">Tell us your child’s age and interest during a visit—we’ll guide you.</p>
             <Link href="/schedule-visit">
               <Button size="lg" className="bg-accent-teal border-none text-white px-16 py-6 shadow-huge shadow-accent-teal/30 rounded-full font-bold">
-                Schedule A Visit
+                Schedule a Visit
               </Button>
             </Link>
           </SectionReveal>

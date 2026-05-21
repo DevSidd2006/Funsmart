@@ -33,7 +33,7 @@ export function FinalCTA({ data }: { data?: any }) {
                 size="lg"
                 className="px-16 py-6 bg-accent-teal hover:bg-[#28A392] shadow-huge shadow-accent-teal/20 border-none text-white w-full rounded-full font-bold"
               >
-                Schedule a visit →
+                Schedule a Visit
               </Button>
             </Link>
             <div className="flex items-center gap-2 text-xs font-mono text-white/70 tracking-[0.2em] uppercase">

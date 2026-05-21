@@ -58,7 +58,7 @@ export default function ScheduleVisitPage() {
             
             <a href="#schedule-form">
               <Button size="lg" className="bg-accent-teal hover:bg-primary-500 border-none text-white px-12 py-6 rounded-full font-bold shadow-huge shadow-accent-teal/20 transition-all hover:scale-105">
-                Schedule A Visit →
+                Schedule a Visit
               </Button>
             </a>
           </SectionReveal>
@@ -177,7 +177,7 @@ export default function ScheduleVisitPage() {
               <SectionReveal className="bg-white p-10 md:p-14 rounded-[3rem] border border-neutral-100 shadow-huge">
                 {!isSubmitted ? (
                   <>
-                    <h2 className="text-3xl font-serif font-bold text-primary-500 mb-4">Schedule A Visit</h2>
+                    <h2 className="text-3xl font-serif font-bold text-primary-500 mb-4">Schedule a Visit</h2>
                     <p className="text-neutral-600 mb-10 font-light italic">
                       Tell us a little about your child and preferred timings. We’ll help you understand the most suitable session, workshop, or starting point.
                     </p>
@@ -227,7 +227,7 @@ export default function ScheduleVisitPage() {
                       </div>
 
                       <Button type="submit" size="lg" className="w-full bg-accent-teal hover:bg-primary-500 border-none text-white py-6 shadow-huge shadow-accent-teal/20 transition-all font-bold rounded-2xl">
-                        Schedule Your Visit →
+                        Schedule a Visit
                       </Button>
                     </form>
                   </>
@@ -308,7 +308,7 @@ export default function ScheduleVisitPage() {
           </div>
           <a href="#schedule-form">
             <Button size="lg" className="bg-accent-teal hover:bg-primary-500 border-none text-white px-16 py-6 shadow-huge shadow-accent-teal/20 rounded-full font-bold">
-              Schedule Your Visit →
+              Schedule a Visit
             </Button>
           </a>
         </SectionReveal>

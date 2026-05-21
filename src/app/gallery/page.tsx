@@ -215,7 +215,7 @@ export default function GalleryPage() {
           </p>
           <Link href="/schedule-visit">
             <Button size="lg" className="bg-accent-teal border-none text-white px-16 py-6 shadow-huge shadow-accent-teal/30 rounded-full font-bold">
-              Schedule A Visit
+              Schedule a Visit
             </Button>
           </Link>
         </div>

@@ -58,7 +58,7 @@ export function Hero({ data }: { data?: any }) {
                     size="lg"
                     className="px-12 py-6 shadow-2xl shadow-accent-teal/20 bg-accent-teal hover:bg-[#28A392] text-white border-none w-full rounded-xl font-bold text-lg"
                   >
-                    Schedule a Visit →
+                    Schedule a Visit
                   </Button>
                 </Link>
                 <p className="text-sm text-white/60 leading-relaxed pl-2 border-l-2 border-accent-teal/30">
