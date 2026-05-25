@@ -27,7 +27,7 @@ export function WhatStudentsDo() {
           <p className="text-lg md:text-xl text-neutral-600 leading-relaxed font-light mb-6">
             Children do not sit through long lectures or copy fixed steps from notebooks or screens.
           </p>
-          <p className="text-xl md:text-2xl text-accent-teal italic font-light leading-relaxed">
+          <p className="text-2xl md:text-3xl text-accent-teal italic font-bold leading-relaxed">
             They build, open, test, redesign, discuss, and experiment through hands-on RoboSTEM themes across the academic year.
           </p>
         </div>
