@@ -46,7 +46,7 @@ export function FounderJourney() {
           {/* TOP SECTION — STORY + FOUNDER CARD */}
           <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-20 items-center mb-20">
             <div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-[#1E2A44] mb-8 leading-[1.1]">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#1E2A44] mb-8 leading-[1.1]">
                 The idea started with one question: why do smart children stop thinking when the answer is not already given?
               </h2>
               <p className="text-xl text-neutral-600 leading-relaxed font-light mb-12">

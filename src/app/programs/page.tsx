@@ -167,7 +167,7 @@ export default function ProgramsPage() {
                 <div>Ages 8–16</div>
               </div>
               <div className="p-10 md:p-20">
-                <h2 className="text-4xl md:text-6xl font-serif font-bold text-primary-500 mb-10 leading-tight">
+                <h2 className="text-3xl md:text-[50px] font-serif font-bold text-primary-500 mb-10 leading-tight">
                   10-Day Thinking <br className="hidden md:block" />
                   Reset Workshop
                 </h2>
@@ -310,7 +310,7 @@ export default function ProgramsPage() {
                 <div>Ages 8–16</div>
               </div>
               <div className="p-10 md:p-24">
-                <h2 className="text-4xl md:text-7xl font-serif font-bold text-white mb-10 leading-[1.05]">
+                <h2 className="text-3xl md:text-[50px] font-serif font-bold text-white mb-10 leading-[1.05]">
                   FunSmartism RoboSTEM <br className="hidden md:block" />
                   <span className="text-accent-teal italic font-light opacity-90 text-3xl md:text-6xl">Thinking Lab — Year-Long</span>
                 </h2>
@@ -469,7 +469,7 @@ export default function ProgramsPage() {
       <section className="py-32 bg-white relative overflow-hidden">
         <div className="container-fluid">
           <div className="max-w-4xl mx-auto text-center mb-24">
-            <h2 className="text-4xl md:text-7xl font-serif font-bold text-primary-500 mb-8 tracking-tight">Quick Comparison</h2>
+            <h2 className="text-2xl md:text-[46px] font-serif font-bold text-primary-500 mb-8 tracking-tight">Quick Comparison</h2>
             <p className="text-2xl text-neutral-500 font-light italic leading-relaxed">Helping you decide between first insight and deeper habit building.</p>
           </div>
 

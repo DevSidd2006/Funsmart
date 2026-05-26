@@ -21,7 +21,7 @@ export function JoinCommunity({ className, variant = 'outline', size = 'md' }: J
 
   return (
     <a
-      href="https://chat.whatsapp.com/CwXnjSfEz2U2JclT5IcqfR"
+      href="https://chat.whatsapp.com/CwXnjSfEz2U2JcIT5IcqfR"
       target="_blank"
       rel="noopener noreferrer"
       className={cn(

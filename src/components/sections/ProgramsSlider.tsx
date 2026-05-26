@@ -1,20 +1,19 @@
 'use client'
 
 import { useState, useRef } from 'react'
-import Image from 'next/image'
 import { ChevronLeft, ChevronRight, Atom, Cpu, Dna, FlaskConical, Microscope, Brain, Rocket, BookOpen, Puzzle, Zap } from 'lucide-react'
 
 const defaultSlides = [
-  { icon: Rocket,    theme: '01', title: 'Robotics & Engineering',      desc: 'Build, break, rebuild — understanding mechanical systems hands-on.', image: '/images/robotics-real.jpg' },
-  { icon: Atom,      theme: '02', title: 'Space Science & Astronomy',    desc: 'Scale, orbit, gravity — thinking like a planetary scientist.', image: '/images/hero-real.jpg' },
-  { icon: Cpu,       theme: '03', title: 'Algorithmic Coding',           desc: 'Logic flows, pattern recognition, computational thinking without a screen.', image: '/images/lab-real-1.jpg' },
-  { icon: Puzzle,    theme: '04', title: "Rubik's Logic",                desc: 'Pattern recognition and spatial reasoning compressed into a cube.', image: '/images/challenge-real.jpg' },
-  { icon: Brain,     theme: '05', title: 'Cognitive Sudoku',             desc: 'Number logic, constraint thinking, and decision trees.', image: '/images/lab-real-2.jpg' },
-  { icon: BookOpen,  theme: '06', title: 'Memory Mastery',               desc: 'Memory as a thinking tool — not a recitation technique.', image: '/images/lab-real-3.jpg' },
-  { icon: Rocket,    theme: '07', title: 'Aeromodeling',                 desc: 'Physics of flight, aerodynamics, and real paper-to-air builds.', image: '/images/aeromodelling-real.jpg' },
-  { icon: Microscope,theme: '08', title: 'STEM Research',                desc: 'Mini research cycles: question → observe → test → conclude.', image: '/images/discovery-real.jpg' },
-  { icon: Zap,       theme: '09', title: 'Electronics & Circuits',       desc: 'Current, voltage, and real breadboard builds from scratch.', image: '/images/workshop-real.jpg' },
-  { icon: FlaskConical, theme: '10', title: 'Critical Thinking',         desc: 'Logical fallacies, reasoning traps, and debate-style problem solving.', image: '/images/visit-group.jpg' },
+  { icon: Rocket,    theme: '01', title: 'Robotics & Engineering',      desc: 'Build, break, rebuild — understanding mechanical systems hands-on.' },
+  { icon: Atom,      theme: '02', title: 'Space Science & Astronomy',    desc: 'Scale, orbit, gravity — thinking like a planetary scientist.' },
+  { icon: Cpu,       theme: '03', title: 'Algorithmic Coding',           desc: 'Logic flows, pattern recognition, computational thinking without a screen.' },
+  { icon: Puzzle,    theme: '04', title: "Rubik's Logic",                desc: 'Pattern recognition and spatial reasoning compressed into a cube.' },
+  { icon: Brain,     theme: '05', title: 'Cognitive Sudoku',             desc: 'Number logic, constraint thinking, and decision trees.' },
+  { icon: BookOpen,  theme: '06', title: 'Memory Mastery',               desc: 'Memory as a thinking tool — not a recitation technique.' },
+  { icon: Rocket,    theme: '07', title: 'Aeromodeling',                 desc: 'Physics of flight, aerodynamics, and real paper-to-air builds.' },
+  { icon: Microscope,theme: '08', title: 'STEM Research',                desc: 'Mini research cycles: question → observe → test → conclude.' },
+  { icon: Zap,       theme: '09', title: 'Electronics & Circuits',       desc: 'Current, voltage, and real breadboard builds from scratch.' },
+  { icon: FlaskConical, theme: '10', title: 'Critical Thinking',         desc: 'Logical fallacies, reasoning traps, and debate-style problem solving.' },
 ]
 
 export function ProgramsSlider() {
@@ -77,19 +76,14 @@ export function ProgramsSlider() {
                 key={i}
                 className="flex-shrink-0 w-72 md:w-80 bg-accent-surface border border-neutral-100 rounded-xl overflow-hidden hover:border-accent-teal/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-400 group cursor-default"
               >
-                <div className="relative h-44 md:h-48 overflow-hidden">
-                  <Image
-                    src={slide.image}
-                    alt={slide.title}
-                    fill
-                    sizes="320px"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#1E2A44]/75 via-[#1E2A44]/10 to-transparent" />
-                  <div className="absolute top-5 left-5 w-12 h-12 rounded-lg bg-white/15 backdrop-blur-md border border-white/20 flex items-center justify-center">
-                    <Icon size={22} className="text-white" />
+                <div className="h-44 md:h-48 bg-gradient-to-br from-accent-teal/15 via-white to-primary-50 relative overflow-hidden p-6">
+                  <div className="absolute inset-0 lab-grid opacity-[0.06]" />
+                  <div className="relative z-10 flex items-start justify-between">
+                    <div className="w-12 h-12 rounded-lg bg-accent-teal/10 flex items-center justify-center border border-accent-teal/15">
+                      <Icon size={22} className="text-accent-teal" />
+                    </div>
+                    <span className="text-4xl font-serif font-bold text-primary-100 select-none">{slide.theme}</span>
                   </div>
-                  <span className="absolute top-5 right-5 text-4xl font-serif font-bold text-white/85 select-none">{slide.theme}</span>
                 </div>
                 <div className="p-8">
                   <h3 className="text-lg font-serif font-bold text-primary-500 mb-3 leading-snug">{slide.title}</h3>
