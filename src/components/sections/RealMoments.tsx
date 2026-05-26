@@ -14,21 +14,21 @@ export function RealMoments({
   const moments = data && data.length > 0 ? data : [
     {
       id: 1,
-      image: '/images/hero-child-discovery.png',
+      image: '/images/lab-moment-1.jpg',
       label: 'SCIENTIFIC METHOD',
       title: 'Precision in action',
       desc: 'A child learns to watch cause and effect through a mechanical build, not just follow instructions.',
     },
     {
       id: 2,
-      image: '/images/lab-observation.png',
+      image: '/images/lab-moment-2.jpg',
       label: 'FACILITATOR INSIGHT',
       title: 'Observation first',
       desc: "The team pays attention to the small decisions that reveal a child's thinking style.",
     },
     {
       id: 3,
-      image: '/images/discovery-moment.png',
+      image: '/images/discovery-real.jpg',
       label: 'COGNITIVE GROWTH',
       title: 'Discovery through doing',
       desc: 'Every session becomes a real-world problem where the process is the most valuable outcome.',

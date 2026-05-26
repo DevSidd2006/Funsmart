@@ -7,7 +7,7 @@ function getGalleryImageSrc(image: unknown): string {
     return image
   }
 
-  return '/images/lab-observation.png'
+  return '/images/discovery-real.jpg'
 }
 
 export function LabGallery({ items }: { items: any[] }) {

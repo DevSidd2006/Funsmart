@@ -43,7 +43,7 @@ export function Hero({ data }: { data?: any }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           {/* Left: Text Content */}
           <div className="lg:col-span-7">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-8 leading-[1.05] text-balanced">
+            <h1 className="text-4xl md:text-5xl lg:text-[50px] font-serif font-bold text-white mb-8 leading-[1.05] text-balanced">
               Beyond <span className="whitespace-nowrap">Rote Learning.</span> Beyond Marks.
             </h1>
 

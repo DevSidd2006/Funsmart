@@ -5,11 +5,11 @@ import { SectionReveal } from '../ui/SectionReveal'
 
 function getImageSrc(image: unknown): string {
   if (typeof image === 'string') return image
-  return '/images/lab-observation.png'
+  return '/images/discovery-real.jpg'
 }
 
 export function GalleryTeaser({ items }: { items: any[] }) {
-  const displayItems = items?.slice(0, 6) || []
+  const displayItems = items?.slice(0, 4) || []
 
   return (
     <section className="section-spacing bg-white">
@@ -34,7 +34,7 @@ export function GalleryTeaser({ items }: { items: any[] }) {
         </div>
 
         {/* Thumbnail Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           {displayItems.map((item, i) => (
             <Link
               key={item._id || i}

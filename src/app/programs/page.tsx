@@ -86,7 +86,7 @@ export default function ProgramsPage() {
         <div className="absolute inset-0 lab-grid opacity-[0.05]" />
         <div className="container-fluid relative z-10 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white mb-8 leading-tight tracking-tight">
+            <h1 className="text-3xl md:text-5xl lg:text-[50px] font-serif font-bold text-white mb-8 leading-tight tracking-tight">
               Two programs. <br />
               <span className="text-accent-teal italic font-light opacity-90">One way of thinking about children.</span>
             </h1>
@@ -278,13 +278,13 @@ export default function ProgramsPage() {
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
-                  { src: '/images/robotics-project.png', label: 'Robotics · Gears & Motors' },
-                  { src: '/images/aeromodelling-project.png', label: 'Aeromodelling · Props & Balsa' },
-                  { src: '/images/discovery-moment.png', label: 'Tech Toys · Electronic Systems' },
-                  { src: '/images/pattern-recognition.png', label: 'Mechanical · Wooden Structures' },
+                  { src: '/images/gallery/teaser-1.jpg', label: 'Robotics · Gears & Motors' },
+                  { src: '/images/gallery/teaser-2.jpg', label: 'Aeromodelling · Props & Balsa' },
+                  { src: '/images/gallery/teaser-3.jpg', label: 'Tech Toys · Electronic Systems' },
+                  { src: '/images/gallery/teaser-4.jpg', label: 'Mechanical · Wooden Structures' },
                 ].map((img, i) => (
                   <div key={i} className="aspect-square relative rounded-[2rem] overflow-hidden shadow-xl group">
-                    <Image src={img.src} alt={img.label} fill className="object-cover transition-transform duration-1000 group-hover:scale-110" />
+                    <Image src={img.src} alt={img.label} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover transition-transform duration-1000 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary-500/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
                       <span className="text-[10px] font-bold text-white uppercase tracking-[0.2em]">{img.label}</span>
                     </div>
@@ -422,8 +422,8 @@ export default function ProgramsPage() {
                 <div className="relative z-10">
                   <div className="max-w-4xl mb-20">
                     <span className="inline-block px-5 py-2 bg-white/20 text-white rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-8">Major Differentiator</span>
-                    <h3 className="text-4xl md:text-7xl font-serif font-bold text-white mb-10 leading-[1.05]">Year-long exclusive: <br />Edu events</h3>
-                    <p className="text-2xl text-white/90 font-light leading-relaxed italic">
+                    <h3 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8 leading-[1.08]">Year-long exclusive: <br />Edu events</h3>
+                    <p className="text-lg md:text-xl text-white/90 font-light leading-relaxed italic">
                       Children learn scientist-style questioning by interacting with real scientists—not just listening to them. <br className="hidden md:block" />
                       <span className="text-white font-bold not-italic mt-6 block">They help run them — building real responsibility.</span>
                     </p>

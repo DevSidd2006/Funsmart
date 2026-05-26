@@ -34,7 +34,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 lab-grid opacity-[0.03]" />
         <div className="container-fluid relative z-10 text-center">
           <SectionReveal className="max-w-5xl mx-auto">
-            <h1 className="text-3xl md:text-5xl lg:text-[3.25rem] font-serif font-bold text-primary-500 mb-8 leading-tight tracking-tight">
+            <h1 className="text-3xl md:text-5xl lg:text-[50px] font-serif font-bold text-primary-500 mb-8 leading-tight tracking-tight">
               We Started FunSmartism Because We Kept Seeing <br className="hidden md:block" />
               Something Schools Weren’t Designed <br className="hidden md:block" />
               To Notice.

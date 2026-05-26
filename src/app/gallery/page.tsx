@@ -28,7 +28,7 @@ export default function GalleryPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold text-white leading-tight tracking-tight mb-8"
+              className="text-3xl md:text-5xl lg:text-[50px] font-serif font-bold text-white leading-tight tracking-tight mb-8"
             >
               {activeTab === 'lab' ? 'Real Projects. Real Challenges.' : 'In The Press.'}
               <br />
