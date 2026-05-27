@@ -109,15 +109,16 @@ export default function ProgramsPage() {
   return (
     <div className="bg-white">
       {/* SECTION 01 — HERO */}
-      <section className="pt-40 pb-32 bg-[#1E2A44] text-white relative overflow-hidden">
-        <div className="absolute inset-0 lab-grid opacity-[0.05]" />
+      <section className="pt-28 md:pt-44 pb-20 md:pb-24 bg-[#1E2A44] text-white relative overflow-hidden">
+        <div className="absolute inset-0 lab-grid opacity-[0.04]" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-teal/10 rounded-full blur-[120px] -translate-y-1/3 translate-x-1/3" />
         <div className="container-fluid relative z-10 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-5xl lg:text-[50px] font-serif font-bold text-white mb-8 leading-tight tracking-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-[50px] font-serif font-bold text-white mb-6 md:mb-8 leading-tight tracking-tight">
               Two programs. <br />
               <span className="text-accent-teal italic font-light opacity-90">One way of thinking about children.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-[#B7E3DD] mb-12 max-w-2xl mx-auto leading-relaxed font-light italic">
+            <p className="text-base md:text-lg lg:text-xl text-[#B7E3DD] mb-10 md:mb-12 max-w-2xl mx-auto leading-relaxed font-light italic">
               Both programs use real materials, scientist-inspired challenges, and live observation of how your child thinks. The difference is depth, pace, and continuity.
             </p>
 
@@ -163,7 +164,7 @@ export default function ProgramsPage() {
                 </div>
               </div>
             </Link>
-            
+
             <Link href="#year-long" className="group relative overflow-hidden p-10 rounded-[2.5rem] bg-white border border-neutral-200 hover:border-primary-500 transition-all duration-500 shadow-sm hover:shadow-huge">
               <div className="absolute top-0 left-0 w-full h-2 bg-primary-500" />
               <div className="inline-flex px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6">
@@ -194,11 +195,11 @@ export default function ProgramsPage() {
                 <div>Ages 8–16</div>
               </div>
               <div className="p-10 md:p-20">
-                <h2 className="text-3xl md:text-[50px] font-serif font-bold text-primary-500 mb-10 leading-tight">
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8 md:mb-10 leading-tight">
                   10-Day Thinking <br className="hidden md:block" />
                   Reset Workshop
                 </h2>
-                <p className="text-2xl text-neutral-500 mb-16 max-w-3xl leading-relaxed font-light">
+                <p className="text-lg md:text-xl text-neutral-500 mb-16 max-w-3xl leading-relaxed font-light">
                   Ten days. Ten completely different themes. Every day, a new world — and a new way to observe how your child thinks.
                 </p>
 
@@ -249,7 +250,7 @@ export default function ProgramsPage() {
             {/* Themes Table Section */}
             <div className="mb-20">
               <div className="text-center mb-20">
-                <h3 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-6">The 10 themes</h3>
+                <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-6">The 10 themes</h3>
                 <p className="text-xl text-neutral-500 font-light italic max-w-3xl mx-auto leading-relaxed">
                   Every day, a new world. We observe how your child approaches the unfamiliar—not just what they produce.
                 </p>
@@ -290,7 +291,7 @@ export default function ProgramsPage() {
                     <div className="w-14 h-14 rounded-2xl bg-accent-teal/10 flex items-center justify-center text-accent-teal mb-10">
                       <Milestone size={28} />
                     </div>
-                    <h4 className="text-2xl font-serif font-bold text-primary-500 mb-6">{t.theme}</h4>
+                    <h4 className="text-xl font-serif font-bold text-primary-500 mb-6">{t.theme}</h4>
                     <p className="text-neutral-500 leading-relaxed font-light italic">{t.desc}</p>
                   </div>
                 ))}
@@ -300,7 +301,7 @@ export default function ProgramsPage() {
             {/* Project Grid Visual Reinforcement */}
             <div className="mb-24">
               <div className="text-center mb-12">
-                <h3 className="text-2xl font-serif font-bold text-primary-500">Visualizing the 10 themes</h3>
+                <h3 className="text-2xl font-serif font-bold text-primary-500">Visualizing the themes</h3>
                 <p className="text-sm text-neutral-400 mt-2">Variety is at the core of the experience.</p>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -337,11 +338,11 @@ export default function ProgramsPage() {
                 <div>Ages 8–16</div>
               </div>
               <div className="p-10 md:p-24">
-                <h2 className="text-3xl md:text-[50px] font-serif font-bold text-white mb-10 leading-[1.05]">
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-8 md:mb-10 leading-[1.1]">
                   FunSmartism RoboSTEM <br className="hidden md:block" />
-                  <span className="text-accent-teal italic font-light opacity-90 text-3xl md:text-6xl">Thinking Lab — Year-Long</span>
+                  <span className="text-accent-teal italic font-light opacity-90 text-3xl md:text-4xl">Thinking Lab — Year-Long</span>
                 </h2>
-                <p className="text-2xl text-[#B7E3DD] mb-16 max-w-3xl leading-relaxed font-light italic">
+                <p className="text-lg md:text-xl text-[#B7E3DD] mb-16 max-w-3xl leading-relaxed font-light italic">
                   One theme each month. Four sessions to go deeper. Real projects, monthly thinking challenges, and regular parent discussions.
                 </p>
 
@@ -411,8 +412,8 @@ export default function ProgramsPage() {
             {/* Monthly Map Section */}
             <div className="mb-40">
               <div className="text-center mb-20">
-                <h3 className="text-3xl md:text-6xl font-serif font-bold text-white mb-8 tracking-tight">How the year is structured?</h3>
-                <p className="text-2xl text-[#B7E3DD] font-light italic max-w-2xl mx-auto leading-relaxed">A monthly journey into thinking depth.</p>
+                <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6 md:mb-8 tracking-tight">How the year is structured?</h3>
+                <p className="text-lg md:text-xl text-[#B7E3DD] font-light italic max-w-2xl mx-auto leading-relaxed">A monthly journey into thinking depth.</p>
               </div>
 
               <div className="overflow-hidden rounded-[3rem] border border-white/10 bg-white/5 backdrop-blur-xl relative shadow-huge">
@@ -449,13 +450,13 @@ export default function ProgramsPage() {
                 <div className="relative z-10">
                   <div className="max-w-4xl mb-20">
                     <span className="inline-block px-5 py-2 bg-white/20 text-white rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-8">Major Differentiator</span>
-                    <h3 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8 leading-[1.08]">Year-long exclusive: <br />Edu events</h3>
+                    <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6 md:mb-8 leading-tight">Year-long exclusive: <br />Edu events</h3>
                     <p className="text-lg md:text-xl text-white/90 font-light leading-relaxed italic">
                       Children learn scientist-style questioning by interacting with real scientists—not just listening to them. <br className="hidden md:block" />
                       <span className="text-white font-bold not-italic mt-6 block">They help run them — building real responsibility.</span>
                     </p>
                   </div>
-                  
+
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
                     {[
                       { title: 'Set up the space', desc: 'Organise and prepare the event environment.' },
@@ -476,7 +477,7 @@ export default function ProgramsPage() {
                   </div>
 
                   <div className="text-center">
-                    <p className="text-2xl font-serif font-bold text-white mb-6 italic leading-relaxed">
+                    <p className="text-xl font-serif font-bold text-white mb-6 italic leading-relaxed">
                       Over time, children don’t just build projects — <br className="hidden md:block" />
                       they learn to discuss, question, and explain them with experts.
                     </p>
@@ -496,8 +497,8 @@ export default function ProgramsPage() {
       <section className="py-32 bg-white relative overflow-hidden">
         <div className="container-fluid">
           <div className="max-w-4xl mx-auto text-center mb-24">
-            <h2 className="text-2xl md:text-[46px] font-serif font-bold text-primary-500 mb-8 tracking-tight">Quick Comparison</h2>
-            <p className="text-2xl text-neutral-500 font-light italic leading-relaxed">Helping you decide between first insight and deeper habit building.</p>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-6 md:mb-8 tracking-tight">Quick Comparison</h2>
+            <p className="text-lg md:text-xl text-neutral-500 font-light italic leading-relaxed">Helping you decide between first insight and deeper habit building.</p>
           </div>
 
           <div className="max-w-5xl mx-auto rounded-[3rem] overflow-hidden border border-neutral-100 shadow-huge relative">
@@ -519,13 +520,13 @@ export default function ProgramsPage() {
                 ))}
                 <tr className="bg-neutral-50 font-bold border-t-2 border-[#1E2A44]/10">
                   <td className="py-10 px-12 text-xs text-primary-400 uppercase tracking-[0.2em]">Best for</td>
-                  <td className="py-10 px-12 text-2xl text-accent-teal font-serif italic">First insight</td>
-                  <td className="py-10 px-12 text-2xl text-primary-500 font-serif italic">Deeper habit-building</td>
+                  <td className="py-10 px-12 text-lg md:text-xl text-accent-teal font-serif italic">First insight</td>
+                  <td className="py-10 px-12 text-lg md:text-xl text-primary-500 font-serif italic">Deeper habit-building</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <p className="mt-20 text-center text-neutral-400 font-serif text-2xl italic max-w-4xl mx-auto leading-relaxed">
+          <p className="mt-20 text-center text-neutral-400 font-serif text-lg md:text-xl italic max-w-4xl mx-auto leading-relaxed">
             Not sure how to start? Tell us your child's age when you visit — we'll guide you.
           </p>
         </div>
@@ -536,7 +537,7 @@ export default function ProgramsPage() {
         <div className="container-fluid">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-20">
-              <h2 className="text-4xl md:text-6xl font-serif font-bold text-primary-500 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 leading-tight">
                 Frequently asked questions.
               </h2>
               <div className="w-20 h-1.5 bg-accent-teal mt-8 mx-auto rounded-full" />
@@ -549,10 +550,10 @@ export default function ProgramsPage() {
       {/* SECTION 07 — CLOSING CTA */}
       <section className="py-40 text-center bg-[#1E2A44] text-white relative overflow-hidden">
         <div className="absolute inset-0 lab-grid opacity-[0.03]" />
-        
+
         <div className="container-fluid relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-6xl font-serif font-bold text-white mb-10 leading-tight tracking-tight">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-8 md:mb-10 leading-tight tracking-tight">
               Every program begins with a <br className="hidden md:block" />
               <span className="text-accent-teal italic font-light opacity-90">parent orientation.</span>
             </h2>
@@ -572,7 +573,7 @@ export default function ProgramsPage() {
                 </Button>
               </Link>
             </div>
-            
+
             <div className="mt-20 space-y-4">
               <p className="text-xs font-mono tracking-[0.5em] uppercase font-bold text-white/30 text-center">
                 Free Parent Orientation · 30–45 minutes 📍 Bibwewadi, Pune
