@@ -65,10 +65,13 @@ export default function AboutPage() {
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-teal/10 rounded-full blur-[120px] -translate-y-1/3 translate-x-1/3" />
         <div className="container-fluid relative z-10 text-center">
           <SectionReveal className="max-w-5xl mx-auto">
-            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-[50px] font-serif font-bold text-white mb-6 md:mb-8 leading-tight tracking-tight">
-              We Started FunSmartism Because We Kept Seeing <br className="hidden md:block" />
-              Something Schools Weren't Designed <br className="hidden md:block" />
-              To Notice.
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent-teal/10 border border-accent-teal/20 text-accent-teal text-xs font-bold uppercase tracking-[0.2em] mb-8">
+              The Origin Story
+            </div>
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-8 leading-[1.15] tracking-tight">
+              We started FunSmartism because <br className="hidden md:block" />
+              we kept seeing something <br className="hidden md:block" />
+              <span className="text-accent-teal italic font-light">schools weren't designed to notice.</span>
             </h1>
             <p className="text-base md:text-lg lg:text-xl text-[#B7E3DD] font-light leading-relaxed max-w-4xl mx-auto">
               Children often behave very differently when they are given real opportunities to build, explore, experiment, and solve unfamiliar challenges actively. <br />
