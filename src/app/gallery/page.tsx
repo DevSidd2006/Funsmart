@@ -30,10 +30,10 @@ export default function GalleryPage() {
               transition={{ duration: 0.8 }}
               className="text-3xl md:text-5xl lg:text-[50px] font-serif font-bold text-white leading-tight tracking-tight mb-8"
             >
-              {activeTab === 'lab' ? 'Real Projects. Real Challenges.' : 'In The Press.'}
+              {activeTab === 'lab' ? 'Real moments from our lab.' : 'In The Press.'}
               <br />
               <span className="text-accent-teal italic font-light">
-                {activeTab === 'lab' ? 'Real Learning Moments.' : 'Spreading the Vision of RoboSTEM.'}
+                {activeTab === 'lab' ? 'A glimpse into how children build, test, and explore.' : 'Spreading the Vision of RoboSTEM.'}
               </span>
             </motion.h1>
             <motion.p

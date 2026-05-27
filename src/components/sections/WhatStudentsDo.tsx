@@ -5,16 +5,16 @@ import { SectionReveal } from '../ui/SectionReveal'
 
 export function WhatStudentsDo() {
   const activities = [
-    { icon: Bot, text: "build robots using sensors and electronics" },
-    { icon: Wrench, text: "open real appliances to understand how things work" },
-    { icon: BrainCircuit, text: "create mechanical and electronic tech toys" },
-    { icon: Rocket, text: "design rockets and aeroplane models" },
-    { icon: Blocks, text: "solve hands-on STEM challenges" },
-    { icon: PenTool, text: "build roller coasters and structures using simple materials" },
-    { icon: Telescope, text: "explore astronomy and space science" },
-    { icon: MonitorOff, text: "redesign products through design thinking activities" },
-    { icon: BrainCircuit, text: "create sci-fi stories and innovation concepts" },
-    { icon: Blocks, text: "improve logic through Rubik’s Cube, Sudoku, and math challenges" },
+    { icon: Bot, text: "Robotics" },
+    { icon: Wrench, text: "Reverse Engineering" },
+    { icon: BrainCircuit, text: "Electronics & Tech Toys" },
+    { icon: Rocket, text: "Aeromodeling" },
+    { icon: Blocks, text: "Hands-on STEM Challenges" },
+    { icon: PenTool, text: "Structural Engineering" },
+    { icon: Telescope, text: "Astronomy & Space Science" },
+    { icon: MonitorOff, text: "Design Thinking" },
+    { icon: BrainCircuit, text: "Sci-Fi & Innovation" },
+    { icon: Blocks, text: "Logic & Math Challenges" },
   ]
 
   return (
@@ -35,7 +35,7 @@ export function WhatStudentsDo() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-[#FAF9F6] rounded-[3rem] p-8 md:p-16 shadow-sm border border-neutral-100">
           <div className="lg:col-span-7">
             <h3 className="text-xl font-bold text-primary-500 mb-10 uppercase tracking-widest text-[12px] opacity-70">
-              Depending on the month’s theme, students may:
+              Depending on the month’s theme, domains explored include:
             </h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

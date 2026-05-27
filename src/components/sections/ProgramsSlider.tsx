@@ -1,111 +1,45 @@
-'use client'
-
-import { useState, useRef } from 'react'
-import { ChevronLeft, ChevronRight, Atom, Cpu, Dna, FlaskConical, Microscope, Brain, Rocket, BookOpen, Puzzle, Zap } from 'lucide-react'
+import { Atom, Cpu, FlaskConical, Microscope, Brain, Rocket, BookOpen, Puzzle, Zap } from 'lucide-react'
 
 const defaultSlides = [
-  { icon: Rocket,    theme: '01', title: 'Robotics & Engineering',      desc: 'Build, break, rebuild — understanding mechanical systems hands-on.' },
-  { icon: Atom,      theme: '02', title: 'Space Science & Astronomy',    desc: 'Scale, orbit, gravity — thinking like a planetary scientist.' },
-  { icon: Cpu,       theme: '03', title: 'Algorithmic Coding',           desc: 'Logic flows, pattern recognition, computational thinking without a screen.' },
-  { icon: Puzzle,    theme: '04', title: "Rubik's Logic",                desc: 'Pattern recognition and spatial reasoning compressed into a cube.' },
+  { icon: Rocket,    theme: '01', title: 'Robotics & Engineering',      desc: 'Build, break, rebuild — understanding mechanical systems.' },
+  { icon: Atom,      theme: '02', title: 'Space Science',    desc: 'Scale, orbit, gravity — thinking like a scientist.' },
+  { icon: Cpu,       theme: '03', title: 'Algorithmic Coding',           desc: 'Logic flows, pattern recognition without a screen.' },
+  { icon: Puzzle,    theme: '04', title: "Rubik's Logic",                desc: 'Pattern recognition and spatial reasoning compressed.' },
   { icon: Brain,     theme: '05', title: 'Cognitive Sudoku',             desc: 'Number logic, constraint thinking, and decision trees.' },
   { icon: BookOpen,  theme: '06', title: 'Memory Mastery',               desc: 'Memory as a thinking tool — not a recitation technique.' },
-  { icon: Rocket,    theme: '07', title: 'Aeromodeling',                 desc: 'Physics of flight, aerodynamics, and real paper-to-air builds.' },
-  { icon: Microscope,theme: '08', title: 'STEM Research',                desc: 'Mini research cycles: question → observe → test → conclude.' },
-  { icon: Zap,       theme: '09', title: 'Electronics & Circuits',       desc: 'Current, voltage, and real breadboard builds from scratch.' },
-  { icon: FlaskConical, theme: '10', title: 'Critical Thinking',         desc: 'Logical fallacies, reasoning traps, and debate-style problem solving.' },
+  { icon: Rocket,    theme: '07', title: 'Aeromodeling',                 desc: 'Physics of flight, aerodynamics, and real builds.' },
+  { icon: Microscope,theme: '08', title: 'STEM Research',                desc: 'Mini research cycles: question → observe → test.' },
+  { icon: Zap,       theme: '09', title: 'Electronics',       desc: 'Current, voltage, and real breadboard builds.' },
+  { icon: FlaskConical, theme: '10', title: 'Critical Thinking',         desc: 'Logical fallacies and debate-style problem solving.' },
 ]
 
 export function ProgramsSlider() {
-  const [activeIndex, setActiveIndex] = useState(0)
-  const scrollRef = useRef<HTMLDivElement>(null)
-
-  const VISIBLE = 3 // cards visible at once
-  const maxIndex = defaultSlides.length - VISIBLE
-
-  const scrollTo = (index: number) => {
-    const clamped = Math.max(0, Math.min(index, maxIndex))
-    setActiveIndex(clamped)
-    if (scrollRef.current) {
-      const cardWidth = scrollRef.current.scrollWidth / defaultSlides.length
-      scrollRef.current.scrollTo({ left: clamped * cardWidth, behavior: 'smooth' })
-    }
-  }
-
   return (
     <section className="section-spacing bg-white overflow-hidden">
-      <div className="container-fluid">
-        {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-          <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
-              10 themes. 10 worlds to explore.
-            </h2>
-          </div>
-          {/* Nav arrows */}
-          <div className="flex gap-3 flex-shrink-0">
-            <button
-              onClick={() => scrollTo(activeIndex - 1)}
-              disabled={activeIndex === 0}
-              className="w-12 h-12 rounded-full border border-primary-100 flex items-center justify-center text-primary-500 hover:bg-primary-500 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-all shadow-sm"
-              aria-label="Previous theme"
-            >
-              <ChevronLeft size={20} />
-            </button>
-            <button
-              onClick={() => scrollTo(activeIndex + 1)}
-              disabled={activeIndex >= maxIndex}
-              className="w-12 h-12 rounded-full border border-primary-100 flex items-center justify-center text-primary-500 hover:bg-primary-500 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed transition-all shadow-sm"
-              aria-label="Next theme"
-            >
-              <ChevronRight size={20} />
-            </button>
-          </div>
+      <div className="container-fluid max-w-7xl mx-auto">
+        <div className="mb-12 text-center max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
+            10 themes. 10 worlds to explore.
+          </h2>
         </div>
 
-        {/* Slider track */}
-        <div
-          ref={scrollRef}
-          className="flex gap-6 overflow-x-auto scrollbar-hide pb-4 scroll-smooth"
-          style={{ scrollbarWidth: 'none' }}
-        >
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 md:gap-6">
           {defaultSlides.map((slide, i) => {
             const Icon = slide.icon
             return (
               <div
                 key={i}
-                className="flex-shrink-0 w-72 md:w-80 bg-accent-surface border border-neutral-100 rounded-xl overflow-hidden hover:border-accent-teal/40 hover:shadow-lg hover:-translate-y-1 transition-all duration-400 group cursor-default"
+                className="bg-[#F4F9FA] border border-[#E1F0F5] rounded-2xl p-5 flex flex-col items-center text-center hover:bg-[#EAF5F8] hover:border-accent-teal/40 hover:-translate-y-1.5 hover:shadow-md transition-all duration-300 group"
               >
-                <div className="h-44 md:h-48 bg-gradient-to-br from-accent-teal/15 via-white to-primary-50 relative overflow-hidden p-6">
-                  <div className="absolute inset-0 lab-grid opacity-[0.06]" />
-                  <div className="relative z-10 flex items-start justify-between">
-                    <div className="w-12 h-12 rounded-lg bg-accent-teal/10 flex items-center justify-center border border-accent-teal/15">
-                      <Icon size={22} className="text-accent-teal" />
-                    </div>
-                    <span className="text-4xl font-serif font-bold text-primary-100 select-none">{slide.theme}</span>
-                  </div>
+                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-accent-teal mb-3 shadow-sm group-hover:scale-110 transition-transform duration-300">
+                  <Icon size={20} />
                 </div>
-                <div className="p-8">
-                  <h3 className="text-lg font-serif font-bold text-primary-500 mb-3 leading-snug">{slide.title}</h3>
-                  <p className="text-sm text-neutral-500 leading-relaxed">{slide.desc}</p>
-                </div>
+                <h3 className="text-sm font-bold text-primary-500 leading-tight">
+                  {slide.title}
+                </h3>
               </div>
             )
           })}
-        </div>
-
-        {/* Dot indicators */}
-        <div className="flex gap-2 mt-8 justify-center">
-          {Array.from({ length: maxIndex + 1 }).map((_, i) => (
-            <button
-              key={i}
-              onClick={() => scrollTo(i)}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                i === activeIndex ? 'w-8 bg-accent-teal' : 'w-3 bg-neutral-200'
-              }`}
-              aria-label={`Go to slide group ${i + 1}`}
-            />
-          ))}
         </div>
       </div>
     </section>

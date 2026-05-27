@@ -15,22 +15,8 @@ export function GalleryTeaser({ items }: { items: any[] }) {
     <section className="section-spacing bg-white">
       <SectionReveal className="container-fluid">
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
-          <div className="max-w-xl">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight mb-3">
-              Real moments from{' '}
-              <span className="text-accent-teal italic font-light">FunSmartism.</span>
-            </h2>
-            <p className="text-neutral-500 leading-relaxed">
-              A glimpse into how children build, test, and explore inside the RoboSTEM Thinking Lab.
-            </p>
-          </div>
-          <Link
-            href="/gallery"
-            className="group inline-flex items-center gap-2 text-accent-teal font-bold uppercase text-xs tracking-widest hover:gap-4 transition-all whitespace-nowrap flex-shrink-0"
-          >
-            View Full Gallery <ArrowRight size={14} />
-          </Link>
+        <div className="mb-8">
+          {/* Replaced with simple grid as requested */}
         </div>
 
         {/* Thumbnail Grid */}

@@ -3,6 +3,7 @@ import { SectionReveal } from '../ui/SectionReveal'
 
 export function EduEvents() {
   const people = ['Scientists', 'Researchers', 'Innovators', 'Engineers', 'Startup Founders', 'Industry Experts']
+  const orgs = ['ISRO', 'DRDO', 'NIV', 'IMD', 'IISER', 'and other innovation ecosystems']
 
   const opportunities = [
     { label: 'Interact directly with experts', icon: MessageSquare },
@@ -27,11 +28,24 @@ export function EduEvents() {
             Throughout the academic year, FunSmartism hosts special edu-events where students interact with:
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4 mb-16">
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
             {people.map((person, i) => (
               <span key={i} className="px-6 py-3 bg-white/5 border border-white/10 rounded-full text-white/90 text-sm font-medium tracking-wide">
                 {person}
               </span>
+            ))}
+          </div>
+
+          <p className="text-lg text-[#B7E3DD] leading-relaxed font-light mb-6">
+            Guests may include experts associated with organisations such as:
+          </p>
+
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-4 mb-16 max-w-4xl">
+            {orgs.map((org, i) => (
+              <div key={i} className="flex items-center gap-3">
+                <div className="w-2 h-2 rounded-full bg-accent-teal drop-shadow-[0_0_8px_rgba(47,181,163,0.8)]" />
+                <span className="text-white font-bold text-lg md:text-xl tracking-wide">{org}</span>
+              </div>
             ))}
           </div>
         </div>

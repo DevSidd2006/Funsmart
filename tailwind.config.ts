@@ -38,8 +38,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        serif: ['var(--font-sora)', 'sans-serif'], // Sora is technically sans but we use it for structured headlines
-        sans: ['var(--font-inter)', 'sans-serif'],
+        serif: ['var(--font-sora)', 'sans-serif'],
+        sans: ['var(--font-sora)', 'sans-serif'],
         mono: ['var(--font-mono)', 'monospace'],
       },
       spacing: {

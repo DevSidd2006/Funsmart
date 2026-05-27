@@ -34,7 +34,7 @@ export function ObservationUSP() {
 
           <div className="bg-white rounded-3xl p-8 md:p-10 shadow-sm border border-neutral-100 mb-12 relative z-10">
             <p className="text-xs font-bold text-neutral-400 uppercase tracking-widest mb-6 text-center">For example:</p>
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+            <ul className="flex flex-col gap-4 max-w-2xl mx-auto">
               {observations.map((obs, i) => (
                 <li key={i} className="flex gap-4 items-center bg-[#FAF9F6] p-4 rounded-xl border border-neutral-100">
                   <div className="w-2 h-2 rounded-full bg-accent-teal flex-shrink-0" />

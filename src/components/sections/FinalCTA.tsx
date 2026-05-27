@@ -4,7 +4,7 @@ import { SectionReveal } from '../ui/SectionReveal'
 
 export function FinalCTA({ data }: { data?: any }) {
   const headline = data?.headline || "Marks show outcomes."
-  const subheadline = data?.subheadline || "Real-world learning experiences shape confidence, curiosity, and independent problem-solving."
+  const subheadline = data?.subheadline || "Real-world learning experiences shape confidence, curiosity, and independent problem-solving — not rote learning."
   const description = data?.description || "Experience how children build, test, and solve unfamiliar challenges in person."
 
   return (
