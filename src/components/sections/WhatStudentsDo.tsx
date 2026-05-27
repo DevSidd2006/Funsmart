@@ -55,7 +55,7 @@ export function WhatStudentsDo() {
             </div>
           </div>
 
-          <div className="lg:col-span-5 relative aspect-square rounded-[2rem] overflow-hidden group">
+          <div className="lg:col-span-5 relative aspect-video md:aspect-square rounded-[2rem] overflow-hidden group">
             <Image 
               src="/images/discovery-real.jpg" 
               alt="Hands-on learning at FunSmartism" 

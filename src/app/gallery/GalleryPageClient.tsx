@@ -16,7 +16,7 @@ export function GalleryPageClient() {
   return (
     <div className="bg-white min-h-screen">
       {/* SECTION 1 — HERO */}
-      <section className="pt-52 pb-24 bg-[#1E2A44] relative overflow-hidden text-white">
+      <section className="pt-28 md:pt-44 pb-20 md:pb-24 bg-[#1E2A44] relative overflow-hidden text-white">
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 0.05 }}
@@ -75,7 +75,7 @@ export function GalleryPageClient() {
         <div className="container-fluid max-w-7xl mx-auto px-6 md:px-12">
           <motion.div
             layout
-            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 ${activeTab === 'news' ? 'auto-rows-[480px]' : 'auto-rows-[340px]'}`}
+            className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 md:gap-8 auto-rows-[280px] md:auto-rows-[340px] ${activeTab === 'news' ? 'lg:auto-rows-[480px]' : 'lg:auto-rows-[340px]'}`}
           >
             <AnimatePresence mode="popLayout">
               {displayItems.map((item: any, idx: number) => {

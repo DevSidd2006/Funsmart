@@ -78,7 +78,7 @@ export function SessionStructure() {
         <div className="mt-12 flex justify-center px-4 md:px-0">
           <div className="px-6 md:px-10 py-6 bg-white border border-neutral-100 shadow-sm rounded-3xl italic text-primary-500 font-medium text-center relative overflow-hidden max-w-full">
              <div className="absolute left-0 top-0 w-2 h-full bg-accent-teal" />
-             <p className="text-lg md:text-xl whitespace-normal md:whitespace-nowrap">
+             <p className="text-lg md:text-xl">
                Children are <span className="text-accent-teal font-bold not-italic mx-1">guided</span>— but not spoon-fed fixed answers.
              </p>
           </div>

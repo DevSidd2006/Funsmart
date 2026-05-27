@@ -7,18 +7,18 @@ import { SectionReveal } from '../ui/SectionReveal'
 const moments = [
   {
     shortTitle: "Observe Before Acting",
-    title: "A 10-year-old was given a gear system she had never seen before.",
-    text: "While others immediately started turning parts randomly, she spent several minutes quietly observing how the pieces connected. Only after understanding the structure did she begin testing it. Her parent had earlier described her as \"slow to start.\" Inside the session, we saw something different: careful observation before action.",
+    title: "A 10-year-old and a gear system she'd never seen before.",
+    text: "She didn't touch it for the first eight minutes. Just looked. Tilted her head. Looked from a different angle. When she finally reached out, her first move was to turn the largest gear — testing the system before committing to it. Her parent had described her as 'slow to start things'. We described it as a real problem solving way of first observing the system. Same child. Different lens.",
   },
   {
     shortTitle: "Retry After Failure",
-    title: "A 12-year-old working on a STEM structure failed multiple times while testing his design.",
-    text: "After another failed attempt, he paused for a while, looked at the materials again, and then started rebuilding using a completely different approach. Nobody asked him to restart. He decided to test a new idea on his own.",
+    title: "A 12-year-old who failed four times and kept going.",
+    text: "His fourth attempt didn't work either. He sat back, stared at the ceiling for about thirty seconds, then picked up the materials and tried something genuinely different. Not a variation — a different approach entirely. That shift is harder than it sounds. Most adults default to trying the same thing faster. He did it at twelve, without being asked.",
   },
   {
     shortTitle: "Asking Better Questions",
-    title: "During a scientist interaction session, one student quietly listened for almost the entire discussion.",
-    text: "Near the end, she raised her hand and asked a question connecting the session topic to something she had previously built during a workshop. Her parent later mentioned: \"Usually she hesitates to speak in front of new people.\" Moments like these often appear gradually — through repeated opportunities to build, discuss, explore, and participate actively.",
+    title: "A 14-year-old who explained her project to a scientist during one of our school and edu innovation events.",
+    text: "She'd spent a month building a working model during the year-long program. At the event, a researcher asked her how it worked. She answered — clearly, confidently, technically. And then asked the researcher a question back. Her mother said she'd never heard her daughter speak to an adult that way. We weren't surprised. We'd been watching her think for eight weeks.",
   },
 ]
 

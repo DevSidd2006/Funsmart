@@ -60,27 +60,28 @@ export default function AboutPage() {
   return (
     <div className="bg-white">
       {/* Hero */}
-      <section className="pt-40 pb-24 bg-accent-surface relative min-h-[70vh] flex items-center overflow-hidden">
-        <div className="absolute inset-0 lab-grid opacity-[0.03]" />
+      <section className="pt-28 md:pt-44 pb-16 md:pb-24 bg-[#1E2A44] relative overflow-hidden">
+        <div className="absolute inset-0 lab-grid opacity-[0.04]" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-teal/10 rounded-full blur-[120px] -translate-y-1/3 translate-x-1/3" />
         <div className="container-fluid relative z-10 text-center">
           <SectionReveal className="max-w-5xl mx-auto">
-            <h1 className="text-3xl md:text-5xl lg:text-[50px] font-serif font-bold text-primary-500 mb-8 leading-tight tracking-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-[50px] font-serif font-bold text-white mb-6 md:mb-8 leading-tight tracking-tight">
               We Started FunSmartism Because We Kept Seeing <br className="hidden md:block" />
-              Something Schools Weren’t Designed <br className="hidden md:block" />
+              Something Schools Weren't Designed <br className="hidden md:block" />
               To Notice.
             </h1>
-            <p className="text-lg md:text-xl text-neutral-600 font-light leading-relaxed max-w-4xl mx-auto">
+            <p className="text-base md:text-lg lg:text-xl text-[#B7E3DD] font-light leading-relaxed max-w-4xl mx-auto">
               Children often behave very differently when they are given real opportunities to build, explore, experiment, and solve unfamiliar challenges actively. <br />
-              <span className="font-medium text-primary-500">FunSmartism was created to provide more of those environments.</span>
+              <span className="font-medium text-white">FunSmartism was created to provide more of those environments.</span>
             </p>
           </SectionReveal>
         </div>
       </section>
 
       {/* The Belief */}
-      <section className="py-16 bg-white relative z-20">
+      <section className="py-16 md:py-24 bg-white relative z-20">
         <SectionReveal className="container-fluid max-w-6xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-center text-[#1E2A44] mb-16">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-center text-primary-500 mb-12 md:mb-16">
             Three Things We Believe.
           </h2>
 
@@ -98,12 +99,12 @@ export default function AboutPage() {
       </section>
 
       {/* Why We Built This — VERTICAL FLOW REDESIGN */}
-      <section className="py-24 bg-[#FAF9F6] relative overflow-hidden">
+      <section className="py-16 md:py-24 bg-[#FAF9F6] relative overflow-hidden">
         <SectionReveal className="container-fluid max-w-4xl mx-auto relative z-10">
           
           {/* 1. Heading */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
+          <div className="text-center mb-12 md:mb-16">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 leading-tight">
               Why We Built This <br />
               <span className="text-accent-teal italic font-light">Environment.</span>
             </h2>
@@ -182,20 +183,20 @@ export default function AboutPage() {
       <InspirationSection />
 
       {/* Philosophy */}
-      <section className="py-20 bg-[#1E2A44] text-white text-center">
+      <section className="py-16 md:py-24 bg-[#1E2A44] text-white text-center">
         <SectionReveal className="container-fluid max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-8 leading-tight">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white mb-6 md:mb-8 leading-tight">
             Marks show outcomes. <br className="hidden md:block" />
             <span className="text-accent-teal">Real-world learning experiences shape confidence, curiosity, and independent problem-solving — not rote learning.</span>
           </h2>
-          <p className="text-xl text-neutral-300 leading-relaxed font-light max-w-2xl mx-auto">
+          <p className="text-lg text-neutral-300 leading-relaxed font-light max-w-2xl mx-auto">
             We are not against exams, academics, or results. We simply believe children also need environments where they can actively participate in learning instead of only following instructions.
           </p>
         </SectionReveal>
       </section>
 
       {/* Gallery Thumbnails Teaser */}
-      <section className="py-20 bg-[#FAF9F6]">
+      <section className="py-16 md:py-24 bg-[#FAF9F6]">
         <SectionReveal className="container-fluid">
           <div className="flex flex-col md:flex-row items-end justify-between gap-6 mb-10">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 leading-tight">
@@ -228,12 +229,12 @@ export default function AboutPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-white text-center">
+      <section className="py-16 md:py-24 bg-white text-center">
         <SectionReveal className="container-fluid max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-8 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-6 md:mb-8 leading-tight">
             See The Environment <span className="text-accent-teal italic font-light">yourself</span>
           </h2>
-          <p className="text-xl text-neutral-600 mb-12 font-light leading-relaxed">
+          <p className="text-lg md:text-xl text-neutral-600 mb-10 md:mb-12 font-light leading-relaxed">
             The best way to understand FunSmartism is to experience a real session, workshop, or STEM challenge environment directly.
           </p>
           <Link href="/schedule-visit">

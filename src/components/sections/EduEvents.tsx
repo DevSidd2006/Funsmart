@@ -40,11 +40,11 @@ export function EduEvents() {
             Guests may include experts associated with organisations such as:
           </p>
 
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-4 mb-16 max-w-4xl">
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-3 md:gap-x-6 md:gap-y-4 mb-16 max-w-4xl">
             {orgs.map((org, i) => (
-              <div key={i} className="flex items-center gap-3">
+              <div key={i} className="flex items-center gap-2 md:gap-3">
                 <div className="w-2 h-2 rounded-full bg-accent-teal drop-shadow-[0_0_8px_rgba(47,181,163,0.8)]" />
-                <span className="text-white font-bold text-lg md:text-xl tracking-wide">{org}</span>
+                <span className="text-white font-bold text-base md:text-xl tracking-wide">{org}</span>
               </div>
             ))}
           </div>

@@ -44,14 +44,15 @@ export function ScheduleVisitPageClient() {
   return (
     <div className="bg-[#FAF9F6] min-h-screen">
       {/* SECTION 01 — HERO */}
-      <section className="pt-40 pb-12 text-center bg-[#1E2A44] !text-white relative overflow-hidden">
-        <div className="absolute inset-0 lab-grid opacity-[0.03]" />
+      <section className="pt-28 md:pt-44 pb-16 md:pb-24 text-center bg-[#1E2A44] text-white relative overflow-hidden">
+        <div className="absolute inset-0 lab-grid opacity-[0.04]" />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-teal/10 rounded-full blur-[120px] -translate-y-1/3 translate-x-1/3" />
         <div className="container-fluid relative z-10">
           <SectionReveal className="max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold !text-white mb-8 leading-tight tracking-tight">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-[50px] font-serif font-bold text-white mb-6 md:mb-8 leading-tight tracking-tight">
               See The Environment In Person
             </h1>
-            <p className="text-lg md:text-xl !text-white/80 mb-12 max-w-3xl mx-auto leading-relaxed font-light">
+            <p className="text-base md:text-lg lg:text-xl text-[#B7E3DD] mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-light">
               The best way to understand FunSmartism is to experience the learning environment directly. 
               Visit the lab, explore current RoboSTEM themes, interact with the team, and understand how children learn through hands-on challenges, experimentation, and real-world exploration.
             </p>

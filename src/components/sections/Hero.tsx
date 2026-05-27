@@ -27,7 +27,7 @@ export function Hero({ data }: { data?: any }) {
   }, [images.length])
 
   return (
-    <section id="home" className="relative w-full min-h-screen flex items-center bg-[#1E2A44] overflow-hidden pt-52 pb-20 md:pb-24 text-white">
+    <section id="home" className="relative w-full min-h-screen flex items-center bg-[#1E2A44] overflow-hidden pt-28 md:pt-40 lg:pt-52 pb-16 md:pb-24 text-white">
       {/* Subtle Grid Background */}
       <div className="absolute inset-0 lab-grid opacity-[0.05] z-0" />
 
@@ -39,24 +39,24 @@ export function Hero({ data }: { data?: any }) {
         <Binary size={130} strokeWidth={0.5} />
       </div>
 
-      <div className="container-fluid relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      <div className="container-fluid relative z-10 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
           {/* Left: Text Content */}
           <div className="lg:col-span-7">
-            <h1 className="text-4xl md:text-5xl lg:text-[50px] font-serif font-bold text-white mb-8 leading-[1.05] text-balanced">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-serif font-bold text-white mb-5 md:mb-8 leading-[1.05] text-balanced">
               Beyond <span className="whitespace-nowrap">Rote Learning.</span> Beyond Marks.
             </h1>
 
-            <p className="text-lg md:text-2xl text-[#B7E3DD] mb-12 max-w-2xl leading-relaxed font-light opacity-90">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#B7E3DD] mb-8 md:mb-12 max-w-2xl leading-relaxed font-light opacity-90">
               {subline}
             </p>
 
-            <div className="flex flex-col gap-6 w-full max-w-xl">
+            <div className="flex flex-col gap-5 w-full max-w-xl">
               <div className="flex flex-col gap-3">
                 <Link href="/schedule-visit" className="w-full">
                   <Button
                     size="lg"
-                    className="px-12 py-6 shadow-2xl shadow-accent-teal/20 bg-accent-teal hover:bg-[#28A392] text-white border-none w-full rounded-xl font-bold text-lg"
+                    className="px-8 md:px-12 py-5 md:py-6 shadow-2xl shadow-accent-teal/20 bg-accent-teal hover:bg-[#28A392] text-white border-none w-full rounded-xl font-bold text-base md:text-lg"
                   >
                     Schedule a Visit
                   </Button>
@@ -66,7 +66,7 @@ export function Hero({ data }: { data?: any }) {
                 </p>
               </div>
 
-              <div className="flex flex-col gap-3 mt-4">
+              <div className="flex flex-col gap-3 mt-2 md:mt-4">
                 <JoinCommunity size="lg" />
                 <p className="text-sm text-white/60 leading-relaxed pl-2 border-l-2 border-white/20">
                   Get updates about STEM challenges, workshops, edu-events, and upcoming sessions before deciding long-term.
@@ -75,7 +75,23 @@ export function Hero({ data }: { data?: any }) {
             </div>
           </div>
 
-          {/* Right: Asymmetrical Image Container */}
+          {/* Mobile: Small hero image below text */}
+          <div className="lg:hidden relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/10 mt-4">
+            {images.map((img, idx) => (
+              <Image
+                key={idx}
+                src={img}
+                alt={headline}
+                fill
+                priority={idx === 0}
+                sizes="100vw"
+                className={`object-cover transition-all duration-1000 ${idx === currentImage ? 'opacity-100' : 'opacity-0'}`}
+              />
+            ))}
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1E2A44]/60 via-transparent to-transparent pointer-events-none" />
+          </div>
+
+          {/* Right: Asymmetrical Image Container — desktop only */}
           <div className="lg:col-span-5 relative hidden lg:block">
             <div className="relative aspect-[4/5] w-full max-w-lg ml-auto">
               {/* Glassmorphic Floating Icons */}
