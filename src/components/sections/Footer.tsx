@@ -86,7 +86,7 @@ export function Footer({ data }: { data?: any }) {
               <p>{phone} <br /> {email}</p>
               <div className="pt-4">
                 <p className="text-mono text-accent-teal uppercase tracking-widest text-[12px] font-bold mb-1">Hours</p>
-                <p className="text-sm">{hours}</p>
+                <p className="text-sm whitespace-nowrap">{hours}</p>
               </div>
             </div>
           </div>

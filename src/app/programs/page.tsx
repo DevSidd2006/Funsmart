@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { Button } from '@/components/ui/Button'
 import { Accordion } from '@/components/ui/Accordion'
-import { Check, ArrowRight, Calculator, Puzzle, Settings, Plane, Cpu, PenTool, Telescope, Laptop, Bot, Presentation, Milestone, Clock, Users, Brain, Anchor, Target, Rocket } from 'lucide-react'
+import { Check, ArrowRight, Calculator, Puzzle, Settings, Plane, Cpu, PenTool, Telescope, Laptop, Bot, Presentation, Milestone, Clock, Users, Brain, Anchor, Target, Rocket, Eye } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -41,29 +41,29 @@ export const metadata: Metadata = {
 }
 
 const workshopThemes = [
-  { theme: 'Math Magic & Logic', desc: 'Sudoku, number patterns, logic puzzles. No single correct path — multiple valid solutions.' },
-  { theme: "Rubik's Cube", desc: 'A 3D puzzle that rewards systems thinking over trial and error. More than a toy.' },
+  { theme: 'Robotics', desc: 'Build something that moves using real testing and debugging.' },
+  { theme: 'Astronomy', desc: 'Observation journals, scale of space, light and time. Big questions, no telescope needed.' },
+  { theme: 'Space Science', desc: 'Scale, orbit, gravity — thinking like a scientist.' },
+  { theme: 'Aeromodeling', desc: 'Build and test model aeroplanes and rockets. Gravity is the examiner.' },
+  { theme: 'Rubik’s & Cognitive Sudoku', desc: 'A 3D puzzle and number logic that rewards systems thinking over trial and error.' },
+  { theme: 'Hands on STEM Projects', desc: 'Build, break, rebuild — understanding mechanical systems.' },
+  { theme: 'Electronics & Tech Toys', desc: "Electronics and mechanical systems opened up. What's inside? How does it move?" },
   { theme: 'Design Thinking & Innovation', desc: 'A real problem. Open brief. Children design, prototype, and explain their idea.' },
-  { theme: 'STEM — How Stuff Works', desc: 'Real objects taken apart and examined. Why does this work? What breaks it?' },
-  { theme: 'Aeromodelling & Space', desc: 'Build and test model aeroplanes and rockets. Gravity is the examiner.' },
-  { theme: 'Tech Toys', desc: "Electronics and mechanical systems opened up. What's inside? How does it move?" },
-  { theme: 'Sci-fi Story Writing', desc: 'Stories grounded in real science. Imagination + logic working together.' },
-  { theme: 'Daytime Astronomy & Sky Watching', desc: 'Observation journals, scale of space, light and time. Big questions, no telescope needed.' },
-  { theme: 'Digital Skills', desc: 'Logic of computing — not just using screens but understanding them.' },
-  { theme: 'Robotics', desc: 'Build something that moves. using real testing and debugging.' },
+  { theme: 'Sci-Fi Story Writing', desc: 'Stories grounded in real science. Imagination + logic working together.' },
+  { theme: 'How Stuff Works', desc: 'Real objects taken apart and examined. Why does this work? What breaks it?' },
 ]
 
 const yearLongMonthlyMap = [
-  { theme: 'Math Magic & Logic', desc: 'Progressively harder puzzles. Children build their own Sudoku by end of month.' },
-  { theme: "Rubik's Cube", desc: 'Layer-by-layer method, free algorithm exploration. Children teach each other.' },
-  { theme: 'Design Thinking', desc: 'Identify a real problem. Research. Prototype. Refine. Present to the group.' },
-  { theme: 'STEM — How Stuff Works', desc: 'Disassemble objects. Document findings. Explain mechanisms in their own words.' },
-  { theme: 'Aeromodelling & Space', desc: 'Build gliders, study flight principles, launch paper rockets, explore scale of space.' },
-  { theme: 'Tech Toys', desc: 'Circuit basics, mechanical movement, simple motor systems. Component level — own kits, unique projects' },
-  { theme: 'Sci-fi Story Writing', desc: 'World-building, character design, plot driven by a real science concept. Final story shared.' },
-  { theme: 'Daytime Astronomy', desc: 'Sky observation journals, constellation mapping, light and distance.' },
-  { theme: 'Digital Skills', desc: 'Logic of computing, basic programming thinking, creating something that runs.' },
   { theme: 'Robotics', desc: 'Design, build, test, debug. A working robot and own it.' },
+  { theme: 'Astronomy', desc: 'Sky observation journals, constellation mapping, light and distance.' },
+  { theme: 'Space Science', desc: 'Explore lunar missions, orbital mechanics, and space technologies.' },
+  { theme: 'Aeromodeling', desc: 'Build gliders, study flight principles, launch paper rockets.' },
+  { theme: 'Rubik’s & Cognitive Sudoku', desc: 'Layer-by-layer method, logic puzzles. Children teach each other.' },
+  { theme: 'Hands on STEM Projects', desc: 'Progressively harder STEM builds. Experimenting with physics and structural integrity.' },
+  { theme: 'Electronics & Tech Toys', desc: 'Circuit basics, mechanical movement, simple motor systems. Own kits, unique projects.' },
+  { theme: 'Design Thinking & Innovation', desc: 'Identify a real problem. Research. Prototype. Refine. Present to the group.' },
+  { theme: 'Sci-Fi Story Writing', desc: 'World-building, character design, plot driven by a real science concept. Final story shared.' },
+  { theme: 'How Stuff Works', desc: 'Disassemble objects. Document findings. Explain mechanisms in their own words.' },
 ]
 
 const comparisonData = [
@@ -119,11 +119,15 @@ export default function ProgramsPage() {
               <span className="text-accent-teal italic font-light opacity-90">One way of thinking about children.</span>
             </h1>
             <p className="text-base md:text-lg lg:text-xl text-[#B7E3DD] mb-10 md:mb-12 max-w-2xl mx-auto leading-relaxed font-light italic">
-              Both programs use real materials, scientist-inspired challenges, and live observation of how your child thinks. The difference is depth, pace, and continuity.
+              These programs use real materials, scientist-inspired challenges, and live observation of how your child thinks. The difference is depth, pace, and continuity.
             </p>
 
             {/* Navigator Strip */}
             <div className="flex flex-wrap justify-center gap-4 mb-16">
+              <Link href="#one-day" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-xs font-mono uppercase tracking-widest flex items-center gap-2">
+                <Eye size={14} className="text-accent-teal" />
+                1-Day Gateway
+              </Link>
               <Link href="#workshop" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-xs font-mono uppercase tracking-widest flex items-center gap-2">
                 <Target size={14} className="text-accent-teal" />
                 10-Day Workshop
@@ -150,29 +154,47 @@ export default function ProgramsPage() {
       {/* SECTION 02 — PROGRAM NAVIGATOR */}
       <section className="py-20 bg-neutral-50 border-b border-neutral-100">
         <div className="container-fluid">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <Link href="#workshop" className="group relative overflow-hidden p-10 rounded-[2.5rem] bg-white border border-neutral-200 hover:border-accent-teal transition-all duration-500 shadow-sm hover:shadow-huge">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            
+            {/* 1-Day Gateway Card */}
+            <Link href="#one-day" className="group relative overflow-hidden p-10 rounded-[2.5rem] bg-white border border-neutral-200 hover:border-accent-teal transition-all duration-500 shadow-sm hover:shadow-huge flex flex-col h-full">
+              <div className="absolute top-0 left-0 w-full h-2 bg-neutral-400" />
+              <div className="inline-flex px-3 py-1 bg-neutral-100 text-neutral-600 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 self-start">
+                Try before joining
+              </div>
+              <h3 className="text-2xl font-serif font-bold text-primary-500 mb-2">One-Day Gateway</h3>
+              <p className="text-neutral-500 text-sm mb-8 leading-relaxed flex-grow">Experience FunSmartism. Parents observe, children participate in a STEM Challenge.</p>
+              <div className="flex items-center justify-between mt-auto">
+                <div className="flex items-center gap-2 text-primary-500 font-bold text-xs">
+                  Ages 8–16 <span className="text-neutral-300 opacity-30">|</span> <span className="flex items-center gap-1 group-hover:gap-2 transition-all">↓ See details</span>
+                </div>
+              </div>
+            </Link>
+
+            {/* 10-Day Workshop Card */}
+            <Link href="#workshop" className="group relative overflow-hidden p-10 rounded-[2.5rem] bg-white border border-neutral-200 hover:border-accent-teal transition-all duration-500 shadow-sm hover:shadow-huge flex flex-col h-full">
               <div className="absolute top-0 left-0 w-full h-2 bg-accent-teal" />
-              <div className="inline-flex px-3 py-1 bg-accent-teal/10 text-accent-teal rounded-full text-[10px] font-bold uppercase tracking-widest mb-6">
+              <div className="inline-flex px-3 py-1 bg-accent-teal/10 text-accent-teal rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 self-start">
                 Best for first-time families
               </div>
               <h3 className="text-2xl font-serif font-bold text-primary-500 mb-2">10-Day Thinking Reset Workshop</h3>
-              <p className="text-neutral-500 text-sm mb-8 leading-relaxed">10 themes. 10 consecutive days. The entry point.</p>
-              <div className="flex items-center justify-between">
+              <p className="text-neutral-500 text-sm mb-8 leading-relaxed flex-grow">10 themes. 10 consecutive days. The entry point.</p>
+              <div className="flex items-center justify-between mt-auto">
                 <div className="flex items-center gap-2 text-primary-500 font-bold text-xs">
                   Ages 8–16 <span className="text-accent-teal opacity-30">|</span> <span className="flex items-center gap-1 group-hover:gap-2 transition-all">↓ See details</span>
                 </div>
               </div>
             </Link>
 
-            <Link href="#year-long" className="group relative overflow-hidden p-10 rounded-[2.5rem] bg-white border border-neutral-200 hover:border-primary-500 transition-all duration-500 shadow-sm hover:shadow-huge">
+            {/* Year-Long Card */}
+            <Link href="#year-long" className="group relative overflow-hidden p-10 rounded-[2.5rem] bg-white border border-neutral-200 hover:border-primary-500 transition-all duration-500 shadow-sm hover:shadow-huge flex flex-col h-full">
               <div className="absolute top-0 left-0 w-full h-2 bg-primary-500" />
-              <div className="inline-flex px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6">
+              <div className="inline-flex px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 self-start">
                 Best for deeper growth
               </div>
-              <h3 className="text-2xl font-serif font-bold text-primary-500 mb-2">FunSmartism RoboSTEM Thinking Lab — Year-Long</h3>
-              <p className="text-neutral-500 text-sm mb-8 leading-relaxed">One theme per month. Four sessions per month. A full academic year.</p>
-              <div className="flex items-center justify-between">
+              <h3 className="text-2xl font-serif font-bold text-primary-500 mb-2">FunSmartism RoboSTEM Thinking Lab</h3>
+              <p className="text-neutral-500 text-sm mb-8 leading-relaxed flex-grow">One theme per month. Four sessions per month. A full academic year.</p>
+              <div className="flex items-center justify-between mt-auto">
                 <div className="flex items-center gap-2 text-primary-500 font-bold text-xs">
                   Ages 8–16 <span className="text-primary-400 opacity-30">|</span> <span className="flex items-center gap-1 group-hover:gap-2 transition-all">↓ See details</span>
                 </div>
@@ -182,8 +204,81 @@ export default function ProgramsPage() {
         </div>
       </section>
 
+      {/* SECTION 02.5 — ONE DAY GATEWAY */}
+      <section className="py-32 bg-white" id="one-day">
+        <div className="container-fluid">
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-white rounded-[40px] border border-neutral-100 shadow-huge overflow-hidden relative">
+              <div className="bg-neutral-800 px-10 py-5 flex flex-wrap items-center justify-between text-white text-[11px] font-bold uppercase tracking-widest gap-4">
+                <div className="flex items-center gap-3">
+                  <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
+                  Try before joining · 1 Day
+                </div>
+                <div>Ages 8–16</div>
+              </div>
+              <div className="p-10 md:p-20">
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8 md:mb-10 leading-tight">
+                  One-Day Gateway <br className="hidden md:block" />
+                  <span className="text-2xl text-neutral-500 font-light italic mt-2 block">Experience FunSmartism Before Joining Long-Term</span>
+                </h2>
+                <p className="text-lg md:text-xl text-neutral-500 mb-16 max-w-3xl leading-relaxed font-light">
+                  The 1-Day Parent Observation STEM Challenge gives families a glimpse into how children approach unfamiliar problem-solving situations — while parents watch, not instruct.
+                  <br /><br />
+                  <span className="italic text-primary-500 font-serif font-medium">"This is the kind of environment my child actually needs."</span>
+                </p>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                  <div className="space-y-6 p-10 bg-[#FAF9F6] rounded-[2.5rem] border border-neutral-100">
+                    <h4 className="flex items-center gap-3 text-primary-500 font-serif font-bold uppercase tracking-widest text-xs">
+                      <div className="w-6 h-6 rounded-full bg-primary-500/10 flex items-center justify-center text-primary-500"><Eye size={14} /></div>
+                      Children participate while parents observe:
+                    </h4>
+                    <ul className="space-y-6">
+                      <li className="text-sm text-neutral-600">
+                        <strong className="text-primary-500 block mb-1">Response to difficulty</strong>
+                        how they handle something unfamiliar
+                      </li>
+                      <li className="text-sm text-neutral-600">
+                        <strong className="text-primary-500 block mb-1">Independent retry</strong>
+                        whether they try again on their own
+                      </li>
+                      <li className="text-sm text-neutral-600">
+                        <strong className="text-primary-500 block mb-1">Testing ideas</strong>
+                        how they approach experimenting
+                      </li>
+                      <li className="text-sm text-neutral-600">
+                        <strong className="text-primary-500 block mb-1">Uncertainty handling</strong>
+                        how they react without ready answers
+                      </li>
+                    </ul>
+                  </div>
+                  
+                  <div className="space-y-6 p-10 bg-accent-teal/5 rounded-[2.5rem] border border-accent-teal/20">
+                    <h4 className="flex items-center gap-3 text-accent-teal font-serif font-bold uppercase tracking-widest text-xs">
+                      <div className="w-6 h-6 rounded-full bg-accent-teal/20 flex items-center justify-center text-accent-teal"><Users size={14} /></div>
+                      Parent Observation
+                    </h4>
+                    <p className="text-lg text-primary-500 font-medium italic leading-relaxed">
+                      A rare window into your child's natural thinking habits when facing something new.
+                    </p>
+                    
+                    <div className="mt-8 pt-8 border-t border-accent-teal/20">
+                      <Link href="/schedule-visit">
+                        <Button className="w-full bg-accent-teal hover:bg-[#28A392] text-white py-6 rounded-full font-bold shadow-md shadow-accent-teal/20">
+                          Schedule a Visit →
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SECTION 03 — 10-DAY WORKSHOP */}
-      <section className="py-32" id="workshop">
+      <section className="py-16 md:py-32" id="workshop">
         <div className="container-fluid">
           <div className="max-w-6xl mx-auto">
             <div className="bg-white rounded-[40px] border border-neutral-100 shadow-huge overflow-hidden mb-32 relative">
@@ -195,26 +290,26 @@ export default function ProgramsPage() {
                 <div>Ages 8–16</div>
               </div>
               <div className="p-10 md:p-20">
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8 md:mb-10 leading-tight">
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8 md:mb-10 leading-tight uppercase tracking-tight">
                   10-Day Thinking <br className="hidden md:block" />
-                  Reset Workshop
+                  RESET Workshop
                 </h2>
                 <p className="text-lg md:text-xl text-neutral-500 mb-16 max-w-3xl leading-relaxed font-light">
-                  Ten days. Ten completely different themes. Every day, a new world — and a new way to observe how your child thinks.
+                  A fast-paced hands-on RoboSTEM experience where children explore different themes each day through projects, challenges, experimentation, and creative problem-solving.
                 </p>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                   <div className="space-y-6 p-10 bg-neutral-50 rounded-[2.5rem] border border-neutral-100">
                     <h4 className="flex items-center gap-3 text-accent-teal font-serif font-bold uppercase tracking-widest text-xs">
-                      <div className="w-6 h-6 rounded-full bg-accent-teal/10 flex items-center justify-center text-accent-teal"><Bot size={14} /></div>
-                      Children do
+                      <div className="w-6 h-6 rounded-full bg-accent-teal/10 flex items-center justify-center text-accent-teal"><Target size={14} /></div>
+                      Designed Especially For Children Who:
                     </h4>
                     <ul className="space-y-4">
                       {[
-                        'A brand new theme and challenge every day',
-                        'Build, make, test, and take most projects home',
-                        'No detailed instructions — each child finds their own way',
-                        'Logical puzzles and thinking challenges alongside projects'
+                        'enjoy building and exploring',
+                        'are curious beyond textbooks',
+                        'need more active learning environments',
+                        'want exposure to multiple STEM domains'
                       ].map((item) => (
                         <li key={item} className="flex gap-4 items-start text-primary-500 font-medium leading-relaxed text-sm">
                           <Check className="text-accent-teal mt-1 flex-shrink-0" size={16} />
@@ -223,25 +318,14 @@ export default function ProgramsPage() {
                       ))}
                     </ul>
                   </div>
-                  <div className="space-y-6 p-10 bg-neutral-50 rounded-[2.5rem] border border-neutral-100">
-                    <h4 className="flex items-center gap-3 text-accent-teal font-serif font-bold uppercase tracking-widest text-xs">
-                      <div className="w-6 h-6 rounded-full bg-accent-teal/10 flex items-center justify-center text-accent-teal"><Users size={14} /></div>
-                      Parents receive
-                    </h4>
-                    <ul className="space-y-4">
-                      {[
-                        'Workshop-end parent note on how your child approached challenges',
-                        'First insight into what support helps at home'
-                      ].map((item) => (
-                        <li key={item} className="flex gap-4 items-start text-primary-500 font-medium leading-relaxed text-sm">
-                          <Check className="text-accent-teal mt-1 flex-shrink-0" size={16} />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                    <div className="pt-6 border-t border-neutral-200 text-[11px] font-mono text-neutral-400 italic">
-                      → No preparation needed. No prior experience required. Just curiosity.
-                    </div>
+                  
+                  <div className="space-y-6 p-10 flex flex-col justify-center items-center text-center">
+                     <p className="text-sm font-mono text-neutral-400 uppercase tracking-widest mb-4">Ready to start?</p>
+                     <Link href="https://chat.whatsapp.com/L79pYlQ55XFAKk0PikYtUu" target="_blank" rel="noopener noreferrer" className="w-full">
+                       <Button className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white py-6 rounded-full font-bold shadow-md shadow-[#25D366]/20">
+                         Join Parent Community
+                       </Button>
+                     </Link>
                   </div>
                 </div>
               </div>
@@ -409,7 +493,7 @@ export default function ProgramsPage() {
               ))}
             </div>
 
-            {/* Monthly Map Section */}
+            {/* Monthly Map Section 
             <div className="mb-40">
               <div className="text-center mb-20">
                 <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6 md:mb-8 tracking-tight">How the year is structured?</h3>
@@ -442,18 +526,20 @@ export default function ProgramsPage() {
                 </table>
               </div>
             </div>
+            */}
 
             {/* Edu Events Differentiation Section */}
             <div className="mb-24">
-              <div className="bg-accent-teal rounded-[4rem] p-12 md:p-24 relative overflow-hidden shadow-huge">
-                <div className="absolute top-0 right-0 w-full h-full lab-grid opacity-10 pointer-events-none" />
+              <div className="bg-white rounded-[4rem] p-12 md:p-24 relative overflow-hidden shadow-sm border border-neutral-100">
+                <div className="absolute top-0 right-0 w-full h-full lab-grid opacity-[0.03] pointer-events-none" />
+                <div className="absolute -top-32 -right-32 w-96 h-96 bg-accent-teal/5 rounded-full blur-[100px] pointer-events-none" />
                 <div className="relative z-10">
                   <div className="max-w-4xl mb-20">
-                    <span className="inline-block px-5 py-2 bg-white/20 text-white rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-8">Major Differentiator</span>
-                    <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6 md:mb-8 leading-tight">Year-long exclusive: <br />Edu events</h3>
-                    <p className="text-lg md:text-xl text-white/90 font-light leading-relaxed italic">
+                    <span className="inline-block px-5 py-2 bg-accent-teal/10 text-accent-teal rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-8">Major Differentiator</span>
+                    <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-6 md:mb-8 leading-tight">Year-long exclusive: <br />Edu events</h3>
+                    <p className="text-lg md:text-xl text-neutral-600 font-light leading-relaxed italic">
                       Children learn scientist-style questioning by interacting with real scientists—not just listening to them. <br className="hidden md:block" />
-                      <span className="text-white font-bold not-italic mt-6 block">They help run them — building real responsibility.</span>
+                      <span className="text-primary-500 font-bold not-italic mt-6 block">They help run them — building real responsibility.</span>
                     </p>
                   </div>
 
@@ -464,25 +550,25 @@ export default function ProgramsPage() {
                       { title: 'Guide visitors', desc: 'Explain, demonstrate, answer questions.' },
                       { title: 'Assist experts', desc: 'Assist scientists and professionals.' }
                     ].map((grid, i) => (
-                      <div key={i} className="p-10 rounded-[2.5rem] bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20 transition-all group flex flex-col justify-between">
+                      <div key={i} className="p-10 rounded-[2.5rem] bg-[#FAF9F6] border border-neutral-100 hover:border-accent-teal/30 hover:shadow-md transition-all group flex flex-col justify-between">
                         <div>
-                          <div className="w-12 h-12 rounded-2xl bg-white/20 flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform">
+                          <div className="w-12 h-12 rounded-2xl bg-white border border-neutral-100 flex items-center justify-center text-primary-300 mb-8 group-hover:scale-110 group-hover:bg-accent-teal group-hover:text-white transition-all">
                             <Presentation size={24} />
                           </div>
-                          <h4 className="text-xl font-serif font-bold text-white mb-4">{grid.title}</h4>
-                          <p className="text-sm text-white/60 leading-relaxed font-light italic">{grid.desc}</p>
+                          <h4 className="text-xl font-serif font-bold text-primary-500 mb-4">{grid.title}</h4>
+                          <p className="text-sm text-neutral-500 leading-relaxed font-light italic">{grid.desc}</p>
                         </div>
                       </div>
                     ))}
                   </div>
 
                   <div className="text-center">
-                    <p className="text-xl font-serif font-bold text-white mb-6 italic leading-relaxed">
+                    <p className="text-xl font-serif font-bold text-primary-500 mb-6 italic leading-relaxed">
                       Over time, children don’t just build projects — <br className="hidden md:block" />
                       they learn to discuss, question, and explain them with experts.
                     </p>
-                    <div className="h-px w-24 bg-white/20 mx-auto mb-6" />
-                    <p className="text-white/70 font-mono text-[10px] uppercase tracking-[0.4em] font-bold">
+                    <div className="h-px w-24 bg-neutral-200 mx-auto mb-6" />
+                    <p className="text-neutral-400 font-mono text-[10px] uppercase tracking-[0.4em] font-bold">
                       Some selected projects are exhibited publicly for parents & scientists.
                     </p>
                   </div>

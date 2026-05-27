@@ -1,20 +1,20 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Bot, Wrench, Rocket, Blocks, MonitorOff, BrainCircuit, Telescope, PenTool } from 'lucide-react'
+import { Bot, Wrench, Rocket, Blocks, Plane, Puzzle, BrainCircuit, Telescope, Lightbulb, BookOpen } from 'lucide-react'
 import { SectionReveal } from '../ui/SectionReveal'
 
 export function WhatStudentsDo() {
   const activities = [
     { icon: Bot, text: "Robotics" },
-    { icon: Wrench, text: "Reverse Engineering" },
-    { icon: BrainCircuit, text: "Electronics & Tech Toys" },
-    { icon: Rocket, text: "Aeromodeling" },
-    { icon: Blocks, text: "Hands-on STEM Challenges" },
-    { icon: PenTool, text: "Structural Engineering" },
-    { icon: Telescope, text: "Astronomy & Space Science" },
-    { icon: MonitorOff, text: "Design Thinking" },
-    { icon: BrainCircuit, text: "Sci-Fi & Innovation" },
-    { icon: Blocks, text: "Logic & Math Challenges" },
+    { icon: Telescope, text: "Astronomy" },
+    { icon: Rocket, text: "Space Science" },
+    { icon: Plane, text: "Aeromodeling" },
+    { icon: Puzzle, text: "Rubik’s & Cognitive Sudoku" },
+    { icon: Blocks, text: "Hands on STEM Projects" },
+    { icon: BrainCircuit, text: "Electronics & tech toys" },
+    { icon: Lightbulb, text: "Design Thinking & Innovation" },
+    { icon: BookOpen, text: "Sci-Fi Story Writing" },
+    { icon: Wrench, text: "How Stuff Works" },
   ]
 
   return (

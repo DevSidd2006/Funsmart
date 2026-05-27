@@ -62,7 +62,7 @@ export function Hero({ data }: { data?: any }) {
                   </Button>
                 </Link>
                 <p className="text-sm text-white/60 leading-relaxed pl-2 border-l-2 border-accent-teal/30">
-                  Visit the lab, understand the learning approach, explore current themes, and discover which program fits your child best.
+                  Visit us, understand the learning approach, explore current themes, and discover which program fits your child best.
                 </p>
               </div>
 

@@ -11,7 +11,7 @@ import { type GalleryItem } from '../lib/types'
 export const teaserItems: GalleryItem[] = [
   {
     id: 1,
-    image: '/images/gallery/stem-challenge-bibwewadi.jpg',
+    image: '/images/gallery/lab-moment-1.jpg',
     title: 'STEM Challenges',
     caption: 'Children engaging in hands-on building and testing.',
     tag: 'STEM',
