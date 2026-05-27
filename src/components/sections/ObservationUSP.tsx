@@ -25,7 +25,7 @@ export function ObservationUSP() {
 
           <div className="text-center max-w-3xl mx-auto mb-12 relative z-10">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-primary-500 leading-tight mb-8">
-              While Children Build and Solve, We Also Observe How They Approach Challenges.
+              While Children Build and Solve, <br /> We Also Observe How They Approach Challenges.
             </h2>
             <p className="text-lg md:text-xl text-neutral-600 leading-relaxed font-light">
               During activities and challenges, facilitators naturally observe patterns that often come up at home too, but get unnoticed by parents
@@ -50,10 +50,11 @@ export function ObservationUSP() {
             </p>
           </div>
 
-          <div className="flex justify-center relative z-10">
-            <div className="inline-flex items-center gap-3 bg-red-50 text-red-600 px-6 py-3 rounded-full text-sm font-medium border border-red-100">
-              <ShieldAlert size={16} />
-              FunSmartism is not a therapy, diagnostic, or psychological assessment center.
+          <div className="flex justify-center relative z-10 mt-4">
+            <div className="px-6 md:px-10 py-6 bg-white border border-neutral-100 shadow-sm rounded-3xl italic text-primary-500 font-medium text-center w-full max-w-3xl">
+              <p className="text-lg md:text-xl">
+                FunSmartism is <span className="text-accent-teal font-bold not-italic mx-1">not</span> a therapy, diagnostic, or psychological assessment center.
+              </p>
             </div>
           </div>
 

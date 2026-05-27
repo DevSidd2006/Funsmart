@@ -49,7 +49,7 @@ export function GalleryTeaser({ items }: { items: any[] }) {
             href="/gallery"
             className="inline-flex items-center gap-3 bg-accent-surface border border-neutral-100 text-primary-500 font-bold text-sm px-8 py-4 rounded-full hover:border-accent-teal/40 hover:shadow-md transition-all duration-300"
           >
-            See all moments from FunSmartism
+            See all moments from FunSmartism in gallery
             <ArrowRight size={16} className="text-accent-teal" />
           </Link>
         </div>

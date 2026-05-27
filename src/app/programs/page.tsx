@@ -115,7 +115,7 @@ export default function ProgramsPage() {
         <div className="container-fluid relative z-10 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-[50px] font-serif font-bold text-white mb-6 md:mb-8 leading-tight tracking-tight">
-              Two programs. <br />
+              Different Programs. <br />
               <span className="text-accent-teal italic font-light opacity-90">One way of thinking about children.</span>
             </h1>
             <p className="text-base md:text-lg lg:text-xl text-[#B7E3DD] mb-10 md:mb-12 max-w-2xl mx-auto leading-relaxed font-light italic">
@@ -134,14 +134,14 @@ export default function ProgramsPage() {
               </Link>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-6 text-[10px] md:text-xs font-mono text-white/30 uppercase tracking-[0.2em] font-bold border-t border-white/5 pt-12">
+            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-sm md:text-base font-sans text-[#B7E3DD] border-t border-white/10 pt-12">
               <span>Ages 8–16</span>
-              <span className="w-1 h-1 rounded-full bg-accent-teal" />
+              <span className="w-1.5 h-1.5 rounded-full bg-accent-teal/50" />
               <span>No grades</span>
-              <span className="w-1 h-1 rounded-full bg-accent-teal" />
+              <span className="w-1.5 h-1.5 rounded-full bg-accent-teal/50" />
               <span>No comparison between children</span>
-              <span className="w-1 h-1 rounded-full bg-accent-teal" />
-              <span className="max-w-[400px] text-center">Scientist-inspired problem-solving patterns observed and shared with parents</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-accent-teal/50" />
+              <span className="max-w-[500px] text-center">Scientist-inspired problem-solving patterns observed and shared with parents</span>
             </div>
           </div>
         </div>
@@ -574,14 +574,7 @@ export default function ProgramsPage() {
               </Link>
             </div>
 
-            <div className="mt-20 space-y-4">
-              <p className="text-xs font-mono tracking-[0.5em] uppercase font-bold text-white/30 text-center">
-                Free Parent Orientation · 30–45 minutes 📍 Bibwewadi, Pune
-              </p>
-              <p className="text-xs text-white/40 font-medium text-center italic">
-                Excellent for hesitant parents. We'll guide you during the session.
-              </p>
-            </div>
+
           </div>
         </div>
       </section>

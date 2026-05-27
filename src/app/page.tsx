@@ -91,7 +91,7 @@ export default function HomePage() {
       <OneDayChallenge />
 
       {/* Section 11 — PARENT VOICES */}
-      <TestimonialsSlider data={testimonials.filter((t) => ['5', '6', '7'].includes(t.id))} />
+      <TestimonialsSlider />
 
       {/* Section 12 — CLOSING CTA */}
       <FinalCTA />

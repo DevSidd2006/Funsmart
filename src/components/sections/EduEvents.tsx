@@ -22,7 +22,7 @@ export function EduEvents() {
         <div className="max-w-7xl mx-auto mb-16 text-center flex flex-col items-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-8 leading-[1.1] tracking-tight">
             Children Don't Just Learn Concepts. <br />
-            <span className="text-accent-teal italic font-light opacity-90">They Interact with Actual Experts Building The Future.</span>
+            <span className="text-accent-teal italic font-light opacity-90">They Interact with Actual Experts <br className="hidden md:block" /> Building The Future.</span>
           </h2>
           <p className="text-lg md:text-xl text-[#B7E3DD] max-w-2xl leading-relaxed font-light mb-10">
             Throughout the academic year, FunSmartism hosts special edu-events where students interact with:

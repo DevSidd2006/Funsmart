@@ -11,7 +11,7 @@ const jsonLd = {
   description: 'A hands-on RoboSTEM thinking lab where children build projects, solve unfamiliar challenges, and learn through real-world experimentation.',
   url: siteUrl,
   telephone: '+91 95039 19750',
-  email: 'contactdakolkar@gmail.com',
+  email: 'enquiry@funsmartism.in',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'Navkar Residency, Next to Bibwewadi Police Station',
@@ -92,10 +92,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/images/logo.png', type: 'image/png' },
     ],
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
+    shortcut: '/images/logo.png',
+    apple: '/images/logo.png',
   },
   openGraph: {
     title: 'FunSmartism Intelligence Center',

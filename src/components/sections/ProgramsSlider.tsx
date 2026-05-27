@@ -17,8 +17,8 @@ export function ProgramsSlider() {
   return (
     <section className="section-spacing bg-white overflow-hidden">
       <div className="container-fluid max-w-7xl mx-auto">
-        <div className="mb-12 text-center max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
+        <div className="mb-12 text-center max-w-5xl mx-auto">
+          <h2 className="text-[26px] sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-primary-500 leading-tight whitespace-nowrap md:whitespace-normal">
             10 themes. 10 worlds to explore.
           </h2>
         </div>

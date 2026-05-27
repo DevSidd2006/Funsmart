@@ -32,10 +32,7 @@ export function TrustStrip() {
               ))}
             </div>
             
-            <div className="flex items-center gap-4 text-[12px] md:text-sm text-white/70 font-mono bg-white/5 w-fit px-8 py-4 rounded-full border border-white/5 shadow-inner">
-              <span className="w-2.5 h-2.5 rounded-full bg-accent-teal shadow-[0_0_10px_rgba(47,181,163,0.6)] animate-pulse" />
-              Free Parent Orientation · 30–45 minutes 📍 Bibwewadi, Pune
-            </div>
+
 
           </div>
         </div>

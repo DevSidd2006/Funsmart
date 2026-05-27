@@ -11,7 +11,7 @@ function PinterestIcon({ size = 18 }: { size?: number }) {
 }
 
 export function Footer({ data }: { data?: any }) {
-  const email = data?.contactEmail || 'contactdakolkar@gmail.com'
+  const email = data?.contactEmail || 'enquiry@funsmartism.in'
   const phone = data?.contactPhone || '+91 95039 19750'
   const address = data?.address || 'Navkar Residency, Swami Vivekanand Road, Next to Bibwewadi Police Station, Bibwewadi, Pune 411037'
   const hours = data?.openingHours || 'Open: Tue - Sun | 10:00 AM - 7:00 PM'

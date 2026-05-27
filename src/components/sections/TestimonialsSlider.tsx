@@ -21,19 +21,7 @@ const defaultTestimonials = [
     author: "Sunita R.",
     role: "Parent · 10-year-old · Thinking Reset Workshop",
     initial: "SR",
-  },
-  {
-    quote: "At first he kept asking for help every few minutes. Slowly he started retrying on his own. That shift was gradual — and it's stayed.",
-    author: "Parent",
-    role: "Parent · 9-year-old · Year-Long Program",
-    initial: "P",
-  },
-  {
-    quote: "She came home and started opening old toys just to understand how they worked. I didn't expect that from a 10-day workshop.",
-    author: "Parent",
-    role: "Parent · 11-year-old · 10-Day Workshop",
-    initial: "P",
-  },
+  }
 ]
 
 export function TestimonialsSlider({ data }: { data?: any[] }) {
@@ -72,9 +60,8 @@ export function TestimonialsSlider({ data }: { data?: any[] }) {
               {testimonials.map((t: any, i: number) => (
                 <div
                   key={i}
-                  className={`transition-all duration-500 ${
-                    i === current ? 'opacity-100 translate-y-0' : 'opacity-0 absolute inset-0 pointer-events-none translate-y-2'
-                  }`}
+                  className={`transition-all duration-500 ${i === current ? 'opacity-100 translate-y-0' : 'opacity-0 absolute inset-0 pointer-events-none translate-y-2'
+                    }`}
                 >
                   <p className="text-xl md:text-2xl text-primary-700 font-light leading-relaxed italic mb-10">
                     "{t.quote}"
@@ -103,9 +90,8 @@ export function TestimonialsSlider({ data }: { data?: any[] }) {
                 <button
                   key={i}
                   onClick={() => setCurrent(i)}
-                  className={`h-1.5 rounded-full transition-all duration-300 ${
-                    i === current ? 'w-8 bg-accent-teal' : 'w-3 bg-primary-200'
-                  }`}
+                  className={`h-1.5 rounded-full transition-all duration-300 ${i === current ? 'w-8 bg-accent-teal' : 'w-3 bg-primary-200'
+                    }`}
                   aria-label={`Go to testimonial ${i + 1}`}
                 />
               ))}
