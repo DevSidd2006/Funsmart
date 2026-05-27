@@ -9,8 +9,35 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://funsmartism.in'
 
 export const metadata: Metadata = {
   title: 'Programs | FunSmartism Intelligence Center',
-  description: 'Help parents choose the right entry point. From our 10-Day Thinking Reset Workshop to the Year-Long Thinking Lab. Scientist-inspired RoboSTEM programs for ages 8–16.',
-  keywords: ['workshop', 'thinking lab', 'children programs', 'STEM Pune', 'robotics', 'design thinking'],
+  description:
+    'Explore FunSmartism programs for children aged 8–16 in Pune. Choose from the 10-Day Thinking Reset Workshop, Year-Long RoboSTEM Thinking Lab, 1-Day STEM Challenge, or Edu-Events.',
+  keywords: [
+    'RoboSTEM programs Pune',
+    'STEM workshop for kids',
+    'thinking lab',
+    'robotics for children',
+    'design thinking workshop',
+    'children learning programs Pune',
+    '10-day workshop',
+  ],
+  alternates: { canonical: `${siteUrl}/programs` },
+  openGraph: {
+    title: 'Programs | FunSmartism Intelligence Center',
+    description:
+      'Explore FunSmartism programs for children aged 8–16 in Pune. RoboSTEM Thinking Lab, 10-Day Reset Workshop, and more.',
+    url: `${siteUrl}/programs`,
+    siteName: 'FunSmartism Intelligence Center',
+    images: [{ url: `${siteUrl}/og-image-real.jpg`, width: 1200, height: 630, alt: 'FunSmartism Programs' }],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Programs | FunSmartism Intelligence Center',
+    description:
+      'Explore FunSmartism programs for children aged 8–16 in Pune. RoboSTEM Thinking Lab, 10-Day Reset Workshop, and more.',
+    images: [`${siteUrl}/og-image-real.jpg`],
+  },
 }
 
 const workshopThemes = [

@@ -1,5 +1,3 @@
-'use client'
-
 import { Metadata } from 'next'
 import { Button } from '@/components/ui/Button'
 import { FounderJourney } from '@/components/sections/FounderJourney'
@@ -13,6 +11,38 @@ import { galleryItems } from '@/data/gallery'
 import { SectionReveal } from '@/components/ui/SectionReveal'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://funsmartism.in'
+
+export const metadata: Metadata = {
+  title: 'About FunSmartism | Our Story, Beliefs & Team',
+  description:
+    'Learn why FunSmartism was founded — a thinking lab built to give children real opportunities to build, experiment, and solve unfamiliar challenges. Based in Bibwewadi, Pune.',
+  keywords: [
+    'about FunSmartism',
+    'founder story',
+    'STEM learning Pune',
+    'children thinking lab',
+    'hands-on education Pune',
+    'RoboSTEM',
+  ],
+  alternates: { canonical: `${siteUrl}/about` },
+  openGraph: {
+    title: 'About FunSmartism | Our Story, Beliefs & Team',
+    description:
+      'Learn why FunSmartism was founded — a thinking lab built to give children real opportunities to build, experiment, and solve unfamiliar challenges.',
+    url: `${siteUrl}/about`,
+    siteName: 'FunSmartism Intelligence Center',
+    images: [{ url: `${siteUrl}/og-image-real.jpg`, width: 1200, height: 630, alt: 'FunSmartism About' }],
+    locale: 'en_IN',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About FunSmartism | Our Story, Beliefs & Team',
+    description:
+      'Learn why FunSmartism was founded — a thinking lab built to give children real opportunities to build, experiment, and solve.',
+    images: [`${siteUrl}/og-image-real.jpg`],
+  },
+}
 
 const beliefsData = [
   {
