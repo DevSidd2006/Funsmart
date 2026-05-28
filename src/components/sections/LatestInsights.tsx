@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { Calendar, Globe, Users } from 'lucide-react'
 
 const events = [
@@ -42,11 +41,9 @@ export function LatestInsights() {
           {events.map((event) => (
             <article key={event.title} className="group overflow-hidden rounded-3xl border border-neutral-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
               <div className="relative h-52 overflow-hidden">
-                <Image
+                <img
                   src={event.image}
                   alt={event.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-semibold text-neutral-700">

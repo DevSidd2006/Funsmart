@@ -482,8 +482,8 @@ export default function ProgramsPage() {
                 { label: '1 parent note', val: 'Monthly discussion', sub: 'on thinking habits', icon: Brain },
                 { label: 'Scientist Interaction', val: 'Priority access', sub: 'to all Edu Events', icon: Users },
               ].map((s, i) => (
-                <div key={i} className="bg-white/5 border border-white/10 p-12 rounded-[3rem] text-center flex flex-col items-center group hover:bg-white/10 transition-all shadow-xl">
-                  <div className="w-14 h-14 rounded-2xl bg-accent-teal/10 flex items-center justify-center text-accent-teal mb-8 group-hover:scale-110 transition-transform">
+                <div key={i} className="bg-white/5 border border-white/10 p-8 rounded-[3rem] text-center flex flex-col items-center group hover:bg-white/10 transition-all shadow-xl">
+                  <div className="w-14 h-14 rounded-2xl bg-accent-teal/10 flex items-center justify-center text-accent-teal mb-6 group-hover:scale-110 transition-transform">
                     <s.icon size={28} />
                   </div>
                   <div className="text-xl font-serif font-bold text-white mb-2">{s.label}</div>
@@ -634,7 +634,7 @@ export default function ProgramsPage() {
       </section>
 
       {/* SECTION 07 — CLOSING CTA */}
-      <section className="py-40 text-center bg-[#1E2A44] text-white relative overflow-hidden">
+      <section className="py-24 text-center bg-[#1E2A44] text-white relative overflow-hidden">
         <div className="absolute inset-0 lab-grid opacity-[0.03]" />
 
         <div className="container-fluid relative z-10">
@@ -643,18 +643,18 @@ export default function ProgramsPage() {
               Every program begins with a <br className="hidden md:block" />
               <span className="text-accent-teal italic font-light opacity-90">parent orientation.</span>
             </h2>
-            <p className="text-lg md:text-xl text-[#B7E3DD] mb-20 max-w-2xl mx-auto leading-relaxed font-light italic">
+            <p className="text-lg md:text-xl text-[#B7E3DD] mb-12 max-w-2xl mx-auto leading-relaxed font-light italic">
               Come in. See how scientist-inspired RoboSTEM problem-solving works in real life. Ask your questions. No commitment.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link href="/schedule-visit" className="w-full sm:w-auto">
-                <Button size="lg" className="bg-accent-teal border-none text-white px-16 py-6 text-lg shadow-huge shadow-accent-teal/30 w-full rounded-full font-bold hover:scale-105 transition-transform">
+                <Button size="lg" className="bg-accent-teal border-none text-white px-10 py-4 text-base shadow-huge shadow-accent-teal/30 w-full rounded-full font-bold hover:scale-105 transition-transform">
                   Schedule a visit →
                 </Button>
               </Link>
               <Link href="/schedule-visit" className="w-full sm:w-auto">
-                <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10 px-16 py-6 text-lg w-full rounded-full font-medium">
+                <Button variant="outline" size="lg" className="border-white/20 text-white hover:bg-white/10 px-10 py-4 text-base w-full rounded-full font-medium">
                   Need Help Choosing?
                 </Button>
               </Link>

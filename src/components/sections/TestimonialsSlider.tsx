@@ -52,7 +52,7 @@ export function TestimonialsSlider({ data }: { data?: any[] }) {
           </div>
 
           {/* Card */}
-          <div className="relative bg-white border border-primary-100 rounded-2xl p-10 md:p-14 shadow-xl min-h-[280px] flex flex-col justify-between">
+          <div className="relative bg-white border border-primary-100 rounded-3xl p-10 md:p-14 shadow-xl min-h-[280px] flex flex-col justify-between">
             <Quote className="absolute top-8 right-8 text-primary-100" size={50} />
 
             {/* Testimonial content */}

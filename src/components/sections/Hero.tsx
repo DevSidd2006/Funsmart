@@ -1,7 +1,5 @@
-'use client'
-
-import { useState, useEffect } from 'react'
 import Image from 'next/image'
+import { HeroCarousel } from '../ui/HeroCarousel'
 import { Button } from '../ui/Button'
 import { Beaker, Atom, Settings, Lightbulb, Rocket, Binary, Check } from 'lucide-react'
 import { JoinCommunity } from '../ui/JoinCommunity'
@@ -16,15 +14,6 @@ export function Hero({ data }: { data?: any }) {
     "/images/hero-2.jpg",
     "/images/hero-3.jpg",
   ]
-
-  const [currentImage, setCurrentImage] = useState(0)
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % images.length)
-    }, 2000)
-    return () => clearInterval(timer)
-  }, [images.length])
 
   return (
     <section id="home" className="relative w-full min-h-screen flex items-center bg-[#1E2A44] overflow-hidden pt-28 md:pt-40 lg:pt-52 pb-16 md:pb-24 text-white">
@@ -77,17 +66,7 @@ export function Hero({ data }: { data?: any }) {
 
           {/* Mobile: Small hero image below text */}
           <div className="lg:hidden relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/10 mt-4">
-            {images.map((img, idx) => (
-              <Image
-                key={idx}
-                src={img}
-                alt={headline}
-                fill
-                priority={idx === 0}
-                sizes="100vw"
-                className={`object-cover transition-all duration-1000 ${idx === currentImage ? 'opacity-100' : 'opacity-0'}`}
-              />
-            ))}
+            <HeroCarousel images={images} headline={headline} />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1E2A44]/60 via-transparent to-transparent pointer-events-none" />
           </div>
 
@@ -113,18 +92,7 @@ export function Hero({ data }: { data?: any }) {
 
               {/* Main Image with softened frame */}
               <div className="absolute inset-0 z-10 rounded-[60px] overflow-hidden shadow-huge bg-[#0F172A] border border-white/10 transform translate-x-4 -translate-y-4 transition-transform duration-1000 hover:translate-x-0 hover:-translate-y-0 group">
-                {images.map((img, idx) => (
-                  <Image
-                    key={idx}
-                    src={img}
-                    alt={headline}
-                    fill
-                    priority={idx === 0}
-                    sizes="50vw"
-                    className={`object-cover transition-all duration-1000 group-hover:scale-110 ${idx === currentImage ? 'opacity-100 scale-100' : 'opacity-0 scale-110'
-                      }`}
-                  />
-                ))}
+                <HeroCarousel images={images} headline={headline} hoverEffect={true} />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1E2A44]/60 via-transparent to-transparent pointer-events-none" />
               </div>
 
