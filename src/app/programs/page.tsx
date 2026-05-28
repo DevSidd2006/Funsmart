@@ -72,6 +72,7 @@ const comparisonData = [
   { feature: 'Themes', workshop: '1 challenge', friday: 'Rotating weekly', yearLong: 'All 10 — one per day', lab: 'All 10 — one per month' },
   { feature: 'Parent insight', workshop: 'Session observation', friday: '—', yearLong: 'Workshop-end note', lab: 'Monthly guidance note' },
   { feature: 'Edu-event access', workshop: 'Not included', friday: 'Not included', yearLong: 'Not included', lab: 'Priority access' },
+  { feature: 'Best for', workshop: 'First look', friday: 'Weekly habit building', yearLong: 'Vacation deep-dive', lab: 'Long-term growth' },
 ]
 
 const faqs = [
@@ -123,7 +124,11 @@ export default function ProgramsPage() {
             <div className="flex flex-wrap justify-center gap-4 mb-16">
               <Link href="#one-day" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-xs font-mono uppercase tracking-widest flex items-center gap-2">
                 <Eye size={14} className="text-accent-teal" />
-                1-Day Gateway
+                1-Day Challenge
+              </Link>
+              <Link href="#friday-club" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-xs font-mono uppercase tracking-widest flex items-center gap-2">
+                <Clock size={14} className="text-accent-teal" />
+                Friday Club
               </Link>
               <Link href="#workshop" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-xs font-mono uppercase tracking-widest flex items-center gap-2">
                 <Target size={14} className="text-accent-teal" />
@@ -131,7 +136,7 @@ export default function ProgramsPage() {
               </Link>
               <Link href="#year-long" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-xs font-mono uppercase tracking-widest flex items-center gap-2">
                 <Rocket size={14} className="text-accent-teal" />
-                Year-Long Thinking Lab
+                RoboSTEM Lab
               </Link>
             </div>
 
@@ -151,19 +156,34 @@ export default function ProgramsPage() {
       {/* SECTION 02 — PROGRAM NAVIGATOR */}
       <section className="py-20 bg-neutral-50 border-b border-neutral-100">
         <div className="container-fluid">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
             
             {/* 1-Day Gateway Card */}
             <Link href="#one-day" className="group relative overflow-hidden p-10 rounded-[2.5rem] bg-white border border-neutral-200 hover:border-accent-teal transition-all duration-500 shadow-sm hover:shadow-huge flex flex-col h-full">
               <div className="absolute top-0 left-0 w-full h-2 bg-neutral-400" />
               <div className="inline-flex px-3 py-1 bg-neutral-100 text-neutral-600 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 self-start">
-                Try before joining
+                Trial Day
               </div>
-              <h3 className="text-2xl font-serif font-bold text-primary-500 mb-2">One-Day Gateway</h3>
-              <p className="text-neutral-500 text-sm mb-8 leading-relaxed flex-grow">Experience FunSmartism. Parents observe, children participate in a STEM Challenge.</p>
+              <h3 className="text-xl font-serif font-bold text-primary-500 mb-2">1-Day STEM Challenge</h3>
+              <p className="text-neutral-500 text-sm mb-8 leading-relaxed flex-grow">A single hands-on challenge where parents observe — not instruct.</p>
               <div className="flex items-center justify-between mt-auto">
                 <div className="flex items-center gap-2 text-primary-500 font-bold text-xs">
                   Ages 8–15 <span className="text-neutral-300 opacity-30">|</span> <span className="flex items-center gap-1 group-hover:gap-2 transition-all">↓ See details</span>
+                </div>
+              </div>
+            </Link>
+
+            {/* Friday Club Card */}
+            <Link href="#friday-club" className="group relative overflow-hidden p-10 rounded-[2.5rem] bg-white border border-neutral-200 hover:border-accent-teal transition-all duration-500 shadow-sm hover:shadow-huge flex flex-col h-full">
+              <div className="absolute top-0 left-0 w-full h-2 bg-accent-teal" />
+              <div className="inline-flex px-3 py-1 bg-accent-teal/10 text-accent-teal rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 self-start">
+                Weekly Club
+              </div>
+              <h3 className="text-xl font-serif font-bold text-primary-500 mb-2">Friday STEM Challenge Club</h3>
+              <p className="text-neutral-500 text-sm mb-8 leading-relaxed flex-grow">Weekly sessions every Friday to build consistent thinking habits across the year.</p>
+              <div className="flex items-center justify-between mt-auto">
+                <div className="flex items-center gap-2 text-primary-500 font-bold text-xs">
+                  Ages 8–15 <span className="text-accent-teal opacity-30">|</span> <span className="flex items-center gap-1 group-hover:gap-2 transition-all">↓ See details</span>
                 </div>
               </div>
             </Link>
@@ -172,10 +192,10 @@ export default function ProgramsPage() {
             <Link href="#workshop" className="group relative overflow-hidden p-10 rounded-[2.5rem] bg-white border border-neutral-200 hover:border-accent-teal transition-all duration-500 shadow-sm hover:shadow-huge flex flex-col h-full">
               <div className="absolute top-0 left-0 w-full h-2 bg-accent-teal" />
               <div className="inline-flex px-3 py-1 bg-accent-teal/10 text-accent-teal rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 self-start">
-                Best for first-time families
+                Vacation Program
               </div>
-              <h3 className="text-2xl font-serif font-bold text-primary-500 mb-2">10-Day Thinking Reset Workshop</h3>
-              <p className="text-neutral-500 text-sm mb-8 leading-relaxed flex-grow">10 themes. 10 consecutive days. The entry point.</p>
+              <h3 className="text-xl font-serif font-bold text-primary-500 mb-2">10-Day STEM Tinkering Workshop</h3>
+              <p className="text-neutral-500 text-sm mb-8 leading-relaxed flex-grow">Ten days. Ten themes. One new world every day during vacations.</p>
               <div className="flex items-center justify-between mt-auto">
                 <div className="flex items-center gap-2 text-primary-500 font-bold text-xs">
                   Ages 8–15 <span className="text-accent-teal opacity-30">|</span> <span className="flex items-center gap-1 group-hover:gap-2 transition-all">↓ See details</span>
@@ -187,10 +207,10 @@ export default function ProgramsPage() {
             <Link href="#year-long" className="group relative overflow-hidden p-10 rounded-[2.5rem] bg-white border border-neutral-200 hover:border-primary-500 transition-all duration-500 shadow-sm hover:shadow-huge flex flex-col h-full">
               <div className="absolute top-0 left-0 w-full h-2 bg-primary-500" />
               <div className="inline-flex px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 self-start">
-                Best for deeper growth
+                Year-Long Program
               </div>
-              <h3 className="text-2xl font-serif font-bold text-primary-500 mb-2">FunSmartism RoboSTEM Thinking Lab</h3>
-              <p className="text-neutral-500 text-sm mb-8 leading-relaxed flex-grow">One theme per month. Four sessions per month. A full academic year.</p>
+              <h3 className="text-xl font-serif font-bold text-primary-500 mb-2">RoboSTEM Thinking Lab</h3>
+              <p className="text-neutral-500 text-sm mb-8 leading-relaxed flex-grow">2 weekend sessions per month across 10 themes. Our flagship annual lab.</p>
               <div className="flex items-center justify-between mt-auto">
                 <div className="flex items-center gap-2 text-primary-500 font-bold text-xs">
                   Ages 8–15 <span className="text-primary-400 opacity-30">|</span> <span className="flex items-center gap-1 group-hover:gap-2 transition-all">↓ See details</span>
@@ -209,55 +229,60 @@ export default function ProgramsPage() {
               <div className="bg-neutral-800 px-10 py-5 flex flex-wrap items-center justify-between text-white text-[11px] font-bold uppercase tracking-widest gap-4">
                 <div className="flex items-center gap-3">
                   <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-                  Try before joining · 1 Day
+                  Trial Day · One Session
                 </div>
                 <div>Ages 8–15</div>
               </div>
               <div className="p-10 md:p-20">
                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8 md:mb-10 leading-tight">
-                  One-Day Gateway <br className="hidden md:block" />
-                  <span className="text-2xl text-neutral-500 font-light italic mt-2 block">Experience FunSmartism Before Joining Long-Term</span>
+                  1-Day STEM Challenge <br className="hidden md:block" />
+                  <span className="text-2xl text-neutral-500 font-light italic mt-2 block">Experience FunSmartism Before Joining</span>
                 </h2>
                 <p className="text-lg md:text-xl text-neutral-500 mb-16 max-w-3xl leading-relaxed font-light">
-                  The 1-Day Parent Observation STEM Challenge gives families a glimpse into how children approach unfamiliar problem-solving situations — while parents watch, not instruct.
+                  A single hands-on session where children face an unfamiliar STEM challenge — while parents observe, not instruct.
                   <br /><br />
-                  <span className="italic text-primary-500 font-serif font-medium">"This is the kind of environment my child actually needs."</span>
+                  No preparation needed. No prior STEM experience required. Children are given a real problem, real materials, and no fixed steps to follow.
                 </p>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                   <div className="space-y-6 p-10 bg-[#FAF9F6] rounded-[2.5rem] border border-neutral-100">
                     <h4 className="flex items-center gap-3 text-primary-500 font-serif font-bold uppercase tracking-widest text-xs">
                       <div className="w-6 h-6 rounded-full bg-primary-500/10 flex items-center justify-center text-primary-500"><Eye size={14} /></div>
-                      Children participate while parents observe:
+                      Parents observe:
                     </h4>
                     <ul className="space-y-6">
                       <li className="text-sm text-neutral-600">
-                        <strong className="text-primary-500 block mb-1">Response to difficulty</strong>
-                        how they handle something unfamiliar
+                        <strong className="text-primary-500 block mb-1 font-bold">How their child responds to something completely new</strong>
                       </li>
                       <li className="text-sm text-neutral-600">
-                        <strong className="text-primary-500 block mb-1">Independent retry</strong>
-                        whether they try again on their own
+                        <strong className="text-primary-500 block mb-1 font-bold">Whether they retry independently after difficulty</strong>
                       </li>
                       <li className="text-sm text-neutral-600">
-                        <strong className="text-primary-500 block mb-1">Testing ideas</strong>
-                        how they approach experimenting
+                        <strong className="text-primary-500 block mb-1 font-bold">How they approach testing ideas without guidance</strong>
                       </li>
                       <li className="text-sm text-neutral-600">
-                        <strong className="text-primary-500 block mb-1">Uncertainty handling</strong>
-                        how they react without ready answers
+                        <strong className="text-primary-500 block mb-1 font-bold">How they react when there is no correct answer waiting</strong>
                       </li>
                     </ul>
                   </div>
                   
-                  <div className="space-y-6 p-10 bg-accent-teal/5 rounded-[2.5rem] border border-accent-teal/20">
-                    <h4 className="flex items-center gap-3 text-accent-teal font-serif font-bold uppercase tracking-widest text-xs">
-                      <div className="w-6 h-6 rounded-full bg-accent-teal/20 flex items-center justify-center text-accent-teal"><Users size={14} /></div>
-                      Parent Observation
-                    </h4>
-                    <p className="text-lg text-primary-500 font-medium italic leading-relaxed">
-                      A rare window into your child's natural thinking habits when facing something new.
-                    </p>
+                  <div className="space-y-6 p-10 bg-accent-teal/5 rounded-[2.5rem] border border-accent-teal/20 flex flex-col justify-between">
+                    <div>
+                      <h4 className="flex items-center gap-3 text-accent-teal font-serif font-bold uppercase tracking-widest text-xs mb-4">
+                        <div className="w-6 h-6 rounded-full bg-accent-teal/20 flex items-center justify-center text-accent-teal"><Users size={14} /></div>
+                        Parent Window
+                      </h4>
+                      <p className="text-base text-primary-500 font-medium italic leading-relaxed mb-4">
+                        This is a rare window into how your child actually thinks — not how they perform when coached.
+                      </p>
+                      <p className="text-sm text-neutral-600 font-light leading-relaxed">
+                        Most parents say this one session showed them something three years of school reports never did.
+                      </p>
+                      <div className="border-t border-accent-teal/20 pt-4 mt-6">
+                        <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest block mb-1">Next batch:</span>
+                        <p className="text-xs text-primary-500">Check current schedule or join the Parent Community for updates.</p>
+                      </div>
+                    </div>
                     
                     <div className="mt-8 pt-8 border-t border-accent-teal/20">
                       <Link href="/schedule-visit">
@@ -265,6 +290,7 @@ export default function ProgramsPage() {
                           Schedule a Visit →
                         </Button>
                       </Link>
+                      <span className="text-[9px] text-neutral-400 font-mono text-center block mt-2">Sessions: Single day · Weekend slots · Ages 8–15</span>
                     </div>
                   </div>
                 </div>
@@ -281,26 +307,35 @@ export default function ProgramsPage() {
             <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr]">
               <div className="p-10 md:p-16 lg:p-20">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-teal/10 border border-accent-teal/20 text-accent-teal text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
-                  Friday STEM Challenge Club
+                  Weekly · Full Academic Year · Ages 8–15
                 </div>
                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-6 leading-tight">
-                  A Friday challenge for families who want a lighter entry point.
+                  Friday STEM Challenge Club
                 </h2>
-                <p className="text-lg md:text-xl text-neutral-600 leading-relaxed font-light mb-10 max-w-2xl">
-                  This is the missing middle between a single visit and a longer program. Children solve a live challenge, explore one focused STEM prompt, and leave with a clearer sense of how they think under time and material constraints.
+                <p className="text-lg text-neutral-600 leading-relaxed font-light mb-10 max-w-2xl">
+                  Every Friday, one independent challenge. No instructions waiting. No fixed answer at the end.
+                  <br /><br />
+                  Children work through open-ended STEM problems designed to build consistent thinking habits across the year — outside school routine and without textbook scaffolding.
+                  <br /><br />
+                  <span className="text-sm text-neutral-500 italic">This is an add-on program, not a replacement for the main lab. It works well alongside the Annual Program or as a standalone starting point.</span>
                 </p>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {[
-                    'Runs on Fridays',
-                    'Parent orientation before joining',
-                    'Single focused challenge format',
-                    'Good first step before the workshop'
-                  ].map((item) => (
-                    <div key={item} className="rounded-2xl border border-neutral-100 bg-[#FAF9F6] px-5 py-4 text-sm font-medium text-primary-500">
-                      {item}
-                    </div>
-                  ))}
+                <div className="space-y-6">
+                  <h4 className="text-xs font-bold text-primary-500 uppercase tracking-widest opacity-80">
+                    What each Friday session involves:
+                  </h4>
+                  <ul className="space-y-3">
+                    {[
+                      'One unfamiliar challenge per session',
+                      'Independent problem-solving — children are not walked through steps',
+                      'Different domains across the year: logic, mechanics, space, design, electronics'
+                    ].map((item) => (
+                      <li key={item} className="flex items-start gap-3 text-sm text-neutral-700 font-medium">
+                        <div className="w-1.5 h-1.5 rounded-full bg-accent-teal mt-2 flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
 
@@ -308,18 +343,22 @@ export default function ProgramsPage() {
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.3em] text-accent-teal mb-4">Best for</p>
                   <p className="text-2xl md:text-3xl font-serif font-bold leading-tight mb-6">
-                    Families who want a small, structured, low-friction first experience.
-                  </p>
-                  <p className="text-white/75 leading-relaxed font-light mb-10">
-                    The club keeps the format simple: one Friday, one challenge, one clear observation of how your child approaches the unfamiliar.
+                    Children who need consistent weekly practice thinking independently — not just during school terms.
                   </p>
                 </div>
 
-                <Link href="/schedule-visit" className="inline-flex">
-                  <Button size="lg" className="bg-accent-teal border-none text-white px-8 py-4 rounded-full font-bold shadow-huge shadow-accent-teal/30">
-                    Ask about Friday Club
-                  </Button>
-                </Link>
+                <div className="space-y-6">
+                  <div className="border-t border-white/10 pt-6">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-teal mb-1">Sessions</p>
+                    <p className="text-base font-serif font-bold text-white">Every Friday · Weekly · Ages 8–15</p>
+                  </div>
+
+                  <Link href="/schedule-visit" className="inline-flex w-full">
+                    <Button size="lg" className="bg-accent-teal border-none text-white px-8 py-4 rounded-full font-bold shadow-huge shadow-accent-teal/30 w-full">
+                      Ask about Friday Club
+                    </Button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -331,34 +370,37 @@ export default function ProgramsPage() {
         <div className="container-fluid">
           <div className="max-w-6xl mx-auto">
             <div className="bg-white rounded-[40px] border border-neutral-100 shadow-huge overflow-hidden mb-32 relative">
-              <div className="bg-accent-teal px-10 py-5 flex flex-wrap items-center justify-between text-white text-[11px] font-bold uppercase tracking-widest gap-4">
+              <div className="bg-[#1E2A44] px-10 py-5 flex flex-wrap items-center justify-between text-white text-[11px] font-bold uppercase tracking-widest gap-4">
                 <div className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
-                  Entry Program · 10 consecutive days
+                  <span className="w-2 h-2 rounded-full bg-accent-teal animate-pulse" />
+                  Vacation Program · 10 Consecutive Days
                 </div>
                 <div>Ages 8–15</div>
               </div>
               <div className="p-10 md:p-20">
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8 md:mb-10 leading-tight uppercase tracking-tight">
-                  10-Day Thinking <br className="hidden md:block" />
-                  RESET Workshop
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8 md:mb-10 leading-tight">
+                  10-Day STEM Tinkering Workshop
                 </h2>
                 <p className="text-lg md:text-xl text-neutral-500 mb-16 max-w-3xl leading-relaxed font-light">
-                  A fast-paced hands-on RoboSTEM experience where children explore different themes each day through projects, challenges, experimentation, and creative problem-solving.
+                  Ten days. Ten themes. One new world every day.
+                  <br /><br />
+                  A fast-paced hands-on RoboSTEM experience designed for vacations — where children move through robotics, space science, electronics, aeromodelling, design thinking, and more through real projects and challenges.
+                  <br /><br />
+                  Every project is a take-home creation. Every day is a different problem. Children are not told what the answer should look like.
                 </p>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                   <div className="space-y-6 p-10 bg-neutral-50 rounded-[2.5rem] border border-neutral-100">
-                    <h4 className="flex items-center gap-3 text-accent-teal font-serif font-bold uppercase tracking-widest text-xs">
-                      <div className="w-6 h-6 rounded-full bg-accent-teal/10 flex items-center justify-center text-accent-teal"><Target size={14} /></div>
-                      Designed Especially For Children Who:
+                    <h4 className="flex items-center gap-3 text-primary-500 font-serif font-bold uppercase tracking-widest text-xs">
+                      <div className="w-6 h-6 rounded-full bg-primary-500/10 flex items-center justify-center text-primary-500"><Target size={14} /></div>
+                      Designed for children who:
                     </h4>
                     <ul className="space-y-4">
                       {[
-                        'enjoy building and exploring',
-                        'are curious beyond textbooks',
-                        'need more active learning environments',
-                        'want exposure to multiple STEM domains'
+                        'Enjoy building and exploring beyond textbooks',
+                        'Want exposure to multiple STEM domains quickly',
+                        'Need a more active learning environment during holidays',
+                        'Are curious about how real systems and machines work'
                       ].map((item) => (
                         <li key={item} className="flex gap-4 items-start text-primary-500 font-medium leading-relaxed text-sm">
                           <Check className="text-accent-teal mt-1 flex-shrink-0" size={16} />
@@ -368,13 +410,30 @@ export default function ProgramsPage() {
                     </ul>
                   </div>
                   
-                  <div className="space-y-6 p-10 flex flex-col justify-center items-center text-center">
-                     <p className="text-sm font-mono text-neutral-400 uppercase tracking-widest mb-4">Ready to start?</p>
-                     <Link href="https://chat.whatsapp.com/L79pYlQ55XFAKk0PikYtUu" target="_blank" rel="noopener noreferrer" className="w-full">
-                       <Button className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white py-6 rounded-full font-bold shadow-md shadow-[#25D366]/20">
-                         Join Parent Community
-                       </Button>
-                     </Link>
+                  <div className="space-y-8 p-10 bg-accent-teal/5 rounded-[2.5rem] border border-accent-teal/20 flex flex-col justify-between">
+                    <div>
+                      <h4 className="flex items-center gap-3 text-accent-teal font-serif font-bold uppercase tracking-widest text-xs mb-4">
+                        <div className="w-6 h-6 rounded-full bg-accent-teal/20 flex items-center justify-center text-accent-teal"><Users size={14} /></div>
+                        What parents receive:
+                      </h4>
+                      <p className="text-base text-primary-500 font-medium italic leading-relaxed">
+                        A workshop-end note on how your child approached unfamiliar challenges across the ten days.
+                      </p>
+
+                      <div className="border-t border-accent-teal/20 pt-4 mt-6">
+                        <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest block mb-1">Next batch:</span>
+                        <p className="text-xs text-primary-500 font-medium">Announced before each vacation period. Join the Parent Community for early updates.</p>
+                      </div>
+                    </div>
+
+                    <div className="pt-6 border-t border-accent-teal/20 flex flex-col gap-4">
+                      <Link href="https://chat.whatsapp.com/L79pYlQ55XFAKk0PikYtUu" target="_blank" rel="noopener noreferrer" className="w-full">
+                        <Button className="w-full bg-[#25D366] hover:bg-[#20bd5a] text-white py-6 rounded-full font-bold shadow-md shadow-[#25D366]/20">
+                          Join Parent Community
+                        </Button>
+                      </Link>
+                      <span className="text-[9px] text-neutral-400 font-mono text-center block">Sessions: 10 consecutive days · Vacation batches only · Ages 8–15</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -464,16 +523,12 @@ export default function ProgramsPage() {
           <div className="max-w-6xl mx-auto">
             <div className="bg-white/5 backdrop-blur-md rounded-[40px] border border-white/10 shadow-2xl overflow-hidden mb-32">
               <div className="bg-primary-900 px-10 py-5 flex flex-wrap items-center justify-between text-white text-[11px] font-bold uppercase tracking-widest gap-4">
-                <div className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-accent-teal animate-pulse" />
-                  Year-Long Program · Ages 8–15
-                </div>
+                <div>Year-Long Program · Ages 8–15</div>
                 <div>Ages 8–15</div>
               </div>
               <div className="p-10 md:p-24">
                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-8 md:mb-10 leading-[1.1]">
-                  RoboSTEM Thinking Lab <br className="hidden md:block" />
-                  <span className="text-accent-teal italic font-light opacity-90 text-3xl md:text-4xl">Annual Program — Ages 8–15</span>
+                  RoboSTEM Thinking Lab — Annual Program
                 </h2>
                 <p className="text-lg md:text-xl text-[#B7E3DD] mb-16 max-w-3xl leading-relaxed font-light italic">
                   One theme each month. Two weekend sessions to go deeper. Real hands-on projects, monthly STEM challenges, and regular parent discussions on how your child approaches problems.
@@ -481,17 +536,10 @@ export default function ProgramsPage() {
                   This is not a tuition class. Children are guided — not given fixed answers. Facilitators observe how each child thinks during activities and share those observations with parents monthly — so you can support independent thinking at home without over-helping.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-                  <div className="rounded-[2rem] border border-white/10 bg-white/5 px-8 py-7">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-accent-teal mb-2">Pricing</p>
-                    <p className="text-3xl font-serif font-bold text-white">₹12,000 incl. kit</p>
-                    <p className="text-white/65 text-sm mt-2">or ₹10,000 + kit separately.</p>
-                  </div>
-                  <div className="rounded-[2rem] border border-white/10 bg-white/5 px-8 py-7">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-accent-teal mb-2">Sessions</p>
-                    <p className="text-3xl font-serif font-bold text-white">2 weekend sessions</p>
-                    <p className="text-white/65 text-sm mt-2">Per month · 10 months · Ages 8–15</p>
-                  </div>
+                <div className="rounded-[2.5rem] border border-white/10 bg-white/5 p-10 mb-12">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-accent-teal mb-3">Sessions</p>
+                  <p className="text-3xl font-serif font-bold text-white mb-2">2 weekend sessions per month</p>
+                  <p className="text-[#B7E3DD] text-base font-light">10 months · Ages 8–15</p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
@@ -656,38 +704,28 @@ export default function ProgramsPage() {
             <table className="w-full text-left bg-white relative z-10 border-collapse">
               <thead>
                 <tr className="bg-[#1E2A44] text-white">
-                  <th className="py-8 px-8 text-xs font-bold uppercase tracking-[0.2em]">Comparison</th>
-                  <th className="py-8 px-4 text-xs font-bold uppercase tracking-[0.1em]">1-Day Challenge</th>
-                  <th className="py-8 px-4 text-xs font-bold uppercase tracking-[0.1em]">Friday Club</th>
-                  <th className="py-8 px-4 text-xs font-bold uppercase tracking-[0.1em]">10-Day Workshop</th>
-                  <th className="py-8 px-4 text-xs font-bold uppercase tracking-[0.1em] text-accent-teal">RoboSTEM Lab</th>
+                  <th className="py-8 px-8 text-xs font-bold uppercase tracking-[0.2em]"></th>
+                  <th className="py-8 px-4 text-xs font-bold uppercase tracking-[0.1em] text-center">1-Day Challenge</th>
+                  <th className="py-8 px-4 text-xs font-bold uppercase tracking-[0.1em] text-center">Friday Club</th>
+                  <th className="py-8 px-4 text-xs font-bold uppercase tracking-[0.1em] text-center">10-Day Workshop</th>
+                  <th className="py-8 px-4 text-xs font-bold uppercase tracking-[0.1em] text-center text-accent-teal">RoboSTEM Lab</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-neutral-100">
                 {comparisonData.map((row, i) => (
                   <tr key={i} className="hover:bg-accent-surface transition-all">
                     <td className="py-8 px-8 text-sm font-bold text-primary-500 font-serif">{row.feature}</td>
-                    <td className="py-8 px-4 text-sm text-neutral-500 font-light">{row.workshop}</td>
-                    <td className="py-8 px-4 text-sm text-neutral-500 font-light">{row.friday}</td>
-                    <td className="py-8 px-4 text-sm text-neutral-500 font-light">{row.yearLong}</td>
-                    <td className="py-8 px-4 text-sm text-primary-500 font-medium">{row.lab}</td>
+                    <td className="py-8 px-4 text-sm text-neutral-500 font-light text-center">{row.workshop}</td>
+                    <td className="py-8 px-4 text-sm text-neutral-500 font-light text-center">{row.friday}</td>
+                    <td className="py-8 px-4 text-sm text-neutral-500 font-light text-center">{row.yearLong}</td>
+                    <td className="py-8 px-4 text-sm text-primary-500 font-medium text-center">{row.lab}</td>
                   </tr>
                 ))}
-                <tr className="bg-neutral-50 font-bold border-t-2 border-[#1E2A44]/10">
-                  <td className="py-10 px-8 text-xs text-primary-400 uppercase tracking-[0.2em]">Best for</td>
-                  <td className="py-10 px-4 text-sm text-accent-teal font-serif italic">First look</td>
-                  <td className="py-10 px-4 text-sm text-primary-500 font-serif italic">Weekly habit building</td>
-                  <td className="py-10 px-4 text-sm text-primary-500 font-serif italic">Vacation deep-dive</td>
-                  <td className="py-10 px-4 text-sm text-primary-500 font-serif italic">Long-term growth</td>
-                </tr>
               </tbody>
             </table>
           </div>
           <p className="mt-16 text-center text-primary-500 font-medium text-lg max-w-4xl mx-auto leading-relaxed">
             Not sure where to start? The 1-Day Challenge is the lowest-commitment entry point. Most families move to the Annual Program after that.
-          </p>
-          <p className="mt-8 text-center text-neutral-400 font-serif text-lg md:text-xl italic max-w-4xl mx-auto leading-relaxed">
-            Not sure how to start? Tell us your child's age when you visit — we'll guide you.
           </p>
         </div>
       </section>

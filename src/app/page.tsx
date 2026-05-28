@@ -8,9 +8,8 @@ import { SessionStructure } from '../components/sections/SessionStructure'
 import { ObservationUSP } from '../components/sections/ObservationUSP'
 
 const ProgramsSlider = dynamic(() => import('../components/sections/ProgramsSlider').then((mod) => mod.ProgramsSlider))
+const Programs = dynamic(() => import('../components/sections/Programs').then((mod) => mod.Programs))
 const Outcomes = dynamic(() => import('../components/sections/Outcomes').then((mod) => mod.Outcomes))
-const ThinkingReset = dynamic(() => import('../components/sections/ThinkingReset').then((mod) => mod.ThinkingReset))
-const OneDayChallenge = dynamic(() => import('../components/sections/OneDayChallenge').then((mod) => mod.OneDayChallenge))
 const TestimonialsSlider = dynamic(() => import('../components/sections/TestimonialsSlider').then((mod) => mod.TestimonialsSlider))
 const FinalCTA = dynamic(() => import('../components/sections/FinalCTA').then((mod) => mod.FinalCTA))
 const GalleryTeaser = dynamic(() => import('../components/sections/GalleryTeaser').then((mod) => mod.GalleryTeaser))
@@ -81,14 +80,11 @@ export default function HomePage() {
       {/* Section 07 — YEAR-LONG THEMES */}
       <ProgramsSlider />
 
+      {/* Section 07.5 — PROGRAMS OVERVIEW */}
+      <Programs />
+
       {/* Section 08 — OUTCOMES */}
       <Outcomes />
-
-      {/* Section 09 — 10-DAY THINKING RESET WORKSHOP */}
-      <ThinkingReset />
-
-      {/* Section 10 — 1-DAY STEM CHALLENGE */}
-      <OneDayChallenge />
 
       {/* Section 11 — PARENT VOICES */}
       <TestimonialsSlider />
