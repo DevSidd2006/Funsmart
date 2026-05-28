@@ -466,24 +466,31 @@ export default function ProgramsPage() {
               <div className="bg-primary-900 px-10 py-5 flex flex-wrap items-center justify-between text-white text-[11px] font-bold uppercase tracking-widest gap-4">
                 <div className="flex items-center gap-3">
                   <span className="w-2 h-2 rounded-full bg-accent-teal animate-pulse" />
-                  Year-Long Program · 2 weekend sessions/month
+                  Year-Long Program · Ages 8–15
                 </div>
                 <div>Ages 8–15</div>
               </div>
               <div className="p-10 md:p-24">
                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-8 md:mb-10 leading-[1.1]">
-                  FunSmartism RoboSTEM <br className="hidden md:block" />
-                  <span className="text-accent-teal italic font-light opacity-90 text-3xl md:text-4xl">Thinking Lab — Year-Long</span>
+                  RoboSTEM Thinking Lab <br className="hidden md:block" />
+                  <span className="text-accent-teal italic font-light opacity-90 text-3xl md:text-4xl">Annual Program — Ages 8–15</span>
                 </h2>
                 <p className="text-lg md:text-xl text-[#B7E3DD] mb-16 max-w-3xl leading-relaxed font-light italic">
-                  One theme each month. Two weekend sessions to go deeper. Real projects, monthly thinking challenges, and regular parent discussions.
+                  One theme each month. Two weekend sessions to go deeper. Real hands-on projects, monthly STEM challenges, and regular parent discussions on how your child approaches problems.
+                  <br /><br />
+                  This is not a tuition class. Children are guided — not given fixed answers. Facilitators observe how each child thinks during activities and share those observations with parents monthly — so you can support independent thinking at home without over-helping.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-1 gap-4 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
                   <div className="rounded-[2rem] border border-white/10 bg-white/5 px-8 py-7">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-accent-teal mb-2">Cadence</p>
+                    <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-accent-teal mb-2">Pricing</p>
+                    <p className="text-3xl font-serif font-bold text-white">₹12,000 incl. kit</p>
+                    <p className="text-white/65 text-sm mt-2">or ₹10,000 + kit separately.</p>
+                  </div>
+                  <div className="rounded-[2rem] border border-white/10 bg-white/5 px-8 py-7">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-accent-teal mb-2">Sessions</p>
                     <p className="text-3xl font-serif font-bold text-white">2 weekend sessions</p>
-                    <p className="text-white/65 text-sm mt-2">Each month, across one theme.</p>
+                    <p className="text-white/65 text-sm mt-2">Per month · 10 months · Ages 8–15</p>
                   </div>
                 </div>
 
@@ -495,10 +502,10 @@ export default function ProgramsPage() {
                     </h4>
                     <ul className="space-y-5">
                       {[
-                        'Deep long-term projects across evolving challenges',
+                        'Hands-on projects across 10 RoboSTEM themes',
                         'Monthly thinking challenge alongside the project',
-                        'Priority access to edu events: experts & scientists',
-                        'Projects go home — some displayed at the center'
+                        'Priority access to edu-events with scientists and innovators',
+                        'Projects go home — some displayed at the centre'
                       ].map((item) => (
                         <li key={item} className="flex gap-4 items-start text-white/80 font-medium leading-relaxed text-sm">
                           <Check className="text-accent-teal mt-1 flex-shrink-0" size={16} />
@@ -514,8 +521,9 @@ export default function ProgramsPage() {
                     </h4>
                     <ul className="space-y-5">
                       {[
-                        'Monthly parent note on how your child approached challenges',
-                        'Guidance on evolving thinking habits & home support'
+                        'Monthly note on how your child approached challenges',
+                        'Guidance on supporting independent thinking at home',
+                        'Priority notification for all edu-events and expert interactions'
                       ].map((item) => (
                         <li key={item} className="flex gap-4 items-start text-white/80 font-medium leading-relaxed text-sm">
                           <Check className="text-accent-teal mt-1 flex-shrink-0" size={16} />
