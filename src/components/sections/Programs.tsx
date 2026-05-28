@@ -63,7 +63,7 @@ export function Programs() {
       badgeColor: 'bg-neutral-100 text-neutral-600',
       desc: 'A one-day hands-on challenge where parents observe — not instruct. Children face unfamiliar problems with no hints and no fixed answers, while you watch how they actually think. Uncertainty handling - how they react without ready answers.',
       cta: 'Book Trial Day',
-      batch: 'New batch: {check schedule}',
+      batch: 'New batch : {check schedule}',
     },
   ]
 

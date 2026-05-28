@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/Button'
 import { FounderJourney } from '@/components/sections/FounderJourney'
 import { OurTeam } from '@/components/sections/OurTeam'
 import { RealSessionMoments } from '@/components/sections/RealSessionMoments'
-import { InspirationSection } from '@/components/sections/InspirationSection'
+
 import { ChevronDown } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -183,7 +183,7 @@ export default function AboutPage() {
 
       <RealSessionMoments />
 
-      <InspirationSection />
+
 
       {/* Philosophy */}
       <section className="py-16 md:py-24 bg-[#1E2A44] text-white text-center">

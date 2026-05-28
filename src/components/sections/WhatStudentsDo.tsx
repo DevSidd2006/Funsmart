@@ -1,21 +1,7 @@
-import Image from 'next/image'
-import Link from 'next/link'
-import { Bot, Wrench, Rocket, Blocks, Plane, Puzzle, BrainCircuit, Telescope, Lightbulb, BookOpen } from 'lucide-react'
 import { SectionReveal } from '../ui/SectionReveal'
 
 export function WhatStudentsDo() {
-  const activities = [
-    { icon: Bot, text: "Robotics" },
-    { icon: Telescope, text: "Astronomy" },
-    { icon: Rocket, text: "Space Science" },
-    { icon: Plane, text: "Aeromodeling" },
-    { icon: Puzzle, text: "Rubik’s & Cognitive Sudoku" },
-    { icon: Blocks, text: "Hands on STEM Projects" },
-    { icon: BrainCircuit, text: "Electronics & tech toys" },
-    { icon: Lightbulb, text: "Design Thinking & Innovation" },
-    { icon: BookOpen, text: "Sci-Fi Story Writing" },
-    { icon: Wrench, text: "How Stuff Works" },
-  ]
+
 
   return (
     <section className="py-16 bg-white relative overflow-hidden">
@@ -32,46 +18,34 @@ export function WhatStudentsDo() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-[#FAF9F6] rounded-[3rem] p-8 md:p-16 shadow-sm border border-neutral-100">
-          <div className="lg:col-span-7">
-            <h3 className="text-xl font-bold text-primary-500 mb-10 uppercase tracking-widest text-[12px] opacity-70">
-              Depending on the month’s theme, domains explored include:
-            </h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {activities.map((activity, i) => {
-                const Icon = activity.icon
-                return (
-                  <div key={i} className="flex items-center gap-3 bg-white p-5 rounded-2xl shadow-sm border border-neutral-100 group hover:border-accent-teal/40 transition-colors">
-                    <div className="w-10 h-10 rounded-full bg-accent-teal/10 flex items-center justify-center text-accent-teal flex-shrink-0 group-hover:scale-110 transition-transform">
-                      <Icon size={18} />
-                    </div>
-                    <p className="text-neutral-700 font-medium leading-tight text-sm">
-                      {activity.text}
-                    </p>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
 
-          <div className="lg:col-span-5 relative aspect-video md:aspect-square rounded-[2rem] overflow-hidden group">
-            <Image 
-              src="/images/discovery-real.jpg" 
-              alt="Hands-on learning at FunSmartism" 
-              fill 
-              className="object-cover transition-transform duration-700 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary-900/40 to-transparent" />
-            <Link href="/gallery" className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-[10px] font-bold text-primary-500 uppercase tracking-widest shadow-lg hover:bg-white transition-colors">
-              View Gallery →
-            </Link>
-          </div>
-        </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-16 text-center mb-24">
            <div className="inline-block bg-primary-500 text-white px-8 py-4 rounded-full font-bold shadow-lg">
               All projects made are take-home creations.
+           </div>
+        </div>
+
+        {/* Observation Section */}
+        <div className="max-w-4xl mx-auto bg-neutral-50 rounded-[3rem] p-10 md:p-14 border border-neutral-100 text-center relative overflow-hidden shadow-sm">
+           <div className="absolute top-0 right-0 w-64 h-64 bg-accent-teal/10 rounded-full blur-[80px]" />
+           <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary-500/5 rounded-full blur-[80px]" />
+           
+           <div className="relative z-10">
+             <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8 leading-tight">
+               While Children Build and Solve, We Also Observe <br className="hidden md:block" />
+               <span className="text-accent-teal italic font-light">How They Think.</span>
+             </h3>
+             
+             <div className="text-lg md:text-xl text-neutral-600 leading-relaxed space-y-6 mb-10 font-light">
+               <p>During activities and challenges, facilitators naturally observe patterns that often come up at home too, but get unnoticed by parents.</p>
+               <p className="font-medium text-primary-500">These observations are shared with parents through examples and discussions — helping parents support learning without over-helping.</p>
+             </div>
+             
+             <div className="inline-flex items-center gap-2 text-sm text-neutral-500 bg-white px-6 py-3 rounded-full border border-neutral-100 shadow-sm">
+               <span className="text-accent-teal text-base font-bold">!</span>
+               <em>FunSmartism is <strong className="font-bold text-neutral-700">not</strong> a therapy, diagnostic, or psychological assessment center.</em>
+             </div>
            </div>
         </div>
       </SectionReveal>

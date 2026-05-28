@@ -5,19 +5,31 @@ import { ChevronLeft, ChevronRight, Quote } from 'lucide-react'
 
 const defaultTestimonials = [
   {
-    quote: "I came expecting a progress report like school. What I got was a conversation about how my daughter spends 10 minutes examining something before she ever tries to use it. That's not something any school has ever told me.",
+    quote: (
+      <>
+        I came expecting a progress report like school. What I got was a conversation about how my daughter spends <strong className="text-accent-teal font-semibold">10 minutes examining something before she ever tries to use it</strong>. That's not something any school has ever told me.
+      </>
+    ),
     author: "Priya M.",
     role: "Parent · 11-year-old · Thinking Reset Workshop",
     initial: "PM",
   },
   {
-    quote: "My son has been 'easily distracted' according to every teacher he's had. The team showed me he isn't distracted — he loses interest when the challenge isn't deep enough. That reframe changed everything.",
+    quote: (
+      <>
+        My son has been 'easily distracted' according to every teacher he's had. The team showed me he isn't distracted — <strong className="text-accent-teal font-semibold">he loses interest when the challenge isn't deep enough</strong>. That reframe changed everything.
+      </>
+    ),
     author: "Arvind M.",
     role: "Parent · 13-year-old · Year-Long RoboSTEM Lab",
     initial: "AM",
   },
   {
-    quote: "She built a working model on Day 4 and then quietly started dismantling it to see if she could build it differently. Nobody asked her to. That moment told me more than three years of school report cards.",
+    quote: (
+      <>
+        She built a working model on Day 4 and then <strong className="text-accent-teal font-semibold">quietly started dismantling it to see if she could build it differently</strong>. Nobody asked her to. That moment told me more than three years of school report cards.
+      </>
+    ),
     author: "Sunita R.",
     role: "Parent · 10-year-old · Thinking Reset Workshop",
     initial: "SR",

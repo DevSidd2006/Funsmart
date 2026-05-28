@@ -4,18 +4,15 @@ import { Hero } from '../components/sections/Hero'
 import { TheRealProblem } from '../components/sections/TheRealProblem'
 import { WhatStudentsDo } from '../components/sections/WhatStudentsDo'
 import { EduEvents } from '../components/sections/EduEvents'
-import { SessionStructure } from '../components/sections/SessionStructure'
-import { ObservationUSP } from '../components/sections/ObservationUSP'
 
-const ProgramsSlider = dynamic(() => import('../components/sections/ProgramsSlider').then((mod) => mod.ProgramsSlider))
+
+
+const ThemesList = dynamic(() => import('../components/sections/ThemesList').then((mod) => mod.ThemesList))
+const InspirationSection = dynamic(() => import('../components/sections/InspirationSection').then((mod) => mod.InspirationSection))
 const Programs = dynamic(() => import('../components/sections/Programs').then((mod) => mod.Programs))
 const Outcomes = dynamic(() => import('../components/sections/Outcomes').then((mod) => mod.Outcomes))
 const TestimonialsSlider = dynamic(() => import('../components/sections/TestimonialsSlider').then((mod) => mod.TestimonialsSlider))
 const FinalCTA = dynamic(() => import('../components/sections/FinalCTA').then((mod) => mod.FinalCTA))
-const GalleryTeaser = dynamic(() => import('../components/sections/GalleryTeaser').then((mod) => mod.GalleryTeaser))
-
-import { testimonials } from '../data/testimonials'
-import { teaserItems, galleryItems } from '../data/gallery'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://funsmartism.in'
 
@@ -67,33 +64,28 @@ export default function HomePage() {
       {/* Section 03 — WHAT STUDENTS DO */}
       <WhatStudentsDo />
 
+
       {/* Section 04 — SCIENTIST & EXPERT ECOSYSTEM */}
       <EduEvents />
 
 
-      {/* Section 05 — HOW SESSIONS WORK */}
-      <SessionStructure />
+      {/* Section Themes List */}
+      <ThemesList />
 
-      {/* Section 06 — OBSERVATION USP */}
-      <ObservationUSP />
-
-      {/* Section 07 — YEAR-LONG THEMES */}
-      <ProgramsSlider />
-
-      {/* Section 07.5 — PROGRAMS OVERVIEW */}
-      <Programs />
+      {/* Section 07.6 — INSPIRATION */}
+      <InspirationSection />
 
       {/* Section 08 — OUTCOMES */}
       <Outcomes />
+
+      {/* Section 07.5 — PROGRAMS OVERVIEW */}
+      <Programs />
 
       {/* Section 11 — PARENT VOICES */}
       <TestimonialsSlider />
 
       {/* Section 12 — CLOSING CTA */}
       <FinalCTA />
-
-      {/* Section 13 — GALLERY TEASER */}
-      <GalleryTeaser items={teaserItems} />
     </main>
   )
 }

@@ -16,7 +16,7 @@ export function TheRealProblem() {
       <SectionReveal className="container-fluid max-w-6xl mx-auto">
         
         {/* Main Heading & Intro */}
-        <div className="max-w-4xl mb-20 text-center mx-auto">
+        <div className="max-w-4xl mb-12 text-center mx-auto">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-8 leading-tight">
             Most children are trained to memorise answers. <br className="hidden md:block" />
             <span className="text-accent-teal italic font-light">But life, work, and real challenges don't have answer keys</span>
@@ -25,11 +25,33 @@ export function TheRealProblem() {
           <p className="text-lg md:text-xl text-neutral-600 leading-relaxed mb-8 font-light">
             Schools and tuition classes often focus on syllabus completion, exams, and fixed answers.
           </p>
-          
-          <div className="bg-white p-8 md:p-10 rounded-[2rem] shadow-sm border border-neutral-100 text-left mb-12 relative overflow-hidden">
+        </div>
+
+        {/* Parent Relatability Cards */}
+        <div className="max-w-5xl mx-auto mb-16">
+          <h3 className="text-2xl md:text-3xl font-serif font-bold text-primary-500 mb-10 text-center">
+            The real problem is
+          </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {painPoints.map((point, i) => {
+              const Icon = point.icon
+              return (
+                <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-neutral-100 group hover:border-accent-teal/30 transition-colors">
+                  <Icon size={24} className="text-neutral-300 mb-4 group-hover:text-accent-teal transition-colors" />
+                  <p className="text-neutral-700 italic font-medium leading-relaxed">
+                    “{point.quote}”
+                  </p>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+
+        <div className="max-w-4xl mb-20 text-center mx-auto">
+          <div className="bg-white p-8 md:p-10 rounded-[2rem] shadow-sm border border-neutral-100 text-left mb-8 relative overflow-hidden">
              <div className="absolute top-0 right-0 w-32 h-32 bg-accent-teal/5 rounded-full blur-3xl" />
              <p className="text-lg text-primary-500 font-bold mb-6">But children also need environments where they can:</p>
-             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
                {[
                  'Get inspired by experts closely',
                  'build things with their own hands',
@@ -46,40 +68,39 @@ export function TheRealProblem() {
                  </li>
                ))}
              </ul>
+          </div>
 
-             <div className="text-neutral-600 leading-relaxed space-y-4 mb-8">
-               <p><strong className="text-primary-500">Marks show outcomes.</strong> They don't show what your child does when stuck, confused, or facing something completely new.</p>
-               <p>Most parents have never watched their child solve a problem with no hints, no steps, and no correct answer waiting.</p>
-               <p>That gap — between performing on a test and thinking through a real challenge — is what schools don't show you.</p>
-               <p>Thinking habits form early and quietly. Most parents only notice them once they're already set.</p>
-               <p className="font-medium text-primary-500 italic text-lg">The invisible problem — You can't guide what you can't see. We help you see it.</p>
+          <div className="bg-[#1E2A44] p-8 md:p-14 rounded-[2rem] shadow-huge text-left mb-12 relative overflow-hidden">
+             <div className="absolute inset-0 lab-grid opacity-[0.04]" />
+             <div className="absolute -top-20 -right-20 w-64 h-64 bg-accent-teal/10 rounded-full blur-[80px]" />
+             <div className="relative z-10 space-y-6">
+               <p className="text-xl md:text-2xl leading-relaxed">
+                 <strong className="text-white font-bold">Marks show outcomes.</strong>
+               </p>
+               <p className="text-lg md:text-xl text-accent-teal font-medium leading-relaxed">
+                 They don't show what your child does when stuck, confused, or facing something completely new.
+               </p>
+               <p className="text-lg text-white/80 font-light leading-relaxed">
+                 Most parents have never watched their child solve a problem with no hints, no steps, and no correct answer waiting.
+               </p>
+               <p className="text-base text-white/60 font-light leading-relaxed border-l-2 border-accent-teal/40 pl-5">
+                 That gap — between performing on a test and thinking through a real challenge — is what schools don't show you.
+               </p>
+               <p className="text-base text-white/60 font-light leading-relaxed border-l-2 border-accent-teal/40 pl-5">
+                 Thinking habits form early and quietly. Most parents only notice them once they're already set.
+               </p>
+               <div className="pt-4 border-t border-white/10">
+                 <p className="text-base text-white/50 font-mono uppercase tracking-widest text-xs mb-3">The invisible problem</p>
+                 <p className="text-xl md:text-2xl font-serif font-bold text-white leading-snug">
+                   You can't guide what you can't see.{' '}
+                   <span className="text-accent-teal">We help you see it.</span>
+                 </p>
+               </div>
              </div>
-
-             <p className="text-xl font-serif font-bold text-primary-500 mt-8 italic border-t border-neutral-100 pt-6 text-center">
-               That is why FunSmartism exists.
-             </p>
           </div>
         </div>
 
-        {/* Parent Relatability Cards */}
         <div className="max-w-5xl mx-auto">
-          <h3 className="text-2xl md:text-3xl font-serif font-bold text-primary-500 mb-10 text-center">
-            The real problem is
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            {painPoints.map((point, i) => {
-              const Icon = point.icon
-              return (
-                <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-neutral-100 group hover:border-accent-teal/30 transition-colors">
-                  <Icon size={24} className="text-neutral-300 mb-4 group-hover:text-accent-teal transition-colors" />
-                  <p className="text-neutral-700 italic font-medium leading-relaxed">
-                    “{point.quote}”
-                  </p>
-                </div>
-              )
-            })}
-          </div>
-
           <div className="bg-primary-500 rounded-[2rem] p-10 md:p-12 text-center text-white relative overflow-hidden">
              <div className="absolute inset-0 lab-grid opacity-10" />
              <p className="text-lg md:text-xl font-light italic relative z-10 text-white/80 mb-8 leading-relaxed max-w-4xl mx-auto">
@@ -95,3 +116,4 @@ export function TheRealProblem() {
     </section>
   )
 }
+
