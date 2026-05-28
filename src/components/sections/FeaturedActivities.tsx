@@ -6,7 +6,7 @@ import Link from 'next/link'
 export function ProgramsOverview({ data }: { data?: any[] }) {
   const programs = data && data.length > 0 ? data : [
     {
-      title: '10-Day Workshop (Ages 8–16)',
+      title: '10-Day Workshop (Ages 8–15)',
       tag: 'Thinking Reset Workshop',
       desc: 'Ten days. Ten different themes. Children build, explore, and think — while we observe. The entry point where every FunSmartism journey begins.',
       bullets: [
@@ -19,9 +19,9 @@ export function ProgramsOverview({ data }: { data?: any[] }) {
       variant: 'surface'
     },
     {
-      title: 'Year-long Program (Ages 8–16)',
+      title: 'Year-long Program (Ages 8–15)',
       tag: 'RoboSTEM Thinking Lab — Year-Long',
-      desc: 'Deep projects and monthly thinking challenges where thinking habits become visible over time.',
+      desc: 'Deep projects and monthly thinking challenges across two weekend sessions per month, where thinking habits become visible over time.',
       bullets: [
         'Deep projects across 10 STEM themes',
         'Monthly thinking observations for parents',

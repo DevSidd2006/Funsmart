@@ -32,7 +32,7 @@ export function FounderJourney() {
                 From software systems to child thinking systems
               </h2>
               <h3 className="text-xl md:text-2xl font-serif text-accent-teal mb-10 font-medium">
-                Dipali Akolkar, Founder — FunSmartism Intelligence Center
+                Dipali Akolkar, Founder — FunSmartism
               </h3>
               
               <div className="text-lg md:text-xl text-neutral-600 leading-relaxed font-light space-y-6">

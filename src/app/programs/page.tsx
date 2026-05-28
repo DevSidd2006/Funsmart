@@ -8,9 +8,9 @@ import Link from 'next/link'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://funsmartism.in'
 
 export const metadata: Metadata = {
-  title: 'Programs | FunSmartism Intelligence Center',
+  title: 'Programs | FunSmartism',
   description:
-    'Explore FunSmartism programs for children aged 8–16 in Pune. Choose from the 10-Day Thinking Reset Workshop, Year-Long RoboSTEM Thinking Lab, 1-Day STEM Challenge, or Edu-Events.',
+    'Explore FunSmartism programs for children aged 8–15 in Pune. Choose from the Friday STEM Challenge Club, 10-Day Thinking Reset Workshop, Year-Long RoboSTEM Thinking Lab, 1-Day STEM Challenge, or Edu-Events.',
   keywords: [
     'RoboSTEM programs Pune',
     'STEM workshop for kids',
@@ -22,20 +22,20 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: `${siteUrl}/programs` },
   openGraph: {
-    title: 'Programs | FunSmartism Intelligence Center',
+    title: 'Programs | FunSmartism',
     description:
-      'Explore FunSmartism programs for children aged 8–16 in Pune. RoboSTEM Thinking Lab, 10-Day Reset Workshop, and more.',
+      'Explore FunSmartism programs for children aged 8–15 in Pune. Friday STEM Challenge Club, RoboSTEM Thinking Lab, 10-Day Reset Workshop, and more.',
     url: `${siteUrl}/programs`,
-    siteName: 'FunSmartism Intelligence Center',
+    siteName: 'FunSmartism',
     images: [{ url: `${siteUrl}/og-image-real.jpg`, width: 1200, height: 630, alt: 'FunSmartism Programs' }],
     locale: 'en_IN',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Programs | FunSmartism Intelligence Center',
+    title: 'Programs | FunSmartism',
     description:
-      'Explore FunSmartism programs for children aged 8–16 in Pune. RoboSTEM Thinking Lab, 10-Day Reset Workshop, and more.',
+      'Explore FunSmartism programs for children aged 8–15 in Pune. Friday STEM Challenge Club, RoboSTEM Thinking Lab, 10-Day Reset Workshop, and more.',
     images: [`${siteUrl}/og-image-real.jpg`],
   },
 }
@@ -67,14 +67,11 @@ const yearLongMonthlyMap = [
 ]
 
 const comparisonData = [
-  { feature: 'Duration', workshop: '10 consecutive days', yearLong: '10 months · 4 sessions/month' },
-  { feature: 'Session frequency', workshop: 'Once a day for 10 days', yearLong: 'Once a week' },
-  { feature: 'Themes covered', workshop: 'All 10 — one per day', yearLong: 'All 10 — one per month (deeper)' },
-  { feature: 'Projects', workshop: 'Build + take most home', yearLong: 'Build + take most home + some on display' },
-  { feature: 'Thinking challenge', workshop: 'Woven into daily activities', yearLong: 'Monthly standalone challenge + project' },
-  { feature: 'Parent insight note', workshop: 'Workshop-end parent note', yearLong: 'Monthly parent guidance note' },
-  { feature: 'Edu events', workshop: 'Not included', yearLong: 'Priority access — students run the events' },
-  { feature: 'Entry requirement', workshop: 'Parent orientation only', yearLong: 'Recommended: complete workshop first' },
+  { feature: 'Duration', workshop: '1 day', friday: 'Full academic year', yearLong: '10 consecutive days', lab: '10 months' },
+  { feature: 'Frequency', workshop: 'One session', friday: 'Every Friday', yearLong: 'Daily during vacation', lab: '2 weekends/month' },
+  { feature: 'Themes', workshop: '1 challenge', friday: 'Rotating weekly', yearLong: 'All 10 — one per day', lab: 'All 10 — one per month' },
+  { feature: 'Parent insight', workshop: 'Session observation', friday: '—', yearLong: 'Workshop-end note', lab: 'Monthly guidance note' },
+  { feature: 'Edu-event access', workshop: 'Not included', friday: 'Not included', yearLong: 'Not included', lab: 'Priority access' },
 ]
 
 const faqs = [
@@ -85,8 +82,8 @@ const faqs = [
   },
   {
     id: 'faq-2',
-    question: 'Can my child attend more than one session per week?',
-    answer: 'The year-long program runs once a week, and the workshop runs for 10 consecutive days. These schedules stay fixed.',
+    question: 'Can my child attend more than two weekend sessions per month?',
+    answer: 'The year-long program runs twice each month on weekends, and the workshop runs for 10 consecutive days. These schedules stay fixed.',
   },
   {
     id: 'faq-3',
@@ -139,7 +136,7 @@ export default function ProgramsPage() {
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-sm md:text-base font-sans text-[#B7E3DD] border-t border-white/10 pt-12">
-              <span>Ages 8–16</span>
+              <span>Ages 8–15</span>
               <span className="w-1.5 h-1.5 rounded-full bg-accent-teal/50" />
               <span>No grades</span>
               <span className="w-1.5 h-1.5 rounded-full bg-accent-teal/50" />
@@ -166,7 +163,7 @@ export default function ProgramsPage() {
               <p className="text-neutral-500 text-sm mb-8 leading-relaxed flex-grow">Experience FunSmartism. Parents observe, children participate in a STEM Challenge.</p>
               <div className="flex items-center justify-between mt-auto">
                 <div className="flex items-center gap-2 text-primary-500 font-bold text-xs">
-                  Ages 8–16 <span className="text-neutral-300 opacity-30">|</span> <span className="flex items-center gap-1 group-hover:gap-2 transition-all">↓ See details</span>
+                  Ages 8–15 <span className="text-neutral-300 opacity-30">|</span> <span className="flex items-center gap-1 group-hover:gap-2 transition-all">↓ See details</span>
                 </div>
               </div>
             </Link>
@@ -181,7 +178,7 @@ export default function ProgramsPage() {
               <p className="text-neutral-500 text-sm mb-8 leading-relaxed flex-grow">10 themes. 10 consecutive days. The entry point.</p>
               <div className="flex items-center justify-between mt-auto">
                 <div className="flex items-center gap-2 text-primary-500 font-bold text-xs">
-                  Ages 8–16 <span className="text-accent-teal opacity-30">|</span> <span className="flex items-center gap-1 group-hover:gap-2 transition-all">↓ See details</span>
+                  Ages 8–15 <span className="text-accent-teal opacity-30">|</span> <span className="flex items-center gap-1 group-hover:gap-2 transition-all">↓ See details</span>
                 </div>
               </div>
             </Link>
@@ -196,7 +193,7 @@ export default function ProgramsPage() {
               <p className="text-neutral-500 text-sm mb-8 leading-relaxed flex-grow">One theme per month. Four sessions per month. A full academic year.</p>
               <div className="flex items-center justify-between mt-auto">
                 <div className="flex items-center gap-2 text-primary-500 font-bold text-xs">
-                  Ages 8–16 <span className="text-primary-400 opacity-30">|</span> <span className="flex items-center gap-1 group-hover:gap-2 transition-all">↓ See details</span>
+                  Ages 8–15 <span className="text-primary-400 opacity-30">|</span> <span className="flex items-center gap-1 group-hover:gap-2 transition-all">↓ See details</span>
                 </div>
               </div>
             </Link>
@@ -214,7 +211,7 @@ export default function ProgramsPage() {
                   <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
                   Try before joining · 1 Day
                 </div>
-                <div>Ages 8–16</div>
+                <div>Ages 8–15</div>
               </div>
               <div className="p-10 md:p-20">
                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8 md:mb-10 leading-tight">
@@ -277,6 +274,58 @@ export default function ProgramsPage() {
         </div>
       </section>
 
+      {/* SECTION 02.75 — FRIDAY STEM CHALLENGE CLUB */}
+      <section className="py-24 bg-[#FAF9F6]" id="friday-club">
+        <div className="container-fluid">
+          <div className="max-w-6xl mx-auto rounded-[3rem] overflow-hidden border border-neutral-100 shadow-huge bg-white">
+            <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr]">
+              <div className="p-10 md:p-16 lg:p-20">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-teal/10 border border-accent-teal/20 text-accent-teal text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
+                  Friday STEM Challenge Club
+                </div>
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-6 leading-tight">
+                  A Friday challenge for families who want a lighter entry point.
+                </h2>
+                <p className="text-lg md:text-xl text-neutral-600 leading-relaxed font-light mb-10 max-w-2xl">
+                  This is the missing middle between a single visit and a longer program. Children solve a live challenge, explore one focused STEM prompt, and leave with a clearer sense of how they think under time and material constraints.
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {[
+                    'Runs on Fridays',
+                    'Parent orientation before joining',
+                    'Single focused challenge format',
+                    'Good first step before the workshop'
+                  ].map((item) => (
+                    <div key={item} className="rounded-2xl border border-neutral-100 bg-[#FAF9F6] px-5 py-4 text-sm font-medium text-primary-500">
+                      {item}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-primary-500 text-white p-10 md:p-16 lg:p-20 flex flex-col justify-between">
+                <div>
+                  <p className="text-xs font-bold uppercase tracking-[0.3em] text-accent-teal mb-4">Best for</p>
+                  <p className="text-2xl md:text-3xl font-serif font-bold leading-tight mb-6">
+                    Families who want a small, structured, low-friction first experience.
+                  </p>
+                  <p className="text-white/75 leading-relaxed font-light mb-10">
+                    The club keeps the format simple: one Friday, one challenge, one clear observation of how your child approaches the unfamiliar.
+                  </p>
+                </div>
+
+                <Link href="/schedule-visit" className="inline-flex">
+                  <Button size="lg" className="bg-accent-teal border-none text-white px-8 py-4 rounded-full font-bold shadow-huge shadow-accent-teal/30">
+                    Ask about Friday Club
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SECTION 03 — 10-DAY WORKSHOP */}
       <section className="py-16 md:py-32" id="workshop">
         <div className="container-fluid">
@@ -287,7 +336,7 @@ export default function ProgramsPage() {
                   <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
                   Entry Program · 10 consecutive days
                 </div>
-                <div>Ages 8–16</div>
+                <div>Ages 8–15</div>
               </div>
               <div className="p-10 md:p-20">
                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8 md:mb-10 leading-tight uppercase tracking-tight">
@@ -417,9 +466,9 @@ export default function ProgramsPage() {
               <div className="bg-primary-900 px-10 py-5 flex flex-wrap items-center justify-between text-white text-[11px] font-bold uppercase tracking-widest gap-4">
                 <div className="flex items-center gap-3">
                   <span className="w-2 h-2 rounded-full bg-accent-teal animate-pulse" />
-                  Year-Long Program · Once a week
+                  Year-Long Program · 2 weekend sessions/month
                 </div>
-                <div>Ages 8–16</div>
+                <div>Ages 8–15</div>
               </div>
               <div className="p-10 md:p-24">
                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-8 md:mb-10 leading-[1.1]">
@@ -427,8 +476,16 @@ export default function ProgramsPage() {
                   <span className="text-accent-teal italic font-light opacity-90 text-3xl md:text-4xl">Thinking Lab — Year-Long</span>
                 </h2>
                 <p className="text-lg md:text-xl text-[#B7E3DD] mb-16 max-w-3xl leading-relaxed font-light italic">
-                  One theme each month. Four sessions to go deeper. Real projects, monthly thinking challenges, and regular parent discussions.
+                  One theme each month. Two weekend sessions to go deeper. Real projects, monthly thinking challenges, and regular parent discussions.
                 </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-1 gap-4 mb-12">
+                  <div className="rounded-[2rem] border border-white/10 bg-white/5 px-8 py-7">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-accent-teal mb-2">Cadence</p>
+                    <p className="text-3xl font-serif font-bold text-white">2 weekend sessions</p>
+                    <p className="text-white/65 text-sm mt-2">Each month, across one theme.</p>
+                  </div>
+                </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
                   <div className="space-y-8 p-10 bg-white/5 rounded-[2.5rem] border border-white/10">
@@ -478,7 +535,7 @@ export default function ProgramsPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-40">
               {[
                 { label: '10 themes', val: 'One per month', sub: 'explored in depth', icon: Milestone },
-                { label: '4 sessions', val: 'Once a week', sub: 'per month', icon: Clock },
+                { label: '2 sessions', val: 'Two weekends', sub: 'per month', icon: Clock },
                 { label: '1 parent note', val: 'Monthly discussion', sub: 'on thinking habits', icon: Brain },
                 { label: 'Scientist Interaction', val: 'Priority access', sub: 'to all Edu Events', icon: Users },
               ].map((s, i) => (
@@ -591,28 +648,37 @@ export default function ProgramsPage() {
             <table className="w-full text-left bg-white relative z-10 border-collapse">
               <thead>
                 <tr className="bg-[#1E2A44] text-white">
-                  <th className="py-8 px-12 text-xs font-bold uppercase tracking-[0.2em]">Comparison</th>
-                  <th className="py-8 px-12 text-xs font-bold uppercase tracking-[0.2em] text-accent-teal">10-Day Workshop</th>
-                  <th className="py-8 px-12 text-xs font-bold uppercase tracking-[0.2em]">Year-Long Program</th>
+                  <th className="py-8 px-8 text-xs font-bold uppercase tracking-[0.2em]">Comparison</th>
+                  <th className="py-8 px-4 text-xs font-bold uppercase tracking-[0.1em]">1-Day Challenge</th>
+                  <th className="py-8 px-4 text-xs font-bold uppercase tracking-[0.1em]">Friday Club</th>
+                  <th className="py-8 px-4 text-xs font-bold uppercase tracking-[0.1em]">10-Day Workshop</th>
+                  <th className="py-8 px-4 text-xs font-bold uppercase tracking-[0.1em] text-accent-teal">RoboSTEM Lab</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-neutral-100">
                 {comparisonData.map((row, i) => (
                   <tr key={i} className="hover:bg-accent-surface transition-all">
-                    <td className="py-8 px-12 text-sm font-bold text-primary-500 font-serif">{row.feature}</td>
-                    <td className="py-8 px-12 text-base text-neutral-500 font-light italic">{row.workshop}</td>
-                    <td className="py-8 px-12 text-base text-primary-500 font-medium italic">{row.yearLong}</td>
+                    <td className="py-8 px-8 text-sm font-bold text-primary-500 font-serif">{row.feature}</td>
+                    <td className="py-8 px-4 text-sm text-neutral-500 font-light">{row.workshop}</td>
+                    <td className="py-8 px-4 text-sm text-neutral-500 font-light">{row.friday}</td>
+                    <td className="py-8 px-4 text-sm text-neutral-500 font-light">{row.yearLong}</td>
+                    <td className="py-8 px-4 text-sm text-primary-500 font-medium">{row.lab}</td>
                   </tr>
                 ))}
                 <tr className="bg-neutral-50 font-bold border-t-2 border-[#1E2A44]/10">
-                  <td className="py-10 px-12 text-xs text-primary-400 uppercase tracking-[0.2em]">Best for</td>
-                  <td className="py-10 px-12 text-lg md:text-xl text-accent-teal font-serif italic">First insight</td>
-                  <td className="py-10 px-12 text-lg md:text-xl text-primary-500 font-serif italic">Deeper habit-building</td>
+                  <td className="py-10 px-8 text-xs text-primary-400 uppercase tracking-[0.2em]">Best for</td>
+                  <td className="py-10 px-4 text-sm text-accent-teal font-serif italic">First look</td>
+                  <td className="py-10 px-4 text-sm text-primary-500 font-serif italic">Weekly habit building</td>
+                  <td className="py-10 px-4 text-sm text-primary-500 font-serif italic">Vacation deep-dive</td>
+                  <td className="py-10 px-4 text-sm text-primary-500 font-serif italic">Long-term growth</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <p className="mt-20 text-center text-neutral-400 font-serif text-lg md:text-xl italic max-w-4xl mx-auto leading-relaxed">
+          <p className="mt-16 text-center text-primary-500 font-medium text-lg max-w-4xl mx-auto leading-relaxed">
+            Not sure where to start? The 1-Day Challenge is the lowest-commitment entry point. Most families move to the Annual Program after that.
+          </p>
+          <p className="mt-8 text-center text-neutral-400 font-serif text-lg md:text-xl italic max-w-4xl mx-auto leading-relaxed">
             Not sure how to start? Tell us your child's age when you visit — we'll guide you.
           </p>
         </div>

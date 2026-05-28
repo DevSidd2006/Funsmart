@@ -21,9 +21,9 @@ import { teaserItems, galleryItems } from '../data/gallery'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://funsmartism.in'
 
 export const metadata: Metadata = {
-  title: 'FunSmartism Intelligence Center | Hands-On RoboSTEM Thinking Lab, Pune',
+  title: 'FunSmartism | Hands-On RoboSTEM Thinking Lab, Pune',
   description:
-    'FunSmartism is a hands-on RoboSTEM thinking lab in Bibwewadi, Pune where children aged 8–16 build, experiment, and develop independent problem-solving skills — not rote learning.',
+    'FunSmartism is a hands-on RoboSTEM thinking lab in Bibwewadi, Pune where children aged 8–15 build, experiment, and develop independent problem-solving skills — not rote learning.',
   keywords: [
     'FunSmartism',
     'RoboSTEM Pune',
@@ -36,11 +36,11 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: siteUrl },
   openGraph: {
-    title: 'FunSmartism Intelligence Center | Hands-On RoboSTEM Thinking Lab, Pune',
+    title: 'FunSmartism | Hands-On RoboSTEM Thinking Lab, Pune',
     description:
       'A hands-on RoboSTEM thinking lab in Pune where children build, experiment, and develop independent problem-solving skills.',
     url: siteUrl,
-    siteName: 'FunSmartism Intelligence Center',
+    siteName: 'FunSmartism',
     images: [
       { url: `${siteUrl}/og-image-real.jpg`, width: 1200, height: 630, alt: 'FunSmartism RoboSTEM Thinking Lab Pune' },
     ],
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FunSmartism Intelligence Center | Hands-On RoboSTEM Thinking Lab, Pune',
+    title: 'FunSmartism | Hands-On RoboSTEM Thinking Lab, Pune',
     description:
       'A hands-on RoboSTEM thinking lab in Pune where children build, experiment, and develop independent problem-solving skills.',
     images: [`${siteUrl}/og-image-real.jpg`],

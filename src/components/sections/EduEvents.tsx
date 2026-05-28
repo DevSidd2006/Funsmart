@@ -6,10 +6,10 @@ export function EduEvents() {
   const orgs = ['ISRO', 'DRDO', 'NIV', 'IMD', 'IISER', 'and other innovation ecosystems']
 
   const opportunities = [
-    { label: 'Interact directly with experts', icon: MessageSquare },
-    { label: 'Ask questions during Edu-events', icon: MessageSquare },
+    { label: 'Exclusive interaction before Edu-events', icon: MessageSquare },
     { label: 'Showcase projects', icon: Grid },
     { label: 'Participate in event management', icon: Users },
+    { label: 'Experience real-world innovation culture beyond textbooks', icon: MessageSquare },
   ]
 
   return (
@@ -70,11 +70,7 @@ export function EduEvents() {
             ))}
           </div>
 
-          <div className="mt-12 text-center pt-8 border-t border-white/10">
-            <p className="text-xl text-accent-teal italic font-light">
-              Experience real-world innovation culture beyond textbooks
-            </p>
-          </div>
+          <div className="mt-12 text-center pt-8 border-t border-white/10" />
         </div>
       </SectionReveal>
     </section>

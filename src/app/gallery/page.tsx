@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description:
       'See real photos from the FunSmartism RoboSTEM thinking lab — children building, experimenting, and solving real challenges.',
     url: `${siteUrl}/gallery`,
-    siteName: 'FunSmartism Intelligence Center',
+    siteName: 'FunSmartism',
     images: [
       { url: `${siteUrl}/og-image-real.jpg`, width: 1200, height: 630, alt: 'FunSmartism Gallery' },
     ],

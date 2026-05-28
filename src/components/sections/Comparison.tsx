@@ -31,7 +31,7 @@ const differentiators = [
   {
     icon: Check,
     title: 'Not a tuition class',
-    desc: 'FunSmartism is not remedial, not coaching, and not gifted-only. Every curious child aged 8–16 belongs here.',
+    desc: 'FunSmartism is not remedial, not coaching, and not gifted-only. Every curious child aged 8–15 belongs here.',
   },
 ]
 

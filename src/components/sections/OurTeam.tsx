@@ -1,60 +1,82 @@
-import { Eye, Users, Sparkles, Handshake } from 'lucide-react'
+import { SectionReveal } from '../ui/SectionReveal'
+import Image from 'next/image'
 
 const teamMembers = [
   {
-    icon: Eye,
-    title: 'Observation Leads',
-    desc: 'They notice how each child explores, pauses, tests and chooses the next step — not only what they build.',
+    initials: 'VN',
+    name: 'Vasant Nehete',
+    role: 'Entrepreneur · Electronics hobbyist · Organic farming experimenter',
+    bio: 'Has co-conducted 16+ workshops, Guides hands-on electronics explorations and helping children build confidence through trial-and-error exploration and practical electronics.',
   },
   {
-    icon: Users,
-    title: 'Learning Guides',
-    desc: 'They help students stay curious, ask better questions and treat every challenge as a thinking opportunity.',
+    initials: 'VR',
+    name: 'Vilas Rabde',
+    image: '/images/teams/Vilas Rabde.jpg',
+    role: 'Electronics Engineer · 37 years at Philips · Ham Radio operator',
+    bio: 'A frequent collaborative mentor who brings deep industry and project exposure, experience into electronics, instrumentation, and workshops.',
   },
   {
-    icon: Sparkles,
-    title: 'Scientist Mentors',
-    desc: 'They bring real-world thinking habits into the lab and help children connect ideas to experiments.',
+    initials: 'MB',
+    name: 'Milind Bhagwat',
+    image: '/images/teams/Milind Bhagwat.jpg',
+    role: 'Mechanical Engineer · 45+ years across CNC, telecom, biometrics, smart systems',
+    bio: 'Supports advanced engineering, design thinking projects and frequently mentors workshop and real-world problem-solving.',
   },
   {
-    icon: Handshake,
-    title: 'Parent Partners',
-    desc: 'They coach families on how to support independent thinking at home, not just how to finish the task.',
+    initials: 'SG',
+    name: 'Shrirang Gokhale',
+    image: '/images/teams/Shrirang Gokhale.jpg',
+    role: 'Mechanical Engineer · Product Designer · Entrepreneur mentor.',
+    bio: 'Contributes to select workshops and helps shape challenge design through creative problem-solving guidance and workshop ideation.',
   },
 ]
 
 export function OurTeam() {
   return (
-    <section className="section-spacing bg-white">
-      <div className="container-fluid">
-        <div className="max-w-4xl mx-auto text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
-            People who pay attention.
+    <section className="py-16 md:py-24 bg-white relative overflow-hidden" id="mentors">
+      <SectionReveal className="container-fluid">
+        <div className="max-w-4xl mx-auto text-center mb-16 md:mb-20">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-6 leading-tight">
+            The mentors behind the learning experience
           </h2>
-          <p className="text-lg text-neutral-500 max-w-2xl mx-auto mt-4 leading-relaxed">
-            This is the team that watches how your child thinks, not only what they produce.
+          <p className="text-lg md:text-xl text-neutral-500 font-light italic leading-relaxed">
+            FunSmartism is founder-led, strengthened by experienced mentors, collaborators, and practitioner friends who contribute to workshops, challenge design, and real-world learning experiences.
+          </p>
+          <p className="text-base md:text-lg text-neutral-400 mt-6 font-light">
+            Brief bios focused on what each team member notices about children — not their qualifications. We are obsessed with cognitive development.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
-          {teamMembers.map((item) => {
-            const Icon = item.icon
-            return (
-              <div key={item.title} className="group rounded-3xl border border-neutral-200 bg-accent-surface p-8 shadow-sm hover:shadow-xl transition-all duration-300">
-                <div className="w-12 h-12 rounded-3xl bg-accent-teal/10 text-accent-teal flex items-center justify-center mb-6">
-                  <Icon size={20} />
+        {/* Mobile Swipe / Desktop Grid */}
+        <div className="flex overflow-x-auto md:grid md:grid-cols-4 gap-6 pb-12 px-6 -mx-6 md:px-0 md:mx-0 snap-x hide-scrollbar">
+          {teamMembers.map((item) => (
+            <div key={item.name} className="flex-shrink-0 w-[320px] md:w-auto snap-center group rounded-[2.5rem] border border-neutral-100 bg-neutral-50 p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
+              {item.image ? (
+                <div className="w-20 h-20 rounded-full overflow-hidden mb-8 shadow-sm relative shrink-0">
+                  <Image src={item.image} alt={item.name} fill className="object-cover" />
                 </div>
-                <h3 className="text-xl font-serif font-bold text-primary-500 mb-3 leading-snug">
-                  {item.title}
-                </h3>
-                <p className="text-neutral-600 leading-relaxed text-sm">
-                  {item.desc}
+              ) : (
+                <div className="w-20 h-20 rounded-full bg-accent-teal/10 text-accent-teal flex items-center justify-center mb-8 font-serif font-bold text-2xl tracking-wider shadow-sm shrink-0">
+                  {item.initials}
+                </div>
+              )}
+              <h3 className="text-2xl font-serif font-bold text-primary-500 mb-3 leading-snug">
+                {item.name}
+              </h3>
+              <p className="text-xs font-mono font-bold text-neutral-400 uppercase tracking-[0.15em] mb-8 leading-relaxed">
+                {item.role}
+              </p>
+              
+              <div className="mt-auto">
+                <div className="h-px w-12 bg-neutral-200 mb-6 group-hover:bg-accent-teal/30 transition-colors" />
+                <p className="text-primary-500/80 leading-relaxed text-sm font-medium italic">
+                  "{item.bio}"
                 </p>
               </div>
-            )
-          })}
+            </div>
+          ))}
         </div>
-      </div>
+      </SectionReveal>
     </section>
   )
 }

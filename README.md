@@ -7,8 +7,8 @@ Welcome to your website’s command center! This repository holds all the files,
 ## 📖 Quick Links for You
 Use these links to quickly manage your website:
 
-*   **[📘 THE MASTER HANDOVER GUIDE](./CLIENT_HANDOVER_GUIDE.md)**: Open this first! It contains step-by-step instructions on how to change text, photos, and prices.
-*   **[💰 Manage Programs & Prices](./src/data/programs.ts)**: Edit your 10-day workshop or year-long program details here.
+*   **[📘 THE MASTER HANDOVER GUIDE](./CLIENT_HANDOVER_GUIDE.md)**: Open this first! It contains step-by-step instructions on how to change text and photos.
+*   **[📘 Manage Programs](./src/data/programs.ts)**: Edit your 10-day workshop or year-long program details here.
 *   **[💬 Manage Testimonials](./src/data/testimonials.ts)**: Add new feedback from parents.
 *   **[❓ Manage FAQs](./src/data/faqs.ts)**: Change the questions and answers in your "Parent Concerns" section.
 

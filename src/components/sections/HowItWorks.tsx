@@ -32,7 +32,7 @@ const defaultSteps = [
     step: '03',
     eyebrow: 'Year-Long Program',
     title: 'RoboSTEM Thinking Lab',
-    description: 'One theme per month. One session per week. Deep projects, thinking observations, and parent guidance.',
+    description: 'One theme per month. Two weekend sessions per month. Deep projects, thinking observations, and parent guidance.',
     bullets: ['Priority access to scientist interactions', 'Monthly thinking reports', 'Home guidance for parents'],
     cta: { href: '/programs#year-long', label: 'Explore the Year-Long Lab' },
   },

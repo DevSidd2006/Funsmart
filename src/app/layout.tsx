@@ -7,7 +7,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://funsmartism.in'
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
-  name: 'FunSmartism Intelligence Center',
+  name: 'FunSmartism',
   description: 'A hands-on RoboSTEM thinking lab where children build projects, solve unfamiliar challenges, and learn through real-world experimentation.',
   url: siteUrl,
   telephone: '+91 95039 19750',
@@ -66,7 +66,7 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'FunSmartism Intelligence Center',
+    default: 'FunSmartism',
     template: '%s | FunSmartism',
   },
   description:
@@ -98,16 +98,16 @@ export const metadata: Metadata = {
     apple: '/images/logo.png',
   },
   openGraph: {
-    title: 'FunSmartism Intelligence Center',
+    title: 'FunSmartism',
     description: "A hands-on RoboSTEM thinking lab where children build projects, solve unfamiliar challenges, and learn through real-world experimentation.",
     url: siteUrl,
-    siteName: 'FunSmartism Intelligence Center',
+    siteName: 'FunSmartism',
     images: [
       {
         url: '/og-image-real.jpg',
         width: 1200,
         height: 630,
-        alt: 'FunSmartism Intelligence Center',
+        alt: 'FunSmartism',
       },
       {
         url: '/og-image-real.jpg',
@@ -121,7 +121,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'FunSmartism Intelligence Center',
+    title: 'FunSmartism',
     description: "A hands-on RoboSTEM thinking lab where children build projects, solve unfamiliar challenges, and learn through real-world experimentation.",
     images: ['/og-image-real.jpg'],
   },

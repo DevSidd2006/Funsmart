@@ -34,7 +34,7 @@ export const programs: Program[] = [
       'Deep, ongoing growth',
       'Continuous learning',
       'Long-term insights',
-      'Weekly check-ins',
+      'Two weekend sessions per month',
       'Monthly progress reports',
       'Progress tracking over time',
     ],

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description:
       'Learn why FunSmartism was founded — a thinking lab built to give children real opportunities to build, experiment, and solve unfamiliar challenges.',
     url: `${siteUrl}/about`,
-    siteName: 'FunSmartism Intelligence Center',
+    siteName: 'FunSmartism',
     images: [{ url: `${siteUrl}/og-image-real.jpg`, width: 1200, height: 630, alt: 'FunSmartism About' }],
     locale: 'en_IN',
     type: 'website',

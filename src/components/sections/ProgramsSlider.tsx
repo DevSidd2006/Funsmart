@@ -1,16 +1,16 @@
-import { Atom, Cpu, FlaskConical, Microscope, Brain, Rocket, BookOpen, Puzzle, Zap } from 'lucide-react'
+import { Atom, Cpu, FlaskConical, Microscope, Brain, Rocket, BookOpen, Puzzle, Zap, Plane, Lightbulb, Wrench } from 'lucide-react'
 
 const defaultSlides = [
-  { icon: Rocket,    theme: '01', title: 'Robotics & Engineering',      desc: 'Build, break, rebuild — understanding mechanical systems.' },
-  { icon: Atom,      theme: '02', title: 'Space Science',    desc: 'Scale, orbit, gravity — thinking like a scientist.' },
-  { icon: Cpu,       theme: '03', title: 'Algorithmic Coding',           desc: 'Logic flows, pattern recognition without a screen.' },
-  { icon: Puzzle,    theme: '04', title: "Rubik's Logic",                desc: 'Pattern recognition and spatial reasoning compressed.' },
-  { icon: Brain,     theme: '05', title: 'Cognitive Sudoku',             desc: 'Number logic, constraint thinking, and decision trees.' },
-  { icon: BookOpen,  theme: '06', title: 'Memory Mastery',               desc: 'Memory as a thinking tool — not a recitation technique.' },
-  { icon: Rocket,    theme: '07', title: 'Aeromodeling',                 desc: 'Physics of flight, aerodynamics, and real builds.' },
-  { icon: Microscope,theme: '08', title: 'STEM Research',                desc: 'Mini research cycles: question → observe → test.' },
-  { icon: Zap,       theme: '09', title: 'Electronics',       desc: 'Current, voltage, and real breadboard builds.' },
-  { icon: FlaskConical, theme: '10', title: 'Critical Thinking',         desc: 'Logical fallacies and debate-style problem solving.' },
+  { icon: Rocket,    theme: '01', title: 'Robotics', desc: 'Build something that moves using real testing.' },
+  { icon: Atom,      theme: '02', title: 'Astronomy', desc: 'Observation journals, scale of space.' },
+  { icon: Rocket,    theme: '03', title: 'Space Science', desc: 'Scale, orbit, gravity.' },
+  { icon: Plane,     theme: '04', title: 'Aeromodeling', desc: 'Build and test model aeroplanes and rockets.' },
+  { icon: Puzzle,    theme: '05', title: 'Rubik’s & Cognitive Sudoku', desc: 'Number logic and systems thinking.' },
+  { icon: Brain,     theme: '06', title: 'Hands on STEM Projects', desc: 'Experimenting with physics and structural integrity.' },
+  { icon: Zap,       theme: '07', title: 'Electronics & tech toys', desc: 'Circuit basics, mechanical movement.' },
+  { icon: Lightbulb, theme: '08', title: 'Design Thinking & Innovation', desc: 'A real problem. Open brief.' },
+  { icon: BookOpen,  theme: '09', title: 'Sci-Fi Story Writing', desc: 'Stories grounded in real science.' },
+  { icon: Wrench,    theme: '10', title: 'How Stuff Works', desc: 'Real objects taken apart and examined.' },
 ]
 
 export function ProgramsSlider() {
