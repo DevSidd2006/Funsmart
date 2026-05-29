@@ -113,7 +113,7 @@ export default function ProgramsPage() {
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-teal/10 rounded-full blur-[120px] -translate-y-1/3 translate-x-1/3" />
         <div className="container-fluid relative z-10 text-center">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-[50px] font-serif font-bold text-white mb-6 md:mb-8 leading-tight tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-serif font-bold text-white mb-6 md:mb-8 leading-[1.05] text-balance tracking-tight">
               Different Programs. <br />
               <span className="text-accent-teal italic font-light opacity-90">One way of thinking about children.</span>
             </h1>
@@ -123,19 +123,19 @@ export default function ProgramsPage() {
 
             {/* Navigator Strip */}
             <div className="flex flex-wrap justify-center gap-4 mb-16">
-              <Link href="#year-long" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-xs font-sans uppercase tracking-widest flex items-center gap-2">
+              <Link href="#year-long" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-sm font-serif font-bold tracking-wide flex items-center gap-2">
                 <Rocket size={14} className="text-accent-teal" />
                 RoboSTEM Thinking Lab
               </Link>
-              <Link href="#friday-club" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-xs font-sans uppercase tracking-widest flex items-center gap-2">
+              <Link href="#friday-club" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-sm font-serif font-bold tracking-wide flex items-center gap-2">
                 <Clock size={14} className="text-accent-teal" />
                 Friday STEM Challenge Club
               </Link>
-              <Link href="#workshop" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-xs font-sans uppercase tracking-widest flex items-center gap-2">
+              <Link href="#workshop" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-sm font-serif font-bold tracking-wide flex items-center gap-2">
                 <Target size={14} className="text-accent-teal" />
                 10-Day STEM Tinkering Workshop
               </Link>
-              <Link href="#one-day" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-xs font-sans uppercase tracking-widest flex items-center gap-2">
+              <Link href="#one-day" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-sm font-serif font-bold tracking-wide flex items-center gap-2">
                 <Eye size={14} className="text-accent-teal" />
                 1-Day STEM Challenge
               </Link>
@@ -339,53 +339,7 @@ export default function ProgramsPage() {
             </div>
             */}
 
-            {/* Edu Events Differentiation Section */}
-            <div className="mb-24">
-              <div className="bg-white rounded-[4rem] p-12 md:p-24 relative overflow-hidden shadow-sm border border-neutral-100">
-                <div className="absolute top-0 right-0 w-full h-full lab-grid opacity-[0.03] pointer-events-none" />
-                <div className="absolute -top-32 -right-32 w-96 h-96 bg-accent-teal/5 rounded-full blur-[100px] pointer-events-none" />
-                <div className="relative z-10">
-                  <div className="max-w-4xl mb-20">
-                    <span className="inline-block px-5 py-2 bg-accent-teal/10 text-accent-teal rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-8">Major Differentiator</span>
-                    <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-6 md:mb-8 leading-tight">Year-long exclusive: <br />Edu events</h3>
-                    <p className="text-base md:text-lg text-neutral-600 font-light leading-relaxed italic">
-                      Children learn scientist-style questioning by interacting with real scientists—not just listening to them. <br className="hidden md:block" />
-                      <span className="text-primary-500 font-bold not-italic mt-6 block">They help run them — building real responsibility.</span>
-                    </p>
-                  </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-                    {[
-                      { title: 'Set up the space', desc: 'Organise and prepare the event environment.' },
-                      { title: 'Run a stall', desc: 'Present their own projects to the public.' },
-                      { title: 'Guide visitors', desc: 'Explain, demonstrate, answer questions.' },
-                      { title: 'Assist experts', desc: 'Assist scientists and professionals.' }
-                    ].map((grid, i) => (
-                      <div key={i} className="p-10 rounded-[2.5rem] bg-[#FAF9F6] border border-neutral-100 hover:border-accent-teal/30 hover:shadow-md transition-all group flex flex-col justify-between">
-                        <div>
-                          <div className="w-12 h-12 rounded-2xl bg-white border border-neutral-100 flex items-center justify-center text-primary-300 mb-8 group-hover:scale-110 group-hover:bg-accent-teal group-hover:text-white transition-all">
-                            <Presentation size={24} />
-                          </div>
-                          <h4 className="text-xl font-serif font-bold text-primary-500 mb-4">{grid.title}</h4>
-                          <p className="text-sm text-neutral-500 leading-relaxed font-light italic">{grid.desc}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="text-center">
-                    <p className="text-xl font-serif font-bold text-primary-500 mb-6 italic leading-relaxed">
-                      Over time, children don’t just build projects — <br className="hidden md:block" />
-                      they learn to discuss, question, and explain them with experts.
-                    </p>
-                    <div className="h-px w-24 bg-neutral-200 mx-auto mb-6" />
-                    <p className="text-neutral-400 font-sans text-[10px] uppercase tracking-[0.4em] font-bold">
-                      Some selected projects are exhibited publicly for parents & scientists.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>

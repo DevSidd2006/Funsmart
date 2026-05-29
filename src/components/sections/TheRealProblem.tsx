@@ -50,8 +50,8 @@ export function TheRealProblem() {
         <div className="max-w-4xl mb-20 text-center mx-auto">
           <div className="bg-white p-8 md:p-10 rounded-[2rem] shadow-sm border border-neutral-100 text-left mb-8 relative overflow-hidden">
              <div className="absolute top-0 right-0 w-32 h-32 bg-accent-teal/5 rounded-full blur-3xl" />
-             <p className="text-lg text-primary-500 font-bold mb-6">But children also need environments where they can:</p>
-             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+             <p className="text-xl md:text-2xl text-primary-500 font-bold mb-8">But children also need environments where they can:</p>
+             <ul className="grid grid-cols-1 md:grid-cols-2 gap-5">
                {[
                  'Get inspired by experts closely',
                  'build things with their own hands',
@@ -62,8 +62,8 @@ export function TheRealProblem() {
                  'ask deeper questions to find solutions',
                  'think beyond step-by-step instructions'
                ].map((item, i) => (
-                 <li key={i} className="flex items-start gap-3 text-neutral-600">
-                   <div className="w-2 h-2 rounded-full bg-accent-teal mt-2 flex-shrink-0" />
+                 <li key={i} className="flex items-start gap-4 text-base md:text-lg text-neutral-600 font-medium">
+                   <div className="w-2.5 h-2.5 rounded-full bg-accent-teal mt-2 flex-shrink-0" />
                    <span className="leading-relaxed">{item}</span>
                  </li>
                ))}
@@ -76,33 +76,33 @@ export function TheRealProblem() {
              <div className="relative z-10 max-w-3xl mx-auto space-y-8">
 
                {/* Line 1 — heading */}
-               <h3 className="text-3xl md:text-4xl font-serif font-bold text-white">
+               <h3 className="text-4xl md:text-5xl font-serif font-bold text-white">
                  Marks show outcomes.
                </h3>
 
                {/* Line 2 — cyan bold */}
-               <p className="text-xl md:text-2xl font-bold text-accent-teal leading-snug">
+               <p className="text-2xl md:text-3xl font-bold text-accent-teal leading-snug">
                  They don't show what your child does when stuck, confused, or facing something completely new.
                </p>
 
                {/* Line 3 — white big */}
-               <p className="text-lg md:text-xl text-white font-medium leading-relaxed">
+               <p className="text-xl md:text-2xl text-white font-medium leading-relaxed">
                  Most parents have never watched their child solve a problem with no hints, no steps, and no correct answer waiting.
                </p>
 
                <div className="w-12 h-px bg-white/20 mx-auto" />
 
                {/* Line 4 & 5 — dimmed */}
-               <p className="text-base text-white/50 font-light leading-relaxed">
+               <p className="text-lg md:text-xl text-white/60 font-light leading-relaxed">
                  That gap — between performing on a test and thinking through a real challenge — is what schools don't show you.
                </p>
-               <p className="text-base text-white/50 font-light leading-relaxed">
+               <p className="text-lg md:text-xl text-white/60 font-light leading-relaxed">
                  Thinking habits form early and quietly. Most parents only notice them once they're already set.
                </p>
 
-               <div className="pt-4 border-t border-white/10">
-                 <p className="text-[10px] text-white/30 font-sans uppercase tracking-widest mb-3">The invisible problem</p>
-                 <p className="text-xl md:text-2xl font-serif font-bold text-white leading-snug">
+               <div className="pt-6 border-t border-white/10">
+                 <p className="text-[12px] text-white/30 font-sans uppercase tracking-widest mb-3">The invisible problem</p>
+                 <p className="text-2xl md:text-3xl font-serif font-bold text-white leading-snug">
                    You can't guide what you can't see.{' '}
                    <span className="text-accent-teal">We help you see it.</span>
                  </p>

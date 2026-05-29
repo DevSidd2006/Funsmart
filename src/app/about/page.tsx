@@ -79,10 +79,7 @@ export default function AboutPage() {
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-teal/10 rounded-full blur-[120px] -translate-y-1/3 translate-x-1/3" />
         <div className="container-fluid relative z-10 text-center">
           <SectionReveal className="max-w-5xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent-teal/10 border border-accent-teal/20 text-accent-teal text-xs font-bold uppercase tracking-[0.2em] mb-8">
-              The Origin Story
-            </div>
-            <h1 className="text-3xl md:text-4xl font-serif font-bold text-white mb-8 leading-[1.15] tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-serif font-bold text-white mb-8 leading-tight tracking-tight">
               We started FunSmartism because <br className="hidden md:block" />
               we kept seeing something <br className="hidden md:block" />
               <span className="text-accent-teal italic font-light">schools weren't designed to notice.</span>
@@ -101,7 +98,6 @@ export default function AboutPage() {
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-teal/10 rounded-full blur-[120px]" />
         <SectionReveal className="container-fluid max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-14">
-            <span className="text-accent-teal font-sans text-xs uppercase tracking-[0.3em] font-bold block mb-4">Our Philosophy</span>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-white">
               Three Things We Believe.
             </h2>

@@ -107,12 +107,8 @@ export function Footer({ data }: { data?: any }) {
           </div>
         </div>
 
-        <div className="pt-12 border-t border-neutral-100 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-sm text-neutral-500 font-sans tracking-tighter">© 2026 FunSmartism</p>
-          <div className="flex gap-8">
-            <a href="#" className="text-xs text-neutral-500 hover:text-primary-500 uppercase tracking-widest transition-colors">Privacy</a>
-            <a href="#" className="text-xs text-neutral-500 hover:text-primary-500 uppercase tracking-widest transition-colors">Terms</a>
-          </div>
+        <div className="pt-12 border-t border-neutral-100 flex justify-center items-center">
+          <p className="text-sm text-neutral-500 font-sans tracking-tighter">© 2026 Funsmartism Intelligent Centre</p>
         </div>
       </div>
     </footer>

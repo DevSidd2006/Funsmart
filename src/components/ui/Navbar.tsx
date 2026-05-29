@@ -57,12 +57,12 @@ export function Navbar() {
             <Image 
               src="/images/logo.png" 
               alt="FunSmartism Logo" 
-              width={60}
-              height={60}
+              width={80}
+              height={80}
               priority
-              className="h-10 md:h-12 w-auto object-contain transition-all duration-500 group-hover:scale-105"
+              className="h-12 md:h-14 w-auto object-contain transition-all duration-500 group-hover:scale-105"
             />
-            <span className="font-kaushan text-[22px] md:text-3xl leading-none pr-2">
+            <span className="font-kaushan text-2xl md:text-4xl leading-none pr-2">
               FunSmartism
             </span>
           </div>

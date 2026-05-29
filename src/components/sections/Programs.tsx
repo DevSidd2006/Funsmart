@@ -126,7 +126,7 @@ export function Programs() {
                   )}
 
                   <Link href={`/programs#${prog.id}`} className="w-full group">
-                    <button className="w-full flex items-center justify-between bg-accent-teal hover:bg-[#28A392] active:scale-[0.98] px-6 py-4 rounded-2xl text-white text-[12px] font-bold tracking-[0.12em] uppercase transition-all duration-300 shadow-lg shadow-accent-teal/20 group-hover:shadow-accent-teal/40">
+                    <button className="w-full flex items-center justify-between bg-accent-teal hover:bg-[#28A392] active:scale-[0.98] px-6 py-4 rounded-2xl text-white text-sm font-serif font-bold tracking-wide transition-all duration-300 shadow-lg shadow-accent-teal/20 group-hover:shadow-accent-teal/40">
                       <span>{prog.cta}</span>
                       <span className="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center group-hover:bg-white/30 group-hover:translate-x-1 transition-all duration-300">
                         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -141,9 +141,9 @@ export function Programs() {
           })}
         </div>
 
-        <div className="text-center">
+        <div className="text-center mt-4">
           <Link href="/programs">
-            <button className="inline-flex items-center gap-3 px-8 py-3.5 rounded-full border border-primary-500/30 text-primary-500 text-[11px] font-bold uppercase tracking-[0.15em] hover:bg-primary-500 hover:text-white hover:border-primary-500 transition-all duration-300 group">
+            <button className="inline-flex items-center gap-3 px-8 py-4 rounded-full border border-primary-500/30 text-primary-500 text-sm font-serif font-bold tracking-wide hover:bg-primary-500 hover:text-white hover:border-primary-500 transition-all duration-300 group">
               Compare All Programs
               <span className="w-6 h-6 rounded-full bg-primary-50 flex items-center justify-center group-hover:bg-white/20 transition-all">
                 <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">

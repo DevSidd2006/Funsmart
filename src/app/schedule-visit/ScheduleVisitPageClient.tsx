@@ -49,7 +49,7 @@ export function ScheduleVisitPageClient() {
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-teal/10 rounded-full blur-[120px] -translate-y-1/3 translate-x-1/3" />
         <div className="container-fluid relative z-10">
           <SectionReveal className="max-w-4xl mx-auto">
-            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-[50px] font-serif font-bold text-white mb-6 md:mb-8 leading-tight tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-serif font-bold text-white mb-6 md:mb-8 leading-[1.05] text-balance tracking-tight">
               See The Environment In Person
             </h1>
             <p className="text-base md:text-lg lg:text-xl text-[#B7E3DD] mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed font-light">
@@ -103,8 +103,8 @@ export function ScheduleVisitPageClient() {
             </div>
             <div className="relative aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl border border-neutral-200">
                <Image 
-                 src="/images/workshop-real.jpg" 
-                 alt="Children building STEM structures during a FunSmartism workshop session" 
+                 src="/images/parents-lounge.jpg" 
+                 alt="Parents relaxing in the comfortable lounge area while observing their children at FunSmartism" 
                  fill 
                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                  className="object-cover"
