@@ -38,7 +38,7 @@ export function TheRealProblem() {
               return (
                 <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-neutral-100 group hover:border-accent-teal/30 transition-colors">
                   <Icon size={24} className="text-neutral-300 mb-4 group-hover:text-accent-teal transition-colors" />
-                  <p className="text-neutral-700 italic font-medium leading-relaxed">
+                  <p className="text-neutral-700 italic font-normal leading-relaxed">
                     “{point.quote}”
                   </p>
                 </div>
