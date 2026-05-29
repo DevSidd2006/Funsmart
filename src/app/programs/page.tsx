@@ -141,15 +141,7 @@ export default function ProgramsPage() {
               </Link>
             </div>
 
-            <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-sm md:text-base font-sans text-[#B7E3DD] border-t border-white/10 pt-12">
-              <span>Ages 8–15</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-accent-teal/50" />
-              <span>No grades</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-accent-teal/50" />
-              <span>No comparison between children</span>
-              <span className="w-1.5 h-1.5 rounded-full bg-accent-teal/50" />
-              <span className="max-w-[500px] text-center">Scientist-inspired problem-solving patterns observed and shared with parents</span>
-            </div>
+
           </div>
         </div>
       </section>

@@ -103,8 +103,8 @@ export function ScheduleVisitPageClient() {
             </div>
             <div className="relative aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl border border-neutral-200">
                <Image 
-                 src="/images/visit-group.jpg" 
-                 alt="FunSmartism children showing their creative paintings and drawings in a group" 
+                 src="/images/workshop-real.jpg" 
+                 alt="Children building STEM structures during a FunSmartism workshop session" 
                  fill 
                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                  className="object-cover"
@@ -230,6 +230,18 @@ export function ScheduleVisitPageClient() {
                       <Button type="submit" size="lg" className="w-full bg-accent-teal hover:bg-primary-500 border-none text-white py-6 shadow-huge shadow-accent-teal/20 transition-all font-bold rounded-2xl">
                         Schedule a Visit
                       </Button>
+
+                      <p className="text-center text-sm text-neutral-400 font-light pt-2">
+                        Or{' '}
+                        <a
+                          href="https://wa.me/919503919750"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-accent-teal font-semibold hover:underline"
+                        >
+                          WhatsApp us directly: +91 95039 19750
+                        </a>
+                      </p>
                     </form>
                   </>
                 ) : (

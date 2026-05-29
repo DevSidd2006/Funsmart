@@ -102,7 +102,7 @@ export function Programs() {
                     </div>
                   </div>
 
-                  <h3 className="text-2xl font-serif font-bold mb-4 leading-snug">
+                  <h3 className={`text-2xl font-serif font-bold mb-4 leading-snug ${isDark ? 'text-white' : 'text-primary-500'}`}>
                     {prog.title}
                   </h3>
 

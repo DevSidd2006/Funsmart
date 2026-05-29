@@ -3,8 +3,7 @@ import { Button } from '@/components/ui/Button'
 import { FounderJourney } from '@/components/sections/FounderJourney'
 import { OurTeam } from '@/components/sections/OurTeam'
 import { RealSessionMoments } from '@/components/sections/RealSessionMoments'
-
-import { ChevronDown } from 'lucide-react'
+import { Brain, FileX, Eye, ChevronDown } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { galleryItems } from '@/data/gallery'
@@ -46,13 +45,28 @@ export const metadata: Metadata = {
 
 const beliefsData = [
   {
-    title: 'Many children do not lack ability. They often lack enough opportunities to solve unfamiliar challenges independently.',
+    icon: 'Brain',
+    number: '01',
+    title: 'Many children do not lack ability.',
+    body: 'They often lack enough opportunities to solve unfamiliar challenges independently.',
+    accent: 'text-accent-teal',
+    border: 'border-accent-teal/30',
   },
   {
-    title: "Marks show outcomes. They do not always show how a child approaches difficulty, uncertainty, or real-world problem-solving.",
+    icon: 'FileX',
+    number: '02',
+    title: 'Marks show outcomes.',
+    body: 'They do not always show how a child approaches difficulty, uncertainty, or real-world problem-solving.',
+    accent: 'text-white',
+    border: 'border-white/20',
   },
   {
-    title: 'Parents deserve more visibility than a report card alone can provide.',
+    icon: 'Eye',
+    number: '03',
+    title: 'Parents deserve more visibility.',
+    body: 'A report card alone cannot show how a child thinks when there are no instructions waiting.',
+    accent: 'text-accent-teal',
+    border: 'border-accent-teal/30',
   },
 ]
 
@@ -82,19 +96,60 @@ export default function AboutPage() {
       </section>
 
       {/* The Belief */}
-      <section className="py-16 md:py-24 bg-white relative z-20">
-        <SectionReveal className="container-fluid max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-serif font-bold text-center text-primary-500 mb-12 md:mb-16">
-            Three Things We Believe.
-          </h2>
+      <section className="py-16 md:py-24 bg-[#1E2A44] relative overflow-hidden">
+        <div className="absolute inset-0 lab-grid opacity-[0.04]" />
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-teal/10 rounded-full blur-[120px]" />
+        <SectionReveal className="container-fluid max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-14">
+            <span className="text-accent-teal font-mono text-xs uppercase tracking-[0.3em] font-bold block mb-4">Our Philosophy</span>
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white">
+              Three Things We Believe.
+            </h2>
+          </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
-            {beliefsData.map((belief, i) => (
-              <div key={i} className="relative overflow-hidden rounded-[20px] bg-neutral-50 border border-neutral-100 p-10 shadow-sm transition-shadow hover:shadow-md text-center">
-                <div className="absolute left-0 top-0 w-full h-1 bg-accent-teal" />
-                <h3 className="text-xl font-serif font-bold text-[#1E2A44] leading-relaxed">
-                  {belief.title}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                Icon: Brain,
+                number: '01',
+                title: 'Many children do not lack ability.',
+                body: 'They often lack enough opportunities to solve unfamiliar challenges independently.',
+              },
+              {
+                Icon: FileX,
+                number: '02',
+                title: 'Marks show outcomes.',
+                body: 'They do not always show how a child approaches difficulty, uncertainty, or real-world problem-solving.',
+              },
+              {
+                Icon: Eye,
+                number: '03',
+                title: 'Parents deserve more visibility.',
+                body: 'A report card alone cannot show how a child thinks when there are no instructions waiting.',
+              },
+            ].map(({ Icon, number, title, body }, i) => (
+              <div
+                key={i}
+                className="relative overflow-hidden rounded-[2rem] bg-white/5 border border-white/10 p-10 hover:bg-white/10 hover:border-accent-teal/40 transition-all duration-500 group"
+              >
+                {/* Number badge */}
+                <span className="absolute top-8 right-8 text-[11px] font-mono font-bold text-white/20 tracking-widest">{number}</span>
+
+                {/* Icon */}
+                <div className="w-14 h-14 rounded-2xl bg-accent-teal/10 border border-accent-teal/20 flex items-center justify-center text-accent-teal mb-8 group-hover:bg-accent-teal group-hover:text-white transition-all duration-500">
+                  <Icon size={26} />
+                </div>
+
+                {/* Content */}
+                <h3 className="text-xl font-serif font-bold text-white mb-4 leading-snug">
+                  {title}
                 </h3>
+                <p className="text-[#B7E3DD] font-light leading-relaxed text-sm">
+                  {body}
+                </p>
+
+                {/* Bottom accent line */}
+                <div className="absolute bottom-0 left-0 w-0 h-0.5 bg-accent-teal group-hover:w-full transition-all duration-700" />
               </div>
             ))}
           </div>

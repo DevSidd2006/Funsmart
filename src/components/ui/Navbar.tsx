@@ -13,7 +13,7 @@ const navLinks = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Programs', href: '/programs' },
-  { name: 'Gallery and News', href: '/gallery' },
+  { name: 'Gallery & Newsroom', href: '/gallery' },
   { name: 'Schedule a Visit', href: '/schedule-visit' },
 ]
 
@@ -57,10 +57,10 @@ export function Navbar() {
             <Image 
               src="/images/logo.png" 
               alt="FunSmartism Logo" 
-              width={160}
-              height={64}
+              width={200}
+              height={80}
               priority
-              className="h-9 md:h-11 w-auto object-contain transition-all duration-500 group-hover:scale-105"
+              className="h-12 md:h-16 w-auto object-contain transition-all duration-500 group-hover:scale-105"
             />
           </div>
         </Link>
@@ -73,18 +73,17 @@ export function Navbar() {
                 key={link.name}
                 href={link.href}
                 className={cn(
-                  'relative text-[11px] font-bold uppercase tracking-[0.12em] px-2.5 py-1 transition-all duration-300 group whitespace-nowrap',
-                  pathname === link.href 
-                    ? (useLightText ? 'text-accent-teal' : 'text-primary-500') 
-                    : (useLightText ? 'text-white/80 hover:text-white' : 'text-neutral-700 hover:text-primary-500')
+                  'relative text-[11px] font-bold uppercase tracking-[0.12em] px-3 py-1.5 rounded-full transition-all duration-300 whitespace-nowrap',
+                  pathname === link.href
+                    ? (useLightText
+                        ? 'text-[#1E2A44] bg-accent-teal shadow-sm'
+                        : 'text-white bg-primary-500 shadow-sm')
+                    : (useLightText
+                        ? 'text-white/80 hover:text-white hover:bg-white/10'
+                        : 'text-neutral-700 hover:text-primary-500 hover:bg-neutral-100')
                 )}
               >
                 {link.name}
-                <span className={cn(
-                  "absolute -bottom-1 left-2.5 right-2.5 h-0.5 transition-all duration-300",
-                  useLightText ? "bg-accent-teal" : "bg-primary-500",
-                  pathname === link.href ? "opacity-100" : "opacity-0 group-hover:opacity-100"
-                )} />
               </Link>
             ))}
           </div>
