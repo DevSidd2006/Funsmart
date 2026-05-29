@@ -58,7 +58,7 @@ export function TestimonialsSlider({ data }: { data?: any[] }) {
         <div className="max-w-4xl mx-auto">
           {/* Header */}
           <div className="text-center mb-14">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 leading-tight">
               Trusted by thinking parents.
             </h2>
           </div>
@@ -79,7 +79,7 @@ export function TestimonialsSlider({ data }: { data?: any[] }) {
                     "{t.quote}"
                   </p>
                   <div className="flex items-center gap-4">
-                    <div className="w-11 h-11 rounded-full bg-accent-teal flex items-center justify-center text-white font-bold text-sm font-mono flex-shrink-0">
+                    <div className="w-11 h-11 rounded-full bg-accent-teal flex items-center justify-center text-white font-bold text-sm font-sans flex-shrink-0">
                       {t.initial || (t.author?.slice(0, 2).toUpperCase())}
                     </div>
                     <div>

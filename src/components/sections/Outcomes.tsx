@@ -29,7 +29,7 @@ export function Outcomes() {
       
       <SectionReveal className="container-fluid max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-6">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-6">
             What Parents Often Notice Over Time
           </h2>
           <p className="text-xl text-neutral-600 font-light mt-4 italic">Parents often notice children becoming:</p>

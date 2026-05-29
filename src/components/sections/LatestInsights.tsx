@@ -29,7 +29,7 @@ export function LatestInsights() {
     <section id="edu-events" className="section-spacing bg-accent-surface">
       <div className="container-fluid">
         <div className="max-w-4xl mx-auto text-center mb-14">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 mb-4 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-4 leading-tight">
             Edu events with a scientist-friendly edge.
           </h2>
           <p className="text-lg text-neutral-500 max-w-2xl mx-auto leading-relaxed">

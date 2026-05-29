@@ -15,7 +15,7 @@ export function MidPageCTA({ data }: { data?: any }) {
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2" />
           
           <div className="relative z-10">
-            <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6 leading-tight">
               {headline}
             </h2>
             <p className="text-xl md:text-2xl text-[#B7E3DD] mb-10 opacity-90 font-light">
@@ -31,7 +31,7 @@ export function MidPageCTA({ data }: { data?: any }) {
                   {buttonText}
                 </Button>
               </Link>
-              <p className="text-xs font-mono text-white/70 uppercase tracking-[0.2em]">
+              <p className="text-xs font-sans text-white/70 uppercase tracking-[0.2em]">
                 Free · 30–45 mins
               </p>
             </div>

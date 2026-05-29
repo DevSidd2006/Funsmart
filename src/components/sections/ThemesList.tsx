@@ -21,7 +21,7 @@ export function ThemesList() {
     <section className="py-16 bg-white relative overflow-hidden">
       <SectionReveal className="container-fluid max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 leading-tight">
             10 themes. 10 worlds to explore.
           </h2>
         </div>

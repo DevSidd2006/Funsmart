@@ -26,7 +26,7 @@ export function TheProblem() {
 
       <div className="container-fluid relative z-10">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6 leading-tight">
             Children follow instructions but don’t think independently.
           </h2>
           <p className="text-lg text-white/70 max-w-2xl mx-auto leading-relaxed">

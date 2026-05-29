@@ -41,6 +41,7 @@ const config: Config = {
         serif: ['var(--font-sora)', 'sans-serif'],
         sans: ['var(--font-sora)', 'sans-serif'],
         mono: ['var(--font-mono)', 'monospace'],
+        kaushan: ['var(--font-kaushan)', 'cursive'],
       },
       spacing: {
         xs: '8px',

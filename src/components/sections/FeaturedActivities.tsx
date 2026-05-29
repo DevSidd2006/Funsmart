@@ -50,7 +50,7 @@ export function ProgramsOverview({ data }: { data?: any[] }) {
 
       <div className="container-fluid relative z-10">
         <div className="max-w-4xl mx-auto text-center mb-16 md:mb-24">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 mb-8 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8 leading-tight">
             Designed for different <br /> stages of discovery.
           </h2>
         </div>

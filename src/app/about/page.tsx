@@ -82,7 +82,7 @@ export default function AboutPage() {
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent-teal/10 border border-accent-teal/20 text-accent-teal text-xs font-bold uppercase tracking-[0.2em] mb-8">
               The Origin Story
             </div>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-8 leading-[1.15] tracking-tight">
+            <h1 className="text-3xl md:text-4xl font-serif font-bold text-white mb-8 leading-[1.15] tracking-tight">
               We started FunSmartism because <br className="hidden md:block" />
               we kept seeing something <br className="hidden md:block" />
               <span className="text-accent-teal italic font-light">schools weren't designed to notice.</span>
@@ -101,7 +101,7 @@ export default function AboutPage() {
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-teal/10 rounded-full blur-[120px]" />
         <SectionReveal className="container-fluid max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-14">
-            <span className="text-accent-teal font-mono text-xs uppercase tracking-[0.3em] font-bold block mb-4">Our Philosophy</span>
+            <span className="text-accent-teal font-sans text-xs uppercase tracking-[0.3em] font-bold block mb-4">Our Philosophy</span>
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-white">
               Three Things We Believe.
             </h2>
@@ -133,7 +133,7 @@ export default function AboutPage() {
                 className="relative overflow-hidden rounded-[2rem] bg-white/5 border border-white/10 p-10 hover:bg-white/10 hover:border-accent-teal/40 transition-all duration-500 group"
               >
                 {/* Number badge */}
-                <span className="absolute top-8 right-8 text-[11px] font-mono font-bold text-white/20 tracking-widest">{number}</span>
+                <span className="absolute top-8 right-8 text-[11px] font-sans font-bold text-white/20 tracking-widest">{number}</span>
 
                 {/* Icon */}
                 <div className="w-14 h-14 rounded-2xl bg-accent-teal/10 border border-accent-teal/20 flex items-center justify-center text-accent-teal mb-8 group-hover:bg-accent-teal group-hover:text-white transition-all duration-500">
@@ -223,7 +223,7 @@ export default function AboutPage() {
 
               <div className="bg-primary-500 p-10 md:p-14 rounded-[40px] text-white shadow-huge shadow-primary-500/20 text-center relative overflow-hidden group">
                 <div className="absolute inset-0 lab-grid opacity-10 group-hover:opacity-20 transition-opacity" />
-                <p className="text-2xl md:text-3xl font-serif font-bold leading-tight relative z-10">
+                <p className="text-3xl md:text-4xl font-serif font-bold leading-tight relative z-10">
                   But as a hands-on RoboSTEM thinking lab where children actively participate in learning through experimentation, projects, challenges, and real-world exploration.
                 </p>
               </div>
@@ -243,7 +243,7 @@ export default function AboutPage() {
       {/* Philosophy */}
       <section className="py-16 md:py-24 bg-[#1E2A44] text-white text-center">
         <SectionReveal className="container-fluid max-w-4xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-white mb-6 md:mb-8 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6 md:mb-8 leading-tight">
             Marks show outcomes. <br className="hidden md:block" />
             <span className="text-accent-teal">Real-world learning experiences shape confidence, curiosity, and independent problem-solving — not rote learning.</span>
           </h2>
@@ -292,7 +292,7 @@ export default function AboutPage() {
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-6 md:mb-8 leading-tight">
             See The Environment <span className="text-accent-teal italic font-light">yourself</span>
           </h2>
-          <p className="text-lg md:text-xl text-neutral-600 mb-10 md:mb-12 font-light leading-relaxed">
+          <p className="text-base md:text-lg text-neutral-600 mb-10 md:mb-12 font-light leading-relaxed">
             The best way to understand FunSmartism is to experience a real session, workshop, or STEM challenge environment directly.
           </p>
           <Link href="/schedule-visit">

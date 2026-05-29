@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Sora, Inter, JetBrains_Mono } from 'next/font/google'
+import { Sora, Inter, Kaushan_Script } from 'next/font/google'
 import './globals.css'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://funsmartism.in'
@@ -53,13 +53,14 @@ const sora = Sora({
 
 const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-sans',
   display: 'swap',
 })
 
-const mono = JetBrains_Mono({
+const kaushan = Kaushan_Script({
+  weight: '400',
   subsets: ['latin'],
-  variable: '--font-mono',
+  variable: '--font-kaushan',
   display: 'swap',
 })
 
@@ -149,7 +150,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${sora.variable} ${inter.variable} ${mono.variable} scroll-smooth`}
+      className={`${sora.variable} ${inter.variable} ${kaushan.variable} scroll-smooth`}
     >
       <head>
         <meta name="theme-color" content="#1E2A44" />

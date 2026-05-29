@@ -21,12 +21,12 @@ export function ThinkingReset() {
 
             <div className="p-10 md:p-16 lg:p-20">
 
-              <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-8 leading-tight">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8 leading-tight">
                 10-Day Thinking <br />
                 <span className="text-accent-teal italic font-light text-4xl md:text-6xl">RESET Workshop</span>
               </h2>
 
-              <p className="text-lg md:text-xl text-neutral-600 mb-12 leading-relaxed font-light">
+              <p className="text-base md:text-lg text-neutral-600 mb-12 leading-relaxed font-light">
                 A fast-paced hands-on RoboSTEM experience where children explore different themes each day through projects, challenges, experimentation, and creative problem-solving.
               </p>
 

@@ -34,10 +34,10 @@ export function RealSessionMoments() {
     <section className="relative bg-white py-[60px]">
       <SectionReveal className="container-fluid">
         <div className="max-w-4xl mx-auto text-center mb-14">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-[#1E2A44] leading-tight mb-6">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1E2A44] leading-tight mb-6">
             Moments from Real Sessions
           </h2>
-          <p className="text-lg md:text-xl text-neutral-600 font-light italic max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-neutral-600 font-light italic max-w-2xl mx-auto">
             These are the kinds of moments that happen regularly inside workshops, STEM challenges, and year-long sessions — moments that often reveal sides of children parents rarely get to see during traditional learning routines.
           </p>
         </div>
@@ -51,7 +51,7 @@ export function RealSessionMoments() {
             >
               <div className="absolute left-0 top-0 h-full w-1.5 rounded-r-xl bg-accent-teal" />
               <div className="relative">
-                <span className="text-xs font-mono text-accent-teal uppercase tracking-widest font-bold mb-4 block">
+                <span className="text-xs font-sans text-accent-teal uppercase tracking-widest font-bold mb-4 block">
                   {moment.shortTitle}
                 </span>
                 <h3 className="text-xl font-serif font-bold text-[#16213B] mb-4">

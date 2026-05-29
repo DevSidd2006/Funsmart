@@ -28,14 +28,14 @@ export function FounderJourney() {
           {/* TOP SECTION — STORY + FOUNDER CARD */}
           <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-20 items-center mb-24">
             <div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-[#1E2A44] mb-6 leading-[1.1]">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-[#1E2A44] mb-6 leading-[1.1]">
                 From software systems to child thinking systems
               </h2>
               <h3 className="text-xl md:text-2xl font-serif text-accent-teal mb-10 font-medium">
                 Dipali Akolkar, Founder — FunSmartism
               </h3>
               
-              <div className="text-lg md:text-xl text-neutral-600 leading-relaxed font-light space-y-6">
+              <div className="text-base md:text-lg text-neutral-600 leading-relaxed font-light space-y-6">
                 <p>
                   After years in software development and hands-on parenting, Dipali went deeper into child development through formal learning experiences in both <strong className="font-bold text-[#1E2A44]">Pune</strong> and the <strong className="font-bold text-[#1E2A44]">USA</strong>.
                 </p>
@@ -68,7 +68,7 @@ export function FounderJourney() {
                       <div className="w-8 h-px bg-white/50" />
                       Our Founder
                     </div>
-                    <h3 className="text-3xl font-serif font-bold text-white">Dipali Akolkar</h3>
+                    <h3 className="text-3xl md:text-4xl font-serif font-bold text-white">Dipali Akolkar</h3>
                   </div>
                 </div>
               </div>
@@ -80,7 +80,7 @@ export function FounderJourney() {
             {storyBoxes.map((box) => (
               <div key={box.title} className="group h-full flex flex-col rounded-[2.5rem] border border-neutral-200 bg-white p-10 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-500">
                 <div className="text-mono text-accent-teal mb-6 text-base font-bold uppercase tracking-[0.3em]">{box.step}</div>
-                <h3 className="text-2xl font-serif font-bold text-[#1E2A44] mb-4 leading-tight">
+                <h3 className="text-3xl md:text-4xl font-serif font-bold text-[#1E2A44] mb-4 leading-tight">
                   {box.title}
                 </h3>
                 <p className="text-neutral-500 leading-relaxed text-base font-light">

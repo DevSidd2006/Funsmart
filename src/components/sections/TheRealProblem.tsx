@@ -17,19 +17,19 @@ export function TheRealProblem() {
         
         {/* Main Heading & Intro */}
         <div className="max-w-4xl mb-12 text-center mx-auto">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-8 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8 leading-tight">
             Most children are trained to memorise answers. <br className="hidden md:block" />
             <span className="text-accent-teal italic font-light">But life, work, and real challenges don't have answer keys</span>
           </h2>
           
-          <p className="text-lg md:text-xl text-neutral-600 leading-relaxed mb-8 font-light">
+          <p className="text-base md:text-lg text-neutral-600 leading-relaxed mb-8 font-light">
             Schools and tuition classes often focus on syllabus completion, exams, and fixed answers.
           </p>
         </div>
 
         {/* Parent Relatability Cards */}
         <div className="max-w-5xl mx-auto mb-16">
-          <h3 className="text-2xl md:text-3xl font-serif font-bold text-primary-500 mb-10 text-center">
+          <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-10 text-center">
             The real problem is
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -70,27 +70,38 @@ export function TheRealProblem() {
              </ul>
           </div>
 
-          <div className="bg-[#1E2A44] p-8 md:p-14 rounded-[2rem] shadow-huge text-left mb-12 relative overflow-hidden">
+          <div className="bg-[#1E2A44] p-8 md:p-16 rounded-[2rem] shadow-huge text-center mb-12 relative overflow-hidden">
              <div className="absolute inset-0 lab-grid opacity-[0.04]" />
              <div className="absolute -top-20 -right-20 w-64 h-64 bg-accent-teal/10 rounded-full blur-[80px]" />
-             <div className="relative z-10 space-y-6">
-               <p className="text-xl md:text-2xl leading-relaxed">
-                 <strong className="text-white font-bold">Marks show outcomes.</strong>
-               </p>
-               <p className="text-lg md:text-xl text-accent-teal font-medium leading-relaxed">
+             <div className="relative z-10 max-w-3xl mx-auto space-y-8">
+
+               {/* Line 1 — heading */}
+               <h3 className="text-3xl md:text-4xl font-serif font-bold text-white">
+                 Marks show outcomes.
+               </h3>
+
+               {/* Line 2 — cyan bold */}
+               <p className="text-xl md:text-2xl font-bold text-accent-teal leading-snug">
                  They don't show what your child does when stuck, confused, or facing something completely new.
                </p>
-               <p className="text-lg text-white/80 font-light leading-relaxed">
+
+               {/* Line 3 — white big */}
+               <p className="text-lg md:text-xl text-white font-medium leading-relaxed">
                  Most parents have never watched their child solve a problem with no hints, no steps, and no correct answer waiting.
                </p>
-               <p className="text-base text-white/60 font-light leading-relaxed border-l-2 border-accent-teal/40 pl-5">
+
+               <div className="w-12 h-px bg-white/20 mx-auto" />
+
+               {/* Line 4 & 5 — dimmed */}
+               <p className="text-base text-white/50 font-light leading-relaxed">
                  That gap — between performing on a test and thinking through a real challenge — is what schools don't show you.
                </p>
-               <p className="text-base text-white/60 font-light leading-relaxed border-l-2 border-accent-teal/40 pl-5">
+               <p className="text-base text-white/50 font-light leading-relaxed">
                  Thinking habits form early and quietly. Most parents only notice them once they're already set.
                </p>
+
                <div className="pt-4 border-t border-white/10">
-                 <p className="text-base text-white/50 font-mono uppercase tracking-widest text-xs mb-3">The invisible problem</p>
+                 <p className="text-[10px] text-white/30 font-sans uppercase tracking-widest mb-3">The invisible problem</p>
                  <p className="text-xl md:text-2xl font-serif font-bold text-white leading-snug">
                    You can't guide what you can't see.{' '}
                    <span className="text-accent-teal">We help you see it.</span>
@@ -107,7 +118,7 @@ export function TheRealProblem() {
                Sometimes parents accidentally over-help and the child stops thinking. <br className="hidden md:block" />
                Parents don’t know when to <strong className="text-white font-bold not-italic">step in</strong> and when to <strong className="text-white font-bold not-italic">step back</strong>.
              </p>
-             <h3 className="text-2xl md:text-3xl font-serif font-bold relative z-10 leading-tight text-white">
+             <h3 className="text-3xl md:text-4xl font-serif font-bold relative z-10 leading-tight text-white">
                FunSmartism creates environments where children actively use thinking instead of only consuming information.
              </h3>
           </div>

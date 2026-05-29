@@ -20,7 +20,7 @@ export function EduEvents() {
 
       <SectionReveal className="container-fluid relative z-10">
         <div className="max-w-7xl mx-auto mb-16 text-center flex flex-col items-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-serif font-bold text-white mb-8 leading-[1.1] tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-8 leading-[1.1] tracking-tight">
             Children Don't Just Learn Concepts. <br />
             <span className="text-accent-teal italic font-light opacity-90">They Interact with Actual Experts <br className="hidden md:block" /> Building The Future.</span>
           </h2>
@@ -53,7 +53,7 @@ export function EduEvents() {
         <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-10 md:p-14 rounded-[3rem] max-w-7xl mx-auto shadow-2xl relative overflow-hidden">
           <div className="absolute top-0 left-0 w-2 h-full bg-accent-teal" />
 
-          <h3 className="text-2xl font-serif font-bold text-white mb-10 text-center">
+          <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-10 text-center">
             Year-long students receive priority opportunities to:
           </h3>
 

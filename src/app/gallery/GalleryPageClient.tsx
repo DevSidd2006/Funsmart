@@ -128,7 +128,7 @@ export function GalleryPageClient() {
                           <div className="flex justify-between items-start mb-4">
                             <span className="text-mono text-accent-teal text-[11px] font-bold tracking-[0.2em] uppercase">{item.tag}</span>
                           </div>
-                          <h3 className="text-2xl font-serif font-bold text-white mb-4 leading-tight">{item.title}</h3>
+                          <h3 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4 leading-tight">{item.title}</h3>
                           <p className="text-white/80 text-[15px] leading-relaxed max-w-sm font-light">
                             {item.caption}
                           </p>
@@ -203,7 +203,7 @@ export function GalleryPageClient() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-8 leading-tight"
+            className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8 leading-tight"
           >
             Want To Experience It Beyond Photos?
           </motion.h2>

@@ -51,17 +51,20 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center group py-1">
           <div className={cn(
-            "p-1.5 rounded-xl transition-all duration-500 mr-4",
-            useLightText ? "bg-white shadow-[0_8px_32px_rgba(0,0,0,0.12)]" : "bg-transparent"
+            "p-1.5 md:p-2 rounded-xl transition-all duration-500 mr-4 flex items-center gap-3",
+            useLightText ? "bg-white shadow-[0_8px_32px_rgba(0,0,0,0.12)] text-primary-500" : "bg-transparent text-primary-500"
           )}>
             <Image 
               src="/images/logo.png" 
               alt="FunSmartism Logo" 
-              width={200}
-              height={80}
+              width={60}
+              height={60}
               priority
-              className="h-12 md:h-16 w-auto object-contain transition-all duration-500 group-hover:scale-105"
+              className="h-10 md:h-12 w-auto object-contain transition-all duration-500 group-hover:scale-105"
             />
+            <span className="font-kaushan text-[22px] md:text-3xl leading-none pr-2">
+              FunSmartism
+            </span>
           </div>
         </Link>
 

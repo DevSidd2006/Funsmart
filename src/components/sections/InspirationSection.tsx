@@ -145,7 +145,7 @@ export function InspirationSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16 max-w-3xl mx-auto"
         >
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-white leading-tight mb-6">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-white leading-tight mb-6">
             Experts & Mentors Who{' '}
             <span className="text-accent-teal italic font-light">Inspired FunSmartism</span>
           </h2>

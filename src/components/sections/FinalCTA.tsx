@@ -16,7 +16,7 @@ export function FinalCTA({ data }: { data?: any }) {
       
       <SectionReveal className="container-fluid relative z-10 text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mb-12 leading-tight text-white">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold mb-12 leading-tight text-white">
             {headline}
           </h2>
           

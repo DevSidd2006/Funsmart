@@ -42,7 +42,7 @@ export function WhatMakesDifferent({ data }: { data?: any }) {
     <section className="section-spacing bg-white">
       <div className="container-fluid">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 mb-6 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-6 leading-tight">
             {title}
           </h2>
           <p className="text-lg text-neutral-500 max-w-2xl mx-auto leading-relaxed">

@@ -123,19 +123,19 @@ export default function ProgramsPage() {
 
             {/* Navigator Strip */}
             <div className="flex flex-wrap justify-center gap-4 mb-16">
-              <Link href="#year-long" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-xs font-mono uppercase tracking-widest flex items-center gap-2">
+              <Link href="#year-long" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-xs font-sans uppercase tracking-widest flex items-center gap-2">
                 <Rocket size={14} className="text-accent-teal" />
                 RoboSTEM Thinking Lab
               </Link>
-              <Link href="#friday-club" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-xs font-mono uppercase tracking-widest flex items-center gap-2">
+              <Link href="#friday-club" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-xs font-sans uppercase tracking-widest flex items-center gap-2">
                 <Clock size={14} className="text-accent-teal" />
                 Friday STEM Challenge Club
               </Link>
-              <Link href="#workshop" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-xs font-mono uppercase tracking-widest flex items-center gap-2">
+              <Link href="#workshop" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-xs font-sans uppercase tracking-widest flex items-center gap-2">
                 <Target size={14} className="text-accent-teal" />
                 10-Day STEM Tinkering Workshop
               </Link>
-              <Link href="#one-day" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-xs font-mono uppercase tracking-widest flex items-center gap-2">
+              <Link href="#one-day" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-xs font-sans uppercase tracking-widest flex items-center gap-2">
                 <Eye size={14} className="text-accent-teal" />
                 1-Day STEM Challenge
               </Link>
@@ -236,7 +236,7 @@ export default function ProgramsPage() {
 
                 <div className="rounded-[2.5rem] border border-white/10 bg-white/5 p-10 mb-12">
                   <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-accent-teal mb-3">Sessions</p>
-                  <p className="text-3xl font-serif font-bold text-white mb-2">2 weekend sessions per month</p>
+                  <p className="text-3xl md:text-4xl font-serif font-bold text-white mb-2">2 weekend sessions per month</p>
                   <p className="text-[#B7E3DD] text-base font-light">10 months · Ages 8–15</p>
                 </div>
 
@@ -277,7 +277,7 @@ export default function ProgramsPage() {
                         </li>
                       ))}
                     </ul>
-                    <div className="pt-6 border-t border-white/10 text-[11px] font-mono text-white/30 italic">
+                    <div className="pt-6 border-t border-white/10 text-[11px] font-sans text-white/30 italic">
                       → The natural next step after the workshop.
                     </div>
                   </div>
@@ -299,7 +299,7 @@ export default function ProgramsPage() {
                   </div>
                   <div className="text-xl font-serif font-bold text-white mb-2">{s.label}</div>
                   <div className="text-accent-teal text-[10px] font-bold uppercase tracking-widest mb-3">{s.val}</div>
-                  <div className="text-[10px] text-white/40 font-mono italic">{s.sub}</div>
+                  <div className="text-[10px] text-white/40 font-sans italic">{s.sub}</div>
                 </div>
               ))}
             </div>
@@ -324,7 +324,7 @@ export default function ProgramsPage() {
                       <tr key={i} className="group hover:bg-white/5 transition-all">
                         <td className="py-10 px-12">
                           <div className="flex items-center gap-6">
-                            <div className="w-10 h-10 rounded-xl bg-accent-teal/10 flex items-center justify-center text-accent-teal opacity-50 text-[10px] font-mono font-bold">
+                            <div className="w-10 h-10 rounded-xl bg-accent-teal/10 flex items-center justify-center text-accent-teal opacity-50 text-[10px] font-sans font-bold">
                               {String(i + 1).padStart(2, '0')}
                             </div>
                             <span className="text-white font-bold font-serif text-xl">{t.theme}</span>
@@ -348,7 +348,7 @@ export default function ProgramsPage() {
                   <div className="max-w-4xl mb-20">
                     <span className="inline-block px-5 py-2 bg-accent-teal/10 text-accent-teal rounded-full text-[10px] font-bold uppercase tracking-[0.2em] mb-8">Major Differentiator</span>
                     <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-6 md:mb-8 leading-tight">Year-long exclusive: <br />Edu events</h3>
-                    <p className="text-lg md:text-xl text-neutral-600 font-light leading-relaxed italic">
+                    <p className="text-base md:text-lg text-neutral-600 font-light leading-relaxed italic">
                       Children learn scientist-style questioning by interacting with real scientists—not just listening to them. <br className="hidden md:block" />
                       <span className="text-primary-500 font-bold not-italic mt-6 block">They help run them — building real responsibility.</span>
                     </p>
@@ -379,7 +379,7 @@ export default function ProgramsPage() {
                       they learn to discuss, question, and explain them with experts.
                     </p>
                     <div className="h-px w-24 bg-neutral-200 mx-auto mb-6" />
-                    <p className="text-neutral-400 font-mono text-[10px] uppercase tracking-[0.4em] font-bold">
+                    <p className="text-neutral-400 font-sans text-[10px] uppercase tracking-[0.4em] font-bold">
                       Some selected projects are exhibited publicly for parents & scientists.
                     </p>
                   </div>
@@ -432,7 +432,7 @@ export default function ProgramsPage() {
               <div className="bg-primary-500 text-white p-10 md:p-16 lg:p-20 flex flex-col justify-between">
                 <div>
                   <p className="text-xs font-bold uppercase tracking-[0.3em] text-accent-teal mb-4">Best for</p>
-                  <p className="text-2xl md:text-3xl font-serif font-bold leading-tight mb-6">
+                  <p className="text-3xl md:text-4xl font-serif font-bold leading-tight mb-6">
                     Children who need consistent weekly practice thinking independently — not just during school terms.
                   </p>
                 </div>
@@ -511,7 +511,7 @@ export default function ProgramsPage() {
                       </p>
 
                       <div className="border-t border-accent-teal/20 pt-4 mt-6">
-                        <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest block mb-1">Next batch:</span>
+                        <span className="text-[10px] font-sans text-neutral-400 uppercase tracking-widest block mb-1">Next batch:</span>
                         <p className="text-xs text-primary-500 font-medium">Announced before each vacation period. Join the Parent Community for early updates.</p>
                       </div>
                     </div>
@@ -522,7 +522,7 @@ export default function ProgramsPage() {
                           Join Parent Community
                         </Button>
                       </Link>
-                      <span className="text-[9px] text-neutral-400 font-mono text-center block">Sessions: 10 consecutive days · Vacation batches only · Ages 8–15</span>
+                      <span className="text-[9px] text-neutral-400 font-sans text-center block">Sessions: 10 consecutive days · Vacation batches only · Ages 8–15</span>
                     </div>
                   </div>
                 </div>
@@ -583,7 +583,7 @@ export default function ProgramsPage() {
             {/* Project Grid Visual Reinforcement */}
             <div className="mb-24">
               <div className="text-center mb-12">
-                <h3 className="text-2xl font-serif font-bold text-primary-500">Visualizing the themes</h3>
+                <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary-500">Visualizing the themes</h3>
                 <p className="text-sm text-neutral-400 mt-2">Variety is at the core of the experience.</p>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -664,7 +664,7 @@ export default function ProgramsPage() {
                         Most parents say this one session showed them something three years of school reports never did.
                       </p>
                       <div className="border-t border-accent-teal/20 pt-4 mt-6">
-                        <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest block mb-1">Next batch:</span>
+                        <span className="text-[10px] font-sans text-neutral-400 uppercase tracking-widest block mb-1">Next batch:</span>
                         <p className="text-xs text-primary-500">Check current schedule or join the Parent Community for updates.</p>
                       </div>
                     </div>
@@ -675,7 +675,7 @@ export default function ProgramsPage() {
                           Schedule a Visit →
                         </Button>
                       </Link>
-                      <span className="text-[9px] text-neutral-400 font-mono text-center block mt-2">Sessions: Single day · Weekend slots · Ages 8–15</span>
+                      <span className="text-[9px] text-neutral-400 font-sans text-center block mt-2">Sessions: Single day · Weekend slots · Ages 8–15</span>
                     </div>
                   </div>
                 </div>

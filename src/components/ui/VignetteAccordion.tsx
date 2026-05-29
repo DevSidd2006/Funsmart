@@ -23,10 +23,10 @@ export function VignetteAccordion({ items }: { items: Vignette[] }) {
             className="p-10 rounded-[32px] bg-white border border-neutral-100 shadow-sm hover:shadow-huge transition-all duration-500 group flex flex-col h-full"
           >
             <div className="flex-grow">
-               <span className="text-accent-teal font-mono text-[11px] uppercase tracking-widest font-bold mb-4 block">
+               <span className="text-accent-teal font-sans text-[11px] uppercase tracking-widest font-bold mb-4 block">
                  {item.age}
                </span>
-               <h3 className="text-2xl font-serif font-bold text-primary-500 mb-8 group-hover:text-accent-teal transition-colors leading-tight">
+               <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8 group-hover:text-accent-teal transition-colors leading-tight">
                  {item.title}
                </h3>
               <div className="relative">
@@ -55,7 +55,7 @@ export function VignetteAccordion({ items }: { items: Vignette[] }) {
               className="w-full text-left p-6 flex items-center justify-between group"
             >
               <div className="flex flex-col gap-1">
-                <span className="text-accent-teal font-mono text-[9px] uppercase tracking-widest font-bold">
+                <span className="text-accent-teal font-sans text-[9px] uppercase tracking-widest font-bold">
                   {item.age}
                 </span>
                 <h3 className={cn(

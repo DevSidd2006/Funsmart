@@ -62,7 +62,7 @@ export function HowItWorks({ data }: { data?: any }) {
 
       <div className="container-fluid relative z-10">
         <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight mb-6">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 leading-tight mb-6">
             {title}
           </h2>
           <p className="text-lg text-neutral-500 max-w-2xl mx-auto">
@@ -88,7 +88,7 @@ export function HowItWorks({ data }: { data?: any }) {
                     <div className="w-14 h-14 rounded-full bg-accent-teal/10 flex items-center justify-center group-hover:bg-accent-teal transition-all duration-400">
                       <Icon size={24} className="text-accent-teal group-hover:text-white transition-colors duration-400" />
                     </div>
-                    <span className="text-5xl font-serif font-bold text-primary-100 select-none">
+                    <span className="text-3xl md:text-4xl font-serif font-bold text-primary-100 select-none">
                       {step.step || `0${idx + 1}`}
                     </span>
                   </div>

@@ -143,7 +143,7 @@ export function ScheduleVisitPageClient() {
         <SectionReveal className="container-fluid max-w-4xl mx-auto">
           <div className="bg-[#1E2A44] rounded-[3rem] p-10 md:p-16 text-white relative overflow-hidden">
             <div className="absolute inset-0 lab-grid opacity-10" />
-            <h2 className="text-2xl md:text-4xl font-serif font-bold text-white mb-12 relative z-10 text-center">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-12 relative z-10 text-center">
               Families Who Usually Connect Deeply With FunSmartism
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 relative z-10">
@@ -178,7 +178,7 @@ export function ScheduleVisitPageClient() {
               <SectionReveal className="bg-white p-10 md:p-14 rounded-[3rem] border border-neutral-100 shadow-huge">
                 {!isSubmitted ? (
                   <>
-                    <h2 className="text-3xl font-serif font-bold text-primary-500 mb-4">Schedule a Visit</h2>
+                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-4">Schedule a Visit</h2>
                     <p className="text-neutral-600 mb-10 font-light italic">
                       Tell us a little about your child and preferred timings. We’ll help you understand the most suitable session, workshop, or starting point.
                     </p>
@@ -249,7 +249,7 @@ export function ScheduleVisitPageClient() {
                     <div className="w-24 h-24 bg-accent-teal/10 rounded-full flex items-center justify-center mx-auto text-accent-teal mb-8">
                       <Check size={48} strokeWidth={3} />
                     </div>
-                    <h2 className="text-4xl font-serif font-bold text-primary-500 mb-4">Request Sent.</h2>
+                    <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-4">Request Sent.</h2>
                     <p className="text-neutral-600 font-light">We'll get back to you within 24 hours to confirm your visit details.</p>
                   </div>
                 )}
@@ -259,7 +259,7 @@ export function ScheduleVisitPageClient() {
             {/* Info Column */}
             <div className="lg:col-span-5 space-y-8">
               <SectionReveal>
-                <h2 className="text-3xl font-serif font-bold text-primary-500 mb-8">Visit Information</h2>
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8">Visit Information</h2>
                 <div className="space-y-4">
                   {[
                     { label: 'Location', val: 'Bibwewadi, Pune (Exact location shared after confirmation)', icon: MapPin },
@@ -304,7 +304,7 @@ export function ScheduleVisitPageClient() {
       {/* SECTION 07 — FINAL CTA */}
       <section className="py-20 bg-white text-center">
         <SectionReveal className="container-fluid max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-8 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8 leading-tight">
             Sometimes One Visit Changes Everything.
           </h2>
           <div className="max-w-2xl mx-auto space-y-6 text-xl text-neutral-600 font-light leading-relaxed mb-12">

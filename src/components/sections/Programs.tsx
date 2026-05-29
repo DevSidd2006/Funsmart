@@ -35,9 +35,9 @@ export function Programs() {
       title: 'Friday STEM Challenge Club',
       tag: 'Weekly Club',
       icon: Clock,
-      color: 'bg-[#FAF9F6] border border-neutral-100',
-      accentColor: 'text-primary-500',
-      badgeColor: 'bg-primary-50 text-primary-500',
+      color: 'bg-[#1E2A44] text-white',
+      accentColor: 'text-accent-teal',
+      badgeColor: 'bg-accent-teal/20 text-accent-teal',
       desc: 'Weekly sessions every Friday. Independent challenge-based problems designed to build consistent thinking habits outside school routine for the whole academic year.',
       cta: 'Explore Friday Club',
     },
@@ -46,9 +46,9 @@ export function Programs() {
       title: '10-Day STEM Tinkering Workshop',
       tag: 'Vacation Program',
       icon: Calendar,
-      color: 'bg-[#FAF9F6] border border-neutral-100',
-      accentColor: 'text-primary-500',
-      badgeColor: 'bg-accent-teal/10 text-accent-teal',
+      color: 'bg-[#1E2A44] text-white',
+      accentColor: 'text-accent-teal',
+      badgeColor: 'bg-accent-teal/20 text-accent-teal',
       desc: 'Intensive vacation program. One new STEM theme every day — projects, experiments, and hands-on challenges across robotics, space science, electronics, and more.',
       cta: 'Explore Workshop',
       batch: 'Next batch: [Vacation season]',
@@ -58,9 +58,9 @@ export function Programs() {
       title: '1-Day STEM Challenge',
       tag: 'Trial Day',
       icon: Target,
-      color: 'bg-[#FAF9F6] border border-neutral-100',
-      accentColor: 'text-primary-500',
-      badgeColor: 'bg-neutral-100 text-neutral-600',
+      color: 'bg-[#1E2A44] text-white',
+      accentColor: 'text-accent-teal',
+      badgeColor: 'bg-accent-teal/20 text-accent-teal',
       desc: 'A one-day hands-on challenge where parents observe — not instruct. Children face unfamiliar problems with no hints and no fixed answers, while you watch how they actually think. Uncertainty handling - how they react without ready answers.',
       cta: 'Book Trial Day',
       batch: 'New batch : {check schedule}',
@@ -71,10 +71,10 @@ export function Programs() {
     <section className="py-24 md:py-32 bg-white relative overflow-hidden" id="homepage-programs">
       <SectionReveal className="container-fluid max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16 md:mb-24">
-          <span className="text-accent-teal font-mono text-xs uppercase tracking-[0.3em] font-bold block mb-4">
+          <span className="text-accent-teal font-sans text-xs uppercase tracking-[0.3em] font-bold block mb-4">
             Our Offerings
           </span>
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 leading-tight tracking-tight mb-6">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 leading-tight tracking-tight mb-6">
             Programs Structured Like Workshops.<br />Not a Tuition Class.
           </h2>
           <div className="w-16 h-1 bg-accent-teal mx-auto mb-8 rounded-full" />
@@ -86,60 +86,54 @@ export function Programs() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {programsList.map((prog, i) => {
             const Icon = prog.icon
-            const isDark = prog.id === 'year-long'
+            const isDark = true
             return (
               <div
                 key={prog.id}
-                className={`p-8 md:p-12 rounded-[2.5rem] flex flex-col justify-between transition-all duration-300 hover:shadow-huge hover:-translate-y-1 ${prog.color}`}
+                className={`p-8 md:p-10 rounded-[2.5rem] flex flex-col justify-between transition-all duration-500 hover:shadow-huge hover:-translate-y-1 ${prog.color}`}
               >
                 <div>
-                  <div className="flex items-center justify-between mb-8">
-                    <span className={`inline-flex px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest ${prog.badgeColor}`}>
+                  <div className="flex items-center justify-between mb-6">
+                    <span className={`inline-flex px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-[0.18em] ${prog.badgeColor}`}>
                       {prog.tag}
                     </span>
-                    <div className={`w-12 h-12 rounded-2xl flex items-center justify-center ${isDark ? 'bg-white/10 text-accent-teal' : 'bg-primary-50 text-primary-500'}`}>
-                      <Icon size={22} />
+                    <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-white/10 text-accent-teal">
+                      <Icon size={18} />
                     </div>
                   </div>
 
-                  <h3 className={`text-2xl font-serif font-bold mb-4 leading-snug ${isDark ? 'text-white' : 'text-primary-500'}`}>
+                  <h3 className="text-xl font-serif font-bold mb-3 leading-snug text-white">
                     {prog.title}
                   </h3>
 
-                  <p className={`text-sm leading-relaxed mb-6 font-light ${isDark ? 'text-[#B7E3DD]' : 'text-neutral-500'}`}>
+                  <p className="text-[13px] leading-relaxed mb-5 font-light text-[#B7E3DD]">
                     {prog.desc}
                   </p>
 
                   {prog.highlight && (
-                    <div className={`p-4 rounded-xl mb-6 text-xs font-medium flex gap-3 items-start ${isDark ? 'bg-white/5 border border-white/10 text-white' : 'bg-primary-50 text-primary-500'}`}>
-                      <ShieldAlert size={16} className={isDark ? 'text-accent-teal' : 'text-primary-500'} />
+                    <div className="p-3.5 rounded-xl mb-5 text-[11px] font-medium flex gap-2.5 items-start bg-white/5 border border-white/10 text-white/80">
+                      <ShieldAlert size={14} className="text-accent-teal flex-shrink-0 mt-0.5" />
                       <span>{prog.highlight}</span>
                     </div>
                   )}
                 </div>
 
-                <div className="border-t pt-6 mt-6 border-current/10 flex flex-col gap-4">
-                  {prog.pricing && (
-                    <div className="flex justify-between items-baseline">
-                      <span className={`text-[10px] uppercase tracking-widest font-mono ${isDark ? 'text-white/60' : 'text-neutral-400'}`}>Investment:</span>
-                      <span className="text-base font-bold font-serif">{prog.pricing}</span>
-                    </div>
-                  )}
-
+                <div className="pt-5 mt-5 border-t border-white/10 flex flex-col gap-3">
                   {prog.batch && (
-                    <div className="flex justify-between items-baseline">
-                      <span className={`text-[10px] uppercase tracking-widest font-mono ${isDark ? 'text-white/60' : 'text-neutral-400'}`}>Timing:</span>
-                      <span className="text-sm font-medium italic">{prog.batch}</span>
-                    </div>
+                    <p className="text-[10px] font-sans text-white/30 uppercase tracking-widest">
+                      {prog.batch}
+                    </p>
                   )}
 
-                  <Link href={`/programs#${prog.id}`} className="w-full mt-2">
-                    <Button
-                      variant={isDark ? 'primary' : 'outline'}
-                      className={`w-full py-4 text-xs font-bold uppercase tracking-widest rounded-full transition-transform hover:scale-105 ${isDark ? 'bg-accent-teal hover:bg-accent-teal text-white border-none shadow-md shadow-accent-teal/20' : 'border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white'}`}
-                    >
-                      {prog.cta} &rarr;
-                    </Button>
+                  <Link href={`/programs#${prog.id}`} className="w-full group">
+                    <button className="w-full flex items-center justify-between bg-accent-teal hover:bg-[#28A392] active:scale-[0.98] px-6 py-4 rounded-2xl text-white text-[12px] font-bold tracking-[0.12em] uppercase transition-all duration-300 shadow-lg shadow-accent-teal/20 group-hover:shadow-accent-teal/40">
+                      <span>{prog.cta}</span>
+                      <span className="w-8 h-8 rounded-xl bg-white/20 flex items-center justify-center group-hover:bg-white/30 group-hover:translate-x-1 transition-all duration-300">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2.5 7h9M7.5 3L11 7l-3.5 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </span>
+                    </button>
                   </Link>
                 </div>
               </div>
@@ -149,9 +143,14 @@ export function Programs() {
 
         <div className="text-center">
           <Link href="/programs">
-            <Button size="lg" className="bg-primary-500 text-white px-12 py-5 rounded-full font-bold shadow-huge hover:bg-primary-600 transition-colors">
-              Compare All Programs &rarr;
-            </Button>
+            <button className="inline-flex items-center gap-3 px-8 py-3.5 rounded-full border border-primary-500/30 text-primary-500 text-[11px] font-bold uppercase tracking-[0.15em] hover:bg-primary-500 hover:text-white hover:border-primary-500 transition-all duration-300 group">
+              Compare All Programs
+              <span className="w-6 h-6 rounded-full bg-primary-50 flex items-center justify-center group-hover:bg-white/20 transition-all">
+                <svg width="10" height="10" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M2 6h8M6.5 2.5L10 6l-3.5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </span>
+            </button>
           </Link>
         </div>
       </SectionReveal>

@@ -31,7 +31,7 @@ export function OneDayChallenge() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
               {/* Left: Copy */}
               <div>
-                <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-6 leading-tight">
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-6 leading-tight">
                   Experience FunSmartism{' '}
                   <span className="text-accent-teal italic font-light block">Before Joining Long-Term</span>
                 </h2>

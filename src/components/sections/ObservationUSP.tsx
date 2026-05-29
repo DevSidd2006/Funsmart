@@ -26,12 +26,12 @@ export function ObservationUSP() {
               <Eye size={16} /> Live Observation
             </div>
             
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-primary-500 leading-tight mb-8">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 leading-tight mb-8">
               While Children Build and Solve, We Also Observe <br className="hidden lg:block" />
               <span className="text-accent-teal italic font-light">How They Think.</span>
             </h2>
             
-            <p className="text-lg md:text-xl text-neutral-600 leading-relaxed font-light mb-10">
+            <p className="text-base md:text-lg text-neutral-600 leading-relaxed font-light mb-10">
               During activities and challenges, facilitators naturally observe patterns that often come up at home too, but get unnoticed by parents.
             </p>
 

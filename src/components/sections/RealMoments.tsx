@@ -39,7 +39,7 @@ export function RealMoments({
     <section className="section-spacing bg-accent-surface">
       <div className="container-fluid">
         <div className="max-w-4xl mx-auto text-center mb-14">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 leading-tight">
             {heading}
           </h2>
           <p className="text-lg text-neutral-500 mt-4 max-w-2xl mx-auto leading-relaxed">
@@ -74,7 +74,7 @@ export function RealMoments({
                   </div>
                 </div>
                 <div className="p-8">
-                  <h3 className="text-3xl font-serif font-bold text-primary-600 mb-4 leading-snug">
+                  <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary-600 mb-4 leading-snug">
                     {title}
                   </h3>
                   <p className="text-neutral-600 leading-relaxed text-sm">

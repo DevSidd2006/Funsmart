@@ -7,10 +7,10 @@ export function WhatStudentsDo() {
     <section className="py-16 bg-white relative overflow-hidden">
       <SectionReveal className="container-fluid max-w-6xl mx-auto">
         <div className="text-center mb-20 max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-serif font-bold text-primary-500 mb-8 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8 leading-tight">
             What Happens Inside FunSmartism?
           </h2>
-          <p className="text-lg md:text-xl text-neutral-600 leading-relaxed font-light mb-6">
+          <p className="text-base md:text-lg text-neutral-600 leading-relaxed font-light mb-6">
             Children do not sit through long lectures or copy fixed steps from notebooks or screens.
           </p>
           <p className="text-2xl md:text-3xl text-accent-teal italic font-bold leading-relaxed">
@@ -37,7 +37,7 @@ export function WhatStudentsDo() {
                <span className="text-accent-teal italic font-light">How They Think.</span>
              </h3>
              
-             <div className="text-lg md:text-xl text-neutral-600 leading-relaxed space-y-6 mb-10 font-light">
+             <div className="text-base md:text-lg text-neutral-600 leading-relaxed space-y-6 mb-10 font-light">
                <p>During activities and challenges, facilitators naturally observe patterns that often come up at home too, but get unnoticed by parents.</p>
                <p className="font-medium text-primary-500">These observations are shared with parents through examples and discussions — helping parents support learning without over-helping.</p>
              </div>

@@ -18,7 +18,7 @@ export function LabGallery({ items }: { items: any[] }) {
       <div className="container-fluid">
         <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-16">
           <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight mb-6">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 leading-tight mb-6">
               Real moments from <br /><span className="text-accent-teal italic font-light">FunSmartism.</span>
             </h2>
             <p className="text-lg text-neutral-600 leading-relaxed">
@@ -56,10 +56,10 @@ export function LabGallery({ items }: { items: any[] }) {
               
               {/* Premium Caption Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-primary-900/90 via-primary-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-10 transform translate-y-4 group-hover:translate-y-0">
-                 <span className="text-[11px] font-mono font-bold text-accent-teal tracking-[0.3em] mb-3 uppercase">
+                 <span className="text-[11px] font-sans font-bold text-accent-teal tracking-[0.3em] mb-3 uppercase">
                    {item.tag || 'LAB_MOMENT'}
                  </span>
-                 <h3 className="text-2xl font-serif font-bold text-white leading-tight mb-3">
+                 <h3 className="text-3xl md:text-4xl font-serif font-bold text-white leading-tight mb-3">
                    {item.title}
                  </h3>
                  <p className="text-sm text-white/70 font-light italic leading-relaxed line-clamp-2">
@@ -70,7 +70,7 @@ export function LabGallery({ items }: { items: any[] }) {
               {/* Subtle persistent label for the 'Spark' image (i===2) */}
               {i === 2 && (
                 <div className="absolute bottom-8 left-8 z-10 group-hover:opacity-0 transition-opacity duration-300">
-                  <div className="text-[8px] font-mono font-bold text-accent-teal/60 tracking-[0.4em] uppercase mb-1">TEAM CHALLENGE</div>
+                  <div className="text-[8px] font-sans font-bold text-accent-teal/60 tracking-[0.4em] uppercase mb-1">TEAM CHALLENGE</div>
                   <div className="text-sm font-serif font-bold text-white/80">The Spark of Curiosity</div>
                 </div>
               )}

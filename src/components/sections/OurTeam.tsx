@@ -60,10 +60,10 @@ export function OurTeam() {
                   {item.initials}
                 </div>
               )}
-              <h3 className="text-2xl font-serif font-bold text-primary-500 mb-3 leading-snug">
+              <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-3 leading-snug">
                 {item.name}
               </h3>
-              <p className="text-xs font-mono font-bold text-neutral-400 uppercase tracking-[0.15em] mb-8 leading-relaxed">
+              <p className="text-xs font-sans font-bold text-neutral-400 uppercase tracking-[0.15em] mb-8 leading-relaxed">
                 {item.role}
               </p>
               

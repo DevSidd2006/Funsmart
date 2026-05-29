@@ -23,7 +23,7 @@ export function CoreBeliefs() {
     <section className="section-spacing bg-white">
       <div className="container-fluid">
         <div className="max-w-4xl mx-auto text-center mb-14">
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-primary-500 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 leading-tight">
             Three core beliefs that shape every session.
           </h2>
         </div>
