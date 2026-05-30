@@ -90,8 +90,8 @@ export function ScheduleVisitPageClient() {
                       'active participation instead of screen-heavy learning'
                     ].map((item, i) => (
                       <li key={i} className="flex gap-3 items-center">
-                        <div className="w-1.5 h-1.5 rounded-full bg-accent-teal" />
-                        <span>{item}</span>
+                        <div className="w-1.5 h-1.5 rounded-full bg-accent-teal shrink-0" />
+                        <span className="text-black">{item}</span>
                       </li>
                     ))}
                   </ul>

@@ -20,6 +20,13 @@ const experts = [
     note: 'Discussions on scientific temperament and building a culture of deep thinking from a young age.',
   },
   {
+    name: 'Pramod Kale',
+    img: '/images/scientists/pramod-kale.jpg',
+    pos: 'object-center',
+    role: 'Scientist & Innovator',
+    note: 'A discussion that reinforced the idea: if you can explain it simply, you truly understand it.',
+  },
+  {
     name: 'Prof. Jayant Narlikar',
     img: '/images/gallery/scientist-jayant-naralikar.jpg',
     pos: 'object-[70%_center]',
@@ -53,55 +60,6 @@ const experts = [
     pos: 'object-center',
     role: 'Innovator',
     note: 'An inspiring exchange on grassroots innovation and how local problems are the best classrooms.',
-  },
-  {
-    name: 'Pramod Khandekar',
-    img: '/images/scientists/pramod-khandekar.jpg',
-    pos: 'object-center',
-    role: 'Science Communicator',
-    note: 'A discussion that reinforced the idea: if you can explain it simply, you truly understand it.',
-  },
-  {
-    name: 'Shirish Deshmukh',
-    img: '/images/scientists/shirish-deshmukh.jpg',
-    pos: 'object-center',
-    role: 'Educator & Mentor',
-    note: 'Interactions focused on nurturing independent thought and reducing over-dependence on instruction.',
-  },
-  {
-    name: 'Dr. Mukund Muharir',
-    img: '/images/scientists/dr-mukund-muharir.jpg',
-    pos: 'object-center',
-    role: 'Researcher',
-    note: 'Conversations on how structured curiosity leads to meaningful discovery — in labs and in life.',
-  },
-  {
-    name: 'Shrirang Gokhale',
-    img: '/images/scientists/shrirang-gokhale.jpg',
-    pos: 'object-center',
-    role: 'Author & Thinker',
-    note: 'An exchange that reminded us: stories and science are not opposites — both begin with imagination.',
-  },
-  {
-    name: 'Bal Patil',
-    img: '/images/scientists/bal-patil.jpg',
-    pos: 'object-[center_20%]',
-    role: 'Scientist',
-    note: 'Inspired by his dedication to applied science and bridging the gap between theory and real-world use.',
-  },
-  {
-    name: 'Jayesh Rathore',
-    img: '/images/scientists/jayesh-rathore.jpg',
-    pos: 'object-center',
-    role: 'Educator & STEM Advocate',
-    note: 'A shared belief in project-based learning as the most effective way to build real capability.',
-  },
-  {
-    name: 'Uday Deshpande',
-    img: '/images/scientists/uday-deshpande.jpg',
-    pos: 'object-center',
-    role: 'Innovator & Mentor',
-    note: 'Discussions on mentorship — how the right question at the right moment can change a child\'s trajectory.',
   },
 ]
 
@@ -162,13 +120,13 @@ export function InspirationSection() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5 mb-16"
+          className="flex flex-wrap justify-center gap-5 mb-16"
         >
           {experts.map((expert, i) => (
             <motion.div
               key={i}
               variants={itemVariants}
-              className="group relative rounded-[1.5rem] overflow-hidden bg-white/5 border border-white/10 hover:border-accent-teal/50 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+              className="group relative rounded-[1.5rem] overflow-hidden bg-white/5 border border-white/10 hover:border-accent-teal/50 transition-all duration-500 hover:shadow-[0_20px_40px_rgba(0,0,0,0.5)] w-[calc(50%-0.625rem)] sm:w-[calc(33.333%-0.833rem)] lg:w-[calc(25%-0.9375rem)] xl:w-[calc(20%-1rem)]"
             >
               {/* Photo */}
               <div className="relative aspect-[4/3]">
@@ -203,7 +161,7 @@ export function InspirationSection() {
           {/* Extra interaction card */}
           <motion.div 
             variants={itemVariants}
-            className="group relative rounded-[1.5rem] overflow-hidden bg-white/5 border border-white/10 hover:border-accent-teal/50 transition-all duration-500"
+            className="group relative rounded-[1.5rem] overflow-hidden bg-white/5 border border-white/10 hover:border-accent-teal/50 transition-all duration-500 w-[calc(50%-0.625rem)] sm:w-[calc(33.333%-0.833rem)] lg:w-[calc(25%-0.9375rem)] xl:w-[calc(20%-1rem)]"
           >
             <div className="relative aspect-[4/3]">
               <Image

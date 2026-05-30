@@ -219,8 +219,8 @@ export default function AboutPage() {
 
               <div className="bg-primary-500 p-10 md:p-14 rounded-[40px] text-white shadow-huge shadow-primary-500/20 text-center relative overflow-hidden group">
                 <div className="absolute inset-0 lab-grid opacity-10 group-hover:opacity-20 transition-opacity" />
-                <p className="text-3xl md:text-4xl font-serif font-bold leading-tight relative z-10">
-                  But as a hands-on RoboSTEM thinking lab where children actively participate in learning through experimentation, projects, challenges, and real-world exploration.
+                <p className="text-xl md:text-2xl font-light leading-relaxed relative z-10 text-white/90">
+                  But as a <span className="font-bold text-accent-teal">hands-on RoboSTEM thinking lab</span> where children actively participate in learning through experimentation, projects, challenges, and real-world exploration.
                 </p>
               </div>
             </div>

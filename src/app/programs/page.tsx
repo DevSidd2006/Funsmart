@@ -120,28 +120,26 @@ export default function ProgramsPage() {
             <p className="text-base md:text-lg lg:text-xl text-[#B7E3DD] mb-10 md:mb-12 max-w-2xl mx-auto leading-relaxed font-light italic">
               These programs use real materials, scientist-inspired challenges, and live observation of how your child thinks. The difference is depth, pace, and continuity.
             </p>
+          </div>
 
-            {/* Navigator Strip */}
-            <div className="flex flex-wrap justify-center gap-4 mb-16">
-              <Link href="#year-long" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-sm font-serif font-bold tracking-wide flex items-center gap-2">
-                <Rocket size={14} className="text-accent-teal" />
-                RoboSTEM Thinking Lab
-              </Link>
-              <Link href="#friday-club" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-sm font-serif font-bold tracking-wide flex items-center gap-2">
-                <Clock size={14} className="text-accent-teal" />
-                Friday STEM Challenge Club
-              </Link>
-              <Link href="#workshop" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-sm font-serif font-bold tracking-wide flex items-center gap-2">
-                <Target size={14} className="text-accent-teal" />
-                10-Day STEM Tinkering Workshop
-              </Link>
-              <Link href="#one-day" className="px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-sm font-serif font-bold tracking-wide flex items-center gap-2">
-                <Eye size={14} className="text-accent-teal" />
-                1-Day STEM Challenge
-              </Link>
-            </div>
-
-
+          {/* Navigator Strip */}
+          <div className="flex flex-nowrap justify-start lg:justify-center gap-4 mb-16 overflow-x-auto hide-scrollbar px-4 -mx-4 md:px-0 md:mx-0">
+            <Link href="#year-long" className="flex-shrink-0 whitespace-nowrap px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-sm font-serif font-bold tracking-wide flex items-center gap-2">
+              <Rocket size={14} className="text-accent-teal" />
+              RoboSTEM Thinking Lab
+            </Link>
+            <Link href="#friday-club" className="flex-shrink-0 whitespace-nowrap px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-sm font-serif font-bold tracking-wide flex items-center gap-2">
+              <Clock size={14} className="text-accent-teal" />
+              Friday STEM Challenge Club
+            </Link>
+            <Link href="#workshop" className="flex-shrink-0 whitespace-nowrap px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-sm font-serif font-bold tracking-wide flex items-center gap-2">
+              <Target size={14} className="text-accent-teal" />
+              10-Day STEM Tinkering Workshop
+            </Link>
+            <Link href="#one-day" className="flex-shrink-0 whitespace-nowrap px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-sm font-serif font-bold tracking-wide flex items-center gap-2">
+              <Eye size={14} className="text-accent-teal" />
+              1-Day STEM Challenge
+            </Link>
           </div>
         </div>
       </section>
@@ -219,7 +217,7 @@ export default function ProgramsPage() {
         <div className="absolute inset-0 lab-grid opacity-[0.03]" />
         <div className="container-fluid relative z-10">
           <div className="max-w-6xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-md rounded-[40px] border border-white/10 shadow-2xl overflow-hidden mb-32">
+            <div className="bg-white/5 backdrop-blur-md rounded-[40px] border border-white/10 shadow-2xl overflow-hidden mb-12">
               <div className="bg-primary-900 px-10 py-5 flex flex-wrap items-center justify-between text-white text-[11px] font-bold uppercase tracking-widest gap-4">
                 <div>Year-Long Program · Ages 8–15</div>
                 <div>Ages 8–15</div>
@@ -286,7 +284,7 @@ export default function ProgramsPage() {
             </div>
 
             {/* Stats Block Structure */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-40">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-0">
               {[
                 { label: '10 themes', val: 'One per month', sub: 'explored in depth', icon: Milestone },
                 { label: '2 sessions', val: 'Two weekends', sub: 'per month', icon: Clock },
