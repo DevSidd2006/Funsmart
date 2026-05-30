@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Sora, Inter, Kaushan_Script } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import './globals.css'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://funsmartism.in'
@@ -169,6 +170,7 @@ export default function RootLayout({
 
         <Footer />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
