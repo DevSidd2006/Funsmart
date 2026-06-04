@@ -5,6 +5,7 @@ const teamMembers = [
   {
     initials: 'VN',
     name: 'Vasant Nehete',
+    image: '/images/teams/Vasant Nehete.jpeg',
     role: 'Entrepreneur · Electronics hobbyist · Organic farming experimenter',
     bio: 'Has co-conducted 16+ workshops, Guides hands-on electronics explorations and helping children build confidence through trial-and-error exploration and practical electronics.',
   },

@@ -348,56 +348,111 @@ export default function ProgramsPage() {
           <div className="max-w-6xl mx-auto rounded-[3rem] overflow-hidden border border-neutral-100 shadow-huge bg-white">
             <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr]">
               <div className="p-10 md:p-16 lg:p-20">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent-teal/10 border border-accent-teal/20 text-accent-teal text-[10px] font-bold uppercase tracking-[0.2em] mb-6">
-                  Weekly · Full Academic Year · Ages 8–15
-                </div>
                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-6 leading-tight">
                   Friday STEM Challenge Club
                 </h2>
-                <p className="text-lg text-neutral-600 leading-relaxed font-light mb-10 max-w-2xl">
-                  Every Friday, one independent challenge. No instructions waiting. No fixed answer at the end.
-                  <br /><br />
-                  Children work through open-ended STEM problems designed to build consistent thinking habits across the year — outside school routine and without textbook scaffolding.
-                  <br /><br />
-                  <span className="text-sm text-neutral-500 italic">This is an add-on program, not a replacement for the main lab. It works well alongside the Annual Program or as a standalone starting point.</span>
-                </p>
+                <div className="space-y-10">
+                  <div className="space-y-6">
+                    <p className="text-lg text-neutral-600 leading-relaxed font-light max-w-2xl">
+                      <span className="font-semibold">Every Friday evening, one unfamiliar challenge.</span> No textbook. No instructions. No correct answer waiting.
+                    </p>
+                    <p className="text-base text-neutral-600 leading-relaxed font-light max-w-2xl">
+                      A <span className="font-semibold">year-long weekly program</span> where a small batch of 10 children face real thinking challenges every Friday — observed by facilitators and discussed with parents.
+                    </p>
+                    <p className="text-base text-neutral-600 leading-relaxed font-light max-w-2xl">
+                      Each session is 90 minutes. Every child in the batch gets the same challenge — sometimes solved individually, sometimes in pairs or groups of four, depending on what the challenge demands. The challenges are not connected to school syllabus or the monthly RoboSTEM Lab themes. They are designed to be genuinely unfamiliar every time.
+                    </p>
+                    <p className="text-base text-neutral-600 leading-relaxed font-light max-w-2xl">
+                      <span className="font-semibold">This is not a class.</span> There are no lectures, no notebooks, and no instructions to follow. Genuine thinking based on each child's own exposure, experience, and experimentation.
+                    </p>
+                  </div>
 
-                <div className="space-y-6">
-                  <h4 className="text-xs font-bold text-primary-500 uppercase tracking-widest opacity-80">
-                    What each Friday session involves:
-                  </h4>
-                  <ul className="space-y-3">
-                    {[
-                      'One unfamiliar challenge per session',
-                      'Independent problem-solving — children are not walked through steps',
-                      'Different domains across the year: logic, mechanics, space, design, electronics'
-                    ].map((item) => (
-                      <li key={item} className="flex items-start gap-3 text-sm text-neutral-700 font-medium">
-                        <div className="w-1.5 h-1.5 rounded-full bg-accent-teal mt-2 flex-shrink-0" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="space-y-6">
+                    <h4 className="text-xs font-bold text-primary-500 uppercase tracking-widest opacity-80">
+                      What children do each Friday:
+                    </h4>
+                    <ul className="space-y-3">
+                      {[
+                        'Face a new challenge they have never seen before',
+                        'Work through it without hints or fixed instructions',
+                        'Encounter mystery challenges, logic problems, and hands-on STEM challenges across the year',
+                        'Earn milestone rewards for consistent attendance',
+                        'Get priority access to scientist meets and FunSmartism edu-events'
+                      ].map((item) => (
+                        <li key={item} className="flex items-start gap-3 text-sm text-neutral-700 font-medium">
+                          <div className="w-1.5 h-1.5 rounded-full bg-accent-teal mt-2 flex-shrink-0" />
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="space-y-6">
+                    <h4 className="text-xs font-bold text-primary-500 uppercase tracking-widest opacity-80">
+                      What parents receive:
+                    </h4>
+                    <ul className="space-y-3">
+                      {[
+                        'Facilitators observe how each child approaches the challenge — not just whether they solved it.',
+                        'Parents can book a one-on-one observation discussion to understand what was noticed — how their child responded under pressure, whether they retry independently, how they handle uncertainty.',
+                        'First observation debrief is complimentary.'
+                      ].map((item) => (
+                        <li key={item} className="flex items-start gap-3 text-sm text-neutral-700 font-medium">
+                          <div className="w-1.5 h-1.5 rounded-full bg-accent-teal mt-2 flex-shrink-0" />
+                          {item.includes('complimentary') ? (
+                            <span className="font-semibold">{item}</span>
+                          ) : (
+                            item
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                    <p className="text-sm text-neutral-500 leading-relaxed">
+                      These conversations help parents understand when to step in and when to step back — with more clarity than a report card ever provides.
+                    </p>
+                  </div>
+
+                  <div className="rounded-[2rem] border border-neutral-100 bg-neutral-50 p-6">
+                    <p className="text-xs font-bold uppercase tracking-widest text-primary-500 mb-2">Enrolment</p>
+                    <p className="text-sm text-neutral-600 leading-relaxed">
+                      Batch size is limited to 10 children. Enrolment is for the full academic year — not drop-in. Once the batch is full, the next batch opens under revised terms.
+                    </p>
+                  </div>
                 </div>
               </div>
 
               <div className="bg-primary-500 text-white p-10 md:p-16 lg:p-20 flex flex-col justify-between">
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-[0.3em] text-accent-teal mb-4">Best for</p>
-                  <p className="text-3xl md:text-4xl font-serif font-bold leading-tight mb-6">
-                    Children who need consistent weekly practice thinking independently — not just during school terms.
-                  </p>
-                </div>
-
-                <div className="space-y-6">
-                  <div className="border-t border-white/10 pt-6">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-teal mb-1">Sessions</p>
-                    <p className="text-base font-serif font-bold text-white">Every Friday · Weekly · Ages 8–15</p>
+                <div className="space-y-8">
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-[0.3em] text-accent-teal mb-4">Program Details</p>
+                    <div className="space-y-4">
+                      {[
+                        { label: 'Sessions', value: 'Every Friday evening' },
+                        { label: 'Duration', value: '90 minutes per session' },
+                        { label: 'Format', value: 'Offline only · Bibwewadi, Pune' },
+                        { label: 'Batch size', value: '10 children' },
+                        { label: 'Ages', value: '8–15 years' },
+                        { label: 'Annual membership', value: '₹1,000' },
+                        { label: 'Next batch starts', value: '15 June 2025' },
+                        { label: 'Parent debrief', value: 'Bookable · First session FREE' },
+                      ].map((item) => (
+                        <div key={item.label} className="border-t border-white/10 pt-4">
+                          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-teal mb-1">{item.label}</p>
+                          <p className="text-sm font-serif font-bold text-white">{item.value}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
 
-                  <Link href="/schedule-visit" className="inline-flex w-full">
+                  <div className="border-t border-white/10 pt-6">
+                    <p className="text-sm text-white/80 italic leading-relaxed">
+                      Schools show what syllabus your child remembered. Activity programs show what they built. Friday Challenge Club shows how they think.
+                    </p>
+                  </div>
+
+                  <Link href="https://wa.me/919503919750" target="_blank" rel="noopener noreferrer" className="inline-flex w-full">
                     <Button size="lg" className="bg-accent-teal border-none text-white px-8 py-4 rounded-full font-bold shadow-huge shadow-accent-teal/30 w-full">
-                      Ask about Friday Club
+                      Reserve a Seat →
                     </Button>
                   </Link>
                 </div>
