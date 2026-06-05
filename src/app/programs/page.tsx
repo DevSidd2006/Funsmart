@@ -343,6 +343,75 @@ export default function ProgramsPage() {
         </div>
       </section>
 
+      {/* SECTION 04.5 — WHY OBSERVATION MATTERS */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-teal/5 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent-gold/5 rounded-full blur-[100px] pointer-events-none" />
+        
+        <div className="container-fluid max-w-4xl mx-auto relative z-10">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 leading-tight">
+              Why Observation Matters: <br className="md:hidden" />
+              <span className="text-accent-teal italic font-light"> The Invisible Gap</span>
+            </h2>
+          </div>
+
+          <div className="bg-[#FAF9F6] border border-neutral-100 p-8 md:p-14 rounded-[3rem] shadow-huge">
+            <p className="font-serif italic text-primary-500 text-xl md:text-2xl font-bold mb-8 text-center leading-relaxed">
+              "Your child's thinking pattern is invisible simply because you are rarely watching at the right moment."
+            </p>
+            
+            <div className="h-px bg-neutral-200/60 my-8 w-1/3 mx-auto" />
+            
+            <div className="space-y-6 text-neutral-600 text-base md:text-lg font-light leading-relaxed">
+              <p className="font-medium text-neutral-800">Think about it honestly:</p>
+              
+              <div className="grid grid-cols-1 gap-4 bg-white p-6 md:p-8 rounded-[2rem] border border-neutral-100 shadow-sm">
+                <div className="flex items-start gap-4">
+                  <div className="w-2 h-2 rounded-full bg-accent-teal mt-2 shrink-0" />
+                  <p><strong className="text-primary-500 font-semibold">When you are at work</strong>, your child is at school.</p>
+                </div>
+                <div className="flex items-start gap-4 border-t border-neutral-50 pt-4">
+                  <div className="w-2 h-2 rounded-full bg-accent-teal mt-2 shrink-0" />
+                  <p><strong className="text-primary-500 font-semibold">When you are in the market</strong>, your child is at tuition.</p>
+                </div>
+                <div className="flex items-start gap-4 border-t border-neutral-50 pt-4">
+                  <div className="w-2 h-2 rounded-full bg-accent-teal mt-2 shrink-0" />
+                  <p><strong className="text-primary-500 font-semibold">When you are in the kitchen</strong>, your child is doing homework or playing with friends.</p>
+                </div>
+              </div>
+
+              <p className="pt-2">
+                You are almost never in the same room when your child is actually stuck on something unfamiliar — trying to figure it out.
+              </p>
+              
+              <p className="text-lg md:text-xl font-bold text-primary-500 leading-snug">
+                That is the moment that reveals everything. And that is the moment most parents never get to see or realise.
+              </p>
+              
+              <div className="h-px bg-neutral-200/60 my-8" />
+              
+              <p className="italic text-neutral-700 font-medium pl-4 border-l-2 border-accent-teal">
+                "From where I stand — watching your child work through a real challenge — I see something completely different from what you assume is happening at home."
+              </p>
+
+              <div className="bg-[#1E2A44] text-white p-8 rounded-[2rem] shadow-huge mt-10 relative overflow-hidden">
+                <div className="absolute inset-0 lab-grid opacity-[0.03]" />
+                <div className="relative z-10 space-y-4">
+                  <h4 className="text-accent-teal text-xs font-bold uppercase tracking-widest">Cognitive Observation & Debrief</h4>
+                  <p className="text-white/80 leading-relaxed">
+                    We focus on <strong>frequent observation and frequent debrief</strong>. Not because your child needs to be fixed, but because how you respond at home is shaping their thinking habits as much as anything else.
+                  </p>
+                  <p className="text-accent-teal font-bold text-lg pt-2 border-t border-white/10">
+                    And you cannot adjust what you cannot see.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* SECTION 02.75 — FRIDAY STEM CHALLENGE CLUB */}
       <section className="py-24 bg-[#FAF9F6]" id="friday-club">
         <div className="container-fluid">
@@ -434,7 +503,7 @@ export default function ProgramsPage() {
                         { label: 'Batch size', value: '10 children' },
                         { label: 'Ages', value: '8–15 years' },
                         { label: 'Annual membership', value: '₹1,000' },
-                        { label: 'Next batch starts', value: '15 June 2025' },
+                        { label: 'Next batch starts', value: '15 Jun 2026' },
                         { label: 'Parent debrief', value: 'Bookable · First session FREE' },
                       ].map((item) => (
                         <div key={item.label} className="border-t border-white/10 pt-4">

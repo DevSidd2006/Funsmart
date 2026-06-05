@@ -37,7 +37,7 @@ export function HeroCarousel({ images, headline, hoverEffect = false }: HeroCaro
         fill
         priority
         sizes="(max-width: 1024px) 100vw, 50vw"
-        className={`object-cover transition-all duration-1000 ${
+        className={`object-cover object-top transition-all duration-1000 ${
           hoverEffect ? 'group-hover:scale-110' : ''
         } ${
           0 === currentImage
@@ -52,7 +52,7 @@ export function HeroCarousel({ images, headline, hoverEffect = false }: HeroCaro
           alt={headline}
           fill
           sizes="(max-width: 1024px) 100vw, 50vw"
-          className={`object-cover transition-all duration-1000 ${
+          className={`object-cover object-top transition-all duration-1000 ${
             hoverEffect ? 'group-hover:scale-110' : ''
           } ${
             idx + 1 === currentImage

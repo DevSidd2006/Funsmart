@@ -52,9 +52,6 @@ export function OurTeam() {
           <p className="text-lg md:text-xl text-neutral-500 font-light italic leading-relaxed">
             FunSmartism is founder-led, strengthened by experienced mentors, collaborators, and practitioner friends who contribute to workshops, challenge design, and real-world learning experiences.
           </p>
-          <p className="text-base md:text-lg text-neutral-400 mt-6 font-light">
-            Brief bios focused on what each team member notices about children — not their qualifications. We are obsessed with cognitive development.
-          </p>
         </div>
 
         {/* Desktop Grid */}

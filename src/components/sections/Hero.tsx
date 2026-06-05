@@ -65,7 +65,7 @@ export function Hero({ data }: { data?: any }) {
           </div>
 
           {/* Mobile: Small hero image below text */}
-          <div className="lg:hidden relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/10 mt-4">
+          <div className="lg:hidden relative w-full aspect-[4/3] sm:aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/10 mt-4">
             <HeroCarousel images={images} headline={headline} />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1E2A44]/60 via-transparent to-transparent pointer-events-none" />
           </div>
