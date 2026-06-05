@@ -11,7 +11,7 @@ const defaultTestimonials = [
       </>
     ),
     author: "Priya M.",
-    role: "Parent · 11-year-old · Thinking Reset Workshop",
+    role: "Parent · 11-year-old",
     initial: "PM",
   },
   {
@@ -21,7 +21,7 @@ const defaultTestimonials = [
       </>
     ),
     author: "Arvind M.",
-    role: "Parent · 13-year-old · Year-Long RoboSTEM Lab",
+    role: "Parent · 13-year-old",
     initial: "AM",
   },
   {
@@ -31,7 +31,7 @@ const defaultTestimonials = [
       </>
     ),
     author: "Sunita R.",
-    role: "Parent · 10-year-old · Thinking Reset Workshop",
+    role: "Parent · 10-year-old",
     initial: "SR",
   }
 ]

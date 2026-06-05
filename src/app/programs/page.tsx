@@ -4,6 +4,7 @@ import { Accordion } from '@/components/ui/Accordion'
 import { Check, ArrowRight, Calculator, Puzzle, Settings, Plane, Cpu, PenTool, Telescope, Laptop, Bot, Presentation, Milestone, Clock, Users, Brain, Anchor, Target, Rocket, Eye } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { WorkshopThemesMobile } from '@/components/sections/WorkshopThemesMobile'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://funsmartism.in'
 
@@ -123,20 +124,20 @@ export default function ProgramsPage() {
           </div>
 
           {/* Navigator Strip */}
-          <div className="flex flex-nowrap justify-start lg:justify-center gap-4 mb-16 overflow-x-auto hide-scrollbar px-4 -mx-4 md:px-0 md:mx-0">
-            <Link href="#year-long" className="flex-shrink-0 whitespace-nowrap px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-sm font-serif font-bold tracking-wide flex items-center gap-2">
+          <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-stretch md:items-center gap-4 mb-16 px-4 md:px-0">
+            <Link href="#year-long" className="whitespace-nowrap px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-sm font-serif font-bold tracking-wide flex items-center justify-center gap-2">
               <Rocket size={14} className="text-accent-teal" />
               RoboSTEM Thinking Lab
             </Link>
-            <Link href="#friday-club" className="flex-shrink-0 whitespace-nowrap px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-sm font-serif font-bold tracking-wide flex items-center gap-2">
+            <Link href="#friday-club" className="whitespace-nowrap px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-sm font-serif font-bold tracking-wide flex items-center justify-center gap-2">
               <Clock size={14} className="text-accent-teal" />
               Friday STEM Challenge Club
             </Link>
-            <Link href="#workshop" className="flex-shrink-0 whitespace-nowrap px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-sm font-serif font-bold tracking-wide flex items-center gap-2">
+            <Link href="#workshop" className="whitespace-nowrap px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-sm font-serif font-bold tracking-wide flex items-center justify-center gap-2">
               <Target size={14} className="text-accent-teal" />
               10-Day STEM Tinkering Workshop
             </Link>
-            <Link href="#one-day" className="flex-shrink-0 whitespace-nowrap px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-sm font-serif font-bold tracking-wide flex items-center gap-2">
+            <Link href="#one-day" className="whitespace-nowrap px-6 py-3 rounded-full bg-white/5 border border-white/10 hover:bg-white/10 transition-all text-sm font-serif font-bold tracking-wide flex items-center justify-center gap-2">
               <Eye size={14} className="text-accent-teal" />
               1-Day STEM Challenge
             </Link>
@@ -165,46 +166,46 @@ export default function ProgramsPage() {
             </Link>
 
             {/* Friday Club Card */}
-            <Link href="#friday-club" className="group relative overflow-hidden p-10 rounded-[2.5rem] bg-white border border-neutral-200 hover:border-accent-teal transition-all duration-500 shadow-sm hover:shadow-huge flex flex-col h-full">
-              <div className="absolute top-0 left-0 w-full h-2 bg-accent-teal" />
-              <div className="inline-flex px-3 py-1 bg-accent-teal/10 text-accent-teal rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 self-start">
+            <Link href="#friday-club" className="group relative overflow-hidden p-10 rounded-[2.5rem] bg-white border border-neutral-200 hover:border-primary-500 transition-all duration-500 shadow-sm hover:shadow-huge flex flex-col h-full">
+              <div className="absolute top-0 left-0 w-full h-2 bg-primary-500" />
+              <div className="inline-flex px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 self-start">
                 Weekly Club
               </div>
               <h3 className="text-xl font-serif font-bold text-primary-500 mb-2">Friday STEM Challenge Club</h3>
               <p className="text-neutral-500 text-sm mb-8 leading-relaxed flex-grow">Weekly sessions every Friday to build consistent thinking habits across the year.</p>
               <div className="flex items-center justify-between mt-auto">
                 <div className="flex items-center gap-2 text-primary-500 font-bold text-xs">
-                  Ages 8–15 <span className="text-accent-teal opacity-30">|</span> <span className="flex items-center gap-1 group-hover:gap-2 transition-all">↓ See details</span>
+                  Ages 8–15 <span className="text-primary-400 opacity-30">|</span> <span className="flex items-center gap-1 group-hover:gap-2 transition-all">↓ See details</span>
                 </div>
               </div>
             </Link>
 
             {/* 10-Day Workshop Card */}
-            <Link href="#workshop" className="group relative overflow-hidden p-10 rounded-[2.5rem] bg-white border border-neutral-200 hover:border-accent-teal transition-all duration-500 shadow-sm hover:shadow-huge flex flex-col h-full">
-              <div className="absolute top-0 left-0 w-full h-2 bg-accent-teal" />
-              <div className="inline-flex px-3 py-1 bg-accent-teal/10 text-accent-teal rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 self-start">
+            <Link href="#workshop" className="group relative overflow-hidden p-10 rounded-[2.5rem] bg-white border border-neutral-200 hover:border-primary-500 transition-all duration-500 shadow-sm hover:shadow-huge flex flex-col h-full">
+              <div className="absolute top-0 left-0 w-full h-2 bg-primary-500" />
+              <div className="inline-flex px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 self-start">
                 Vacation Program
               </div>
               <h3 className="text-xl font-serif font-bold text-primary-500 mb-2">10-Day STEM Tinkering Workshop</h3>
               <p className="text-neutral-500 text-sm mb-8 leading-relaxed flex-grow">Ten days. Ten themes. One new world every day during vacations.</p>
               <div className="flex items-center justify-between mt-auto">
                 <div className="flex items-center gap-2 text-primary-500 font-bold text-xs">
-                  Ages 8–15 <span className="text-accent-teal opacity-30">|</span> <span className="flex items-center gap-1 group-hover:gap-2 transition-all">↓ See details</span>
+                  Ages 8–15 <span className="text-primary-400 opacity-30">|</span> <span className="flex items-center gap-1 group-hover:gap-2 transition-all">↓ See details</span>
                 </div>
               </div>
             </Link>
 
             {/* 1-Day Gateway Card */}
-            <Link href="#one-day" className="group relative overflow-hidden p-10 rounded-[2.5rem] bg-white border border-neutral-200 hover:border-accent-teal transition-all duration-500 shadow-sm hover:shadow-huge flex flex-col h-full">
-              <div className="absolute top-0 left-0 w-full h-2 bg-neutral-400" />
-              <div className="inline-flex px-3 py-1 bg-neutral-100 text-neutral-600 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 self-start">
+            <Link href="#one-day" className="group relative overflow-hidden p-10 rounded-[2.5rem] bg-white border border-neutral-200 hover:border-primary-500 transition-all duration-500 shadow-sm hover:shadow-huge flex flex-col h-full">
+              <div className="absolute top-0 left-0 w-full h-2 bg-primary-500" />
+              <div className="inline-flex px-3 py-1 bg-primary-500/10 text-primary-500 rounded-full text-[10px] font-bold uppercase tracking-widest mb-6 self-start">
                 Trial Day
               </div>
               <h3 className="text-xl font-serif font-bold text-primary-500 mb-2">1-Day STEM Challenge</h3>
               <p className="text-neutral-500 text-sm mb-8 leading-relaxed flex-grow">A single hands-on challenge where parents observe — not instruct.</p>
               <div className="flex items-center justify-between mt-auto">
                 <div className="flex items-center gap-2 text-primary-500 font-bold text-xs">
-                  Ages 8–15 <span className="text-neutral-300 opacity-30">|</span> <span className="flex items-center gap-1 group-hover:gap-2 transition-all">↓ See details</span>
+                  Ages 8–15 <span className="text-primary-400 opacity-30">|</span> <span className="flex items-center gap-1 group-hover:gap-2 transition-all">↓ See details</span>
                 </div>
               </div>
             </Link>
@@ -529,7 +530,6 @@ export default function ProgramsPage() {
                           Join Parent Community
                         </Button>
                       </Link>
-                      <span className="text-[9px] text-neutral-400 font-sans text-center block">Sessions: 10 consecutive days · Vacation batches only · Ages 8–15</span>
                     </div>
                   </div>
                 </div>
@@ -574,17 +574,7 @@ export default function ProgramsPage() {
               </div>
 
               {/* Mobile Swipe Cards */}
-              <div className="md:hidden flex gap-6 overflow-x-auto pb-12 px-6 -mx-6 snap-x hide-scrollbar">
-                {workshopThemes.map((t, i) => (
-                  <div key={i} className="flex-shrink-0 w-[320px] snap-center bg-white border border-neutral-100 p-12 rounded-[3rem] shadow-2xl">
-                    <div className="w-14 h-14 rounded-2xl bg-accent-teal/10 flex items-center justify-center text-accent-teal mb-10">
-                      <Milestone size={28} />
-                    </div>
-                    <h4 className="text-xl font-serif font-bold text-primary-500 mb-6">{t.theme}</h4>
-                    <p className="text-neutral-500 leading-relaxed font-light italic">{t.desc}</p>
-                  </div>
-                ))}
-              </div>
+              <WorkshopThemesMobile themes={workshopThemes} />
             </div>
 
             {/* Project Grid Visual Reinforcement */}
@@ -682,7 +672,6 @@ export default function ProgramsPage() {
                           Schedule a Visit →
                         </Button>
                       </Link>
-                      <span className="text-[9px] text-neutral-400 font-sans text-center block mt-2">Sessions: Single day · Weekend slots · Ages 8–15</span>
                     </div>
                   </div>
                 </div>
@@ -701,28 +690,30 @@ export default function ProgramsPage() {
           </div>
 
           <div className="max-w-5xl mx-auto rounded-[3rem] overflow-hidden border border-neutral-100 shadow-huge relative">
-            <table className="w-full text-left bg-white relative z-10 border-collapse">
-              <thead>
-                <tr className="bg-[#1E2A44] text-white">
-                  <th className="py-8 px-8 text-xs font-bold uppercase tracking-[0.2em]"></th>
-                  <th className="py-8 px-4 text-xs font-bold uppercase tracking-[0.1em] text-center text-accent-teal">RoboSTEM Lab</th>
-                  <th className="py-8 px-4 text-xs font-bold uppercase tracking-[0.1em] text-center">Friday Club</th>
-                  <th className="py-8 px-4 text-xs font-bold uppercase tracking-[0.1em] text-center">10-Day Workshop</th>
-                  <th className="py-8 px-4 text-xs font-bold uppercase tracking-[0.1em] text-center">1-Day Challenge</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-neutral-100">
-                {comparisonData.map((row, i) => (
-                  <tr key={i} className="hover:bg-accent-surface transition-all">
-                    <td className="py-8 px-8 text-sm font-bold text-primary-500 font-serif">{row.feature}</td>
-                    <td className="py-8 px-4 text-sm text-primary-500 font-medium text-center">{row.lab}</td>
-                    <td className="py-8 px-4 text-sm text-neutral-500 font-light text-center">{row.friday}</td>
-                    <td className="py-8 px-4 text-sm text-neutral-500 font-light text-center">{row.yearLong}</td>
-                    <td className="py-8 px-4 text-sm text-neutral-500 font-light text-center">{row.workshop}</td>
+            <div className="overflow-x-auto hide-scrollbar">
+              <table className="w-full min-w-[800px] text-left bg-white relative z-10 border-collapse">
+                <thead>
+                  <tr className="bg-[#1E2A44] text-white">
+                    <th className="sticky left-0 z-20 bg-[#1E2A44] py-8 px-8 text-xs font-bold uppercase tracking-[0.2em]">Feature</th>
+                    <th className="py-8 px-4 text-xs font-bold uppercase tracking-[0.1em] text-center text-accent-teal">RoboSTEM Lab</th>
+                    <th className="py-8 px-4 text-xs font-bold uppercase tracking-[0.1em] text-center">Friday Club</th>
+                    <th className="py-8 px-4 text-xs font-bold uppercase tracking-[0.1em] text-center">10-Day Workshop</th>
+                    <th className="py-8 px-4 text-xs font-bold uppercase tracking-[0.1em] text-center">1-Day Challenge</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody className="divide-y divide-neutral-100">
+                  {comparisonData.map((row, i) => (
+                    <tr key={i} className="hover:bg-accent-surface transition-all group">
+                      <td className="sticky left-0 z-10 bg-white group-hover:bg-accent-surface py-8 px-8 text-sm font-bold text-primary-500 font-serif border-r border-neutral-100">{row.feature}</td>
+                      <td className="py-8 px-4 text-sm text-primary-500 font-medium text-center">{row.lab}</td>
+                      <td className="py-8 px-4 text-sm text-neutral-500 font-light text-center">{row.friday}</td>
+                      <td className="py-8 px-4 text-sm text-neutral-500 font-light text-center">{row.yearLong}</td>
+                      <td className="py-8 px-4 text-sm text-neutral-500 font-light text-center">{row.workshop}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
           <p className="mt-16 text-center text-primary-500 font-medium text-lg max-w-4xl mx-auto leading-relaxed">
             Not sure where to start? The 1-Day Challenge is the lowest-commitment entry point. Most families move to the Annual Program after that.

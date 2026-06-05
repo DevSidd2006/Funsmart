@@ -20,10 +20,10 @@ const experts = [
     note: 'Discussions on scientific temperament and building a culture of deep thinking from a young age.',
   },
   {
-    name: 'Pramod Kale',
+    name: 'Pramod Khandekar',
     img: '/images/scientists/pramod-kale.jpg',
     pos: 'object-center',
-    role: 'Scientist & Innovator',
+    role: 'Scientist of NII',
     note: 'A discussion that reinforced the idea: if you can explain it simply, you truly understand it.',
   },
   {
@@ -166,7 +166,7 @@ export function InspirationSection() {
             <div className="relative aspect-[4/3]">
               <Image
                 src="/images/gallery/scientist-interaction.jpg"
-                alt="Expert Interaction"
+                alt="Pramod Kale"
                 fill
                 sizes="20vw"
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
@@ -174,7 +174,10 @@ export function InspirationSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4">
                 <p className="text-[11px] font-bold text-white uppercase tracking-[0.18em] leading-tight text-center drop-shadow-lg">
-                  Expert Interaction
+                  Pramod Kale
+                </p>
+                <p className="text-[10px] text-accent-teal text-center mt-0.5 font-medium opacity-90">
+                  Former Director of ISRO
                 </p>
               </div>
             </div>

@@ -1,5 +1,9 @@
+'use client'
+
+import { useState } from 'react'
 import { SectionReveal } from '../ui/SectionReveal'
 import Image from 'next/image'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const teamMembers = [
   {
@@ -33,6 +37,11 @@ const teamMembers = [
 ]
 
 export function OurTeam() {
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  const nextMember = () => setCurrentIndex((prev) => (prev + 1) % teamMembers.length)
+  const prevMember = () => setCurrentIndex((prev) => (prev - 1 + teamMembers.length) % teamMembers.length)
+
   return (
     <section className="py-16 md:py-24 bg-white relative overflow-hidden" id="mentors">
       <SectionReveal className="container-fluid">
@@ -48,10 +57,10 @@ export function OurTeam() {
           </p>
         </div>
 
-        {/* Mobile Swipe / Desktop Grid */}
-        <div className="flex overflow-x-auto md:grid md:grid-cols-4 gap-6 pb-12 px-6 -mx-6 md:px-0 md:mx-0 snap-x hide-scrollbar">
+        {/* Desktop Grid */}
+        <div className="hidden md:grid md:grid-cols-4 gap-6 pb-12">
           {teamMembers.map((item) => (
-            <div key={item.name} className="flex-shrink-0 w-[320px] md:w-auto snap-center group rounded-[2.5rem] border border-neutral-100 bg-neutral-50 p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
+            <div key={item.name} className="group rounded-[2.5rem] border border-neutral-100 bg-neutral-50 p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col">
               {item.image ? (
                 <div className="w-20 h-20 rounded-full overflow-hidden mb-8 shadow-sm relative shrink-0">
                   <Image src={item.image} alt={item.name} fill className="object-cover" />
@@ -76,6 +85,51 @@ export function OurTeam() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Mobile View with next/prev buttons */}
+        <div className="flex flex-col md:hidden items-center px-6">
+          <div className="w-full max-w-[320px] rounded-[2.5rem] border border-neutral-100 bg-neutral-50 p-8 shadow-sm transition-all flex flex-col min-h-[420px]">
+            {teamMembers[currentIndex].image ? (
+              <div className="w-20 h-20 rounded-full overflow-hidden mb-8 shadow-sm relative shrink-0">
+                <Image src={teamMembers[currentIndex].image!} alt={teamMembers[currentIndex].name} fill className="object-cover" />
+              </div>
+            ) : (
+              <div className="w-20 h-20 rounded-full bg-accent-teal/10 text-accent-teal flex items-center justify-center mb-8 font-serif font-bold text-2xl tracking-wider shadow-sm shrink-0">
+                {teamMembers[currentIndex].initials}
+              </div>
+            )}
+            <h3 className="text-3xl font-serif font-bold text-primary-500 mb-3 leading-snug">
+              {teamMembers[currentIndex].name}
+            </h3>
+            <p className="text-sm text-neutral-500 font-medium mb-8 leading-relaxed">
+              {teamMembers[currentIndex].role}
+            </p>
+            
+            <div className="mt-auto">
+              <div className="h-px w-12 bg-neutral-200 mb-6 transition-colors" />
+              <p className="text-primary-500/80 leading-relaxed text-sm font-medium italic">
+                "{teamMembers[currentIndex].bio}"
+              </p>
+            </div>
+          </div>
+
+          <div className="flex gap-4 mt-8">
+            <button 
+              onClick={prevMember}
+              className="w-12 h-12 rounded-full border border-neutral-200 flex items-center justify-center text-primary-500 hover:bg-neutral-50 transition-colors shadow-sm"
+              aria-label="Previous team member"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <button 
+              onClick={nextMember}
+              className="w-12 h-12 rounded-full border border-neutral-200 flex items-center justify-center text-primary-500 hover:bg-neutral-50 transition-colors shadow-sm"
+              aria-label="Next team member"
+            >
+              <ChevronRight size={20} />
+            </button>
+          </div>
         </div>
       </SectionReveal>
     </section>

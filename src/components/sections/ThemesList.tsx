@@ -48,17 +48,24 @@ export function ThemesList() {
             </div>
           </div>
 
-          <div className="lg:col-span-5 relative aspect-video md:aspect-square rounded-[2rem] overflow-hidden group">
-            <Image 
-              src="/images/discovery-real.jpg" 
-              alt="Hands-on learning at FunSmartism" 
-              fill 
-              className="object-cover transition-transform duration-700 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary-900/40 to-transparent" />
-            <Link href="/gallery" className="absolute bottom-6 right-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-[10px] font-bold text-primary-500 uppercase tracking-widest shadow-lg hover:bg-white transition-colors">
-              View Gallery →
-            </Link>
+          <div className="lg:col-span-5 flex flex-col">
+            <div className="relative w-full aspect-video md:aspect-square rounded-[2rem] overflow-hidden group">
+              <Image 
+                src="/images/discovery-real.jpg" 
+                alt="Hands-on learning at FunSmartism" 
+                fill 
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary-900/40 to-transparent" />
+              <Link href="/gallery" className="hidden md:flex absolute bottom-6 right-6 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full text-[10px] font-bold text-primary-500 uppercase tracking-widest shadow-lg hover:bg-white transition-colors">
+                View Gallery →
+              </Link>
+            </div>
+            <div className="flex md:hidden justify-center mt-6">
+              <Link href="/gallery" className="bg-white border border-neutral-200 px-6 py-3 rounded-full text-[11px] font-bold text-primary-500 uppercase tracking-widest shadow-sm hover:bg-neutral-50 transition-colors">
+                View Gallery →
+              </Link>
+            </div>
           </div>
         </div>
       </SectionReveal>

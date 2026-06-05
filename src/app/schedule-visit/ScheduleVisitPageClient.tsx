@@ -282,6 +282,7 @@ export function ScheduleVisitPageClient() {
                     <ul className="space-y-4">
                       {[
                         'Year-long RoboSTEM Lab',
+                        'Friday STEM Challenge Club',
                         '10-Day Thinking RESET',
                         '1-day STEM Challenge',
                         'Edu-events & Exhibitions'

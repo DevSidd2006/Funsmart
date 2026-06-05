@@ -62,6 +62,9 @@ export function GalleryPageClient() {
             </button>
             <button
               onClick={() => setActiveTab('news')}
+              id="news-room-button"
+              name="news-room-button"
+              aria-label="News Room Button"
               className={`flex-1 px-2 py-3 md:py-3.5 rounded-full text-[11px] md:text-sm font-bold tracking-widest uppercase transition-all duration-300 ${activeTab === 'news' ? 'bg-primary-500 text-white shadow-md' : 'text-neutral-500 hover:text-primary-500'}`}
             >
               News Room
