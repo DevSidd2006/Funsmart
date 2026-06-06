@@ -108,7 +108,7 @@ export function Footer({ data }: { data?: any }) {
         </div>
 
         <div className="pt-12 border-t border-neutral-100 flex justify-center items-center">
-          <p className="text-sm text-neutral-500 font-sans tracking-tighter">© 2026 Funsmartism Intelligent Centre</p>
+          <p className="text-sm text-neutral-500 font-sans tracking-tighter">© 2026 FunSmartism Intelligence Center</p>
         </div>
       </div>
     </footer>

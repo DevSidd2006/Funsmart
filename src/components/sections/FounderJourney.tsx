@@ -37,13 +37,13 @@ export function FounderJourney() {
               
               <div className="text-base md:text-lg text-neutral-600 leading-relaxed font-light space-y-6">
                 <p>
-                  After years in software development and hands-on parenting, Dipali went deeper into child development through formal learning experiences in both <strong className="font-bold text-[#1E2A44]">Pune</strong> and the <strong className="font-bold text-[#1E2A44]">USA</strong>.
+                  After years in software development and hands-on parenting, Dipali went deeper into child development through formal learning experiences in both Pune and the USA.
                 </p>
                 <p>
-                  What stood out was simple: the right environment can completely change how a child observes, persists, and solves.
+                  What stood out was simple: <strong className="font-bold text-[#1E2A44]">the right environment can completely change how a child observes, persists, and solves.</strong>
                 </p>
                 <p>
-                  That insight led her to build FunSmartism in <strong className="font-bold text-[#1E2A44]">Pune</strong> — a scientist-inspired RoboSTEM environment where real problem-solving becomes visible and parents learn how to support independent thinking in everyday life.
+                  That insight led her to build FunSmartism in Pune — a scientist-inspired RoboSTEM environment where real problem-solving becomes visible and parents learn how to support independent thinking in everyday life.
                 </p>
               </div>
             </div>

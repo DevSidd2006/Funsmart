@@ -7,7 +7,6 @@ import Link from 'next/link'
 
 export function Hero({ data }: { data?: any }) {
   const headline = "Beyond Rote Learning. Beyond Marks."
-  const subline = "A hands-on RoboSTEM thinking lab where children build projects, solve unfamiliar challenges, interact with scientists and innovators, and learn through real-world experimentation."
 
   const images = [
     "/images/hero-1.jpg",
@@ -36,9 +35,10 @@ export function Hero({ data }: { data?: any }) {
               Beyond <span className="whitespace-nowrap">Rote Learning.</span> Beyond Marks.
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#B7E3DD] mb-8 md:mb-12 max-w-2xl leading-relaxed font-light opacity-90">
-              {subline}
-            </p>
+            <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#B7E3DD] mb-8 md:mb-12 max-w-2xl leading-relaxed font-light opacity-90 space-y-2">
+              <p className="text-white font-medium">For children aged 8–15 in Pune.</p>
+              <p>A hands-on RoboSTEM lab where children build projects, experiment, and solve real challenges - interact with scientists and innovators, while mentors observe how they think and help parents understand it.</p>
+            </div>
 
             <div className="flex flex-col gap-5 w-full max-w-xl">
               <div className="flex flex-col gap-3">

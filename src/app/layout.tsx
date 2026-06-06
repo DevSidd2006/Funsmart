@@ -143,6 +143,7 @@ export const metadata: Metadata = {
 
 import { NavbarWrapper } from '@/components/ui/NavbarWrapper'
 import { Footer } from '@/components/sections/Footer'
+import { FloatingWhatsApp } from '@/components/ui/FloatingWhatsApp'
 
 export default function RootLayout({
   children,
@@ -169,6 +170,7 @@ export default function RootLayout({
         </main>
 
         <Footer />
+        <FloatingWhatsApp />
         <Analytics />
         <SpeedInsights />
       </body>
