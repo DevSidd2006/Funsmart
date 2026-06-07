@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from 'next/image'
 import dynamic from 'next/dynamic'
 import { Hero } from '../components/sections/Hero'
 import { TheRealProblem } from '../components/sections/TheRealProblem'
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     url: siteUrl,
     siteName: 'FunSmartism',
     images: [
-      { url: `${siteUrl}/og-image-real.jpg`, width: 1200, height: 630, alt: 'FunSmartism RoboSTEM Thinking Lab Pune' },
+      { url: `${siteUrl}/og-image-home.jpg`, width: 1200, height: 630, alt: 'FunSmartism RoboSTEM Thinking Lab Pune' },
     ],
     locale: 'en_IN',
     type: 'website',
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
     title: 'FunSmartism | Hands-On RoboSTEM Thinking Lab, Pune',
     description:
       'A hands-on RoboSTEM thinking lab in Pune where children build, experiment, and develop independent problem-solving skills.',
-    images: [`${siteUrl}/og-image-real.jpg`],
+    images: [`${siteUrl}/og-image-home.jpg`],
   },
 }
 
@@ -61,19 +62,26 @@ export default function HomePage() {
       {/* Section 02 — THE REAL PROBLEM */}
       <TheRealProblem />
 
-      {/* Section 03 — WHAT STUDENTS DO */}
-      <WhatStudentsDo />
+      <div className="w-full relative h-[30vh] sm:h-[40vh] md:h-[60vh] overflow-hidden hidden sm:block">
+        <Image src="/images/gallery/teaser-7.jpg" fill alt="Children working on a STEM bridge" className="object-cover" />
+      </div>
 
-
-      {/* Section 04 — SCIENTIST & EXPERT ECOSYSTEM */}
+      {/* Section 03 — SCIENTIST & EXPERT ECOSYSTEM */}
       <EduEvents />
+
+      <div className="w-full relative h-[30vh] sm:h-[40vh] md:h-[60vh] overflow-hidden">
+        <Image src="/images/gallery/robotics-review.jpg" fill alt="Student reviewing a robotics project" className="object-cover" />
+      </div>
+
+      {/* Section 07.6 — INSPIRATION */}
+      <InspirationSection />
+
+      {/* Section 04 — WHAT STUDENTS DO */}
+      <WhatStudentsDo />
 
 
       {/* Section Themes List */}
       <ThemesList />
-
-      {/* Section 07.6 — INSPIRATION */}
-      <InspirationSection />
 
       {/* Section 08 — OUTCOMES */}
       <Outcomes />

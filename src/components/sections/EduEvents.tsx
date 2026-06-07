@@ -1,4 +1,5 @@
 import { Grid, Users, MessageSquare } from 'lucide-react'
+import Link from 'next/link'
 import { SectionReveal } from '../ui/SectionReveal'
 
 export function EduEvents() {
@@ -24,9 +25,12 @@ export function EduEvents() {
             Children Don't Just Learn Concepts. <br />
             <span className="text-accent-teal italic font-light opacity-90">They Interact with Actual Experts <br className="hidden md:block" /> Building The Future.</span>
           </h2>
-          <p className="text-lg md:text-xl text-[#B7E3DD] max-w-2xl leading-relaxed font-light mb-10">
+          <p className="text-lg md:text-xl text-[#B7E3DD] max-w-2xl leading-relaxed font-light mb-6">
             Throughout the academic year, FunSmartism hosts special edu-events where students interact with:
           </p>
+          <Link href="/about" className="inline-block text-accent-teal hover:text-white transition-colors text-sm font-bold uppercase tracking-widest mb-10">
+            Learn more about how this shapes the FunSmartism approach →
+          </Link>
 
           <div className="flex flex-wrap justify-center gap-4 mb-12">
             {people.map((person, i) => (

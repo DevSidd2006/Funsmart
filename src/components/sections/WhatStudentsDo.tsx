@@ -7,6 +7,9 @@ export function WhatStudentsDo() {
     <section className="py-16 bg-white relative overflow-hidden">
       <SectionReveal className="container-fluid max-w-6xl mx-auto">
         <div className="text-center mb-20 max-w-4xl mx-auto">
+          <p className="text-xl md:text-2xl font-serif font-bold text-accent-teal mb-8 italic">
+            No other robotics or STEM class in Pune offers this. Most offer kits and certificates. We offer access to the people who actually do science.
+          </p>
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8 leading-tight">
             What Happens Inside FunSmartism?
           </h2>

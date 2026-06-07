@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       'Learn why FunSmartism was founded — a thinking lab built to give children real opportunities to build, experiment, and solve unfamiliar challenges.',
     url: `${siteUrl}/about`,
     siteName: 'FunSmartism',
-    images: [{ url: `${siteUrl}/og-image-real.jpg`, width: 1200, height: 630, alt: 'FunSmartism About' }],
+    images: [{ url: `${siteUrl}/og-image-about.jpg`, width: 1200, height: 630, alt: 'FunSmartism About' }],
     locale: 'en_IN',
     type: 'website',
   },
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: 'About FunSmartism | Our Story, Beliefs & Team',
     description:
       'Learn why FunSmartism was founded — a thinking lab built to give children real opportunities to build, experiment, and solve.',
-    images: [`${siteUrl}/og-image-real.jpg`],
+    images: [`${siteUrl}/og-image-about.jpg`],
   },
 }
 
@@ -79,11 +79,14 @@ export default function AboutPage() {
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-accent-teal/10 rounded-full blur-[120px] -translate-y-1/3 translate-x-1/3" />
         <div className="container-fluid relative z-10 text-center">
           <SectionReveal className="max-w-5xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-serif font-bold text-white mb-8 leading-tight tracking-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-serif font-bold text-white mb-6 leading-tight tracking-tight">
               We started FunSmartism because <br className="hidden md:block" />
               we kept seeing something <br className="hidden md:block" />
               <span className="text-accent-teal italic font-light">schools weren't designed to notice.</span>
             </h1>
+            <p className="text-xl md:text-2xl lg:text-3xl font-serif font-light text-white mb-8 max-w-4xl mx-auto leading-snug">
+              And because we believed children deserved more than kits and certificates — they deserved access to the people who actually think, build, and discover.
+            </p>
             <p className="text-base md:text-lg lg:text-xl text-[#B7E3DD] font-light leading-relaxed max-w-4xl mx-auto">
               Children often behave very differently when they are given real opportunities to build, explore, experiment, and solve unfamiliar challenges actively. <br />
               <span className="font-medium text-white">FunSmartism was created to provide more of those environments.</span>
@@ -120,8 +123,8 @@ export default function AboutPage() {
               {
                 Icon: Eye,
                 number: '03',
-                title: 'Parents deserve more visibility.',
-                body: 'A report card alone cannot show how a child thinks when there are no instructions waiting.',
+                title: <>Parents deserve <Link href="/programs" className="underline hover:text-accent-teal transition-colors">more visibility</Link></>,
+                body: 'than a report card alone can provide.',
               },
             ].map(({ Icon, number, title, body }, i) => (
               <div
@@ -152,85 +155,11 @@ export default function AboutPage() {
         </SectionReveal>
       </section>
 
-      {/* Why We Built This — VERTICAL FLOW REDESIGN */}
-      <section className="py-16 md:py-24 bg-[#FAF9F6] relative overflow-hidden">
-        <SectionReveal className="container-fluid max-w-4xl mx-auto relative z-10">
-          
-          {/* 1. Heading */}
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 leading-tight">
-              Why We Built This <br />
-              <span className="text-accent-teal italic font-light">Environment.</span>
-            </h2>
-          </div>
-          
-          <div className="space-y-12">
-            {/* 2. Opening Paragraph */}
-            <div className="bg-white p-8 md:p-12 rounded-[32px] border border-neutral-100 shadow-sm text-center">
-              <p className="text-xl md:text-2xl text-neutral-600 leading-relaxed font-light">
-                Again and again, we noticed children becoming deeply engaged the moment learning became <span className="text-primary-500 font-medium">hands-on, exploratory, and real.</span>
-              </p>
-            </div>
 
-            {/* 3. Items Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {[
-                'A robot to test.',
-                'A puzzle to solve.',
-                'A structure to redesign.',
-                'A question without one fixed answer.'
-              ].map((item, i) => (
-                <div key={i} className="bg-white px-8 py-6 rounded-2xl border border-neutral-100 shadow-sm flex items-center gap-4 transition-transform hover:-translate-y-1">
-                  <div className="w-2 h-2 rounded-full bg-accent-teal" />
-                  <span className="text-primary-500 font-bold font-serif">{item}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* 4 & 5. Observation & Parent Voice */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-              <div className="space-y-6">
-                <p className="text-lg text-neutral-600 leading-relaxed font-light">
-                  Children who rarely showed participation in standard classroom settings often became highly active inside these environments.
-                </p>
-                <p className="text-primary-500 font-medium italic">
-                  Parents noticed the difference too. Many would say:
-                </p>
-              </div>
-              <div className="bg-accent-teal/10 p-10 rounded-[32px] border border-accent-teal/20 text-center relative">
-                <span className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent-teal text-white px-4 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">
-                  Parent Voice
-                </span>
-                <p className="text-3xl md:text-4xl font-serif font-bold text-accent-teal italic leading-tight">
-                  “I haven’t seen my child this engaged in a long time.”
-                </p>
-              </div>
-            </div>
-
-            {/* 7, 8 & 9. The Foundation & The Lab */}
-            <div className="space-y-8 pt-8">
-              <div className="text-center space-y-4">
-                <p className="text-lg text-neutral-500 font-light">That repeated pattern became the foundation of FunSmartism.</p>
-                <div className="flex flex-wrap justify-center gap-4 text-xs font-bold uppercase tracking-widest text-neutral-400">
-                  <span className="bg-neutral-100 px-4 py-2 rounded-full">Not as a tuition class</span>
-                  <span className="bg-neutral-100 px-4 py-2 rounded-full">Not just common Robotics class</span>
-                </div>
-              </div>
-
-              <div className="bg-primary-500 p-10 md:p-14 rounded-[40px] text-white shadow-huge shadow-primary-500/20 text-center relative overflow-hidden group">
-                <div className="absolute inset-0 lab-grid opacity-10 group-hover:opacity-20 transition-opacity" />
-                <p className="text-xl md:text-2xl font-light leading-relaxed relative z-10 text-white/90">
-                  But as a <span className="font-bold text-accent-teal">hands-on RoboSTEM thinking lab</span> where children actively participate in learning through experimentation, projects, challenges, and real-world exploration.
-                </p>
-              </div>
-            </div>
-          </div>
-        </SectionReveal>
-      </section>
 
       <FounderJourney />
 
-      <OurTeam />
+      {/* <OurTeam /> */}
 
       <RealSessionMoments />
 

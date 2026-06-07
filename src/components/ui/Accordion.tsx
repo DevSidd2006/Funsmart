@@ -10,41 +10,24 @@ interface AccordionProps {
 }
 
 export function Accordion({ items }: AccordionProps) {
-  const [openId, setOpenId] = useState<string | null>(null)
-
-  return (
-    <div className="space-y-3">
+    <div className="space-y-4">
       {items.map((item) => (
-        <div key={item.id}>
-          <button
-            onClick={() => setOpenId(openId === item.id ? null : item.id)}
-            className={cn(
-              'w-full px-5 py-4 rounded-base border border-neutral-200',
-              'bg-neutral-50 hover:bg-neutral-100 transition-colors duration-base',
-              'flex items-center justify-between text-left',
-              'focus:outline-none focus:shadow-focus-ring'
-            )}
-          >
-            <span className="text-base font-semibold text-neutral-900">
+        <details key={item.id} className="group rounded-[1.5rem] bg-white border border-neutral-200 shadow-sm overflow-hidden">
+          <summary className="cursor-pointer list-none flex items-center justify-between p-6 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500">
+            <span className="text-lg font-serif font-bold text-primary-500 pr-4">
               {item.question}
             </span>
-            <ChevronDown
-              size={20}
-              className={cn(
-                'text-primary-400 transition-transform duration-300 flex-shrink-0',
-                openId === item.id && 'rotate-180'
-              )}
-            />
-          </button>
-
-          {openId === item.id && (
-            <div className="px-5 py-5 rounded-base bg-white border border-neutral-200 border-t-2 border-t-neutral-200 mt-0">
-              <p className="text-base text-neutral-700 leading-relaxed">
-                {item.answer}
-              </p>
+            <div className="w-8 h-8 rounded-full bg-neutral-50 flex items-center justify-center flex-shrink-0 group-open:bg-primary-50 transition-colors">
+              <ChevronDown
+                size={18}
+                className="text-primary-400 group-open:text-primary-500 group-open:rotate-180 transition-transform duration-300"
+              />
             </div>
-          )}
-        </div>
+          </summary>
+          <div className="px-6 pb-6 pt-2 text-neutral-600 leading-relaxed font-light border-t border-neutral-100">
+            {item.answer}
+          </div>
+        </details>
       ))}
     </div>
   )

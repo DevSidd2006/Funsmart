@@ -51,7 +51,7 @@ export function Programs() {
       badgeColor: 'bg-accent-teal/20 text-accent-teal',
       desc: 'Intensive vacation program. One new STEM theme every day — projects, experiments, and hands-on challenges across robotics, space science, electronics, and more.',
       cta: 'Explore Workshop',
-      batch: 'Next batch: [Vacation season]',
+      batch: 'Next batch: Upcoming Vacation Batch',
     },
     {
       id: 'one-day',
@@ -61,9 +61,9 @@ export function Programs() {
       color: 'bg-[#1E2A44] text-white',
       accentColor: 'text-accent-teal',
       badgeColor: 'bg-accent-teal/20 text-accent-teal',
-      desc: 'A one-day hands-on challenge where parents observe — not instruct. Children face unfamiliar problems with no hints and no fixed answers, while you watch how they actually think. Uncertainty handling - how they react without ready answers.',
+      desc: 'A one-day hands-on challenge where parents observe — not instruct. Children face unfamiliar problems with no hints and no fixed answers, while you watch how they actually think.',
       cta: 'Book Trial Day',
-      batch: 'New batch : {check schedule}',
+      batch: 'New batch : Contact for schedule',
     },
   ]
 

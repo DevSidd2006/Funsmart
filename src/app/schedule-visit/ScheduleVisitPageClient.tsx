@@ -75,10 +75,7 @@ export function ScheduleVisitPageClient() {
                 Most Parents Understand FunSmartism Properly Only After meeting and discussion.
               </h2>
               <div className="space-y-6 text-lg text-neutral-600 leading-relaxed font-light">
-                <p>
-                  Photos and websites can explain the activities.
-                  But the real difference becomes visible when parents experience the environment themselves
-                </p>
+
                 <div className="bg-neutral-50 p-8 rounded-3xl border border-neutral-100">
                   <p className="font-medium text-primary-500 mb-4 uppercase tracking-widest text-xs opacity-70">They see:</p>
                   <ul className="space-y-3">
@@ -103,8 +100,8 @@ export function ScheduleVisitPageClient() {
             </div>
             <div className="relative aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl border border-neutral-200">
                <Image 
-                 src="/images/parents-lounge.jpg" 
-                 alt="Parents relaxing in the comfortable lounge area while observing their children at FunSmartism" 
+                 src="/images/gallery/stem-bridge-challenge.jpg" 
+                 alt="The physical RoboSTEM lab environment where children build and solve real challenges." 
                  fill 
                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                  className="object-cover"
@@ -125,7 +122,7 @@ export function ScheduleVisitPageClient() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { title: 'Explore The Learning Environment', desc: 'See current RoboSTEM themes, hands-on project list, tools, challenge setups, and take-home project’s kit for students.' },
-              { title: 'Understand The Learning Approach', desc: 'Learn how FunSmartism combines guided exploration, experimentation, STEM challenges, and real-world project-based learning.' },
+              { title: 'Understand The Learning Approach', desc: 'Learn how FunSmartism combines scientist-inspired challenges, direct interaction with real scientists and innovators, and observation-driven parent guidance — three things no other program in Pune offers together.' },
               { title: 'Discuss Your Child’s Interests', desc: 'Share what your child enjoys, struggles with, or gets curious about — and understand how programs may fit best.' },
               { title: 'Observe The Session Culture', desc: 'Depending on the timing, families may also get opportunities to observe how children participate during real activities and challenges.' }
             ].map((card, i) => (
@@ -262,7 +259,7 @@ export function ScheduleVisitPageClient() {
                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8">Visit Information</h2>
                 <div className="space-y-4">
                   {[
-                    { label: 'Location', val: 'Bibwewadi, Pune (Exact location shared after confirmation)', icon: MapPin },
+                    { label: 'Location', val: 'Navkar Residency, Next to Bibwewadi Police Station, Bibwewadi, Pune 411037', icon: MapPin },
                     { label: 'Session Format', val: 'Weekend-based sessions across the academic year.', icon: Calendar },
                     { label: 'Age Group', val: 'Typically for children aged 8–15 years.', icon: Users },
                   ].map((item, i) => (
@@ -281,15 +278,21 @@ export function ScheduleVisitPageClient() {
                     <h4 className="text-sm font-bold uppercase tracking-widest text-accent-teal mb-6">Programs Include</h4>
                     <ul className="space-y-4">
                       {[
-                        'Year-long RoboSTEM Lab',
-                        'Friday STEM Challenge Club',
-                        '10-Day Thinking RESET',
-                        '1-day STEM Challenge',
-                        'Edu-events & Exhibitions'
+                        { name: 'Year-long RoboSTEM Lab', href: '/programs#year-long' },
+                        { name: 'Friday STEM Challenge Club', href: '/programs#friday-club' },
+                        { name: '10-Day Thinking RESET', href: '/programs#workshop' },
+                        { name: '1-day STEM Challenge', href: '/programs#one-day' },
+                        { name: 'Edu-events & Exhibitions', href: null }
                       ].map((item, i) => (
                         <li key={i} className="flex gap-3 items-center text-sm font-light text-white/80">
                           <div className="w-1 h-1 rounded-full bg-accent-teal" />
-                          {item}
+                          {item.href ? (
+                            <Link href={item.href} className="hover:text-accent-teal transition-colors">
+                              {item.name}
+                            </Link>
+                          ) : (
+                            <span>{item.name}</span>
+                          )}
                         </li>
                       ))}
                     </ul>

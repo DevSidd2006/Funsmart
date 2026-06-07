@@ -83,7 +83,11 @@ export function Footer({ data }: { data?: any }) {
             <h4 className="text-xs font-bold uppercase tracking-widest text-primary-500 mb-8">The Thinking Lab</h4>
             <div className="space-y-4 text-sm text-neutral-600 leading-relaxed">
               <p className="font-medium text-primary-900">{address}</p>
-              <p>{phone} <br /> {email}</p>
+              <p>
+                <a href={`tel:${phone.replace(/[^0-9+]/g, '')}`} className="hover:text-accent-teal transition-colors">{phone}</a>
+                <br />
+                <a href={`mailto:${email}`} className="hover:text-accent-teal transition-colors">{email}</a>
+              </p>
               <div className="pt-4">
                 <p className="text-mono text-accent-teal uppercase tracking-widest text-[12px] font-bold mb-1">Hours</p>
                 <p className="text-sm whitespace-nowrap">{hours}</p>

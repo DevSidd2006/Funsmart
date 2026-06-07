@@ -31,35 +31,32 @@ export function Hero({ data }: { data?: any }) {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
           {/* Left: Text Content */}
           <div className="lg:col-span-7">
+            <p className="text-accent-teal font-bold tracking-widest uppercase text-sm md:text-base mb-4">
+              Beyond Rote Learning. Beyond Marks.
+            </p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-serif font-bold text-white mb-5 md:mb-8 leading-[1.05] text-balanced">
-              Beyond <span className="whitespace-nowrap">Rote Learning.</span> Beyond Marks.
+              A Hands-On RoboSTEM <span className="whitespace-nowrap">Thinking Lab</span> in Pune.
             </h1>
 
             <div className="text-base sm:text-lg md:text-xl lg:text-2xl text-[#B7E3DD] mb-8 md:mb-12 max-w-2xl leading-relaxed font-light opacity-90 space-y-2">
-              <p className="text-white font-medium">For children aged 8–15 in Pune.</p>
-              <p>A hands-on RoboSTEM lab where children build projects, experiment, and solve real challenges - interact with scientists and innovators, while mentors observe how they think and help parents understand it.</p>
+              <p className="text-white font-medium">For children aged 8–15.</p>
+              <p>A place where children build projects, experiment, and solve real challenges - interact with scientists and innovators, while mentors observe how they think and help parents understand it.</p>
             </div>
 
-            <div className="flex flex-col gap-5 w-full max-w-xl">
-              <div className="flex flex-col gap-3">
+            <div className="flex flex-col md:flex-row gap-4 w-full max-w-2xl mt-4">
+              <div className="w-full md:w-auto">
                 <Link href="/schedule-visit" className="w-full">
                   <Button
                     size="lg"
-                    className="px-8 md:px-12 py-5 md:py-6 shadow-2xl shadow-accent-teal/20 bg-accent-teal hover:bg-[#28A392] text-white border-none w-full rounded-xl font-bold text-base md:text-lg"
+                    className="px-8 md:px-12 py-5 md:py-6 shadow-2xl shadow-accent-teal/20 bg-accent-teal hover:bg-[#28A392] text-white border-none w-full md:w-auto rounded-xl font-bold text-base md:text-lg"
                   >
                     Schedule a Visit
                   </Button>
                 </Link>
-                <p className="text-sm text-white/60 leading-relaxed pl-2 border-l-2 border-accent-teal/30">
-                  Visit us, understand the learning approach, explore current themes, and discover which program fits your child best.
-                </p>
               </div>
 
-              <div className="flex flex-col gap-3 mt-2 md:mt-4">
+              <div className="hidden md:block w-full md:w-auto">
                 <JoinCommunity size="lg" />
-                <p className="text-sm text-white/60 leading-relaxed pl-2 border-l-2 border-white/20">
-                  Get updates about STEM challenges, workshops, edu-events, and upcoming sessions before deciding long-term.
-                </p>
               </div>
             </div>
           </div>

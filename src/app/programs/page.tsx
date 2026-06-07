@@ -9,7 +9,7 @@ import { WorkshopThemesMobile } from '@/components/sections/WorkshopThemesMobile
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://funsmartism.in'
 
 export const metadata: Metadata = {
-  title: 'Programs | FunSmartism',
+  title: 'Programs',
   description:
     'Explore FunSmartism programs for children aged 8–15 in Pune. Choose from the Friday STEM Challenge Club, 10-Day Thinking Reset Workshop, Year-Long RoboSTEM Thinking Lab, 1-Day STEM Challenge, or Edu-Events.',
   keywords: [
@@ -23,21 +23,21 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: `${siteUrl}/programs` },
   openGraph: {
-    title: 'Programs | FunSmartism',
+    title: 'Programs',
     description:
       'Explore FunSmartism programs for children aged 8–15 in Pune. Friday STEM Challenge Club, RoboSTEM Thinking Lab, 10-Day Reset Workshop, and more.',
     url: `${siteUrl}/programs`,
     siteName: 'FunSmartism',
-    images: [{ url: `${siteUrl}/og-image-real.jpg`, width: 1200, height: 630, alt: 'FunSmartism Programs' }],
+    images: [{ url: `${siteUrl}/og-image-programs.jpg`, width: 1200, height: 630, alt: 'FunSmartism Programs' }],
     locale: 'en_IN',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Programs | FunSmartism',
+    title: 'Programs',
     description:
       'Explore FunSmartism programs for children aged 8–15 in Pune. Friday STEM Challenge Club, RoboSTEM Thinking Lab, 10-Day Reset Workshop, and more.',
-    images: [`${siteUrl}/og-image-real.jpg`],
+    images: [`${siteUrl}/og-image-programs.jpg`],
   },
 }
 
@@ -106,8 +106,25 @@ const faqs = [
 ]
 
 export default function ProgramsPage() {
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer
+      }
+    }))
+  }
+
   return (
     <div className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* SECTION 01 — HERO */}
       <section className="pt-28 md:pt-44 pb-20 md:pb-24 bg-[#1E2A44] text-white relative overflow-hidden">
         <div className="absolute inset-0 lab-grid opacity-[0.04]" />
@@ -119,7 +136,7 @@ export default function ProgramsPage() {
               <span className="text-accent-teal italic font-light opacity-90">One way of thinking about children.</span>
             </h1>
             <p className="text-base md:text-lg lg:text-xl text-[#B7E3DD] mb-10 md:mb-12 max-w-2xl mx-auto leading-relaxed font-light italic">
-              These programs use real materials, scientist-inspired challenges, and live observation of how your child thinks. The difference is depth, pace, and continuity.
+              These programs combine <Link href="/about" className="underline hover:text-accent-teal transition-colors">scientist-inspired hands-on challenges</Link>, direct interaction with real scientists and innovators, and observation of how your child thinks — shared with parents. No other program in Pune offers all three together.
             </p>
           </div>
 
@@ -157,7 +174,7 @@ export default function ProgramsPage() {
                 Year-Long Program
               </div>
               <h3 className="text-xl font-serif font-bold text-primary-500 mb-2">RoboSTEM Thinking Lab</h3>
-              <p className="text-neutral-500 text-sm mb-8 leading-relaxed flex-grow">2 weekend sessions per month across 10 themes. Our flagship annual lab.</p>
+              <p className="text-neutral-500 text-sm mb-8 leading-relaxed flex-grow">2 weekend sessions per month. Scientist-inspired hands-on challenges across 10 themes — robotics, space science, electronics, design thinking, and more. Children build, test, and solve real problems. Facilitators observe how they think and share those observations with parents monthly. Year-long students get priority access to edu-events with real scientists and innovators.</p>
               <div className="flex items-center justify-between mt-auto">
                 <div className="flex items-center gap-2 text-primary-500 font-bold text-xs">
                   Ages 8–15 <span className="text-primary-400 opacity-30">|</span> <span className="flex items-center gap-1 group-hover:gap-2 transition-all">↓ See details</span>
@@ -227,6 +244,15 @@ export default function ProgramsPage() {
                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-8 md:mb-10 leading-[1.1]">
                   RoboSTEM Thinking Lab — Annual Program
                 </h2>
+                
+                <div className="w-full relative aspect-video rounded-[2rem] overflow-hidden mb-12 border border-white/10 shadow-2xl">
+                  <Image 
+                    src="/images/gallery/lab-moment-1.jpg" 
+                    alt="Children working on a complex multi-session project — something that looks like it took time" 
+                    fill 
+                    className="object-cover" 
+                  />
+                </div>
                 <p className="text-lg md:text-xl text-[#B7E3DD] mb-16 max-w-3xl leading-relaxed font-light italic">
                   One theme each month. Two weekend sessions to go deeper. Real hands-on projects, monthly STEM challenges, and regular parent discussions on how your child approaches problems.
                   <br /><br />
@@ -236,7 +262,13 @@ export default function ProgramsPage() {
                 <div className="rounded-[2.5rem] border border-white/10 bg-white/5 p-10 mb-12">
                   <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-accent-teal mb-3">Sessions</p>
                   <p className="text-3xl md:text-4xl font-serif font-bold text-white mb-2">2 weekend sessions per month</p>
-                  <p className="text-[#B7E3DD] text-base font-light">10 months · Ages 8–15</p>
+                  <p className="text-[#B7E3DD] text-base font-light mb-6">10 months · Ages 8–15</p>
+                  
+                  <div className="border-t border-white/10 pt-6">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-accent-gold mb-3">Annual Program Pricing</p>
+                    <p className="text-2xl md:text-3xl font-serif font-bold text-white">₹24,000 <span className="text-sm font-light text-white/60">/ year</span></p>
+                    <p className="text-xs text-white/60 mt-2 font-medium">(Monthly and term-wise payment options available upon request)</p>
+                  </div>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
@@ -364,29 +396,14 @@ export default function ProgramsPage() {
             <div className="h-px bg-neutral-200/60 my-8 w-1/3 mx-auto" />
             
             <div className="space-y-6 text-neutral-600 text-base md:text-lg font-light leading-relaxed">
-              <p className="font-medium text-neutral-800">Think about it honestly:</p>
-              
-              <div className="grid grid-cols-1 gap-4 bg-white p-6 md:p-8 rounded-[2rem] border border-neutral-100 shadow-sm">
-                <div className="flex items-start gap-4">
-                  <div className="w-2 h-2 rounded-full bg-accent-teal mt-2 shrink-0" />
-                  <p><strong className="text-primary-500 font-semibold">When you are at work</strong>, your child is at school.</p>
-                </div>
-                <div className="flex items-start gap-4 border-t border-neutral-50 pt-4">
-                  <div className="w-2 h-2 rounded-full bg-accent-teal mt-2 shrink-0" />
-                  <p><strong className="text-primary-500 font-semibold">When you are in the market</strong>, your child is at tuition.</p>
-                </div>
-                <div className="flex items-start gap-4 border-t border-neutral-50 pt-4">
-                  <div className="w-2 h-2 rounded-full bg-accent-teal mt-2 shrink-0" />
-                  <p><strong className="text-primary-500 font-semibold">When you are in the kitchen</strong>, your child is doing homework or playing with friends.</p>
-                </div>
+              <div className="bg-white p-6 md:p-8 rounded-[2rem] border border-neutral-100 shadow-sm">
+                <p className="leading-relaxed">
+                  When you are at work, your child is at school. When you are in the kitchen, your child is doing homework. You are almost never there when your child is actually stuck — trying to figure something out alone.
+                </p>
               </div>
 
-              <p className="pt-2">
-                You are almost never in the same room when your child is actually stuck on something unfamiliar — trying to figure it out.
-              </p>
-              
               <p className="text-lg md:text-xl font-bold text-primary-500 leading-snug">
-                That is the moment that reveals everything. And that is the moment most parents never get to see or realise.
+                That moment reveals everything. Most parents never get to see it.
               </p>
               
               <div className="h-px bg-neutral-200/60 my-8" />
@@ -400,11 +417,16 @@ export default function ProgramsPage() {
                 <div className="relative z-10 space-y-4">
                   <h4 className="text-accent-teal text-xs font-bold uppercase tracking-widest">Cognitive Observation & Debrief</h4>
                   <p className="text-white/80 leading-relaxed">
-                    We focus on <strong>frequent observation and frequent debrief</strong>. Not because your child needs to be fixed, but because how you respond at home is shaping their thinking habits as much as anything else.
+                    <strong>Frequent observation. Frequent debrief.</strong> Not because your child needs fixing — but because how you respond at home shapes their thinking habits too.
                   </p>
                   <p className="text-accent-teal font-bold text-lg pt-2 border-t border-white/10">
                     And you cannot adjust what you cannot see.
                   </p>
+                  <div className="pt-4">
+                    <Link href="/about#real-moments" className="inline-flex items-center gap-2 text-white text-sm font-bold uppercase tracking-widest hover:text-accent-teal transition-colors">
+                      Read the stories behind this approach →
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
@@ -421,6 +443,16 @@ export default function ProgramsPage() {
                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-6 leading-tight">
                   Friday STEM Challenge Club
                 </h2>
+
+                <div className="w-full relative aspect-video rounded-[2rem] overflow-hidden mb-10 shadow-xl border border-neutral-100">
+                  <Image 
+                    src="/images/gallery/teaser-3.jpg" 
+                    alt="Single child or small group working on a logic or mystery challenge — focused, no instructions visible" 
+                    fill 
+                    className="object-cover" 
+                  />
+                </div>
+
                 <div className="space-y-10">
                   <div className="space-y-6">
                     <p className="text-lg text-neutral-600 leading-relaxed font-light max-w-2xl">
@@ -548,6 +580,15 @@ export default function ProgramsPage() {
                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8 md:mb-10 leading-tight">
                   10-Day STEM Tinkering Workshop
                 </h2>
+                
+                <div className="w-full relative aspect-video rounded-[2rem] overflow-hidden mb-10 shadow-xl border border-neutral-100">
+                  <Image 
+                    src="/images/gallery/workshop-mass.jpg" 
+                    alt="High energy — multiple children at different stations, variety of materials on tables" 
+                    fill 
+                    className="object-cover" 
+                  />
+                </div>
                 <p className="text-lg md:text-xl text-neutral-500 mb-16 max-w-3xl leading-relaxed font-light">
                   Ten days. Ten themes. One new world every day.
                   <br /><br />
@@ -689,6 +730,15 @@ export default function ProgramsPage() {
                   1-Day STEM Challenge <br className="hidden md:block" />
                   <span className="text-2xl text-neutral-500 font-light italic mt-2 block">Experience FunSmartism Before Joining</span>
                 </h2>
+
+                <div className="w-full relative aspect-video rounded-[2rem] overflow-hidden mb-12 border border-neutral-100 shadow-xl">
+                  <Image 
+                    src="/images/gallery/teaser-6.jpg" 
+                    alt="Parent visibly watching from the side while child works — this communicates the unique observation USP instantly" 
+                    fill 
+                    className="object-cover" 
+                  />
+                </div>
                 <p className="text-lg md:text-xl text-neutral-500 mb-16 max-w-3xl leading-relaxed font-light">
                   A single hands-on session where children face an unfamiliar STEM challenge — while parents observe, not instruct.
                   <br /><br />
@@ -783,6 +833,11 @@ export default function ProgramsPage() {
                 </tbody>
               </table>
             </div>
+          </div>
+          <div className="mt-12 text-center">
+            <Link href="/about" className="inline-block text-primary-500 font-bold uppercase tracking-widest text-sm hover:text-accent-teal transition-colors">
+              "Want to understand the thinking behind these programs?" Read our story →
+            </Link>
           </div>
           <p className="mt-16 text-center text-primary-500 font-medium text-lg max-w-4xl mx-auto leading-relaxed">
             Not sure where to start? The 1-Day Challenge is the lowest-commitment entry point. Most families move to the Annual Program after that.

@@ -1,4 +1,5 @@
 import { Award, Sparkles, BookOpen } from 'lucide-react'
+import Link from 'next/link'
 import Image from 'next/image'
 import { SectionReveal } from '../ui/SectionReveal'
 
@@ -43,7 +44,7 @@ export function FounderJourney() {
                   What stood out was simple: <strong className="font-bold text-[#1E2A44]">the right environment can completely change how a child observes, persists, and solves.</strong>
                 </p>
                 <p>
-                  That insight led her to build FunSmartism in Pune — a scientist-inspired RoboSTEM environment where real problem-solving becomes visible and parents learn how to support independent thinking in everyday life.
+                  That insight led her to build FunSmartism in Pune — a <Link href="/programs" className="underline hover:text-accent-teal transition-colors">scientist-inspired RoboSTEM environment</Link> where real problem-solving becomes visible and parents learn how to support independent thinking in everyday life.
                 </p>
               </div>
             </div>
@@ -57,7 +58,7 @@ export function FounderJourney() {
                 <div className="relative aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl border border-neutral-100">
                   <Image 
                     src="/images/dipali-real.jpg" 
-                    alt="Dipali Akolkar - Founder of FunSmartism"
+                    alt="Dipali Akolkar inside the FunSmartism RoboSTEM lab environment, interacting with tools and materials — not a corporate headshot"
                     fill
                     className="object-cover transition-transform duration-1000 group-hover:scale-105"
                   />

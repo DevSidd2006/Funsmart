@@ -21,7 +21,7 @@ const experts = [
   },
   {
     name: 'Pramod Khandekar',
-    img: '/images/scientists/pramod-kale.jpg',
+    img: '/images/gallery/scientist-interaction.jpg',
     pos: 'object-center',
     role: 'Scientist of NII',
     note: 'A discussion that reinforced the idea: if you can explain it simply, you truly understand it.',
@@ -104,13 +104,11 @@ export function InspirationSection() {
           className="text-center mb-16 max-w-3xl mx-auto"
         >
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-white leading-tight mb-6">
-            Experts & Mentors Who{' '}
-            <span className="text-accent-teal italic font-light">Inspired FunSmartism</span>
+            Children Here Don't Just Learn About Scientists.{' '}
+            <span className="text-accent-teal italic font-light">They Meet Them.</span>
           </h2>
           <p className="text-lg text-white/70 leading-relaxed font-light">
-            FunSmartism draws inspiration from conversations, meetings, and learning moments with some
-            of India's most accomplished scientists, educators, and innovators. These interactions
-            continue to shape how we think about curiosity, building, and teaching children to think.
+            Throughout the year, FunSmartism hosts edu-events where children interact directly with scientists, researchers, and innovators from organisations including ISRO, DRDO, and IISER. Year-long students get priority access — asking questions, showcasing projects, and experiencing real innovation culture firsthand.
           </p>
         </motion.div>
 
@@ -165,7 +163,7 @@ export function InspirationSection() {
           >
             <div className="relative aspect-[4/3]">
               <Image
-                src="/images/gallery/scientist-interaction.jpg"
+                src="/images/scientists/pramod-kale.jpg"
                 alt="Pramod Kale"
                 fill
                 sizes="20vw"

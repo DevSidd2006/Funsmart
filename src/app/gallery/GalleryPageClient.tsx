@@ -76,6 +76,11 @@ export function GalleryPageClient() {
       {/* SECTION 3 — GALLERY CATEGORIES / MASONRY GRID */}
       <section className="py-16">
         <div className="container-fluid max-w-7xl mx-auto px-6 md:px-12">
+          {activeTab === 'news' && (
+            <p className="text-center text-lg md:text-xl text-neutral-600 font-medium max-w-3xl mx-auto mb-12 italic">
+              "FunSmartism has been featured by media, invited by schools, and recognised by innovation organisations across Pune."
+            </p>
+          )}
           <motion.div
             layout
             className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 md:gap-8 auto-rows-[280px] md:auto-rows-[340px] ${activeTab === 'news' ? 'lg:auto-rows-[480px]' : 'lg:auto-rows-[340px]'}`}
@@ -216,11 +221,16 @@ export function GalleryPageClient() {
           <p className="text-xl text-neutral-600 mb-12 font-light leading-relaxed max-w-2xl mx-auto">
             A visit helps parents experience the learning environment, session culture, and student participation much more clearly.
           </p>
-          <Link href="/schedule-visit">
-            <Button size="lg" className="bg-accent-teal border-none text-white px-16 py-6 shadow-huge shadow-accent-teal/30 rounded-full font-bold">
-              Schedule a Visit
-            </Button>
-          </Link>
+          <div className="flex flex-col items-center gap-6">
+            <Link href="/schedule-visit">
+              <Button size="lg" className="bg-accent-teal border-none text-white px-16 py-6 shadow-huge shadow-accent-teal/30 rounded-full font-bold">
+                Schedule a Visit
+              </Button>
+            </Link>
+            <Link href="/programs" className="text-sm font-bold text-primary-500 hover:text-accent-teal transition-colors uppercase tracking-widest">
+              Interested in what you see? Explore programs →
+            </Link>
+          </div>
         </div>
       </section>
     </div>

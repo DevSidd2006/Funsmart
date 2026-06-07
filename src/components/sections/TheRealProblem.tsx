@@ -48,27 +48,7 @@ export function TheRealProblem() {
         </div>
 
         <div className="max-w-4xl mb-20 text-center mx-auto">
-          <div className="bg-white p-8 md:p-10 rounded-[2rem] shadow-sm border border-neutral-100 text-left mb-8 relative overflow-hidden">
-             <div className="absolute top-0 right-0 w-32 h-32 bg-accent-teal/5 rounded-full blur-3xl" />
-             <p className="text-xl md:text-2xl text-primary-500 font-bold mb-8">But children also need environments where they can:</p>
-             <ul className="grid grid-cols-1 md:grid-cols-2 gap-5">
-               {[
-                 'Get inspired by experts closely',
-                 'build things with their own hands',
-                 'test ideas independently even after mistake',
-                 'solve unfamiliar problems',
-                 'retry after mistakes',
-                 'explore how real systems work',
-                 'ask deeper questions to find solutions',
-                 'think beyond step-by-step instructions'
-               ].map((item, i) => (
-                 <li key={i} className="flex items-start gap-4 text-base md:text-lg text-neutral-600 font-medium">
-                   <div className="w-2.5 h-2.5 rounded-full bg-accent-teal mt-2 flex-shrink-0" />
-                   <span className="leading-relaxed">{item}</span>
-                 </li>
-               ))}
-             </ul>
-          </div>
+
 
           <div className="bg-[#1E2A44] p-8 md:p-16 rounded-[2rem] shadow-huge text-center mb-12 relative overflow-hidden">
              <div className="absolute inset-0 lab-grid opacity-[0.04]" />
