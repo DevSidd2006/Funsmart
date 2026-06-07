@@ -10,6 +10,7 @@ interface AccordionProps {
 }
 
 export function Accordion({ items }: AccordionProps) {
+  return (
     <div className="space-y-4">
       {items.map((item) => (
         <details key={item.id} className="group rounded-[1.5rem] bg-white border border-neutral-200 shadow-sm overflow-hidden">
