@@ -174,7 +174,7 @@ export default function ProgramsPage() {
                 Year-Long Program
               </div>
               <h3 className="text-xl font-serif font-bold text-primary-500 mb-2">RoboSTEM Thinking Lab</h3>
-              <p className="text-neutral-500 text-sm mb-8 leading-relaxed flex-grow">2 weekend sessions per month. Scientist-inspired hands-on challenges across 10 themes — robotics, space science, electronics, design thinking, and more. Children build, test, and solve real problems. Facilitators observe how they think and share those observations with parents monthly. Year-long students get priority access to edu-events with real scientists and innovators.</p>
+              <p className="text-neutral-500 text-sm mb-8 leading-relaxed flex-grow">2 weekend sessions per month. Scientist-inspired hands-on challenges across 10 themes, combined with regular parent observations.</p>
               <div className="flex items-center justify-between mt-auto">
                 <div className="flex items-center gap-2 text-primary-500 font-bold text-xs">
                   Ages 8–15 <span className="text-primary-400 opacity-30">|</span> <span className="flex items-center gap-1 group-hover:gap-2 transition-all">↓ See details</span>
@@ -189,7 +189,7 @@ export default function ProgramsPage() {
                 Weekly Club
               </div>
               <h3 className="text-xl font-serif font-bold text-primary-500 mb-2">Friday STEM Challenge Club</h3>
-              <p className="text-neutral-500 text-sm mb-8 leading-relaxed flex-grow">Weekly sessions every Friday to build consistent thinking habits across the year.</p>
+              <p className="text-neutral-500 text-sm mb-8 leading-relaxed flex-grow">Weekly challenges every Friday to build consistent thinking habits across the year.</p>
               <div className="flex items-center justify-between mt-auto">
                 <div className="flex items-center gap-2 text-primary-500 font-bold text-xs">
                   Ages 8–15 <span className="text-primary-400 opacity-30">|</span> <span className="flex items-center gap-1 group-hover:gap-2 transition-all">↓ See details</span>
@@ -254,21 +254,17 @@ export default function ProgramsPage() {
                   />
                 </div>
                 <p className="text-lg md:text-xl text-[#B7E3DD] mb-16 max-w-3xl leading-relaxed font-light italic">
-                  One theme each month. Two weekend sessions to go deeper. Real hands-on projects, monthly STEM challenges, and regular parent discussions on how your child approaches problems.
+                  One theme each month. Two weekend sessions to go deeper. Real hands-on projects, monthly Scientist inspired STEM challenges, and regular parent discussions on how your child approaches problems.
+                  <br /><br />
+                  Real inspiration from real scientist and innovators.
                   <br /><br />
                   This is not a tuition class. Children are guided — not given fixed answers. Facilitators observe how each child thinks during activities and share those observations with parents monthly — so you can support independent thinking at home without over-helping.
                 </p>
 
                 <div className="rounded-[2.5rem] border border-white/10 bg-white/5 p-10 mb-12">
-                  <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-accent-teal mb-3">Sessions</p>
-                  <p className="text-3xl md:text-4xl font-serif font-bold text-white mb-2">2 weekend sessions per month</p>
-                  <p className="text-[#B7E3DD] text-base font-light mb-6">10 months · Ages 8–15</p>
-                  
-                  <div className="border-t border-white/10 pt-6">
-                    <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-accent-gold mb-3">Annual Program Pricing</p>
-                    <p className="text-2xl md:text-3xl font-serif font-bold text-white">₹24,000 <span className="text-sm font-light text-white/60">/ year</span></p>
-                    <p className="text-xs text-white/60 mt-2 font-medium">(Monthly and term-wise payment options available upon request)</p>
-                  </div>
+                  <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-accent-gold mb-3">Annual Program Pricing</p>
+                  <p className="text-2xl md:text-3xl font-serif font-bold text-white">₹24,000 <span className="text-sm font-light text-white/60">/ year</span></p>
+                  <p className="text-xs text-white/60 mt-2 font-medium">(Quarterly and term-wise payment options available upon request)</p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
@@ -651,7 +647,7 @@ export default function ProgramsPage() {
               <div className="text-center mb-20">
                 <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-6">The 10 themes</h3>
                 <p className="text-xl text-neutral-500 font-light italic max-w-3xl mx-auto leading-relaxed">
-                  Every day, a new world. We observe how your child approaches the unfamiliar—not just what they produce.
+                  A new world. Your child approaches the unfamiliar across the themes, We observe how their approaches are -not just what they prepare.
                 </p>
               </div>
 

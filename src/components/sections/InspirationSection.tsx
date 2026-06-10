@@ -94,6 +94,16 @@ export function InspirationSection() {
       <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-primary-600/25 rounded-full blur-[150px] translate-y-1/3 -translate-x-1/4" />
 
       <div className="container-fluid max-w-7xl mx-auto relative z-10">
+        
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-5xl mx-auto mb-16 relative aspect-video rounded-3xl overflow-hidden shadow-2xl border border-white/10"
+        >
+          <Image src="/images/gallery/robotics-review.jpg" fill alt="Student reviewing a robotics project" className="object-cover" />
+        </motion.div>
 
         {/* Header */}
         <motion.div 
