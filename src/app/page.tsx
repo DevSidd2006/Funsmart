@@ -62,16 +62,12 @@ export default function HomePage() {
       {/* Section 02 — THE REAL PROBLEM */}
       <TheRealProblem />
 
-      <div className="w-full relative h-[30vh] sm:h-[40vh] md:h-[60vh] overflow-hidden hidden sm:block">
-        <Image src="/images/gallery/teaser-7.jpg" fill alt="Children working on a STEM bridge" className="object-cover" />
-      </div>
+
 
       {/* Section 03 — SCIENTIST & EXPERT ECOSYSTEM */}
       <EduEvents />
 
-      <div className="w-full relative h-[30vh] sm:h-[40vh] md:h-[60vh] overflow-hidden">
-        <Image src="/images/gallery/robotics-review.jpg" fill alt="Student reviewing a robotics project" className="object-cover" />
-      </div>
+
 
       {/* Section 07.6 — INSPIRATION */}
       <InspirationSection />
