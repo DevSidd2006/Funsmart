@@ -9,6 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: '/programs', priority: 0.9, changefreq: 'weekly' as const },
     { path: '/gallery', priority: 0.8, changefreq: 'weekly' as const },
     { path: '/schedule-visit', priority: 0.9, changefreq: 'weekly' as const },
+    { path: '/blog', priority: 0.9, changefreq: 'weekly' as const },
+    { path: '/blog/robotics-class-vs-thinking-lab', priority: 0.8, changefreq: 'monthly' as const },
   ]
 
   return routes.map((route) => ({

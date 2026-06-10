@@ -259,7 +259,7 @@ export function ScheduleVisitPageClient() {
                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8">Visit Information</h2>
                 <div className="space-y-4">
                   {[
-                    { label: 'Location', val: 'Navkar Residency, Next to Bibwewadi Police Station, Bibwewadi, Pune 411037', icon: MapPin },
+                    { label: 'Location', val: <><span className="block">Next to Bibwewadi Police Station, Bibwewadi, Pune 411037</span><span className="block text-xs font-normal text-neutral-500 mt-0.5">(with prior appointments only)</span></>, icon: MapPin },
                     { label: 'Session Format', val: 'Weekend-based sessions across the academic year.', icon: Calendar },
                     { label: 'Age Group', val: 'Typically for children aged 8–15 years.', icon: Users },
                   ].map((item, i) => (
@@ -269,7 +269,7 @@ export function ScheduleVisitPageClient() {
                       </div>
                       <div>
                         <p className="text-[10px] font-bold text-neutral-400 uppercase tracking-widest mb-1">{item.label}</p>
-                        <p className="text-primary-500 font-medium">{item.val}</p>
+                        <div className="text-primary-500 font-medium">{item.val}</div>
                       </div>
                     </div>
                   ))}
@@ -306,7 +306,7 @@ export function ScheduleVisitPageClient() {
       </section>
 
       {/* SECTION 07 — FINAL CTA */}
-      <section className="py-20 bg-white text-center">
+      <section className="py-20 bg-[#F0F6FF] text-center">
         <SectionReveal className="container-fluid max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8 leading-tight">
             Sometimes One Visit Changes Everything.
