@@ -20,7 +20,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://funsmartism.in'
 export const metadata: Metadata = {
   title: 'FunSmartism | Hands-On RoboSTEM Thinking Lab, Pune',
   description:
-    'FunSmartism is a hands-on RoboSTEM thinking lab in Bibwewadi, Pune where children aged 8–15 build, experiment, and develop independent problem-solving skills — not rote learning.',
+    'FunSmartism is a hands-on RoboSTEM thinking lab in Bibwewadi, Pune. Children aged 8–15 build, experiment, and develop independent problem-solving skills.',
   keywords: [
     'FunSmartism',
     'RoboSTEM Pune',

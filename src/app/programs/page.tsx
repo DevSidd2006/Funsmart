@@ -683,28 +683,7 @@ export default function ProgramsPage() {
               <WorkshopThemesMobile themes={workshopThemes} />
             </div>
 
-            {/* Project Grid Visual Reinforcement */}
-            <div className="mb-24">
-              <div className="text-center mb-12">
-                <h3 className="text-3xl md:text-4xl font-serif font-bold text-primary-500">Visualizing the themes</h3>
-                <p className="text-sm text-neutral-400 mt-2">Variety is at the core of the experience.</p>
-              </div>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                {[
-                  { src: '/images/gallery/teaser-1.jpg', label: 'Robotics · Gears & Motors' },
-                  { src: '/images/gallery/teaser-2.jpg', label: 'Aeromodelling · Props & Balsa' },
-                  { src: '/images/gallery/teaser-3.jpg', label: 'Tech Toys · Electronic Systems' },
-                  { src: '/images/gallery/teaser-4.jpg', label: 'Mechanical · Wooden Structures' },
-                ].map((img, i) => (
-                  <div key={i} className="aspect-square relative rounded-[2rem] overflow-hidden shadow-xl group">
-                    <Image src={img.src} alt={img.label} fill sizes="(max-width: 768px) 50vw, 25vw" className="object-cover transition-transform duration-1000 group-hover:scale-110" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary-500/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-8">
-                      <span className="text-[10px] font-bold text-white uppercase tracking-[0.2em]">{img.label}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+
           </div>
         </div>
       </section>

@@ -8,8 +8,8 @@ import { SectionReveal } from '../ui/SectionReveal'
 const moments = [
   {
     shortTitle: "Observe Before Acting",
-    title: "A 10-year-old and a gear system she'd never seen before.",
-    text: "She didn't touch it for the first eight minutes. Just looked. Tilted her head. Looked from a different angle. When she finally reached out, her first move was to turn the largest gear — testing the system before committing to it. Her parent had described her as 'slow to start things'. We described it as a real problem solving way of first observing the system. Same child. Different lens.",
+    title: "A 10-year-old and a gear system he'd never seen before.",
+    text: "He didn't touch it for the first eight minutes. Just looked. Tilted his head. Looked from a different angle. When he finally reached out, his first move was to turn the largest gear — testing the system before committing to it. His parent had described him as 'slow to start things'. We described it as a real problem solving way of first observing the system. Same child. Different lens.",
     image: "/images/gallery/teaser-4.jpg",
     alt: "A child carefully exploring and observing a gear system in the lab",
   },
@@ -17,7 +17,8 @@ const moments = [
     shortTitle: "Retry After Failure",
     title: "A 12-year-old who failed four times and kept going.",
     text: "His fourth attempt didn't work either. He sat back, stared at the ceiling for about thirty seconds, then picked up the materials and tried something genuinely different. Not a variation — a different approach entirely. That shift is harder than it sounds. Most adults default to trying the same thing faster. He did it at twelve, without being asked.",
-    image: "/images/gallery/teaser-2.jpg",
+    image: "/images/gallery/paper-folding.png",
+    objectPosition: "object-[center_15%]",
     alt: "A child mid-retry, deeply focused on solving a structural failure",
   },
   {
@@ -50,7 +51,7 @@ export function RealSessionMoments() {
             >
               <div className="absolute left-0 top-0 h-full w-1.5 rounded-r-xl bg-accent-teal" />
               <div className="w-full relative aspect-[4/3] rounded-xl overflow-hidden mb-6 shadow-md border border-neutral-100">
-                <Image src={moment.image} alt={moment.alt} fill className="object-cover" />
+                <Image src={moment.image} alt={moment.alt} fill className={`object-cover ${moment.objectPosition || 'object-center'}`} />
               </div>
               <div className="relative flex-grow">
                 <span className="text-xs font-sans text-accent-teal uppercase tracking-widest font-bold mb-4 block">

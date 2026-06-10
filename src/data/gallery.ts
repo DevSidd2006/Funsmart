@@ -98,7 +98,7 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: 37,
-    image: '/images/gallery/teaser-7.jpg',
+    image: '/images/gallery/creative-problem-solving.png',
     title: 'Creative Problem Solving',
     caption: 'Testing boundaries and structural assumptions through physical models.',
     tag: 'ENGINEERING',

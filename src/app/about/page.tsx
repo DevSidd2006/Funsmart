@@ -158,9 +158,7 @@ export default function AboutPage() {
 
 
       <FounderJourney />
-
-      {/* <OurTeam /> */}
-
+      <OurTeam />
       <RealSessionMoments />
 
 
