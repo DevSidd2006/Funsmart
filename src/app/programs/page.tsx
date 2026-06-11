@@ -244,13 +244,13 @@ export default function ProgramsPage() {
                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-8 md:mb-10 leading-[1.1]">
                   RoboSTEM Thinking Lab — Annual Program
                 </h2>
-                
+
                 <div className="w-full relative aspect-video rounded-[2rem] overflow-hidden mb-12 border border-white/10 shadow-2xl">
-                  <Image 
-                    src="/images/gallery/lab-moment-1.jpg" 
-                    alt="Children working on a complex multi-session project — something that looks like it took time" 
-                    fill 
-                    className="object-cover" 
+                  <Image
+                    src="/images/gallery/lab-moment-1.jpg"
+                    alt="Children working on a complex multi-session project — something that looks like it took time"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <p className="text-lg md:text-xl text-[#B7E3DD] mb-16 max-w-3xl leading-relaxed font-light italic">
@@ -263,8 +263,8 @@ export default function ProgramsPage() {
 
                 <div className="rounded-[2.5rem] border border-white/10 bg-white/5 p-10 mb-12">
                   <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-accent-gold mb-3">Annual Program Pricing</p>
-                  <p className="text-2xl md:text-3xl font-serif font-bold text-white">₹24,000 <span className="text-sm font-light text-white/60">/ year</span></p>
-                  <p className="text-xs text-white/60 mt-2 font-medium">(Quarterly and term-wise payment options available upon request)</p>
+                  <p className="text-2xl md:text-3xl font-serif font-bold text-white">₹10,000 - ₹12,000 <span className="text-sm font-light text-white/60">/ year</span></p>
+                  <p className="text-xs text-white/60 mt-2 font-medium">(Depending on your kitty option. Quarterly and term-wise payment options available upon request)</p>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
@@ -375,7 +375,7 @@ export default function ProgramsPage() {
       <section className="py-24 bg-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-accent-teal/5 rounded-full blur-[100px] pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent-gold/5 rounded-full blur-[100px] pointer-events-none" />
-        
+
         <div className="container-fluid max-w-4xl mx-auto relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 leading-tight">
@@ -388,9 +388,9 @@ export default function ProgramsPage() {
             <p className="font-serif italic text-primary-500 text-xl md:text-2xl font-bold mb-8 text-center leading-relaxed">
               "Your child's thinking pattern is invisible simply because you are rarely watching at the right moment."
             </p>
-            
+
             <div className="h-px bg-neutral-200/60 my-8 w-1/3 mx-auto" />
-            
+
             <div className="space-y-6 text-neutral-600 text-base md:text-lg font-light leading-relaxed">
               <div className="bg-white p-6 md:p-8 rounded-[2rem] border border-neutral-100 shadow-sm">
                 <p className="leading-relaxed">
@@ -401,9 +401,9 @@ export default function ProgramsPage() {
               <p className="text-lg md:text-xl font-bold text-primary-500 leading-snug">
                 That moment reveals everything. Most parents never get to see it.
               </p>
-              
+
               <div className="h-px bg-neutral-200/60 my-8" />
-              
+
               <p className="italic text-neutral-700 font-medium pl-4 border-l-2 border-accent-teal">
                 "From where I stand — watching your child work through a real challenge — I see something completely different from what you assume is happening at home."
               </p>
@@ -431,45 +431,53 @@ export default function ProgramsPage() {
       </section>
 
       {/* SECTION 02.75 — FRIDAY STEM CHALLENGE CLUB */}
-      <section className="py-24 bg-[#FAF9F6]" id="friday-club">
+      <section className="py-16 md:py-32" id="friday-club">
         <div className="container-fluid">
-          <div className="max-w-6xl mx-auto rounded-[3rem] overflow-hidden border border-neutral-100 shadow-huge bg-white">
-            <div className="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr]">
-              <div className="p-10 md:p-16 lg:p-20">
-                <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-6 leading-tight">
+          <div className="max-w-6xl mx-auto">
+            <div className="bg-white rounded-[40px] border border-neutral-100 shadow-huge overflow-hidden relative mb-32">
+              <div className="bg-[#1E2A44] px-10 py-5 flex flex-wrap items-center justify-between text-white text-[11px] font-bold uppercase tracking-widest gap-4">
+                <div className="flex items-center gap-3">
+                  <span className="w-2 h-2 rounded-full bg-accent-teal animate-pulse" />
+                  Weekly Club · Academic Year
+                </div>
+                <div>Ages 8–15</div>
+              </div>
+              <div className="p-10 md:p-20">
+                <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8 md:mb-10 leading-tight">
                   Friday STEM Challenge Club
                 </h2>
 
                 <div className="w-full relative aspect-video rounded-[2rem] overflow-hidden mb-10 shadow-xl border border-neutral-100">
-                  <Image 
-                    src="/images/gallery/teaser-3.jpg" 
-                    alt="Single child or small group working on a logic or mystery challenge — focused, no instructions visible" 
-                    fill 
-                    className="object-cover" 
+                  <Image
+                    src="/images/gallery/teaser-3.jpg"
+                    alt="Single child or small group working on a logic or mystery challenge — focused, no instructions visible"
+                    fill
+                    className="object-cover"
                   />
                 </div>
 
-                <div className="space-y-10">
-                  <div className="space-y-6">
-                    <p className="text-lg text-neutral-600 leading-relaxed font-light max-w-2xl">
-                      <span className="font-semibold">Every Friday evening, one unfamiliar challenge.</span> No textbook. No instructions. No correct answer waiting.
-                    </p>
-                    <p className="text-base text-neutral-600 leading-relaxed font-light max-w-2xl">
-                      A <span className="font-semibold">year-long weekly program</span> where a small batch of 10 children face real thinking challenges every Friday — observed by facilitators and discussed with parents.
-                    </p>
-                    <p className="text-base text-neutral-600 leading-relaxed font-light max-w-2xl">
-                      Each session is 90 minutes. Every child in the batch gets the same challenge — sometimes solved individually, sometimes in pairs or groups of four, depending on what the challenge demands. The challenges are not connected to school syllabus or the monthly RoboSTEM Lab themes. They are designed to be genuinely unfamiliar every time.
-                    </p>
-                    <p className="text-base text-neutral-600 leading-relaxed font-light max-w-2xl">
-                      <span className="font-semibold">This is not a class.</span> There are no lectures, no notebooks, and no instructions to follow. Genuine thinking based on each child's own exposure, experience, and experimentation.
-                    </p>
-                  </div>
+                <p className="text-lg md:text-xl text-neutral-500 mb-16 max-w-3xl leading-relaxed font-light">
+                  <span className="font-semibold text-primary-500">Every Friday evening, one unfamiliar challenge.</span> No textbook. No instructions. No correct answer waiting.
+                  <br /><br />
+                  A year-long weekly program where a small batch of 10 children face real thinking challenges every Friday — observed by facilitators and discussed with parents.
+                  <br /><br />
+                  Each session is 90 minutes. Every child in the batch gets the same challenge — sometimes solved individually, sometimes in pairs or groups of four, depending on what the challenge demands. The challenges are not connected to school syllabus or the monthly RoboSTEM Lab themes. They are designed to be genuinely unfamiliar every time.
+                  <br /><br />
+                  <span className="font-semibold text-primary-500">This is not a class.</span> There are no lectures, no notebooks, and no instructions to follow. Genuine thinking based on each child's own exposure, experience, and experimentation.
+                </p>
 
-                  <div className="space-y-6">
-                    <h4 className="text-xs font-bold text-primary-500 uppercase tracking-widest opacity-80">
+                <div className="rounded-[2.5rem] border border-neutral-100 bg-[#FAF9F6] p-10 mb-12">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary-500 mb-3">Friday Club Pricing</p>
+                  <p className="text-2xl md:text-3xl font-serif font-bold text-primary-500">₹1,000 <span className="text-sm font-light text-neutral-500">/ academic year</span></p>
+                </div>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                  <div className="space-y-6 p-10 bg-[#FAF9F6] rounded-[2.5rem] border border-neutral-100">
+                    <h4 className="flex items-center gap-3 text-primary-500 font-serif font-bold uppercase tracking-widest text-xs">
+                      <div className="w-6 h-6 rounded-full bg-primary-500/10 flex items-center justify-center text-primary-500"><Target size={14} /></div>
                       What children do each Friday:
                     </h4>
-                    <ul className="space-y-3">
+                    <ul className="space-y-4">
                       {[
                         'Face a new challenge they have never seen before',
                         'Work through it without hints or fixed instructions',
@@ -477,82 +485,56 @@ export default function ProgramsPage() {
                         'Earn milestone rewards for consistent attendance',
                         'Get priority access to scientist meets and FunSmartism edu-events'
                       ].map((item) => (
-                        <li key={item} className="flex items-start gap-3 text-sm text-neutral-700 font-medium">
-                          <div className="w-1.5 h-1.5 rounded-full bg-accent-teal mt-2 flex-shrink-0" />
+                        <li key={item} className="flex gap-4 items-start text-primary-500 font-medium leading-relaxed text-sm">
+                          <Check className="text-accent-teal mt-1 flex-shrink-0" size={16} />
                           {item}
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="space-y-6">
-                    <h4 className="text-xs font-bold text-primary-500 uppercase tracking-widest opacity-80">
-                      What parents receive:
-                    </h4>
-                    <ul className="space-y-3">
-                      {[
-                        'Facilitators observe how each child approaches the challenge — not just whether they solved it.',
-                        'Parents can book a one-on-one observation discussion to understand what was noticed — how their child responded under pressure, whether they retry independently, how they handle uncertainty.',
-                        'First observation debrief is complimentary.'
-                      ].map((item) => (
-                        <li key={item} className="flex items-start gap-3 text-sm text-neutral-700 font-medium">
-                          <div className="w-1.5 h-1.5 rounded-full bg-accent-teal mt-2 flex-shrink-0" />
-                          {item.includes('complimentary') ? (
-                            <span className="font-semibold">{item}</span>
-                          ) : (
-                            item
-                          )}
-                        </li>
-                      ))}
-                    </ul>
-                    <p className="text-sm text-neutral-500 leading-relaxed">
-                      These conversations help parents understand when to step in and when to step back — with more clarity than a report card ever provides.
-                    </p>
-                  </div>
+                  <div className="space-y-8 p-10 bg-accent-teal/5 rounded-[2.5rem] border border-accent-teal/20 flex flex-col justify-between">
+                    <div>
+                      <h4 className="flex items-center gap-3 text-accent-teal font-serif font-bold uppercase tracking-widest text-xs mb-4">
+                        <div className="w-6 h-6 rounded-full bg-accent-teal/20 flex items-center justify-center text-accent-teal"><Users size={14} /></div>
+                        What parents receive:
+                      </h4>
+                      <p className="text-base text-primary-500 font-medium italic leading-relaxed mb-4">
+                        Facilitators observe how each child approaches the challenge — not just whether they solved it.
+                      </p>
+                      <ul className="space-y-4 mb-4">
+                        {[
+                          'Parents can book a one-on-one observation discussion to understand what was noticed — how their child responded under pressure, whether they retry independently, how they handle uncertainty.',
+                          'First observation debrief is complimentary.'
+                        ].map((item) => (
+                          <li key={item} className="flex gap-4 items-start text-primary-500 font-medium leading-relaxed text-sm">
+                            <Check className="text-accent-teal mt-1 flex-shrink-0" size={16} />
+                            {item.includes('complimentary') ? (
+                              <span className="font-bold">{item}</span>
+                            ) : (
+                              item
+                            )}
+                          </li>
+                        ))}
+                      </ul>
+                      <p className="text-sm text-neutral-600 font-light leading-relaxed">
+                        These conversations help parents understand when to step in and when to step back — with more clarity than a report card ever provides.
+                      </p>
 
-                  <div className="rounded-[2rem] border border-neutral-100 bg-neutral-50 p-6">
-                    <p className="text-xs font-bold uppercase tracking-widest text-primary-500 mb-2">Enrolment</p>
-                    <p className="text-sm text-neutral-600 leading-relaxed">
-                      Batch size is limited to 10 children. Enrolment is for the full academic year — not drop-in. Once the batch is full, the next batch opens under revised terms.
-                    </p>
-                  </div>
-                </div>
-              </div>
+                      <div className="border-t border-accent-teal/20 pt-4 mt-6">
+                        <span className="text-[10px] font-sans text-neutral-400 uppercase tracking-widest block mb-1">Enrolment details:</span>
+                        <p className="text-xs text-primary-500">Offline only · Bibwewadi, Pune. Batch size is limited to 10 children. Next batch starts 15 Jun 2026.</p>
+                      </div>
+                    </div>
 
-              <div className="bg-primary-500 text-white p-10 md:p-16 lg:p-20 flex flex-col justify-between">
-                <div className="space-y-8">
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.3em] text-accent-teal mb-4">Program Details</p>
-                    <div className="space-y-4">
-                      {[
-                        { label: 'Sessions', value: 'Every Friday evening' },
-                        { label: 'Duration', value: '90 minutes per session' },
-                        { label: 'Format', value: 'Offline only · Bibwewadi, Pune' },
-                        { label: 'Batch size', value: '10 children' },
-                        { label: 'Ages', value: '8–15 years' },
-                        { label: 'Annual membership', value: '₹1,000' },
-                        { label: 'Next batch starts', value: '15 Jun 2026' },
-                        { label: 'Parent debrief', value: 'Bookable · First session FREE' },
-                      ].map((item) => (
-                        <div key={item.label} className="border-t border-white/10 pt-4">
-                          <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent-teal mb-1">{item.label}</p>
-                          <p className="text-sm font-serif font-bold text-white">{item.value}</p>
-                        </div>
-                      ))}
+                    <div className="pt-6 border-t border-accent-teal/20 flex flex-col gap-4">
+                      <Link href="https://wa.me/919503919750" target="_blank" rel="noopener noreferrer" className="w-full">
+                        <Button className="w-full bg-accent-teal hover:bg-[#28A392] text-white py-6 rounded-full font-bold shadow-md shadow-accent-teal/20">
+                          Reserve a Seat →
+                        </Button>
+                      </Link>
                     </div>
                   </div>
-
-                  <div className="border-t border-white/10 pt-6">
-                    <p className="text-sm text-white/80 italic leading-relaxed">
-                      Schools show what syllabus your child remembered. Activity programs show what they built. Friday Challenge Club shows how they think.
-                    </p>
-                  </div>
-
-                  <Link href="https://wa.me/919503919750" target="_blank" rel="noopener noreferrer" className="inline-flex w-full">
-                    <Button size="lg" className="bg-accent-teal border-none text-white px-8 py-4 rounded-full font-bold shadow-huge shadow-accent-teal/30 w-full">
-                      Reserve a Seat →
-                    </Button>
-                  </Link>
                 </div>
               </div>
             </div>
@@ -576,13 +558,13 @@ export default function ProgramsPage() {
                 <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary-500 mb-8 md:mb-10 leading-tight">
                   10-Day STEM Tinkering Workshop
                 </h2>
-                
+
                 <div className="w-full relative aspect-video rounded-[2rem] overflow-hidden mb-10 shadow-xl border border-neutral-100">
-                  <Image 
-                    src="/images/gallery/workshop-mass.jpg" 
-                    alt="High energy — multiple children at different stations, variety of materials on tables" 
-                    fill 
-                    className="object-cover" 
+                  <Image
+                    src="/images/gallery/workshop-mass.jpg"
+                    alt="High energy — multiple children at different stations, variety of materials on tables"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <p className="text-lg md:text-xl text-neutral-500 mb-16 max-w-3xl leading-relaxed font-light">
@@ -592,6 +574,11 @@ export default function ProgramsPage() {
                   <br /><br />
                   Every project is a take-home creation. Every day is a different problem. Children are not told what the answer should look like.
                 </p>
+
+                <div className="rounded-[2.5rem] border border-neutral-100 bg-neutral-50 p-10 mb-12">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary-500 mb-3">Workshop Pricing</p>
+                  <p className="text-lg font-serif font-bold text-primary-500">Pricing will be declared at the time of the next vacation batch.</p>
+                </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                   <div className="space-y-6 p-10 bg-neutral-50 rounded-[2.5rem] border border-neutral-100">
@@ -707,11 +694,11 @@ export default function ProgramsPage() {
                 </h2>
 
                 <div className="w-full relative aspect-video rounded-[2rem] overflow-hidden mb-12 border border-neutral-100 shadow-xl">
-                  <Image 
-                    src="/images/gallery/teaser-6.jpg" 
-                    alt="Parent visibly watching from the side while child works — this communicates the unique observation USP instantly" 
-                    fill 
-                    className="object-cover" 
+                  <Image
+                    src="/images/gallery/teaser-6.jpg"
+                    alt="Parent visibly watching from the side while child works — this communicates the unique observation USP instantly"
+                    fill
+                    className="object-cover"
                   />
                 </div>
                 <p className="text-lg md:text-xl text-neutral-500 mb-16 max-w-3xl leading-relaxed font-light">
@@ -719,6 +706,11 @@ export default function ProgramsPage() {
                   <br /><br />
                   No preparation needed. No prior STEM experience required. Children are given a real problem, real materials, and no fixed steps to follow.
                 </p>
+
+                <div className="rounded-[2.5rem] border border-neutral-100 bg-[#FAF9F6] p-10 mb-12">
+                  <p className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary-500 mb-3">Trial Day Pricing</p>
+                  <p className="text-2xl md:text-3xl font-serif font-bold text-primary-500">₹99 <span className="text-sm font-light text-neutral-500">/ session</span></p>
+                </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                   <div className="space-y-6 p-10 bg-[#FAF9F6] rounded-[2.5rem] border border-neutral-100">

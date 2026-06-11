@@ -23,10 +23,10 @@ const moments = [
   },
   {
     shortTitle: "Asking Better Questions",
-    title: "A 14-year-old who explained her project to a scientist during one of our school and edu innovation events.",
-    text: "She'd spent a month building a working model during the year-long program. At the event, a researcher asked her how it worked. She answered — clearly, confidently, technically. And then asked the researcher a question back. Her mother said she'd never heard her daughter speak to an adult that way. We weren't surprised. We'd been watching her think for eight weeks.",
-    image: "/images/gallery/teaser-5.jpg",
-    alt: "A confident child explaining her technical project to a visiting adult expert",
+    title: "A 14-year-old who explained his project to a scientist during one of our school and edu innovation events.",
+    text: "He'd spent a month building a working model during the year-long program. At the event, a researcher asked him how it worked. He answered — clearly, confidently, technically. And then asked the researcher a question back. His mother said she'd never heard her son speak to an adult that way. We weren't surprised. We'd been watching him think for eight weeks.",
+    image: "/images/gallery/better-questions.png",
+    alt: "A confident child explaining his technical project to a visiting adult expert",
   },
 ]
 

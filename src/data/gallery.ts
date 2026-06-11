@@ -109,6 +109,13 @@ export const galleryItems: GalleryItem[] = [
     title: 'Group Workshop',
     caption: 'Watching children thrive in an environment that demands active participation.',
     tag: 'WORKSHOP',
+  },
+  {
+    id: 39,
+    image: '/images/gallery/electronic.png',
+    title: 'Electronics Tinkering',
+    caption: 'Exploring circuits and electronic components hands-on.',
+    tag: 'ELECTRONICS',
   }
 ]
 

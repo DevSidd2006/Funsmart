@@ -87,7 +87,7 @@ export function GalleryPageClient() {
           >
             <AnimatePresence mode="popLayout">
               {displayItems.map((item: any, idx: number) => {
-                const isLastRow = idx >= Math.floor((displayItems.length - 1) / 3) * 3
+                const isLastRow = displayItems.length % 3 !== 0 && idx >= Math.floor(displayItems.length / 3) * 3
 
                 return (
                   <motion.div

@@ -100,7 +100,7 @@ export function ScheduleVisitPageClient() {
             </div>
             <div className="relative aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl border border-neutral-200">
                <Image 
-                 src="/images/gallery/stem-bridge-challenge.jpg" 
+                 src="/images/gallery/schedule-visit.png" 
                  alt="The physical RoboSTEM lab environment where children build and solve real challenges." 
                  fill 
                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

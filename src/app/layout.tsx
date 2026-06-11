@@ -11,6 +11,7 @@ const jsonLd = {
   '@type': 'LocalBusiness',
   name: 'FunSmartism',
   description: 'A hands-on RoboSTEM thinking lab where children build projects, solve unfamiliar challenges, and learn through real-world experimentation.',
+  image: 'https://funsmartism.in/og-image-home.jpg',
   url: siteUrl,
   telephone: '+91 95039 19750',
   email: 'enquiry@funsmartism.in',
