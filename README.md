@@ -45,7 +45,10 @@ If you want to find specific sections of your website to edit, use this map:
 | **Top Banner (Hero)** | `src/components/sections/Hero.tsx` |
 | **Comparison Table** | `src/components/sections/Comparison.tsx` |
 | **How It Works** | `src/components/sections/HowItWorks.tsx` |
+| **Logo and Brand Assets** | `public/images/logo-removebg-preview.png` for the visible site logo, `public/images/logo.png` for metadata icons |
 | **All Website Photos** | `public/images/` folder |
+
+The navbar and footer now use the transparent logo file so the brand mark appears cleanly on the site header and footer.
 
 ---
 
