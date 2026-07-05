@@ -34,7 +34,7 @@ export function Hero({ data }: { data?: any }) {
             <p className="text-accent-teal font-bold tracking-widest uppercase text-sm md:text-base mb-4">
               Beyond Rote Learning. Beyond Marks.
             </p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-serif font-bold text-white mb-5 md:mb-8 leading-[1.05] text-balanced">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-serif font-bold text-[#2FB5A3] mb-5 md:mb-8 leading-[1.05] text-balanced">
               A Hands-On RoboSTEM <span className="whitespace-nowrap">Thinking Lab</span> in Pune.
             </h1>
 
