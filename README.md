@@ -77,4 +77,3 @@ npm run dev
 ```
 
 ---
-**Made with ❤️ for FunSmartism Intelligence Center**
